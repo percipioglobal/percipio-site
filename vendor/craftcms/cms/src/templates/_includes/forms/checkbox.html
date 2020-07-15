@@ -1,0 +1,33 @@
+{%- spaceless %}
+
+{% set class = (class ?? [])|explodeClass|merge([
+    (toggle ?? reverseToggle ?? false) ? 'fieldtoggle',
+    'checkbox'
+]|filter) %}
+
+{% set value = (value is defined ? value : 1) %}
+{% set id = (id is defined and id ? id : 'checkbox'~random()) %}
+{% set label = (label is defined ? label) %}
+
+{% if name is defined and (name|length < 3 or name|slice(-2) != '[]') %}
+    {{ hiddenInput(name, '') }}
+{% endif %}
+
+<input type="checkbox" value="{{ value }}" class="{{ class|join(' ') }}"
+    {%- if id %} id="{{ id }}"{% endif %}
+    {%- if name is defined %} name="{{ name }}"{% endif %}
+    {%- if checked is defined and checked %} checked{% endif %}
+    {%- if autofocus is defined and autofocus and not craft.app.request.isMobileBrowser(true) %} autofocus{% endif %}
+    {%- if disabled is defined and disabled %} disabled{% endif %}
+    {%- if toggle is defined %} data-target="{{ toggle }}"{% endif %}
+    {%- if reverseToggle is defined %} data-reverse-target="{{ reverseToggle }}"{% endif %}
+    {%- if block('attr') is defined %} {{ block('attr') }}{% endif %}>
+
+<label for="{{ id }}">
+    {{ label }}
+    {% if info ?? null %}
+        <span class="info">{{ info|md|raw }}</span>
+    {% endif %}
+</label>
+
+{% endspaceless -%}

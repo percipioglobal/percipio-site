@@ -1,0 +1,101 @@
+{% extends "_layouts/basecp" %}
+{% import "_includes/forms" as forms %}
+{% set title = "Login"|t('app') %}
+{% set bodyClass = 'login' %}
+{% do view.registerAssetBundle("craft\\web\\assets\\login\\LoginAsset") %}
+{% do view.registerTranslations('app', [
+    "Reset Password",
+    "Check your email for instructions to reset your password.",
+]) %}
+
+{% set username = craft.app.config.general.rememberUsernameDuration ? craft.app.user.getRememberedUsername(): '' %}
+
+{% if craft.app.config.general.useEmailAsUsername %}
+    {% set usernamePlaceholder = 'Email'|t('app') %}
+    {% set usernameType = 'email' %}
+{% else %}
+    {% set usernamePlaceholder = 'Username or Email'|t('app') %}
+    {% set usernameType = 'text' %}
+{% endif %}
+
+{% set hasLogo = CraftEdition == CraftPro and craft.rebrand.isLogoUploaded %}
+
+{% set formAttributes = {
+    id: 'login-form',
+    method: 'post',
+    'accept-charset': 'UTF-8',
+} %}
+
+{% if hasLogo %}
+    {% set logo = craft.rebrand.logo %}
+    {% set formAttributes = formAttributes|merge({
+        class: 'has-logo',
+        style: {
+            'background-image': "url(#{logo.url|e('css')})",
+            'background-size': "#{logo.width}px #{logo.height}px",
+            'padding-top': "#{logo.height + 30}px",
+        },
+    }) %}
+{% endif %}
+
+{% set formHtml %}
+    <form {{ attr(formAttributes) }}>
+        {% if not hasLogo %}
+            <h1>{{ systemName }}</h1>
+        {% endif %}
+        <div id="login-fields">
+            {{ forms.textField({
+                id: 'loginName',
+                name: 'username',
+                placeholder: usernamePlaceholder,
+                value: username,
+                autocomplete: 'username',
+                type: usernameType,
+            }) }}
+            {{ forms.passwordField({
+                id: 'password',
+                name: 'password',
+                placeholder: 'Password'|t('app'),
+                autocomplete: 'current-password',
+            }) }}
+        </div>
+        <div id="password-fields">
+            {% if craft.app.config.general.rememberedUserSessionDuration %}
+                {{ forms.checkboxField({ id: 'rememberMe', label: 'Keep me logged in'|t('app') }) }}
+            {% endif %}
+            <a id="forgot-password">{{ 'Forgot your password?'|t('app') }}</a>
+        </div>
+        <div class="buttons">
+            <input id="submit" class="btn submit disabled" type="submit" value="{{ "Login"|t('app') }}">
+            <div id="spinner" class="spinner hidden"></div>
+        </div>
+        <a id="poweredby" href="http://craftcms.com/" title="{{ 'Powered by Craft CMS'|t('app') }}">
+            {{ svg('@app/web/assets/cp/dist/images/craftcms.svg') }}
+        </a>
+    </form>
+{% endset %}
+
+{% set noCookiesHtml %}
+    <div class="message-container no-access">
+        <div class="pane notice">
+            <p>{{ 'Cookies must be enabled to access the Craft CMS control panel.'|t('app') }}</p>
+        </div>
+    </div>
+{% endset %}
+
+{% block body %}
+    <script type="text/javascript">
+        var cookieTest = 'CraftCookieTest='+Math.floor(Math.random() * 1000000);
+        document.cookie = cookieTest;
+        if (document.cookie.search(cookieTest) != -1) {
+            document.cookie = cookieTest + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+            document.write({{ formHtml|json_encode|raw }});
+
+            {% if not craft.app.request.isMobileBrowser(true) %}
+                document.getElementById("{{ (username ? 'password' : 'loginName') }}").focus();
+            {% endif %}
+        } else {
+            document.write({{ noCookiesHtml|json_encode|raw }});
+        }
+    </script>
+{% endblock %}

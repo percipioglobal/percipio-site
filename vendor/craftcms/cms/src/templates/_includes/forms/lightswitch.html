@@ -1,0 +1,58 @@
+{%- set id = id ?? 'lightswitch'~random() %}
+{%- set on = on ?? false %}
+{%- set indeterminate = not on and (indeterminate ?? false) %}
+{%- set value = value ?? '1' %}
+{%- set indeterminateValue = indeterminateValue ?? '-' %}
+{%- set small = small ?? false %}
+{%- set toggle = toggle ?? null %}
+{%- set reverseToggle = reverseToggle ?? null %}
+{%- set disabled = (disabled ?? false) ? true : false %}
+{%- set label = label ?? false %}
+
+{%- set containerAttributes = {
+    id: id,
+    class: [
+        'lightswitch',
+        on ? 'on',
+        indeterminate ? 'indeterminate',
+        small ? 'small',
+        toggle or reverseToggle ? 'fieldtoggle',
+        disabled ? 'disabled',
+    ]|filter,
+    tabindex: '0',
+    data: {
+        'value': value != '1' ? value : false,
+        'indeterminate-value': indeterminateValue != '-' ? indeterminateValue : false,
+        'target': toggle ?: false,
+        'reverse-target': reverseToggle ?: false,
+    },
+    role: 'switch',
+    aria: {
+        checked: on ? 'true' : (indeterminate ? 'mixed' : 'false'),
+        labelledby: labelId ?? null,
+    },
+}|merge(containerAttributes ?? [], recursive=true) %}
+
+{%- if block('attr') is defined %}
+    {%- set containerAttributes = containerAttributes|merge(('<div ' ~ block('attr') ~ '>')|parseAttr, recursive=true) %}
+{% endif %}
+
+{% set input %}
+    <div {{ attr(containerAttributes) }}>
+        <div class="lightswitch-container">
+            <div class="handle"></div>
+        </div>
+        {% if name is defined -%}
+            {{ hiddenInput(name, on ? value : (indeterminate ? indeterminateValue : ''), {disabled: disabled}) }}
+        {%- endif %}
+    </div>
+{% endset %}
+
+{% if label -%}
+    <div class="lightswitch-outer-container">
+        {{ input }}
+        <label for="{{ id }}">{{ label }}</label>
+    </div>
+{% else %}
+    {{ input }}
+{%- endif %}
