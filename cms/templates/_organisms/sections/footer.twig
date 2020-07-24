@@ -1,3 +1,134 @@
-<footer>
-    <h2>footer</h2>
-</footer>
+{% import '_macros/atoms' as atom %}
+
+{%- minify -%}
+  <footer class="text-black w-full">
+    <div class="max-w-screen-xxl mx-auto pt-12">
+
+      <div class="flex">
+        <div class="w-1/4">
+          {%- set icon = organisationInfo.icon.one() ?? null -%}
+          {%- if icon and icon.extension == 'svg' -%}
+            {{ svg(icon, class='w-12 h-12') }}
+          {%- endif -%}
+        </div>
+        <div class="w-3/4">
+          <div class="mb-20">
+            <p class="font-secondary leading-relaxed max-w-5xl text-3xl mb-0">
+           
+            </p>
+            <p class="font-secondary leading-relaxed max-w-5xl">
+                <a href="mailto:{{- organisationInfo.organisationEmail -}}" class="font-bold link--hover --white text-4xl">{{- organisationInfo.organisationEmail -}}</a>
+            </p>
+          </div>
+          <div class="flex flex-wrap items-stretch mb-16">
+            <div class="w-1/2 lg:w-1/4">
+              <p class="font-bold font-secondary mb-6 text-base tracking-wide leading-relaxed">
+                Office
+              </p>
+              <p class="text-base leading-relaxed mb-6">
+                <!-- track contact clicks with ga -->
+                <a href="#" onclick="" class="font-secondary text-base">
+                  Millbank Tower, 5th Floor — <br>
+                  21-24 Millbank <br>
+                  London, SW1P 4QP
+                </a>
+              </p>
+            </div>
+            <div class="w-1/2 lg:w-1/4">
+              <p class="font-bold font-secondary mb-6 text-base tracking-wide leading-relaxed">
+                Contact the EEF
+              </p>
+              <p class="leading-relaxed mb-6">
+                <!-- track contact EEF through mail -->
+                <a href="mailto:{{- organisationInfo.organisationEmail -}}" onclick="" class="link--hover --white text-base">
+                  {{- organisationInfo.organisationEmail -}}
+                </a>
+                <br>
+                <!-- track contact EEF through phone -->
+                <a href="tel:+442078021676" onclick="" class="link--hover --white --no-border text-base">
+                  +44 207 802 1676
+                </a>
+              </p>
+            </div>
+            <div class="w-1/2 lg:w-1/4">
+              <p class="font-bold font-secondary mb-6 text-base tracking-wide leading-relaxed">
+                Popular Resources
+              </p>
+              <p>
+                <a href="#" onclick="" class="block mb-2 link--hover --white text-base">
+                  Teaching &amp; Learning Toolkit
+                </a>
+                <a href="#" onclick="" class="block mb-2 link--hover --white text-base">
+                  Guidance Reports
+                </a>
+                <a href="#" onclick="" class="block mb-2 link--hover --white text-base">
+                  Projects now recruiting
+                </a>
+                <a href="#" onclick="" class="block mb-2 link--hover --white text-base">
+                  Promising Projects
+                </a>
+                <a href="#" onclick="" class="block mb-2 link--hover --white text-base">
+                  Families of Schools
+                </a>
+              </p>
+            </div>
+            <div class="w-1/2 lg:w-1/4">
+              <p class="font-bold font-secondary mb-6 text-base tracking-wide leading-relaxed">
+                Website Links
+              </p>
+              <p>
+                <a href="#" onclick="" class="block mb-2 link--hover --white text-base">
+                  Website Tour
+                </a>
+                <a href="#" onclick="" class="block mb-2 link--hover --white text-base">
+                  Accessibility
+                </a>
+                <a href="#" onclick="" class="block mb-2 link--hover --white text-base">
+                  Cookie Policy
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex mb-10">
+        <div class="w-1/4">
+          <p class="font-bold font-secondary text-xs text-slate-100">
+            <span class="block mb-1 uppercase">
+              &copy;{{- now | date('Y') }} {{ organisationInfo.organisationName -}}
+            </span>
+            All rights reserved
+          </p>
+        </div>
+        <div class="w-3/4">
+          <div class="flex">
+            <div class="w-1/4">
+              <a href="#" class="link--hover font-bold --white text-xs uppercase">Terms of use</a>
+            </div>
+            <div class="w-1/4">
+              <a href="#" class="link--hover font-bold --white text-xs uppercase">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-gray-400 px-10 py-8 text-xs text-gray-600  bg-red-500">
+      <div class="flex items-center justify-between">
+        Copyright 2020. Percipio is a Trademark of Percipio Global Ltd
+        <div class="flex justify-end">
+            <div class="mx-4">
+                Privacy Policy
+            </div>
+            <div class="mx-4">
+                Cookies
+            </div>
+        </div>
+      </div>
+       
+    </div>
+    
+  </footer>
+  {%- endminify -%}
