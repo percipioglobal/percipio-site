@@ -1,0 +1,33 @@
+fieldLayouts:
+  2e28fd6c-9aa9-4a1c-85a5-ab8b30fb59d3:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Metadata
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: 2
+handle: news
+hasTitleField: true
+name: News
+section: 9de367ab-77b8-47bb-bbc3-63e79a202c3e
+sortOrder: 1
+titleFormat: ''
