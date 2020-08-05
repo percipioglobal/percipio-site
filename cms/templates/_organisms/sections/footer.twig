@@ -1,5 +1,9 @@
 {% import '_macros/atoms' as atom %}
 
+{% set nodes = craft.navigation.nodes()
+    .handle('footerNavigation')
+    .all() %}
+
   <footer class="text-black w-full">
     <div class="max-w-screen-xxl border-t border-gray-400">
       <div class="flex justify-center text-gray-400 -mt-10">
@@ -18,15 +22,15 @@
                 Learn
               </div>
               <div class="flex-col text-gray-600 leading-relaxed">
-                <a href="" title="" class="flex my-1">
-                    Blog
-                </a>
-                <a href="" title="" class="flex my-1">
-                    Twitter
-                </a>
-                <a href="" title="" class="flex my-1">
-                    Instagram
-                </a>
+                    {%- nav node in nodes -%}
+					    <a 	href="{{- node.url -}}" 
+							title="{{- node.title -}}"
+                            {% if node.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}  
+                            class="flex my-1"
+                        >
+                            {{- node.title -}}
+						</a>
+                    {%- endnav -%}
               </div>
             </div>
             <div class="md:p-2 mx-6 md:w-1/5">
