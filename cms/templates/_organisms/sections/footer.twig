@@ -17,69 +17,22 @@
       </div>
       <div class="flex text-gray-700 justify-center md:justify-around pt-10 pb-20">
           <div class="flex justify-center content-around whitespace-no-wrap w-3/4">
-            <div class="md:p-2 mx-6 md:w-1/5">
-              <div class="font-bold uppercase mb-6 tracking-wide leading-relaxed">
-                Learn
-              </div>
-              <div class="flex-col text-gray-600 leading-relaxed">
-                    {%- nav node in nodes -%}
+                {%- for node in nodes -%}
+                    <div class="md:p-2 mx-6 md:w-1/5 font-bold mb-6 tracking-wide uppercase leading-relaxed">
 					    <a 	href="{{- node.url -}}" 
 							title="{{- node.title -}}"
-                            {% if node.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}  
-                            class="flex my-1"
+                            {% if node.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %} 
+                            
                         >
                             {{- node.title -}}
 						</a>
-                    {%- endnav -%}
-              </div>
-            </div>
-            <div class="md:p-2 mx-6 md:w-1/5">
-                <div class="font-bold uppercase mb-6 tracking-wide leading-relaxed">
-                    Company
-                </div>
-                <div class="flex-col text-gray-600 leading-relaxed">
-                    <a href="" title="" class="flex my-1">
-                        About
-                    </a>
-                    <a href="" title="" class="flex my-1">
-                        Team
-                    </a>
-                    <a href="" title="" class="flex my-1">
-                        Vacancies
-                    </a>
-                </div>
-            </div>
-            <div class="md:p-2 mx-6 md:w-1/5">
-              <div class="font-bold uppercase mb-6 tracking-wide leading-relaxed">
-                Work
-              </div>
-              <div class="flex-col text-gray-600 leading-relaxed">
-                <a href="" title="" class="flex my-1">
-                    Web apps
-                </a>
-                <a href="" title="" class="flex my-1">
-                    Plugins
-                </a>
-                <a href="" title="" class="flex my-1">
-                    Print
-                </a>
-              </div>
-            </div>
-            <div class="md:p-2 mx-6 md:w-1/5">
-              <div class="font-bold uppercase mb-6 tracking-wide leading-relaxed">
-                Contact
-              </div>
-              <div class="flex-col text-gray-600 leading-relaxed">
-                <a href="" title="" class="flex">
-                    Say Hello
-                </a>
-                <a href="" title="" class="flex">
-                    Twitter
-                </a>
-                <a href="" title="" class="flex">
-                    Github
-                </a>
-              </div>
+                        {% ifchildren %}
+                            <div class="flex flex-col text-gray-600 normal-case leading-relaxed">
+                                {% children %}
+                            </div>
+                        {% endifchildren %}
+                    </div>
+                {%- endfor -%}
             </div>
       </div>
     </div>
