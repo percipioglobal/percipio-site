@@ -1,3 +1,15 @@
+{% set learnNodes = craft.navigation.nodes()
+    .handle('primaryNavigationLearn')
+    .all() %}
+
+{% set companyNodes = craft.navigation.nodes()
+    .handle('primaryNavigationCompany')
+    .all() %}
+
+{% set contactNodes = craft.navigation.nodes()
+    .handle('primaryNavigationContact')
+    .all() %}
+
 <div>
     <div class="bg-black z-20 w-full absolute bg-transparent h-20 py-16 flex justify-between items-center px-8 md:px-16 lg:px-32">
         <div class="justify-start">
@@ -9,35 +21,27 @@
             <div>
         </div>
     </div>
-    <div :class="hamburgerOpen ? 'block' : 'hidden'" class="nav-gradient bg-black test absolute z-30 overflow-scroll fixed top-0 left-0 w-screen h-screen text-white text-center text-lg">
+    <div :class="hamburgerOpen ? 'block' : 'hidden'" class="nav-gradient absolute z-30 overflow-scroll fixed top-0 left-0 w-screen h-screen text-white text-center text-lg">
             <nav class="flex flex-col items-center justify-center my-8">
-                <div class="my-4">
+                <div class="my-4 flex flex-col">
                     <div class="uppercase font-bold my-4 tracking-wide">
                         Learn
                     </div>
-                    <div class="my-2">
-                        Blog
-                    </div>
-                    <div class="my-2">
-                        Twitter
-                    </div>
-                    <div class="my-2">
-                        Instagram
-                    </div>
+                        {%- for learnNode in learnNodes -%}
+                            <a 	href="{{- learnNode.url -}}" class="my-1" target="_blank">
+                                {{- learnNode.title -}}
+                            </a>
+                        {%- endfor -%}
                 </div>
-                <div class="my-4">
+                <div class="my-4 flex flex-col">
                     <div class="uppercase font-bold my-4 tracking-wide">
                         Company
                     </div>
-                    <div class="my-2">
-                        About
-                    </div>
-                    <div class="my-2">
-                        Team
-                    </div>
-                    <div class="my-2">
-                        Vacancies
-                    </div>
+                        {%- for companyNode in companyNodes -%}
+                            <a 	href="{{- companyNode.url -}}" class="my-1" target="_blank">
+                                {{- companyNode.title -}}
+                            </a>
+                        {%- endfor -%}
                 </div>
                 <div class="my-4">
                     <div class="uppercase font-bold my-4 tracking-wide">
@@ -53,19 +57,15 @@
                         Print
                     </div>
                 </div>
-                <div class="my-4">
+                <div class="my-4 flex flex-col">
                     <div class="uppercase font-bold my-4 tracking-wide">
                         Contact
                     </div>
-                    <div class="my-2">
-                        Say Hello
-                    </div>
-                    <div class="my-2">
-                        Twitter
-                    </div>
-                    <div class="my-2">
-                        Github
-                    </div>
+                        {%- for contactNode in contactNodes -%}
+                            <a 	href="{{- contactNode.url -}}" class="my-1" target="_blank">
+                                {{- contactNode.title -}}
+                            </a>
+                        {%- endfor -%}
                 </div>
             </nav>
         </div>

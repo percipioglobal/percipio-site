@@ -1,0 +1,9 @@
+handle: primaryNavigationCompany
+instructions: ''
+maxNodes: ''
+name: 'Primary Navigation Company'
+propagateNodes: false
+sortOrder: 2
+structure:
+  maxLevels: null
+  uid: fee75e08-281d-4679-bd8b-da8dba2ac767
