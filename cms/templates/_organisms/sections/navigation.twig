@@ -1,13 +1,6 @@
-{% set learnNodes = craft.navigation.nodes()
-    .handle('primaryNavigationLearn')
-    .all() %}
-
-{% set companyNodes = craft.navigation.nodes()
-    .handle('primaryNavigationCompany')
-    .all() %}
-
-{% set contactNodes = craft.navigation.nodes()
-    .handle('primaryNavigationContact')
+{% set nodes = craft.navigation.nodes()
+    .handle('primaryNavigation')
+    .level(1)
     .all() %}
 
 <div>
@@ -22,52 +15,33 @@
         </div>
     </div>
     <div :class="hamburgerOpen ? 'block' : 'hidden'" class="nav-gradient absolute z-30 overflow-scroll fixed top-0 left-0 w-screen h-screen text-white text-center text-lg">
-            <nav class="flex flex-col items-center justify-center my-8">
+        <nav class="flex flex-col items-center h-full justify-center">
+            {%- for node in nodes -%}
                 <div class="my-4 flex flex-col">
-                    <div class="uppercase font-bold my-4 tracking-wide">
-                        Learn
-                    </div>
-                        {%- for learnNode in learnNodes -%}
-                            <a 	href="{{- learnNode.url -}}" class="my-1" target="_blank">
-                                {{- learnNode.title -}}
-                            </a>
-                        {%- endfor -%}
+                    <div class="uppercase font-bold text-xl mt-6 tracking-wide">
+                        <a ref="{{- node.url -}}" 
+                            title="{{- node.title -}}"
+                            {% if node.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}
+                            class="mb-4"
+                        >
+                            {{- node.title -}}
+                        </a>
+                    <div>
+                    {% if node.hasDescendants %}
+                        {% for subnode in node.children %}
+                            <div class="my-4 normal-case text-lg font-normal">
+                                <a  href="{{- subnode.url -}}" 
+                                    title="{{- subnode.title -}}"
+                                    {% if subnode.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}
+                                    class="my-1" 
+                                >
+                                    {{- subnode.title -}}
+                                </a>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
                 </div>
-                <div class="my-4 flex flex-col">
-                    <div class="uppercase font-bold my-4 tracking-wide">
-                        Company
-                    </div>
-                        {%- for companyNode in companyNodes -%}
-                            <a 	href="{{- companyNode.url -}}" class="my-1" target="_blank">
-                                {{- companyNode.title -}}
-                            </a>
-                        {%- endfor -%}
-                </div>
-                <div class="my-4">
-                    <div class="uppercase font-bold my-4 tracking-wide">
-                        Work
-                    </div>
-                    <div class="my-2">
-                        Web apps
-                    </div>
-                    <div class="my-2">
-                        Plugins
-                    </div>
-                    <div class="my-2">
-                        Print
-                    </div>
-                </div>
-                <div class="my-4 flex flex-col">
-                    <div class="uppercase font-bold my-4 tracking-wide">
-                        Contact
-                    </div>
-                        {%- for contactNode in contactNodes -%}
-                            <a 	href="{{- contactNode.url -}}" class="my-1" target="_blank">
-                                {{- contactNode.title -}}
-                            </a>
-                        {%- endfor -%}
-                </div>
-            </nav>
-        </div>
+            {%- endfor -%}
+        </nav>
     </div>
 </div>
