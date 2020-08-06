@@ -12,6 +12,11 @@ module.exports = {
             xl: '1280px',
         },
         colors: {
+            gradients: {
+                'dark-navy': 'rgba(0,6,51,1)',
+                black: 'rgba(0,2,20,1)', 
+            },
+            
             transparent: 'transparent',
             current: 'currentColor',
             
