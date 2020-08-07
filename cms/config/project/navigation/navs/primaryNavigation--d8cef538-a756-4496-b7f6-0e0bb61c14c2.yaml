@@ -1,7 +1,7 @@
-handle: primaryNavigationLearn
+handle: primaryNavigation
 instructions: ''
 maxNodes: ''
-name: 'Primary Navigation Learn'
+name: 'Primary Navigation'
 propagateNodes: false
 sortOrder: 1
 structure:
