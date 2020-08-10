@@ -1,0 +1,18 @@
+{%- import '_macros/atoms' as atom -%}
+
+{%- set news = content.type == 'news' ? true : false -%}
+{% set image = entry.pageImage.one() ?? null %}
+
+{%- minify -%}
+
+    <section class="w-full">
+        <div class="px-8 py-16 {{ colour != null ? 'bg-' ~ colour ~ '-500' : 'bg-primary-500' -}}">
+            <h1 class="sr-only">{{- atom.text(content.title) -}}</h1>
+            <h2 class="text-3xl xl:text-5xl font-secondary font-semibold text-white-100 leading-snug tracking-wide">{{- atom.text(content.title) -}}</h2>    
+                {% if entry.standfirst|length %}
+                    <h3 class="break-words text-lg mt-12 lg:text-xl xl:text-2xl font-primary text-white-100 font-normal">{{- atom.text(entry.standfirst) -}}</h3>
+                {% endif %}
+        </div>
+    </section>
+    
+{%- endminify -%}
