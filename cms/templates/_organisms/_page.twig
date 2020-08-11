@@ -26,6 +26,12 @@
                         content: entry,
                     } -%}
 
+                {%- case "projectsPage" -%}
+
+                    {%- include '_organisms/entry-types/page--projects' ignore missing with {
+                        content: entry,
+                    } -%}
+
                 {%- case "news" -%}
 
                     {%- include '_organisms/entry-types/entry--news' ignore missing with {
