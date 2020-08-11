@@ -1,5 +1,5 @@
 fieldLayouts:
-  29456920-ac69-416e-9b72-d9e7baa46e32:
+  c4c22b8b-80a6-439d-b364-f808e0129e5a:
     tabs:
       -
         elements:
@@ -45,7 +45,7 @@ fieldLayouts:
             fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -54,17 +54,17 @@ fieldLayouts:
             fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
         name: Metadata
         sortOrder: 2
-handle: landingsPage
+handle: projects
 hasTitleField: true
-name: 'Landings Page'
-section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
+name: Projects
+section: f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
