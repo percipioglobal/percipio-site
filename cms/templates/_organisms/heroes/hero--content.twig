@@ -1,13 +1,9 @@
 {%- import '_macros/atoms' as atom -%}
 
-{%- set news = entry.type == 'news' ? true : false -%}
-
 {%- minify -%}
 
     <section class="w-full">
-        {%- if news -%}
-            its news!
-        {%- else -%}
+      
             <div class="h-full overflow-hidden relative hero-grad">
                 <div class="px-8 md:px-16 lg:px-32 pt-20 lg:pt-32 relative z-40">
                     <div class="pt-16 text-white whitespace-no-wrap font-bold leading-tight text-4xl md:text-5xl lg:text-6xl">
@@ -18,7 +14,6 @@
                     </div>
                 </div>
             </div>
-        {%- endif -%}
     </section>
 
 {%- endminify -%}
