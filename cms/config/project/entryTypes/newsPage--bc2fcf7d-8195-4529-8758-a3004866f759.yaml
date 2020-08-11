@@ -1,5 +1,5 @@
 fieldLayouts:
-  57d359f1-019c-4019-bb6e-fe9437e1f035:
+  ecebb537-0462-4a94-8a09-eb3c92d6de22:
     tabs:
       -
         elements:
@@ -39,11 +39,11 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: projectsPage
+handle: newsPage
 hasTitleField: true
-name: 'Projects Page'
+name: 'News Page'
 section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
-sortOrder: 3
+sortOrder: 4
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

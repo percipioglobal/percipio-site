@@ -22,9 +22,9 @@
             {%- for node in nodes -%}
                 <div class="my-4 flex flex-col">
                     <div class="uppercase font-bold text-xl mt-6 tracking-wide">
-                        <a ref="{{- node.url -}}" 
+                        <a  href="{{- node.url -}}" 
                             title="{{- node.title -}}"
-                            {% if node.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}
+                            {% if node.newWindow -%} target="_blank" rel="noopener noreferrer"{%- endif %}
                             class="mb-4"
                         >
                             {{- node.title -}}
