@@ -1,8 +1,21 @@
 {%- minify -%}
 
+    {% set featured = hasFeatured ?? null %}
+    {% set cardsType = type ?? 'default' %}
+
+    {%- switch cardsType -%}
+
+        {%- case 'content' -%}
+            {%- set cards = content.cards.all() -%}
+
+        {% default %}
+            {%- set cards = content -%}
+
+    {%- endswitch -%}
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 my-16">
 
-        {%- for card in content.cards.all() -%}
+        {%- for card in cards -%}
 
             {%- include '_molecules/cards/card--highlight' ignore missing with {
                 content: card,

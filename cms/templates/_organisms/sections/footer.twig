@@ -5,6 +5,12 @@
     .level(1)
     .all() %}
 
+{%- set legalNodes = craft.navigation.nodes()
+				.handle('legalNavigation')
+                .level(1)
+				.all()
+-%}
+
 <footer class="w-full px-2 md:px-0">
     <div class="max-w-screen-xxl border-t border-gray-400">
         <div class="flex justify-center text-gray-400 -mt-10">
@@ -51,12 +57,16 @@
         <div class="flex items-center justify-between ">
             Copyright 2020. Percipio is a Trademark of Percipio Global Ltd
             <div class="md:flex md:justify-end">
+                {%- for node in legalNodes -%}
                 <div class="md:mx-4">
-                    Privacy Policy
+                    <a href="{{- node.url -}}" 
+                        title="{{- node.title -}}"
+                        {% if node.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}  
+                    >
+                        {{- node.title -}}
+                    </a>
                 </div>
-                <div class="md:mx-4">
-                    Cookies
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

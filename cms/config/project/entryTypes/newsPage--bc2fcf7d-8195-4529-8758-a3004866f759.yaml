@@ -1,5 +1,5 @@
 fieldLayouts:
-  29456920-ac69-416e-9b72-d9e7baa46e32:
+  ecebb537-0462-4a94-8a09-eb3c92d6de22:
     tabs:
       -
         elements:
@@ -29,7 +29,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
             instructions: null
             label: null
             required: false
@@ -39,33 +39,11 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-      -
-        elements:
-          -
-            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
-            instructions: null
-            label: null
-            required: '0'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
-            instructions: null
-            label: null
-            required: '0'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: Metadata
-        sortOrder: 2
-handle: landingsPage
+handle: newsPage
 hasTitleField: true
-name: 'Landings Page'
+name: 'News Page'
 section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
-sortOrder: 1
+sortOrder: 4
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

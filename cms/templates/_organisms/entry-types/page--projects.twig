@@ -1,0 +1,13 @@
+{%- import '_macros/atoms' as atom -%}
+
+{%- set projects = craft.entries.section('projects')
+    .orderBy('postDate desc')
+    .all() -%}
+
+<div class="container max-w-screen-hd p-8 mx-auto">
+    {%- include '_organisms/cards/cards--highlight' ignore missing with {
+        content: projects,
+        type: 'projects',
+        hasFeatured: true,
+    } -%}
+</div>

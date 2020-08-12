@@ -1,0 +1,5 @@
+{%- set news = craft.entries.section('news')
+    .with(['teaserImage', 'newsCategory'])
+    .orderBy('postDate desc')
+    .offset(1)
+    .all() -%}
