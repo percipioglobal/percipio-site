@@ -1,0 +1,72 @@
+{%- import '_macros/atoms' as atom -%}
+
+{# Eager Load categories based on entry types #}
+{%- if entry.type == 'news' -%}
+    {%- do craft.eagerBeaver.eagerLoadElements(entry, [
+        'newsCategory'
+        ]) 
+    -%}
+{%- endif -%}
+
+{# Load needed images #}
+{%- set teaserImage = content.teaserImage[0] ?? placeholder.teaserPlaceholder[0] -%}
+{%- set news = content.type == 'news' ? true : false -%}
+
+{%- minify -%}
+    <div class="bg-orange-600 text-white grid-cols-2 grid-rows-2 col-span-2 relative h-full w-full mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out ">
+
+        <div class="row-span-2 h-1/2">
+            {{- atom.featured_image(teaserImage, teaserImage.title ) -}}
+        </div>
+
+        {%- if news -%}
+            <div class="bg-white-90 p-8 flex flex-col justify-between">
+                <h3 class="font-bold hidden lg:block lg:text-5xl text-black capitalize tracking-wider font-secondary">{{ content.type }}</h3>
+                <div class="text-xs leading-tight text-black-100 tracking-wider">
+                    <address rel="author" class="text-2xl font-primary font-medium leading-none not-italic mb-0">{{- content.author -}}</address>
+                    <time datetime="{{- entry.postDate|date('c') -}}" class="text-xs font-primary font-medium uppercase tracking-wide leading-normal">{{- atom.formatDate(content.postDate) -}}</time>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <span class="uppercase bg-secondary-500 px-4 py-2 rounded-full font-secondary text-white-100 text-xs tracking-wide font-medium">
+                        {{- content.newsCategory[0].title ?? 'No Category' -}}
+                    </span>
+                </div>
+            </div>
+        {%- endif -%}
+
+        <div class="text-left p-8">
+            <h6 class="break-words font-mono text-white mb-1">
+                <a href="{{- content.url -}}">
+                    {{- atom.text(content.organisationName) -}}
+                </a>
+            </h6>
+            <h4 class="break-words text-4xl text-white font-extrabold mb-5">
+                <a href="{{- content.url -}}">
+                    {{- atom.text(content.title) -}}
+                </a>
+            </h4>
+            <h5 class="break-words text-lg font-secondary text-white leading-relaxed {{ news ? 'mb-4' : '' -}}">
+                <a href="{{- content.url -}}">
+                    {{- atom.text(content.description) -}}
+                </a>
+            </h5>
+            <div class="mt-10 md:mt-16">
+                <span class="bg-orange-800 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                    {{- content.projectCategory[0].title ?? 'No Category' -}}
+                </span>
+                <span class="bg-orange-800 ml-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                    {{- content.projectCategory[1].title ?? 'No Category' -}}
+                </span>
+            </div>
+        </div>
+        
+        {# URL covering entire card #}
+            
+        <a href="{{- url(alias('@web/' ~ content.uri)) -}}" class="absolute block top-0 left-0 h-full w-full z-1">
+            <span class="sr-only">
+                {{- "Discover" | t }} {{ atom.text(content.title) }} {{ content.newsCategory[0].title ?? '' -}}
+            </span>
+        </a>    
+        
+    </div>
+{%- endminify -%}

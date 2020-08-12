@@ -9,14 +9,15 @@
 {%- endif -%}
 
 {# Load needed images #}
-{%- set teaserImage = content.teaserImage ?? placeholder.teaserPlaceholder[0] -%}
+{%- set teaserImage = content.teaserImage[0] ?? placeholder.teaserPlaceholder[0] -%}
 {%- set news = content.type == 'news' ? true : false -%}
 
 {%- minify -%}
-    <div class="flex flex-col relative h-full w-full mb-8 md:mb-0">
+    <div class="bg-red-500 flex flex-col relative h-full w-full mb-8 md:mb-0">
+        
         <div class="relative">
             {%- if news -%}
-                {{- atom.teaser_image(teaserImage[0], teaserImage[0].title, news ? 'is4by3' : 'is2by1' ) -}}
+                {{- atom.teaser_image(teaserImage, teaserImage.title, news ? 'is4by3' : 'is2by1' ) -}}
                 <div class="absolute bottom-0 p-8">
                     <span class="uppercase bg-secondary-500 px-4 py-2 rounded-full font-secondary text-white-100 text-xs tracking-wide font-medium">
                         {{- content.newsCategory[0].title ?? 'No Category' }}
@@ -24,18 +25,17 @@
                 </div>
             {%- else -%}
                 <div class="img is4by3 bg-white-90">
-                    {{- atom.teaser_image(teaserImage[0], teaserImage[0].title, news ? 'is4by3' : 'is2by1' ) -}}
-
-                        <div class="absolute top-0 p-8">
-                            <h3 class="text-4xl text-black-100 font-semibold break-words">
-                                <a href="{{- content.url -}}">
-                                    {{- atom.text(content.title) -}}
-                                </a>
-                            </h3>
-                        </div>
+                    {{- atom.teaser_image(teaserImage, teaserImage.title, news ? 'is4by3' : 'is2by1' ) -}}
+                    <div class="absolute top-0 p-8">
+                        <h3 class="text-4xl text-black-100 font-semibold break-words">
+                            <a href="{{- content.url -}}">
+                                {{- atom.text(content.title) -}}
+                            </a>
+                        </h3>
                     </div>
-                {%- endif -%}
-            </div>
+                </div>
+            {%- endif -%}
+        </div>
 
         <div class="{{ news ? 'bg-white-90' : 'bg-primary-500' }} h-full text-left">
             

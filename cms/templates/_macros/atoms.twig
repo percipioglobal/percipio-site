@@ -68,6 +68,22 @@
     {% endspaceless %}
 {% endmacro %}
 
+{% macro featured_image(teaserImage, alt = '', ratio = 'is4by3') %}
+    {% set image = teaserImage.optimizeTeasers %}
+    {% spaceless %}
+        <figure role="figure" aria-label="{{- alt -}}" class="relative w-full h-full">
+            <div class="img {{ ratio }} static">
+                <img  src="{{- image.placeholderImage() -}}"
+                    data-src="{{- image.src() -}}"
+                    data-srcset="{{- image.srcset() -}}"
+                    sizes="100vw"
+                    alt="{{- alt -}}"
+                    class="object-cover lazyload">
+            </div>
+        </figure>
+    {% endspaceless %}
+{% endmacro %}
+
 {# Profile Image #}
 {% macro profile_image(profileImage, alt = '') %}
     {% set image = profileImage.optimizeProfileImages %}

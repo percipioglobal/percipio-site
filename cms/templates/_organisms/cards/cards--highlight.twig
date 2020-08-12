@@ -13,13 +13,23 @@
 
     {%- endswitch -%}
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 my-16">
+    <div class="print:hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8 my-16">
 
         {%- for card in cards -%}
 
-            {%- include '_molecules/cards/card--highlight' ignore missing with {
-                content: card,
-            } -%}
+            {%- if loop.index == 1 and featured -%}
+
+                {%- include '_molecules/cards/card--featured' ignore missing with {
+                    content: card,
+                } -%}
+
+            {%- else -%}
+
+                {%- include '_molecules/cards/card--highlight' ignore missing with {
+                    content: card,
+                } -%}
+
+            {%- endif -%}
 
         {%- endfor -%}
 
