@@ -1,6 +1,5 @@
-{%- import '_macros/atoms' as atom -%}
-
 {%- set projects = craft.entries.section('projects')
+    .with(['teaserImage', 'projectCategory'])
     .orderBy('postDate desc')
     .all() -%}
 
