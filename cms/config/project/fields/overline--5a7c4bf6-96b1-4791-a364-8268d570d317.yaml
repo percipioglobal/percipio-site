@@ -1,12 +1,12 @@
-contentColumnType: string(1120)
+contentColumnType: string(720)
 fieldGroup: b2330e68-6c4a-45ab-b5b1-8a510f75ce4f
-handle: description
+handle: overline
 instructions: ''
-name: Description
+name: Overline
 searchable: true
 settings:
   byteLimit: null
-  charLimit: 280
+  charLimit: 180
   code: ''
   columnType: null
   initialRows: '4'

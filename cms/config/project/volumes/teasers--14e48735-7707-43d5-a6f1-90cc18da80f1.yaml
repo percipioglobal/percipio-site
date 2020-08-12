@@ -2,13 +2,50 @@ fieldLayouts:
   c341cf32-8aa7-456c-9a0f-7f06c63a1575:
     tabs:
       -
-        fields:
-          6962a9b1-b802-4295-82b1-398470a9f54c:
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
             required: false
-            sortOrder: 1
-          dcdd5839-4bb5-4669-8d82-d46ec4da660a:
-            required: false
-            sortOrder: 2
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6962a9b1-b802-4295-82b1-398470a9f54c
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: dcdd5839-4bb5-4669-8d82-d46ec4da660a
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Metadata
         sortOrder: 1
 handle: teasers
