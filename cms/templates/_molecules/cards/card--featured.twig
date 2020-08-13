@@ -46,12 +46,11 @@
                         {{- atom.text(content.description) -}}
                 </h5>
                 <div class="mt-10 md:mt-16">
-                    <span class="bg-orange-700 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
-                        {{- content.projectCategory[0].title ?? 'No Category' -}}
-                    </span>
-                    <span class="bg-orange-700 ml-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
-                        {{- content.projectCategory[1].title ?? 'No Category' -}}
-                    </span>
+                    {%- for category in content.projectCategory -%}
+                        <span class="bg-orange-700 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                            {{- category.title -}}
+                        </span>
+                    {%- endfor -%}
                 </div>
             </a>
         </div>

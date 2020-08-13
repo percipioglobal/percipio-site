@@ -48,16 +48,15 @@
                     <h4 class="break-words text-4xl text-white font-extrabold mb-5">
                             {{- atom.text(content.title) -}}
                     </h4>
-                    <h5 class="min-h-24 break-words text-lg font-secondary text-white leading-relaxed {{ news ? 'mb-4' : '' -}}">
+                    <h5 class="min-h-64 break-words text-lg font-secondary text-white leading-relaxed {{ news ? 'mb-4' : '' -}}">
                             {{- atom.text(content.description) -}}
                     </h5>
-                    <div class="mt-10 md:mt-16">
-                        <span class="bg-{{color}}-800 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
-                            {{- content.projectCategory[0].title ?? 'No Category' -}}
-                        </span>
-                        <span class="bg-{{color}}-800 ml-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
-                            {{- content.projectCategory[1].title ?? 'No Category' -}}
-                        </span>
+                    <div class="mt-10 md:mt-16 flex flex-wrap">
+                        {%- for category in content.projectCategory -%}
+                            <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                                {{- category.title -}}
+                            </span>
+                        {%- endfor -%}
                     </div>
                 </a>
             </div>
