@@ -13,10 +13,10 @@
 {%- set news = content.type == 'news' ? true : false -%}
 
 {%- minify -%}
-    <div class="bg-orange-600 text-white grid-cols-2 grid-rows-2 col-span-2 relative h-full w-full mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out ">
-
-        <div class="row-span-2 h-1/2">
-            {{- atom.featured_image(teaserImage, teaserImage.title ) -}}
+    <div class="bg-orange-500 text-white md:grid grid-cols-2 grid-rows-1 col-span-2 relative h-full w-full mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out ">
+        
+        <div class="col-span-2">
+            {{- atom.featured_image(teaserImage, teaserImage.title, 'is2by1' ) -}}
         </div>
 
         {%- if news -%}
@@ -34,30 +34,26 @@
             </div>
         {%- endif -%}
 
-        <div class="text-left p-8">
-            <h6 class="break-words font-mono text-white mb-1">
-                <a href="{{- content.url -}}">
-                    {{- atom.text(content.organisationName) -}}
-                </a>
-            </h6>
-            <h4 class="break-words text-4xl text-white font-extrabold mb-5">
-                <a href="{{- content.url -}}">
-                    {{- atom.text(content.title) -}}
-                </a>
-            </h4>
-            <h5 class="break-words text-lg font-secondary text-white leading-relaxed {{ news ? 'mb-4' : '' -}}">
-                <a href="{{- content.url -}}">
-                    {{- atom.text(content.description) -}}
-                </a>
-            </h5>
-            <div class="mt-10 md:mt-16">
-                <span class="bg-orange-800 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
-                    {{- content.projectCategory[0].title ?? 'No Category' -}}
-                </span>
-                <span class="bg-orange-800 ml-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
-                    {{- content.projectCategory[1].title ?? 'No Category' -}}
-                </span>
-            </div>
+        <div class="col-span-2 text-left p-8">
+            <a href="{{- content.url -}}">
+                <h6 class="break-words font-mono text-white mb-1">
+                        {{- atom.text(content.organisationName) -}}
+                </h6>
+                <h4 class="break-words text-4xl text-white font-extrabold mb-5">
+                        {{- atom.text(content.title) -}}
+                </h4>
+                <h5 class="break-words text-lg font-secondary text-white leading-relaxed {{ news ? 'mb-4' : '' -}}">
+                        {{- atom.text(content.description) -}}
+                </h5>
+                <div class="mt-10 md:mt-16">
+                    <span class="bg-orange-700 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                        {{- content.projectCategory[0].title ?? 'No Category' -}}
+                    </span>
+                    <span class="bg-orange-700 ml-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                        {{- content.projectCategory[1].title ?? 'No Category' -}}
+                    </span>
+                </div>
+            </a>
         </div>
         
         {# URL covering entire card #}

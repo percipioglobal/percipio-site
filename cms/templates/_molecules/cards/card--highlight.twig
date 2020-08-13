@@ -12,8 +12,10 @@
 {%- set teaserImage = content.teaserImage[0] ?? placeholder.teaserPlaceholder[0] -%}
 {%- set news = content.type == 'news' ? true : false -%}
 
+{%- set color = random(['red', 'blue', 'purple', 'teal', 'indigo']) -%}
+
 {%- minify -%}
-    <div class="bg-red-500 flex flex-col relative h-full w-full mb-8 md:mb-0">
+    <div class="bg-{{- color -}}-600 text-white flex flex-col relative h-full w-full mb-8 md:mb-0">
         
         <div class="relative">
             {%- if news -%}
@@ -24,22 +26,12 @@
                     </span>
                 </div>
             {%- else -%}
-                <div class="img is4by3 bg-white-90">
-                    {{- atom.teaser_image(teaserImage, teaserImage.title, news ? 'is4by3' : 'is2by1' ) -}}
-                    <div class="absolute top-0 p-8">
-                        <h3 class="text-4xl text-black-100 font-semibold break-words">
-                            <a href="{{- content.url -}}">
-                                {{- atom.text(content.title) -}}
-                            </a>
-                        </h3>
-                    </div>
-                </div>
+                {{- atom.teaser_image(teaserImage, teaserImage.title, 'is2by1') -}}
             {%- endif -%}
         </div>
 
-        <div class="{{ news ? 'bg-white-90' : 'bg-primary-500' }} h-full text-left">
             
-            <div class="p-8 flex flex-col h-full">
+            <div class="flex flex-col h-auto text-left h-full">
 
                 {%- if news -%}
                     <div class="text-xs leading-tight {{ news ? 'text-black-100' : 'text-white-100' }} tracking-wider mb-8">
@@ -48,16 +40,26 @@
                     </div>
                 {%- endif -%}
 
-                <h4 class="break-words text-2xl font-secondary {{ news ? 'text-black-100' : 'text-white-100' }} font-semibold leading-tight {{ news ? 'mb-4' : '' -}}">
-                    <a href="{{- content.url -}}">
-                        {%- if news -%}
+            <div class="text-left p-8">
+                <a href="{{- content.url -}}">
+                    <h6 class="break-words font-mono text-white mb-1">
+                            {{- atom.text(content.organisationName) -}}
+                    </h6>
+                    <h4 class="break-words text-4xl text-white font-extrabold mb-5">
                             {{- atom.text(content.title) -}}
-                        {%- else -%}
+                    </h4>
+                    <h5 class="min-h-24 break-words text-lg font-secondary text-white leading-relaxed {{ news ? 'mb-4' : '' -}}">
                             {{- atom.text(content.description) -}}
-                        {%- endif -%}
-                    </a>
-                </h4>
-
+                    </h5>
+                    <div class="mt-10 md:mt-16">
+                        <span class="bg-{{color}}-800 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                            {{- content.projectCategory[0].title ?? 'No Category' -}}
+                        </span>
+                        <span class="bg-{{color}}-800 ml-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                            {{- content.projectCategory[1].title ?? 'No Category' -}}
+                        </span>
+                    </div>
+                </a>
             </div>
             
         </div>
