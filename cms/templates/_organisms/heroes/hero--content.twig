@@ -1,12 +1,14 @@
 {%- import '_macros/atoms' as atom -%}
 
+{% set image = entry.heroImage[0] ?? null %}
+
 {%- minify -%}
 
     <section class="w-full">
       
             <div class="flex h-screen50 sm:h-screen80 relative">
                 <div class="absolute h-full w-full object-cover">
-                    {{- atom.hero_image(entry.heroImage, 'heroImage') -}}
+                    {{- atom.hero_image(image, entry.title) -}}
                 </div>
                 <div class="flex flex-col h-auto justify-center mx-auto p-8 md:p-0 md:max-w-screen-md relative z-10">
                     <div class="w-full text-white leading-tight text-base md:text-lg lg:text-lg font-mono tracking-tighter">

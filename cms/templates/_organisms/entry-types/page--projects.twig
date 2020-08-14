@@ -1,5 +1,10 @@
 {%- import '_macros/atoms' as atom -%}
 
+{%- do craft.eagerBeaver.eagerLoadElements(entry, [
+        'heroImage'
+    ]) 
+-%}
+  
 {%- set projects = craft.entries.section('projects')
     .orderBy('postDate desc')
     .all() -%}
