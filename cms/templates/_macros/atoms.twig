@@ -17,7 +17,7 @@
 
 {# Hero Image #}
 {% macro hero_image(heroImage, alt = '') %}
-    {% set image = heroImage.optimizeHero %}
+    {% set image = heroImage.optimizeHeroes %}
     {% spaceless %}
         <figure role="figure" aria-label="{{- alt -}}" class="relative w-full h-full">
             <img  src="{{- image.placeholderImage() -}}"
@@ -71,6 +71,7 @@
 {# Profile Image #}
 {% macro profile_image(profileImage, alt = '') %}
     {% set image = profileImage.optimizeProfileImages %}
+    {{dump(image)}}
     <figure role="figure" aria-label="{{- alt -}}" class="img overflow-hidden h-16 w-16 rounded-full">
         <img  src="{{- image.placeholderImage() -}}"
             data-src="{{- image.src() -}}"

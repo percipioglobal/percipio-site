@@ -1,8 +1,26 @@
 fieldLayouts:
-  c341cf32-8aa7-456c-9a0f-7f06c63a1575:
+  ab396df1-6caa-4590-bf6a-455f72291e50:
     tabs:
       -
         elements:
+          -
+            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8ec6d021-7d06-41fc-911f-5463f946ed71
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           -
             autocapitalize: true
             autocomplete: false
@@ -25,29 +43,20 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\TitleField
+            type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
           -
-            fieldUid: 6962a9b1-b802-4295-82b1-398470a9f54c
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: dcdd5839-4bb5-4669-8d82-d46ec4da660a
-            instructions: null
-            label: null
-            required: '0'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 35a1d959-d78e-4445-891c-7bb671c48281
+            fieldUid: 37db29ea-4d56-4610-b07b-7c9e40cfe43d
             instructions: null
             label: null
             required: false
@@ -57,23 +66,24 @@ fieldLayouts:
             width: 100
         name: Metadata
         sortOrder: 1
-handle: teasers
-hasUrls: true
-name: Teasers
-settings:
-  addSubfolderToRootUrl: '1'
-  autoFocalPoint: ''
-  bucket: $S3_BUCKET
-  bucketSelectionMode: manual
-  cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-  cfPrefix: $CLOUDFRONT_PATH_PREFIX
-  expires: '3 months'
-  keyId: $S3_KEY_ID
-  makeUploadsPublic: '1'
-  region: $S3_REGION
-  secret: $S3_SECRET
-  storageClass: ''
-  subfolder: teasers
-sortOrder: 2
-type: craft\awss3\Volume
-url: $CLOUDFRONT_URL
+      -
+        elements:
+          -
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 2
+handle: teamMember
+hasTitleField: true
+name: 'Team Member'
+section: e80a7183-56ec-49d8-81a8-405444fc3077
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

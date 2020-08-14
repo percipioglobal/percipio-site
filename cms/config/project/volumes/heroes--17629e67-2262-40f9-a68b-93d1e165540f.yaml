@@ -1,5 +1,5 @@
 fieldLayouts:
-  c341cf32-8aa7-456c-9a0f-7f06c63a1575:
+  57949888-71e5-45f7-87f1-45d527a9799f:
     tabs:
       -
         elements:
@@ -29,25 +29,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6962a9b1-b802-4295-82b1-398470a9f54c
-            instructions: null
-            label: null
-            required: '0'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: dcdd5839-4bb5-4669-8d82-d46ec4da660a
-            instructions: null
-            label: null
-            required: '0'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 35a1d959-d78e-4445-891c-7bb671c48281
+            fieldUid: 6261508f-6848-476e-a5d1-1ffe3acafb5c
             instructions: null
             label: null
             required: false
@@ -55,11 +37,11 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Metadata
+        name: Content
         sortOrder: 1
-handle: teasers
+handle: heroes
 hasUrls: true
-name: Teasers
+name: Heroes
 settings:
   addSubfolderToRootUrl: '1'
   autoFocalPoint: ''
@@ -73,7 +55,7 @@ settings:
   region: $S3_REGION
   secret: $S3_SECRET
   storageClass: ''
-  subfolder: teasers
-sortOrder: 2
+  subfolder: heroes
+sortOrder: 8
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL
