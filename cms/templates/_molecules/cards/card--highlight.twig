@@ -1,12 +1,23 @@
 {%- import '_macros/atoms' as atom -%}
 
 {# Eager Load categories based on entry types #}
-{%- if entry.type == 'news' -%}
-    {%- do craft.eagerBeaver.eagerLoadElements(entry, [
-        'newsCategory'
-        ]) 
-    -%}
-{%- endif -%}
+{%- switch entry.type -%}
+    {%- case "news" -%}
+        {%- do craft.eagerBeaver.eagerLoadElements(entry, [
+            'newsCategory'
+            ]) 
+        -%}
+    {%- case "project" -%}
+        {%- do craft.eagerBeaver.eagerLoadElements(entry, [
+            'projectCategory'
+            ]) 
+        -%}
+    {%- case "teamMember" -%}
+        {%- do craft.eagerBeaver.eagerLoadElements(entry, [
+            'teamCategory'
+            ]) 
+        -%}
+{%- endswitch -%}
 
 {# Load needed images #}
 {%- set teaserImage = content.teaserImage[0] ?? placeholder.teaserPlaceholder[0] -%}
@@ -15,7 +26,7 @@
 {%- set color = random(['red', 'blue', 'purple', 'teal', 'indigo']) -%}
 
 {%- minify -%}
-    <div class="bg-{{- color -}}-600 text-white flex flex-col relative h-full w-full mb-8 md:mb-0 hover:shadow-2xl transition duration-200 ease-in-out">
+    <div class="lg:col-span-2 bg-{{- color -}}-600 text-white flex flex-col relative h-full w-full mb-8 md:mb-0 hover:shadow-2xl transition duration-200 ease-in-out">
         
         <div class="relative">
             {{- atom.teaser_image(teaserImage, teaserImage.title, news ? 'is4by3' : 'is2by1' ) -}}
