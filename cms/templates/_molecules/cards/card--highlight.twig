@@ -19,27 +19,32 @@
         -%}
 {%- endswitch -%}
 
-{%- switch content.organisationName -%}
-    {%- case "Research School Foundation" -%}
-        {%- set color = 'red' -%}
-    {%- case "Education Endowment Foundation" -%}
-        {%- set color = 'orange' -%}
-    {%- case "Harding Hub" -%}
-        {%- set color = 'purple' -%}
-    {%- case "Percipio Global" -%}
-        {%- set color = 'teal' -%}
-    {%- case "National Tutoring Programme" -%}
-        {%- set color = 'Blue' -%}
-    {% default %}
-        {%- set color = 'gray' -%}
-{%- endswitch -%}
+{%- if content.type == 'projects' -%}
+    {%- switch content.organisationName -%}
+        {%- case "Research School Foundation" -%}
+            {%- set color = 'red' -%}
+        {%- case "Education Endowment Foundation" -%}
+            {%- set color = 'orange' -%}
+        {%- case "Harding Hub" -%}
+            {%- set color = 'purple' -%}
+        {%- case "Percipio Global" -%}
+            {%- set color = 'teal' -%}
+        {%- case "National Tutoring Programme" -%}
+            {%- set color = 'blue' -%}
+        {%- case "The Sutton Trust" -%}
+            {%- set color = 'blue' -%}
+        {% default %}
+            {%- set color = 'gray' -%}
+    {%- endswitch -%}
+{%- else -%}
+    {%- set color = random(['blue', 'red', 'orange', 'purple', 'teal']) -%}
+{%- endif -%}
 
 
 
 {# Load needed images #}
 {%- set teaserImage = content.teaserImage[0] ?? placeholder.teaserPlaceholder[0] -%}
 {%- set news = content.type == 'news' ? true : false -%}
-
 
 {%- minify -%}
     <div class="lg:col-span-2 bg-{{- color -}}-600 text-white flex flex-col relative h-full w-full mb-8 md:mb-0 hover:shadow-2xl transition duration-200 ease-in-out">
@@ -58,7 +63,7 @@
                                 <address rel="author" class="break-words text-2xl font-primary font-medium leading-none not-italic mb-1">{{- content.author -}}</address>
                                 <time datetime="{{- entry.postDate|date('c') -}}" class="text-xs font-primary mt-6 font-medium uppercase tracking-wide leading-normal">{{- atom.formatDate(content.postDate) -}}</time>
                             </div>
-                        {%- case "project" -%}
+                        {%- case "projects" -%}
                             <h6 class="break-words font-mono text-white mb-1">
                                 {{- atom.text(content.organisationName) -}}
                             </h6>
@@ -79,7 +84,7 @@
                                 <span class="bg-{{color}}-700 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
                                     {{- content.newsCategory[0].title ?? 'No Category' }}
                                 </span>
-                            {%- case "project" -%}
+                            {%- case "projects" -%}
                                 {%- for category in content.projectCategory -%}
                                     <span class="bg-{{color}}-700 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
                                         {{- category.title -}}

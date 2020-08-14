@@ -13,20 +13,27 @@
 {%- set news = content.type == 'news' ? true : false -%}
 {%- set project = content.type == 'projects' ? true : false -%}
 
-{%- switch content.organisationName -%}
-    {%- case "Research School Foundation" -%}
-        {%- set color = 'red' -%}
-    {%- case "Education Endowment Foundation" -%}
-        {%- set color = 'orange' -%}
-    {%- case "Harding Hub" -%}
-        {%- set color = 'purple' -%}
-    {%- case "Percipio Global" -%}
-        {%- set color = 'teal' -%}
-    {%- case "National Tutoring Programme" -%}
-        {%- set color = 'blue' -%}
-    {% default %}
-        {%- set color = 'gray' -%}
-{%- endswitch -%}
+{%- if content.type == 'projects' -%}
+    {%- switch content.organisationName -%}
+        {%- case "Research School Foundation" -%}
+            {%- set color = 'red' -%}
+        {%- case "Education Endowment Foundation" -%}
+            {%- set color = 'orange' -%}
+        {%- case "Harding Hub" -%}
+            {%- set color = 'purple' -%}
+        {%- case "Percipio Global" -%}
+            {%- set color = 'teal' -%}
+        {%- case "National Tutoring Programme" -%}
+            {%- set color = 'blue' -%}
+        {%- case "The Sutton Trust" -%}
+            {%- set color = 'blue' -%}
+        {% default %}
+            {%- set color = 'gray' -%}
+    {%- endswitch -%}
+{%- else -%}
+    {%- set color = random(['blue', 'red', 'orange', 'purple', 'teal']) -%}
+{%- endif -%}
+
 
 {%- minify -%}
     <div class="bg-{{color}}-500 text-white md:grid grid-cols-2 grid-cols-2 grid-rows-1 md:col-span-2 lg:col-span-4 relative h-full w-full mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out">

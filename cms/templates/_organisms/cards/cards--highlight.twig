@@ -17,7 +17,7 @@
 
         {%- for card in cards -%}
 
-            {%- if loop.index == 1 or loop.index == 6 and featured -%}
+            {%- if (loop.index == 1 or loop.index == 6) and featured  -%}
 
                 {%- include '_molecules/cards/card--featured' ignore missing with {
                     content: card,
