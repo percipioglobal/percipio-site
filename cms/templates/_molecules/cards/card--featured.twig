@@ -13,9 +13,30 @@
 {%- set news = content.type == 'news' ? true : false -%}
 {%- set project = content.type == 'projects' ? true : false -%}
 
+{%- if content.type == 'projects' -%}
+    {%- switch content.organisationName -%}
+        {%- case "Research School Foundation" -%}
+            {%- set color = 'red' -%}
+        {%- case "Education Endowment Foundation" -%}
+            {%- set color = 'orange' -%}
+        {%- case "Harding Hub" -%}
+            {%- set color = 'purple' -%}
+        {%- case "Percipio Global" -%}
+            {%- set color = 'teal' -%}
+        {%- case "National Tutoring Programme" -%}
+            {%- set color = 'blue' -%}
+        {%- case "The Sutton Trust" -%}
+            {%- set color = 'blue' -%}
+        {% default %}
+            {%- set color = 'gray' -%}
+    {%- endswitch -%}
+{%- else -%}
+    {%- set color = random(['blue', 'red', 'orange', 'purple', 'teal']) -%}
+{%- endif -%}
+
 
 {%- minify -%}
-    <div class="bg-orange-500 text-white md:grid grid-cols-2 grid-rows-1 col-span-2 relative h-full w-full mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out">
+    <div class="bg-{{color}}-500 text-white md:grid grid-cols-2 grid-cols-2 grid-rows-1 md:col-span-6 lg:col-span-4 relative h-full w-full mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out">
         
         <div class="col-span-2">
             {{- atom.featured_image(teaserImage, teaserImage.title, 'is2by1' ) -}}
@@ -42,12 +63,12 @@
                 </h5>
                 <div class="mt-10 md:mt-16">
                     {%- if news -%}
-                        <span class="bg-orange-700 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                        <span class="bg-{{color}}-700 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
                             {{- content.newsCategory[0].title ?? 'No Category' }}
                         </span>
                     {%- else -%}
                         {%- for category in content.projectCategory -%}
-                            <span class="bg-orange-700 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                            <span class="bg-{{color}}-700 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
                                 {{- category.title -}}
                             </span>
                         {%- endfor -%}
