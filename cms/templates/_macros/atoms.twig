@@ -16,16 +16,18 @@
 {% endmacro %}
 
 {# Hero Image #}
-{% macro hero_image(heroImage, alt = '') %}
-    {% set image = heroImage.optimizeHero %}
+{% macro hero_image(heroImage, alt = '', ratio = 'is16by9') %}
+    {% set image = heroImage.optimizeHeroes %}
     {% spaceless %}
         <figure role="figure" aria-label="{{- alt -}}" class="relative w-full h-full">
-            <img  src="{{- image.placeholderImage() -}}"
-                    data-src="{{- image.src() -}}"
-                    data-srcset="{{- image.srcset() -}}"
-                    sizes="100vw"
-                    alt="{{- alt -}}"
-                    class="object-cover min-w-full min-h-full w-full h-full z-1 lazyload">
+            <div class="img {{ ratio }} static">
+                <img  src="{{- image.placeholderImage() -}}"
+                        data-src="{{- image.src() -}}"
+                        data-srcset="{{- image.srcset() -}}"
+                        sizes="100vw"
+                        alt="{{- alt -}}"
+                        class="object-cover min-w-full min-h-full w-full h-full z-1 lazyload">
+            </div>
         </figure>
     {% endspaceless %}
 {% endmacro %}
@@ -71,6 +73,7 @@
 {# Profile Image #}
 {% macro profile_image(profileImage, alt = '') %}
     {% set image = profileImage.optimizeProfileImages %}
+    {{dump(image)}}
     <figure role="figure" aria-label="{{- alt -}}" class="img overflow-hidden h-16 w-16 rounded-full">
         <img  src="{{- image.placeholderImage() -}}"
             data-src="{{- image.src() -}}"
