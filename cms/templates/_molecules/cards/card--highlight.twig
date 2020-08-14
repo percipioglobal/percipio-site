@@ -19,11 +19,27 @@
         -%}
 {%- endswitch -%}
 
+{%- switch content.organisationName -%}
+    {%- case "Research School Foundation" -%}
+        {%- set color = 'red' -%}
+    {%- case "Education Endowment Foundation" -%}
+        {%- set color = 'orange' -%}
+    {%- case "Harding Hub" -%}
+        {%- set color = 'purple' -%}
+    {%- case "Percipio Global" -%}
+        {%- set color = 'teal' -%}
+    {%- case "National Tutoring Programme" -%}
+        {%- set color = 'Blue' -%}
+    {% default %}
+        {%- set color = 'gray' -%}
+{%- endswitch -%}
+
+
+
 {# Load needed images #}
 {%- set teaserImage = content.teaserImage[0] ?? placeholder.teaserPlaceholder[0] -%}
 {%- set news = content.type == 'news' ? true : false -%}
 
-{%- set color = random(['red', 'blue', 'purple', 'teal', 'indigo']) -%}
 
 {%- minify -%}
     <div class="lg:col-span-2 bg-{{- color -}}-600 text-white flex flex-col relative h-full w-full mb-8 md:mb-0 hover:shadow-2xl transition duration-200 ease-in-out">
