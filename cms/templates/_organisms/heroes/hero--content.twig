@@ -1,21 +1,43 @@
 {%- import '_macros/atoms' as atom -%}
 
+{% set image = entry.heroImage[0] ?? null %}
+
 {%- minify -%}
 
     <section class="w-full">
       
-            <div class="h-full overflow-hidden relative hero-grad">
-                <div class="px-8 md:px-16 lg:px-32 pt-20 lg:pt-32 relative z-40">
-                    <div class="pt-16 text-white whitespace-no-wrap font-bold leading-tight text-4xl md:text-5xl lg:text-6xl">
-                        <h1>{{- atom.text(entry.overline) -}}</h1>
+            <div class="flex h-screen50 sm:h-screen80 relative">
+                <div class="absolute h-full w-full object-cover">
+                    {{- atom.hero_image(image, entry.title) -}}
+                </div>
+                <div class="flex flex-col h-auto justify-center mx-auto p-8 md:p-0 md:max-w-screen-md relative z-10">
+                    <div class="w-full text-white leading-tight text-base md:text-lg lg:text-lg font-mono tracking-tighter">
+                        <h6>{{- atom.text(entry.overline) -}}</h6>
                     </div>
-                    <div class="pt-16 text-white whitespace-no-wrap font-bold leading-tight text-4xl md:text-5xl lg:text-6xl">
+                    <div class="w-full text-white font-bold leading-tight text-5xl md:text-6xl tracking-tighter">
                         <h1>{{- atom.text(entry.title) -}}</h1>
                     </div>
-                    <div class="pt-10 pb-24 text-white font-semibold leading-tight text-2xl md:text-3xl lg:text-4xl">
+                    <div class="w-full text-white font-medium leading-tight text-xl md:text-2xl tracking-tight mt-16">
                         <h3>{{- atom.text(entry.description) -}}</h3>
                     </div>
+
+                    <div class="arrow">
+                        <svg
+                        class="content-center inline-block w-10 h-10 mt-12 bg bounce"
+                        viewbox="0 0 1792 1792"
+                        xmlns="https://www.w3.org/2000/svg"
+                        >
+                        <path
+                            d="M1412 897q0-27-18-45l-91-91q-18-18-45-18t-45 18l-189 189v-502q0-26-19-45t-45-19h-128q-26 0-45 19t-19 45v502l-189-189q-19-19-45-19t-45 19l-91 91q-18 18-18 45t18 45l362 362 91 91q18 18 45 18t45-18l91-91 362-362q18-18 18-45zm252-1q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+                            fill="#fff" fill-opacity="0.5"
+                        ></path>
+                        </svg>
+                    </div>
+
                 </div>
+
+                
+
             </div>
     </section>
 

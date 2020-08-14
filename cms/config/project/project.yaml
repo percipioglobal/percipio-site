@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 dateModified: 1597331274
+=======
+dateModified: 1597396520
+>>>>>>> feature/hero--content
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
