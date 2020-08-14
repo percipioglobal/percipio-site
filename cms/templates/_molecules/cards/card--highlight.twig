@@ -47,7 +47,7 @@
 {%- set news = content.type == 'news' ? true : false -%}
 
 {%- minify -%}
-    <div class="lg:col-span-2 bg-{{- color -}}-600 text-white flex flex-col relative h-full w-full mb-8 md:mb-0 hover:shadow-2xl transition duration-200 ease-in-out">
+    <div class="col-span-3 lg:col-span-2 bg-{{- color -}}-600 text-white flex flex-col relative h-full w-full mb-8 md:mb-0 hover:shadow-2xl transition duration-200 ease-in-out">
         
         <div class="relative">
             {{- atom.teaser_image(teaserImage, teaserImage.title, news ? 'is4by3' : 'is2by1' ) -}}
@@ -75,7 +75,7 @@
                     <h4 class="break-words text-4xl text-white font-extrabold mb-5">
                             {{- atom.text(content.title) -}}
                     </h4>
-                    <h5 class="min-h-64 break-words text-lg font-secondary text-white leading-relaxed {{ news ? 'mb-4' : '' -}}">
+                    <h5 class="break-words text-lg font-secondary text-white leading-relaxed {{ news ? 'mb-4' : '' -}}">
                             {{- atom.text(content.description) -}}
                     </h5>
                     <div class="mt-10 md:mt-16 flex flex-wrap">
@@ -92,7 +92,7 @@
                                 {%- endfor -%}
                             {%- case "teamMember" -%}
                                  {%- for category in content.teamCategory -%}
-                                    <span class="bg-{{color}}-700 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                                    <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
                                         {{- category.title -}}
                                     </span>
                                 {%- endfor -%}
