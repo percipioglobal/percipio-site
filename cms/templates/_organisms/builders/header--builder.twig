@@ -4,13 +4,19 @@
 %}
     
 {%- minify -%}
-    {%- for block in content.headerBuilder.all() -%}
+    {%- for block in content.heroBuilder.all() -%}
             
         {%- switch block.type -%}
             
             {%- case 'heroContent' -%}
                 
                 {%- include '_organisms/heroes/hero--content' ignore missing with {
+                    content: block,
+                } -%}
+
+            {%- case 'heroLanding' -%}
+            
+                {%- include '_organisms/heroes/hero--landing' ignore missing with {
                     content: block,
                 } -%}
 

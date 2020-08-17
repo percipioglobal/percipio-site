@@ -3,6 +3,8 @@
     .orderBy('postDate desc')
     .all() -%}
 
+{%- include '_organisms/heroes/hero--landing' -%}
+
 <div class="container max-w-screen-hd p-8 mx-auto">
     {%- include '_organisms/cards/cards--highlight' ignore missing with {
         content: news,

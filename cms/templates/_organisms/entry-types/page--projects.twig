@@ -1,14 +1,15 @@
 {%- import '_macros/atoms' as atom -%}
 
+{%- set projects = craft.entries.section('projects')
+    .orderBy('postDate desc')
+    .all() -%}
+
 {%- do craft.eagerBeaver.eagerLoadElements(entry, [
         'heroImage'
     ]) 
 -%}
-  
-{%- set projects = craft.entries.section('projects')
-    .with(['teaserImage', 'projectCategory'])
-    .orderBy('postDate desc')
-    .all() -%}
+
+{%- include '_organisms/heroes/hero--landing' -%}
 
 <div class="container max-w-screen-hd p-8 mx-auto">
     {%- include '_organisms/cards/cards--highlight' ignore missing with {
