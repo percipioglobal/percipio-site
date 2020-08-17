@@ -48,6 +48,11 @@ const main = async () => {
         methods: {
             toggleMenu(){
                 this.hamburgerOpen = !this.hamburgerOpen;
+            },
+            scroll(elemID){
+                document.getElementById(elemID).scrollIntoView({ 
+                behavior: 'smooth' 
+                });
             }
         }
     });

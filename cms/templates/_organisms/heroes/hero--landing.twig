@@ -1,6 +1,7 @@
 {%- import '_macros/atoms' as atom -%}
 
-{% set image = entry.heroImage[0] ?? placeholder.heroPlaceholder[0] %}
+{% set hero = content.heroBuilder[0] %}
+{% set image = hero.heroImage[0] ?? placeholder.heroPlaceholder[0] %}
 
 {%- minify -%}
 
@@ -8,20 +9,20 @@
       
             <div class="flex h-screen-80 relative">
                 <div class="absolute h-full w-full object-cover">
-                    {{- atom.hero_image(image, entry.title) -}}
+                    {{- atom.hero_image(image, hero.title) -}}
                 </div>
                 <div class="flex flex-col h-auto justify-center mx-auto p-8 md:p-16 lg:p-0 md:min-w-screen-md md:max-w-screen-md relative z-10">
                     <div class="w-full text-white leading-tight text-base md:text-lg lg:text-lg font-mono tracking-tighter">
-                        <h6>{{- atom.text(entry.overline) -}}</h6>
+                        <h6>{{- atom.text(hero.overline) -}}</h6>
                     </div>
                     <div class="w-full text-white font-bold leading-tight text-5xl md:text-6xl tracking-tighter">
-                        <h1>{{- atom.text(entry.title) -}}</h1>
+                        <h1>{{- atom.text(hero.heroTitle) -}}</h1>
                     </div>
                     <div class="w-full text-white font-medium leading-tight text-xl md:text-2xl tracking-tight mt-16">
-                        <h3>{{- atom.text(entry.description) -}}</h3>
+                        <h3>{{- atom.text(hero.description) -}}</h3>
                     </div>
 
-                    <div class="arrow">
+                    <div v-on:click="scroll('content')" class="arrow">
                         <svg
                         class="content-center inline-block w-10 h-10 mt-12 bg bounce"
                         viewbox="0 0 1792 1792"

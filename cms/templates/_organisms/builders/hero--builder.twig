@@ -1,10 +1,12 @@
 {% do craft.eagerBeaver.eagerLoadElements(entry, [
-    'sectionHeader:buttons',
+    'heroBuilder',
+    'heroLanding:image',
+    'heroContent:image',
     ]) 
 %}
     
 {%- minify -%}
-    {%- for block in content.heroBuilder.all() -%}
+    {%- for block in content.heroBuilder -%}
             
         {%- switch block.type -%}
             
