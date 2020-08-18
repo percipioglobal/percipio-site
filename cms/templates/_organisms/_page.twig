@@ -44,6 +44,12 @@
                         content: entry,
                     } -%}
 
+                {%- case "projects" -%}
+
+                    {%- include '_organisms/entry-types/entry--project' ignore missing with {
+                        content: entry,
+                    } -%}
+
         {%- endswitch -%}
 {% endblock %}
 
