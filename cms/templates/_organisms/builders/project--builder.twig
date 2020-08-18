@@ -1,0 +1,31 @@
+{% do craft.eagerBeaver.eagerLoadElements(entry, [
+    'projectHeader',
+    'projectHeader:clientLogo',
+    ]) 
+%}
+
+<div class="container max-w-screen-xl mx-auto">
+    
+    {%- minify -%}
+        {%- for block in content.projectBuilder -%}
+            
+            {%- switch block.type -%}
+            
+                {%- case "projectHeader" -%}
+                    
+                    {%- include '_molecules/headers/projectheader--section' ignore missing with {
+                        content: block,
+                    } -%}
+
+                {%- case "projectQuote" -%}
+                    
+                    {%- include '_molecules/quotes/projectquotes--block' ignore missing with {
+                        content: block,
+                    } -%}
+
+                {%- endswitch -%}
+
+        {%- endfor -%}
+    {%- endminify -%}
+
+</div>
