@@ -114,7 +114,7 @@ fields:
   fda7104e-81ef-4824-a3ac-420a12ec6bd5:
     contentColumnType: text
     fieldGroup: null
-    handle: herotitle
+    handle: heroTitle
     instructions: ''
     name: HeroTitle
     searchable: false
