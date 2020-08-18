@@ -1,7 +1,12 @@
 {% import '_macros/atoms' as atom %}
 
 {%- minify -%}
-    <div>
-    {{- atom.text(block.quoteHeader) -}}
+    <div class="my-8 border-l-4 border-black px-4 md:px-4 lg:mx-16 xl:mx-32">
+        <div class="font-mono mb-4 ">
+        {{- atom.text(block.quoteHeader) -}}
+        </div>
+        <div class="text-lg text-green-900 leading-relaxed">
+        {{- atom.text(block.quoteBody) -}}
+        </div>
     </div>
 {%- endminify -%}
