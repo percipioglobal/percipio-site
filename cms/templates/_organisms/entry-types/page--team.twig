@@ -1,11 +1,15 @@
 {%- set team = craft.entries.section('team')
     .with(['teaserImage', 'teamCategory'])
-    .orderBy('postDate desc')
     .all() -%}
+
+{%- do craft.eagerBeaver.eagerLoadElements(entry, [
+        'heroImage'
+    ]) 
+-%}
 
 {%- include '_organisms/heroes/hero--landing' -%}
 
-<div class="container max-w-screen-hd p-8 mx-auto">
+<div id="content" class="container max-w-screen-hd p-8 mx-auto">
 
     {%- include '_organisms/cards/cards--highlight' ignore missing with {
         content: team,

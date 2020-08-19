@@ -4,15 +4,6 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 5a7c4bf6-96b1-4791-a364-8268d570d317
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -37,26 +28,21 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
-          -
-            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 7f94d38a-7e8c-477c-8cca-bff77ee32f0e
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Content
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Hero
+        sortOrder: 2
 handle: teamPage
 hasTitleField: true
 name: 'Team Page'

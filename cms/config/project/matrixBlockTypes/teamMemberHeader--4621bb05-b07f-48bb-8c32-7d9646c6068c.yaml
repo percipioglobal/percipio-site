@@ -1,0 +1,100 @@
+field: 024735a6-b0d6-40f3-88ae-9ae16679bcea
+fieldLayouts:
+  758cec63-b92a-4b52-95a0-de8ac9518356:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: ecebe0af-1b18-4293-8bc1-3778b56ab7f4
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2f966b0a-325d-4977-80f4-105ed0e594dd
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0a7fa584-8085-43fb-8e93-518fddcc6082
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0a7fa584-8085-43fb-8e93-518fddcc6082:
+    contentColumnType: text
+    fieldGroup: null
+    handle: areasOfExpertiseHeader
+    instructions: ''
+    name: 'Areas of Expertise Header'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  2f966b0a-325d-4977-80f4-105ed0e594dd:
+    contentColumnType: text
+    fieldGroup: null
+    handle: funFactBody
+    instructions: ''
+    name: 'Fun Fact Body'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  ecebe0af-1b18-4293-8bc1-3778b56ab7f4:
+    contentColumnType: text
+    fieldGroup: null
+    handle: funFactHeader
+    instructions: ''
+    name: 'Fun Fact Header'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: teamMemberHeader
+name: 'Team Member Header'
+sortOrder: 1

@@ -53,10 +53,9 @@
             {{- atom.teaser_image(teaserImage, teaserImage.title, news ? 'is4by3' : 'is2by1' ) -}}
         </div>
 
-        <div class="flex flex-col h-auto text-left h-full">
-
-            <div class="text-left p-8">
-                <a href="{{- content.url -}}">
+        <a href="{{- content.url -}}">
+            <div class="flex flex-col justify-between text-left p-8">
+                <div>
                     {%- switch content.type -%}
                         {%- case "news" -%}
                             <div class="text-xs leading-tight text-black-100 tracking-wider">
@@ -64,20 +63,22 @@
                                 <time datetime="{{- entry.postDate|date('c') -}}" class="text-xs font-primary mt-6 font-medium uppercase tracking-wide leading-normal">{{- atom.formatDate(content.postDate) -}}</time>
                             </div>
                         {%- case "projects" -%}
-                            <h6 class="break-words font-mono text-white mb-1">
+                            <div class="break-words font-mono text-white mb-1">
                                 {{- atom.text(content.organisationName) -}}
-                            </h6>
+                            </div>
                         {%- case "teamMember" -%}
-                            <h6 class="break-words font-mono text-white mb-1">
+                            <div class="break-words font-mono text-white mb-1">
                                 {{- atom.text(content.teamMemberRole) -}}
-                            </h6>
+                            </div>
                     {%- endswitch -%}
-                    <h4 class="break-words text-4xl text-white font-extrabold mb-5">
-                            {{- atom.text(content.title) -}}
-                    </h4>
-                    <h5 class="break-words text-lg font-secondary text-white leading-relaxed {{ news ? 'mb-4' : '' -}}">
-                            {{- atom.text(content.description) -}}
-                    </h5>
+                    <div class="break-words text-4xl text-white font-extrabold mb-5">
+                        {{- atom.text(content.title) -}}
+                    </div>
+                    <div class="break-words text-lg font-secondary text-white leading-relaxed {{ news ? 'mb-4' : '' -}}">
+                        {{- atom.text(content.description) -}}
+                    </div>
+                </div>
+                <div>
                     <div class="mt-10 md:mt-16 flex flex-wrap">
                         {%- switch content.type -%}
                             {%- case "news" -%}
@@ -91,18 +92,17 @@
                                     </span>
                                 {%- endfor -%}
                             {%- case "teamMember" -%}
-                                 {%- for category in content.teamCategory -%}
+                                {%- for category in content.teamCategory -%}
                                     <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
                                         {{- category.title -}}
                                     </span>
                                 {%- endfor -%}
                         {%- endswitch -%}
-
                     </div>
-                </a>
+                </div>
             </div>
-            
-        </div>
+        </a>  
+
         
         {# URL covering entire card #}
         <div>
