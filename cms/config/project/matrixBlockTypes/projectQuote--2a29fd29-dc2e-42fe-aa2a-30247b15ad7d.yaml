@@ -65,4 +65,4 @@ fields:
     type: craft\fields\PlainText
 handle: projectQuote
 name: 'Project Quote'
-sortOrder: 2
+sortOrder: 1
