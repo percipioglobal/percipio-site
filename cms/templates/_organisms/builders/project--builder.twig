@@ -21,6 +21,7 @@
                     
                     {%- include '_molecules/quotes/projectquotes--block' ignore missing with {
                         content: block,
+                        name: content.organisationName,
                     } -%}
                 
                 {%- case "challengeSolutionResult" -%}
@@ -28,6 +29,14 @@
                     {%- include '_molecules/lists/challenge-solution-result--block' ignore missing with {
                         content: block,
                         name: content.organisationName,
+                    } -%}
+
+                {%- case "projectDetails" -%}
+                    
+                    {%- include '_molecules/content/project-details' ignore missing with {
+                        content: block,
+                        name: content.organisationName,
+                        categories: content.projectCategory,
                     } -%}
 
 
