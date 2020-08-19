@@ -51,7 +51,7 @@ fields:
     name: Position
     searchable: false
     settings:
-      default: full
+      default: center
       options:
         __assoc__:
           -

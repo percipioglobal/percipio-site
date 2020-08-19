@@ -1,0 +1,36 @@
+{% do craft.eagerBeaver.eagerLoadElements(entry, [
+    'projectImage',
+    ]) 
+%}
+
+<div class="container max-w-screen-xl mx-auto">
+    
+    {%- minify -%}
+        {%- for block in content.teamBuilder -%}
+            
+            {%- switch block.type -%}
+
+                {# {%- case "teamMemberHeader" -%}
+                
+                    {%- include '_molecules/headers/team-member-header--section' ignore missing with {
+                        content: block,
+                    } -%} #}
+
+                {%- case "teamMemberDetails" -%}
+                
+                    {%- include '_molecules/content/team-details' ignore missing with {
+                        content: block,
+                    } -%}
+
+                {%- case "projectImage" -%}
+                
+                    {%- include '_molecules/images/image--single' ignore missing with {
+                        content: block,
+                    } -%}
+
+            {%- endswitch -%}
+
+        {%- endfor -%}
+    {%- endminify -%}
+
+</div>

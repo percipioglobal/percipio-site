@@ -49,6 +49,12 @@
                     {%- include '_organisms/entry-types/entry--project' ignore missing with {
                         content: entry,
                     } -%}
+                
+                {%- case "teamMember" -%}
+
+                    {%- include '_organisms/entry-types/entry--team-member' ignore missing with {
+                        content: entry,
+                    } -%}
 
         {%- endswitch -%}
 {% endblock %}
