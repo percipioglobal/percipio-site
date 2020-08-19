@@ -26,11 +26,13 @@
             <div class="font-mono mb-8 ">
             {{- atom.text(block.projectCategoriesHeader) -}}
             </div>
-            {%- for category in categories -%}
-                <span class="bg-{{color}}-700 mr-6 px-4 py-2 rounded-full font-secondary text-white text-xs whitespace-no-wrap tracking-wide font-medium">
-                    {{- category.title -}}
-                </span>
-            {%- endfor -%}
+            <div class="flex flex-wrap">
+                {%- for category in categories -%}
+                    <span class="bg-{{color}}-700 mr-6 mb-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                        {{- category.title -}}
+                    </span>
+                {%- endfor -%}
+            </div>
         </div>
     </div>
 {%- endminify -%}
