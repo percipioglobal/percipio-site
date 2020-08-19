@@ -39,6 +39,11 @@
                         categories: content.projectCategory,
                     } -%}
 
+                {%- case "projectImage" -%}
+                
+                    {%- include '_molecules/images/image--single' ignore missing with {
+                        content: block,
+                    } -%}
 
                 {%- endswitch -%}
 
