@@ -3,7 +3,7 @@
 {# Eager Load categories based on entry types #}
 {%- if entry.type == 'news' -%}
     {%- do craft.eagerBeaver.eagerLoadElements(entry, [
-        'newsCategory'
+        'newsCategories'
         ]) 
     -%}
 {%- endif -%}
@@ -64,10 +64,10 @@
                 <div class="mt-10 md:mt-16">
                     {%- if news -%}
                         <span class="bg-{{color}}-700 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
-                            {{- content.newsCategory[0].title ?? 'No Category' }}
+                            {{- content.newsCategories[0].title ?? 'No Category' }}
                         </span>
                     {%- else -%}
-                        {%- for category in content.projectCategory -%}
+                        {%- for category in content.projectCategories -%}
                             <span class="bg-{{color}}-700 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
                                 {{- category.title -}}
                             </span>
