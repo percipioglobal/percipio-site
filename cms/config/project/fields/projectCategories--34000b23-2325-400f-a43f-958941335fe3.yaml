@@ -1,8 +1,8 @@
 contentColumnType: string
-fieldGroup: 58eccc39-1c9e-45ac-bae8-465deff69786
-handle: teamCategory
-instructions: ''
-name: 'Team Category'
+fieldGroup: 151de730-f956-437c-a617-de5725e4c07a
+handle: projectCategories
+instructions: 'Please select or create a category this project belongs to.'
+name: 'Project Categories'
 searchable: true
 settings:
   allowLimit: false
@@ -13,7 +13,7 @@ settings:
   localizeRelations: false
   selectionLabel: ''
   showSiteMenu: true
-  source: 'group:4e026396-d7ab-43ef-a817-226fb2dada30'
+  source: 'group:6834194e-43c0-464b-9333-a15bd914d9d3'
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false

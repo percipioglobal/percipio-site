@@ -1,20 +1,20 @@
-field: cc4d5589-5884-4fb2-ba84-ffb388a8806e
+field: e691301b-7484-40be-a3d4-c3bc590de959
 fieldLayouts:
-  1250dda9-6a10-41e5-9491-8e054eb76d83:
+  f1887205-7802-47d7-a2a7-197ef8dde2cb:
     tabs:
       -
         elements:
           -
-            fieldUid: f3960fae-d20a-4473-9a73-315dfed31760
+            fieldUid: 22bf6f21-4d10-4be3-ad78-8cb314677aa5
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: 085923fe-5934-4d01-a2fd-ec625094c005
+            fieldUid: 755379c3-7d90-4483-8278-44384d20384d
             instructions: null
             label: null
             required: false
@@ -25,13 +25,43 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  085923fe-5934-4d01-a2fd-ec625094c005:
+  22bf6f21-4d10-4be3-ad78-8cb314677aa5:
+    contentColumnType: string
+    fieldGroup: null
+    handle: organisationLogo
+    instructions: ''
+    name: 'Organisation Logo'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:14e48735-7707-43d5-a6f1-90cc18da80f1'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  755379c3-7d90-4483-8278-44384d20384d:
     contentColumnType: text
     fieldGroup: null
-    handle: caption
+    handle: organisationDescription
     instructions: ''
-    name: Caption
-    searchable: true
+    name: OrganisationDescription
+    searchable: false
     settings:
       byteLimit: null
       charLimit: null
@@ -44,35 +74,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  f3960fae-d20a-4473-9a73-315dfed31760:
-    contentColumnType: string
-    fieldGroup: null
-    handle: image
-    instructions: 'Add a single image to appear in the slider'
-    name: Image
-    searchable: false
-    settings:
-      allowSelfRelations: false
-      allowedKinds:
-        - image
-      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
-      defaultUploadLocationSubpath: ''
-      limit: '1'
-      localizeRelations: false
-      restrictFiles: '1'
-      selectionLabel: 'Add a slider image'
-      showSiteMenu: true
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863'
-      singleUploadLocationSubpath: ''
-      source: null
-      sources:
-        - 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863'
-      targetSiteId: null
-      useSingleFolder: true
-      validateRelatedElements: false
-      viewMode: list
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
+handle: organisationHeader
+name: 'Organisation Header'
+sortOrder: 10

@@ -1,11 +1,11 @@
-field: e691301b-7484-40be-a3d4-c3bc590de959
+field: a8f67f73-cbef-439c-88e5-8665ef1b430f
 fieldLayouts:
-  1f38f42e-d515-4104-b279-6e3f7edbee7d:
+  24bd1f38-b944-4552-b3e6-f743a2a17921:
     tabs:
       -
         elements:
           -
-            fieldUid: ed4b0f49-8429-4d80-846f-3d441bd3e707
+            fieldUid: 3a893d0b-3e07-4c4f-94ce-4f80eded5feb
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 302a5592-8085-472e-9356-ab6b1eaf1635
+            fieldUid: 0b4e89db-06e2-4901-ba67-c7376ac4137e
             instructions: null
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 49d732ef-0bfc-46c0-ba09-004de008c0ba
+            fieldUid: 4340dde5-53ff-41a6-8878-e8dbbc63b5e0
             instructions: null
             label: null
             required: false
@@ -32,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 3fc84cf5-6e3d-46e8-bf13-9a1d4e198438
+            fieldUid: c28e2558-6597-4061-9469-24a7a461ff47
             instructions: null
             label: null
             required: false
@@ -43,7 +43,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  302a5592-8085-472e-9356-ab6b1eaf1635:
+  0b4e89db-06e2-4901-ba67-c7376ac4137e:
     contentColumnType: string
     fieldGroup: null
     handle: position
@@ -75,26 +75,38 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: rias\positionfieldtype\fields\Position
-  3fc84cf5-6e3d-46e8-bf13-9a1d4e198438:
-    contentColumnType: text
+  3a893d0b-3e07-4c4f-94ce-4f80eded5feb:
+    contentColumnType: string
     fieldGroup: null
-    handle: caption
-    instructions: 'Enter an optional caption for the image, if an image already contains a caption, this field will override the original one.'
-    name: Caption
+    handle: image
+    instructions: 'Select or upload an image to use in the page.'
+    name: Image
     searchable: false
     settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
+      allowSelfRelations: false
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:f52a8f91-da15-4d35-b55d-6c097b9ecc38'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: list
     translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  49d732ef-0bfc-46c0-ba09-004de008c0ba:
+    translationMethod: site
+    type: craft\fields\Assets
+  4340dde5-53ff-41a6-8878-e8dbbc63b5e0:
     contentColumnType: string
     fieldGroup: null
     handle: ratio
@@ -111,7 +123,7 @@ fields:
               - None
             -
               - value
-              - ''
+              - none
             -
               - default
               - '1'
@@ -206,37 +218,25 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  ed4b0f49-8429-4d80-846f-3d441bd3e707:
-    contentColumnType: string
+  c28e2558-6597-4061-9469-24a7a461ff47:
+    contentColumnType: text
     fieldGroup: null
-    handle: image
-    instructions: 'Select or upload an image to use in the page.'
-    name: Image
+    handle: caption
+    instructions: 'Enter an optional caption for the image, if an image already contains a caption, this field will override the original one.'
+    name: Caption
     searchable: false
     settings:
-      allowSelfRelations: false
-      allowedKinds:
-        - image
-      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
-      defaultUploadLocationSubpath: ''
-      limit: '1'
-      localizeRelations: false
-      restrictFiles: '1'
-      selectionLabel: ''
-      showSiteMenu: true
-      showUnpermittedFiles: true
-      showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
-      singleUploadLocationSubpath: ''
-      source: null
-      sources: '*'
-      targetSiteId: null
-      useSingleFolder: true
-      validateRelatedElements: false
-      viewMode: list
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
-handle: singleImage
-name: Image
-sortOrder: 4
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: projectImage
+name: 'Project Image'
+sortOrder: 5

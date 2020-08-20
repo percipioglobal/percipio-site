@@ -1,5 +1,5 @@
 fieldLayouts:
-  ecebb537-0462-4a94-8a09-eb3c92d6de22:
+  2e1b9f21-5013-4e05-9f7f-a26ed9fcbae0:
     tabs:
       -
         elements:
@@ -25,15 +25,11 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\TitleField
             warning: null
             width: 100
-        name: Content
-        sortOrder: 1
-      -
-        elements:
           -
-            fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78
+            fieldUid: 97956e7f-3294-43b2-9d6a-e717706432bc
             instructions: null
             label: null
             required: false
@@ -41,13 +37,25 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Hero
-        sortOrder: 2
-handle: newsPage
-hasTitleField: true
-name: 'News Page'
-section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
-sortOrder: 4
-titleFormat: null
-titleTranslationKeyFormat: null
-titleTranslationMethod: site
+        name: Content
+        sortOrder: 1
+handle: projects
+hasUrls: true
+name: Projects
+settings:
+  addSubfolderToRootUrl: '1'
+  autoFocalPoint: ''
+  bucket: $S3_BUCKET
+  bucketSelectionMode: manual
+  cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+  cfPrefix: $CLOUDFRONT_PATH_PREFIX
+  expires: '3 months'
+  keyId: $S3_KEY_ID
+  makeUploadsPublic: '1'
+  region: $S3_REGION
+  secret: $S3_SECRET
+  storageClass: ''
+  subfolder: projects
+sortOrder: 9
+type: craft\awss3\Volume
+url: 'https://s3.$S3_REGION.amazonaws/$S3_BUCKET/'

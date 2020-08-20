@@ -1,5 +1,4 @@
 enableVersioning: true
-entryTypes: null
 handle: news
 name: News
 previewTargets:
@@ -19,6 +18,6 @@ siteSettings:
   5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
     enabledByDefault: true
     hasUrls: true
-    template: _organisms/sections/detail.twig
+    template: _organisms/_page.twig
     uriFormat: 'news/{slug}'
 type: channel

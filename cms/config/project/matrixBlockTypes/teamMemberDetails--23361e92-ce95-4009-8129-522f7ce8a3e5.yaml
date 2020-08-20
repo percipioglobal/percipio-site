@@ -1,14 +1,14 @@
-field: e691301b-7484-40be-a3d4-c3bc590de959
+field: 024735a6-b0d6-40f3-88ae-9ae16679bcea
 fieldLayouts:
-  ce1931f4-9280-4231-b357-ea8750a88735:
+  1df0ce0e-0e9c-406f-83bd-5a2f332e493c:
     tabs:
       -
         elements:
           -
-            fieldUid: 5053ff27-8e1b-49ea-85c6-c2a1dece3b8e
+            fieldUid: 0892e768-9a1e-451c-95f1-d426fa624ffd
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -16,21 +16,21 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  5053ff27-8e1b-49ea-85c6-c2a1dece3b8e:
+  0892e768-9a1e-451c-95f1-d426fa624ffd:
     contentColumnType: text
     fieldGroup: null
-    handle: article
-    instructions: 'Enter one more paragraphs to create your textual content.'
-    name: 'Body Content'
-    searchable: true
+    handle: teamMemberSummary
+    instructions: ''
+    name: 'Team Member Summary'
+    searchable: false
     settings:
       availableTransforms: '*'
-      availableVolumes: ''
+      availableVolumes: '*'
       cleanupHtml: true
       columnType: text
       purifierConfig: ''
       purifyHtml: '1'
-      redactorConfig: Content.json
+      redactorConfig: ''
       removeEmptyTags: '1'
       removeInlineStyles: '1'
       removeNbsp: '1'
@@ -39,6 +39,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-handle: article
-name: 'Article Body'
+handle: teamMemberDetails
+name: 'Team Member Details'
 sortOrder: 2

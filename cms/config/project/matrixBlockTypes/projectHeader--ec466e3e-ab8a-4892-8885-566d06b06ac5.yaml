@@ -1,20 +1,20 @@
-field: cc4d5589-5884-4fb2-ba84-ffb388a8806e
+field: a8f67f73-cbef-439c-88e5-8665ef1b430f
 fieldLayouts:
-  1250dda9-6a10-41e5-9491-8e054eb76d83:
+  0c793b94-c1b3-4915-80b0-e1512791112f:
     tabs:
       -
         elements:
           -
-            fieldUid: f3960fae-d20a-4473-9a73-315dfed31760
+            fieldUid: 9418f35c-c2d9-4761-a7d9-056e5b1ae476
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: 085923fe-5934-4d01-a2fd-ec625094c005
+            fieldUid: 48713b67-86b0-441e-abfe-c12148a80d98
             instructions: null
             label: null
             required: false
@@ -25,13 +25,13 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  085923fe-5934-4d01-a2fd-ec625094c005:
+  48713b67-86b0-441e-abfe-c12148a80d98:
     contentColumnType: text
     fieldGroup: null
-    handle: caption
+    handle: clientDescription
     instructions: ''
-    name: Caption
-    searchable: true
+    name: 'Client Description'
+    searchable: false
     settings:
       byteLimit: null
       charLimit: null
@@ -44,31 +44,29 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  f3960fae-d20a-4473-9a73-315dfed31760:
+  9418f35c-c2d9-4761-a7d9-056e5b1ae476:
     contentColumnType: string
     fieldGroup: null
-    handle: image
-    instructions: 'Add a single image to appear in the slider'
-    name: Image
+    handle: clientLogo
+    instructions: ''
+    name: 'Client Logo'
     searchable: false
     settings:
       allowSelfRelations: false
-      allowedKinds:
-        - image
+      allowedKinds: null
       defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
-      restrictFiles: '1'
-      selectionLabel: 'Add a slider image'
+      restrictFiles: ''
+      selectionLabel: ''
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863'
+      singleUploadLocationSource: 'volume:f52a8f91-da15-4d35-b55d-6c097b9ecc38'
       singleUploadLocationSubpath: ''
       source: null
-      sources:
-        - 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863'
+      sources: '*'
       targetSiteId: null
       useSingleFolder: true
       validateRelatedElements: false
@@ -76,3 +74,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+handle: projectHeader
+name: 'Project Header'
+sortOrder: 2
