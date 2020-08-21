@@ -58,4 +58,4 @@ settings:
   subfolder: projects
 sortOrder: 9
 type: craft\awss3\Volume
-url: 'https://s3.$S3_REGION.amazonaws/$S3_BUCKET/'
+url: $CLOUDFRONT_URL

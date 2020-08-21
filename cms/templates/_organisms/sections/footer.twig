@@ -11,7 +11,20 @@
     .all()
 -%}
 
+{%- set clients = entry.clientFooterBuilder.all() ?? null -%}
+
 <footer class="w-full px-2 md:px-0">
+
+    <div class="bg-gray-300 py-16 px-8">
+        <div class="container max-w-screen-xl mx-auto">
+            <div class="flex flex-wrap lg:flex-no-wrap justify-between w-full">
+            {%- for client in clients -%}
+                {{- atom.client_logo(client.logo[0], client.clientUrl, client.description|striptags) -}} 
+            {%- endfor -%} 
+            </div>
+        </div>
+    </div>
+
     <div class="max-w-screen-xxl border-t border-gray-400">
         <div class="flex justify-center text-gray-400 -mt-10">
             <svg class="stroke-current" width="65" height="74" viewBox="0 0 65 74">
