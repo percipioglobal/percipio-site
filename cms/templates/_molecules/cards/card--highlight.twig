@@ -102,7 +102,7 @@
         <div>
             <a href="{{- url(alias('@web/' ~ content.uri)) -}}" class="absolute block top-0 left-0 h-full w-full z-1">
                 <span class="sr-only">
-                    {{- "Discover" | t }} {{ atom.text(content.title) }} {{ content.newsCategory[0].title ?? '' -}}
+                    {{- "Discover" | t }} {{ atom.text(content.title) }} {{ content.newsCategories[0].title ?? '' -}}
                 </span>
             </a>
         </div>      

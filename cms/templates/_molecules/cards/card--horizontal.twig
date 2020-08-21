@@ -4,17 +4,17 @@
 {%- switch entry.type -%}
     {%- case "news" -%}
         {%- do craft.eagerBeaver.eagerLoadElements(entry, [
-            'newsCategory'
+            'newsCategories'
             ]) 
         -%}
     {%- case "project" -%}
         {%- do craft.eagerBeaver.eagerLoadElements(entry, [
-            'projectCategory'
+            'projectCategories'
             ]) 
         -%}
     {%- case "teamMember" -%}
         {%- do craft.eagerBeaver.eagerLoadElements(entry, [
-            'teamCategory'
+            'teamCategories'
             ]) 
         -%}
 {%- endswitch -%}
@@ -59,7 +59,7 @@
                         {{- atom.text(content.description) -}}
                     </h5>
                     <div class="mt-10 md:mt-16 flex flex-wrap">
-                        {%- for category in content.projectCategory -%}
+                        {%- for category in content.projectCategories -%}
                             <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
                                 {{- category.title -}}
                             </span>
@@ -73,7 +73,7 @@
             
         <a href="{{- url(alias('@web/' ~ content.uri)) -}}" class="absolute block top-0 left-0 h-full w-full z-1">
             <span class="sr-only">
-                {{- "Discover" | t }} {{ atom.text(content.title) }} {{ content.newsCategory[0].title ?? '' -}}
+                {{- "Discover" | t }} {{ atom.text(content.title) }} {{ content.newsCategories[0].title ?? '' -}}
             </span>
         </a>    
         
