@@ -1,5 +1,6 @@
 {%- set team = craft.entries.section('team')
     .with(['teaserImage', 'teamCategory'])
+    .orderBy('seniority asc')
     .all() -%}
 
 {%- do craft.eagerBeaver.eagerLoadElements(entry, [

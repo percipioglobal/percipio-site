@@ -23,7 +23,7 @@
                     content: card,
                 } -%}
             
-            {%- elseif loop.index == 3 or loop.index == 4 and featured -%}
+            {%- elseif (loop.index == 3 or loop.index == 4) and featured -%}
 
                 {%- include '_molecules/cards/card--horizontal' ignore missing with {
                     content: card,
