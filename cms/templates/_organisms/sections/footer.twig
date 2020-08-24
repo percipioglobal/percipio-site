@@ -17,7 +17,7 @@
 
     <div class="{{clients ? "block" : "hidden" }} bg-gray-300 py-16 px-8">
         <div class="container max-w-screen-xl mx-auto">
-            <div class="flex flex-wrap lg:flex-no-wrap justify-between w-full">
+            <div class="client flex flex-wrap lg:flex-no-wrap justify-between w-full">
             {%- for client in clients -%}
                 {{- atom.client_logo(client.logo[0], client.clientUrl, client.description|striptags) -}} 
             {%- endfor -%} 
@@ -72,9 +72,9 @@
             <div class="md:flex md:justify-end">
                 {%- for node in legalNodes -%}
                 <div class="md:mx-4">
-                    <a href="{{- node.url -}}" 
+                    <a href="{{- node.url -}}"
                         title="{{- node.title -}}"
-                        {% if node.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}  
+                        {% if node.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}
                     >
                         {{- node.title -}}
                     </a>
