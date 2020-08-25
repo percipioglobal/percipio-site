@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 58eccc39-1c9e-45ac-bae8-465deff69786
+handle: teamCategories
+instructions: ''
+name: 'Team Categories'
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: 'group:0536c060-0d97-421e-8c73-3ad5baec52d2'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

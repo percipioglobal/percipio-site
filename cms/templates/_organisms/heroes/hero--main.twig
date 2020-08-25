@@ -1,0 +1,59 @@
+<div class="w-full h-screen overflow-hidden relative hero-grad">
+    <div class="waves-b">
+        <svg class="waves" height="1080px" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#000107" stop-opacity=".7" />
+                    <stop offset="50%" stop-color="#050e3a" stop-opacity=".5" />
+                    <stop offset="100%" stop-color="#000734" stop-opacity=".3" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#grad1)" d="M0 800 C500 200 600 1000 2000 0 V1080 H0 Z">
+                <animate repeatCount="indefinite" attributeName="d" dur="15s" 
+                values="
+                M0 800 C500 200 600 1000 2000 0 V1080 H0 Z;
+                M0 900 C500 400 600 700 2000 200 V1080 H0 Z;
+                M0 800 C500 200 600 1000 2000 0 V1080 H0 Z
+                "
+                >                    
+                </animate>
+            </path>
+        </svg>
+    </div>
+    <div class="waves-m">
+        <svg class="waves" height="1080px" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#050e3a" stop-opacity=".5" />
+                    <stop offset="50%" stop-color="#000734" stop-opacity=".4" />
+                    <stop offset="100%" stop-color="#000107" stop-opacity=".5" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#grad2)" d="M0 200 C500 100 750 800 2000 800 V1080 H0 Z">
+                <animate repeatCount="indefinite" attributeName="d" dur="15s" 
+                values="
+                M0 400 C500 100 750 800 2000 800 V1080 H0 Z;
+                M0 500 C500 500 750 500 2000 600 V1080 H0 Z;
+                M0 400 C500 100 750 800 2000 800 V1080 H0 Z
+                "
+                >                    
+                </animate>
+            </path>
+        </svg>
+    </div>
+    <div class="px-8 md:px-16 lg:px-32 pt-20 lg:pt-32 relative z-40">
+        <div class="pt-16 text-white whitespace-no-wrap font-bold leading-tight text-4xl md:text-5xl lg:text-6xl">
+            Building applications<br>for better futures.
+        </div>
+        <a href="{{ siteUrl }}projects" title="projects">
+            <button class="mt-5 md:mt-8 p-4 text-lg bg-transparent hover:bg-red-500 text-white font-semibold hover:text-white border border-white hover:border-transparent rounded">
+                What we do
+            </button>
+        </a>
+    </div>
+    <svg class="hexagon-mask-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" viewBox="0 0 100 100" width="auto" height="auto" style="position:absolute;left:-99999px;top:-99999px;"><defs></defs><clipPath id="hexagon-mask"><path d="M75.135,7.630 L13.902,42.665 C10.127,44.821 7.013,50.139 7.013,54.486 L7.008,124.532 C7.008,128.861 10.099,134.174 13.890,136.341 L75.101,171.358 C78.887,173.526 85.075,173.526 88.850,171.358 L150.100,136.318 C153.869,134.145 156.983,128.827 156.966,124.514 L156.989,54.463 C156.989,50.117 153.881,44.798 150.100,42.625 L88.901,7.630 C87.005,6.544 84.506,5.995 82.007,5.995 C79.513,5.995 77.026,6.544 75.135,7.630 " /></clipPath></svg>
+    <div class="hexagon">
+        <svg class="hexagon-svgs" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="163" height="179" viewBox="0 0 163 179"><defs></defs><path stroke="#ffffff" stroke-width="1px" d="M75.010,6.712 L12.934,42.153 C9.108,44.334 5.951,49.714 5.951,54.111 L5.945,124.969 C5.945,129.349 9.079,134.723 12.923,136.916 L74.975,172.339 C78.813,174.532 85.086,174.532 88.912,172.339 L151.005,136.893 C154.826,134.694 157.983,129.314 157.966,124.952 L157.989,54.088 C157.989,49.691 154.838,44.311 151.005,42.112 L88.965,6.712 C87.043,5.613 84.509,5.057 81.976,5.057 C79.448,5.057 76.926,5.613 75.010,6.712 " /></svg>
+        <svg class="hexagon-svgs hexagon-image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="163" height="179" viewBox="0 0 163 179"><image id="shine" xlink:href="./img/test-img.png" width="320" height="180" y="0" x="-78" style="clip-path: url(#hexagon-mask);" /></svg>
+    </div>
+</div>

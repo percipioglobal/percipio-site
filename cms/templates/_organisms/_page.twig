@@ -1,0 +1,65 @@
+{% extends "_boilerplate/_layouts/generic-page-layout.twig" %}
+
+{% block headLinks %}
+    {{ parent() }}
+    <link rel="amphtml" href="{{ siteUrl('/amp') }}">
+{% endblock headLinks %}
+
+{% block content %}
+        {%- switch entry.type -%}
+                
+                {%- case "contentPage" -%}
+
+                    {%- include '_organisms/entry-types/page--content' ignore missing with {
+                        content: entry,
+                    } -%}
+
+                {%- case "landingsPage" -%}
+
+                    {%- include '_organisms/entry-types/page--landing' ignore missing with {
+                        content: entry,
+                    } -%}
+
+                {%- case "newsPage" -%}
+
+                    {%- include '_organisms/entry-types/page--news' ignore missing with {
+                        content: entry,
+                    } -%}
+
+                {%- case "projectsPage" -%}
+
+                    {%- include '_organisms/entry-types/page--projects' ignore missing with {
+                        content: entry,
+                    } -%}
+
+                  {%- case "teamPage" -%}
+
+                    {%- include '_organisms/entry-types/page--team' ignore missing with {
+                        content: entry,
+                    } -%}
+
+                {%- case "news" -%}
+
+                    {%- include '_organisms/entry-types/entry--news' ignore missing with {
+                        content: entry,
+                    } -%}
+
+                {%- case "projects" -%}
+
+                    {%- include '_organisms/entry-types/entry--project' ignore missing with {
+                        content: entry,
+                    } -%}
+                
+                {%- case "teamMember" -%}
+
+                    {%- include '_organisms/entry-types/entry--team-member' ignore missing with {
+                        content: entry,
+                    } -%}
+
+        {%- endswitch -%}
+{% endblock %}
+
+{# -- Any JavaScript that should be included before </body> -- #}
+{% block bodyJs %}
+    {{ parent() }}
+{% endblock bodyJs %}

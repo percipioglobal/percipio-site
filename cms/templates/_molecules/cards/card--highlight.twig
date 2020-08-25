@@ -1,55 +1,108 @@
 {%- import '_macros/atoms' as atom -%}
 
 {# Eager Load categories based on entry types #}
-{%- if entry.type == 'news' -%}
-    {%- do craft.eagerBeaver.eagerLoadElements(entry, [
-        'newsCategory'
-        ]) 
-    -%}
+{%- switch entry.type -%}
+    {%- case "news" -%}
+        {%- do craft.eagerBeaver.eagerLoadElements(entry, [
+            'newsCategories'
+            ]) 
+        -%}
+    {%- case "project" -%}
+        {%- do craft.eagerBeaver.eagerLoadElements(entry, [
+            'projectCategories'
+            ]) 
+        -%}
+    {%- case "teamMember" -%}
+        {%- do craft.eagerBeaver.eagerLoadElements(entry, [
+            'teamCategories'
+            ]) 
+        -%}
+{%- endswitch -%}
+
+{%- if content.type == 'projects' -%}
+    {%- switch content.organisationName -%}
+        {%- case "Research School Foundation" -%}
+            {%- set color = 'red' -%}
+        {%- case "Education Endowment Foundation" -%}
+            {%- set color = 'orange' -%}
+        {%- case "Harding Hub" -%}
+            {%- set color = 'purple' -%}
+        {%- case "Percipio Global" -%}
+            {%- set color = 'teal' -%}
+        {%- case "National Tutoring Programme" -%}
+            {%- set color = 'blue' -%}
+        {%- case "The Sutton Trust" -%}
+            {%- set color = 'blue' -%}
+        {% default %}
+            {%- set color = 'gray' -%}
+    {%- endswitch -%}
+{%- else -%}
+    {%- set color = random(['blue', 'red', 'orange', 'purple', 'teal']) -%}
 {%- endif -%}
 
-{# Load needed images #}
-{%- set teaserImage = content.teaserImage[0] ?? placeholders.teaserPlaceholder.one() -%}
-{%- set userImage = entry.author.profilePhoto[0] ?? placeholders.profilePhotoPlaceholder.one() -%}
 
+
+{# Load needed images #}
+{%- set teaserImage = content.teaserImage[0] ?? placeholder.teaserPlaceholder[0] -%}
+{%- set news = content.type == 'news' ? true : false -%}
 
 {%- minify -%}
-    <div class="relative w-full border-b-4 border-gray-300">
-
-        <div class="mb-8">
-            {{- atom.teaser_image(teaserImage, teaserImage.title) -}}
-        </div>
-
-        <div class="flex items-center text-left mb-8">
-            {% if entry.type == 'news' %}
-                <div class="flex-shrink-0 h-16 w-16 mr-3">
-                    {{- atom.profile_image(userImage, entry.author) -}}
-                </div>
-            {% endif %}
-
-            <div>
-                <h4 class="text-4xl font-secondary font-normal leading-normal">
-                    <a href="{{- content.url -}}">
-                        {{- atom.text(content.title) -}}
-                    </a>
-                </h4>
-                
-                <span class="text-xs leading-tight text-gray-500 lowercase">
-                    {# Need to add the themes, not just categories, currently only supports one category, create categories atom #}
-                    <p class="text-xs font-bold uppercase tracking-wide leading-normal mb-4">{{- content.newsCategory[0].title ?? 'No Category' }} - {{- atom.formatDate(content.postDate) -}}</p>
-                </span>
-            </div>
-        </div>
-
-        <div class="px-4 pb-8">
-
-
-            <a href="{{- url(alias('@web/' ~ content.uri)) -}}" class="absolute block top-0 left-0 h-full w-full z-1">
-                <span class="sr-only">
-                    {{- "Discover" | t }} {{ atom.text(content.title) }} {{ content.newsCategory.one().title ?? '' -}}
-                </span>
+    <div class="flex flex-col col-span-3 lg:col-span-2 bg-{{- color -}}-600 text-white mb-8 md:mb-0 hover:shadow-2xl transition duration-200 ease-in-out">
+        <div class="relative">
+            <a href="{{- content.url -}}">
+                {{- atom.teaser_image(teaserImage, teaserImage.title, news ? 'is4by3' : 'is2by1' ) -}}
             </a>
-        
-        </div>               
+        </div>
+        <div class="flex flex-col flex-grow justify-between h-full text-left p-8">
+            <div class="flex">
+                <a href="{{- content.url -}}">
+                    {%- switch content.type -%}
+                        {%- case "news" -%}
+                            <div class="text-xs leading-tight text-black-100 tracking-wider">
+                                <address rel="author" class="break-words text-2xl font-primary font-medium leading-none not-italic mb-1">{{- content.author -}}</address>
+                                <time datetime="{{- entry.postDate|date('c') -}}" class="text-xs font-primary mt-6 font-medium uppercase tracking-wide leading-normal">{{- atom.formatDate(content.postDate) -}}</time>
+                            </div>
+                        {%- case "projects" -%}
+                            <div class="break-words font-mono text-white mb-1">
+                                {{- atom.text(content.organisationName) -}}
+                            </div>
+                        {%- case "teamMember" -%}
+                            <div class="break-words font-mono text-white mb-1">
+                                {{- atom.text(content.teamMemberRole) -}}
+                            </div>
+                    {%- endswitch -%}
+                    <div class="break-words text-4xl text-white font-extrabold mb-5">
+                        {{- atom.text(content.title) -}}
+                    </div>
+                    <div class="break-words text-lg font-secondary text-white leading-relaxed mb-8">
+                        {{- atom.text(content.description) -}}
+                    </div>
+                </a>
+            </div>
+            <div class="flex">
+                <div class="mt-auto">
+                    <div class="flex flex-wrap">
+                        {%- switch content.type -%}
+                            {%- case "news" -%}
+                                <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                                    {{- content.newsCategories[0].title ?? 'No Category' }}
+                                </span>
+                            {%- case "projects" -%}
+                                {%- for category in content.projectCategories -%}
+                                    <span class="bg-{{color}}-700 mt-2  mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                                        {{- category.title -}}
+                                    </span>
+                                {%- endfor -%}
+                            {%- case "teamMember" -%}
+                                {%- for category in content.teamCategories -%}
+                                    <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                                        {{- category.title -}}
+                                    </span>
+                                {%- endfor -%}
+                        {%- endswitch -%}
+                    </div>
+                </div>
+            </div>
+        </div>  
     </div>
 {%- endminify -%}

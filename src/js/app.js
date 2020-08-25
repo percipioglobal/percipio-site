@@ -40,13 +40,20 @@ const main = async () => {
         el: "#page-container",
         store,
         data: () => ({
-            
+            hamburgerOpen: false
         }),
         components: {
             
         },
         methods: {
-            
+            toggleMenu(){
+                this.hamburgerOpen = !this.hamburgerOpen;
+            },
+            scroll(elemID){
+                document.getElementById(elemID).scrollIntoView({ 
+                behavior: 'smooth' 
+                });
+            }
         }
     });
 

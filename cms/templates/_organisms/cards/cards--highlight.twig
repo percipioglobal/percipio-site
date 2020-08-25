@@ -1,15 +1,46 @@
 {%- minify -%}
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 my-16">
+    {% set featured = hasFeatured ?? null %}
+    {% set cardsType = type ?? 'default' %}
 
-        {%- for card in content.cards.all() -%}
+    {%- switch cardsType -%}
 
-            {%- include '_molecules/cards/card--highlight' ignore missing with {
-                content: card,
-            } -%}
+        {%- case 'content' -%}
+            {%- set cards = content.cards.all() -%}
+
+        {% default %}
+            {%- set cards = content -%}
+
+    {%- endswitch -%}
+
+    <div class="print:hidden md:grid grid-cols-6 gap-8 my-16">
+
+        {%- for card in cards -%}
+
+            {%- if (loop.index == 1 or loop.index == 6) and featured  -%}
+
+                {%- include '_molecules/cards/card--featured' ignore missing with {
+                    content: card,
+                } -%}
+            
+            {%- elseif (loop.index == 3 or loop.index == 4) and featured -%}
+
+                {%- include '_molecules/cards/card--horizontal' ignore missing with {
+                    content: card,
+                } -%}
+
+            {%- else -%}
+
+                {%- include '_molecules/cards/card--highlight' ignore missing with {
+                    content: card,
+                } -%}
+
+            {%- endif -%}
 
         {%- endfor -%}
-
+        
     </div>
+
+
 
 {%- endminify -%}

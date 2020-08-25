@@ -35,19 +35,15 @@
 {# -- Page body -- #}
 {% block bodyHtml %}
     <div id="page-container" class="overflow-hidden leading-tight">
-        <div id="content-container" class="bg-repeat header-background">
 
             {# -- Info header, including _navbar.twig -- #}
             {% include "_organisms/sections/header.twig" %}
 
             <main>
-                <div class="container mx-auto pb-8">
-                    {# -- Primary content block -- #}
-                    {% block content %}
-                    {% endblock %}
-                </div>
+                {# -- Primary content block -- #}
+                {% block content %}
+                {% endblock %}
             </main>
-        </div>
 
         {# -- Content that appears below the primary content block -- #}
         {% block subcontent %}

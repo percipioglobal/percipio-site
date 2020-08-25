@@ -1,0 +1,192 @@
+field: a8f67f73-cbef-439c-88e5-8665ef1b430f
+fieldLayouts:
+  caf20208-57e8-4c2f-969f-d2ff0027cc09:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 6a9538ca-7a99-4d5a-89d9-ef897d582a0f
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5e0fa36e-5055-43cf-9b3e-fb6e5e306622
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c1f8d65a-f4ab-47cf-800a-82cc2597e47d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3d617980-dc89-46c4-a51c-4bda02766ddb
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a5dd25ce-ce97-4520-a668-e89110a7aa2f
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 50afad33-dc15-4f78-afce-8c7db3c7a210
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  3d617980-dc89-46c4-a51c-4bda02766ddb:
+    contentColumnType: text
+    fieldGroup: null
+    handle: solutionBody
+    instructions: ''
+    name: SolutionBody
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  50afad33-dc15-4f78-afce-8c7db3c7a210:
+    contentColumnType: text
+    fieldGroup: null
+    handle: resultBody
+    instructions: ''
+    name: 'Result Body'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  5e0fa36e-5055-43cf-9b3e-fb6e5e306622:
+    contentColumnType: text
+    fieldGroup: null
+    handle: challengeBody
+    instructions: ''
+    name: 'Challenge Body'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  6a9538ca-7a99-4d5a-89d9-ef897d582a0f:
+    contentColumnType: text
+    fieldGroup: null
+    handle: challengeHeader
+    instructions: ''
+    name: 'Challenge Header'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a5dd25ce-ce97-4520-a668-e89110a7aa2f:
+    contentColumnType: text
+    fieldGroup: null
+    handle: resultHeader
+    instructions: ''
+    name: 'Result Header'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c1f8d65a-f4ab-47cf-800a-82cc2597e47d:
+    contentColumnType: text
+    fieldGroup: null
+    handle: solutionHeader
+    instructions: ''
+    name: 'Solution Header'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: challengeSolutionResult
+name: 'Challenge Solution Result'
+sortOrder: 3
