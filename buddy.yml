@@ -1,5 +1,5 @@
 - pipeline: "Build & Deploy to staging"
-  trigger_mode: "MANUAL"
+  trigger_mode: "ON_EVERY_PUSH"
   ref_name: "staging"
   ref_type: "BRANCH"
   target_site_url: "https://sandbox.percipio.london/"
