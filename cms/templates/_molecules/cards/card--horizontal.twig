@@ -41,7 +41,9 @@
 {%- minify -%}
     <div class="flex flex-col bg-{{color}}-500 text-white lg:grid grid-cols-2 grid-rows-1 col-span-3 relative h-full w-full mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out">
         <div class="relative">
-            {{- atom.featured_image(teaserImage, teaserImage.title ) -}}
+            <a href="{{- content.url -}}">
+                {{- atom.featured_image(teaserImage, teaserImage.title ) -}}
+            </a>
         </div>
         <div class="flex flex-col flex-grow justify-between h-full text-left p-8">
             <div class="flex">
@@ -67,14 +69,6 @@
                 </div>
             </div>
         </div>
-        
-        {# URL covering entire card #}
-            
-        <a href="{{- url(alias('@web/' ~ content.uri)) -}}" class="absolute block top-0 left-0 h-full w-full z-1">
-            <span class="sr-only">
-                {{- "Discover" | t }} {{ atom.text(content.title) }} {{ content.newsCategory[0].title ?? '' -}}
-            </span>
-        </a>    
         
     </div>
 {%- endminify -%}
