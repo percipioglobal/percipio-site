@@ -1,0 +1,68 @@
+field: a8f67f73-cbef-439c-88e5-8665ef1b430f
+fieldLayouts:
+  6a4e65c3-d600-41ee-8a5d-59819782d27f:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: ade503c1-6d64-4135-bb32-01ddb71187c2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 401f12bf-526e-40b4-87f7-c189930a5bf2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  401f12bf-526e-40b4-87f7-c189930a5bf2:
+    contentColumnType: text
+    fieldGroup: null
+    handle: quoteBody
+    instructions: ''
+    name: 'Quote Body'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ade503c1-6d64-4135-bb32-01ddb71187c2:
+    contentColumnType: text
+    fieldGroup: null
+    handle: quoteHeader
+    instructions: ''
+    name: 'Quote Header'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: projectQuote
+name: 'Project Quote'
+sortOrder: 1

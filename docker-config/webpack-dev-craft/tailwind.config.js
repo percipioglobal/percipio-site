@@ -12,6 +12,11 @@ module.exports = {
             xl: '1280px',
         },
         colors: {
+            gradients: {
+                'dark-navy': 'rgba(0,6,51,1)',
+                black: 'rgba(0,2,20,1)', 
+            },
+            
             transparent: 'transparent',
             current: 'currentColor',
             
@@ -232,6 +237,7 @@ module.exports = {
         },
         fontFamily: {
             sans: [
+                "Open Sans",
                 'system-ui',
                 '-apple-system',
                 'BlinkMacSystemFont',
@@ -247,7 +253,7 @@ module.exports = {
                 '"Noto Color Emoji"',
             ],
             serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-            mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+            mono: ["Source Code Pro", 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
         },
         fontSize: {
             xs: '0.75rem',
@@ -277,6 +283,7 @@ module.exports = {
             ...theme('spacing'),
             full: '100%',
             screen: '100vh',
+            "screen-80": '80vh',
         }),
         inset: {
             '0': '0',
@@ -723,5 +730,7 @@ module.exports = {
         transitionDelay: ['responsive'],
     },
     corePlugins: {},
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/typography'),
+    ],
 }

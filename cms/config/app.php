@@ -25,9 +25,6 @@ return [
     ],
     'bootstrap' => ['site-module'],
     'components' => [
-        'deprecator' => [
-            'throwExceptions' => YII_DEBUG,
-        ],
         'redis' => [
             'class' => yii\redis\Connection::class,
             'hostname' => getenv('REDIS_HOSTNAME'),

@@ -11,6 +11,8 @@
 
 # This file should be placed in your Craft 3 CMS project root directory
 
+backup.sql
+
 # CRAFT ENVIRONMENT
 .env*
 

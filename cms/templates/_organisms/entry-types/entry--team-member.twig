@@ -1,0 +1,9 @@
+{%- include '_organisms/heroes/hero--content' ignore missing with {
+    content: entry,
+} -%}
+
+<div id="content">
+    {%- include '_organisms/builders/team--builder' with { 
+        content: entry, 
+    } -%}
+</div>

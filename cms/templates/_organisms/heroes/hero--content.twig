@@ -1,0 +1,45 @@
+{%- import '_macros/atoms' as atom -%}
+
+{% set hero = content.heroBuilder[0] %}
+{% set image = hero.heroImage[0] ?? placeholder.heroPlaceholder[0] %}
+
+{%- minify -%}
+
+    <section class="w-full">
+      
+            <div class="flex h-screen-80 relative">
+                <div class="absolute h-full w-full object-cover">
+                    {{- atom.hero_image(image, hero.title) -}}
+                </div>
+                <div class="flex flex-col h-auto justify-center mx-auto p-8 md:p-16 lg:p-0 md:min-w-screen-md md:max-w-screen-md relative z-10">
+                    <div class="w-full text-white leading-tight text-base md:text-lg lg:text-lg font-mono tracking-tighter">
+                        <h6>{{- atom.text(hero.overline) -}}</h6>
+                    </div>
+                    <div class="w-full text-white font-bold leading-tight text-5xl md:text-6xl tracking-tighter">
+                        <h1>{{- atom.text(hero.heroTitle) -}}</h1>
+                    </div>
+                    <div class="w-full text-white font-medium leading-tight text-xl md:text-2xl tracking-tight mt-16">
+                        <h3>{{- atom.text(hero.description) -}}</h3>
+                    </div>
+
+                    <div v-on:click="scroll('content')" class="arrow">
+                        <svg
+                        class="content-center inline-block w-10 h-10 mt-12 bg bounce"
+                        width="1792" height="1792"
+                        viewbox="0 0 1792 1792"
+                        xmlns="https://www.w3.org/2000/svg"
+                        >
+                        <path
+                            d="M1412 897q0-27-18-45l-91-91q-18-18-45-18t-45 18l-189 189v-502q0-26-19-45t-45-19h-128q-26 0-45 19t-19 45v502l-189-189q-19-19-45-19t-45 19l-91 91q-18 18-18 45t18 45l362 362 91 91q18 18 45 18t45-18l91-91 362-362q18-18 18-45zm252-1q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+                            fill="#fff" fill-opacity="0.5"
+                        ></path>
+                        </svg>
+                    </div>
+
+
+                </div>
+
+            </div>
+    </section>
+
+{%- endminify -%}

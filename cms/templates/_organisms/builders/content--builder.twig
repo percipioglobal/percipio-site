@@ -2,6 +2,7 @@
     'highlightCards:cards',
     'sectionHeader:buttons',
     'singleImage:image',
+    'galleryImages:images',
     'slide:image',
     'resources:target',
     'faqList:questions',
@@ -32,7 +33,6 @@
                     
                     {%- include '_molecules/headers/header--section' ignore missing with {
                         content: block,
-                        type: 'normal',
                     } -%}
                 
                 {%- case "basicSlider" -%}
@@ -47,7 +47,7 @@
                         content: block,
                     } -%}
 
-                {%- case "galleryImage" -%}
+                {%- case "galleryImages" -%}
                 
                     {%- include '_molecules/images/image--gallery' ignore missing with {
                         content: block,

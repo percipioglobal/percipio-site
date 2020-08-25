@@ -1,0 +1,38 @@
+{% import '_macros/atoms' as atom %}
+
+{%- switch name -%}
+    {%- case "Research School Foundation" -%}
+        {%- set color = 'red' -%}
+    {%- case "Education Endowment Foundation" -%}
+        {%- set color = 'orange' -%}
+    {%- case "Harding Hub" -%}
+        {%- set color = 'purple' -%}
+    {%- case "Percipio Global" -%}
+        {%- set color = 'teal' -%}
+    {%- case "National Tutoring Programme" -%}
+        {%- set color = 'blue' -%}
+    {%- case "The Sutton Trust" -%}
+        {%- set color = 'blue' -%}
+    {% default %}
+        {%- set color = 'gray' -%}
+{%- endswitch -%}
+
+{%- minify -%}
+    <div class="flex flex-col md:flex-row justify-between my-12 px-4 lg:px-0 lg:mx-16 xl:x-32">
+        <div class="prose prose-lg text-lg text-green-900 leading-relaxed md:mr-8">
+        {{- atom.text(block.projectSummary) -}}
+        </div>
+        <div class="justify border-l-4 border-{{- color -}}-800 h-32 py-4 px-4 my-6 lg:mr-8">
+            <div class="font-mono mb-8 ">
+            {{- atom.text(block.projectCategoriesHeader) -}}
+            </div>
+            <div class="flex flex-wrap">
+                {%- for category in categories -%}
+                    <span class="bg-{{color}}-700 mr-6 mb-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                        {{- category.title -}}
+                    </span>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+{%- endminify -%}

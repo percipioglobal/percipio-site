@@ -1,22 +1,9 @@
 {% import '_macros/atoms' as atom %}
 
 {%- minify -%}
-    <section class="section--header w-full relative mt-16 mb-16 lg:mb-32 {{ content.options.hasDash ? 'dash-holder' : '' -}}">
-        <h5 class="text-xs font-bold uppercase tracking-wide leading-normal  mb-4">
-            {% if content.options.hasDash %}
-            <hr class="dash">
-            {% endif %}
-            {{- atom.title(content.title) -}}
+    <section class="section--header prose prose-2xl my-6 leading-tight px-4 md:px-0 text-green-900 sm:mx-4 md:mx-auto">
+        <h5 class="text-5xl font-extrabold">
+            {{- atom.text(content.header) -}}
         </h5>
-        {% if content.subtitle | length %}
-        <h2 class="font-medium max-w-md leading-loose max-w-md">
-            {{- atom.title(content.subtitle) -}}
-        </h2>
-        {% endif %}
-        {% if content.button is defined %}
-            {% if content.button.target is not null %}
-            {{- atom.button( { url: content.button.target }, content.button.title, content.button.style, content.button.icon) -}}
-            {% endif %}
-        {% endif %}
     </section>
 {%- endminify -%}

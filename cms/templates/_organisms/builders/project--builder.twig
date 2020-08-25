@@ -1,0 +1,54 @@
+{% do craft.eagerBeaver.eagerLoadElements(entry, [
+    'projectHeader',
+    'projectHeader:clientLogo',
+    'projectImage',
+    ]) 
+%}
+
+<div class="container max-w-screen-xl mx-auto">
+    
+    {%- minify -%}
+        {%- for block in content.projectBuilder -%}
+            
+            {%- switch block.type -%}
+            
+                {%- case "projectHeader" -%}
+                    
+                    {%- include '_molecules/headers/projectheader--section' ignore missing with {
+                        content: block,
+                    } -%}
+
+                {%- case "projectQuote" -%}
+                    
+                    {%- include '_molecules/quotes/projectquotes--block' ignore missing with {
+                        content: block,
+                        name: content.organisationName,
+                    } -%}
+                
+                {%- case "challengeSolutionResult" -%}
+                    
+                    {%- include '_molecules/lists/challenge-solution-result--block' ignore missing with {
+                        content: block,
+                        name: content.organisationName,
+                    } -%}
+
+                {%- case "projectDetails" -%}
+                    
+                    {%- include '_molecules/content/project-details' ignore missing with {
+                        content: block,
+                        name: content.organisationName,
+                        categories: content.projectCategories,
+                    } -%}
+
+                {%- case "projectImage" -%}
+                
+                    {%- include '_molecules/images/image--single' ignore missing with {
+                        content: block,
+                    } -%}
+
+                {%- endswitch -%}
+
+        {%- endfor -%}
+    {%- endminify -%}
+
+</div>
