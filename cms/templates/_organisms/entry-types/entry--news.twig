@@ -1,7 +1,3 @@
-{%- include '_organisms/heroes/hero--content' ignore missing with {
-    content: entry,
-} -%}
-
 <div id="content">
     {%- include '_organisms/builders/content--builder' with { 
         content: entry, 
@@ -10,10 +6,15 @@
 
 {%- set news = craft.entries.section('news').id(['not', entry.id]).with(['teaserImage', 'newsCategory']).all() -%}
 
-<div class="container max-w-screen-xl mx-auto p-8">
+<div class="mt-6 bg-gray-200">
+    <div class="container max-w-screen-xl mx-auto p-8">
+        <div class="text-5xl font-extrabold my-6 pb-8 leading-tight text-green-900 w-full border-b-2 border-gray-400">
+            More from the blog
+        </div>
 
-    {%- include '_organisms/cards/cards--highlight' ignore missing with {
-        content: news,
-    } -%}
+        {%- include '_organisms/cards/cards--highlight' ignore missing with {
+            content: news,
+        } -%}
 
+    </div>
 </div>
