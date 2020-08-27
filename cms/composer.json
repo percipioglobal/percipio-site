@@ -1,21 +1,18 @@
 {
-    "name": "percipioglobal/craft",
-    "description": "Percipio's Craft CMS scaffolding for projects",
-    "version": "0.1.0",
+    "name": "percipioglobal/percipio-site",
+    "description": "Percipio Global Ltd. brand website",
+    "version": "beta-1.x",
     "keywords": [
-        "craft",
-        "cms",
-        "craftcms",
-        "project"
+        "Percipio"
     ],
     "license": "MIT",
-    "homepage": "https://percipio.london/",
+    "homepage": "https://sandbox.percipio.london/",
     "type": "project",
     "support": {
         "email": "support@percipio.london",
-        "issues": "https://github.com/percipioglobal/craft/issues",
-        "source": "https://github.com/percipioglobal/craft",
-        "docs": "https://github.com/percipioglobal/craft"
+        "issues": "https://github.com/percipioglobal/percipio-site/issues",
+        "source": "https://github.com/percipioglobal/percipio-site",
+        "docs": "https://github.com/percipioglobal/percipio-site"
     },
     "minimum-stability": "beta",
     "require": {

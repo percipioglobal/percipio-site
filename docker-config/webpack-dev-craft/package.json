@@ -1,10 +1,9 @@
 {
     "name": "percipio-site",
-    "version": "1.0.0",
+    "version": "beta-1.x",
     "description": "Percipio Global Ltd. brand website",
     "keywords": [
-        "Example",
-        "Keywords"
+        "Percipio"
     ],
     "homepage": "https://github.com/percipioglobal/percipio-site",
     "bugs": {
@@ -15,7 +14,7 @@
     "author": {
         "name": "Percipio Global Ltd.",
         "email": "hello@percipio.london",
-        "url": "https://percipio.london"
+        "url": "https://sandbox.percipio.london"
     },
     "browser": "/web/index.php",
     "repository": {

@@ -23,9 +23,9 @@ module.exports = {
         templates: "../../cms/templates/"
     },
     urls: {
-        live: "https://example.com/",
-        local: "http://example.test/",
-        critical: "http://example.test/",
+        live: "https://sandbox.percipio.london/",
+        local: "http://localhost:8000",
+        critical: "https://sandbox.percipio.london/",
         publicPath: () => process.env.PUBLIC_PATH || "/dist/",
     },
     vars: {
