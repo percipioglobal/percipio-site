@@ -1,0 +1,15 @@
+{% import '_macros/atoms' as atom %}
+
+{% set image = entry.blogHero[0] %}
+
+{%- minify -%}
+    <section class="mx-auto mt-16 {{ content.position == 'full' ? '-mx-4 md:-mx-32' : '' }}">
+        {{- atom.article_image(image) -}}
+    </section>
+{%- endminify -%}
+
+{# {%- minify -%}
+    <section class="mx-auto mt-16 {{ entry.position == 'full' ? '-mx-4 md:-mx-32' : '' }}">
+        {{- atom.article_image(entry.blogHero) -}}
+    </section>
+{%- endminify -%} #}
