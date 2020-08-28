@@ -28,23 +28,25 @@
 
 
 {% if images.count() is divisible by(2)  %}
- 
-        <div class="flex flex-row flex-wrap justify-between grid grid-cols-6 grid-rows-{{ (images.count() / 2) }} grid-flow-row-dense gap-4">
-            {% for image in images.all() %} 
-                {% if (loop.index0 in optimizeIndexes) and (measureImages[loop.index0] == "portrait") %}
-                    <div class="max-w-xs col-span-2">
-                        <img src="{{ image.getUrl() }}" >
-                    </div>
-                {% elseif (loop.index0 in optimizeIndexes) and (measureImages[loop.index0] == "landscape") %}
-                    <div class="max-w-2xl col-span-4">
-                        <img src="{{ image.getUrl() }}" >
-                    </div>
-                {% else %}
-                    <div class="max-w-lg row-end-auto col-span-3">
-                        <img src="{{ image.getUrl() }}" >
-                    </div>
-                {% endif %}
-            {% endfor %}
+        
+        <div class="{{entry.type == 'blog' ? 'container max-w-xl mx-auto' : null }}">
+            <div class="flex flex-row flex-wrap justify-between grid grid-cols-6 grid-rows-{{ (images.count() / 2) }} grid-flow-row-dense gap-4">
+                {% for image in images.all() %} 
+                    {% if (loop.index0 in optimizeIndexes) and (measureImages[loop.index0] == "portrait") %}
+                        <div class="max-w-xs col-span-2">
+                            <img src="{{ image.getUrl() }}" >
+                        </div>
+                    {% elseif (loop.index0 in optimizeIndexes) and (measureImages[loop.index0] == "landscape") %}
+                        <div class="max-w-2xl col-span-4">
+                            <img src="{{ image.getUrl() }}" >
+                        </div>
+                    {% else %}
+                        <div class="max-w-lg row-end-auto col-span-3">
+                            <img src="{{ image.getUrl() }}" >
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
         </div>
 {% endif %}
 
