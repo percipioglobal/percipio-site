@@ -57,17 +57,14 @@
     {% set image = articleImage.optimizeArticles %}
     {% spaceless %}
         <figure role="figure" aria-labelledby="{{- alt ~ '-' ~ articleImage.id -}}" class="w-full h-full">
-        <div class="img {{ ratio -}}">
-            <img  src="{{- image.placeholderImage() -}}"
-                data-src="{{- image.src() -}}"
-                data-srcset="{{- image.srcset() -}}"
-                sizes="100vw"
-                alt="{{- alt -}}"
-                class="object-cover lazyload">
-        </div>
-        {% if caption %}
-            {{- atom.caption(caption, author, source, alt ~ '-' ~ articleImage.id) -}}
-        {% endif %}
+            <div class="img {{ ratio -}}">
+                <img  src="{{- image.placeholderImage() -}}"
+                    data-src="{{- image.src() -}}"
+                    data-srcset="{{- image.srcset() -}}"
+                    sizes="100vw"
+                    alt="{{- alt -}}"
+                    class="object-cover lazyload">
+            </div>
         </figure>
     {% endspaceless %}
 {% endmacro %}
@@ -137,7 +134,7 @@
 
 {% macro caption(content, author = null, source = null, id) %}
     {% spaceless %}
-        <figcaption id="{{- id -}}" class="font-primary text-center text-sm text-gray-500 italic p-4 border-b border-gray-300">
+        <figcaption id="{{- id -}}" class="font-primary text-center lg:text-left text-sm text-gray-600 italic p-4 border-b border-gray-400">
             {{- content }}
             {% if author and source -%}
                 &mdash; 
