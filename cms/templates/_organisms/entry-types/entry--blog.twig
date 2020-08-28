@@ -1,0 +1,24 @@
+<div class="mt-32">
+    <div id="content">
+        {%- include '_organisms/builders/content--builder' with { 
+            content: entry, 
+        } -%}
+    </div>
+</div>
+
+{%- set blog = craft.entries.section('blog').id(['not', entry.id]).with(['teaserImage', 'blogCategory']).all() -%}
+
+<div class="mt-6 bg-gray-200">
+    <div class="container max-w-screen-xl mx-auto p-8">
+        <div class="text-5xl font-extrabold my-6 pb-8 leading-tight text-green-900 w-full border-b-2 border-gray-400">
+            More from the blog
+        </div>
+
+        {%- include '_organisms/cards/cards--highlight' ignore missing with {
+            content: blog,
+            type: 'blog',
+            hasFeatured: false,
+        } -%}
+
+    </div>
+</div>

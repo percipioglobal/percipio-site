@@ -20,9 +20,9 @@
                         content: entry,
                     } -%}
 
-                {%- case "newsPage" -%}
+                {%- case "blogPage" -%}
 
-                    {%- include '_organisms/entry-types/page--news' ignore missing with {
+                    {%- include '_organisms/entry-types/page--blog' ignore missing with {
                         content: entry,
                     } -%}
 
@@ -38,9 +38,9 @@
                         content: entry,
                     } -%}
 
-                {%- case "news" -%}
+                {%- case "blog" -%}
 
-                    {%- include '_organisms/entry-types/entry--news' ignore missing with {
+                    {%- include '_organisms/entry-types/entry--blog' ignore missing with {
                         content: entry,
                     } -%}
 

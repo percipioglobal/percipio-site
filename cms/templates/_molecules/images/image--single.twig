@@ -1,7 +1,7 @@
 {% import '_macros/atoms' as atom %}
 
 {%- minify -%}
-    <section class="mx-auto mt-16 {{entry.type == 'news' ? 'container px-0 lg:px-12' : null }} {{ content.position == 'full' ? '-mx-4 md:-mx-32' : '' }}">
+    <section class="mx-auto mt-16 {{entry.type == 'blog' ? 'container px-0 lg:px-12' : null }} {{ content.position == 'full' ? '-mx-4 md:-mx-32' : '' }}">
         {{- atom.article_image(content.image[0], content.image[0].title, content.ratio, content.caption ?? content.image[0].caption, content.image[0].author ?? null, content.image[0].source ?? null) -}}
     </section>
 {%- endminify -%}

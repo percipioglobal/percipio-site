@@ -17,7 +17,7 @@
 
     <div class="{{clients ? "block" : "hidden" }} bg-gray-300 py-16 px-8">
         <div class="container max-w-screen-xl mx-auto">
-            <div class="client flex flex-wrap lg:flex-no-wrap justify-between w-full">
+            <div class="flex flex-wrap lg:flex-no-wrap justify-between w-full">
             {%- for client in clients -%}
                 {{- atom.client_logo(client.logo[0], client.clientUrl, client.description|striptags) -}} 
             {%- endfor -%} 

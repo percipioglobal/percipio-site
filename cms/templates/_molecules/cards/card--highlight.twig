@@ -2,9 +2,9 @@
 
 {# Eager Load categories based on entry types #}
 {%- switch entry.type -%}
-    {%- case "news" -%}
+    {%- case "blog" -%}
         {%- do craft.eagerBeaver.eagerLoadElements(entry, [
-            'newsCategories'
+            'blogCategories'
             ]) 
         -%}
     {%- case "project" -%}
@@ -44,20 +44,20 @@
 
 {# Load needed images #}
 {%- set teaserImage = content.teaserImage[0] ?? placeholder.teaserPlaceholder[0] -%}
-{%- set news = content.type == 'news' ? true : false -%}
+{%- set blog = content.type == 'blog' ? true : false -%}
 
 {%- minify -%}
     <div class="flex flex-col col-span-3 lg:col-span-2 bg-{{- color -}}-600 text-white mb-8 md:mb-0 hover:shadow-2xl transition duration-200 ease-in-out">
         <div class="relative">
             <a href="{{- content.url -}}">
-                {{- atom.teaser_image(teaserImage, teaserImage.title, news ? 'is4by3' : 'is2by1' ) -}}
+                {{- atom.teaser_image(teaserImage, teaserImage.title, blog ? 'is4by3' : 'is2by1' ) -}}
             </a>
         </div>
         <div class="flex flex-col flex-grow justify-between h-full text-left p-8">
             <div class="flex">
                 <a href="{{- content.url -}}">
                     {%- switch content.type -%}
-                        {%- case "news" -%}
+                        {%- case "blog" -%}
                             <div class="text-xs leading-tight text-black-100 tracking-wider">
                                 <address rel="author" class="break-words text-2xl font-primary font-medium leading-none not-italic mb-1">{{- content.author -}}</address>
                                 <time datetime="{{- entry.postDate|date('c') -}}" class="text-xs font-primary mt-6 font-medium uppercase tracking-wide leading-normal">{{- atom.formatDate(content.postDate) -}}</time>
@@ -83,9 +83,9 @@
                 <div class="mt-auto">
                     <div class="flex flex-wrap">
                         {%- switch content.type -%}
-                            {%- case "news" -%}
+                            {%- case "blog" -%}
                                 <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
-                                    {{- content.newsCategories[0].title ?? 'No Category' }}
+                                    {{- content.blogCategories[0].title ?? 'No Category' }}
                                 </span>
                             {%- case "projects" -%}
                                 {%- for category in content.projectCategories -%}

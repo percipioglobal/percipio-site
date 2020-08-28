@@ -13,8 +13,8 @@
 
         <div @click="toggleMenu" class="justify-end cursor-pointer h-16 w-16">
             <div class="absolute flex justify-center items-center w-16 h-16 z-40">
-                <span :class="hamburgerOpen ? 'rotate-45 translate-y-2 {{entry.type == 'news' ? 'bg-white' : null }}' : 'rotate-0'" class="{{entry.type == 'news' ? 'bg-black' : 'bg-white' }} mb-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
-                <span :class="hamburgerOpen ? '-rotate-90 -translate-y-4 {{entry.type == 'news' ? 'bg-white' : null }}' : 'rotate-0'" class="{{entry.type == 'news' ? 'bg-black' : 'bg-white' }} mt-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
+                <span :class="hamburgerOpen ? 'rotate-45 translate-y-2 {{entry.type == 'blog' ? 'bg-white' : null }}' : 'rotate-0'" class="{{entry.type == 'blog' ? 'bg-black' : 'bg-white' }} mb-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
+                <span :class="hamburgerOpen ? '-rotate-90 -translate-y-4 {{entry.type == 'blog' ? 'bg-white' : null }}' : 'rotate-0'" class="{{entry.type == 'blog' ? 'bg-black' : 'bg-white' }} mt-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
             <div>
         </div>
     </div>
