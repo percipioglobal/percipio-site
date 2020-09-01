@@ -5,8 +5,8 @@
                     
         <div>
             <div class="flex flex-row items-center text-xs leading-tight text-black-100 tracking-wider">
-                <div class="mr-6 flex items-center overflow-hidden rounded-full h-16 w-16">
-                    <img src="{{- content.author.photoUrl -}}" >
+                <div class="mr-6">
+                    {{ atom.profile_image(content.author.profilePhoto[0])}}   
                 </div>
                 <div>
                     <address rel="author" class="text-xl font-semibold font-mono not-italic">{{- content.author -}}</address>
