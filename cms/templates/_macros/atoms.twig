@@ -23,7 +23,7 @@
 {# Date #}
 {% macro formatDate(date) %}
     {% spaceless %}
-        {{- date | date('d.m.Y') -}}
+        {{- date | date('j F, Y') -}}
     {% endspaceless %}
 {% endmacro %}
 
