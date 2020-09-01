@@ -1,6 +1,7 @@
 // import our css
 // eslint-disable-next-line unused-vars
 import styles from '../css/app.pcss';
+import icons from './assets/icons.js';
 
 import { createStore } from './stores/store.js'
 

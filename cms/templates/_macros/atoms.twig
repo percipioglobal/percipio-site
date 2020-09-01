@@ -1,3 +1,25 @@
+{# Button - takes url, text, class ( for background-color / text-color + hover ), icon ( font-awesome class ) and icon position ( left or right ) #}
+{% macro button(url, text, class, icon = null, position = 'left') %}
+    {% import _self as atom %}
+    {% spaceless %}
+        <a href="{{- url -}}" class="flex rounded-full font-medium text-base uppercase tracking-widest px-8 py-4 mr-2 transition-colors duration-150 ease-in-out {{ class -}}">
+            {%- if icon and position == 'left' -%}
+                <span class="inline-flex mr-4">
+                    <i class="{{- icon -}}"></i>
+                </span>
+            {%- endif -%}
+            <span>
+                {{- atom.text(text) -}}
+            </span>
+            {%- if icon and position == 'right' -%}
+                <span class="inline-flex ml-4">
+                    <i class="{{- icon -}}"></i>
+                </span>
+            {%- endif -%}
+        </a>
+    {% endspaceless %}
+{% endmacro %}
+
 {# Date #}
 {% macro formatDate(date) %}
     {% spaceless %}
