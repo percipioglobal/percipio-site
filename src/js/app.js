@@ -33,6 +33,9 @@ const main = async () => {
                 document.getElementById(elemID).scrollIntoView({ 
                 behavior: 'smooth' 
                 });
+            },
+            printPage: function () {		
+                window.print();
             }
         }
     });
