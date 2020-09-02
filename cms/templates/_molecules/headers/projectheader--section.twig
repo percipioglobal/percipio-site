@@ -5,9 +5,16 @@
 {%- minify -%}
     <div class="my-12 px-4 md:px-4 lg:mx-16 ">
         <div class="flex flex-col md:flex-row items-center text-lg text-green-900 leading-relaxed">
-            <div class="w-56 my-4 float-left md:mr-10">
-                {{- atom.article_image(image) -}}
-            </div>
+            {% if image.extension == 'svg' %}
+                <div class="w-1/2 md:w-full my-4 float-left md:mr-10">
+                    {{- svg(image) -}}
+                </div>
+            {% else %}
+                <div class="w-56 my-4 float-left md:mr-10">
+                    {{- atom.article_image(image) -}}
+                </div>
+            {% endif %}
+          
             {{- atom.text(block.clientDescription) -}}
         </div>  
          

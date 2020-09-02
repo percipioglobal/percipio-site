@@ -32,9 +32,15 @@
                         content: entry,
                     } -%}
 
-                  {%- case "teamPage" -%}
+                {%- case "teamPage" -%}
 
                     {%- include '_organisms/entry-types/page--team' ignore missing with {
+                        content: entry,
+                    } -%}
+                
+                {%- case "guidanceReportsPage" -%}
+
+                    {%- include '_organisms/entry-types/page--guidancereports' ignore missing with {
                         content: entry,
                     } -%}
 
