@@ -41,21 +41,20 @@
 {% macro client_logo(logo, url, title) %}
     {% spaceless %}
         {% if logo.extension == 'svg' %}
-            <div class="client block relative h-32 py-4 px-4 w-1/2 md:w-1/3 lg:w-1/6 focus:outline-none">
-                <a href="{{- url -}}" 
-                    title="{{- title -}}"
-                    data-tag-category="link"
-                    data-tag-action="external"
-                    data-tag-label="{{- title -}}">
-                    {{ svg(logo) }}
-                </a>
-            </div>
+            
+            <a href="{{- url -}}" 
+                class="block relative h-20 md:h-24 lg:h-32 py-4 px-4 w-1/2 md:w-1/3 lg:w-1/6 focus:outline-none" 
+                title="{{- title -}}"
+                data-tag-category="link"
+                data-tag-action="external"
+                data-tag-label="{{- title -}}">
+                <img src="{{- logo.url -}}" class="object-contain h-full mx-0 md:mx-auto lazyload" alt="{{- title -}}" >
+            </a>
         {% else %}
             <span>invalid filetype</span>
         {% endif %}
     {% endspaceless %}
 {% endmacro %}
-
 {# Hero Image #}
 {% macro hero_image(heroImage, alt = '', ratio = 'is16by9') %}
     {% set image = heroImage.optimizeHeroes %}
