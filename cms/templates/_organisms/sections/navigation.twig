@@ -13,41 +13,41 @@
 
         <div @click="toggleMenu" class="justify-end cursor-pointer h-16 w-16">
             <div class="absolute flex justify-center items-center w-16 h-16 z-40">
-                <span :class="hamburgerOpen ? 'rotate-45 translate-y-2 {{entry.type == 'blog' ? 'bg-white' : null }}' : 'rotate-0'" class="{{entry.type == 'blog' ? 'bg-black' : 'bg-white' }} mb-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
-                <span :class="hamburgerOpen ? '-rotate-90 -translate-y-4 {{entry.type == 'blog' ? 'bg-white' : null }}' : 'rotate-0'" class="{{entry.type == 'blog' ? 'bg-black' : 'bg-white' }} mt-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
+                {# <span :class="hamburgerOpen ? 'rotate-45 translate-y-2 {{entry.type == 'blog' ? 'bg-white' : null }}' : 'rotate-0'" class="{{entry.type == 'blog' ? 'bg-black' : 'bg-white' }} mb-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
+                <span :class="hamburgerOpen ? '-rotate-90 -translate-y-4 {{entry.type == 'blog' ? 'bg-white' : null }}' : 'rotate-0'" class="{{entry.type == 'blog' ? 'bg-black' : 'bg-white' }} mt-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/> #}
             <div>
         </div>
     </div>
 
-    <div :class="hamburgerOpen ? 'block' : 'hidden'" class="hero-grad z-30 overflow-scroll fixed top-0 left-0 w-screen h-screen text-white text-center text-lg">            <nav class="flex flex-col items-center h-full justify-center">
-            {%- for node in nodes -%}
-                <div class="my-4 flex flex-col">
-                    <div class="uppercase font-bold text-xl mt-6 tracking-wide">
-                        <a  href="{{- node.url -}}" 
-                            title="{{- node.title -}}"
-                            {% if node.newWindow -%} target="_blank" rel="noopener noreferrer"{%- endif %}
-                            class="mb-4"
-                        >
-                            {{- node.title -}}
-                        </a>
-                    <div>
-                    {% if node.hasDescendants %}
-                        {% for subnode in node.children %}
-                            <div class="my-4 normal-case text-lg font-normal">
-                                <a  href="{{- subnode.url -}}" 
-                                    title="{{- subnode.title -}}"
-                                    {% if subnode.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}
-                                    class="my-1" 
-                                >
-                                    {{- subnode.title -}}
-                                </a>
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-                </div>
-            {%- endfor -%}
-        </nav>
+    <div :class="hamburgerOpen ? 'block' : 'hidden'" class="hero-grad z-30 overflow-scroll fixed top-0 left-0 w-screen h-screen text-white text-center text-lg">
+            <nav class="flex flex-col items-center h-full justify-center">
+                {%- for node in nodes -%}
+                    <div class="my-4 flex flex-col">
+                        <div class="uppercase font-bold text-xl mt-6 tracking-wide">
+                            <a  href="{{- node.url -}}" 
+                                title="{{- node.title -}}"
+                                {% if node.newWindow -%} target="_blank" rel="noopener noreferrer"{%- endif %}
+                                class="mb-4"
+                            >
+                                {{- node.title -}}
+                            </a>
+                        <div>
+                        {% if node.hasDescendants %}
+                            {% for subnode in node.children %}
+                                <div class="my-4 normal-case text-lg font-normal">
+                                    <a  href="{{- subnode.url -}}" 
+                                        title="{{- subnode.title -}}"
+                                        {% if subnode.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}
+                                        class="my-1" 
+                                    >
+                                        {{- subnode.title -}}
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                {%- endfor -%}
+            </nav>
         </div>
     </div>
-
 </div>

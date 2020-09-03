@@ -62,6 +62,12 @@
                         content: entry,
                     } -%}
 
+                {%- case "categoriesPage" -%}
+
+                    {%- include '_organisms/entry-types/page--categories' ignore missing with {
+                        content: entry,
+                    } -%}
+
         {%- endswitch -%}
 {% endblock %}
 

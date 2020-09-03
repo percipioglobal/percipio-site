@@ -14,9 +14,8 @@
     {%- endswitch -%}
 
     <div class="print:hidden md:grid grid-cols-6 gap-8 my-16">
-
         {%- for card in cards -%}
-
+                    
             {%- if (loop.index == 1 or loop.index == 6) and featured  -%}
 
                 {%- include '_molecules/cards/card--featured' ignore missing with {

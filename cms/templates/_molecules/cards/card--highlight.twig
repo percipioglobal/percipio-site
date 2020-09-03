@@ -1,13 +1,14 @@
 {%- import '_macros/atoms' as atom -%}
 
 {# Eager Load categories based on entry types #}
-{%- switch entry.type -%}
+{# 
+{%- switch content.type -%}
     {%- case "blog" -%}
         {%- do craft.eagerBeaver.eagerLoadElements(entry, [
             'blogCategories'
             ]) 
         -%}
-    {%- case "project" -%}
+    {%- case "projects" -%}
         {%- do craft.eagerBeaver.eagerLoadElements(entry, [
             'projectCategories'
             ]) 
@@ -17,7 +18,7 @@
             'teamCategories'
             ]) 
         -%}
-{%- endswitch -%}
+{%- endswitch -%} #}
 
 {%- if content.type == 'projects' -%}
     {%- switch content.organisationName -%}
@@ -39,8 +40,6 @@
 {%- else -%}
     {%- set color = random(['blue', 'red', 'orange', 'purple', 'teal']) -%}
 {%- endif -%}
-
-
 
 {# Load needed images #}
 {%- set teaserImage = content.teaserImage[0] ?? placeholder.teaserPlaceholder[0] -%}
@@ -84,20 +83,28 @@
                     <div class="flex flex-wrap">
                         {%- switch content.type -%}
                             {%- case "blog" -%}
-                                <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
-                                    {{- content.blogCategories[0].title ?? 'No Category' }}
-                                </span>
+                                {%- for category in content.projectCategories -%}
+                                    <a href="{{ category.url }}" alt="{{ category.title}}">
+                                        <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                                            {{- content.blogCategories[0].title ?? 'No Category' }}
+                                        </span>
+                                    </a>
+                                 {%- endfor -%}
                             {%- case "projects" -%}
                                 {%- for category in content.projectCategories -%}
-                                    <span class="bg-{{color}}-700 mt-2  mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
-                                        {{- category.title -}}
-                                    </span>
+                                    <a href="{{ category.url }}" alt="{{ category.title}}">
+                                        <span class="bg-{{color}}-700 mt-2  mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                                            {{- category.title -}}
+                                        </span>
+                                    </a>
                                 {%- endfor -%}
                             {%- case "teamMember" -%}
                                 {%- for category in content.teamCategories -%}
-                                    <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
-                                        {{- category.title -}}
-                                    </span>
+                                    <a href="{{ category.url }}" alt="{{ category.title}}" class="my-3">
+                                        <span class="bg-{{color}}-700 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                                            {{- category.title -}}
+                                        </span>
+                                    </a>
                                 {%- endfor -%}
                         {%- endswitch -%}
                     </div>

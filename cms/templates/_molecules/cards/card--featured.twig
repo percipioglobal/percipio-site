@@ -65,15 +65,21 @@
             </div>
             <div class="flex">
                 <div class="mt-10 md:mt-16">
-                    {%- if blog -%}
-                        <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
-                            {{- content.blogCategories[0].title ?? 'No Category' }}
-                        </span>
+                    {%- if content.type == 'blog' -%}
+                        {%- for category in content.blogCategories -%}
+                            <a href="{{ category.url }}" alt="{{ category.title}}">
+                                <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                                    {{- content.blogCategories[0].title ?? 'No Category' }}
+                                </span>
+                            </a>
+                        {%- endfor -%}
                     {%- else -%}
                         {%- for category in content.projectCategories -%}
-                            <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
-                                {{- category.title -}}
-                            </span>
+                            <a href="{{ category.url }}" alt="{{ category.title}}">
+                                <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                                    {{- category.title -}}
+                                </span>
+                            </a>
                         {%- endfor -%}
                     {%- endif -%}
                 </div>

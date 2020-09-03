@@ -1,0 +1,19 @@
+{%- import '_macros/atoms' as atom -%}
+
+{% set categorySlug = craft.app.request.segments | last %}
+
+{% set category = craft.categories.slug(categorySlug).one() %}
+
+{% set entries = craft.entries.section('projects').relatedTo(category) %}
+
+<div id="content" class="container max-w-screen-hd p-8 mx-auto">
+    
+        
+
+    {%- include '_organisms/cards/cards--highlight' ignore missing with {
+        content: entries,
+        hasFeatured: false,
+    } -%}
+
+       
+</div>
