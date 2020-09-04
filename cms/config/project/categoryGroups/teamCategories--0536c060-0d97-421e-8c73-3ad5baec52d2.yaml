@@ -43,7 +43,7 @@ name: 'Team Categories'
 siteSettings:
   5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
     hasUrls: true
-    template: _organisms/entry-types/page--categories.twig
+    template: _organisms/_page
     uriFormat: 'team-categories/{slug}'
 structure:
   maxLevels: null
