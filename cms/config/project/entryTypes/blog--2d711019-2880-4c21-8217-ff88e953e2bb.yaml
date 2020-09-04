@@ -4,15 +4,6 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 6962a9b1-b802-4295-82b1-398470a9f54c
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
