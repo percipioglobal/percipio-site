@@ -19,7 +19,7 @@
         <div class="container max-w-screen-xl mx-auto">
             <div class="client flex flex-wrap lg:flex-no-wrap justify-between w-full">
             {%- for client in clients -%}
-                {{- atom.client_logo(client.logo[0], client.clientUrl, client.description|striptags) -}} 
+                {{- atom.client_logo(client.logo[0], entry.type, client.clientUrl, client.description|striptags) -}} 
             {%- endfor -%} 
             </div>
         </div>

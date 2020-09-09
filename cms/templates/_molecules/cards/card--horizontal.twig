@@ -62,7 +62,7 @@
             <div class="flex">
                 <div class="mt-10 md:mt-16 flex flex-wrap">
                     {%- for category in content.projectCategories -%}
-                        <a href="{{ category.url }}" alt="{{ category.title}}">
+                        <a href="{{ category.url }}" alt="{{ category.title}}" class="my-3">
                             <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
                                 {{- category.title -}}
                             </span>
