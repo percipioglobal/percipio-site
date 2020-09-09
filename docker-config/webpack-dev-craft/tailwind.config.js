@@ -11,6 +11,9 @@ module.exports = {
             lg: '1024px',
             xl: '1280px',
         },
+        bottom: {
+            '-50': '-50%',
+        },
         colors: {
             gradients: {
                 'dark-navy': 'rgba(0,6,51,1)',
