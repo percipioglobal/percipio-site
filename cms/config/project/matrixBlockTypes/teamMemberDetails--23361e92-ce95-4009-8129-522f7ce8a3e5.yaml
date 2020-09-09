@@ -1,11 +1,11 @@
 field: 024735a6-b0d6-40f3-88ae-9ae16679bcea
 fieldLayouts:
-  758cec63-b92a-4b52-95a0-de8ac9518356:
+  1df0ce0e-0e9c-406f-83bd-5a2f332e493c:
     tabs:
       -
         elements:
           -
-            fieldUid: ecebe0af-1b18-4293-8bc1-3778b56ab7f4
+            fieldUid: 0892e768-9a1e-451c-95f1-d426fa624ffd
             instructions: null
             label: null
             required: false
@@ -14,16 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 2f966b0a-325d-4977-80f4-105ed0e594dd
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 0a7fa584-8085-43fb-8e93-518fddcc6082
+            fieldUid: 96463f2b-14b9-4dd3-8cbe-38300a497781
             instructions: null
             label: null
             required: false
@@ -34,31 +25,12 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  0a7fa584-8085-43fb-8e93-518fddcc6082:
+  0892e768-9a1e-451c-95f1-d426fa624ffd:
     contentColumnType: text
     fieldGroup: null
-    handle: areasOfExpertiseHeader
+    handle: teamMemberSummary
     instructions: ''
-    name: 'Areas of Expertise Header'
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  2f966b0a-325d-4977-80f4-105ed0e594dd:
-    contentColumnType: text
-    fieldGroup: null
-    handle: funFactBody
-    instructions: ''
-    name: 'Fun Fact Body'
+    name: 'Team Member Summary'
     searchable: false
     settings:
       availableTransforms: '*'
@@ -81,12 +53,12 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  ecebe0af-1b18-4293-8bc1-3778b56ab7f4:
+  96463f2b-14b9-4dd3-8cbe-38300a497781:
     contentColumnType: text
     fieldGroup: null
-    handle: funFactHeader
+    handle: teamCategoriesHeader
     instructions: ''
-    name: 'Fun Fact Header'
+    name: 'Team Categories Header'
     searchable: false
     settings:
       byteLimit: null
@@ -102,4 +74,4 @@ fields:
     type: craft\fields\PlainText
 handle: teamMemberDetails
 name: 'Team Member Details'
-sortOrder: 2
+sortOrder: 3
