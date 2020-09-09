@@ -3,11 +3,12 @@
 {# Load needed images #}
 {%- set teaserImage = content.teaserImage[0] ?? placeholder.teaserPlaceholder[0] -%}
 {%- set blog = content.type == 'blog' ? true : false -%}
-{%- set color = 'pink' -%}
+{%- set color = random(['blue', 'red', 'orange', 'purple', 'teal']) -%}
+
 
 {%- minify -%}
-    <div class="flex flex-col col-span-3 lg:col-span-2 bg-white text-{{- color -}}-600 border-t-8 border-{{- color -}}-600 mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out">
-        <div class="relative" style="filter:grayscale(100%)">
+    <div class="flex flex-col col-span-3 lg:col-span-2 bg-white text-{{- color -}}-600 border-b-8 border-{{- color -}}-600 mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out">
+        <div class="relative">
             <a href="{{- content.url -}}">
                 {{- atom.teaser_image(teaserImage, teaserImage.title, blog ? 'is4by3' : 'is2by1' ) -}}
             </a>
