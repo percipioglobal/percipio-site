@@ -239,4 +239,4 @@ fields:
     type: craft\fields\Assets
 handle: projectImage
 name: 'Project Image'
-sortOrder: 3
+sortOrder: 4

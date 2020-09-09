@@ -11,15 +11,20 @@
             {%- switch block.type -%}
 
                 {%- case "teamMemberHeader" -%}
-                
-                    {%- include '_molecules/headers/teamheader--section' ignore missing with {
+                    {%- include '_molecules/headers/header--team' ignore missing with {
                         content: block,
-                        categories: content.teamCategories,
                     } -%}
 
                 {%- case "teamMemberDetails" -%}
                 
                     {%- include '_molecules/content/team-details' ignore missing with {
+                        content: block,
+                        categories: content.teamCategories,
+                    } -%}
+
+                {%- case "teamMemberSummary" -%}
+                
+                    {%- include '_molecules/content/team-summary' ignore missing with {
                         content: block,
                     } -%}
 
