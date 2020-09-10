@@ -5,8 +5,8 @@
 {%- minify -%}
 
     <section>
-        <div class="absolute w-full h-full top-0 lg:-top-25 z-20">
-            <svg xmlns="http://www.w3.org/2000/svg" className=" w-full h-full" viewBox="50 100 250 400" >
+        <div class="absolute w-full h-full -left-25 md:left-0 top-0 lg:-top-25 z-20 transform rotate-20 md:rotate-0">
+            <svg xmlns="http://www.w3.org/2000/svg" className=" w-full h-full" viewBox="50 100 240 400" >
                 <path fill="#ff5a1f" d="M9 225.2v170.1l382-220V4.7z"/>
             </svg>
         </div>
@@ -22,7 +22,7 @@
                     <h3>{{- atom.text(hero.description) -}}</h3>
                 </div>
 
-                <div v-on:click="scroll('content')" class="mt-20 lg:mt-32 arrow flex justify-center">
+                <div v-on:click="scroll('content')" class="hidden md:flex mt-20 lg:mt-32 arrow justify-center">
                     <span class="bg bounce absolute bottom-0 p-1 text-white-100 bg-white-20 hover:bg-white-50 rounded-full transition-colors ease-in-out duration-150">
                         <svg viewBox="0 0 20 20" fill="#fff" class="w-12 h-12">
                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
