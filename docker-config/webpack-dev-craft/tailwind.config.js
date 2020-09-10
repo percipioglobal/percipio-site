@@ -11,9 +11,6 @@ module.exports = {
             lg: '1024px',
             xl: '1280px',
         },
-        bottom: {
-            '-50': '-50%',
-        },
         colors: {
             gradients: {
                 'dark-navy': 'rgba(0,6,51,1)',
@@ -291,6 +288,14 @@ module.exports = {
         inset: {
             '0': '0',
             auto: 'auto',
+            '-100': '-100%',
+            '-75': '-75%',
+            '-50': '-50%',
+            '-25': '-25%',
+            '25': '25%',
+            '50': '50%',
+            '75': '75%',
+            '100': '100%',
         },
         letterSpacing: {
             tighter: '-0.05em',
