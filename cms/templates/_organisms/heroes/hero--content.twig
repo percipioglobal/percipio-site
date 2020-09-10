@@ -12,18 +12,18 @@
                     {{- atom.hero_image(image, hero.title) -}}
                 </div>
                 <div class="flex flex-col h-auto justify-center mx-auto p-8 md:p-16 lg:p-0 md:min-w-screen-md md:max-w-screen-md relative z-10">
-                    <div class="w-full text-white leading-tight text-base md:text-lg lg:text-lg font-mono tracking-tighter">
+                    <div class="w-full text-white-100 leading-tight text-base md:text-lg lg:text-lg font-mono tracking-tighter">
                         <h6>{{- atom.text(hero.overline) -}}</h6>
                     </div>
-                    <div class="w-full text-white font-bold leading-tight text-5xl md:text-6xl tracking-tighter">
+                    <div class="w-full text-white-100 font-bold leading-tight text-5xl md:text-6xl tracking-tighter">
                         <h1>{{- atom.text(hero.heroTitle) -}}</h1>
                     </div>
-                    <div class="w-full text-white font-medium leading-tight text-xl md:text-2xl tracking-tight mt-16">
+                    <div class="w-full text-white-100 font-medium leading-tight text-xl md:text-2xl tracking-tight mt-16">
                         <h3>{{- atom.text(hero.description) -}}</h3>
                     </div>
 
                     <div v-on:click="scroll('content')" class="arrow flex justify-center">
-                        <span class="bg bounce absolute bottom-0 mb-5 p-1 text-white bg-white rounded-full bg-opacity-25 hover:bg-opacity-50 transition-colors ease-in-out duration-150">
+                        <span class="bg bounce absolute bottom-0 mb-5 p-1 text-white-100  bg-white-20 hover:bg-white-50 rounded-full transition-colors ease-in-out duration-150">
                             <svg viewBox="0 0 20 20" fill="#fff" class="w-12 h-12">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                             </svg>
