@@ -4,47 +4,33 @@
 
 {%- minify -%}
 
-    <section class="w-full">
-            <div class="flex h-screen-80 relative">
-                <div class="hero-svg z-20">
-                    <svg version="1.1" id="Percipio_Logo" xmlns="http://www.w3.org/2000/svg" viewBox="395 750 300 500" xml:space="preserve">
-                        <path id="P_Section" fill="none" d="M0 559.5l537.7-309.6-104.2-60.2L164.6 345 0 250 433 0l433 250-537.6 309.6 268.5 155L433 809.5z"/>
-                        <g id="Dark_Group" fill="#1c64f2">
-                            <path id="Dark_2" d="M433 809.5l163.9-94.9-268.5-155L866 250v500l-433 250z"/>
-                            <path id="Dark_1" d="M164.6 345v119.7l268.9-154.8V189.7z"/>
-                        </g>
-                        <g id="Light_Group" fill="#d61f69">
-                            <path id="Light_3" d="M433.5 189.7v120.2l104.2-60z"/>
-                            <path id="Light_2" d="M0 559.5l433 250V1000L0 750z"/>
-                            <path id="Light_1" d="M0 250l164.6 95v119.7L0 559.5z"/>
-                        </g>
-                    </svg>
+    <section>
+        <div class="absolute w-full h-full top-0 lg:-top-25 z-20">
+            <svg xmlns="http://www.w3.org/2000/svg" className=" w-full h-full" viewBox="50 100 250 400" >
+                <path fill="#ff5a1f" d="M9 225.2v170.1l382-220V4.7z"/>
+            </svg>
+        </div>
+        <div class="flex mt-40 md:mt-56 lg:mt-64 relative">
+            <div class="flex flex-col h-auto justify-center mx-auto p-8 md:p-16 lg:p-0 md:min-w-screen-md md:max-w-screen-md relative z-30">
+                <div class="w-full text-white leading-tight text-base md:text-lg font-mono tracking-tighter">
+                    <h6>{{- atom.text(hero.overline) -}}</h6>
                 </div>
-                <div class="flex flex-col h-auto justify-center mx-auto p-8 md:p-16 lg:p-0 md:min-w-screen-md md:max-w-screen-md relative z-30">
-                    <div class="w-full text-white leading-tight text-base md:text-lg lg:text-lg font-mono tracking-tighter">
-                        <h6>{{- atom.text(hero.overline) -}}</h6>
-                    </div>
-                    <div class="w-full text-white font-bold leading-tight text-5xl md:text-6xl tracking-tighter">
-                        <h1>{{- atom.text(hero.heroTitle) -}}</h1>
-                    </div>
-                    <div class="w-full text-white font-medium leading-tight text-xl md:text-2xl tracking-tight mt-16">
-                        <h3>{{- atom.text(hero.description) -}}</h3>
-                    </div>
-
-                    <div v-on:click="scroll('content')" class="arrow flex justify-center">
-                        <span class="bg bounce absolute bottom-0 mb-5 p-1 text-white bg-white rounded-full bg-opacity-25 hover:bg-opacity-50 transition-colors ease-in-out duration-150">
-                            <svg viewBox="0 0 20 20" fill="#fff" class="w-12 h-12">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                            </svg>
-                        </span>
-                    </div>
-
-
+                <div class="w-full text-white font-bold leading-tight text-5xl md:text-6xl tracking-tighter">
+                    <h1>{{- atom.text(hero.heroTitle) -}}</h1>
+                </div>
+                <div class="w-full text-white font-medium leading-tight text-xl md:text-2xl tracking-tight mt-6">
+                    <h3>{{- atom.text(hero.description) -}}</h3>
                 </div>
 
-                
-
+                <div v-on:click="scroll('content')" class="mt-20 lg:mt-32 arrow flex justify-center">
+                    <span class="bg bounce absolute bottom-0 p-1 text-white bg-white rounded-full bg-opacity-25 hover:bg-opacity-50 transition-colors ease-in-out duration-150">
+                        <svg viewBox="0 0 20 20" fill="#fff" class="w-12 h-12">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </span>
+                </div>
             </div>
+        </div>
     </section>
 
 {%- endminify -%}
