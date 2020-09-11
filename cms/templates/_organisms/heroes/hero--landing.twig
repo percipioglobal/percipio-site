@@ -1,8 +1,8 @@
 {%- import '_macros/atoms' as atom -%}
 
 {% set hero = content.heroBuilder[0] %}
-{%- set triangleCount = random([0, 1, 2, 3]) -%}
-{%- set randomRotation = random(["rotate-10", "rotate-20", "rotate-30", "rotate-45", "rotate-90", "rotate-180"]) -%}
+{% set randomRotation = random(["rotate-10", "rotate-20", "rotate-30", "rotate-45", "rotate-90", "rotate-180"]) -%}
+{% set triangle = "<div>triangle</div>" %}
 
 {%- minify -%}
 
@@ -12,11 +12,13 @@
                 <path fill="#ff5a1f" d="M9 225.2v170.1l382-220V4.7z"/>
             </svg>
         </div>
-        <div class="absolute w-3/5 h-3/5 -top-50 -right-25 z-20 transform {{randomRotation}}">
-            <svg xmlns="http://www.w3.org/2000/svg"  className="w-full h-full" viewBox="0 0 370 370">
-                <path fill="#faca15" d="M54.1 32.1v335.5L345 200.1z"/>
-            </svg>
-        </div>
+        {% for i in range(0, random([1,2])) %}
+            <div class="{{ triangle }} absolute w-3/5 h-3/5 {{random(['-top-50', '-top-25', '-top-10', 'top-0', 'top-10', 'top-25', 'top-35'])}} {{random(['-right-25', '-right-10', 'right-50', 'right-65', 'right-75'])}} z-20 transform {{random(["rotate-10", "rotate-20", "rotate-30", "rotate-45", "rotate-90", "rotate-180"])}}">
+                <svg xmlns="http://www.w3.org/2000/svg"  className="w-full h-full" viewBox="0 0 370 370">
+                    <path fill="#faca15" d="M54.1 32.1v335.5L345 200.1z"/>
+                </svg>
+            </div> 
+        {% endfor %}
         <div class="flex mt-40 md:mt-56 lg:mt-64 relative">
             <div class="flex flex-col h-auto justify-center mx-auto p-8 md:p-16 lg:p-0 md:min-w-screen-md md:max-w-screen-md relative z-30">
                 <div class="w-full text-white-100 leading-tight text-base md:text-lg font-mono tracking-tighter">
