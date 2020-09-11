@@ -1,6 +1,8 @@
 {%- import '_macros/atoms' as atom -%}
 
 {% set hero = content.heroBuilder[0] %}
+{%- set triangleCount = random([0, 1, 2, 3]) -%}
+{%- set randomRotation = random(["rotate-10", "rotate-20", "rotate-30", "rotate-45", "rotate-90", "rotate-180"]) -%}
 
 {%- minify -%}
 
@@ -8,6 +10,11 @@
         <div class="absolute w-full h-full top-0 md:-top-10 xl:-top-25 transform transition duration-300 ease-in-out z-20" style=>
             <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full" viewBox="50 100 280 380" >
                 <path fill="#ff5a1f" d="M9 225.2v170.1l382-220V4.7z"/>
+            </svg>
+        </div>
+        <div class="absolute w-3/5 h-3/5 -top-50 -right-25 z-20 transform {{randomRotation}}">
+            <svg xmlns="http://www.w3.org/2000/svg"  className="w-full h-full" viewBox="0 0 370 370">
+                <path fill="#faca15" d="M54.1 32.1v335.5L345 200.1z"/>
             </svg>
         </div>
         <div class="flex mt-40 md:mt-56 lg:mt-64 relative">
