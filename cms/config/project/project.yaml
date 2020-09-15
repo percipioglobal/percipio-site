@@ -1,4 +1,4 @@
-dateModified: 1599217989
+dateModified: 1600161863
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -15,6 +15,10 @@ plugins:
       schemaVersion: 1.0.0
     enabled: true
     schemaVersion: '1.2'
+  blitz-recommendations:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   eager-beaver:
     edition: standard
     enabled: true
