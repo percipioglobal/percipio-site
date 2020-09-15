@@ -4,7 +4,7 @@
 a.c-btn,
 button.c-btn {
   &.primary:not(.outline) {
-    @apply .bg-red .border-red .text-white;
+    @apply .bg-red .border-red .text-white-100;
 
     &:not([disabled]) {
       &:hover {
@@ -23,11 +23,11 @@ button.c-btn {
 
       &:not([disabled]) {
         &:hover {
-          @apply .text-white .bg-red;
+          @apply .text-white-100 .bg-red;
         }
 
         &:active {
-          @apply .text-white .bg-red-darker;
+          @apply .text-white-100 .bg-red-darker;
         }
       }
     }

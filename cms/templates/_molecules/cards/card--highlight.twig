@@ -46,7 +46,7 @@
 {%- set blog = content.type == 'blog' ? true : false -%}
 
 {%- minify -%}
-    <div class="flex flex-col col-span-3 lg:col-span-2 bg-white text-{{- color -}}-700 mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out">
+    <div class="z-40 flex flex-col col-span-3 lg:col-span-2 bg-white-100 text-{{- color -}}-700 mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out">
         <div class="relative">
             <a href="{{- content.url -}}">
                 {{- atom.teaser_image(teaserImage, teaserImage.title, blog ? 'is4by3' : 'is2by1' ) -}}
@@ -85,7 +85,7 @@
                             {%- case "blog" -%}
                                 {%- for category in content.projectCategories -%}
                                     <a href="{{ category.url }}" alt="{{ category.title}}">
-                                        <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                                        <span class="bg-{{color}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary text-white-100 text-xs tracking-wide font-medium">
                                             {{- content.blogCategories[0].title ?? 'No Category' }}
                                         </span>
                                     </a>
@@ -93,7 +93,7 @@
                             {%- case "projects" -%}
                                 {%- for category in content.projectCategories -%}
                                     <a href="{{ category.url }}" alt="{{ category.title}}">
-                                        <span class="bg-{{color}}-700 mt-2  mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                                        <span class="bg-{{color}}-700 mt-2  mr-2 px-4 py-2 rounded-full font-secondary text-white-100 text-xs tracking-wide font-medium">
                                             {{- category.title -}}
                                         </span>
                                     </a>
@@ -101,7 +101,7 @@
                             {%- case "teamMember" -%}
                                 {%- for category in content.teamCategories -%}
                                     <a href="{{ category.url }}" alt="{{ category.title}}" class="my-3">
-                                        <span class="bg-{{color}}-700 mr-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
+                                        <span class="bg-{{color}}-700 mr-2 px-4 py-2 rounded-full font-secondary text-white-100 text-xs tracking-wide font-medium">
                                             {{- category.title -}}
                                         </span>
                                     </a>

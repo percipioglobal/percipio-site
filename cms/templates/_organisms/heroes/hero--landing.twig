@@ -1,41 +1,62 @@
 {%- import '_macros/atoms' as atom -%}
 
 {% set hero = content.heroBuilder[0] %}
-{% set image = hero.heroImage[0] ?? placeholder.heroPlaceholder[0] %}
+
+{%- set color = random(['blue', 'red', 'orange', 'purple', 'teal']) -%}
+{%- set rightTriangle = random(['hidden', 'block', 'block']) ~ " " ~ random(['-top-50', '-top-25', '-top-10', 'top-0']) ~ " " ~ random(['-right-25', '-right-10']) -%}
+{%- set leftTriangleOne = random(['hidden', 'block']) ~ " " ~ random(['top-10', 'top-25', 'top-35'])  ~ " " ~ random(['right-50', 'right-65', 'right-75']) -%}
+{%- set leftTriangleTwo = random(['hidden', 'block']) ~ " " ~ random(['top-10', 'top-25', 'top-35'])  ~ " " ~ random(['right-50', 'right-65', 'right-75']) -%}
 
 {%- minify -%}
 
-    <section class="w-full">
-      
-            <div class="flex h-screen-80 relative">
-                <div class="absolute h-full w-full object-cover">
-                    {{- atom.hero_image(image, hero.title) -}}
+    <section>
+        <div class="absolute w-full h-full top-0 z-20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="overflow-visible w-full h-full fill-current text-{{color}}-800" viewBox="140 130 120 130" >
+                <path d="M9 225.2v170.1l382-220V4.7z"/>
+            </svg>
+        </div>
+        <div class="{{ rightTriangle }} absolute w-full h-full z-20 transform ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="overflow-visible w-full h-full fill-current text-{{color}}-600" viewBox="0 0 400 400">
+                <g transform="rotate({{random(0, 360)}} 200 200)">
+                    <path d="M54.1 32.1v335.5L345 200.1z"/>
+                </g>
+            </svg>
+        </div>  
+        <div class="{{ leftTriangleOne }} absolute w-full h-full z-20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="overflow-visible w-full h-full fill-current text-{{color}}-600" width="400" height="400" viewBox="0 0 400 400">
+                <g transform="rotate({{random(0, 360)}} 200 200)">
+                    <path d="M54.1 32.1v335.5L345 200.1z"/>
+                </g>
+            </svg>
+        </div> 
+        <div class="{{ leftTriangleTwo }} absolute w-full h-full z-20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="overflow-visible w-full h-full fill-current text-{{color}}-600" width="400" height="400" viewBox="0 0 400 400">
+                <g transform="rotate({{random(0, 360)}} 200 200)">
+                    <path d="M54.1 32.1v335.5L345 200.1z"/>
+                </g>
+            </svg>
+        </div>  
+        <div class="flex mt-40 md:mt-64 relative">
+            <div class="flex flex-col h-auto justify-center mx-auto p-8 md:p-16 lg:p-0 md:min-w-screen-md md:max-w-screen-md relative z-30">
+                <div class="w-full text-white-100 leading-tight text-base md:text-lg font-mono tracking-tighter">
+                    <h6>{{- atom.text(hero.overline) -}}</h6>
                 </div>
-                <div class="flex flex-col h-auto justify-center mx-auto p-8 md:p-16 lg:p-0 md:min-w-screen-md md:max-w-screen-md relative z-10">
-                    <div class="w-full text-white leading-tight text-base md:text-lg lg:text-lg font-mono tracking-tighter">
-                        <h6>{{- atom.text(hero.overline) -}}</h6>
-                    </div>
-                    <div class="w-full text-white font-bold leading-tight text-5xl md:text-6xl tracking-tighter">
-                        <h1>{{- atom.text(hero.heroTitle) -}}</h1>
-                    </div>
-                    <div class="w-full text-white font-medium leading-tight text-xl md:text-2xl tracking-tight mt-16">
-                        <h3>{{- atom.text(hero.description) -}}</h3>
-                    </div>
-
-                    <div v-on:click="scroll('content')" class="arrow flex justify-center">
-                        <span class="bg bounce absolute bottom-0 mb-5 p-1 text-white bg-white rounded-full bg-opacity-25 hover:bg-opacity-50 transition-colors ease-in-out duration-150">
-                            <svg viewBox="0 0 20 20" fill="#fff" class="w-12 h-12">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                            </svg>
-                        </span>
-                    </div>
-
-
+                <div class="w-full text-white-100 font-bold leading-tight text-5xl md:text-6xl tracking-tighter">
+                    <h1>{{- atom.text(hero.heroTitle) -}}</h1>
+                </div>
+                <div class="w-full text-white-100 font-medium leading-tight text-xl md:text-2xl tracking-tight mt-6">
+                    <h3>{{- atom.text(hero.description) -}}</h3>
                 </div>
 
-                
-
+                <div v-on:click="scroll('content')" class="hidden md:flex mt-20 lg:mt-32 arrow justify-center">
+                    <span class="bg bounce absolute bottom-0 p-1 text-white-100 bg-white-20 hover:bg-white-50 rounded-full transition-colors ease-in-out duration-150">
+                        <svg viewBox="0 0 20 20" fill="#fff" class="w-12 h-12">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </span>
+                </div>
             </div>
+        </div>
     </section>
 
 {%- endminify -%}
