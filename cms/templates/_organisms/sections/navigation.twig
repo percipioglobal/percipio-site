@@ -44,7 +44,7 @@
                             </a>
                         <div>
                         {% if node.hasDescendants %}
-                            {% for subnode in node.children %}
+                            {% for subnode in node.children.all() %}
                                 <div class="my-4 normal-case text-lg font-normal">
                                     <a  href="{{- subnode.url -}}" 
                                         title="{{- subnode.title -}}"

@@ -49,7 +49,7 @@
                         </div>
                         {% if node.hasDescendants %}
                             <div class="flex flex-col text-gray-600 normal-case leading-relaxed">
-                                {% for subnode in node.children %}
+                                {% for subnode in node.children.all() %}
                                     <a 	href="{{- subnode.url -}}" 
 							            title="{{- subnode.title -}}"
                                         {% if subnode.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}
