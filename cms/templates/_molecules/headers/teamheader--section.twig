@@ -15,7 +15,7 @@
                 {{- atom.text(block.areasOfExpertiseHeader) -}}
             </div>
             <div class="flex flex-wrap">
-                {%- for category in categories -%}
+                {%- for category in categories.all() -%}
                     <span class="bg-blue-500 px-4 py-2 mb-2 mr-2 rounded-full font-secondary text-white-100 text-xs break-normal tracking-wide font-medium">
                         {{- category.title -}}
                     </span>

@@ -8,7 +8,7 @@
 <div class="container max-w-screen-xl mx-auto">
     
     {%- minify -%}
-        {%- for block in content.projectBuilder -%}
+        {%- for block in content.projectBuilder.all() -%}
             
             {%- switch block.type -%}
             
