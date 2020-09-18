@@ -1,9 +1,11 @@
 .client > a > img {
-    transition: all 0.2s; 
-    filter: grayscale(100%);
+  transition: all 0.2s;
+  filter: brightness(0);
+  opacity: (10%);
 }
 
 .client > a > img:hover {
-    filter: grayscale(0%);
-    transform: scale(1.1);
+  transform: scale(1.1);
+  filter: brightness(1);
+  opacity: (100%);
 }

@@ -2,9 +2,9 @@
 
 {% set hero = content.heroBuilder[0] %}
 
-{%- set rightTriangle = random(['hidden', 'block', 'block']) ~ " " ~ random(['-top-50', '-top-25', '-top-10', 'top-0']) -%}
-{%- set leftTriangleOne = random(['hidden', 'block']) ~ " " ~ random(['top-10', 'top-25', 'top-35'])  ~ " " ~ random(['right-50', 'right-65', 'right-75']) -%}
-{%- set leftTriangleTwo = random(['hidden', 'block']) ~ " " ~ random(['top-10', 'top-25', 'top-35'])  ~ " " ~ random(['right-50', 'right-65', 'right-75']) -%}
+{%- set rightTriangle = random(['hidden', 'block', 'block']) ~ " " ~ random(['-top-50', '-top-25']) -%}
+{%- set leftTriangleOne = random(['hidden', 'block']) ~ " " ~ random(['top-10', 'top-25', 'top-35'])  ~ " " ~ random(['right-65', 'right-50']) -%}
+{%- set leftTriangleTwo = random(['hidden', 'block']) ~ " " ~ random(['top-10', 'top-25', 'top-35'])  ~ " " ~ random(['right-65', 'right-50']) -%}
 
 {%- minify -%}
 
@@ -14,7 +14,7 @@
                 <path d="M9 225.2v170.1l382-220V4.7z"/>
             </svg>
         </div>
-        <div class="{{ rightTriangle }} -right-35 absolute w-full h-full z-20 transform ">
+        <div class="{{ rightTriangle }} -right-50 absolute w-full h-full z-20 transform ">
             <svg xmlns="http://www.w3.org/2000/svg" class="overflow-visible w-full h-full fill-current text-{{color}}-600" viewBox="0 0 400 400">
                 <g transform="rotate({{random(0, 360)}} 200 200)">
                     <path d="M54.1 32.1v335.5L345 200.1z"/>
