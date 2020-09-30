@@ -39,7 +39,7 @@
 {%- set blog = content.type == 'blog' ? true : false -%}
 
 {%- minify -%}
-    <div class="z-40 flex flex-col bg-white-100 text-{{color}}-600 border-b-8 border-{{- color -}}-600 lg:grid grid-cols-2 grid-rows-1 col-span-3 relative h-full w-full mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out">
+    <div class="z-30 flex flex-col bg-white-100 text-{{color}}-600 border-b-8 border-{{- color -}}-600 lg:grid grid-cols-2 grid-rows-1 col-span-3 relative h-full w-full mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out">
         <div class="relative">
             <a href="{{- content.url -}}">
                 {{- atom.featured_image(teaserImage, teaserImage.title ) -}}
