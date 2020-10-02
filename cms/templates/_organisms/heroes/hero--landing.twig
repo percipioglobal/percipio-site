@@ -2,15 +2,15 @@
 
 {% set hero = content.heroBuilder[0] %}
 
-{%- set rightTriangle = random(['hidden', 'block', 'block']) ~ " " ~ random(['-top-50', '-top-25']) -%}
+{# {%- set rightTriangle = random(['hidden', 'block', 'block']) ~ " " ~ random(['-top-50', '-top-25']) -%}
 {%- set leftTriangleOne = random(['hidden', 'block']) ~ " " ~ random(['top-10', 'top-25', 'top-35'])  ~ " " ~ random(['right-65', 'right-50']) -%}
-{%- set leftTriangleTwo = random(['hidden', 'block']) ~ " " ~ random(['top-10', 'top-25', 'top-35'])  ~ " " ~ random(['right-65', 'right-50']) -%}
+{%- set leftTriangleTwo = random(['hidden', 'block']) ~ " " ~ random(['top-10', 'top-25', 'top-35'])  ~ " " ~ random(['right-65', 'right-50']) -%} #}
 
 {%- minify -%}
 
     <section>
-        <div class="absolute w-full h-full top-0 z-20">
-            <svg xmlns="http://www.w3.org/2000/svg" class="overflow-visible w-full h-full fill-current text-{{color}}-800" viewBox="140 130 120 130" >
+        <div class="absolute w-full h-full mt-0 md:mt-48 top-0 z-20 rotate-90">
+            <svg xmlns="http://www.w3.org/2000/svg" class="transform rotate-25 overflow-visible w-full h-full fill-current text-{{color}}-800" viewBox="125 130 160 170" >
                 <path d="M9 225.2v170.1l382-220V4.7z"/>
             </svg>
         </div>
