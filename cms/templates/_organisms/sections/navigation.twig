@@ -4,11 +4,13 @@
     .all() %}
 
 
+
 <div>
-    <div class="z-40 w-full absolute bg-transparent h-12 md:h-20 py-16 flex justify-between items-center px-4 md:px-16 lg:px-32">
-        <div class="w-16 h-16 justify-start">
+    
+    <div class="z-40 w-full absolute bg-transparent h-12 md:h-20 py-16 flex justify-between items-center px-8 md:px-16 lg:px-32">
+        <div class="w-16 h-16">
             <a href="{{ siteUrl }}" title="percipio">                
-                <svg version="1.1" id="Percipio_Logo" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 866 1000" xml:space="preserve">
+                <svg version="1.1" id="Percipio_Logo" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 120 866 1000" xml:space="preserve">
                     <path id="P_Section" fill="none" d="M0 559.5l537.7-309.6-104.2-60.2L164.6 345 0 250 433 0l433 250-537.6 309.6 268.5 155L433 809.5z"/>
                     <g id="Dark_Group" fill={{entry.type == 'homepage' or entry.type == 'blog' ? '#1c64f2' : 'none' }} class="{{ entry.type == 'homepage' or entry.type == 'blog' ? "" : 'fill-current text-' ~ color ~ '-800' }}">
                         <path id="Dark_2" d="M433 809.5l163.9-94.9-268.5-155L866 250v500l-433 250z"/>
@@ -24,9 +26,9 @@
         </div>
 
         <div @click="toggleMenu" class="justify-end cursor-pointer h-16 w-16">
-            <div class="absolute flex justify-center items-center w-16 h-16 z-40">
-                <span :class="hamburgerOpen ? 'rotate-45 translate-y-2' : 'rotate-0'" class="{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ color ~ '-100'}} mb-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
-                <span :class="hamburgerOpen ? '-rotate-90 -translate-y-4' : 'rotate-0'" class="{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ color ~ '-100'}} mt-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
+            <div class="absolute flex justify-end items-center w-16 h-16 z-40">
+                <span :class="hamburgerOpen ? 'bg-white-100 rotate-45 translate-y-2' : '{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ color ~ '-600'}} rotate-0'" class=" mb-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
+                <span :class="hamburgerOpen ? 'bg-white-100 -rotate-90 -translate-y-4' : '{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ color ~ '-600'}} rotate-0'" class="mt-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
             <div>
         </div>
     </div>
