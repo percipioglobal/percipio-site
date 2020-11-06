@@ -36,22 +36,22 @@
     </div>
 
     <div :class="hamburgerOpen ? 'block' : 'hidden'" class="bg-white-90 text-gray-800 z-30 overflow-scroll fixed top-0 left-0 w-screen h-screen">
-        <div class="relative max-w-md w-full ml-auto bg-white pt-5 pb-4 flex-1 flex flex-col">
+        <div class="relative max-w-md w-full ml-auto bg-white px-4 pt-5 pb-4 flex-1 flex flex-col">
             <div class="mt-24 flex-1 h-0 overflow-y-auto">
                 <nav class="text-2xl font-extrabold px-2 space-y-4">  
-                    <h3>Work</h3>
-                    <h3>Services</h3>
-                    <h3>Team</h3>
-                    <h3>Careers</h3>
-                    <h3>Articles</h3>
-                    <h3>Contact</h3>
+                    <h3 class="hover:underline"><a href="{{ siteUrl }}projects">Work</a></h3>
+                    <h3 class="hover:underline"><a href="{{ siteUrl }}services" title="services" aria-label="services">Services</a></h3>
+                    <h3 class="hover:underline"><a href="{{ siteUrl }}team" title="team" aria-label="team">Team</a></h3>
+                    <h3 class="hover:underline"><a href="{{ siteUrl }}careers" title="careers" aria-label="careers">Careers</a></h3>
+                    <h3 class="hover:underline"><a href="{{ siteUrl }}blog" title="blog" aria-label="blog">Articles</a></h3>
+                    <h3 class="hover:underline"><a href="{{ siteUrl }}contact" title="contact" aria-label="contact">Contact</a></h3>
                 </nav>
                 <hr class="my-6 mx-2 max-w-xs text-gray-800 h-1 w-1/2">
                 <nav class="text-lg font-extrabold px-2 space-y-2">  
-                    <h4>Facebook</h4>
-                    <h4>Twitter</h4>
-                    <h4>Instagram</h4>
-                    <h4>LinkedIn</h4>
+                    <h4 class="hover:underline"><a href="#" title="facebook" aria-label="facebook">Facebook</a></h4>
+                    <h4 class="hover:underline"><a href="#" title="twitter" aria-label="twitter">Twitter</a></h4>
+                    <h4 class="hover:underline"><a href="#" title="instagram" aria-label="instagram">Instagram</a></h4>
+                    <h4 class="hover:underline"><a href="#" title="linkedin" aria-label="linkedin">LinkedIn</a></h4>
                 </nav>
             </div>
         </div>
