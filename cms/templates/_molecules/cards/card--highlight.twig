@@ -1,22 +1,22 @@
-{%- import '_macros/atoms' as atom -%}
+{%- import '_macros/atoms' as render -%}
 
 {# Eager Load categories based on entry types #}
-{# 
+{#
 {%- switch content.type -%}
     {%- case "blog" -%}
         {%- do craft.eagerBeaver.eagerLoadElements(entry, [
             'blogCategories'
-            ]) 
+            ])
         -%}
     {%- case "projects" -%}
         {%- do craft.eagerBeaver.eagerLoadElements(entry, [
             'projectCategories'
-            ]) 
+            ])
         -%}
     {%- case "teamMember" -%}
         {%- do craft.eagerBeaver.eagerLoadElements(entry, [
             'teamCategories'
-            ]) 
+            ])
         -%}
 {%- endswitch -%} #}
 
@@ -49,7 +49,7 @@
     <div class="z-30 flex flex-col col-span-3 lg:col-span-2 bg-white-100 text-{{- color -}}-600 border-b-8 border-{{- color -}}-600 mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out">
         <div class="col-span-2">
             <a href="{{- content.url -}}">
-                {{- atom.teaser_image(teaserImage, teaserImage.title, blog ? 'is4by3' : 'is2by1' ) -}}
+                {{- render.atom('image', 'teaser', { image: teaserImage, alt:teaserImage.title, ratio: blog ? 'is4by3' : 'is2by1'  }) -}}
             </a>
         </div>
         <div class="flex flex-col flex-grow justify-between h-full text-left p-8">
@@ -62,19 +62,19 @@
                                 <time datetime="{{- entry.postDate|date('c') -}}" class="text-xs font-primary mt-6 font-medium uppercase tracking-wide leading-normal">{{- atom.formatDate(content.postDate) -}}</time>
                             </div>
                         {%- case "projects" -%}
-                            <div class="break-words font-mono mb-1">
-                                {{- atom.text(content.organisationName) -}}
+                            <div class="break-words font-mono text-white mb-1">
+                                {{- render.atom('text', 'content', { content: content.organisationName }) -}}
                             </div>
                         {%- case "teamMember" -%}
-                            <div class="break-words font-mono mb-1">
-                                {{- atom.text(content.teamMemberRole) -}}
+                            <div class="break-words font-mono text-white mb-1">
+                                {{- render.atom('text', 'content', { content: content.teamMemberRole }) -}}
                             </div>
                     {%- endswitch -%}
-                    <div class="break-words text-4xl leading-none font-extrabold mb-5 text-gray-800">
-                        {{- atom.text(content.title) -}}
+                    <div class="break-words text-4xl text-white font-extrabold mb-5">
+                        {{- render.atom('text', 'content', { content: content.title }) -}}
                     </div>
-                    <div class="break-words text-lg font-secondary leading-relaxed mb-8 text-gray-800">
-                        {{- atom.text(content.description) -}}
+                    <div class="break-words text-lg font-secondary text-white leading-relaxed mb-8">
+                        {{- render.atom('text', 'content', { content: content.description }) -}}
                     </div>
                 </a>
             </div>
@@ -110,6 +110,6 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
 {%- endminify -%}

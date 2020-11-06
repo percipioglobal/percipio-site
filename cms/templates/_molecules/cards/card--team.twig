@@ -1,4 +1,4 @@
-{%- import '_macros/atoms' as atom -%}
+{%- import '_macros/atoms' as render -%}
 
 {# Load needed images #}
 {%- set teaserImage = content.teaserImage[0] ?? placeholder.teaserPlaceholder[0] -%}
@@ -10,20 +10,20 @@
     <div class="z-30 flex flex-col col-span-3 lg:col-span-2 bg-white-100 text-{{- color -}}-600 border-b-8 border-{{- color -}}-600 mb-8 md:mb-0 shadow-md hover:shadow-2xl transition duration-200 ease-in-out">
         <div class="relative">
             <a href="{{- content.url -}}">
-                {{- atom.teaser_image(teaserImage, teaserImage.title, blog ? 'is4by3' : 'is2by1' ) -}}
+                {{- render.atom('image', 'teaser', { image: teaserImage, alt:teaserImage.title, ratio: blog ? 'is4by3' : 'is2by1'  }) -}}
             </a>
         </div>
         <div class="flex flex-col flex-grow justify-between h-full text-left p-8">
             <div class="flex">
                 <a href="{{- content.url -}}">
-                        <div class="break-words font-mono mb-1">
-                            {{- atom.text(content.teamMemberRole) -}}
-                        </div>
+                    <div class="break-words font-mono mb-1">
+                        {{- render.atom('text', 'content', { content: content.teamMemberRole }) -}}
+                    </div>
                     <div class="break-words text-4xl font-extrabold mb-3 text-gray-800">
-                        {{- atom.text(content.title) -}}
+                        {{- render.atom('text', 'content', { content: content.title }) -}}
                     </div>
                     <div class="break-words text-lg font-secondary leading-relaxed mb-8 text-gray-800">
-                        {{- atom.text(content.description) -}}
+                        {{- render.atom('text', 'content', { content: content.description }) -}}
                     </div>
                 </a>
             </div>
@@ -40,6 +40,6 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
 {%- endminify -%}
