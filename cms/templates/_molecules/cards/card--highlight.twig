@@ -59,7 +59,7 @@
                         {%- case "blog" -%}
                             <div class="text-xs leading-tight text-black-100 tracking-wider">
                                 <address rel="author" class="break-words text-2xl font-primary font-medium leading-none not-italic mb-1">{{- content.author -}}</address>
-                                <time datetime="{{- entry.postDate|date('c') -}}" class="text-xs font-primary mt-6 font-medium uppercase tracking-wide leading-normal">{{- atom.formatDate(content.postDate) -}}</time>
+                                <time datetime="{{- entry.postDate|date('c') -}}" class="text-xs font-primary mt-6 font-medium uppercase tracking-wide leading-normal">{{- render.formatDate(content.postDate) -}}</time>
                             </div>
                         {%- case "projects" -%}
                             <div class="break-words font-mono text-white mb-1">
