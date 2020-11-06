@@ -36,36 +36,23 @@
     </div>
 
     <div :class="hamburgerOpen ? 'block' : 'hidden'" class="bg-white-90 text-gray-800 z-30 overflow-scroll fixed top-0 left-0 w-screen h-screen">
-        <div class="relative max-w-xs w-full ml-auto bg-white pt-5 pb-4 flex-1 flex flex-col">
-            <div class="mt-5 flex-1 h-0 overflow-y-auto">
-                <nav class="px-2 space-y-1">  
-                    {%- for node in nodes -%}
-                        <div class="my-4 flex flex-col">
-                            <div class="uppercase font-bold text-xl mt-6 tracking-wide">
-                                <a  href="{{- node.url -}}" 
-                                    title="{{- node.title -}}"
-                                    {% if node.newWindow -%} target="_blank" rel="noopener noreferrer"{%- endif %}
-                                    class="mb-4"
-                                >
-                                    {{- node.title -}}
-                                </a>
-                            <div>
-                            {% if node.hasDescendants %}
-                                {% for subnode in node.children.all() %}
-                                    <div class="my-4 normal-case text-lg font-normal">
-                                        <a  href="{{- subnode.url -}}" 
-                                            title="{{- subnode.title -}}"
-                                            {% if subnode.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}
-                                            class="my-1" 
-                                        >
-                                            {{- subnode.title -}}
-                                        </a>
-                                    </div>
-                                {% endfor %}
-                            {% endif %}
-                        </div>
-                    {%- endfor -%}
-                <nav>
+        <div class="relative max-w-md w-full ml-auto bg-white pt-5 pb-4 flex-1 flex flex-col">
+            <div class="mt-24 flex-1 h-0 overflow-y-auto">
+                <nav class="text-2xl font-extrabold px-2 space-y-4">  
+                    <h3>Work</h3>
+                    <h3>Services</h3>
+                    <h3>Team</h3>
+                    <h3>Careers</h3>
+                    <h3>Articles</h3>
+                    <h3>Contact</h3>
+                </nav>
+                <hr class="my-6 mx-2 max-w-xs text-gray-800 h-1 w-1/2">
+                <nav class="text-lg font-extrabold px-2 space-y-2">  
+                    <h4>Facebook</h4>
+                    <h4>Twitter</h4>
+                    <h4>Instagram</h4>
+                    <h4>LinkedIn</h4>
+                </nav>
             </div>
         </div>
     </div>
