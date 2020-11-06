@@ -5,8 +5,7 @@
 
 
 
-<div>
-    
+<div>  
     <div class="z-40 w-full absolute bg-transparent h-12 md:h-20 py-16 flex justify-between items-center px-8 md:px-16 lg:px-32">
         <div class="w-16 h-16">
             <a href="{{ siteUrl }}" title="percipio">                
@@ -24,44 +23,50 @@
                 </svg>
             </a>
         </div>
-
-        <div @click="toggleMenu" class="justify-end cursor-pointer h-16 w-16">
-            <div class="absolute flex justify-end items-center w-16 h-16 z-40">
-                <span :class="hamburgerOpen ? 'bg-white-100 rotate-45 translate-y-2' : '{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ color ~ '-600'}} rotate-0'" class=" mb-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
-                <span :class="hamburgerOpen ? 'bg-white-100 -rotate-90 -translate-y-4' : '{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ color ~ '-600'}} rotate-0'" class="mt-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
-            <div>
+                
+                
+        <div class="w-16 h-16">
+            <div @click="toggleMenu" class="flex justify-end items-center cursor-pointer h-16 w-16">
+                <div class="absolute flex justify-end items-center h-16 w-16 z-40">
+                    <span :class="hamburgerOpen ? 'rotate-45 translate-y-2' : 'rotate-0'" class="{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ color ~ '-600'}} mb-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
+                    <span :class="hamburgerOpen ? '-rotate-90 -translate-y-4' : 'rotate-0'" class="{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ color ~ '-600'}} mt-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
+                <div>
+            </div>
         </div>
     </div>
 
-    <div :class="hamburgerOpen ? 'block' : 'hidden'" class="hero-grad overflow-scroll fixed top-0 left-0 w-screen h-screen text-white-100 text-center text-lg">
-            <nav class="z-50 flex flex-col items-center h-full justify-center">
-                {%- for node in nodes -%}
-                    <div class="my-4 flex flex-col">
-                        <div class="uppercase font-bold text-xl mt-6 tracking-wide">
-                            <a  href="{{- node.url -}}" 
-                                title="{{- node.title -}}"
-                                {% if node.newWindow -%} target="_blank" rel="noopener noreferrer"{%- endif %}
-                                class="mb-4"
-                            >
-                                {{- node.title -}}
-                            </a>
-                        <div>
-                        {% if node.hasDescendants %}
-                            {% for subnode in node.children.all() %}
-                                <div class="my-4 normal-case text-lg font-normal">
-                                    <a  href="{{- subnode.url -}}" 
-                                        title="{{- subnode.title -}}"
-                                        {% if subnode.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}
-                                        class="my-1" 
-                                    >
-                                        {{- subnode.title -}}
-                                    </a>
-                                </div>
-                            {% endfor %}
-                        {% endif %}
-                    </div>
-                {%- endfor -%}
-            </nav>
+    <div :class="hamburgerOpen ? 'block' : 'hidden'" class="bg-white-90 text-gray-800 z-30 overflow-scroll fixed top-0 left-0 w-screen h-screen">
+        <div class="relative max-w-xs w-full ml-auto bg-white pt-5 pb-4 flex-1 flex flex-col">
+            <div class="mt-5 flex-1 h-0 overflow-y-auto">
+                <nav class="px-2 space-y-1">  
+                    {%- for node in nodes -%}
+                        <div class="my-4 flex flex-col">
+                            <div class="uppercase font-bold text-xl mt-6 tracking-wide">
+                                <a  href="{{- node.url -}}" 
+                                    title="{{- node.title -}}"
+                                    {% if node.newWindow -%} target="_blank" rel="noopener noreferrer"{%- endif %}
+                                    class="mb-4"
+                                >
+                                    {{- node.title -}}
+                                </a>
+                            <div>
+                            {% if node.hasDescendants %}
+                                {% for subnode in node.children.all() %}
+                                    <div class="my-4 normal-case text-lg font-normal">
+                                        <a  href="{{- subnode.url -}}" 
+                                            title="{{- subnode.title -}}"
+                                            {% if subnode.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}
+                                            class="my-1" 
+                                        >
+                                            {{- subnode.title -}}
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    {%- endfor -%}
+                <nav>
+            </div>
         </div>
     </div>
 </div>
