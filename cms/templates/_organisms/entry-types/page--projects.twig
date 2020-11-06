@@ -1,4 +1,4 @@
-{%- import '_macros/atoms' as atom -%}
+{%- import '_macros/atoms' as render -%}
 
 {%- set projects = craft.entries.section('projects')
     .orderBy('postDate desc')
@@ -6,7 +6,7 @@
 
 {%- do craft.eagerBeaver.eagerLoadElements(entry, [
         'heroImage'
-    ]) 
+    ])
 -%}
 
 {%- include '_organisms/heroes/hero--landing' -%}

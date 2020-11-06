@@ -1,4 +1,4 @@
-{%- import '_macros/atoms' as atom -%}
+{% import '_macros/atoms' as render %}
 
 {% set hero = content.heroBuilder[0] %}
 
@@ -9,17 +9,17 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="transform rotate-25 overflow-visible w-full h-full fill-current text-{{color}}-800" viewBox="120 120 250 260" >
             <path d="M9 225.2v170.1l382-220V4.7z"/>
         </svg>
-    </div> 
+    </div>
     <div class="flex mt-40 md:mt-64 relative">
         <div class="flex flex-col h-auto justify-center mx-auto p-8 lg:p-0 md:min-w-screen-md md:max-w-screen-md relative z-30">
             <div class="w-full text-white-100 leading-tight text-base md:text-lg font-mono tracking-tighter">
-                <h6>{{- atom.text(hero.overline) -}}</h6>
+                <h6>{{- render.atom('text', 'content', { content: hero.overline }) -}}</h6>
             </div>
             <div class="w-full text-white-100 font-bold leading-tight text-5xl md:text-6xl tracking-tighter">
-                <h1>{{- atom.text(hero.heroTitle) -}}</h1>
+                <h1>{{- render.atom('text', 'content', { content: hero.heroTitle }) -}}</h1>
             </div>
             <div class="w-full text-white-100 font-medium leading-tight text-xl md:text-2xl tracking-tight mt-6">
-                <h3>{{- atom.text(hero.description) -}}</h3>
+                <h3>{{- render.atom('text', 'content', { content: hero.description }) -}}</h3>
             </div>
             <div v-on:click="scroll('content')" class="hidden md:flex mt-20 lg:mt-32 arrow justify-center">
                 <span class="bg bounce absolute bottom-0 p-1 text-white-100 bg-white-20 hover:bg-white-50 rounded-full transition-colors ease-in-out duration-150">
