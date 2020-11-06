@@ -1,9 +1,9 @@
-{% import '_macros/atoms' as atom %}
+{% import '_macros/atoms' as render %}
 
 {%- minify -%}
     <section class="section--header prose prose-2xl my-6 leading-tight px-4 md:px-0 text-green-900 sm:mx-4 md:mx-auto">
         <h5 class="text-5xl font-extrabold">
-            {{- atom.text(content.header) -}}
+            {{- render.atom('text', 'content', { content: content.header }) -}}
         </h5>
     </section>
 {%- endminify -%}

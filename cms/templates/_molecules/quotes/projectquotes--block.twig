@@ -1,4 +1,4 @@
-{% import '_macros/atoms' as atom %}
+{% import '_macros/atoms' as render %}
 
 {%- switch name -%}
     {%- case "Research School Foundation" -%}
@@ -21,10 +21,10 @@
     <div class="my-12 px-4 lg:px-0 lg:mx-16 xl:x-32">
         <div class="my-4 border-l-4 border-{{- color -}}-800 py-4 px-4 mr-2 md:px-4">
             <div class="font-mono mb-4">
-                {{- atom.text(block.quoteHeader) -}}
+                {{- render.atom('text', 'content', { content: block.quoteHeader }) -}}
             </div>
             <div class="text-lg text-green-900 leading-relaxed">
-                {{- atom.text(block.quoteBody) -}}
+                {{- render.atom('text', 'content', { content: block.quoteBody }) -}}
             </div>
         </div>
     </div>

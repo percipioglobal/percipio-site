@@ -7,15 +7,18 @@
 #}
 
 {% set values = {
+    icon: option.icon ??? brand.logo.one(),
     type: options.type ??? "logo",
+    url: options.url ??? alias('@web') ~ '/',
+    title: options.title ??? "",
     style: options.styling ??? "",
 } %}
 
 {# Render Logo #}
 
 {% spaceless %}
-	{% set logo = type == 'logo' ? brand.logo.one() : brand.icon.one() %}
-	<a href="{{- alias('@web') ~ '/' -}}" class="block relative z-1 {{ type == 'logo' ? 'w-48 h-6' : 'w-12 h-12' -}}  {{values.style}">
+	{% set logo = type == 'logo' ? brand.logo.one() : values.icon %}
+	<a href="{{- values.url -}}" class="block relative z-1 {{ type == 'logo' ? 'w-48 h-6' : 'w-12 h-12' -}}  {{values.style}}" title="{{values.title}}">
 		{{ svg(logo) }}
 	</a>
 {% endspaceless %}

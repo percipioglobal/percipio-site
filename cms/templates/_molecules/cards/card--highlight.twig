@@ -5,17 +5,17 @@
     {%- case "news" -%}
         {%- do craft.eagerBeaver.eagerLoadElements(entry, [
             'newsCategories'
-            ]) 
+            ])
         -%}
     {%- case "project" -%}
         {%- do craft.eagerBeaver.eagerLoadElements(entry, [
             'projectCategories'
-            ]) 
+            ])
         -%}
     {%- case "teamMember" -%}
         {%- do craft.eagerBeaver.eagerLoadElements(entry, [
             'teamCategories'
-            ]) 
+            ])
         -%}
 {%- endswitch -%}
 
@@ -50,7 +50,7 @@
     <div class="flex flex-col col-span-3 lg:col-span-2 bg-{{- color -}}-600 text-white mb-8 md:mb-0 hover:shadow-2xl transition duration-200 ease-in-out">
         <div class="relative">
             <a href="{{- content.url -}}">
-                {{- atom.teaser_image(teaserImage, teaserImage.title, news ? 'is4by3' : 'is2by1' ) -}}
+                {{- render.atom('image', 'teaser', { image: teaserImage, alt:teaserImage.title, news ? 'is4by3' : 'is2by1'  }) -}}
             </a>
         </div>
         <div class="flex flex-col flex-grow justify-between h-full text-left p-8">
@@ -64,18 +64,18 @@
                             </div>
                         {%- case "projects" -%}
                             <div class="break-words font-mono text-white mb-1">
-                                {{- atom.text(content.organisationName) -}}
+                                {{- render.atom('text', 'content', { content: content.organisationName }) -}}
                             </div>
                         {%- case "teamMember" -%}
                             <div class="break-words font-mono text-white mb-1">
-                                {{- atom.text(content.teamMemberRole) -}}
+                                {{- render.atom('text', 'content', { content: content.teamMemberRole }) -}}
                             </div>
                     {%- endswitch -%}
                     <div class="break-words text-4xl text-white font-extrabold mb-5">
-                        {{- atom.text(content.title) -}}
+                        {{- render.atom('text', 'content', { content: content.title }) -}}
                     </div>
                     <div class="break-words text-lg font-secondary text-white leading-relaxed mb-8">
-                        {{- atom.text(content.description) -}}
+                        {{- render.atom('text', 'content', { content: content.description }) -}}
                     </div>
                 </a>
             </div>
@@ -103,6 +103,6 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
 {%- endminify -%}
