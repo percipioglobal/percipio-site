@@ -5,7 +5,6 @@
 	{% set entry = craft.entries.slug(entrySlug).one() %}
 {% endif %}
 
-
 {% block headLinks %}
 	{{ parent() }}
     <link rel="amphtml" href="{{ entry.url ~ '/amp' }}">
