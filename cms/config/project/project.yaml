@@ -1,4 +1,4 @@
-dateModified: 1598365628
+dateModified: 1600166035
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -15,6 +15,10 @@ plugins:
       schemaVersion: 1.0.0
     enabled: true
     schemaVersion: '1.2'
+  blitz-recommendations:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   eager-beaver:
     edition: standard
     enabled: true
@@ -147,5 +151,5 @@ system:
   edition: pro
   live: true
   name: Craft
-  schemaVersion: 3.5.12
+  schemaVersion: 3.5.13
   timeZone: Europe/London

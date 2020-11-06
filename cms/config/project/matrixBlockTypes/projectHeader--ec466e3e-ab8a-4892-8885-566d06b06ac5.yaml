@@ -76,4 +76,4 @@ fields:
     type: craft\fields\Assets
 handle: projectHeader
 name: 'Project Header'
-sortOrder: 2
+sortOrder: 1

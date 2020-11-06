@@ -1,17 +1,25 @@
-.client img {
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
+.client > a > img {
+  transition: transform 0.2s, filter 0.2s;
+  filter: brightness(0.1);
+  will-change: transform, filter;
+  backface-visibility: hidden;
 }
 
-.client img:hover {
-    filter: grayscale(0%);
-    -webkit-filter: grayscale(0%);
-    -moz-filter: grayscale(0%);
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
+.client > a > img:hover {
+  transform: scale(1.1);
+  filter: brightness(1);
 }
+
+/* .footer-hexagon {
+  &::after,
+  &::before {
+    @apply absolute top-35px block w-4 h-1;
+    content: '';
+  }
+  &::after {
+    @apply -left-4 z-0 bg-white-100;
+  }
+  &::before {
+    @apply left-65px bg-white-100;
+  }
+} */

@@ -1,0 +1,18 @@
+{%- include '_organisms/heroes/hero--landing' ignore missing with {
+    content: entry,
+} -%}
+
+
+<div id="content"> 
+    <div class="container max-w-screen-xl mx-auto">
+
+        {%- include '_organisms/builders/project--builder' with { 
+            content: entry, 
+        } -%}
+
+        {%- include '_organisms/builders/content--builder' with { 
+            content: entry, 
+        } -%}
+
+    </div>
+</div>

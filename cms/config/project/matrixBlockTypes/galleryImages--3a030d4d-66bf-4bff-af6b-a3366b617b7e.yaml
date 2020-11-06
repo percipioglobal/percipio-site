@@ -13,6 +13,15 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: beef2807-f960-414c-9ff2-690d9c30b6a8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -47,6 +56,25 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  beef2807-f960-414c-9ff2-690d9c30b6a8:
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: 'Enter an original caption for the image gallery'
+    name: Caption
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
 handle: galleryImages
 name: 'Image Gallery'
 sortOrder: 5

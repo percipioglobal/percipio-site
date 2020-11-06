@@ -35,7 +35,7 @@
             @apply .relative;
 
             .anchor {
-                @apply .absolute .text-white .p-1 .rounded-full;
+                @apply .absolute .text-white-100 .p-1 .rounded-full;
                 @include left(-24px);
                 top: 0px;
                 font-size: 14px;

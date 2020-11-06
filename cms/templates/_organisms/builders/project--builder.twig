@@ -8,7 +8,7 @@
 <div class="container max-w-screen-xl mx-auto">
     
     {%- minify -%}
-        {%- for block in content.projectBuilder -%}
+        {%- for block in content.projectBuilder.all() -%}
             
             {%- switch block.type -%}
             
@@ -16,13 +16,6 @@
                     
                     {%- include '_molecules/headers/projectheader--section' ignore missing with {
                         content: block,
-                    } -%}
-
-                {%- case "projectQuote" -%}
-                    
-                    {%- include '_molecules/quotes/projectquotes--block' ignore missing with {
-                        content: block,
-                        name: content.organisationName,
                     } -%}
                 
                 {%- case "challengeSolutionResult" -%}
@@ -40,6 +33,13 @@
                         categories: content.projectCategories,
                     } -%}
 
+                {%- case "projectQuote" -%}
+                    
+                    {%- include '_molecules/quotes/projectquotes--block' ignore missing with {
+                        content: block,
+                        name: content.organisationName,
+                    } -%}
+                    
                 {%- case "projectImage" -%}
                 
                     {%- include '_molecules/images/image--single' ignore missing with {

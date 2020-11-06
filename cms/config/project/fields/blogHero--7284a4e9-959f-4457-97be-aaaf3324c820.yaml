@@ -1,0 +1,29 @@
+contentColumnType: string
+fieldGroup: 712cce4e-490d-44b8-bf2c-5d00c2de4c40
+handle: blogHero
+instructions: 'Upload the hero image here.'
+name: 'Blog Hero'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+  defaultUploadLocationSubpath: ''
+  limit: ''
+  localizeRelations: false
+  restrictFiles: ''
+  selectionLabel: ''
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: true
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

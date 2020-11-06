@@ -1,0 +1,207 @@
+field: 024735a6-b0d6-40f3-88ae-9ae16679bcea
+fieldLayouts:
+  a0981911-2fb3-4c56-9d69-f1f9f499b5fe:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 15a084ab-d153-4538-872d-504b5b122881
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 53fc79cb-2c70-4c61-989a-f240a6e67263
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 40e3edaf-a2ee-4863-982d-78f248a19c56
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7249176f-618a-4d29-ad9d-33e8bd7bd7f6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 21f1c29f-ed44-4ddb-900a-f6877c5b5503
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: db1cd1d3-c2ff-4b21-b0e3-50c83fe978b8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  15a084ab-d153-4538-872d-504b5b122881:
+    contentColumnType: text
+    fieldGroup: null
+    handle: trivia1Header
+    instructions: ''
+    name: 'Trivia1 Header'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  21f1c29f-ed44-4ddb-900a-f6877c5b5503:
+    contentColumnType: text
+    fieldGroup: null
+    handle: trivia3Header
+    instructions: ''
+    name: 'Trivia3 Header'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  40e3edaf-a2ee-4863-982d-78f248a19c56:
+    contentColumnType: text
+    fieldGroup: null
+    handle: trivia2Header
+    instructions: ''
+    name: 'Trivia2 Header'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  53fc79cb-2c70-4c61-989a-f240a6e67263:
+    contentColumnType: text
+    fieldGroup: null
+    handle: trivia1Body
+    instructions: ''
+    name: 'Trivia1 Body'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  7249176f-618a-4d29-ad9d-33e8bd7bd7f6:
+    contentColumnType: text
+    fieldGroup: null
+    handle: trivia2Body
+    instructions: ''
+    name: 'Trivia2 Body'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  db1cd1d3-c2ff-4b21-b0e3-50c83fe978b8:
+    contentColumnType: text
+    fieldGroup: null
+    handle: trivia3Body
+    instructions: ''
+    name: 'Trivia3 Body'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: teamTrivia
+name: 'Team Trivia'
+sortOrder: 2

@@ -22,16 +22,18 @@
         <div class="prose prose-lg text-lg text-green-900 leading-relaxed md:mr-8">
             {{- render.atom('text', 'content', { content: block.projectSummary }) -}}
         </div>
-        <div class="justify border-l-4 border-{{- color -}}-800 h-32 py-4 px-4 my-6 lg:mr-8">
-            <div class="font-mono mb-8 ">
-            {{- render.atom('text', 'content', { content: block.projectCategoriesHeader }) -}}
-            </div>
-            <div class="flex flex-wrap">
-                {%- for category in categories -%}
-                    <span class="bg-{{color}}-700 mr-6 mb-2 px-4 py-2 rounded-full font-secondary text-white text-xs tracking-wide font-medium">
-                        {{- category.title -}}
-                    </span>
-                {%- endfor -%}
+        <div class="mt-5 md:mt-0 px-4 lg:mr-8">
+            <div class="border-b-2 border-{{- color -}}-800">
+                <div class="font-mono">
+                    {{- render.atom('text', 'content', { content: block.projectCategoriesHeader }) -}}
+                </div>
+                <div class="flex flex-wrap my-4">
+                    {%- for category in categories.all() -%}
+                        <span class="bg-{{color}}-700 mr-6 mb-2 px-4 py-2 rounded-full font-secondary text-white-100 text-xs tracking-wide font-medium">
+                            {{- category.title -}}
+                        </span>
+                    {%- endfor -%}
+                </div>
             </div>
         </div>
     </div>

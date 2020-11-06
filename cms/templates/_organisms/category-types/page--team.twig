@@ -1,0 +1,14 @@
+{%- import '_macros/atoms' as atom -%}
+
+{% set entries = craft.entries.section('team').relatedTo(category) %}
+
+{%- include '_organisms/heroes/hero--category' -%}
+
+<div id="content" class="container max-w-screen-hd px-8 mx-auto">
+    
+    {%- include '_organisms/cards/cards--highlight' ignore missing with {
+        content: entries,
+        hasFeatured: false,
+    } -%}
+
+</div>

@@ -3,24 +3,33 @@
     ]) 
 %}
 
+{%- set color = random(['blue', 'red', 'orange', 'purple', 'teal']) -%}
+
 <div class="container max-w-screen-xl mx-auto">
     
     {%- minify -%}
-        {%- for block in content.teamBuilder -%}
+        {%- for block in content.teamBuilder.all() -%}
             
             {%- switch block.type -%}
 
                 {%- case "teamMemberHeader" -%}
-                
-                    {%- include '_molecules/headers/teamheader--section' ignore missing with {
+                    {%- include '_molecules/headers/header--team' ignore missing with {
                         content: block,
-                        categories: content.teamCategories,
+                    } -%}
+
+                {%- case "teamTrivia" -%}
+                    
+                    {%- include '_molecules/lists/team-trivia--block' ignore missing with {
+                        content: block,
+                        color: color
                     } -%}
 
                 {%- case "teamMemberDetails" -%}
                 
                     {%- include '_molecules/content/team-details' ignore missing with {
                         content: block,
+                        categories: content.teamCategories,
+                        color: color
                     } -%}
 
                 {%- case "projectImage" -%}
