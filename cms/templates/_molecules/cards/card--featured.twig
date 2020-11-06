@@ -48,7 +48,7 @@
                     {%- if blog -%}
                         <div class="text-xs leading-tight text-black-100 tracking-wider">
                             <address rel="author" class="text-2xl font-primary font-medium leading-none not-italic mb-1">{{- content.author -}}</address>
-                            <time datetime="{{- entry.postDate|date('c') -}}" class="text-xs font-primary mt-6 font-medium uppercase tracking-wide leading-normal">{{- atom.formatDate(content.postDate) -}}</time>
+                            <time datetime="{{- entry.postDate|date('c') -}}" class="text-xs font-primary mt-6 font-medium uppercase tracking-wide leading-normal">{{- render.formatDate(content.postDate) -}}</time>
                         </div>
                     {%- else -%}
                         <h6 class="break-words font-mono mb-1">
