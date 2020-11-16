@@ -2,6 +2,7 @@
 
 {%- set projects = craft.entries.section('projects')
     .orderBy('postDate desc')
+    .with(['teaserImage','blogCategories'])
     .all() -%}
 
 {%- do craft.eagerBeaver.eagerLoadElements(entry, [
@@ -18,3 +19,5 @@
         hasFeatured: true,
     } -%}
 </div>
+
+{%- include '_molecules/footers/footer--clients' %}

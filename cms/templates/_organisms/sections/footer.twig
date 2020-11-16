@@ -11,6 +11,11 @@
     .all()
 -%}
 
+{%- do craft.eagerBeaver.eagerLoadElements(entry, [
+    'clientFooterBuilder.logo'
+    ])
+-%}
+
 {%- set clients = entry.clientFooterBuilder.all() ?? null -%}
 
 <footer class="w-full absolute z-30 bg-white-100">
@@ -19,7 +24,7 @@
         <div class="container max-w-screen-xl mx-auto">
             <div class="client flex flex-wrap lg:flex-no-wrap justify-between w-full">
             {%- for client in clients -%}
-                {{- render.atom('image', 'logo', { icon: client.logo[0], url: client.clientUrl, title: client.description|striptags  }) -}}
+                {{- render.atom('image', 'logo', { svg: client.logo[0], url: client.clientUrl, title: client.description|striptags  }) -}}
             {%- endfor -%}
             </div>
         </div>
