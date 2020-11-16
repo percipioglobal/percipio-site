@@ -1,20 +1,21 @@
 {%- import '_macros/atoms' as render -%}
 
 {# Eager Load categories based on entry types #}
-{%- switch entry.type -%}
+{%- switch content.type -%}
 	{%- case "blog" -%}
-		{%- do craft.eagerBeaver.eagerLoadElements(entry, [
+		{%- do craft.eagerBeaver.eagerLoadElements(content, [
             'blogCategories'
             ])
         -%}
-	{%- case "project" -%}
-		{%- do craft.eagerBeaver.eagerLoadElements(entry, [
+	{%- case "projects" -%}
+		{%- do craft.eagerBeaver.eagerLoadElements(content, [
             'projectCategories',
-            'organisationCategory'
+            'organisationCategory',
+            'teaserImage'
             ])
         -%}
 	{%- case "teamMember" -%}
-		{%- do craft.eagerBeaver.eagerLoadElements(entry, [
+		{%- do craft.eagerBeaver.eagerLoadElements(content, [
             'teamCategories'
             ])
         -%}
@@ -23,11 +24,11 @@
 
 {# Load needed images #}
 {%- set teaserImage = content.teaserImage[0] ?? placeholder.teaserPlaceholder[0] -%}
-{%- set blog = content.type == 'blog' ? true : false -%}
-{%- set project = content.type == 'projects' ? true : false -%}
+{%- set contentType = content.type -%}
 {%- set width = width ??? 'col-span-5 xl:col-span-4' %}
 {%- set isHorizontal = isHorizontal ??? false %}
-{%- set color = content.organisationCategory.one() ? content.organisationCategory.one().colourSwatch ??? 'gray' %}
+{%- set color = content.organisationCategory[0] ? content.organisationCategory[0].colourSwatch ??? 'gray' %}
+{%- set categories = contentType == 'blog' ? content.blogCategories : contentType == 'projects' ? content.projectCategories : null %}
 
 {%- minify -%}
 <div class="z-30 bg-white-100 text-{{color}}-600 border-b-8 border-{{- color -}}-600 mb-8 shadow-md hover:shadow-2xl transition duration-200 ease-in-out {{ width }}">
@@ -38,44 +39,39 @@
 			</a>
 		</div>
 		<div class="flex flex-col flex-grow text-left p-8">
-			<div class="flex-grow">
-				<a href="{{- content.url -}}">
-					{%- if blog -%}
-						<div class="text-xs leading-tight text-black-100 tracking-wider">
-							<address rel="author" class="text-2xl font-primary font-medium leading-none not-italic mb-1">{{- content.author -}}</address>
-							<time datetime="{{- entry.postDate|date('c') -}}" class="text-xs font-primary mt-6 font-medium uppercase tracking-wide leading-normal">{{- render.formatDate(content.postDate) -}}</time>
-						</div>
-					{%- else -%}
-						<span class="break-words font-mono mb-1">
-							{{- render.atom('text', 'content', { content: content.organisationName }) -}}
-						</span>
-					{%- endif -%}
-					<h2 class="break-words text-4xl font-extrabold mb-3 text-gray-800">
-						{{- render.atom('text', 'content', { content: content.title }) -}}
-					</h2>
-					<h3 class="break-words text-lg font-secondary leading-relaxed text-gray-800">
-						{{- render.atom('text', 'content', { content: content.description }) -}}
-					</h3>
-				</a>
-			</div>
+			<a href="{{- content.url -}}" class="flex-grow">
+				{%- if contentType == "blog" -%}
+					<div class="text-xs leading-tight text-black-100 tracking-wider">
+						<address rel="author" class="text-2xl font-primary font-medium leading-none not-italic mb-1">{{- content.author -}}</address>
+						<time datetime="{{- entry.postDate|date('c') -}}" class="text-xs font-primary mt-6 font-medium uppercase tracking-wide leading-normal">{{- render.formatDate(content.postDate) -}}</time>
+					</div>
+				{%- endif -%}
+				{%- if contentType == "projects" -%}
+					<span class="break-words font-mono mb-1">
+						{{- render.atom('text', 'content', { content: content.organisationName }) -}}
+					</span>
+				{%- endif -%}
+				<h4 class="break-words text-4xl font-extrabold mb-3 text-gray-800">
+					{{- render.atom('text', 'content', { content: content.title }) -}}
+				</h4>
+				<h5 class="break-words text-lg font-secondary leading-relaxed text-gray-800">
+					{{- render.atom('text', 'content', { content: content.description }) -}}
+				</h5>
+			</a>
 			<div>
 				<div class="mt-10 md:mt-16">
-					{%- if content.type == 'blog' -%}
-						{%- for category in content.blogCategories.all() -%}
+					{%- if categories|length -%}
+						{%- for category in categories -%}
 							<a href="{{- category.url -}}" alt="{{- category.title -}}">
 								<span class="bg-{{- color -}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary inline-block text-white-100 text-xs tracking-wide font-medium">
-									{{- content.blogCategories[0].title ?? 'No Category' }}
+									{{- category.title  }}
 								</span>
 							</a>
 						{%- endfor -%}
 					{%- else -%}
-						{%- for category in content.projectCategories.all() -%}
-							<a href="{{- category.url -}}" alt="{{- category.title -}}">
-								<span class="bg-{{- color -}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary inline-block text-white-100 text-xs tracking-wide font-medium">
-									{{- category.title -}}
-								</span>
-							</a>
-						{%- endfor -%}
+						<span class="bg-{{- color -}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary inline-block text-white-100 text-xs tracking-wide font-medium">
+							No Category
+						</span>
 					{%- endif -%}
 				</div>
 			</div>
