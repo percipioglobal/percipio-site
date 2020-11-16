@@ -1,6 +1,6 @@
 enableVersioning: true
-handle: projects
-name: Projects
+handle: organisations
+name: Organisations
 previewTargets:
   -
     __assoc__:
@@ -17,10 +17,10 @@ propagationMethod: all
 siteSettings:
   5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
     enabledByDefault: true
-    hasUrls: true
-    template: _organisms/_page.twig
-    uriFormat: 'projects/{slug}'
+    hasUrls: false
+    template: null
+    uriFormat: null
 structure:
   maxLevels: null
-  uid: c95921ec-6d79-48ea-968b-9fa58f6cf9ee
+  uid: f55b1b8d-7880-43df-af00-205e152a8a9e
 type: structure
