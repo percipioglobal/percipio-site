@@ -1,0 +1,15 @@
+contentColumnType: datetime
+fieldGroup: 58eccc39-1c9e-45ac-bae8-465deff69786
+handle: startWorkingAtPercipio
+instructions: ''
+name: 'Start Working At Percipio'
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: '30'
+  showDate: true
+  showTime: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date
