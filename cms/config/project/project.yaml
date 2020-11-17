@@ -1,4 +1,4 @@
-dateModified: 1600166035
+dateModified: 1605624478
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -19,6 +19,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  colour-swatches:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.4.0
   eager-beaver:
     edition: standard
     enabled: true
@@ -29,7 +33,7 @@ plugins:
     schemaVersion: 1.0.0
   feed-me:
     enabled: true
-    schemaVersion: 2.1.2
+    schemaVersion: 4.3.0
   image-optimize:
     edition: standard
     enabled: true
@@ -89,7 +93,7 @@ plugins:
   navigation:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.19
+    schemaVersion: 1.0.21
     settings:
       bypassProjectConfig: false
       pluginName: Navigation

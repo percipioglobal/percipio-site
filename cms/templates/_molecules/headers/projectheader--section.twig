@@ -1,4 +1,4 @@
-{% import '_macros/atoms' as atom %}
+{% import '_macros/atoms' as render %}
 
 {% set image = block.clientLogo[0] ?? placeholder.articlePlaceholder[0] %}
 
@@ -6,15 +6,14 @@
     <div class="mt-32 mb-6 px-4 lg:px-0 lg:mx-56">
         <div class="flex flex-col justify-center text-center text-lg text-green-900 leading-relaxed">
             <div class="my-2 w-full flex justify-center">
-                {{- atom.client_logo(image, entry.type) -}}
+                {{- render.atom('image', 'article', { image: image  }) -}}
             </div>
             <div class="my-2">
-                {{- atom.text(block.clientDescription) -}}
+                {{- render.atom('text', 'content', { content: block.clientDescription }) -}}
             </div>
-        </div>  
-         
+        </div>
+
     </div>
 {%- endminify -%}
 
 
-        

@@ -1,6 +1,6 @@
 {%- minify -%}
 
-    {% set featured = hasFeatured ?? null %}
+    {% set showVacantiesCta = showVacantiesCta ?? false %}
     {% set cardsType = type ?? 'default' %}
 
     {%- switch cardsType -%}
@@ -12,36 +12,22 @@
             {%- set cards = content -%}
 
     {%- endswitch -%}
-  
+
     <div class="print:hidden md:grid grid-cols-6 gap-8 my-16">
         {%- for card in cards -%}
-            {%- if entry.type == 'teamPage' -%}
-                {%- include '_molecules/cards/card--team' ignore missing with {
-                    content: card,
-                } -%}
-
-            {%- elseif (loop.index == 1 or loop.index == 6) and featured  -%}
-
-                {%- include '_molecules/cards/card--featured' ignore missing with {
-                    content: card,
-                } -%}
-            
-            {%- elseif (loop.index == 3 or loop.index == 4) and featured -%}
-
-                {%- include '_molecules/cards/card--horizontal' ignore missing with {
-                    content: card,
-                } -%}
-
-            {%- else -%}
-
-                {%- include '_molecules/cards/card--highlight' ignore missing with {
-                    content: card,
-                } -%}
-
-            {%- endif -%}
+            {%- include '_molecules/cards/card--highlight' ignore missing with {
+                content: card,
+                width: "col-span-3 lg:col-span-2"
+            } -%}
 
         {%- endfor -%}
-        
+
+        {%- if showVacantiesCta -%}
+            {%- include '_molecules/cards/card--cta' ignore missing with {
+                content: callToActionVacancies,
+                width: "col-span-3 lg:col-span-2"
+            } -%}
+        {%- endif -%}
     </div>
 
 

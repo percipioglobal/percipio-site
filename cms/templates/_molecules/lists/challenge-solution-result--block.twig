@@ -1,20 +1,20 @@
-{% import '_macros/atoms' as atom %}
+{% import '_macros/atoms' as render %}
 
 {%- switch name -%}
-    {%- case "Research School Foundation" -%}
-        {%- set color = 'red' -%}
-    {%- case "Education Endowment Foundation" -%}
-        {%- set color = 'orange' -%}
-    {%- case "Harding Hub" -%}
-        {%- set color = 'purple' -%}
-    {%- case "Percipio Global" -%}
-        {%- set color = 'teal' -%}
-    {%- case "National Tutoring Programme" -%}
-        {%- set color = 'blue' -%}
-    {%- case "The Sutton Trust" -%}
-        {%- set color = 'blue' -%}
-    {% default %}
-        {%- set color = 'gray' -%}
+	{%- case "Research School Foundation" -%}
+		{%- set color = 'red' -%}
+	{%- case "Education Endowment Foundation" -%}
+		{%- set color = 'orange' -%}
+	{%- case "Harding Hub" -%}
+		{%- set color = 'purple' -%}
+	{%- case "Percipio Global" -%}
+		{%- set color = 'teal' -%}
+	{%- case "National Tutoring Programme" -%}
+		{%- set color = 'blue' -%}
+	{%- case "The Sutton Trust" -%}
+		{%- set color = 'blue' -%}
+	{% default %}
+		{%- set color = 'gray' -%}
 {%- endswitch -%}
 
 {%- minify -%}
@@ -22,35 +22,35 @@
         <div class="px-4">
             <div class="border-b-2 border-{{- color -}}-800">
                 <div class="font-mono my-4">
-                    {{- atom.text(block.challengeHeader) -}}
+                    {{- render.atom('text', 'content', { content: block.challengeHeader }) -}}
                 </div>
                 <div class="pb-5 text-lg text-green-900 leading-relaxed">
-                    {{- atom.text(block.challengeBody) -}}
+										{{- render.atom('text', 'content', { content: block.challengeBody }) -}}
                 </div>
             </div>
         </div>
         <div class="px-4">
             <div class="border-b-2 border-{{- color -}}-800">
                 <div class="font-mono my-4 ">
-                    {{- atom.text(block.solutionHeader) -}}
+										{{- render.atom('text', 'content', { content: block.solutionHeader }) -}}
                 </div>
                 <div class="pb-5 text-lg text-green-900 leading-relaxed">
-                    {{- atom.text(block.solutionBody) -}}
+										{{- render.atom('text', 'content', { content: block.solutionBody }) -}}
                 </div>
             </div>
         </div>
          <div class="px-4">
             <div class="border-b-2 border-{{- color -}}-800">
                 <div class="font-mono my-4 ">
-                    {{- atom.text(block.resultHeader) -}}
+										{{- render.atom('text', 'content', { content: block.resultHeader }) -}}
                 </div>
                 <div class="pb-5 text-lg text-green-900 leading-relaxed">
-                    {{- atom.text(block.resultBody) -}}
+										{{- render.atom('text', 'content', { content: block.resultBody }) -}}
                 </div>
             </div>
         </div>
 
-    
+
     </div>
 
 {%- endminify -%}
