@@ -2,22 +2,23 @@
     'heroBuilder',
     'heroLanding:image',
     'heroContent:image',
-    ]) 
+    'sectionHeader:buttons',
+    ])
 %}
-    
+
 {%- minify -%}
     {%- for block in content.heroBuilder -%}
-            
+
         {%- switch block.type -%}
-            
+
             {%- case 'heroContent' -%}
-                
+
                 {%- include '_organisms/heroes/hero--content' ignore missing with {
                     content: block,
                 } -%}
 
             {%- case 'heroLanding' -%}
-            
+
                 {%- include '_organisms/heroes/hero--landing' ignore missing with {
                     content: block,
                 } -%}
@@ -35,6 +36,6 @@
                 } -%}
 
         {%- endswitch -%}
-            
+
     {%- endfor -%}
 {%- endminify -%}
