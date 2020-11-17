@@ -1,0 +1,19 @@
+{#
+    ### OPTIONS ###
+    ---------------
+
+    content: (STR) -- the actual content as a string
+
+#}
+
+{% set values = {
+    content: options.content ??? '',
+} %}
+
+{# Render Title #}
+
+{% spaceless %}
+    <h4 class="break-words text-4xl font-extrabold mb-3 text-gray-800">
+        {{- values.content | typogrify(true) -}}
+    </h4>
+{% endspaceless %}

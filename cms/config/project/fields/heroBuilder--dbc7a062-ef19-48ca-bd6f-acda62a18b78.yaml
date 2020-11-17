@@ -6,7 +6,7 @@ name: 'Hero Builder'
 searchable: false
 settings:
   contentTable: '{{%matrixcontent_herobuilder}}'
-  maxBlocks: ''
+  maxBlocks: '1'
   minBlocks: '1'
   propagationMethod: all
 translationKeyFormat: null

@@ -1,0 +1,26 @@
+{%- import '_macros/atoms' as render -%}
+
+
+{# Load needed images #}
+{%- set teaserImage = content.teaserImage.one() ?? placeholder.teaserPlaceholder[0] -%}
+{%- set width = width ??? '' %}
+{%- set color =  content.colourSwatch ??? 'gray' %}
+
+{%- minify -%}
+<a href="{{content.callToActionUrl.getUrl()}}" class="z-30 bg-white-100 text-{{color}}-600 border-b-8 border-{{- color -}}-600 mb-8 shadow-md hover:shadow-2xl transition duration-200 ease-in-out {{ width }}">
+	<div class="h-full flex flex-col w-full">
+		<div class="relative">
+			<div class="w-full block h-80">
+				{{- render.atom('image', 'teaser', { image: teaserImage, alt:teaserImage.title, ratio: 'w-full h-full'  }) -}}
+			</div>
+		</div>
+		<div class="flex flex-col flex-grow text-left p-8">
+			<div class="flex-grow">
+                {{- render.atom('text', 'overline', { content: content.overline }) -}}
+                {{- render.atom('text', 'card-title', { content: content.callToActionTitle }) -}}
+                {{- render.atom('text', 'card-description', { content: content.description }) -}}
+			</div>
+		</div>
+	</div>
+</a>
+{%- endminify -%}
