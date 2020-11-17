@@ -13,15 +13,6 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          -
-            fieldUid: 96463f2b-14b9-4dd3-8cbe-38300a497781
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -42,7 +33,7 @@ fields:
       manualConfig: ''
       purifierConfig: ''
       purifyHtml: '1'
-      redactorConfig: ''
+      redactorConfig: Content.json
       removeEmptyTags: '1'
       removeInlineStyles: '1'
       removeNbsp: '1'
@@ -53,25 +44,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  96463f2b-14b9-4dd3-8cbe-38300a497781:
-    contentColumnType: text
-    fieldGroup: null
-    handle: teamCategoriesHeader
-    instructions: ''
-    name: 'Team Categories Header'
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
 handle: teamMemberDetails
 name: 'Team Member Details'
-sortOrder: 3
+sortOrder: 2
