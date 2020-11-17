@@ -2,7 +2,7 @@
 
 {%- set projects = craft.entries.section('projects')
     .orderBy('postDate desc')
-    .with(['teaserImage','blogCategories'])
+    .with(['teaserImage','projectCategories','organisationCategory'])
     .all() -%}
 
 {%- do craft.eagerBeaver.eagerLoadElements(entry, [

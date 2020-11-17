@@ -15,26 +15,22 @@
     <div class="print:hidden my-16 lg:grid grid-cols-8 xl:grid-cols-6 gap-8 relative z-30">
         {%- for card in cards -%}
             {% switch loop.index % 6 %}
-                {% case 1 %}
-                    {%- include '_molecules/cards/card--masonry' ignore missing with {
+                {% case 0 or 1 %}
+                    {%- include '_molecules/cards/card--highlight' ignore missing with {
+                        width: 'col-span-5 xl:col-span-4',
                         content: card,
                     } -%}
 
                 {% case 2 or 5 %}
-                    {%- include '_molecules/cards/card--masonry' ignore missing with {
+                    {%- include '_molecules/cards/card--highlight' ignore missing with {
                         width: 'col-span-3 xl:col-span-2',
                         content: card,
                     } -%}
 
                 {% case 3 or 4 %}
-                    {%- include '_molecules/cards/card--masonry' ignore missing with {
+                    {%- include '_molecules/cards/card--highlight' ignore missing with {
                         width: 'col-span-4 xl:col-span-3',
                         isHorizontal: true,
-                        content: card,
-                    } -%}
-
-                {% case 0 %}
-                    {%- include '_molecules/cards/card--masonry' ignore missing with {
                         content: card,
                     } -%}
             {% endswitch %}
