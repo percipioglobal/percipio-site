@@ -1,4 +1,5 @@
 {% do craft.eagerBeaver.eagerLoadElements(entry, [
+    'teamBuilder',
     'projectImage',
     ])
 %}
@@ -6,7 +7,7 @@
 {%- set color = random(['blue', 'red', 'orange', 'purple', 'teal']) -%}
 
 {%- minify -%}
-{%- for block in content.teamBuilder.all() -%}
+{%- for block in content.teamBuilder -%}
 
 	{%- switch block.type -%}
 

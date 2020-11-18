@@ -1,21 +1,21 @@
 {% do craft.eagerBeaver.eagerLoadElements(entry, [
     'contentBuilder',
-    'highlightCards:cards',
-    'sectionHeader:buttons',
-    'singleImage:image',
-    'galleryImages:images',
-    'slide:image',
-    'resources:target',
-    'faqList:questions',
-    'faqList:questions.faqCategory',
-    'author:profilePhoto',
+    'highlightCards.cards',
+    'sectionHeader.buttons',
+    'singleImage.image',
+    'galleryImages.images',
+    'slide.image',
+    'resources.target',
+    'faqList.questions',
+    'faqList.questions.faqCategory',
+    'author.profilePhoto',
     ])
 %}
 
 <div class="container max-w-screen-xl mx-auto">
 
     {%- minify -%}
-        {%- for block in content.contentBuilder.all() -%}
+        {%- for block in content.contentBuilder -%}
             {%- switch block.type -%}
 
                 {%- case "article" -%}

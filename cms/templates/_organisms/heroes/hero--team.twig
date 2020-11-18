@@ -1,7 +1,6 @@
 {% import '_macros/atoms' as render %}
 
 {%- set teaserImage = entry.teaserImage[0] ?? placeholder.teaserPlaceholder[0] -%}
-{%- set color = entry.colourSwatch ??? "gray" %}
 
 {%- minify -%}
 
@@ -11,17 +10,17 @@
             {{- render.atom('image', 'teaser', { image: teaserImage, alt:teaserImage.title, ratio: 'is1by1 rounded-full'  }) -}}
         </div>
         <div class="w-full md:w-7/12 mr-auto">
-            <h1 class="text-{{color}}-600 font-bold leading-snug text-5xl md:text-6xl tracking-tighter pb-8 text-center md:text-left">{{- render.atom('text', 'content', { content: content.title }) -}}</h1>
-            <h2 class="font-medium leading-snug text-lg mt-6 text-gray-800">{{- render.atom('text', 'content', { content: content.heroBuilder.one().bio }) -}}</h2>
+            <h1 class="text-{{- colour -}}-600 font-bold leading-snug text-5xl md:text-6xl tracking-tighter pb-8 text-center md:text-left">{{- render.atom('text', 'content', { content: entry.title }) -}}</h1>
+            <h2 class="font-medium leading-snug text-lg mt-6 text-gray-800">{{- render.atom('text', 'content', { content: content.bio }) -}}</h2>
             <div class="mt-8">
-                {% if content.heroBuilder.one().startWorkingAtPercipio|length %}
+                {% if content.startWorkingAtPercipio|length %}
                     <span class="block font-medium leading-tight text-xl md:text-xl tracking-tight mb-2 text-gray-800">
-                        <b>Days on the job:</b> {{date(now).diff(date(content.heroBuilder.one().startWorkingAtPercipio)).days }}
+                        <b>Days on the job:</b> {{date(now).diff(date(content.startWorkingAtPercipio)).days }}
                     </span>
                 {% endif %}
-                {% if content.heroBuilder.one().location|length %}
+                {% if content.location|length %}
                     <span class="block font-medium leading-tight text-xl md:text-xl tracking-tight mb-2 text-gray-800">
-                        <b>Location:</b> {{- render.atom('text', 'content', { content: content.heroBuilder.one().location }) -}}
+                        <b>Location:</b> {{- render.atom('text', 'content', { content: content.location }) -}}
                     </span>
                 {% endif %}
             </div>
