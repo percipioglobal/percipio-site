@@ -11,7 +11,6 @@
                     <span class="text-teal-500">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
                     by {{ content.author.fullName }} on
                     <time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
-                    {# {{ content.blogCategories|join( ' /') }} {{- render.atom('text', 'content', { content: "test" }) -}} #}
                 </p>
                 {{- render.atom('text', 'card-title', { content: content.title }) -}}
             </div>
@@ -20,20 +19,5 @@
             </div>
         </div>
     </div>
-
-	{# <div class="h-full flex flex-col w-full">
-		<div class="relative">
-			<div class="w-full block h-80">
-				{{- render.atom('image', 'teaser', { image: teaserImage, alt:teaserImage.title, ratio: 'w-full h-full'  }) -}}
-			</div>
-		</div>
-		<div class="flex flex-col flex-grow text-left p-8">
-			<div class="flex-grow">
-                {{- render.atom('text', 'overline', { content: content.overline }) -}}
-                {{- render.atom('text', 'card-title', { content: content.callToActionTitle }) -}}
-                {{- render.atom('text', 'card-description', { content: content.description }) -}}
-			</div>
-		</div>
-	</div> #}
 </a>
 {%- endminify -%}
