@@ -1,0 +1,15 @@
+{%- minify -%}
+
+    {%- set cards = content -%}
+
+    <div class="print:hidden w-full">
+        {%- for card in cards -%}
+            {%- include '_molecules/cards/card--list' ignore missing with {
+                content: card,
+            } -%}
+        {%- endfor -%}
+    </div>
+
+
+
+{%- endminify -%}

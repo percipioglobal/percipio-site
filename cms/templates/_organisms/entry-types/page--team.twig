@@ -7,7 +7,9 @@
     ])
 -%}
 
-{%- include '_organisms/heroes/hero--landing' -%}
+{%- include '_organisms/builders/hero--builder' with {
+    content: entry,
+} -%}
 
 <div id="content" class="container max-w-screen-hd px-8 mx-auto">
 

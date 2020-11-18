@@ -17,6 +17,12 @@
                     content: block,
                 } -%}
 
+            {%- case 'heroTeam' -%}
+
+                {%- include '_organisms/heroes/hero--team' ignore missing with {
+                    content: block,
+                } -%}
+
             {%- case 'heroLanding' -%}
 
                 {%- include '_organisms/heroes/hero--landing' ignore missing with {
