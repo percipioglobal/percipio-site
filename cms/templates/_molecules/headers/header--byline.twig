@@ -1,0 +1,42 @@
+{% import '_macros/atoms' as render %}
+
+{%- minify -%}
+     <div class="flex items-center flex-col md:flex-row md:justify-between prose prose-2xl my-12 leading-tight px-4 md:px-0 text-green-900 sm:mx-4 md:mx-auto">
+
+        <div>
+            <div class="flex flex-row items-center text-xs leading-tight text-black-100 tracking-wider">
+                <div class="mr-6">
+                    {{- render.atom('image', 'profile', { image: content.author.profilePhoto[0]  }) -}}
+                </div>
+                <div>
+                    <address rel="author" class="text-xl font-semibold font-mono not-italic">{{- content.author -}}</address>
+                    <time datetime="{{ entry.postDate|date('c') }}" class="text-xl text-gray-600 font-mono tracking-wide leading-normal">{{- render.formatDate(content.postDate) -}}</time>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-no-wrap mt-6 md:mt-0">
+            <a href="https://twitter.com/share?text={{- content.title -}}&url={{- content.url -}}&hashtags=#ntp" title="Share this page on Twitter" data-tag-category="social" data-tag-action="print" data-tag-label="{{- content.url -}}">
+                <span class="icon --lg --circle p-4 text-white-100 bg-green-900 hover:bg-green-700 transition-colors ease-in-out duration-150 mr-4">
+                    <i class="fab fa-twitter"></i>
+                </span>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{- content.url -}}" title="Share this page on Facebook" data-tag-category="social" data-tag-action="print" data-tag-label="{{- content.url -}}">
+                <span class="icon --lg --circle p-4 text-white-100 bg-green-900 hover:bg-green-700 transition-colors ease-in-out duration-150 mr-4">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+            <a href="mailto:?subject={{- content.title -}}&body={{- content.url -}}" title="Email this page" data-tag-category="social" data-tag-action="print" data-tag-label="{{- content.url -}}">
+                <span class="icon --lg --circle p-4 text-white-100 bg-green-900 hover:bg-green-700 transition-colors ease-in-out duration-150 mr-4">
+                    <i class="far fa-envelope"></i>
+                </span>
+            </a>
+            <div @click="printPage()" title="Print this page" data-tag-category="social" data-tag-action="print" data-tag-label="{{- content.url -}}">
+                <span class="icon --lg --circle p-4 cursor-pointer text-white-100 bg-green-900 hover:bg-green-700 transition-colors ease-in-out duration-150">
+                    <i class="fas fa-print"></i>
+                </span>
+            </div>
+        </div>
+
+    </div>
+{%- endminify -%}

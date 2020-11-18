@@ -42,7 +42,7 @@
 
 // Contextual colors
 
-.text-white { color: $white !important; }
+.text-white-100 { color: $white !important; }
 
 @each $color, $value in $theme-colors {
   @include text-emphasis-variant(".text-#{$color}", $value);
@@ -52,7 +52,7 @@
 .text-muted { color: $text-muted !important; }
 
 .text-black-50 { color: rgba($black, .5) !important; }
-.text-white-50 { color: rgba($white, .5) !important; }
+.text-white-100-50 { color: rgba($white, .5) !important; }
 
 // Misc
 

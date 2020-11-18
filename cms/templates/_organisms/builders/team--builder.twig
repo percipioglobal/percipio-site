@@ -1,37 +1,38 @@
 {% do craft.eagerBeaver.eagerLoadElements(entry, [
+    'teamBuilder',
     'projectImage',
-    ]) 
+    ])
 %}
 
-<div class="container max-w-screen-xl mx-auto">
-    
-    {%- minify -%}
-        {%- for block in content.teamBuilder -%}
-            
-            {%- switch block.type -%}
+{%- set color = random(['blue', 'red', 'orange', 'purple', 'teal']) -%}
 
-                {%- case "teamMemberHeader" -%}
-                
-                    {%- include '_molecules/headers/teamheader--section' ignore missing with {
-                        content: block,
-                        categories: content.teamCategories,
-                    } -%}
+{%- minify -%}
+{%- for block in content.teamBuilder -%}
 
-                {%- case "teamMemberDetails" -%}
-                
-                    {%- include '_molecules/content/team-details' ignore missing with {
-                        content: block,
-                    } -%}
+	{%- switch block.type -%}
 
-                {%- case "projectImage" -%}
-                
-                    {%- include '_molecules/images/image--single' ignore missing with {
-                        content: block,
-                    } -%}
+		{%- case "teamMemberTrivia" -%}
+			<div class="container max-w-screen-xl mx-auto">
+				{%- include '_molecules/lists/list--team-trivia' ignore missing with {
+                    content: block
+                } -%}
+			</div>
 
-            {%- endswitch -%}
+		{%- case "teamMemberDetails" -%}
+			<div class="container max-w-screen-xl mx-auto">
+				{%- include '_molecules/content/content--team-details' ignore missing with {
+                    content: block,
+                    categories: content.teamCategories
+                } -%}
+			</div>
 
-        {%- endfor -%}
-    {%- endminify -%}
+		{%- case "teamMemberProjectImage" -%}
 
-</div>
+			{%- include '_molecules/images/image--single' ignore missing with {
+                    content: block,
+                } -%}
+
+	{%- endswitch -%}
+
+{%- endfor -%}
+{%- endminify -%}</div>

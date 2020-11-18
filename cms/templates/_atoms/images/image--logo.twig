@@ -1,0 +1,29 @@
+{#
+    ### OPTIONS ###
+    ---------------
+
+    type: (STR) -- type of the svg
+
+#}
+
+{%- set placeholder = craft.globalSets()
+    .handle('placeholders')
+    .with(['brandingPlaceholder'])
+    .one()
+-%}
+
+{% set values = {
+    svg: options.svg ??? placeholder.brandingPlaceholder[0],
+    type: options.type ??? "logo",
+    url: options.url ??? alias('@web') ~ '/',
+    title: options.title ??? "",
+    style: options.styling ??? "",
+} %}
+
+{# Render Logo #}
+
+{% spaceless %}
+	<a href="{{- values.url -}}" class="block relative z-1" title="{{values.title}}">
+        {{ svg(values.svg, sanitize=true)|attr({ class: values.style }) }}
+	</a>
+{% endspaceless %}

@@ -7,7 +7,6 @@ fieldLayouts:
             autocapitalize: true
             autocomplete: false
             autocorrect: true
-            autofocus: false
             class: null
             disabled: false
             id: null
@@ -20,7 +19,6 @@ fieldLayouts:
             placeholder: null
             readonly: false
             requirable: false
-            required: false
             size: null
             step: null
             tip: null
@@ -52,6 +50,19 @@ fieldLayouts:
             width: 100
         name: Hero
         sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Metadata
+        sortOrder: 3
 handle: projectsPage
 hasTitleField: true
 name: 'Projects Page'

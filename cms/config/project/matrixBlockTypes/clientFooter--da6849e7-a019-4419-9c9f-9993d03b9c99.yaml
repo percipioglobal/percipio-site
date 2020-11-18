@@ -65,14 +65,19 @@ fields:
       availableVolumes: '*'
       cleanupHtml: true
       columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
       purifierConfig: ''
       purifyHtml: '1'
       redactorConfig: ''
       removeEmptyTags: '1'
       removeInlineStyles: '1'
       removeNbsp: '1'
+      showHtmlButtonForNonAdmins: '1'
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
+      uiMode: enlarged
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
@@ -85,23 +90,25 @@ fields:
     searchable: false
     settings:
       allowSelfRelations: false
+      allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:f52a8f91-da15-4d35-b55d-6c097b9ecc38'
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
-      restrictFiles: ''
+      previewMode: full
+      restrictFiles: '1'
       selectionLabel: ''
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:f52a8f91-da15-4d35-b55d-6c097b9ecc38'
+      singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
       singleUploadLocationSubpath: ''
       source: null
       sources: '*'
       targetSiteId: null
-      useSingleFolder: false
+      useSingleFolder: true
       validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null

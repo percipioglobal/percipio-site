@@ -83,7 +83,7 @@
     /* Category Selector */
 
     .category-selector {
-        @apply .hidden .flex-col .fixed .pin-t .pin-l .bg-white .z-20;
+        @apply .hidden .flex-col .fixed .pin-t .pin-l .bg-white-100 .z-20;
         width: 100vw;
         height: 100vh;
         box-sizing: border-box;

@@ -123,7 +123,7 @@ input.error {
 
     .badge {
       @include margin(0, 0, 0, -6px);
-      @apply .relative .inline-block .flex-shrink .text-white;
+      @apply .relative .inline-block .flex-shrink .text-white-100;
       top: -1px;
       padding: 0 6px;
       font-size: 11px;

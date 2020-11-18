@@ -1,18 +1,19 @@
-{% import '_macros/atoms' as atom %}
+{% import '_macros/atoms' as render %}
 
 {% set image = block.clientLogo[0] ?? placeholder.articlePlaceholder[0] %}
 
 {%- minify -%}
-    <div class="my-12 px-4 md:px-4 lg:mx-16 ">
-        <div class="flex flex-col md:flex-row items-center text-lg text-green-900 leading-relaxed">
-            <div class="w-56 my-4 float-left md:mr-10">
-                {{- atom.article_image(image) -}}
+    <div class="mt-32 mb-6 px-4 lg:px-0 lg:mx-56">
+        <div class="flex flex-col justify-center text-center text-lg text-green-900 leading-relaxed">
+            <div class="my-2 w-full flex justify-center">
+                {{- render.atom('image', 'article', { image: image  }) -}}
             </div>
-            {{- atom.text(block.clientDescription) -}}
-        </div>  
-         
+            <div class="my-2">
+                {{- render.atom('text', 'content', { content: block.clientDescription }) -}}
+            </div>
+        </div>
+
     </div>
 {%- endminify -%}
 
 
-        
