@@ -6,17 +6,10 @@ const MODERN_CONFIG = 'modern';
 const path = require('path');
 const merge = require('webpack-merge');
 
-// webpack
-const webpack = require('webpack');
-
 // webpack plugins
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-/* -- Does not yet work with Vue 3
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const ForkTsCheckerNotifierWebpackPlugin = require('fork-ts-checker-notifier-webpack-plugin');
-*/
 const ManifestPlugin = require('webpack-manifest-plugin');
-const { VueLoaderPlugin } = require('vue-loader');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
 // config files
@@ -36,23 +29,17 @@ const configureBabelLoader = (browserList, legacy) => {
                 presets: [
                     [
                         '@babel/preset-env', {
-                        modules: legacy ? "auto" : false,
-                        corejs: {
-                            version: 3,
-                            proposals: true
-                        },
-                        debug: false,
-                        useBuiltIns: 'usage',
-                        targets: {
-                            browsers: browserList,
-                        },
-                    }
-                    ],
-                    [
-                        '@babel/preset-typescript', {
-                        'allExtensions': true,
-                        'isTSX': false,
-                    }
+                            modules: legacy ? "auto" : false,
+                            corejs:  {
+                                version: 3,
+                                proposals: true
+                            },
+                            debug: false,
+                            useBuiltIns: 'usage',
+                            targets: {
+                                browsers: browserList,
+                            },
+                        }
                     ],
                 ],
                 plugins: [
@@ -63,22 +50,6 @@ const configureBabelLoader = (browserList, legacy) => {
                     '@babel/plugin-proposal-nullish-coalescing-operator',
                     '@babel/plugin-proposal-optional-chaining',
                 ],
-            },
-        },
-    };
-};
-
-// Configure TypeScript loader
-const configureTypeScriptLoader = () => {
-    return {
-        test: /\.ts$/,
-        exclude: settings.typescriptLoaderConfig.exclude,
-        use: {
-            loader: 'ts-loader',
-            options: {
-                transpileOnly: true,
-                appendTsSuffixTo: [/\.vue$/],
-                happyPackMode: false,
             },
         },
     };
@@ -102,7 +73,8 @@ const configureFontLoader = () => {
             {
                 loader: 'file-loader',
                 options: {
-                    name: 'fonts/[name].[ext]'
+                    name: 'fonts/[name].[ext]',
+                    esModule: false
                 }
             }
         ]
@@ -138,9 +110,8 @@ const baseConfig = {
         publicPath: settings.urls.publicPath()
     },
     resolve: {
-        extensions: ['.ts', '.js', '.vue', '.json'],
         alias: {
-            'vue$': 'vue/dist/vue.esm-bundler.js'
+            'vue$': 'vue/dist/vue.esm.js'
         },
         modules: [
             path.resolve(__dirname, 'node_modules'),
@@ -155,26 +126,6 @@ const baseConfig = {
     plugins: [
         new WebpackNotifierPlugin({title: 'Webpack', excludeWarnings: true, alwaysNotify: true}),
         new VueLoaderPlugin(),
-        /* -- https://github.com/vuejs/vue-next/tree/master/packages/vue#bundler-build-feature-flags */
-        new webpack.DefinePlugin({
-            __VUE_OPTIONS_API__: true,
-            __VUE_PROD_DEVTOOLS__: false
-        }),
-        /* -- Does not yet work with Vue 3
-                new ForkTsCheckerWebpackPlugin({
-                    typescript: {
-                        configFile: '../../tsconfig.json',
-                        extensions: {
-                            vue: true
-                        }
-                    }
-                }),
-                new ForkTsCheckerNotifierWebpackPlugin({
-                    title: 'Webpack',
-                    excludeWarnings: true,
-                    alwaysNotify: false,
-                }),
-         */
     ]
 };
 
@@ -183,7 +134,6 @@ const legacyConfig = {
     module: {
         rules: [
             configureBabelLoader(Object.values(pkg.browserslist.legacyBrowsers, true)),
-            configureTypeScriptLoader(),
         ],
     },
     plugins: [
@@ -201,7 +151,6 @@ const modernConfig = {
     module: {
         rules: [
             configureBabelLoader(Object.values(pkg.browserslist.modernBrowsers, false)),
-            configureTypeScriptLoader(),
         ],
     },
     plugins: [

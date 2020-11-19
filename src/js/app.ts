@@ -1,9 +1,6 @@
 // import our css
 import '../css/app.pcss';
 
-import { createStore } from './stores/store.js';
-import { createLoadingState } from './utils/wait.js';
-
 // importing and setting up Font Awesome
 import { dom, library } from '@fortawesome/fontawesome-svg-core';
 import {
@@ -26,6 +23,8 @@ import {
     faFacebookF as fabFacebookF,
 } from '@fortawesome/free-brands-svg-icons';
 
+import Vue from 'vue';
+
 // load font-awesome libraries
 library.add(farFilePdf, farFileExcel, farFileWord, farFilePowerPoint, farFileArchive, fasCloudDownloadAlt, fasExternalLinkAlt, fabTwitter, fabFacebookF, farEnvelope, fasPrint);
 
@@ -37,8 +36,37 @@ dom.watch({
 
 // App main
 const main = async () => {
+    const [Vue, Lazysizes] = await Promise.all([
+        import(/* webpackChunkName: "vue" */ 'vue'),
+        import(/* webpackChunkName: "lazysizes" */ 'lazysizes'),
+    ]);
+
+    // Create our vue instance
+    const vm = new Vue.default({
+        el: "#page-container",
+        components: {},
+        data: () => ({
+            hamburgerOpen: false
+        }),
+        methods: {
+            toggleMenu() {
+                this.hamburgerOpen = !this.hamburgerOpen;
+            },
+            scroll(elemID) {
+                document.getElementById(elemID).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            },
+            printPage: function () {
+                window.print();
+            }
+        }
+    });
+
+    return vm;
+
     // // Async load the vue module
-    // const { createApp, defineAsyncComponent } = await import(/* webpackChunkName: "vue" */ 'vue');
+    //const { createApp, defineAsyncComponent } = await import(/* webpackChunkName: "vue" */ 'vue');
 
     // // const store = await createStore(Vue.default);
     // // const wait = await createLoadingState(Vue.default);
@@ -74,7 +102,7 @@ const main = async () => {
 };
 
 // Execute async function
-main().then( (root) => {
+main().then((root) => {
 });
 
 // Accept HMR as per: https://webpack.js.org/api/hot-module-replacement#accept
