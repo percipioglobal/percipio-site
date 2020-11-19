@@ -3,12 +3,12 @@
 {%- set teaserImage = content.teaserImage.one() ?? placeholder.teaserPlaceholder[0] -%}
 
 {%- minify -%}
-<a href="{{- content.url -}}" class="block bg-white-100 py-8 -mx-8 hover:bg-{{- colour -}}-500">
+<a href="{{- content.url -}}" class="block bg-white-100 py-8 -mx-8 hover:bg-{{- colour -}}-500 text-gray-800 hover:text-white-100 group">
     <div class="container max-w-screen-lg mx-auto">
         <div class="flex w-full">
             <div class="flex-grow">
-                <p class="font-mono text-base text-gray-800 pb-3">
-                    <span class="text-teal-500">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
+                <p class="font-mono text-base pb-3">
+                    <span class="text-teal-500 group-hover:text-white-100">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
                     by {{ content.author.fullName }} on
                     <time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
                 </p>
