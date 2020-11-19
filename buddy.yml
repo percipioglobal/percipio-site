@@ -36,7 +36,7 @@
         - "/:/buddy/Percipio"
       trigger_condition: "ALWAYS"
       shell: "BASH"
-    - action: "Rsync files to production"
+    - action: "Rsync files to staging"
       type: "RSYNC"
       local_path: "cms/"
       remote_path: "$REMOTE_PROJECT_ROOT/deploy-cache"
