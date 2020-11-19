@@ -41,7 +41,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: de27943a-dea2-419d-90cd-fbdfcf88bc6a
-dateModified: 1605773292
+dateModified: 1605774522
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
