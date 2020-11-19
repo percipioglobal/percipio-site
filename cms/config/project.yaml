@@ -2296,6 +2296,14 @@ plugins:
       schemaVersion: 1.0.0
     enabled: true
     schemaVersion: '1.2'
+  blitz-recommendations:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  colour-swatches:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.4.0
   eager-beaver:
     edition: standard
     enabled: true
