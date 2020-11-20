@@ -1,17 +1,4 @@
 /**
- * app.css
- *
- * The entry point for the css.
- *
- */
-
-/**
- * This injects Tailwind's base styles, which is a combination of
- * Normalize.css and some additional base styles.
- */
-@import "tailwindcss/base";
-
-/**
  * This injects any component classes registered by plugins.
  *
  */
@@ -24,8 +11,7 @@
  *
  */
 
-@import './global.pcss';
-/* @import './webfonts.pcss'; */
+@import './components/global.pcss';
 
 /* atoms go first */
 @import './atoms/icons.pcss';
@@ -43,17 +29,3 @@
 
 /* here we can add our own custom utility classes that need to override everything else  */
 @import './utilities/aspect-ratios.pcss';
-
-/**
- * This injects all of Tailwind's utility classes, generated based on your
- * config file.
- *
- */
-@import 'tailwindcss/utilities';
-
-
-/**
- * Include vendor css.
- *
- */
-@import 'vendor.pcss';

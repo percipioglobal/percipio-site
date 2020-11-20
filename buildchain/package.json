@@ -1,40 +1,11 @@
 {
-    "name": "percipio-site",
-    "version": "1.0.0",
-    "description": "Percipio Global Ltd. brand website",
-    "keywords": [
-        "Percipio"
-    ],
-    "homepage": "https://github.com/percipioglobal/percipio-site",
-    "bugs": {
-        "email": "support@percipio.london",
-        "url": "https://github.com/percipioglobal/percipio-site/issues"
-    },
-    "license": "SEE LICENSE IN LICENSE.md",
     "author": {
         "name": "Percipio Global Ltd.",
         "email": "hello@percipio.london",
         "url": "https://sandbox.percipio.london"
     },
     "browser": "/web/index.php",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/percipioglobal/percipio-site.git"
-    },
-    "private": true,
-    "scripts": {
-        "check-types": "tsc",
-        "lint": "tsc --noEmit && eslint '../../src/**/*.{js,ts,vue}' --fix",
-        "debug": "webpack-dev-server --config webpack.dev.js",
-        "dev": "webpack-dashboard -- webpack-dev-server --config webpack.dev.js",
-        "build": "webpack --config webpack.prod.js --progress --hide-modules"
-    },
     "browserslist": {
-        "production": [
-            "> 1%",
-            "last 2 versions",
-            "Firefox ESR"
-        ],
         "legacyBrowsers": [
             "> 1%",
             "last 2 versions",
@@ -51,7 +22,16 @@
             "not Firefox < 54",
             "last 2 Edge versions",
             "not Edge < 15"
+        ],
+        "production": [
+            "> 1%",
+            "last 2 versions",
+            "Firefox ESR"
         ]
+    },
+    "bugs": {
+        "email": "support@percipio.london",
+        "url": "https://github.com/percipioglobal/percipio-site/issues"
     },
     "dependencies": {
         "@fortawesome/free-brands-svg-icons": "^5.15.1",
@@ -69,6 +49,7 @@
         "vuex-persistedstate": "^2.7.1",
         "vuex-shared-mutations": "^1.0.2"
     },
+    "description": "Percipio Global Ltd. brand website",
     "devDependencies": {
         "@babel/core": "^7.12.3",
         "@babel/plugin-proposal-class-properties": "^7.12.1",
@@ -80,7 +61,7 @@
         "@babel/preset-env": "^7.12.1",
         "@babel/preset-typescript": "^7.12.1",
         "@babel/register": "^7.12.1",
-        "@babel/runtime": "^7.0.0",
+        "@babel/runtime": "^7.12.1",
         "@fortawesome/fontawesome-svg-core": "^1.2.30",
         "@fortawesome/free-regular-svg-icons": "^5.14.0",
         "@fortawesome/free-solid-svg-icons": "^5.14.0",
@@ -117,7 +98,6 @@
         "imagemin-webp-webpack-plugin": "^3.3.0",
         "img-loader": "^3.0.0",
         "mini-css-extract-plugin": "^1.2.0",
-        "optimize-css-assets-webpack-plugin": "^5.0.1",
         "postcss": "^8.1.1",
         "postcss-import": "^12.0.0",
         "postcss-loader": "^4.0.0",
@@ -141,5 +121,24 @@
         "webpack-manifest-plugin": "^3.0.0-rc.0",
         "webpack-merge": "^5.3.0",
         "workbox-webpack-plugin": "^6.0.0-alpha.3"
-    }
+    },
+    "homepage": "https://percipio.london",
+    "keywords": [
+        "Percipio"
+    ],
+    "license": "SEE LICENSE IN LICENSE.md",
+    "name": "percipio-site",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/percipioglobal/percipio-site.git"
+    },
+    "scripts": {
+        "build": "webpack --config webpack.prod.js --progress",
+        "check-types": "tsc",
+        "debug": "webpack serve --config webpack.dev.js",
+        "dev": "webpack serve --config webpack.dev.js",
+        "lint": "tsc --noEmit && eslint '../../src/**/*.{js,ts,vue}' --fix"
+    },
+    "version": "1.0.0"
 }
