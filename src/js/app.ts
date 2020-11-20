@@ -7,7 +7,7 @@ const main = async () => {
 
         el: '#page-header',
         data: () => ({
-            menuOpen: false,
+            navOpen: false,
         }),
         methods: {
 
@@ -35,7 +35,7 @@ const main = async () => {
             },
 
             toggleMenu(){
-                this.menuOpen = !this.menuOpen;
+                this.navOpen = !this.navOpen;
             },
 
             scroll(id){
