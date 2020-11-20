@@ -1,20 +1,11 @@
-field: 43861fe2-ef2d-4dd2-8116-c42099ff5c81
+field: dbc7a062-ef19-48ca-bd6f-acda62a18b78
 fieldLayouts:
-  0429dd6d-ef5c-4da3-a2d0-bf0f9515f60c:
+  d22305e5-1862-4025-a23b-9bbb5a140a8c:
     tabs:
       -
         elements:
           -
-            fieldUid: c4aee481-5eb6-4f24-a754-8ebe31f7059a
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 7f06d847-2f7d-40d0-94b4-713769634e1f
+            fieldUid: d417bfc9-a190-4316-93b5-2b4ae3766d71
             instructions: null
             label: null
             required: false
@@ -23,7 +14,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 50211ee0-49ef-4a6e-b99d-6ade18c31d31
+            fieldUid: f056fd7a-6e09-4950-b61a-c431c3d8df73
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5cca04cf-7134-437f-ac8a-f8777747b6cd
             instructions: null
             label: null
             required: false
@@ -34,12 +34,12 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  50211ee0-49ef-4a6e-b99d-6ade18c31d31:
+  5cca04cf-7134-437f-ac8a-f8777747b6cd:
     contentColumnType: text
     fieldGroup: null
-    handle: clientUrl
+    handle: location
     instructions: ''
-    name: 'Client Url'
+    name: Location
     searchable: false
     settings:
       byteLimit: null
@@ -53,12 +53,12 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  7f06d847-2f7d-40d0-94b4-713769634e1f:
+  d417bfc9-a190-4316-93b5-2b4ae3766d71:
     contentColumnType: text
     fieldGroup: null
-    handle: description
+    handle: bio
     instructions: ''
-    name: Description
+    name: Bio
     searchable: false
     settings:
       availableTransforms: '*'
@@ -70,50 +70,33 @@ fields:
       manualConfig: ''
       purifierConfig: ''
       purifyHtml: '1'
-      redactorConfig: ''
+      redactorConfig: Simple.json
       removeEmptyTags: '1'
       removeInlineStyles: '1'
       removeNbsp: '1'
-      showHtmlButtonForNonAdmins: '1'
+      showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: enlarged
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  c4aee481-5eb6-4f24-a754-8ebe31f7059a:
-    contentColumnType: string
+  f056fd7a-6e09-4950-b61a-c431c3d8df73:
+    contentColumnType: datetime
     fieldGroup: null
-    handle: logo
-    instructions: 'Select or upload an image to use in the page.'
-    name: Logo
+    handle: startWorkingAtPercipio
+    instructions: ''
+    name: 'Start Working at Percipio'
     searchable: false
     settings:
-      allowSelfRelations: false
-      allowUploads: true
-      allowedKinds:
-        - image
-      defaultUploadLocationSource: 'volume:f52a8f91-da15-4d35-b55d-6c097b9ecc38'
-      defaultUploadLocationSubpath: ''
-      limit: '1'
-      localizeRelations: false
-      previewMode: full
-      restrictFiles: '1'
-      selectionLabel: ''
-      showSiteMenu: true
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
-      singleUploadLocationSubpath: ''
-      source: null
-      sources: '*'
-      targetSiteId: null
-      useSingleFolder: true
-      validateRelatedElements: false
-      viewMode: list
+      max: null
+      min: null
+      minuteIncrement: '30'
+      showDate: true
+      showTime: false
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
-handle: clientFooter
-name: 'Client Footer'
-sortOrder: 1
+    translationMethod: none
+    type: craft\fields\Date
+handle: heroTeam
+name: 'Hero Team'
+sortOrder: 3
