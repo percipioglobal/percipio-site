@@ -1,0 +1,6 @@
+
+{% for button inbuttons.all() %}
+    <a href="{{ siteUrl }}projects" title="projects" class="inline-block p-4 text-lg bg-transparent hover:bg-{{button.buttonColour}}-500 text-{{button.buttonColour}}-500 font-extrabold hover:text-white-100 hover:border-transparent border-2 border-{{button.buttonColour}}-500 mr-3">
+        What we do
+    </a>
+{% endfor %}

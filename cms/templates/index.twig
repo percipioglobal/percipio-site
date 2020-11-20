@@ -7,7 +7,9 @@
 
 
 {% block content %}
-    {%- include '_organisms/heroes/hero--index' -%}
+    {%- include '_organisms/builders/hero--builder' with {
+        content: entry,
+    } -%}
 {% endblock %}
 
 {% block subcontent %}

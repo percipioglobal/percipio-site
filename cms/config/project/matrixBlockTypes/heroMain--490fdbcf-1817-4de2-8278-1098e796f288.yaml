@@ -1,0 +1,77 @@
+field: dbc7a062-ef19-48ca-bd6f-acda62a18b78
+fieldLayouts:
+  1a654fd4-7e24-42c1-8497-1632a8b07340:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 1750a33c-c911-45de-9392-80a3004cbe0d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b5b2edeb-3002-4db6-ba6a-36e46bc58b38
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  1750a33c-c911-45de-9392-80a3004cbe0d:
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: ''
+    name: Description
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b5b2edeb-3002-4db6-ba6a-36e46bc58b38:
+    contentColumnType: string
+    fieldGroup: null
+    handle: buttons
+    instructions: ''
+    name: Buttons
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - d44acfa4-5517-4080-bf00-3fb18b69b24c
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_32_buttons}}'
+      fieldLayout: table
+      maxRows: '2'
+      minRows: ''
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: heroMain
+name: 'Hero Main'
+sortOrder: 1

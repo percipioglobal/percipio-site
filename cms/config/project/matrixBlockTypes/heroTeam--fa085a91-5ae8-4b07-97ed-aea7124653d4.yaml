@@ -99,4 +99,4 @@ fields:
     type: craft\fields\Date
 handle: heroTeam
 name: 'Hero Team'
-sortOrder: 3
+sortOrder: 4
