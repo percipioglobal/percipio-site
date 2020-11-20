@@ -1,24 +1,27 @@
 // importing and setting up Font Awesome
 import { dom, library } from '@fortawesome/fontawesome-svg-core';
-import { 
-    faCloudDownloadAlt as falCloudDownloadAlt,
-    faExternalLinkAlt as falExternalLinkAlt,
-    faFilePdf as falFilePdf,
-    faFileSpreadsheet as falFileSpreadsheet,
-    faFileWord as falFileWord,
-    faFilePowerpoint as falFilePowerPoint,
-    faFileArchive as falFileArchive,
-    faEnvelope as falEnvelope,
-    faPrint as falPrint,
-} from '@fortawesome/pro-light-svg-icons';
+import {
+    faFilePdf as farFilePdf,
+    faFileExcel as farFileExcel,
+    faFileWord as farFileWord,
+    faFilePowerpoint as farFilePowerPoint,
+    faFileArchive as farFileArchive,
+    faEnvelope as farEnvelope,
+} from '@fortawesome/free-regular-svg-icons';
 
 import {
-    faFacebookF as fabFacebookF,
+    faCloudDownloadAlt as fasCloudDownloadAlt,
+    faExternalLinkAlt as fasExternalLinkAlt,
+    faPrint as fasPrint,
+} from '@fortawesome/free-solid-svg-icons';
+
+import {
     faTwitter as fabTwitter,
+    faFacebookF as fabFacebookF,
 } from '@fortawesome/free-brands-svg-icons';
 
 // load font-awesome libraries
-library.add(falCloudDownloadAlt, falExternalLinkAlt, falFilePdf, falFileSpreadsheet, falFileWord, falFilePowerPoint, falFileArchive, falEnvelope, falPrint, fabFacebookF, fabTwitter);
+library.add(farFilePdf, farFileExcel, farFileWord, farFilePowerPoint, farFileArchive, fasCloudDownloadAlt, fasExternalLinkAlt, fabTwitter, fabFacebookF, farEnvelope, fasPrint);
 
 // convert i tags to SVG
 dom.watch({

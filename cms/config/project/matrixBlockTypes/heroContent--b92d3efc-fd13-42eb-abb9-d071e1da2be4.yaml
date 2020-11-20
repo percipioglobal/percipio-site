@@ -106,4 +106,4 @@ fields:
     type: craft\fields\Assets
 handle: heroContent
 name: 'Hero Content'
-sortOrder: 2
+sortOrder: 3

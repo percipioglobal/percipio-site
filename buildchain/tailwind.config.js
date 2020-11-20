@@ -1,9 +1,21 @@
 module.exports = {
-    purge: [],
-    target: 'relaxed',
-    prefix: '',
-    important: false,
-    separator: ':',
+    purge: {
+        content: [
+            '../cms/templates/**/*.{twig,html}',
+            '../src/vue/**/*.{vue,html}',
+        ],
+        layers: [
+            'base',
+            'components',
+            'utilities',
+        ],
+        mode: 'layers',
+        options: {
+            whitelist: [
+                '../src/css/components/**/*.{css}',
+            ],
+        }
+    },
     theme: {
         screens: {
             sm: '640px',
@@ -341,6 +353,8 @@ module.exports = {
             ...theme('spacing'),
             full: '100%',
             screen: '100vh',
+            'screen-30': '30vh',
+            'screen-50': '50vh',
             'screen-80': '80vh',
         }),
         inset: {

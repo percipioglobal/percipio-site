@@ -22,9 +22,53 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: da98edbb-2372-4157-92d3-43e74c7912e7
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
+  da98edbb-2372-4157-92d3-43e74c7912e7:
+    contentColumnType: string
+    fieldGroup: null
+    handle: buttons
+    instructions: ''
+    name: Buttons
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - 96a5ca4a-b101-4490-863b-5750a588233d
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - fd7288e2-1e60-4d5e-a678-cc09fe196538
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_10_buttons}}'
+      fieldLayout: table
+      maxRows: '2'
+      minRows: ''
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
   f961cff2-7a3b-45fd-b5e6-45f132cf7876:
     contentColumnType: text
     fieldGroup: null
@@ -65,4 +109,4 @@ fields:
     type: craft\fields\PlainText
 handle: heroLanding
 name: 'Hero Landing'
-sortOrder: 1
+sortOrder: 2
