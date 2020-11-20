@@ -37,40 +37,40 @@ dom.watch({
 
 // App main
 const main = async () => {
-    // Async load the vue module
-    const { createApp, defineAsyncComponent } = await import(/* webpackChunkName: "vue" */ 'vue');
+    // // Async load the vue module
+    // const { createApp, defineAsyncComponent } = await import(/* webpackChunkName: "vue" */ 'vue');
 
-    // const store = await createStore(Vue.default);
-    // const wait = await createLoadingState(Vue.default);
+    // // const store = await createStore(Vue.default);
+    // // const wait = await createLoadingState(Vue.default);
 
-    // Create our vue instance
-    const app = createApp({
-        el: "#page-container",
-        data: () => ({
-            hamburgerOpen: false
-        }),
-        components: {
+    // // Create our vue instance
+    // const app = createApp({
+    //     el: "#page-container",
+    //     data: () => ({
+    //         hamburgerOpen: false
+    //     }),
+    //     components: {
 
-        },
-        methods: {
-            toggleMenu(){
-                this.hamburgerOpen = !this.hamburgerOpen;
-            },
-            scroll(elemID){
-                document.getElementById(elemID).scrollIntoView({
-                behavior: 'smooth'
-                });
-            },
-            printPage: function () {
-                window.print();
-            }
-        }
-    });
+    //     },
+    //     methods: {
+    //         toggleMenu(){
+    //             this.hamburgerOpen = !this.hamburgerOpen;
+    //         },
+    //         scroll(elemID){
+    //             document.getElementById(elemID).scrollIntoView({
+    //             behavior: 'smooth'
+    //             });
+    //         },
+    //         printPage: function () {
+    //             window.print();
+    //         }
+    //     }
+    // });
 
-    // Mount the app
-    const root = app.mount("#page-container");
+    // // Mount the app
+    // const root = app.mount("#page-container");
 
-    return root;
+    // return root;
 };
 
 // Execute async function

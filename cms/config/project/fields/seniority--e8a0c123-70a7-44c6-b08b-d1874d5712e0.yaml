@@ -10,6 +10,8 @@ settings:
   max: null
   min: '0'
   prefix: ''
+  previewCurrency: null
+  previewFormat: decimal
   size: null
   suffix: ''
 translationKeyFormat: null

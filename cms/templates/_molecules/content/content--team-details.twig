@@ -1,0 +1,25 @@
+{% import '_macros/atoms' as render %}
+
+{%- set color = entry.colourSwatch ??? "gray" %}
+
+{%- minify -%}
+    <div class="flex flex-col md:flex-row justify-between my-12 md:mb-24 text-gray-800 px-8 xl:-mx-3">
+        <div class="prose prose-lg text-xl text-gray-800 leading-relaxed md:mr-8 w-full md:w-8/12 md:px-3">
+            {{- render.atom('text', 'content', { content: block.teamMemberSummary }) -}}
+        </div>
+        <div class="mt-10 md:mt-0 md:px-3 w-full md:w-4/12">
+            <div class="border-b-2 border-{{- color -}}-800">
+                <span class="inline-block font-mono text-sm">
+                    Areas of Expertise
+                </span>
+                <div class="flex flex-wrap my-4">
+                    {%- for category in categories.all() -%}
+                        <span class="bg-{{color}}-700 mr-6 my-2 px-4 py-2 rounded-full font-secondary text-white-100 text-xs tracking-wide font-medium">
+                            {{- category.title -}}
+                        </span>
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+    </div>
+{%- endminify -%}

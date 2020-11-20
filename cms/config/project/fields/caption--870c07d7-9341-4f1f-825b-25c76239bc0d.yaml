@@ -12,6 +12,7 @@ settings:
   initialRows: '4'
   multiline: ''
   placeholder: 'Add a standard caption to the asset'
+  uiMode: normal
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\PlainText

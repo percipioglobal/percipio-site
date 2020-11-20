@@ -1,14 +1,11 @@
 {%- set blog = craft.entries.section('blog')
-    .with(['teaserImage', 'blogCategory'])
+    .with(['teaserImage', 'blogCategories'])
     .orderBy('postDate desc')
     .all() -%}
 
-{%- include '_organisms/heroes/hero--landing' -%}
-
 <div id="content" class="container max-w-screen-hd p-8 mx-auto">
-    {%- include '_organisms/cards/cards--highlight' ignore missing with {
+    {%- include '_organisms/cards/cards--list' ignore missing with {
         content: blog,
         type: 'blog',
-        hasFeatured: true,
     } -%}
 </div>

@@ -5,15 +5,18 @@ instructions: 'Upload an image that will serve as placeholder if the original im
 name: 'Teaser Image Placeholder'
 searchable: true
 settings:
-  allowSelfRelations: ''
+  allowSelfRelations: false
+  allowUploads: true
   allowedKinds:
     - image
   defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
   defaultUploadLocationSubpath: ''
   limit: '1'
   localizeRelations: false
+  previewMode: full
   restrictFiles: '1'
   selectionLabel: 'Add an image'
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:14e48735-7707-43d5-a6f1-90cc18da80f1'
@@ -22,7 +25,7 @@ settings:
   sources: '*'
   targetSiteId: null
   useSingleFolder: true
-  validateRelatedElements: ''
+  validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
 translationMethod: site

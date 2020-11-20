@@ -20,4 +20,7 @@ siteSettings:
     hasUrls: true
     template: _organisms/_page
     uriFormat: 'team/{slug}'
-type: channel
+structure:
+  maxLevels: 1
+  uid: 6ae34b23-cac1-4650-a230-0e92d60e753b
+type: structure

@@ -1,0 +1,21 @@
+contentColumnType: string
+fieldGroup: 151de730-f956-437c-a617-de5725e4c07a
+handle: organisationCategory
+instructions: ''
+name: 'Organisation Category'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: 'Choose an organisation'
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'section:7023c258-744a-4563-b5ae-976750808af1'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

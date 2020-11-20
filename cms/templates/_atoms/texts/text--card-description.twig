@@ -1,0 +1,19 @@
+{#
+    ### OPTIONS ###
+    ---------------
+
+    content: (STR) -- the actual content as a string
+
+#}
+
+{% set values = {
+    content: options.content ??? '',
+} %}
+
+{# Render Title #}
+
+{% spaceless %}
+	<h5 class="break-words text-lg font-secondary leading-relaxed">
+		{{- values.content | typogrify(true) -}}
+	</h5>
+{% endspaceless %}
