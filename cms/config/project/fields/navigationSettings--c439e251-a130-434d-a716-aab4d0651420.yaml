@@ -9,6 +9,7 @@ settings:
   fieldLayout: row
   maxRows: ''
   minRows: ''
+  placeholderKey: null
   propagationMethod: all
   selectionLabel: ''
   staticField: ''

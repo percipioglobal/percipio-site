@@ -1,4 +1,4 @@
-{# 
+{#
     ### OPTIONS ###
     ---------------
 
@@ -13,8 +13,8 @@
 
     caption: options.caption,
     author: options.author ??? null,
-    source: options.source ??? null, 
-    id: options.id,
+    source: options.source ??? null,
+    id: options.id ??? 'now'|date('U'),
 
 } %}
 
@@ -39,7 +39,7 @@
         {%- elseif values.author -%}
 
             &mdash; {{ values.author -}}
-            
+
         {% endif -%}
 
     </figcaption>

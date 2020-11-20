@@ -134,6 +134,7 @@
         "workbox-webpack-plugin": "^3.6.2"
     },
     "dependencies": {
+        "@fortawesome/free-brands-svg-icons": "^5.15.1",
         "@tailwindcss/typography": "^0.2.0",
         "@tailwindcss/ui": "^0.1.3",
         "axios": "^0.19.0",
@@ -141,7 +142,7 @@
         "lazysizes": "^5.2.2",
         "regenerator-runtime": "^0.13.2",
         "tailwindcss": "^1.0.0",
-        "vue": "^3.0.0-beta.14",
+        "vue": "^2.5.17",
         "vue-wait": "^1.4.8",
         "vuex": "^3.1.2",
         "vuex-persistedstate": "^2.7.1",

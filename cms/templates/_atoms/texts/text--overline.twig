@@ -1,0 +1,19 @@
+{#
+    ### OPTIONS ###
+    ---------------
+
+    content: (STR) -- the actual content as a string
+
+#}
+
+{% set values = {
+    content: options.content ??? '',
+} %}
+
+{# Render Title #}
+
+{% spaceless %}
+   <span class="break-words font-mono mb-1">
+        {{- values.content | typogrify(true) -}}
+    </span>
+{% endspaceless %}

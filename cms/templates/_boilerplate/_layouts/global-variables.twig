@@ -20,11 +20,11 @@
 
 {%- set placeholder = craft.globalSets()
     .handle('placeholders')
-    .with(['articlePlaceholder', 'photoCoverPlaceholder', 'profilePhotoPlaceholder', 'sliderPlaceholder', 'teaserPlaceholder', 'heroPlaceholder'])
+    .with(['articlePlaceholder', 'photoCoverPlaceholder', 'profilePhotoPlaceholder', 'sliderPlaceholder', 'teaserPlaceholder', 'heroPlaceholder', 'brandingPlaceholder'])
     .one()
 -%}
 
-{%- set color = random(['blue', 'red', 'orange', 'purple', 'teal']) -%}
+{%- set colour = entry.colourSwatch ??? random(['blue', 'red', 'orange', 'purple', 'teal']) -%}
 
 {# -- Twig output from the render; this must be in a block -- #}
 {% block htmlPage %}
