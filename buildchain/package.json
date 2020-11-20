@@ -134,11 +134,11 @@
         "url": "git+https://github.com/percipioglobal/percipio-site.git"
     },
     "scripts": {
+        "build": "webpack --config webpack.prod.js --progress",
         "check-types": "tsc",
-        "lint": "tsc --noEmit && eslint '../../src/**/*.{js,ts,vue}' --fix",
-        "debug": "webpack-dev-server --config webpack.dev.js",
-        "dev": "webpack-dashboard -- webpack-dev-server --config webpack.dev.js",
-        "build": "webpack --config webpack.prod.js --progress --hide-modules"
+        "debug": "webpack serve --config webpack.dev.js",
+        "dev": "webpack serve --config webpack.dev.js",
+        "lint": "tsc --noEmit && eslint '../../src/**/*.{js,ts,vue}' --fix"
     },
     "version": "1.0.0"
 }
