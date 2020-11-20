@@ -1,5 +1,21 @@
 module.exports = {
-    purge: [],
+    purge: {
+        content: [
+            '../cms/templates/**/*.{twig,html}',
+            '../src/vue/**/*.{vue,html}',
+        ],
+        layers: [
+            'base',
+            'components',
+            'utilities',
+        ],
+        mode: 'layers',
+        options: {
+            whitelist: [
+                '../src/css/components/**/*.{css}',
+            ],
+        }
+    },
     target: 'relaxed',
     prefix: '',
     important: false,

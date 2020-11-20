@@ -37,6 +37,16 @@ dom.watch({
 
 // App main
 const main = async () => {
+    // Async load the vue module
+    const { default: Vue } = await import(/* webpackChunkName: "vue" */ 'vue');
+
+    const vm = new Vue({
+
+        el: '#page-header',
+        data: () => ({}),
+        methods: {},
+
+    })
     // // Async load the vue module
     // const { createApp, defineAsyncComponent } = await import(/* webpackChunkName: "vue" */ 'vue');
 
@@ -74,7 +84,7 @@ const main = async () => {
 };
 
 // Execute async function
-main().then( (root) => {
+main().then( (value) => {
 });
 
 // Accept HMR as per: https://webpack.js.org/api/hot-module-replacement#accept
