@@ -26,14 +26,14 @@
         <div class="w-16 h-16">
             <div @click="toggleMenu" class="flex justify-end items-center cursor-pointer h-16 w-16">
                 <div class="absolute flex justify-end items-center h-16 w-16 z-40">
-                    <span :class="hamburgerOpen ? 'rotate-45 translate-y-2' : 'rotate-0'" class="{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ colour ~ '-600'}} mb-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
-                    <span :class="hamburgerOpen ? '-rotate-90 -translate-y-4' : 'rotate-0'" class="{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ colour ~ '-600'}} mt-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
+                    <span :class="menuOpen ? 'rotate-45 translate-y-2' : 'rotate-0'" class="{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ colour ~ '-600'}} mb-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
+                    <span :class="menuOpen ? '-rotate-90 -translate-y-4' : 'rotate-0'" class="{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ colour ~ '-600'}} mt-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
                 <div>
             </div>
         </div>
     </div>
 
-    <div :class="hamburgerOpen ? 'block' : 'hidden'" class="bg-white-90 text-gray-800 z-30 overflow-scroll fixed top-0 left-0 w-screen h-screen">
+    <div :class="menuOpen ? 'block' : 'hidden'" class="bg-white-90 text-gray-800 z-30 overflow-scroll fixed top-0 left-0 w-screen h-screen">
         <div class="relative max-w-md w-full ml-auto bg-white px-4 pt-5 pb-4 flex-1 flex flex-col">
             <div class="mt-24 flex-1 h-0 overflow-y-auto">
                 <nav class="text-xl font-bold px-2 space-y-4" role="menu">

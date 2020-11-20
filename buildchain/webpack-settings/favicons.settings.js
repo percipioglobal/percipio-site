@@ -1,4 +1,4 @@
-// favicons.settings.js
+// webapp.settings.js
 
 // node modules
 require('dotenv').config();

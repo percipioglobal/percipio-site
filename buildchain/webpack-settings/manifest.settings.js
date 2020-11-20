@@ -1,4 +1,4 @@
-// manifest.settings.js
+// image-loader.settings.js
 
 // node modules
 require('dotenv').config();

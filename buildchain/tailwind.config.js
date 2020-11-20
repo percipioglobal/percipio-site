@@ -16,10 +16,6 @@ module.exports = {
             ],
         }
     },
-    target: 'relaxed',
-    prefix: '',
-    important: false,
-    separator: ':',
     theme: {
         screens: {
             sm: '640px',
