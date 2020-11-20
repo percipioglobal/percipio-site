@@ -1,5 +1,5 @@
 fieldLayouts:
-  35125af0-1acc-4500-a52e-6ef129df67bf:
+  b749a684-6b8b-48c2-88af-5e856e2a31e3:
     tabs:
       -
         elements:
@@ -35,4 +35,4 @@ section: a72bfe0c-3389-4f9f-8ec1-ab318ec10b29
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
-titleTranslationMethod: ''
+titleTranslationMethod: site

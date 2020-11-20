@@ -11,7 +11,7 @@ fieldLayouts:
             disabled: false
             id: null
             instructions: null
-            label: Title
+            label: null
             max: null
             min: null
             name: null
@@ -30,7 +30,7 @@ fieldLayouts:
             fieldUid: a9df6c46-5d2c-4b29-96f7-4490417448b6
             instructions: null
             label: null
-            required: false
+            required: '0'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -39,7 +39,7 @@ fieldLayouts:
             fieldUid: 1aad5a2f-f77c-42d8-8c02-c97817b9cb18
             instructions: null
             label: null
-            required: false
+            required: '0'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -48,7 +48,7 @@ fieldLayouts:
             fieldUid: 0827c9dd-2ea2-4e98-b743-3161e028a304
             instructions: null
             label: null
-            required: false
+            required: '0'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -62,4 +62,4 @@ section: 47b7409b-e345-48d9-b684-06ec0a2972f5
 sortOrder: 1
 titleFormat: '{question}'
 titleTranslationKeyFormat: null
-titleTranslationMethod: ''
+titleTranslationMethod: site

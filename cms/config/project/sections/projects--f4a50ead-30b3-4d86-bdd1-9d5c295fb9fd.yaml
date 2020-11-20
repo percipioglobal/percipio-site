@@ -20,7 +20,4 @@ siteSettings:
     hasUrls: true
     template: _organisms/_page.twig
     uriFormat: 'projects/{slug}'
-structure:
-  maxLevels: null
-  uid: c95921ec-6d79-48ea-968b-9fa58f6cf9ee
-type: structure
+type: channel

@@ -1,4 +1,4 @@
-dateModified: 1605774522
+dateModified: 1605862502
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -16,8 +16,6 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
   colour-swatches:
-    edition: standard
-    enabled: true
     schemaVersion: 1.4.0
   eager-beaver:
     edition: standard

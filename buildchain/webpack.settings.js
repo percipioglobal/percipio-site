@@ -6,8 +6,8 @@ require('dotenv').config();
 // Webpack settings exports
 // noinspection WebpackConfigHighlighting
 module.exports = {
-    name: "Example Project",
-    copyright: "Example Company, Inc.",
+    name: "percipio-site",
+    copyright: "Percipio Global Ltd.",
     paths: {
         src: {
             base: "../src/",
@@ -23,9 +23,9 @@ module.exports = {
         templates: "../cms/templates/"
     },
     urls: {
-        live: "https://example.com/",
-        local: "http://example.test/",
-        critical: "http://example.test/",
+        live: "https://percipio.london/",
+        local: "http://localhost:8000/",
+        critical: "https://sandbox.percipio.london/",
         publicPath: () => process.env.PUBLIC_PATH || "/dist/",
     },
     vars: {

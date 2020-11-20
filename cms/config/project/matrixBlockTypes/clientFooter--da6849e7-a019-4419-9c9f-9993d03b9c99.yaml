@@ -74,7 +74,7 @@ fields:
       removeEmptyTags: '1'
       removeInlineStyles: '1'
       removeNbsp: '1'
-      showHtmlButtonForNonAdmins: '1'
+      showHtmlButtonForNonAdmins: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: enlarged
@@ -93,22 +93,22 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSource: 'volume:f52a8f91-da15-4d35-b55d-6c097b9ecc38'
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
       previewMode: full
-      restrictFiles: '1'
+      restrictFiles: ''
       selectionLabel: ''
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      singleUploadLocationSource: 'volume:f52a8f91-da15-4d35-b55d-6c097b9ecc38'
       singleUploadLocationSubpath: ''
       source: null
       sources: '*'
       targetSiteId: null
-      useSingleFolder: true
+      useSingleFolder: false
       validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null

@@ -1,5 +1,5 @@
 fieldLayouts:
-  bf3abf88-2ebb-4fc3-8915-7354bdbb1af7:
+  b0b01ba7-1bb0-44f5-961e-962a7ff6ca18:
     tabs:
       -
         elements:
@@ -35,4 +35,4 @@ section: 54e60257-f31a-44aa-960e-bbd364197e28
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
-titleTranslationMethod: ''
+titleTranslationMethod: site
