@@ -14,11 +14,11 @@
         "source": "https://github.com/percipioglobal/percipio-site",
         "docs": "https://github.com/percipioglobal/percipio-site"
     },
-    "minimum-stability": "beta",
+    "minimum-stability": "stable",
     "require": {
         "angellco/spoon": "^3.3.3",
         "craftcms/aws-s3": "^1.2",
-        "craftcms/cms": "^3.6@beta",
+        "craftcms/cms": "^3.5",
         "craftcms/feed-me": "^4.2.0",
         "craftcms/mailgun": "1.4.3",
         "craftcms/redactor": "^2.1.0",
