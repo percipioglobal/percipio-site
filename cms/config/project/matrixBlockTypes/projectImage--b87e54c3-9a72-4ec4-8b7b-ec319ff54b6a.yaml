@@ -53,25 +53,12 @@ fields:
     settings:
       default: center
       options:
-        __assoc__:
-          -
-            - left
-            - '1'
-          -
-            - center
-            - '1'
-          -
-            - right
-            - '1'
-          -
-            - full
-            - '1'
-          -
-            - drop-left
-            - ''
-          -
-            - drop-right
-            - ''
+        center: '1'
+        drop-left: ''
+        drop-right: ''
+        full: '1'
+        left: '1'
+        right: '1'
     translationKeyFormat: null
     translationMethod: none
     type: rias\positionfieldtype\fields\Position
@@ -119,104 +106,41 @@ fields:
       optgroups: true
       options:
         -
-          __assoc__:
-            -
-              - label
-              - None
-            -
-              - value
-              - none
-            -
-              - default
-              - '1'
+          default: '1'
+          label: None
+          value: none
         -
-          __assoc__:
-            -
-              - label
-              - '1:1'
-            -
-              - value
-              - is1by1
-            -
-              - default
-              - ''
+          default: ''
+          label: '1:1'
+          value: is1by1
         -
-          __assoc__:
-            -
-              - label
-              - '2:1'
-            -
-              - value
-              - is2by1
-            -
-              - default
-              - ''
+          default: ''
+          label: '2:1'
+          value: is2by1
         -
-          __assoc__:
-            -
-              - label
-              - '4:3'
-            -
-              - value
-              - is4by3
-            -
-              - default
-              - ''
+          default: ''
+          label: '4:3'
+          value: is4by3
         -
-          __assoc__:
-            -
-              - label
-              - '3:4'
-            -
-              - value
-              - is3by4
-            -
-              - default
-              - ''
+          default: ''
+          label: '3:4'
+          value: is3by4
         -
-          __assoc__:
-            -
-              - label
-              - '7:5'
-            -
-              - value
-              - is7by5
-            -
-              - default
-              - ''
+          default: ''
+          label: '7:5'
+          value: is7by5
         -
-          __assoc__:
-            -
-              - label
-              - '8:5'
-            -
-              - value
-              - is8by5
-            -
-              - default
-              - ''
+          default: ''
+          label: '8:5'
+          value: is8by5
         -
-          __assoc__:
-            -
-              - label
-              - '16:9'
-            -
-              - value
-              - is16by9
-            -
-              - default
-              - ''
+          default: ''
+          label: '16:9'
+          value: is16by9
         -
-          __assoc__:
-            -
-              - label
-              - '21:9'
-            -
-              - value
-              - is21by9
-            -
-              - default
-              - ''
+          default: ''
+          label: '21:9'
+          value: is21by9
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown

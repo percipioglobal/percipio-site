@@ -1,4 +1,4 @@
-dateModified: 1605862502
+dateModified: 1605863569
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -40,40 +40,16 @@ plugins:
       createColorPalette: true
       createPlaceholderSilhouettes: false
       imageTransformTypeSettings:
-        __assoc__:
-          -
-            - nystudio107\imageoptimizeimgix\imagetransforms\ImgixImageTransform
-            -
-              __assoc__:
-                -
-                  - domain
-                  - ''
-                -
-                  - apiKey
-                  - ''
-                -
-                  - securityToken
-                  - ''
-          -
-            - nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
-            -
-              __assoc__:
-                -
-                  - baseUrl
-                  - $SERVERLESS_SHARP_CLOUDFRONT_URL
-          -
-            - nystudio107\imageoptimizethumbor\imagetransforms\ThumborImageTransform
-            -
-              __assoc__:
-                -
-                  - baseUrl
-                  - ''
-                -
-                  - securityKey
-                  - ''
-                -
-                  - includeBucketPrefix
-                  - ''
+        nystudio107\imageoptimizeimgix\imagetransforms\ImgixImageTransform:
+          apiKey: ''
+          domain: ''
+          securityToken: ''
+        nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform:
+          baseUrl: $SERVERLESS_SHARP_CLOUDFRONT_URL
+        nystudio107\imageoptimizethumbor\imagetransforms\ThumborImageTransform:
+          baseUrl: ''
+          includeBucketPrefix: ''
+          securityKey: ''
       lowerQualityRetinaImageVariants: false
       transformClass: nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
   mailgun:

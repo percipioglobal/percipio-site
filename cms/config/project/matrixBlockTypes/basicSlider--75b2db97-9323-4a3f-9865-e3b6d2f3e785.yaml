@@ -25,21 +25,10 @@ fields:
     searchable: false
     settings:
       columns:
-        __assoc__:
-          -
-            - f3960fae-d20a-4473-9a73-315dfed31760
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - 085923fe-5934-4d01-a2fd-ec625094c005
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
+        085923fe-5934-4d01-a2fd-ec625094c005:
+          width: ''
+        f3960fae-d20a-4473-9a73-315dfed31760:
+          width: ''
       contentTable: '{{%stc_6_slides}}'
       fieldLayout: matrix
       maxRows: '9'
