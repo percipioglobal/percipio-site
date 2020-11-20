@@ -1,80 +1,60 @@
-// import our css
-import '../css/app.pcss';
-
-import { createStore } from './stores/store.js';
-import { createLoadingState } from './utils/wait.js';
-
-// importing and setting up Font Awesome
-import { dom, library } from '@fortawesome/fontawesome-svg-core';
-import {
-    faFilePdf as farFilePdf,
-    faFileExcel as farFileExcel,
-    faFileWord as farFileWord,
-    faFilePowerpoint as farFilePowerPoint,
-    faFileArchive as farFileArchive,
-    faEnvelope as farEnvelope,
-} from '@fortawesome/free-regular-svg-icons';
-
-import {
-    faCloudDownloadAlt as fasCloudDownloadAlt,
-    faExternalLinkAlt as fasExternalLinkAlt,
-    faPrint as fasPrint,
-} from '@fortawesome/free-solid-svg-icons';
-
-import {
-    faTwitter as fabTwitter,
-    faFacebookF as fabFacebookF,
-} from '@fortawesome/free-brands-svg-icons';
-
-// load font-awesome libraries
-library.add(farFilePdf, farFileExcel, farFileWord, farFilePowerPoint, farFileArchive, fasCloudDownloadAlt, fasExternalLinkAlt, fabTwitter, fabFacebookF, farEnvelope, fasPrint);
-
-// convert i tags to SVG
-dom.watch({
-    autoReplaceSvgRoot: document,
-    observeMutationsRoot: document.body
-});
-
 // App main
 const main = async () => {
-    // // Async load the vue module
-    // const { createApp, defineAsyncComponent } = await import(/* webpackChunkName: "vue" */ 'vue');
+    // Async load the vue module
+    const { default: Vue } = await import(/* webpackChunkName: "vue" */ 'vue');
 
-    // // const store = await createStore(Vue.default);
-    // // const wait = await createLoadingState(Vue.default);
+    const vm = new Vue({
 
-    // // Create our vue instance
-    // const app = createApp({
-    //     el: "#page-container",
-    //     data: () => ({
-    //         hamburgerOpen: false
-    //     }),
-    //     components: {
+        el: '#page-header',
+        data: () => ({
+            navOpen: false,
+        }),
+        methods: {
 
-    //     },
-    //     methods: {
-    //         toggleMenu(){
-    //             this.hamburgerOpen = !this.hamburgerOpen;
-    //         },
-    //         scroll(elemID){
-    //             document.getElementById(elemID).scrollIntoView({
-    //             behavior: 'smooth'
-    //             });
-    //         },
-    //         printPage: function () {
-    //             window.print();
-    //         }
-    //     }
-    // });
+            // Pre-render pages when the user mouses over a link
+            // Usage: <a href="" @mouseover="prerenderLink">
+            prerenderLink: function (e : Event) {
+                const head = document.getElementsByTagName("head")[0];
+                const refs = head.childNodes;
+                const ref = refs[refs.length - 1];
 
-    // // Mount the app
-    // const root = app.mount("#page-container");
+                const elements = head.getElementsByTagName("link");
+                Array.prototype.forEach.call(elements, function (el, i) {
+                    if (("rel" in el) && (el.rel === "prerender")) {
+                        el.parentNode.removeChild(el);
+                    }
+                });
 
-    // return root;
+                if (ref.parentNode && e.currentTarget) {
+                    const target : HTMLAnchorElement = <HTMLAnchorElement>e.currentTarget;
+                    const prerenderTag = document.createElement("link");
+                    prerenderTag.rel = "prerender";
+                    prerenderTag.href = target.href;
+                    ref.parentNode.insertBefore(prerenderTag, ref);
+                }
+            },
+
+            toggleMenu(){
+                this.navOpen = !this.navOpen;
+            },
+
+            scroll(id){
+                document.getElementById(id).scrollIntoView({
+                behavior: 'smooth'
+                });
+            },
+
+            printPage: function () {
+                window.print();
+            }
+
+        },
+
+    })
 };
 
 // Execute async function
-main().then( (root) => {
+main().then( (value) => {
 });
 
 // Accept HMR as per: https://webpack.js.org/api/hot-module-replacement#accept

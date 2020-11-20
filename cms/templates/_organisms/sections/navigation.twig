@@ -1,12 +1,11 @@
 {% set nodes = craft.navigation.nodes()
     .handle('primaryNavigation')
-    .level(1)
-    .all() %}
+	.all() %}
+{% set socialNavigation = socialMedia.socialMedia %}
 
-
+{% set activeClass = "text-" ~ colour ~ "-500" %}
 
 <div>
-
     <div class="z-40 w-full absolute bg-transparent h-12 md:h-20 py-16 flex justify-between items-center px-8 md:px-16 lg:px-32">
         <div class="w-16 h-16">
             <a href="{{ siteUrl }}" title="percipio">
@@ -24,44 +23,41 @@
                 </svg>
             </a>
         </div>
-
-        <div @click="toggleMenu" class="justify-end cursor-pointer h-16 w-16">
-            <div class="absolute flex justify-end items-center w-16 h-16 z-40">
-                <span :class="hamburgerOpen ? 'bg-white-100 rotate-45 translate-y-2' : '{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ colour ~ '-600'}} rotate-0'" class=" mb-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
-                <span :class="hamburgerOpen ? 'bg-white-100 -rotate-90 -translate-y-4' : '{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ colour ~ '-600'}} rotate-0'" class="mt-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
-            <div>
+        <div class="w-16 h-16">
+            <div @click="toggleMenu" class="flex justify-end items-center cursor-pointer h-16 w-16">
+                <div class="absolute flex justify-end items-center h-16 w-16 z-40">
+                    <span :class="navOpen ? 'rotate-45 translate-y-2' : 'rotate-0'" class="{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ colour ~ '-600'}} mb-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
+                    <span :class="navOpen ? '-rotate-90 -translate-y-4' : 'rotate-0'" class="{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ colour ~ '-600'}} mt-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
+                <div>
+            </div>
         </div>
     </div>
 
-    <div :class="hamburgerOpen ? 'block' : 'hidden'" class="hero-grad overflow-scroll fixed top-0 left-0 w-screen h-screen text-white-100 text-center text-lg">
-            <nav class="z-50 flex flex-col items-center h-full justify-center">
-                {%- for node in nodes -%}
-                    <div class="my-4 flex flex-col">
-                        <div class="uppercase font-bold text-xl mt-6 tracking-wide">
-                            <a  href="{{- node.url -}}"
-                                title="{{- node.title -}}"
-                                {% if node.newWindow -%} target="_blank" rel="noopener noreferrer"{%- endif %}
-                                class="mb-4"
-                            >
-                                {{- node.title -}}
-                            </a>
-                        <div>
-                        {% if node.hasDescendants %}
-                            {% for subnode in node.children.all() %}
-                                <div class="my-4 normal-case text-lg font-normal">
-                                    <a  href="{{- subnode.url -}}"
-                                        title="{{- subnode.title -}}"
-                                        {% if subnode.newWindow -%}target="_blank" rel="noopener noreferrer"{%- endif %}
-                                        class="my-1"
-                                    >
-                                        {{- subnode.title -}}
-                                    </a>
-                                </div>
-                            {% endfor %}
-                        {% endif %}
+    <div :class="navOpen ? 'block' : 'hidden'" class="bg-white-90 text-gray-800 z-30 overflow-scroll fixed top-0 left-0 w-screen h-screen">
+        <div class="relative max-w-md w-full ml-auto bg-white px-4 pt-5 pb-4 flex-1 flex flex-col">
+            <div class="mt-24 flex-1 h-0 overflow-y-auto">
+                <nav class="text-xl font-bold px-2 space-y-4" role="menu">
+                    <div role="menubar">
+                        {% nav node in nodes %}
+                            <div class="hover:underline mb-4">
+                                <a {% if node.url %} href="{{ node.url }}" {% endif %} title="{{- node.title -}}" aria-label="{{- node.title -}}" class="{% if node.active %}{{ activeClass }}{% endif %}{% if node.classes | length %} {{ node.classes }}{% endif %}" {% if node.newWindow %} target="_blank" rel="noopener" {% endif %} {% for attribute in node.customAttributes %} {{ attribute.attribute }}="{{ attribute.value }}" {% endfor %} role="menuitem">
+                                    {{- node.title -}}
+                                </a>
+                            </div>
+                        {% endnav %}
                     </div>
-                {%- endfor -%}
-            </nav>
+                </nav>
+                <hr class="my-6 mx-2 max-w-xs text-gray-800 h-1 w-1/2">
+                <nav class="text-sm font-bold px-2 space-y-2" role="menu">
+                    <div role="menubar">
+                        {% for social in socialNavigation.all() %}
+                            <div class="hover:underline mb-3">
+                                <a href="{{social.socialMediaUrl}}" title="{{social.socialMediaType}}" aria-label="{{social.socialMediaType}}" target="_blank" rel="noopener">{{social.socialMediaType.label}}</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </nav>
+            </div>
         </div>
     </div>
 </div>

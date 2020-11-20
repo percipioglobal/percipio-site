@@ -43,21 +43,10 @@ fields:
     searchable: false
     settings:
       columns:
-        __assoc__:
-          -
-            - 4697a491-b07d-46f9-87d8-c6cd9fb804a9
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - 3f37c536-3682-4856-a6af-a9f582d4c782
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
+        3f37c536-3682-4856-a6af-a9f582d4c782:
+          width: ''
+        4697a491-b07d-46f9-87d8-c6cd9fb804a9:
+          width: ''
       contentTable: '{{%stc_1_buttons}}'
       fieldLayout: matrix
       maxRows: '1'

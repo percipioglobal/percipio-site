@@ -4,6 +4,19 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Hero
+        sortOrder: 1
+      -
+        elements:
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -27,28 +40,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: Hero
-        sortOrder: 1
-      -
-        elements:
-          -
-            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
             fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
             instructions: null
             label: null
@@ -58,7 +49,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e8a0c123-70a7-44c6-b08b-d1874d5712e0
+            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
             instructions: null
             label: null
             required: false
@@ -89,6 +80,15 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: e8a0c123-70a7-44c6-b08b-d1874d5712e0
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: 01b78fde-8a32-4ecc-b1b0-abf0661898ce
             instructions: null
             label: null
@@ -108,6 +108,28 @@ fieldLayouts:
             width: 100
         name: Metadata
         sortOrder: 3
+      -
+        elements:
+          -
+            fieldUid: da9598dc-e9bb-4920-8adf-a712876cb578
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: cb2b1336-5ccd-48f4-a973-72fae9fd4069
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: SEO
+        sortOrder: 4
 handle: teamMember
 hasTitleField: true
 name: 'Team Member'

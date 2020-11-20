@@ -13,81 +13,36 @@ settings:
     - image/gif
   variants:
     -
-      __assoc__:
-        -
-          - width
-          - '760'
-        -
-          - useAspectRatio
-          - '1'
-        -
-          - aspectRatioX
-          - '1'
-        -
-          - aspectRatioY
-          - '1'
-        -
-          - retinaSizes
-          -
-            - '1'
-        -
-          - quality
-          - '82'
-        -
-          - format
-          - ''
+      aspectRatioX: '1'
+      aspectRatioY: '1'
+      format: ''
+      quality: '82'
+      retinaSizes:
+        - '1'
+      useAspectRatio: '1'
+      width: '760'
     -
-      __assoc__:
-        -
-          - width
-          - '380'
-        -
-          - useAspectRatio
-          - '1'
-        -
-          - aspectRatioX
-          - '1'
-        -
-          - aspectRatioY
-          - '1'
-        -
-          - retinaSizes
-          -
-            - '1'
-            - '2'
-            - '3'
-        -
-          - quality
-          - '60'
-        -
-          - format
-          - ''
+      aspectRatioX: '1'
+      aspectRatioY: '1'
+      format: ''
+      quality: '60'
+      retinaSizes:
+        - '1'
+        - '2'
+        - '3'
+      useAspectRatio: '1'
+      width: '380'
     -
-      __assoc__:
-        -
-          - width
-          - '100'
-        -
-          - useAspectRatio
-          - '1'
-        -
-          - aspectRatioX
-          - '1'
-        -
-          - aspectRatioY
-          - '1'
-        -
-          - retinaSizes
-          -
-            - '1'
-            - '2'
-            - '3'
-        -
-          - quality
-          - '60'
-        -
-          - format
-          - ''
+      aspectRatioX: '1'
+      aspectRatioY: '1'
+      format: ''
+      quality: '60'
+      retinaSizes:
+        - '1'
+        - '2'
+        - '3'
+      useAspectRatio: '1'
+      width: '100'
 translationKeyFormat: null
 translationMethod: none
 type: nystudio107\imageoptimize\fields\OptimizedImages
