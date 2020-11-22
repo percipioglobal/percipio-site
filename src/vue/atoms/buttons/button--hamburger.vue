@@ -6,14 +6,14 @@
                 :class="[
                     'bg-primary-600 mb-2 block w-12 h-2',
                     'transform transition ease-in-out duration-200',
-                    navOpen ? 'rotate-45 translate-y-2' : ''
+                    getNavigationActive ? 'rotate-45 translate-y-2' : ''
                 ]">
             </span>
             <span 
                 :class="[
                     'bg-primary-600 block w-12 h-2',
                     'transform transition ease-in-out duration-200',
-                    navOpen ? '-rotate-45 -translate-y-2' : ''
+                    getNavigationActive ? '-rotate-45 -translate-y-2' : ''
                 ]">
             </span>
         </span>
@@ -23,15 +23,17 @@
 
 <script>
 
+    import { mapGetters } from 'vuex';
+
     export default {
 
-        data: () => ({
-            navOpen: false,
-        }),
-
+        computed: {
+            ...mapGetters(['getNavigationActive']),
+        },
+        
         methods: {
             toggleMenu() {
-                this.navOpen = !this.navOpen;
+                this.$store.commit('setNavigationActive', !this.getNavigationActive);
             }
         }
 

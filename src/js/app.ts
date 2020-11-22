@@ -1,46 +1,25 @@
-import { dom, library } from '@fortawesome/fontawesome-svg-core';
-import {
-    faFilePdf as farFilePdf,
-    faFileExcel as farFileExcel,
-    faFileWord as farFileWord,
-    faFilePowerpoint as farFilePowerPoint,
-    faFileArchive as farFileArchive,
-    faEnvelope as farEnvelope,
-} from '@fortawesome/free-regular-svg-icons';
-
-import {
-    faCloudDownloadAlt as fasCloudDownloadAlt,
-    faExternalLinkAlt as fasExternalLinkAlt,
-    faPrint as fasPrint,
-} from '@fortawesome/free-solid-svg-icons';
-
-import {
-    faTwitter as fabTwitter,
-    faFacebookF as fabFacebookF,
-    faInstagram as fabInstagram,
-    faLinkedinIn as fabLinkedinIn,
-    faYoutube as fabYoutube,
-    faVimeoV as fabVimeoV,
-    faGithub as fabGithub,
-} from '@fortawesome/free-brands-svg-icons';
-
-// load font-awesome libraries
-library.add(farFilePdf, farFileExcel, farFileWord, farFilePowerPoint, farFileArchive, fasCloudDownloadAlt, fasExternalLinkAlt, fabTwitter, fabFacebookF, farEnvelope, fasPrint, fabInstagram, fabYoutube, fabVimeoV, fabGithub, fabLinkedinIn);
+import { createStore } from './stores/store.js';
 
 // App main
 const site = async () => {
     // Async load the vue module
-    const { default: Vue } = await import(/* webpackChunkName: "vue" */ 'vue');
+    const [ Vue, Lazysizes ] = await Promise.all([
+        import(/* webpackChunkName: "vue" */ 'vue'),
+        import(/* webpackChunkName: "lazysizes" */ 'lazysizes'),
+    ]).then(arr => arr.map(({ default: defaults }) => defaults));
+
+    const store = await createStore(Vue);
 
     const vm = new Vue({
 
         el: '#page-container',
+        store,
         components: {
             'navigation--main': () => import(/* webpackChunkName: "navigation--main" */ '../vue/organisms/navigations/navigation--main.vue'),
         },
-        data: () => ({
-            navOpen: false,
-        }),
+
+        data: () => ({}),
+
         methods: {
 
             // Pre-render pages when the user mouses over a link
@@ -66,17 +45,13 @@ const site = async () => {
                 }
             },
 
-            toggleMenu(){
-                this.navOpen = !this.navOpen;
-            },
-
-            scroll(id){
+            /* scroll(id){
                 document.getElementById(id).scrollIntoView({
                 behavior: 'smooth'
                 });
-            },
+            }, */
 
-            printPage: function () {
+            printPage() {
                 window.print();
             }
 

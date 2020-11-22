@@ -10,6 +10,7 @@ export const createStore = async(Vue) => {
         state: {
             csrf: null,
             gqlToken: null,
+            navigationActive: false,
         },
         getters,
         mutations,
