@@ -12,7 +12,7 @@
 
     {%- endswitch -%}
 
-    <div class="print:hidden my-16 lg:grid grid-cols-8 xl:grid-cols-6 gap-8 relative z-30">
+    <div class="print:hidden my-16 lg:grid grid-cols-8 xl:grid-cols-6 gap-8 relative ">
         {%- for card in cards -%}
             {% switch loop.index % 6 %}
                 {% case 0 or 1 %}

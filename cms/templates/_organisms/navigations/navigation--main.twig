@@ -1,3 +1,13 @@
 {# TODO: Need to parse colours #}
+{% import '_macros/atoms' as render %}
 
-<navigation--main></navigation--main>
+<navigation--main>
+    {{- render.atom('link', 'home', { 
+    
+        url: baseUrl,
+        title: branding.organisationName,
+        icon: branding.icon[0] ??? null,
+        utilities: 'w-16 h-16',
+
+    }) -}}
+</navigation--main>

@@ -3,13 +3,13 @@
 {%- minify -%}
 
 <section>
-    <div class="absolute w-full h-full mt-0 md:mt-48 top-0 z-20 rotate-90">
+    <div class="absolute w-full h-full mt-0 md:mt-48 top-0  rotate-90">
         <svg xmlns="http://www.w3.org/2000/svg" class="transform rotate-25 overflow-visible w-full h-full fill-current text-{{colour}}-800" viewBox="120 120 250 260" >
             <path d="M9 225.2v170.1l382-220V4.7z"/>
         </svg>
     </div>
     <div class="flex mt-40 md:mt-64 relative">
-        <div class="flex flex-col h-auto justify-center mx-auto p-8 lg:p-0 md:min-w-screen-md md:max-w-screen-md relative z-30">
+        <div class="flex flex-col h-auto justify-center mx-auto p-8 lg:p-0 md:min-w-screen-md md:max-w-screen-md relative ">
             <div class="w-full text-white-100 leading-tight text-base md:text-lg font-mono tracking-tighter">
                 <h6>{{- render.atom('text', 'content', { content: content.overline }) -}}</h6>
             </div>
