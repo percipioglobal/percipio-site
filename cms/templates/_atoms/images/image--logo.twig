@@ -23,7 +23,7 @@
 {# Render Logo #}
 
 {% spaceless %}
-	<a href="{{- values.url -}}" class="block relative z-1" title="{{values.title}}">
-        {{ svg(values.svg, sanitize=true)|attr({ class: values.style }) }}
+	<a href="{{- values.url -}}" class="block relative z-1" title="{{- values.title -}}">
+        {{- svg(values.svg, sanitize=true)|attr({ class: values.style }) -}}
 	</a>
 {% endspaceless %}

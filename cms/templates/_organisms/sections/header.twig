@@ -1,3 +1,19 @@
-<header id="page-header">
-     {%- include '_organisms/sections/navigation' -%}
+{% import '_macros/atoms' as render %}
+
+<header class="py-16">
+
+     <div class="container mx-auto flex">
+
+          {{- render.atom('link', 'home', { 
+               
+               url: baseUrl,
+               title: branding.organisationName,
+               icon: branding.icon[0] ??? null,
+               utilities: 'w-16 h-16',
+
+          }) -}}
+
+          {%- include '_organisms/navigations/navigation--main' -%}
+
+     </div>
 </header>

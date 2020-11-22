@@ -1,0 +1,31 @@
+{# 
+    ### OPTIONS ###
+    ---------------
+
+    url: (STR) -- the url for the button
+    title: (STR) -- the title attribute
+    logo: (OBJ) -- the image object
+    style: (STR) -- the styling classes for the logo
+
+#}
+
+{% set values = {
+    url: options.url,
+    title: options.title ?? '',
+    logo: options.icon ??? null,
+    utilities: options.utilities ?? '',
+} %}
+
+<a 
+    href="{{- values.url -}}"
+    title="{{- values.title -}}"
+>
+
+    {% switch values.logo.extension %}
+
+        {% case "svg" %}
+
+            {{- svg(values.logo, sanitize=true) | attr({ class: values.utilities }) -}}  
+
+    {% endswitch %}
+</a>

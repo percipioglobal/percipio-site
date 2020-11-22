@@ -34,7 +34,10 @@ const site = async () => {
 
     const vm = new Vue({
 
-        el: '#page-header',
+        el: '#page-container',
+        components: {
+            'navigation--main': () => import(/* webpackChunkName: "navigation--main" */ '../vue/organisms/navigations/navigation--main.vue'),
+        },
         data: () => ({
             navOpen: false,
         }),
