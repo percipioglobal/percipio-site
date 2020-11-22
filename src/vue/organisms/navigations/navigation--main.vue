@@ -1,18 +1,16 @@
 <template>
 
-
-    <nav class="fixed z-10">
+    <nav class="fixed z-10 bg-white-100 w-full">
 
         <div class="container mx-auto flex items-center py-8">
 
             <slot></slot>
 
             <button--hamburger></button--hamburger>
+
             <navigation--drawer></navigation--drawer>
 
         </div>
-
-        
 
     </nav>
     

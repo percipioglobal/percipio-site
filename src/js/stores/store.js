@@ -9,8 +9,10 @@ export const createStore = async(Vue) => {
     return new Vuex.Store({
         state: {
             csrf: null,
-            gqlToken: null,
+            gqlNavigationToken: null,
             navigationActive: false,
+            navigationPrimary: null,
+            socialMediaLinks: null,
         },
         getters,
         mutations,
