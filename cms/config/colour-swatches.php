@@ -6,7 +6,7 @@
  *
  * @link      https://percipio.london
  *
- * @copyright Copyright (c) 2020 Percipio Global Ltd.
+ * @copyright Copyright (c) 2020 Percipio.London
  */
 
 /**

@@ -1,6 +1,6 @@
 {
     "author": {
-        "name": "Percipio Global Ltd.",
+        "name": "Percipio.London",
         "email": "hello@percipio.london",
         "url": "https://sandbox.percipio.london"
     },
@@ -49,7 +49,7 @@
         "vuex-persistedstate": "^2.7.1",
         "vuex-shared-mutations": "^1.0.2"
     },
-    "description": "Percipio Global Ltd. brand website",
+    "description": "Percipio.London brand website",
     "devDependencies": {
         "@babel/core": "^7.12.3",
         "@babel/plugin-proposal-class-properties": "^7.12.1",

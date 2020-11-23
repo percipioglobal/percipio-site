@@ -8,7 +8,7 @@ module.exports = {
     alias: {
         'vue$': 'vue/dist/vue.esm.js'
     },
-    copyright: '©2020 Percipio Global Ltd.',
+    copyright: '©2020 Percipio.London',
     entry: {
         'app': [
             '../src/js/app.ts',
