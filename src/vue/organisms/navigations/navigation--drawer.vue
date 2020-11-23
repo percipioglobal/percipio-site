@@ -30,12 +30,10 @@
                     </a>
 
                 </div>
-                
-
 
                 <!-- social media links -->
 
-                <div class="space-y-2" v-if="getSocialMediaLinks.socialMedia">
+                <div class="space-y-2" v-if="getSocialMediaLinks">
 
                     <a 
                         v-for="social in getSocialMediaLinks.socialMedia" 
@@ -53,11 +51,7 @@
 
             </div>
 
-            
-
         </div>
-
-        
 
     </aside>
 </template>
