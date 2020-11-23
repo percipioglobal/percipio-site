@@ -43,45 +43,133 @@ fields:
       enableElementCache: false
       enableTitle: false
       typeSettings:
-        asset:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
-        category:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
-        custom:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        email:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        entry:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
-        site:
-          enabled: false
-          sites: '*'
-        tel:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        url:
-          allowAliases: false
-          disableValidation: false
-          enabled: true
-        user:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - site
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - sites
+                  - '*'
+          -
+            - user
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - custom
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - true
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
@@ -96,29 +184,71 @@ fields:
       optgroups: true
       options:
         -
-          default: ''
-          label: Twitter
-          value: twitter
+          __assoc__:
+            -
+              - label
+              - Twitter
+            -
+              - value
+              - twitter
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: Facebook
-          value: facebook
+          __assoc__:
+            -
+              - label
+              - Facebook
+            -
+              - value
+              - facebook
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: Instagram
-          value: instagram
+          __assoc__:
+            -
+              - label
+              - Instagram
+            -
+              - value
+              - instagram
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: YouTube
-          value: youtube
+          __assoc__:
+            -
+              - label
+              - YouTube
+            -
+              - value
+              - youtube
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: Vimeo
-          value: vimeo
+          __assoc__:
+            -
+              - label
+              - Vimeo
+            -
+              - value
+              - vimeo
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: GitHub
-          value: github
+          __assoc__:
+            -
+              - label
+              - GitHub
+            -
+              - value
+              - github
+            -
+              - default
+              - ''
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
