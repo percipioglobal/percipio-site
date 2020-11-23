@@ -5,8 +5,7 @@
     <div class="container max-w-screen-lg mx-auto py-20">
 
         <h1 class="sr-only">
-            {# TODO: add Global for organisationName #}
-            Percipio.London : {{- render.atom('text', 'title', { content: content.heading }) -}}
+            {{- seomatic.site.identity.genericName -}}: {{- render.atom('text', 'title', { content: content.heading }) -}}
         </h1>
 
         <h2 class="font-extrabold leading-tight text-6xl text-gray-800 max-w-2xl">
