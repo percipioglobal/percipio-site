@@ -2,7 +2,7 @@
     <aside
         :class="[
             'transform inset-0 bg-white-90 min-h-screen fixed h-full overflow-auto ease-in-out transition-opacity duration-300 -z-10 pt-32',
-            getNavigationActive ? 'opacity-100' : 'opacity-0'
+            getNavigationActive ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
             ]"
     >
 
