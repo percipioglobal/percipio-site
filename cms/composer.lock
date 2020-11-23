@@ -67,16 +67,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.163.1",
+            "version": "3.163.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "7b6948915654f0f94847ccaf51172fa1a7f1cc59"
+                "reference": "ef46d2daf80f2a21809608ada7ba76dddfd103cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/7b6948915654f0f94847ccaf51172fa1a7f1cc59",
-                "reference": "7b6948915654f0f94847ccaf51172fa1a7f1cc59",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ef46d2daf80f2a21809608ada7ba76dddfd103cd",
+                "reference": "ef46d2daf80f2a21809608ada7ba76dddfd103cd",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.163.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.163.2"
             },
-            "time": "2020-11-19T19:26:10+00:00"
+            "time": "2020-11-20T19:13:16+00:00"
         },
         {
             "name": "cakephp/core",
@@ -4333,16 +4333,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.3.23",
+            "version": "3.3.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "b908f4ea4389e86bc1cd8977d88f2659f10a504c"
+                "reference": "35bf58761613bf40c71d80a973f875ff41c0ab7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/b908f4ea4389e86bc1cd8977d88f2659f10a504c",
-                "reference": "b908f4ea4389e86bc1cd8977d88f2659f10a504c",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/35bf58761613bf40c71d80a973f875ff41c0ab7c",
+                "reference": "35bf58761613bf40c71d80a973f875ff41c0ab7c",
                 "shasum": ""
             },
             "require": {
@@ -4410,9 +4410,9 @@
             "support": {
                 "docs": "https://nystudio107.com/plugins/seomatic/documentation",
                 "issues": "https://nystudio107.com/plugins/seomatic/support",
-                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.3.23"
+                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.3.24"
             },
-            "time": "2020-11-18T16:51:42+00:00"
+            "time": "2020-11-23T17:11:27+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -6064,16 +6064,16 @@
         },
         {
             "name": "putyourlightson/craft-blitz-recommendations",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-blitz-recommendations.git",
-                "reference": "d06630f3172a569404c14706b7d30e85f26055c2"
+                "reference": "25ae49355ae6c53a80ab9cde060102e77309eb36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-blitz-recommendations/zipball/d06630f3172a569404c14706b7d30e85f26055c2",
-                "reference": "d06630f3172a569404c14706b7d30e85f26055c2",
+                "url": "https://api.github.com/repos/putyourlightson/craft-blitz-recommendations/zipball/25ae49355ae6c53a80ab9cde060102e77309eb36",
+                "reference": "25ae49355ae6c53a80ab9cde060102e77309eb36",
                 "shasum": ""
             },
             "require": {
@@ -6104,7 +6104,7 @@
                 "issues": "https://github.com/putyourlightson/craft-blitz-recommendations/issues",
                 "source": "https://github.com/putyourlightson/craft-blitz-recommendations"
             },
-            "time": "2020-06-29T07:52:05+00:00"
+            "time": "2020-10-06T09:27:19+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -6416,16 +6416,16 @@
         },
         {
             "name": "sebastianlenz/craft-utils",
-            "version": "2.2.8",
+            "version": "2.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastian-lenz/craft-utils.git",
-                "reference": "8d7a06e700853e93bea70847a4c952d345471590"
+                "reference": "0f8137f940bf04bf33151e4ca3418f9b783d49ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastian-lenz/craft-utils/zipball/8d7a06e700853e93bea70847a4c952d345471590",
-                "reference": "8d7a06e700853e93bea70847a4c952d345471590",
+                "url": "https://api.github.com/repos/sebastian-lenz/craft-utils/zipball/0f8137f940bf04bf33151e4ca3418f9b783d49ec",
+                "reference": "0f8137f940bf04bf33151e4ca3418f9b783d49ec",
                 "shasum": ""
             },
             "require": {
@@ -6444,9 +6444,9 @@
             ],
             "description": "A collection of utility classes for Craft CMS development",
             "support": {
-                "source": "https://github.com/sebastian-lenz/craft-utils/tree/2.2.8"
+                "source": "https://github.com/sebastian-lenz/craft-utils/tree/2.2.9"
             },
-            "time": "2020-08-12T18:32:29+00:00"
+            "time": "2020-11-18T17:10:14+00:00"
         },
         {
             "name": "sebastianlenz/linkfield",
