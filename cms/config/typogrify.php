@@ -193,7 +193,7 @@ return [
     "set_style_ampersands" => true,
 
     // wrap caps in <span class="caps">
-    "set_style_caps" => true,
+    "set_style_caps" => false,
 
     // wrap initial quotes in <span class="quo"> or <span class="dquo">
     "set_style_initial_quotes" => true,
