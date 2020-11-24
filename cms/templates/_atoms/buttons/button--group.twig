@@ -21,10 +21,9 @@
     <div class="my-4 {{ values.utilities ? values.utilities : '' -}}">
         {%- if values.buttons -%}
             {%- for button in values.buttons -%}
-                {{- render.atom('button', options.type, {
+                {{- render.atom('button', values.type, {
                     url: button.target.getUrl(),
                     text: button.target.getText(),
-                    utilities: not loop.last ? 'mr-4' : '',
                 }) -}}
             {%- endfor -%}
         {%- endif -%}
