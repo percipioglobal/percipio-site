@@ -67,6 +67,24 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: c0083422-e548-49c9-9db5-a2477942038d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 01b78fde-8a32-4ecc-b1b0-abf0661898ce
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: fd71a6c2-749b-4db5-9f9e-29d0f1766834
             instructions: null
             label: null
@@ -80,37 +98,6 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 01b78fde-8a32-4ecc-b1b0-abf0661898ce
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: da9598dc-e9bb-4920-8adf-a712876cb578
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: cb2b1336-5ccd-48f4-a973-72fae9fd4069
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: SEO
-        sortOrder: 3
-      -
-        elements:
-          -
             fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e
             instructions: null
             label: null
@@ -120,7 +107,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: Options
-        sortOrder: 4
+        sortOrder: 3
 handle: teamMember
 hasTitleField: true
 name: 'Team Member'

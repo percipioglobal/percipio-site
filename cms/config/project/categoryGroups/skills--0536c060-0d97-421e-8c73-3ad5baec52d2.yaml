@@ -37,13 +37,13 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: teamCategories
-name: 'Team Categories'
+handle: skills
+name: Skills
 siteSettings:
   5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
     hasUrls: false
     template: null
     uriFormat: null
 structure:
-  maxLevels: 2
+  maxLevels: 1
   uid: 481368f4-8f76-425c-b1aa-458f87f3c575

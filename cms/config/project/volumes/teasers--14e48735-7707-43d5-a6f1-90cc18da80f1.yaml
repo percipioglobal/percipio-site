@@ -27,24 +27,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6962a9b1-b802-4295-82b1-398470a9f54c
-            instructions: null
-            label: null
-            required: '0'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: dcdd5839-4bb5-4669-8d82-d46ec4da660a
-            instructions: null
-            label: null
-            required: '0'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
             fieldUid: 35a1d959-d78e-4445-891c-7bb671c48281
             instructions: null
             label: null
