@@ -42,7 +42,7 @@ return [
         'personBirthPlace'             => '',
         'organizationDuns'             => '',
         'organizationFounder'          => 'Jamie Taylor',
-        'organizationFoundingDate'     => '2014-06-12',
+        'organizationFoundingDate'     => '2010-11-30',
         'organizationFoundingLocation' => 'Hackney, London',
         'organizationContactPoints'    => [],
         'corporationTickerSymbol'      => '',
