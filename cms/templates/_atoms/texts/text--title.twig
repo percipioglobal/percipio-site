@@ -15,5 +15,5 @@
 {# Render Title #}
 
 {% spaceless %}
-    {{- values.content | escape | typogrify(true) | wordLimit(values.words) -}}
+    {{- values.content | typogrify(true) | wordLimit(values.words) | raw -}}
 {% endspaceless %}
