@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 648e7555-63ed-4228-a6b7-7811c865a7af
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
             instructions: null
             label: null
             required: false
@@ -41,9 +41,9 @@ handle: teamCategories
 name: 'Team Categories'
 siteSettings:
   5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
-    hasUrls: true
-    template: _organisms/_page
-    uriFormat: 'team-categories/{slug}'
+    hasUrls: false
+    template: null
+    uriFormat: null
 structure:
-  maxLevels: null
+  maxLevels: 2
   uid: 481368f4-8f76-425c-b1aa-458f87f3c575

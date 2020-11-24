@@ -4,19 +4,6 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 7284a4e9-959f-4457-97be-aaaf3324c820
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: Hero
-        sortOrder: 1
-      -
-        elements:
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -40,6 +27,15 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: e691301b-7484-40be-a3d4-c3bc590de959
             instructions: null
             label: null
@@ -49,7 +45,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: Content
-        sortOrder: 2
+        sortOrder: 1
       -
         elements:
           -
@@ -79,6 +75,10 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+        name: Metadata
+        sortOrder: 2
+      -
+        elements:
           -
             fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e
             instructions: null
@@ -88,30 +88,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Metadata
+        name: Options
         sortOrder: 3
-      -
-        elements:
-          -
-            fieldUid: da9598dc-e9bb-4920-8adf-a712876cb578
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: cb2b1336-5ccd-48f4-a973-72fae9fd4069
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: SEO
-        sortOrder: 4
 handle: blog
 hasTitleField: true
 name: Blog
