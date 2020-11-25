@@ -13,7 +13,7 @@
 
 <div class="{{- utilities -}}">
 
-    <div class="bg-{{- colors.primary }} border-b-4 border-{{- colors.secondary -}}">
+    <div class="relative bg-{{- colors.primary }} border-b-4 border-{{- colors.secondary -}}">
 
         {{- render.atom('image', 'teaser', { 
                 image: member.teaserImage[0], 
@@ -46,6 +46,10 @@
             }) -}}
 
         </div>
+
+        <a href="{{- member.url -}}" class="absolute inset-0">
+            <span class="sr-only">Read more about {{- member.title -}}</span>
+        </a>
 
     </div>
 

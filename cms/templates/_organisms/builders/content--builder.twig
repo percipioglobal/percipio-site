@@ -1,18 +1,19 @@
 {% do craft.eagerBeaver.eagerLoadElements(entry, [
     'contentBuilder',
-    'highlightCards.cards',
-    'sectionHeader.buttons',
-    'singleImage.image',
-    'galleryImages.images',
-    'slide.image',
-    'resources.target',
-    'faqList.questions',
-    'faqList.questions.faqCategory',
+    'contentBuilder.highlightCards:cards',
+    'contentBuilder.contentGrid:items',
+    'contentBuilder.sectionHeader:buttons',
+    'contentBuilder.singleImage:image',
+    'contentBuilder.galleryImages:images',
+    'contentBuilder.slide:image',
+    'contentBuilder.resources:target',
+    'contentBuilder.faqList:questions',
+    'contentBuilder.faqList:questions.faqCategory',
     'author.profilePhoto',
     ])
 %}
 
-<div class="container max-w-screen-xl mx-auto">
+<div class="container mx-auto">
 
     {%- minify -%}
         {%- for block in content.contentBuilder -%}
@@ -22,12 +23,21 @@
 
                     {%- include '_molecules/content/content--article' ignore missing with {
                         content: block,
+                        prose: 'md:prose-2xl',
                     } -%}
 
                 {%- case "blockQuote" -%}
 
                     {%- include '_molecules/quotes/quotes--block' ignore missing with {
                         content: block,
+                    } -%}
+
+                {%- case "contentGrid" -%}
+
+                    {%- include '_organisms/grids/grid--content' ignore missing with {
+                        grid: block,
+                        spacing: 8,
+                        prose: 'md:prose-xl',
                     } -%}
 
                 {%- case "sectionHeader" -%}

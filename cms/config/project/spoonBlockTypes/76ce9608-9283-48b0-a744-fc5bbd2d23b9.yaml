@@ -1,6 +1,7 @@
 context: global
 field: e691301b-7484-40be-a3d4-c3bc590de959
-groupName: Article
-groupSortOrder: '1'
+fieldLayout: null
+groupName: Quotes
+groupSortOrder: 3
 matrixBlockType: de0ad924-50fa-43fc-9790-e44bf330cdd2
-sortOrder: '3'
+sortOrder: 1

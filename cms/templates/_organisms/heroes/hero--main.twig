@@ -15,7 +15,7 @@
             </h2>
     
             {% if content.description %}
-                <div class="max-w-2xl prose-lg mt-12 text-white-100">
+                <div class="max-w-2xl prose prose-lg mt-12 text-white-100">
                     {{- render.atom('text', 'content', { content: content.description }) -}}
                 </div>
             {% endif %}
@@ -37,8 +37,3 @@
     </div>
 
 </section>
-
-{#{{ render.atom('date', 'jobdays', { 
-                        date: member.startDate,
-                        utilities: 'mb-4',
-                    }) }}#}

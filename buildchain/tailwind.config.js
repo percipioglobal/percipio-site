@@ -17,6 +17,17 @@ module.exports = {
         }
     },
     theme: {
+        typography: (theme) => ({
+            default: {
+                css: {
+                    // maxWidth: '80ch',
+                    maxWidth: theme('maxWidth.screens.lg'),
+                    strong: {
+                        color: theme('colors.white.100'),
+                    },
+                }
+            },
+        }),
         extend: {
 
             screens: {

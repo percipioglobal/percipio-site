@@ -6,6 +6,7 @@
     author: (STR) -- The author of the image - optional
     source: (STR) -- The image source - optinal
     id: (STR) -- id for accessibility match with figure - required
+    swatch: (OBJ) -- swatch containing primary and secondary colours ( optional )
 
 #}
 
@@ -15,12 +16,13 @@
     author: options.author ??? null,
     source: options.source ??? null,
     id: options.id ??? 'now'|date('U'),
+    swatch: options.swatch ??? null,
 
 } %}
 
 {% spaceless %}
 
-    <figcaption id="{{- values.id -}}" class="text-center text-sm text-gray-500 italic">
+    <figcaption id="{{- values.id -}}" class="text-center text-base text-white-100 border-b-2 italic py-4 {{ values.swatch ? 'bg-' ~ values.swatch.primary ~ ' border-' ~ values.swatch.secondary : 'border-gray-700 bg-gray-500' -}}">
 
         {{- values.caption }}
 

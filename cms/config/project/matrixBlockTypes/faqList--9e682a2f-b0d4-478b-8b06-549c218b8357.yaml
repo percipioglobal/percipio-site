@@ -30,8 +30,7 @@ fields:
       selectionLabel: 'Add questions'
       showSiteMenu: true
       source: null
-      sources:
-        - 'section:47b7409b-e345-48d9-b684-06ec0a2972f5'
+      sources: '*'
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null
@@ -40,4 +39,4 @@ fields:
     type: craft\fields\Entries
 handle: faqList
 name: 'FAQ List'
-sortOrder: 9
+sortOrder: 10

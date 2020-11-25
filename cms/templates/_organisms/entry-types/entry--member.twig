@@ -1,0 +1,15 @@
+{%- do craft.eagerBeaver.eagerLoadElements(entry, [
+        'teaserImage',
+        'skillCategories'
+    ])
+-%}
+
+{%- include '_organisms/heroes/hero--member' with {
+    member: entry,
+} -%}
+
+
+{%- include '_organisms/builders/content--builder' with {
+    content: entry,
+} -%}
+

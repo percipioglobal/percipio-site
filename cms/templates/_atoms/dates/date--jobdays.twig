@@ -14,7 +14,7 @@
 {% block date %}
 
     {%- minify -%}
-        <span class="block text-lg text-black-100 {{ values.utilities -}}">
+        <span class="{{ values.utilities -}}">
             <strong>Days on the job: </strong>
             <time datetime="">{{- function.total_days(values.date) -}}</time>
         </span>

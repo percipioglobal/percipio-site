@@ -45,13 +45,27 @@ fields:
       optgroups: true
       options:
         -
-          default: '1'
-          label: 'File Icon'
-          value: fileIcon
+          __assoc__:
+            -
+              - label
+              - 'File Icon'
+            -
+              - value
+              - fileIcon
+            -
+              - default
+              - '1'
         -
-          default: ''
-          label: Download
-          value: 'far fa-download-cloud-alt'
+          __assoc__:
+            -
+              - label
+              - Download
+            -
+              - value
+              - 'far fa-download-cloud-alt'
+            -
+              - default
+              - ''
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown

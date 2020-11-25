@@ -14,6 +14,15 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: f7cf0694-24fa-4e41-943b-40abaddc797a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
             fieldUid: 4133e37a-d625-476e-91aa-a600e0123064
             instructions: null
             label: null
@@ -21,49 +30,10 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
-          -
-            fieldUid: 37051ce6-f0ea-4d54-97a5-e8c0f304f99c
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 7931c097-151d-4681-920d-d3f6004afc0e
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
+            width: 50
         name: Content
         sortOrder: 1
 fields:
-  37051ce6-f0ea-4d54-97a5-e8c0f304f99c:
-    contentColumnType: string
-    fieldGroup: null
-    handle: quoteType
-    instructions: 'Choose the type of quote.'
-    name: Type
-    searchable: false
-    settings:
-      optgroups: true
-      options:
-        -
-          default: '1'
-          label: 'Block Quote'
-          value: blockQuote
-        -
-          default: ''
-          label: 'Pull Quote'
-          value: pullQuote
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
   3ef3485e-6187-4dac-af6b-66d630852b61:
     contentColumnType: text
     fieldGroup: null
@@ -101,67 +71,155 @@ fields:
       enableElementCache: false
       enableTitle: false
       typeSettings:
-        asset:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
-        category:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
-        custom:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        email:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        entry:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: true
-          sources: '*'
-        site:
-          enabled: false
-          sites: '*'
-        tel:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        url:
-          allowAliases: false
-          disableValidation: false
-          enabled: true
-        user:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - true
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - site
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - sites
+                  - '*'
+          -
+            - user
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - custom
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - true
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
-  7931c097-151d-4681-920d-d3f6004afc0e:
-    contentColumnType: string
+  f7cf0694-24fa-4e41-943b-40abaddc797a:
+    contentColumnType: text
     fieldGroup: null
-    handle: position
-    instructions: 'The position field only has an influence when the type Pull Quote has been selected.'
-    name: Position
+    handle: quoteAuthor
+    instructions: ''
+    name: 'Quote Author'
     searchable: false
     settings:
-      default: full
-      options:
-        center: ''
-        drop-left: ''
-        drop-right: ''
-        full: ''
-        left: '1'
-        right: '1'
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
-    type: rias\positionfieldtype\fields\Position
+    type: craft\fields\PlainText
 handle: blockQuote
 name: Quotation
-sortOrder: 3
+sortOrder: 4

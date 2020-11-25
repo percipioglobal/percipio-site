@@ -13,6 +13,7 @@
     caption: (STR) -- The caption text ( optional )
     author: (STR) -- The author of the image ( optional )
     source: (STR) -- The image source ( optional )
+    swatch: (OBJ) -- swatch containing primary and secondary colours ( optional )
 
     ## ADDED 
 
@@ -27,7 +28,7 @@
 
     {%- set values = values|merge({
         optimized: options.image.optimizeArticles ??? null,
-        placeholder: options.placeholders.articlePlaceholder[0].optimizeArticles ??? null
+        placeholder: options.placeholders.articlePlaceholder[0].optimizeArticles ??? null,
     }) -%}
 
     {%- minify -%}
@@ -65,6 +66,7 @@
                     author: values.author,
                     source: values.source,
                     id: values.alt ~ '-' ~ values.image.id,
+                    swatch: values.swatch ??? null,
                 }) -}}
 
             {% endif %}

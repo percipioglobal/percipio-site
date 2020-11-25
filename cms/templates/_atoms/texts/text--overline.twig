@@ -9,8 +9,13 @@
 #}
 
 {% block text %}
+
+    {%- set values = values|merge({
+        utilities: options.utilities ??? 'text-white-100',
+    }) -%}
+
     {%- minify -%}
-        <span class="break-words font-mono mb-1 text-sm text-white-100">
+        <span class="inline-block break-words font-mono mb-1 text-base {{ values.utilities -}}">
             {{- values.content | typogrify(true) -}}
         </span>
     {%- endminify -%}

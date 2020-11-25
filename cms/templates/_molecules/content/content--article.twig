@@ -1,33 +1,14 @@
 {% import '_macros/atoms' as render %}
 
-{% if block.getPrev() %}
-
-    {% if block.getPrev().type == 'blockQuote' and block.getPrev().quoteType == 'pullQuote' %}
-        {% set quote = true %}
-    {% endif %}
-
-    {% if block.getPrev().type == 'singleImage' and (block.getPrev().position == 'left' or block.getPrev().position == 'right') %}
-        {% set image = true %}
-    {% endif %}
-
-{% endif %}
-
-{% set article = {
-    content: content.article,
-    options: {
-        hasQuote: quote ?? null,
-        hasImage: image ?? null,
-    }
-} %}
-
-{% set collapse = false %}
-
-{% if article.options.hasQuote or article.options.hasImage %}
-    {% set collapse = true %}
-{% endif %}
-
 {%- minify -%}
-    <section class="article prose md:prose-2xl mb-8 px-4 md:px-0 text-green-900 sm:mx-4 md:mx-auto">
-        {{- render.atom('text', 'content', { content: content.article }) -}}
-    </section>
+    <div class="my-16">
+
+        {# TODO set maxwidth breakpoints #}
+        <div class="container mx-auto max-w-screen-lg">
+            <div class="prose prose {{ prose ? prose : '' -}}">
+                {{- render.atom('text', 'content', { content: content.article }) -}}
+            </div>
+        </div>
+        
+    </div>
 {%- endminify -%}

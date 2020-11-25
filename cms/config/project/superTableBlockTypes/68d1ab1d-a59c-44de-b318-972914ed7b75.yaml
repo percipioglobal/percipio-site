@@ -1,0 +1,133 @@
+field: 4610a356-a212-46cd-a7a1-6286620e89ef
+fieldLayouts:
+  865c9e91-fe72-4841-886c-dc7ce1eb16e7:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 33274ae4-f375-4070-b42c-f1cef4e48a81
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 247bfb7d-d077-42ee-b2ba-84feb1b3fd19
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0c7a7b67-3926-4a9f-b449-8d1d1c451f2f
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0c7a7b67-3926-4a9f-b449-8d1d1c451f2f:
+    contentColumnType: string
+    fieldGroup: null
+    handle: width
+    instructions: ''
+    name: Width
+    searchable: true
+    settings:
+      default: 1/3
+      options:
+        __assoc__:
+          -
+            - 1/6
+            - ''
+          -
+            - 1/5
+            - ''
+          -
+            - 1/4
+            - '1'
+          -
+            - 1/3
+            - '1'
+          -
+            - 2/5
+            - '1'
+          -
+            - 1/2
+            - '1'
+          -
+            - 3/5
+            - '1'
+          -
+            - 2/3
+            - '1'
+          -
+            - 3/4
+            - '1'
+          -
+            - 4/5
+            - ''
+          -
+            - 5/6
+            - ''
+          -
+            - full
+            - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\widthfieldtype\fields\Width
+  247bfb7d-d077-42ee-b2ba-84feb1b3fd19:
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: ''
+    name: Content
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Content.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  33274ae4-f375-4070-b42c-f1cef4e48a81:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
