@@ -6,14 +6,8 @@
 
 #}
 
-{%- set placeholder = craft.globalSets()
-    .handle('placeholders')
-    .with(['brandingPlaceholder'])
-    .one()
--%}
-
 {% set values = {
-    svg: options.svg ??? placeholder.brandingPlaceholder[0],
+    svg: options.svg ??? options.placeholder.brandingPlaceholder[0],
     type: options.type ??? "logo",
     url: options.url ??? alias('@web') ~ '/',
     title: options.title ??? "",
@@ -22,8 +16,8 @@
 
 {# Render Logo #}
 
-{% spaceless %}
+{%- minify -%}
 	<a href="{{- values.url -}}" class="block relative z-1" title="{{- values.title -}}">
-        {{- svg(values.svg, sanitize=true)|attr({ class: values.style }) -}}
+        {{- swatch ? svg(values.svg) : svg(values.svg, sanitize=true)|attr({ class: values.style }) -}}
 	</a>
-{% endspaceless %}
+{%- minify -%}

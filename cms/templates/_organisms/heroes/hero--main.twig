@@ -10,23 +10,27 @@
                 {{- seomatic.site.identity.genericName -}}: {{- render.atom('text', 'title', { content: content.heading }) -}}
             </h1>
     
-            <h2 class="font-extrabold leading-tight text-6xl text-gray-800 max-w-2xl">
+            <h2 class="font-extrabold leading-tight text-6xl text-white-100 max-w-2xl">
                 {{- render.atom('text', 'title', { content: content.heading }) -}}
             </h2>
     
             {% if content.description %}
-                <div class="max-w-2xl prose-lg mt-12">
+                <div class="max-w-2xl prose-lg mt-12 text-white-100">
                     {{- render.atom('text', 'content', { content: content.description }) -}}
                 </div>
             {% endif %}
+
+            {% if content.buttons %}
     
-            {{- render.atom('button', 'group', { 
-        
-                buttons: content.buttons,
-                type: 'primary',
-                utilities: 'mt-12 space-x-4',
+                {{- render.atom('button', 'group', { 
             
-            }) -}}
+                    buttons: content.buttons,
+                    type: 'primary',
+                    utilities: 'mt-12 space-x-4',
+                
+                }) -}}
+
+            {% endif %}
 
         </div>
 

@@ -4,14 +4,16 @@
         <span class="">
             <span 
                 :class="[
-                    'bg-primary-600 mb-2 block w-12 h-2',
+                    'bg-' + color,
+                    'mb-2 block w-12 h-2',
                     'transform transition ease-in-out duration-200',
                     getNavigationActive ? 'rotate-45 translate-y-2' : ''
                 ]">
             </span>
             <span 
                 :class="[
-                    'bg-primary-600 block w-12 h-2',
+                    'bg-' + color,
+                    'block w-12 h-2',
                     'transform transition ease-in-out duration-200',
                     getNavigationActive ? '-rotate-45 -translate-y-2' : ''
                 ]">
@@ -26,6 +28,13 @@
     import { mapGetters } from 'vuex';
 
     export default {
+
+        props: {
+            color: {
+                type: String,
+                required: true,
+            }
+        },
 
         computed: {
             ...mapGetters(['getNavigationActive']),

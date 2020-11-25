@@ -6,7 +6,7 @@
 
             <slot></slot>
 
-            <button--hamburger></button--hamburger>
+            <button--hamburger :color="color"></button--hamburger>
 
             <navigation--drawer></navigation--drawer>
 
@@ -19,6 +19,13 @@
 <script>
 
     export default {
+        props: {
+            color: {
+                type: String,
+                required: false,
+                default: 'blue-600',
+            }
+        },
         components: {
             'button--hamburger': () => import(/* webpackChunkName: "button--hamburger" */ '../../atoms/buttons/button--hamburger.vue'),
             'navigation--drawer': () => import(/* webpackChunkName: "navigation--drawer" */ './navigation--drawer.vue'),

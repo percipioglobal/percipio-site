@@ -1,32 +1,23 @@
-{# 
-    ### OPTIONS ###
-    ---------------
-
-    url: (STR) -- the url for the button
-    title: (STR) -- the title attribute
-    logo: (OBJ) -- the image object
-    style: (STR) -- the styling classes for the logo
-    type: (STR) -- the type of the logo image
-
-#}
+{% if options.swatch %}
+    {% set logo %}
+        {% include '_atoms/svgs/svg--logo.svg' with { swatch: options.swatch } %}
+    {% endset %}
+{% endif %}
 
 {% set values = {
     url: options.url,
     title: options.title ?? '',
-    logo: options.icon ??? null,
+    logo: options.swatch ? logo : options.logo ??? options.placeholder.brandingPlaceholder[0],
     utilities: options.utilities ?? '',
 } %}
+
+{% set svg = options.swatch ? values.logo : svg(values.logo, sanitize = true) %}
 
 <a 
     href="{{- values.url -}}"
     title="{{- values.title -}}"
 >
 
-    {% switch values.logo.extension %}
+    {{- svg | attr({ class: values.utilities }) -}}
 
-        {% case "svg" %}
-
-            {{- svg(values.logo, sanitize=true) | attr({ class: values.utilities }) -}}  
-
-    {% endswitch %}
 </a>
