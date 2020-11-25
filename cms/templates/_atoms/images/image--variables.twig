@@ -9,14 +9,9 @@
     caption: (STR) -- The caption text ( optional )
     author: (STR) -- The author of the image ( optional )
     source: (STR) -- The image source ( optional )
+    placeholder: (OBJ) -- The object that contains all placeholders ( required )
 
 #}
-
-{%- set placeholder = craft.globalSets()
-    .handle('placeholders')
-    .with(['articlePlaceholder', 'photoCoverPlaceholder', 'profilePhotoPlaceholder', 'sliderPlaceholder', 'teaserPlaceholder', 'heroPlaceholder', 'brandingPlaceholder'])
-    .one()
--%}
 
 {% set values = {
 
@@ -27,6 +22,7 @@
     caption: options.caption ??? null,
     author: options.author ??? null,
     source: options.source ??? null, 
+    placeholders: options.placeholders,
 
 } %}
 

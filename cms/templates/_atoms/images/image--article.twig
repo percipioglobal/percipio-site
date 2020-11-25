@@ -27,7 +27,7 @@
 
     {%- set values = values|merge({
         optimized: options.image.optimizeArticles ??? null,
-        placeholder: placeholder.articlePlaceholder[0].optimizeArticles ??? null
+        placeholder: options.placeholders.articlePlaceholder[0].optimizeArticles ??? null
     }) -%}
 
     {%- minify -%}

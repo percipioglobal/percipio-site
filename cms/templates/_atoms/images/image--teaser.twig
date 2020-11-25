@@ -22,7 +22,7 @@
 
     {%- set values = values|merge({
         optimized: options.image.optimizeTeasers,
-        placeholder: placeholder.teaserPlaceholder[0].optimizeTeasers ??? null,
+        placeholder: options.placeholders.teaserPlaceholder[0].optimizeTeasers ??? null,
     }) -%}
 
     {%- minify -%}

@@ -11,7 +11,13 @@
         <div class="flex flex-wrap lg:flex-no-wrap justify-between w-full">
         {# must be SVG's #}
         {%- for client in clients -%}
-            {{- render.atom('image', 'partner', { image: client.logo[0] ?? null, url: client.clientUrl, title: client.description|striptags, imageStyling:'object-contain h-full md:mx-auto', containerStyling: 'h-20 py-4 px-4 w-1/2 md:w-1/3 lg:w-1/6 focus:outline-none'  }) -}}
+            {{- render.atom('image', 'partner', { 
+                image: client.logo[0] ?? null, 
+                url: client.clientUrl, 
+                title: client.description|striptags, 
+                imageStyling:'object-contain h-full md:mx-auto', 
+                containerStyling: 'h-20 py-4 px-4 w-1/2 md:w-1/3 lg:w-1/6 focus:outline-none'  
+            }) -}}
         {%- endfor -%}
         </div>
     </div>

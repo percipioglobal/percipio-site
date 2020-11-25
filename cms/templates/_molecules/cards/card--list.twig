@@ -15,7 +15,12 @@
                 {{- render.atom('text', 'card-title', { content: content.title }) -}}
             </div>
             <div class="w-24 h-24">
-                {{- render.atom('image', 'teaser', { image: teaserImage, alt:teaserImage.title, ratio: 'is1by1 rounded-full'  }) -}}
+                {{- render.atom('image', 'teaser', { 
+                    image: teaserImage, 
+                    alt:teaserImage.title, 
+                    ratio: 'is1by1 rounded-full',
+                    placeholders: placeholders,  
+                }) -}}
             </div>
         </div>
     </div>

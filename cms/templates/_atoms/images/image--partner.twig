@@ -29,7 +29,7 @@
 {% block image %}
 
     {%- set values = values|merge({
-        placeholder: placeholder.brandingPlaceholder[0] ??? null,
+        placeholder: options.placeholders.brandingPlaceholder[0] ??? null,
         type: options.image.extension ??? null,
         url: options.url ??? null,
     }) -%}

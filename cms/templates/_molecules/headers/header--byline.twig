@@ -6,7 +6,10 @@
         <div>
             <div class="flex flex-row items-center text-xs leading-tight text-black-100 tracking-wider">
                 <div class="mr-6">
-                    {{- render.atom('image', 'profile', { image: content.author.profilePhoto[0]  }) -}}
+                    {{- render.atom('image', 'profile', { 
+                        image: content.author.profilePhoto[0],
+                        placeholders: placeholders,
+                    }) -}}
                 </div>
                 <div>
                     <address rel="author" class="text-xl font-semibold font-mono not-italic">{{- content.author -}}</address>
