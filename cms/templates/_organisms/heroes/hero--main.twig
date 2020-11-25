@@ -4,27 +4,31 @@
 
     <div class="container max-w-screen-lg mx-auto py-20">
 
-        <h1 class="sr-only">
-            {{- seomatic.site.identity.genericName -}}: {{- render.atom('text', 'title', { content: content.heading }) -}}
-        </h1>
+        <div class="bg-{{- swatch.primary }} border-b-4 border-{{- swatch.secondary }} px-12 py-6">
 
-        <h2 class="font-extrabold leading-tight text-6xl text-gray-800 max-w-2xl">
-            {{- render.atom('text', 'title', { content: content.heading }) -}}
-        </h2>
-
-        {% if content.description %}
-            <div class="max-w-2xl prose-lg mt-12">
-                {{- render.atom('text', 'content', { content: content.description }) -}}
-            </div>
-        {% endif %}
-
-        {{- render.atom('button', 'group', { 
+            <h1 class="sr-only">
+                {{- seomatic.site.identity.genericName -}}: {{- render.atom('text', 'title', { content: content.heading }) -}}
+            </h1>
     
-            buttons: content.buttons,
-            type: 'primary',
-            utilities: 'mt-12 space-x-4',
+            <h2 class="font-extrabold leading-tight text-6xl text-gray-800 max-w-2xl">
+                {{- render.atom('text', 'title', { content: content.heading }) -}}
+            </h2>
+    
+            {% if content.description %}
+                <div class="max-w-2xl prose-lg mt-12">
+                    {{- render.atom('text', 'content', { content: content.description }) -}}
+                </div>
+            {% endif %}
+    
+            {{- render.atom('button', 'group', { 
         
-        }) -}}
+                buttons: content.buttons,
+                type: 'primary',
+                utilities: 'mt-12 space-x-4',
+            
+            }) -}}
+
+        </div>
 
     </div>
 

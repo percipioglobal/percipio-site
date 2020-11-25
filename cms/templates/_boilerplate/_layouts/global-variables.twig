@@ -36,7 +36,7 @@
 } %}
 
 {% if entry.colourSwatch %}
-    {% for color in member.colourSwatch.color | slice(0,2) %}
+    {% for color in entry.colourSwatch.color | slice(0,2) %}
         {% set key = loop.first ? 'primary' : 'secondary' %}
         {% set swatch = swatch|merge({ (key) : color.class }) %}
     {% endfor %}
