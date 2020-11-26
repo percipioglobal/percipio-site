@@ -1,35 +1,24 @@
 {%- minify -%}
-
-    {% set showVacantiesCta = showVacantiesCta ?? false %}
-    {% set cardsType = type ?? 'default' %}
-
-    {%- switch cardsType -%}
-
-        {%- case 'content' -%}
-            {%- set cards = content.cards.all() -%}
-
-        {% default %}
-            {%- set cards = content -%}
-
-    {%- endswitch -%}
-
-    <div class="print:hidden md:grid grid-cols-6 gap-8 my-16">
-        {%- for card in cards -%}
-            {%- include '_molecules/cards/card--highlight' ignore missing with {
-                content: card,
-                width: "col-span-3 lg:col-span-2"
-            } -%}
-
-        {%- endfor -%}
-
-        {%- if showVacantiesCta -%}
-            {%- include '_molecules/cards/card--cta' ignore missing with {
-                content: callToActionVacancies,
-                width: "col-span-3 lg:col-span-2"
-            } -%}
-        {%- endif -%}
+    <div class="mx-auto my-12 md:my-32">
+        <section class="container mx-auto max-w-screen-lg">
+            <div class="flex flex-wrap -mx-8">
+                {%- for card in content.cards -%}
+                    {% switch card.type %}
+                        {% case 'projects' %}
+                            {%- include '_molecules/cards/card--project' ignore missing with {
+                                content: card,
+                                sizes: ['50vw'],
+                                utilities: 'w-full lg:w-1/2 px-8 mb-8',
+                            } -%}
+                        {% case 'blog' %}
+                            {%- include '_molecules/cards/card--blog' ignore missing with {
+                                content: card,
+                                sizes: ['50vw'],
+                                utilities: 'w-full px-8 mb-8',
+                            } -%}
+                    {% endswitch %}
+                {%- endfor -%}
+            </div>
+        </section>
     </div>
-
-
-
 {%- endminify -%}

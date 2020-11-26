@@ -28,9 +28,9 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -50,18 +50,18 @@ fieldLayouts:
         elements:
           -
             fieldUid: 34000b23-2325-400f-a43f-958941335fe3
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
             fieldUid: 10a7e511-e02a-46ff-8524-7390d3e9be19
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null

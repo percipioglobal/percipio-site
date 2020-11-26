@@ -1,18 +1,18 @@
 contentColumnType: string
 fieldGroup: 151de730-f956-437c-a617-de5725e4c07a
-handle: organisationCategory
+handle: client
 instructions: ''
-name: 'Organisation Category'
+name: Client
 searchable: false
 settings:
   allowSelfRelations: false
   limit: '1'
   localizeRelations: false
-  selectionLabel: 'Choose an organisation'
+  selectionLabel: 'Choose a client'
   showSiteMenu: true
   source: null
   sources:
-    - 'section:7023c258-744a-4563-b5ae-976750808af1'
+    - 'section:dbc716a7-2122-4b92-b942-471970256a35'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

@@ -53,10 +53,10 @@ module.exports = {
                     'dark-navy': 'rgba(0,6,51,1)',
                     black: 'rgba(0,2,20,1)',
                 },
-    
+
                 transparent: 'transparent',
                 current: 'currentColor',
-    
+
                 black: {
                     10: 'rgba(0,0,0,.1)',
                     20: 'rgba(0,0,0,.2)',
@@ -218,7 +218,11 @@ module.exports = {
             zIndex: {
                 '-10': '-10',
                 '-20': '-20',
-            }
+            },
+
+            minWidth: {
+                '3/4': '75%'
+            },
         },
     },
     corePlugins: {},

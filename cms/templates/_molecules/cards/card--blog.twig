@@ -1,0 +1,103 @@
+{# {%- import '_macros/atoms' as render -%}
+
+{%- minify -%}
+<a href="{{- content.url -}}" class="block bg-white-100 py-8 -mx-8 hover:bg-{{- content.colourSwatch -}}-500 text-gray-800 hover:text-white-100 group">
+    <div class="container max-w-screen-lg mx-auto">
+        <div class="flex w-full">
+            <div class="flex-grow">
+                <p class="font-mono text-base pb-3">
+                    <span class="text-teal-500 group-hover:text-white-100">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
+                    by {{ content.author.fullName }} on
+                    <time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
+                </p>
+                {{- render.atom('text', 'card-title', { content: content.title }) -}}
+            </div>
+            <div class="w-24 h-24">
+                {{- render.atom('image', 'teaser', {
+                    image: content.teaserImage[0],
+                    alt: content.teaserImage.title,
+                    ratio: 'is1by1 rounded-full',
+                    placeholders: placeholders,
+                }) -}}
+            </div>
+        </div>
+    </div>
+</a>
+{%- endminify -%} #}
+
+{%- import '_macros/atoms' as render -%}
+
+{% set swatchBlog = {
+    'primary': null,
+    'secondary': null,
+} %}
+
+{% for color in content.colourSwatch.color | slice(0,2) %}
+	{% set key = loop.first ? 'primary' : 'secondary' %}
+	{% set swatchBlog = swatchBlog|merge({ (key) : color.class }) %}
+{% endfor %}
+
+{%- minify -%}
+<div class="{{- utilities -}}">
+	<div class="relative group">
+		<div class="flex items-center bg-{{- swatchBlog.primary }} border-b-8 border-{{- swatchBlog.secondary }}  p-6 group-hover:bg-{{- swatchBlog.secondary }} transition-all duration-500 ease-in-out">
+			<div class="w-48 hidden md:block">
+				{{- render.atom('image', 'teaser', {
+                    image: content.teaserImage[0],
+                    alt: content.teaserImage[0].title,
+                    ratio: 'is1by1 rounded-full',
+                    placeholders: placeholders,
+                }) -}}
+			</div>
+
+			<div class="flex-grow md:pl-8">
+                <div class="flex items-center mb-8 md:mb-3">
+                    <div class="w-24 flex-shrink-0 md:hidden">
+                        {{- render.atom('image', 'teaser', {
+                            image: content.teaserImage[0],
+                            alt: content.teaserImage[0].title,
+                            ratio: 'is1by1 rounded-full',
+                            placeholders: placeholders,
+                        }) -}}
+                    </div>
+                    <div class="flex-grow pl-8 md:pl-0">
+                        <time datetime="{{ content.postDate|date('c')}}">
+                            {{- render.atom('text', 'overline', {
+                                    content: content.postDate|date('jS F Y') ~ ' by ' ~ content.author.fullName ,
+                                    utilities: 'text-white-100',
+                                })
+                            -}}
+                        </time>
+                    </div>
+                </div>
+
+                {{- render.atom('text', 'card-title', {
+                        content: content.title,
+                    })
+                -}}
+
+				<div class="text-white-100 prose">
+					{{- render.atom('text', 'card-description', {
+                                content: content.description,
+                            })
+                        -}}
+				</div>
+
+				{{- render.atom('chip', 'group', {
+
+                    chips: content.blogCategories,
+                    colors: swatchBlog,
+                    type: 'skills',
+                    utilities: 'mt-5 mb-0 space-x-2',
+
+                }) -}}
+			</div>
+		</div>
+
+		<a href="{{- content.url -}}" class="absolute inset-0">
+			<span class="sr-only">Read more about
+				{{- content.title -}}</span>
+		</a>
+	</div>
+</div>
+{%- endminify -%}
