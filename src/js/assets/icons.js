@@ -13,6 +13,9 @@ import {
     faCloudDownloadAlt as fasCloudDownloadAlt,
     faExternalLinkAlt as fasExternalLinkAlt,
     faPrint as fasPrint,
+    faDownload as fasDownload,
+    faCircle as fasCircle,
+    faSquareFull as fasSquareFull
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -21,7 +24,22 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 // load font-awesome libraries
-library.add(farFilePdf, farFileExcel, farFileWord, farFilePowerPoint, farFileArchive, fasCloudDownloadAlt, fasExternalLinkAlt, fabTwitter, fabFacebookF, farEnvelope, fasPrint);
+library.add(
+    farFilePdf,
+    farFileExcel,
+    farFileWord,
+    farFilePowerPoint,
+    farFileArchive,
+    fasCloudDownloadAlt,
+    fasExternalLinkAlt,
+    fabTwitter,
+    fabFacebookF,
+    farEnvelope,
+    fasPrint,
+    fasDownload,
+    fasCircle,
+    fasSquareFull
+);
 
 // convert i tags to SVG
 dom.watch({
