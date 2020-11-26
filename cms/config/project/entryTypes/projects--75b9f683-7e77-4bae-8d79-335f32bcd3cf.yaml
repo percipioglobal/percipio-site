@@ -4,19 +4,6 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: Hero
-        sortOrder: 1
-      -
-        elements:
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -57,17 +44,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          -
-            fieldUid: a8f67f73-cbef-439c-88e5-8665ef1b430f
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Content
-        sortOrder: 2
+        sortOrder: 1
       -
         elements:
           -
@@ -98,7 +76,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: Metadata
-        sortOrder: 3
+        sortOrder: 2
       -
         elements:
           -
@@ -120,7 +98,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: SEO
-        sortOrder: 4
+        sortOrder: 3
 handle: projects
 hasTitleField: true
 name: Projects
