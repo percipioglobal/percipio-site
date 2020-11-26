@@ -1,3 +1,4 @@
+.isFilled,
 .is1by1,
 .is2by1,
 .is3by1,
@@ -10,6 +11,7 @@
     overflow-hidden;
 }
 
+.isFilled > img,
 .is1by1 > img,
 .is2by1 > img,
 .is3by1 > img,
@@ -28,6 +30,12 @@
 }
 
 @responsive {
+
+  .isFilled {
+    @apply
+      h-full
+      w-full;
+  }
 
   .is1by1 {
     padding-top: 100%;
