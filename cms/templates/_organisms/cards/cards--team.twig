@@ -11,17 +11,17 @@
 
             {% for member in team %}
 
-                {%- include '_molecules/cards/card--member' ignore missing with { 
+                {%- include '_molecules/cards/card--member' ignore missing with {
                     member: member,
                     sizes: ['33.3vw'],
-                    utilities: 'w-1/3 px-8 mb-8',
+                    utilities: 'w-full sm:w-1/2 lg:w-1/3 px-8 mb-8',
                 } -%}
 
             {% endfor %}
 
         </div>
 
-        
+
 
     </div>
 
