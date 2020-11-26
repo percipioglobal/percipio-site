@@ -1,6 +1,6 @@
 enableVersioning: true
-handle: team
-name: 'The Team'
+handle: services
+name: 'Our Services'
 previewTargets:
   -
     __assoc__:
@@ -19,5 +19,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _organisms/_page
-    uriFormat: 'team/{slug}'
+    uriFormat: 'our-services/{slug}'
 type: channel

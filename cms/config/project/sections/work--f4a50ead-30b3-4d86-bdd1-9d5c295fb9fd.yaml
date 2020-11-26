@@ -1,6 +1,6 @@
 enableVersioning: true
-handle: team
-name: 'The Team'
+handle: work
+name: 'Our Work'
 previewTargets:
   -
     __assoc__:
@@ -18,6 +18,6 @@ siteSettings:
   5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
     enabledByDefault: true
     hasUrls: true
-    template: _organisms/_page
-    uriFormat: 'team/{slug}'
+    template: _organisms/_page.twig
+    uriFormat: 'our-work/{slug}'
 type: channel
