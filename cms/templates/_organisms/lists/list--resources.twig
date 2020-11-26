@@ -4,7 +4,7 @@
 <div class="my-16">
 	<section class="container mx-auto max-w-screen-lg">
 
-		{%- for resource in content.resources.all() -%}
+		{%- for resource in content.resources -%}
 
 			{%- include '_molecules/lists/listitem--resource' ignore missing with {
             content: resource,
