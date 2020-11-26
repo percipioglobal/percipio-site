@@ -1,11 +1,11 @@
 field: e691301b-7484-40be-a3d4-c3bc590de959
 fieldLayouts:
-  ce1931f4-9280-4231-b357-ea8750a88735:
+  8bc4a467-312b-471c-b5d4-4c43fd30d7a5:
     tabs:
       -
         elements:
           -
-            fieldUid: 5053ff27-8e1b-49ea-85c6-c2a1dece3b8e
+            fieldUid: bcca818c-5cb3-4998-8165-95f5c9929f23
             instructions: null
             label: null
             required: true
@@ -16,13 +16,13 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  5053ff27-8e1b-49ea-85c6-c2a1dece3b8e:
+  bcca818c-5cb3-4998-8165-95f5c9929f23:
     contentColumnType: text
     fieldGroup: null
-    handle: article
-    instructions: 'Enter one more paragraphs to create your textual content.'
-    name: 'Body Content'
-    searchable: true
+    handle: standfirst
+    instructions: ''
+    name: Standfirst
+    searchable: false
     settings:
       availableTransforms: '*'
       availableVolumes: ''
@@ -33,17 +33,17 @@ fields:
       manualConfig: ''
       purifierConfig: ''
       purifyHtml: '1'
-      redactorConfig: Content.json
+      redactorConfig: Standfirst.json
       removeEmptyTags: '1'
       removeInlineStyles: '1'
       removeNbsp: '1'
-      showHtmlButtonForNonAdmins: '1'
+      showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: enlarged
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-handle: article
-name: 'Article Body'
-sortOrder: 3
+handle: standfirst
+name: Standfirst
+sortOrder: 1

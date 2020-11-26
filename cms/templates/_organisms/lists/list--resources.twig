@@ -1,13 +1,17 @@
+{% import '_macros/atoms' as render %}
+
 {%- minify -%}
-<section class="container mx-auto px-8 lg:px-0 px-4 pt-10 md:pt-12 sm:pb-8">
+<div class="my-16">
+	<section class="container mx-auto max-w-screen-lg">
 
-    {%- for resource in content.resources.all() -%}
+		{%- for resource in content.resources -%}
 
-        {%- include '_molecules/lists/listitem--resource' ignore missing with {
+			{%- include '_molecules/listitems/listitem--resource' ignore missing with {
             content: resource,
         } -%}
 
-    {%- endfor -%}
+		{%- endfor -%}
 
-</section>
+	</section>
+</div>
 {%- endminify -%}

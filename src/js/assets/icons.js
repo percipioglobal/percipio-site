@@ -13,7 +13,10 @@ import {
     faCloudDownloadAlt as fasCloudDownloadAlt,
     faExternalLinkAlt as fasExternalLinkAlt,
     faPrint as fasPrint,
-    faHashtag as fasHashtag
+    faHashtag as fasHashtag,
+    faDownload as fasDownload,
+    faCircle as fasCircle,
+    faSquareFull as fasSquareFull
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -44,7 +47,10 @@ library.add(
     fabYoutube,
     fabVimeoV,
     fabGithub,
-    fasHashtag
+    fasHashtag,
+    fasDownload,
+    fasCircle,
+    fasSquareFull
 );
 
 // convert i tags to SVG

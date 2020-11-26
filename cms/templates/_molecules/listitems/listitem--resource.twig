@@ -1,0 +1,46 @@
+{% import '_macros/atoms' as render %}
+
+{%- minify -%}
+<a class="group border-b-2 border-{{- swatch.secondary }} bg-gray-50 flex justify-between py-8 w-full hover:bg-{{- swatch.primary }} px-4 md:px-8" href="{{- content.target[0].url -}}" target="_blank">
+
+	<div class="relative flex items-center">
+		{{- render.atom('icon', 'file', {
+            type: content.target[0].kind,
+            icon: content.utilityIcon,
+            size: 'xl',
+            variant: '',
+            parentcss: '',
+            iconcss: 'group-hover:text-white-100',
+            colour: 'text-' ~ swatch.primary
+        }) -}}
+	</div>
+
+	<div class="relative flex-grow px-4 md:px-8">
+		<h4 class="text-base font-medium sm:text-2xl group-hover:text-white-100 trans-button inline-block w-full">
+			{{- render.atom('text', 'content', { content: content.label }) -}}
+		</h4>
+
+        {% if content.description|length %}
+            <p class="text-base inline-block w-full group-hover:text-white-100">
+                {{- render.atom('text', 'content', { content: content.description }) -}}
+            </p>
+        {% endif %}
+
+		<span class="text-xs text-gray-500 group-hover:text-white-100 pt-2 inline-block">
+			<span class="text-{{- swatch.secondary }} group-hover:text-white-100">{{ content.target[0].filename }}</span> - [{{- content.target[0].size | filesize(1) }}
+			{{ resource.target[0].kind | lower }}]
+		</span>
+	</div>
+
+	<div class="relative flex items-center">
+		<span class="px-5 py-3 bg-{{- swatch.primary }} font-bold text-white-100 group-hover:bg-{{- swatch.secondary }} flex">
+            <span class="pr-2">Download</span>
+            {{- render.atom('icon', 'fa', {
+                icon: 'fas fa-download',
+                size: 'xs',
+                colour: 'text-white-100'
+            }) -}}
+        </span>
+	</div>
+</a>
+{%- endminify -%}
