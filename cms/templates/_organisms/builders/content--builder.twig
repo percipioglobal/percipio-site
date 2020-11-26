@@ -6,7 +6,7 @@
     'contentBuilder.singleImage:image',
     'contentBuilder.galleryImages:images',
     'contentBuilder.slide:image',
-    'contentBuilder.resources:target',
+    'contentBuilder.resourceList:resources',
     'contentBuilder.faqList:questions',
     'contentBuilder.faqList:questions.faqCategory',
     'author.profilePhoto',
@@ -73,12 +73,6 @@
                 {%- case "resourceList" -%}
 
                     {%- include '_organisms/lists/list--resources' ignore missing with {
-                        content: block,
-                    } -%}
-
-                {%- case "faqList" -%}
-
-                    {%- include '_organisms/lists/list--faq.twig' ignore missing with {
                         content: block,
                     } -%}
 
