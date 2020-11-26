@@ -13,15 +13,39 @@ import {
     faCloudDownloadAlt as fasCloudDownloadAlt,
     faExternalLinkAlt as fasExternalLinkAlt,
     faPrint as fasPrint,
+    faHashtag as fasHashtag
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
     faTwitter as fabTwitter,
     faFacebookF as fabFacebookF,
+    faInstagram as fabInstagram,
+    faLinkedinIn as fabLinkedinIn,
+    faYoutube as fabYoutube,
+    faVimeoV as fabVimeoV,
+    faGithub as fabGithub,
 } from '@fortawesome/free-brands-svg-icons';
 
 // load font-awesome libraries
-library.add(farFilePdf, farFileExcel, farFileWord, farFilePowerPoint, farFileArchive, fasCloudDownloadAlt, fasExternalLinkAlt, fabTwitter, fabFacebookF, farEnvelope, fasPrint);
+library.add(
+    farFilePdf,
+    farFileExcel,
+    farFileWord,
+    farFilePowerPoint,
+    farFileArchive,
+    fasCloudDownloadAlt,
+    fasExternalLinkAlt,
+    fabTwitter,
+    fabFacebookF,
+    farEnvelope,
+    fasPrint,
+    fabInstagram,
+    fabLinkedinIn,
+    fabYoutube,
+    fabVimeoV,
+    fabGithub,
+    fasHashtag
+);
 
 // convert i tags to SVG
 dom.watch({

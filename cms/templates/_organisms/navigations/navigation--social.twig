@@ -1,0 +1,21 @@
+{%- set socialsLUT = {
+    'facebook': 'fa-facebook-f',
+    'twitter': 'fa-twitter',
+    'instagram': 'fa-instagram',
+    'linkedin': 'fa-linkedin-in',
+    'youtube': 'fa-youtube',
+    'vimeo': 'fa-vimeo-v',
+    'github': 'fa-github'
+} -%}
+{%- set styling = styling ??? "" %}
+
+<nav role="menu" class="{{- styling -}}" aria-labelledby="social-navigation">
+    <div role="menubar" class="w-full text-center md:text-right space-x-3">
+        {% for social in seomatic.site.sameAsLinks %}
+            <a href="{{social.url}}" class="text-gray-700 hover:text-gray-500 inline-block text-lg" role="menuitem" title="{{social.siteName}}" aria-label="{{social.siteName}}" target="_blank" rel="noopener">
+                <span class="sr-only">{{social.siteName}}</span>
+                <i class="{{ socialsLUT[social.handle] is defined ? 'fab ' ~ socialsLUT[social.handle] : 'fas fa-hashtag' }}"></i>
+            </a>
+        {% endfor %}
+    </div>
+</nav>

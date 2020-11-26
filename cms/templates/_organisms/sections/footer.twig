@@ -1,12 +1,5 @@
 {% import '_macros/atoms' as render %}
 
-{% set nodes = craft.navigation.nodes()
-    .handle('legalNavigation')
-    .level(1)
-    .all() %}
-
-{% set socialNavigation = socialMedia.socialMedia %}
-
 <footer class="w-full bg-white-100">
 
 	<div class="relative border-t border-gray-400">
@@ -16,109 +9,20 @@
 			</svg>
 		</div>
 		<div class="text-center font-mono text-sm pt-16 text-pink-600">
-            {%- set text = "made with ♥ by Percipio"|raw %}
-            {{- render.atom('text', 'title', { content: text }) -}}
+			{%- set text = "made with ♥ by Percipio"|raw %}
+			{{- render.atom('text', 'title', { content: text }) -}}
 		</div>
 	</div>
 
-	<div class="px-4 pt-12 pb-4 md:pb-12 lg:py-16 mx-auto flex justify-around flex-col md:flex-row text-gray-700">
-		<div class="hidden md:block flex-1 flex-col border-b-4 border-blue-600 md:mx-4 lg:mx-12">
-			<h5 class="mb-8 text-blue-600 font-bold text-xl">
-				Percipio
-			</h5>
-			<span class="mb-8 text-4xl font-bold">
-				Building applications for better futures.
-			</span>
-		</div>
-        {# @TODO: integrate mailchimp #}
-		<div class="flex-1 flex-col border-b-4 border-pink-600 md:mx-4 lg:mx-12 mb-8 md:mb-0">
-            <h5 class="mb-8 text-pink-600 font-bold  text-xl">
-                Newsletter
-            </h5>
-            <form class="mt-4 xl:max-w-md">
-                <label for="emailAddress" class="sr-only">Email address</label>
-                <input type="email" id="emailAddress" required class="appearance-none w-full bg-white border border-gray-700 rounded-md shadow-sm py-2 px-4 text-base leading-6 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline focus:placeholder-gray-400 transition duration-150 ease-in-out" placeholder="example@domain.com">
-                <div class="mt-3 rounded-md xl:mt-0">
-                    <button type="submit" class="w-full bg-transparent hover:bg-blue-600 font-bold
-                    text-blue-600 hover:text-white-100 hover:border-transparent border-2 border-blue-600 rounded-md
-                        py-2 px-4 text-base leading-6 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-                    Submit
-                    </button>
-                </div>
-                <div class="flex items-start mt-3 mb-8">
-                    <div class="flex items-center h-5">
-                        <input id="comments" type="checkbox" class="form-checkbox h-4 w-4 transition duration-150 ease-in-out">
-                    </div>
-                    <div class="ml-3 text-sm leading-5">
-                        <label for="comments" class="text-base leading-6">I would like to hear from Percipio about their exciting projects</label>
-                    </div>
-                </div>
-            </form>
-        </div>
-		<div class="flex-1 flex-col border-b-4 border-purple-600 md:mx-4 lg:mx-12">
-			<h5 class="mb-8 text-purple-600 font-bold text-xl">
-				Contact
-			</h5>
-			<div class="mb-8 mt-9">
-				<div class="text-base leading-6">
-					<p>
-						Unit 122, 372 Old Street
-					</p>
-					<p class="mt-1">
-						London EC1V 9LT
-					</p>
-				</div>
-				<div class="text-base leading-6 mt-4 ">
-					<p>
-						<a href="tel:02081444048" title="phone" aria-label="phone">0208 1444 048</a>
-					</p>
-				</div>
-				<div class="text-base leading-6 mt-4">
-					<p>
-						<a href="mailto:support@percipio.london" title="email" aria-label="email">support@percipio.london</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container mx-auto px-8 lg:px-0 pt-10 pb-8 md:pb-12 md:pt-16">
+	    {% include "_organisms/grids/grid--footer" with { spacing: 4 } %}
+    </div>
 
-	<div class="border-t border-gray-400 text-gray-600 text-xs font-mono flex flex-col md:flex-row md:items-center md:justify-between mt-8 mx-auto px-4 py-6 lg:py-8">
-		<nav role="menu" class="mb-4 md:mb-0 md:mx-4 lg:mx-12 flex flex-1 justify-center md:justify-end space-x-6 md:space-x-2 order-1 md:order-3" aria-labelledby="footer-social-navigation">
-			<div role="menubar" class="w-full text-center md:text-right">
-				{% for social in socialNavigation.all() %}
-					<a href="{{social.socialMediaUrl}}" class="text-gray-700 hover:text-gray-500 inline-block text-lg {{ not loop.last ? 'mr-3' : '' }}" role="menuitem" title="{{social.socialMediaType}}" aria-label="{{social.socialMediaType}}" target="_blank" rel="noopener">
-						<span class="sr-only">{{social.socialMediaType.label}}</span>
-						{% set icon = "" %}
-						{% switch social.socialMediaType %}
-							{% case "facebook" %}
-								{% set icon = "fa-facebook-f" %}
-							{% case "twitter" %}
-								{% set icon = "fa-twitter" %}
-							{% case "instagram" %}
-								{% set icon = "fa-instagram" %}
-							{% case "linkedin" %}
-								{% set icon = "fa-linkedin-in" %}
-							{% case "youtube" %}
-								{% set icon = "fa-youtube" %}
-							{% case "vimeo" %}
-								{% set icon = "fa-vimeo-v" %}
-							{% case "github" %}
-								{% set icon = "fa-github" %}
-						{% endswitch %}
-						{% if icon != "" %}
-							<i class="fab {{icon}}"></i>
-						{% endif %}
-					</a>
-				{% endfor %}
-			</div>
-		</nav>
-		<nav class="mb-3 md:mb-0 md:mx-4 lg:mx-12 text-md text-center flex flex-1 justify-center space-x-6 leading-6 order-1 md:order-2" role="menu" aria-labelledby="footer-legal-navigation">
-			{% nav node in nodes %}
-			<a {% if node.url %} href="{{ node.url }}" {% endif %} title="{{- node.title -}}" class="hover:underline {{ node.classes | length ? node.classes : '' }}" {% if node.newWindow %} target="_blank" rel="noopener" {% endif %} {% for attribute in node.customAttributes %} {{ attribute.attribute }}="{{ attribute.value }}" {% endfor %} role="menuitem">
-				{{- node.title -}}
-			</a>
-			{% endnav %}
-		</nav>
+	<div class="border-t border-gray-400 text-gray-600 text-xs font-mono flex flex-col md:flex-row md:items-center md:justify-between mx-auto px-4 py-6 lg:py-8">
+        {% include "_organisms/navigations/navigation--social" with {styling: 'mb-4 md:mb-0 md:mx-4 lg:mx-12 order-1 md:order-3 flex flex-1 justify-center md:justify-end space-x-6 md:space-x-2' } %}
+
+		{% include "_organisms/navigations/navigation--legal" with {styling: 'mb-3 md:mb-0 md:mx-4 lg:mx-12 text-md text-center flex flex-1 justify-center space-x-6 leading-6 order-1 md:order-2' } %}
+
 		<div class="text-md text-center md:text-left md:mx-4 lg:mx-12 flex flex-1 justify-center md:justify-start space-x-6 leading-6 order-3 md:order-1">
 			<p>&copy;
 				{{now|date('Y')}}. Percipio is a Trademark of Percipio Global Ltd</p>

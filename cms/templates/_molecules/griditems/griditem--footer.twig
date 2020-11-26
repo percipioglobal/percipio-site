@@ -1,0 +1,23 @@
+{% import '_macros/atoms' as render %}
+
+<div class="flex-col mb-14 lg:mb-0 w-full lg:w-{{- width }} px-{{- spacing -}}">
+    <div class=" border-b-4 h-full border-{{- color -}}-600">
+        <h5 class="mb-8 font-bold text-xl">
+            {{- render.atom('text', 'overline', {
+                content: title,
+                utilities: 'text-' ~ color ~ '-600',
+                })
+            -}}
+        </h5>
+        <div class="mb-8 flex-grow">
+            {%- switch type -%}
+                {%- case "catchphrase" -%}
+                    {% include "_molecules/content/content--catchphrase" %}
+                {%- case "subscribe" -%}
+                    {% include "_molecules/forms/form--subscribe" with { color: color }%}
+                {%- case "contact" -%}
+                    {% include "_molecules/content/content--contact" %}
+            {%- endswitch -%}
+        </div>
+    </div>
+</div>
