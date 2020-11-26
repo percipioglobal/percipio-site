@@ -1,10 +1,10 @@
 {%- do craft.eagerBeaver.eagerLoadElements(entry, [
-        'heroBuilder'
-    ])
+    'heroBuilder'
+])
 -%}
 
 {%- include '_organisms/builders/hero--builder' with {
-    content: entry,
+content: entry,
 } -%}
 
-{%- include '_organisms/cards/cards--team' ignore missing -%}
+{%- include '_organisms/lists/list--services' ignore missing -%}

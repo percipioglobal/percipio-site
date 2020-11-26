@@ -79,4 +79,4 @@ fields:
     type: craft\fields\PlainText
 handle: galleryImages
 name: 'Image Gallery'
-sortOrder: 6
+sortOrder: 7

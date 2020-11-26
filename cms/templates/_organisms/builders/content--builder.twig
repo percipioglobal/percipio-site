@@ -8,12 +8,12 @@
     'contentBuilder.singleImage:image',
     'contentBuilder.galleryImages:images',
     'contentBuilder.slide:image',
-    'contentBuilder.resources:target',
+    'contentBuilder.resourceList:resources',
     'author.profilePhoto',
     ])
 %}
 
-<div class="container mx-auto">
+<div class="container mx-auto px-8 lg:px-0">
 
     {%- minify -%}
         {%- for block in content.contentBuilder -%}
@@ -73,12 +73,6 @@
                 {%- case "resourceList" -%}
 
                     {%- include '_organisms/lists/list--resources' ignore missing with {
-                        content: block,
-                    } -%}
-
-                {%- case "faqList" -%}
-
-                    {%- include '_organisms/lists/list--faq.twig' ignore missing with {
                         content: block,
                     } -%}
 
