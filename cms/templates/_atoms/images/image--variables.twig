@@ -10,6 +10,7 @@
     author: (STR) -- The author of the image ( optional )
     source: (STR) -- The image source ( optional )
     placeholder: (OBJ) -- The object that contains all placeholders ( required )
+    animation: (STR) -- contains the type of animations: 'scale', ... ( optional )
     swatch: (OBJ) -- swatch containing primary and secondary colours ( optional )
 
 #}
@@ -24,6 +25,7 @@
     author: options.author ??? null,
     source: options.source ??? null, 
     placeholders: options.placeholders,
+    animation: options.animation ??? null,
     swatch: options.swatch ??? null,
 
 } %}

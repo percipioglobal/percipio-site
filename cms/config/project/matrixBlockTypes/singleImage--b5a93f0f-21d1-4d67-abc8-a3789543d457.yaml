@@ -241,4 +241,4 @@ fields:
     type: craft\fields\Assets
 handle: singleImage
 name: Image
-sortOrder: 5
+sortOrder: 6

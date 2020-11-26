@@ -221,6 +221,11 @@ module.exports = {
             }
         },
     },
+    variants: {
+        extend: {
+            scale: ['group-hover'],
+        }
+    },
     corePlugins: {},
     plugins: [require('@tailwindcss/typography')],
 };

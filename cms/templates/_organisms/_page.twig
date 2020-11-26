@@ -34,6 +34,12 @@
                             content: entry,
                         } -%}
 
+                    {%- case "servicesPage" -%}
+
+                        {%- include '_organisms/entry-types/page--services' ignore missing with {
+                            content: entry,
+                        } -%}
+
                     {%- case "teamPage" -%}
 
                         {%- include '_organisms/entry-types/page--team' ignore missing with {
@@ -49,6 +55,12 @@
                     {%- case "projects" -%}
 
                         {%- include '_organisms/entry-types/entry--project' ignore missing with {
+                            content: entry,
+                        } -%}
+
+                    {%- case "services" -%}
+
+                        {%- include '_organisms/entry-types/entry--service' ignore missing with {
                             content: entry,
                         } -%}
 
