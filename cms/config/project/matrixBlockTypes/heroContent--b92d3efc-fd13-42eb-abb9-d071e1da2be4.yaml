@@ -82,23 +82,25 @@ fields:
     settings:
       allowSelfRelations: false
       allowUploads: true
-      allowedKinds: null
+      allowedKinds:
+        - image
       defaultUploadLocationSource: 'volume:17629e67-2262-40f9-a68b-93d1e165540f'
       defaultUploadLocationSubpath: ''
-      limit: ''
+      limit: '1'
       localizeRelations: false
       previewMode: full
-      restrictFiles: ''
-      selectionLabel: ''
+      restrictFiles: '1'
+      selectionLabel: 'Add Hero Image'
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      singleUploadLocationSource: 'volume:17629e67-2262-40f9-a68b-93d1e165540f'
       singleUploadLocationSubpath: ''
       source: null
-      sources: '*'
+      sources:
+        - 'volume:17629e67-2262-40f9-a68b-93d1e165540f'
       targetSiteId: null
-      useSingleFolder: false
+      useSingleFolder: true
       validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null
