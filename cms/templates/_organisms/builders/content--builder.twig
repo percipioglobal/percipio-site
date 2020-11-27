@@ -58,6 +58,13 @@
                         content: block,
                     } -%}
 
+                {%- case "standfirst" -%}
+
+                    {%- include '_molecules/content/content--standfirst' ignore missing with {
+                        content: block,
+                        prose: 'md:prose-3xl',
+                    } -%}
+
                 {%- case "galleryImages" -%}
 
                     {%- include '_molecules/images/image--gallery' ignore missing with {
