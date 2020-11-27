@@ -254,6 +254,7 @@ module.exports = {
     },
     variants: {
         backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
+        borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
         inset: ['responsive'],
         scale: ['group-hover'],
         textColor: ['responsive', 'hover', 'focus', 'group-hover'],

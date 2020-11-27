@@ -1,34 +1,31 @@
 {%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as functions -%}
 
 {%- set teaserImage = content.teaserImage.one() ?? placeholder.teaserPlaceholder[0] -%}
-{% set swatchBlog = {
-    'primary': null,
-    'secondary': null,
-} %}
-
-{% for color in content.colourSwatch.color | slice(0,2) %}
-	{% set key = loop.first ? 'primary' : 'secondary' %}
-	{% set swatchBlog = swatchBlog|merge({ (key) : color.class }) %}
-{% endfor %}
+{%- set swatchBlog = swatch(content.colourSwatch) -%}
+{%- set swatchCategory = content.blogCategories[0] ? swatch(content.blogCategories[0].colourSwatch) : swatchBlog -%}
 
 {%- minify -%}
 <div class="relative group">
-	<div class="block bg-white-100 py-8 -mx-20 group-hover:bg-{{- swatchBlog.primary }}">
-		<div class="container max-w-screen-lg mx-auto">
+	<div class="block bg-white-100 -mx-20 group-hover:bg-{{- swatchBlog.primary }}">
+		<div class="container max-w-screen-lg mx-auto py-8 border-b-4 border-{{- swatchBlog.secondary }} group-hover:border-{{- swatchBlog.primary }}">
 			<div class="flex w-full items-center">
 				<div class="flex-grow">
 					<p class="font-mono text-base pb-1 group-hover:text-white-100">
-						<span class="text-{{- swatchBlog.primary }} group-hover:text-white-100">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
+						<span class="text-{{- swatchCategory.primary }} group-hover:text-white-100">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
 						by
-						{{ content.author.fullName }}
+						{# <span class="text-underline">{{ content.author.fullName }}</span> #}
+						{{ functions.authors(content.authors) }}
 						on
 						<time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
 					</p>
-					{{- render.atom('text', 'card-title', {
-                        content: content.title,
-                        utilities: 'group-hover:text-white-100',
-                        colour: 'text-gray-800'
-                    }) -}}
+                    <div class="-mb-4">
+                        {{- render.atom('text', 'card-title', {
+                            content: content.title,
+                            utilities: 'group-hover:text-white-100',
+                            colour: 'text-gray-800'
+                        }) -}}
+                    </div>
 				</div>
 				<div class="w-32 h-32">
 					{{- render.atom('image', 'teaser', {

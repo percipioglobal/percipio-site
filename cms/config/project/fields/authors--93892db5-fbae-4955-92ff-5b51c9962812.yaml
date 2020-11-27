@@ -1,0 +1,21 @@
+contentColumnType: string
+fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99
+handle: authors
+instructions: 'Select one or more authors who have created this content'
+name: Authors
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: 'Add Author'
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'section:e80a7183-56ec-49d8-81a8-405444fc3077'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries
