@@ -254,6 +254,7 @@ module.exports = {
             },
 
             width: {
+                14: '3.5rem',
                 200: '200%',
                 300: '300%',
                 400: '400%',
@@ -275,6 +276,7 @@ module.exports = {
         inset: ['responsive'],
         scale: ['group-hover'],
         textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+        zIndex: ['responsive', 'hover', 'focus'],
     },
     corePlugins: {},
     plugins: [require('@tailwindcss/typography')],
