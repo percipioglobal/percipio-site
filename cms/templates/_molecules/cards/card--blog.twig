@@ -1,5 +1,6 @@
 {%- import '_macros/atoms' as render -%}
 
+{%- set teaserImage = content.teaserImage.one() ?? placeholder.teaserPlaceholder[0] -%}
 {% set swatchBlog = {
     'primary': null,
     'secondary': null,
@@ -11,66 +12,38 @@
 {% endfor %}
 
 {%- minify -%}
-<div class="{{- utilities -}}">
-	<div class="relative group">
-		<div class="flex items-center bg-{{- swatchBlog.primary }} border-b-8 border-{{- swatchBlog.secondary }}  p-6 group-hover:bg-{{- swatchBlog.secondary }} transition-all duration-500 ease-in-out">
-			<div class="w-48 hidden md:block">
-				{{- render.atom('image', 'teaser', {
-                    image: content.teaserImage[0],
-                    alt: content.teaserImage[0].title,
-                    ratio: 'is1by1 rounded-full',
-                    placeholders: placeholders,
-                }) -}}
-			</div>
-
-			<div class="flex-grow md:pl-8">
-                <div class="flex items-center mb-8 md:mb-3">
-                    <div class="w-24 flex-shrink-0 md:hidden">
-                        {{- render.atom('image', 'teaser', {
-                            image: content.teaserImage[0],
-                            alt: content.teaserImage[0].title,
-                            ratio: 'is1by1 rounded-full',
-                            placeholders: placeholders,
-                        }) -}}
-                    </div>
-                    <div class="flex-grow pl-8 md:pl-0">
-                        <time datetime="{{ content.postDate|date('c')}}">
-                            {{- render.atom('text', 'overline', {
-                                    content: content.postDate|date('jS F Y') ~ ' by ' ~ content.author.fullName ,
-                                    utilities: 'text-white-100',
-                                })
-                            -}}
-                        </time>
-                    </div>
-                </div>
-
-                {{- render.atom('text', 'card-title', {
+<div class="relative group">
+	<div class="block bg-white-100 py-8 -mx-20 group-hover:bg-{{- swatchBlog.primary }}">
+		<div class="container max-w-screen-lg mx-auto">
+			<div class="flex w-full items-center">
+				<div class="flex-grow">
+					<p class="font-mono text-base pb-1 group-hover:text-white-100">
+						<span class="text-{{- swatchBlog.primary }} group-hover:text-white-100">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
+						by
+						{{ content.author.fullName }}
+						on
+						<time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
+					</p>
+					{{- render.atom('text', 'card-title', {
                         content: content.title,
-                    })
-                -}}
-
-				<div class="text-white-100 prose">
-					{{- render.atom('text', 'card-description', {
-                                content: content.description,
-                            })
-                        -}}
+                        utilities: 'group-hover:text-white-100',
+                        colour: 'text-gray-800'
+                    }) -}}
 				</div>
-
-				{{- render.atom('chip', 'group', {
-
-                    chips: content.blogCategories,
-                    colors: swatchBlog,
-                    type: 'skills',
-                    utilities: 'mt-5 mb-0 space-x-2',
-
-                }) -}}
+				<div class="w-32 h-32">
+					{{- render.atom('image', 'teaser', {
+                        image: teaserImage,
+                        alt:teaserImage.title,
+                        ratio: 'is1by1 rounded-full',
+                        placeholders: placeholders,
+                    }) -}}
+				</div>
 			</div>
 		</div>
-
-		<a href="{{- content.url -}}" class="absolute inset-0">
-			<span class="sr-only">Read more about
-				{{- content.title -}}</span>
-		</a>
 	</div>
+
+    <a href="{{- content.url -}}" class="absolute inset-0">
+        <span class="sr-only">Read more about {{- content.title -}}</span>
+    </a>
 </div>
 {%- endminify -%}
