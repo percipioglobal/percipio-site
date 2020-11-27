@@ -1,14 +1,15 @@
 {% do craft.eagerBeaver.eagerLoadElements(entry, [
     'contentBuilder',
     'contentBuilder.highlightCards:cards',
+    'contentBuilder.highlightCards:cards.client',
+    'contentBuilder.highlightCards:cards.blogCategories',
+    'contentBuilder.highlightCards:cards.authors',
     'contentBuilder.contentGrid:items',
     'contentBuilder.sectionHeader:buttons',
     'contentBuilder.singleImage:image',
     'contentBuilder.galleryImages:images',
     'contentBuilder.slide:image',
     'contentBuilder.resourceList:resources',
-    'contentBuilder.faqList:questions',
-    'contentBuilder.faqList:questions.faqCategory',
     'author.profilePhoto',
     ])
 %}

@@ -30,17 +30,7 @@
     .one()
 -%}
 
-{% set swatch = {
-    'primary': null,
-    'secondary': null,
-} %}
-
-{% if entry.colourSwatch %}
-    {% for color in entry.colourSwatch.color | slice(0,2) %}
-        {% set key = loop.first ? 'primary' : 'secondary' %}
-        {% set swatch = swatch|merge({ (key) : color.class }) %}
-    {% endfor %}
-{% endif %}
+{%- set swatch = swatch(entry.colourSwatch) -%}
 
 {# -- Twig output from the render; this must be in a block -- #}
 {% block htmlPage %}

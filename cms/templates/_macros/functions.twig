@@ -16,6 +16,14 @@
     {% endspaceless %}
 {% endmacro %}
 
+{% macro authors(authors) %}
+    {% spaceless %}
+        {% for author in authors %}
+            <span class="underline">{{author.title}}</span>{{not loop.last and loop.index != loop.length - 1 ? ', '}}{{loop.index == loop.length - 1 ? ' and ' : ''}}
+        {% endfor %}
+    {% endspaceless %}
+{% endmacro %}
+
 {# Enter a date to show time ago in human readable form #}
 {% macro time_ago(date) %}
     {% spaceless %}
