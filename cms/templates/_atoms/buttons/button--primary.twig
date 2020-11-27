@@ -4,7 +4,7 @@
 
     {%- minify -%}
 
-        <a {{ values.url ? 'href=' ~ values.url : '' }} class="inline-flex border px-8 py-4 font-bold text-lg border-{{- values.swatch.primary }} text-{{- values.swatch.primary }} hover:text-white-100 hover:bg-{{- values.swatch.primary }} {{ values.utilities ? values.utilities : '' -}}">
+        <a {{ values.url ? 'href=' ~ values.url : '' }} class="inline-flex border px-8 py-4 font-bold text-lg text-white-100 border-{{- values.swatch ? values.swatch.primary : '' }} text-{{- values.swatch ? values.swatch.primary : '' }} hover:text-white-100 hover:bg-{{- values.swatch ? values.swatch.primary : '' }} {{ values.utilities ? values.utilities : '' -}}">
             {{- values.text -}}
         </a>
 
