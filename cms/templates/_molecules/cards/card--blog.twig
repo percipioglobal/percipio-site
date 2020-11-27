@@ -1,7 +1,7 @@
 {%- import '_macros/atoms' as render -%}
 {%- import '_macros/functions' as functions -%}
 
-{%- set teaserImage = content.teaserImage.one() ?? placeholder.teaserPlaceholder[0] -%}
+{%- set teaserImage = content.teaserImage[0] -%}
 {%- set swatchBlog = swatch(content.colourSwatch) -%}
 {%- set swatchCategory = content.blogCategories[0] ? swatch(content.blogCategories[0].colourSwatch) : swatchBlog -%}
 
