@@ -16,7 +16,7 @@
     
             {% if content.description %}
                 <div class="max-w-2xl prose prose-lg mt-12 text-white-100">
-                    {{- render.atom('text', 'content', { content: content.description }) -}}
+                    {{- render.atom('text', 'content', { content: content.description ??? content.netaDescription }) -}}
                 </div>
             {% endif %}
 
