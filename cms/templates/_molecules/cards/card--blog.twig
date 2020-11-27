@@ -14,7 +14,6 @@
 					<p class="font-mono text-base pb-1 group-hover:text-white-100">
 						<span class="text-{{- swatchCategory.primary }} group-hover:text-white-100">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
 						by
-						{# <span class="text-underline">{{ content.author.fullName }}</span> #}
 						{{ functions.authors(content.authors) }}
 						on
 						<time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
