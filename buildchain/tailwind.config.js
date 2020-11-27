@@ -25,8 +25,14 @@ module.exports = {
                     strong: {
                         color: theme('colors.white.100'),
                     },
-                }
+                },
             },
+            '3xl': {
+                css: {
+                    fontSize: theme('fontSize.3xl'),
+                    fontWeight: theme('fontWeight.medium'),
+                }
+            }
         }),
         extend: {
 
