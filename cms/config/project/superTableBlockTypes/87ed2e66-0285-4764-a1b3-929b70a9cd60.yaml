@@ -1,29 +1,20 @@
-field: dbc7a062-ef19-48ca-bd6f-acda62a18b78
+field: e531a8df-ea73-4e09-8422-d08a20883128
 fieldLayouts:
-  d4cd902e-828e-4c3f-80b7-039de9cbcdcb:
+  db3884af-07d7-46d7-a69c-a5134817e94f:
     tabs:
       -
         elements:
           -
-            fieldUid: a5be1b28-c12a-4a3c-8bf6-8cddef930108
+            fieldUid: 48f153ba-ba26-42dd-b297-c5b428cc259b
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: 2a8995d5-6e36-4d6b-8992-419951e154b0
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: e11ec840-0667-4899-97ce-fac247283460
+            fieldUid: 2cb6fb1e-761a-4096-ba9d-e151495efc98
             instructions: null
             label: null
             required: false
@@ -34,13 +25,13 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  2a8995d5-6e36-4d6b-8992-419951e154b0:
+  2cb6fb1e-761a-4096-ba9d-e151495efc98:
     contentColumnType: text
     fieldGroup: null
-    handle: description
+    handle: caption
     instructions: ''
-    name: Description
-    searchable: false
+    name: Caption
+    searchable: true
     settings:
       byteLimit: null
       charLimit: null
@@ -53,52 +44,33 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  a5be1b28-c12a-4a3c-8bf6-8cddef930108:
-    contentColumnType: text
-    fieldGroup: null
-    handle: overline
-    instructions: ''
-    name: Overline
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  e11ec840-0667-4899-97ce-fac247283460:
+  48f153ba-ba26-42dd-b297-c5b428cc259b:
     contentColumnType: string
     fieldGroup: null
-    handle: heroImage
-    instructions: ''
-    name: 'Hero Image'
+    handle: image
+    instructions: 'Add a single image to appear in the slider'
+    name: Image
     searchable: false
     settings:
       allowSelfRelations: false
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:17629e67-2262-40f9-a68b-93d1e165540f'
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
       previewMode: full
       restrictFiles: '1'
-      selectionLabel: 'Add Hero Image'
+      selectionLabel: 'Add a slider image'
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:17629e67-2262-40f9-a68b-93d1e165540f'
+      singleUploadLocationSource: 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863'
       singleUploadLocationSubpath: ''
       source: null
       sources:
-        - 'volume:17629e67-2262-40f9-a68b-93d1e165540f'
+        - 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863'
       targetSiteId: null
       useSingleFolder: true
       validateRelatedElements: false
@@ -106,6 +78,3 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-handle: heroContent
-name: 'Hero Content'
-sortOrder: 2
