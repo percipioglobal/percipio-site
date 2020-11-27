@@ -1,0 +1,43 @@
+field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
+fieldLayouts:
+  b779d71a-bb85-476c-82de-a1fa66266727:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: b2c99831-d731-447c-8233-c0418cc574bd
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  b2c99831-d731-447c-8233-c0418cc574bd:
+    contentColumnType: string
+    fieldGroup: null
+    handle: cards
+    instructions: 'Select entries to be displayed on the page'
+    name: Cards
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: ''
+      localizeRelations: false
+      selectionLabel: 'Add a card to highlight'
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: blogHighlightCards
+name: 'Blog Highlight Cards'
+sortOrder: 6
