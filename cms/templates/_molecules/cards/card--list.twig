@@ -1,9 +1,18 @@
 {%- import '_macros/atoms' as render -%}
 
 {%- set teaserImage = content.teaserImage.one() ?? placeholder.teaserPlaceholder[0] -%}
+{% set swatchBlog = {
+    'primary': null,
+    'secondary': null,
+} %}
+
+{% for color in content.colourSwatch.color | slice(0,2) %}
+	{% set key = loop.first ? 'primary' : 'secondary' %}
+	{% set swatchBlog = swatchBlog|merge({ (key) : color.class }) %}
+{% endfor %}
 
 {%- minify -%}
-<a href="{{- content.url -}}" class="block bg-white-100 py-8 -mx-8 hover:bg-{{- colour -}}-500 text-gray-800 hover:text-white-100 group">
+<a href="{{- content.url -}}" class="block bg-white-100 py-8 -mx-8 hover:bg-{{- swatchBlog.primary }} text-gray-800 hover:text-white-100 group">
     <div class="container max-w-screen-lg mx-auto">
         <div class="flex w-full">
             <div class="flex-grow">
@@ -15,11 +24,11 @@
                 {{- render.atom('text', 'card-title', { content: content.title }) -}}
             </div>
             <div class="w-24 h-24">
-                {{- render.atom('image', 'teaser', { 
-                    image: teaserImage, 
-                    alt:teaserImage.title, 
+                {{- render.atom('image', 'teaser', {
+                    image: teaserImage,
+                    alt:teaserImage.title,
                     ratio: 'is1by1 rounded-full',
-                    placeholders: placeholders,  
+                    placeholders: placeholders,
                 }) -}}
             </div>
         </div>
