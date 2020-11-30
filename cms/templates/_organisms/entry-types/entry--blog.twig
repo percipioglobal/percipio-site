@@ -13,7 +13,7 @@
 {%- set blog = craft.entries.section('blog').id(['not', entry.id]).with(['teaserImage', 'blogCategories', 'authors']).all() -%}
 
 <div id="content">
-	{%- include '_organisms/heroes/hero--blog' ignore missing with {
+	{%- include '_organisms/heroes/hero--main' ignore missing with {
         content: entry,
     } -%}
 
@@ -21,31 +21,12 @@
 		<div class="container mx-auto px-8 lg:px-0 max-w-screen-lg">
 			<div class="flex items-center">
 
-                {% if entry.authors|length > 1 %}
-                    <div class="flex overflow-hidden">
-                        {% for author in entry.authors %}
-                            <a href="{{author.url}}" title="{{author.title}}" class="inline-block h-14 w-14 rounded-full hover:z-2 overflow-hidden relative z-1 border-2 border-{{- swatch.primary }} hover:border-{{- swatch.secondary}} {{not loop.first ? '-ml-3' : '' }}">
-                                {{- render.atom('image', 'teaser', {
-                                    image: author.teaserImage[0],
-                                    alt: author.teaserImage[0].title,
-                                    ratio: 'is1by1',
-                                    placeholders: placeholders,
-                                }) -}}
-                            </a>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-				{% if entry.authors|length == 1 %}
-					<a href="{{entry.authors[0].url}}" title="{{entry.authors[0].title}}"
-						class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 flex border-2 border-{{- swatch.primary }} hover:border-{{- swatch.secondary}}">
-						{{- render.atom('image', 'teaser', {
-                            image: entry.authors[0].teaserImage[0],
-                            alt: entry.authors[0].teaserImage[0].title,
-                            ratio: 'is1by1',
-                            placeholders: placeholders,
-                        }) -}}
-					</a>
-				{% endif %}
+                {{- render.atom('avatar', 'group', {
+                    authors: entry.authors,
+                    colour: swatch,
+                    utilities: entry.authors|length == 1 ? 'flex-shrink-0 flex' : '',
+                }) -}}
+
 				<div class="flex-grow pl-4">
 					<div class="flex flex-wrap w-full items-center">
 						<div class="flex-grow">
@@ -53,7 +34,7 @@
 								<a href="{{ content.blogCategories[0].url }}" class="text-{{- swatchCategory.primary }} hover:text-{{- swatchCategory.secondary }}">{{ content.blogCategories[0].title }}</a>
 								by
 								{{ functions.authors(content.authors) }}<br/>
-								on
+								on the
 								<time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
 							</p>
 						</div>
