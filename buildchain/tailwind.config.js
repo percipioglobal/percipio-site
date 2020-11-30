@@ -220,7 +220,6 @@ module.exports = {
                     900: '#751a3d',
                 },
             },
-
             borderWidth: {
                 DEFAULT: '1px',
                 '0': '0',
