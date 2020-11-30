@@ -11,11 +11,11 @@
 
 			<h1 class="sr-only">
 				{{- seomatic.site.identity.genericName -}}:
-				{{- render.atom('text', 'title', { content: content.heading ??? content.title }) -}}
+				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
 			</h1>
 
 			<h2 class="font-extrabold leading-tight text-6xl text-white-100 max-w-2xl">
-				{{- render.atom('text', 'title', { content: content.heading ??? content.title }) -}}
+				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
 			</h2>
 
 			{% if content.description %}

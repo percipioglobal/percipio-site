@@ -1,6 +1,6 @@
 {% import '_macros/atoms' as render %}
 
-<div class="text-base leading-6">
+<address class="text-base leading-6 not-italic">
 	<p>
         {{- render.atom('text', 'title', { content: seomatic.site.identity.genericStreetAddress }) -}}
 	</p>
@@ -8,7 +8,7 @@
         {{- render.atom('text', 'title', { content: seomatic.site.identity.genericAddressRegion }) -}}
         {{- render.atom('text', 'title', { content: seomatic.site.identity.genericPostalCode }) -}}
 	</p>
-</div>
+</address>
 <div class="text-base leading-6 mt-1">
 	<p>
 		Telephone: <a href="tel:02081444048" title="phone" aria-label="phone">{{ seomatic.site.identity.genericTelephone }}</a>

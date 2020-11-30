@@ -85,7 +85,7 @@ handle: landingsPage
 hasTitleField: true
 name: 'Landings Page'
 section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
-sortOrder: 1
+sortOrder: 4
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

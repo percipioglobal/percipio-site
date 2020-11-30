@@ -1,8 +1,13 @@
 {% do craft.eagerBeaver.eagerLoadElements(entry, [
     'pageBuilder',
     'pageBuilder.blogHighlightCards:cards',
+    'pageBuilder.blogHighlightCards.cards:teaserImage',
+    'pageBuilder.blogHighlightCards.cards:blogCategories',
     'pageBuilder.projectHighlightCards:cards',
+    'pageBuilder.projectHighlightCards.cards:teaserImage',
+    'pageBuilder.projectHighlightCards.cards:projectCategories',
     'pageBuilder.serviceHighlightCards:cards',
+    'pageBuilder.serviceHighlightCards.cards:teaserImage',
     'pageBuilder.sectionHeader:buttons',
     'pageBuilder.singleImage:image',
     'pageBuilder.galleryImages:images',
@@ -43,7 +48,7 @@
 
             {%- case "projectHighlightCards" -%}
 
-                {%- include '_organisms/cards/cards--project' ignore missing with {
+                {%- include '_organisms/cards/cards--highlight' ignore missing with {
                     content: block,
                 } -%}
 
