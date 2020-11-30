@@ -1,0 +1,51 @@
+{% import '_macros/atoms' as render %}
+
+{% set colors = {
+    'primary': null,
+    'secondary': null,
+} %}
+
+{% for color in service.colourSwatch.color | slice(0,2) %}
+    {% set key = loop.first ? 'primary' : 'secondary' %}
+    {% set colors = colors|merge({ (key) : color.class }) %}
+{% endfor %}
+
+<div class="{{- utilities }} relative pr-16 py-8">
+
+    <div class="absolute inset-0 bg-{{- colors.primary }} border-b-4 border-{{- colors.secondary -}}">
+
+        {{- render.atom('image', 'teaser', { 
+                image: service.teaserImage[0], 
+                sizes: sizes,
+                alt: service.teaserImage[0].title, 
+                ratio: 'isFilled', 
+                placeholders: placeholders,
+            })
+        -}}
+
+    </div>
+
+    <div class="absolute inset-0 bg-black-100 opacity-50"></div>
+
+    <div class="relative flex flex-col h-full items-start">
+
+        <div class="bg-{{- colors.primary }} border-b-4 border-{{- colors.secondary }} px-8 py-4 mb-8 w-full">
+            <h4 class="inline-block font-bold leading-tight text-xl text-white-100">
+                {{- render.atom('text', 'title', { content: service.title }) -}}
+            </h4>
+        </div>
+
+        <p class="text-base text-white-100 pl-8">
+            {{- service.description -}}
+        </p>
+
+        {{- render.atom('button', 'secondary', {
+            url: service.url,
+            text: 'explore',
+            utilities: 'flex-grow-0 mt-auto ml-8',
+            swatch: colors,
+        }) -}}
+
+    </div>
+
+</div>
