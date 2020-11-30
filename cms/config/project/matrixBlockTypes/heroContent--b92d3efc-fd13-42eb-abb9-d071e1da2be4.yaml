@@ -22,15 +22,6 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          -
-            fieldUid: e11ec840-0667-4899-97ce-fac247283460
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -56,9 +47,9 @@ fields:
   a5be1b28-c12a-4a3c-8bf6-8cddef930108:
     contentColumnType: text
     fieldGroup: null
-    handle: overline
+    handle: heading
     instructions: ''
-    name: Overline
+    name: Heading
     searchable: false
     settings:
       byteLimit: null
@@ -72,40 +63,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  e11ec840-0667-4899-97ce-fac247283460:
-    contentColumnType: string
-    fieldGroup: null
-    handle: heroImage
-    instructions: ''
-    name: 'Hero Image'
-    searchable: false
-    settings:
-      allowSelfRelations: false
-      allowUploads: true
-      allowedKinds:
-        - image
-      defaultUploadLocationSource: 'volume:17629e67-2262-40f9-a68b-93d1e165540f'
-      defaultUploadLocationSubpath: ''
-      limit: '1'
-      localizeRelations: false
-      previewMode: full
-      restrictFiles: '1'
-      selectionLabel: 'Add Hero Image'
-      showSiteMenu: true
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:17629e67-2262-40f9-a68b-93d1e165540f'
-      singleUploadLocationSubpath: ''
-      source: null
-      sources:
-        - 'volume:17629e67-2262-40f9-a68b-93d1e165540f'
-      targetSiteId: null
-      useSingleFolder: true
-      validateRelatedElements: false
-      viewMode: list
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
 handle: heroContent
 name: 'Hero Content'
 sortOrder: 2

@@ -1,33 +1,24 @@
-{% import '_macros/atoms' as render %}
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as functions -%}
 
 {%- minify -%}
+<section class="relative pt-32 pb-20 w-full flex items-center overflow-hidden">
+	<div class="container max-w-screen-lg mx-auto">
 
-<section>
-    <div class="absolute w-full h-full mt-0 md:mt-48 top-0  rotate-90">
-        <svg xmlns="http://www.w3.org/2000/svg" class="transform rotate-25 overflow-visible w-full h-full fill-current text-{{colour}}-800" viewBox="120 120 250 260" >
-            <path d="M9 225.2v170.1l382-220V4.7z"/>
-        </svg>
-    </div>
-    <div class="flex mt-40 md:mt-64 relative">
-        <div class="flex flex-col h-auto justify-center mx-auto p-8 lg:p-0 md:min-w-screen-md md:max-w-screen-md relative ">
-            <div class="w-full text-white-100 leading-tight text-base md:text-lg font-mono tracking-tighter">
-                <h6>{{- render.atom('text', 'content', { content: content.overline }) -}}</h6>
-            </div>
-            <div class="w-full text-white-100 font-bold leading-tight text-5xl md:text-6xl tracking-tighter">
-                <h1>{{- render.atom('text', 'content', { content: entry.title }) -}}</h1>
-            </div>
-            <div class="w-full text-white-100 font-medium leading-tight text-xl md:text-2xl tracking-tight mt-6">
-                <h3>{{- render.atom('text', 'content', { content: content.description }) -}}</h3>
-            </div>
-            <div v-on:click="scroll('content')" class="hidden md:flex mt-20 lg:mt-32 arrow justify-center">
-                <span class="bg bounce absolute bottom-0 p-1 text-white-100 bg-white-20 hover:bg-white-50 rounded-full transition-colors ease-in-out duration-150">
-                    <svg viewBox="0 0 20 20" fill="#fff" class="w-12 h-12">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                    </svg>
-                </span>
-            </div>
-        </div>
-    </div>
+		<h1 class="sr-only">
+			{{- seomatic.site.identity.genericName -}}:
+			{{- render.atom('text', 'title', { content: content.heading ??? content.title }) -}}
+		</h1>
+
+		<h2 class="font-extrabold leading-tight text-6xl text-{{ swatch.primary }} max-w-2xl">
+			{{- render.atom('text', 'title', { content: content.heading ??? content.title }) -}}
+		</h2>
+
+		{% if content.description|length %}
+				<div class="max-w-2xl prose prose-lg mt-12 text-gray-800">
+					{{- render.atom('text', 'content', { content: content.description }) -}}
+				</div>
+			{% endif %}
+	</div>
 </section>
-
 {%- endminify -%}

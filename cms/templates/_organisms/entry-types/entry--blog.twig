@@ -1,34 +1,81 @@
 {%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as functions -%}
+
+{%- do craft.eagerBeaver.eagerLoadElements(entry, [
+        'teaserImage',
+        'blogCategories',
+        'authors',
+        'authors.teaserImage',
+    ])
+-%}
+
+{%- set swatchCategory = content.blogCategories[0] ? swatch(content.blogCategories[0].colourSwatch) : swatch -%}
+{%- set blog = craft.entries.section('blog').id(['not', entry.id]).with(['teaserImage', 'blogCategories', 'authors']).all() -%}
 
 <div id="content">
-    <div class="container max-w-screen-xl mt-32 mx-auto md:px-8">
-        {# {%- include '_organisms/heroes/hero--blog' ignore missing with {
-            content: entry,
-        } -%} #}
+	{%- include '_organisms/heroes/hero--main' ignore missing with {
+        content: entry,
+    } -%}
 
-        {%- include '_molecules/headers/header--byline' ignore missing with {
-            content: entry,
-        } -%}
+	<div class="pt-16">
+		<div class="container mx-auto px-8 lg:px-0 max-w-screen-lg">
+			<div class="flex items-center">
 
-        {%- include '_organisms/builders/content--builder' with {
-            content: entry,
-        } -%}
-    </div>
-</div>
+                {{- render.atom('avatar', 'group', {
+                    authors: entry.authors,
+                    colour: swatch,
+                    utilities: entry.authors|length == 1 ? 'flex-shrink-0 flex' : '',
+                }) -}}
 
-{%- set blog = craft.entries.section('blog').id(['not', entry.id]).with(['teaserImage', 'blogCategory']).all() -%}
+				<div class="flex-grow pl-4">
+					<div class="flex flex-wrap w-full items-center">
+						<div class="flex-grow">
+							<p class="font-mono text-gray-800">
+								<a href="{{ content.blogCategories[0].url }}" class="text-{{- swatchCategory.primary }} hover:text-{{- swatchCategory.secondary }}">{{ content.blogCategories[0].title }}</a>
+								by
+								{{ functions.authors(content.authors) }}<br/>
+								on the
+								<time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
+							</p>
+						</div>
 
-<div class="mt-6 bg-gray-200">
-    <div class="container max-w-screen-xl mx-auto p-8">
-        <div class="text-5xl font-extrabold my-6 pb-8 leading-tight text-green-900 w-full border-b-2 border-gray-400">
-            {{- render.atom('text', 'content', { content: 'More from the blog' }) -}}
-        </div>
+						<div class="flex-srhink-0 pt-4 md:pt-0">
+							{%- include '_molecules/buttons/buttons--social' with {
+                                content: entry,
+                            }-%}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-        {%- include '_organisms/cards/cards--highlight' ignore missing with {
+	{%- include '_organisms/builders/content--builder' with {
+        content: entry,
+    } -%}
+
+	<div class="pt-16">
+		<div class="container mx-auto px-8 lg:px-0 max-w-screen-lg">
+			<div class="leading-tight">
+				{{- render.atom('text', 'overline', {
+                            content: 'Want to read more?',
+                            utilities: 'text-' ~ swatch.primary ~ ' mb-4',
+                        })
+                    -}}
+				<h2 class="text-5xl font-bold mb-8">
+					{{- render.atom('text', 'title', { content: 'Checkout our blogs' }) -}}
+				</h2>
+
+				<hr class="h-1 w-32 bg-{{- swatch.primary -}}">
+
+			</div>
+		</div>
+	</div>
+
+	<div class="-mt-8 md:-mt-20">
+		{%- include '_organisms/cards/cards--blog' ignore missing with {
             content: blog,
             type: 'blog',
-            hasFeatured: false,
         } -%}
-
-    </div>
+	</dvi>
 </div>

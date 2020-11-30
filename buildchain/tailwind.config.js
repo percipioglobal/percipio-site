@@ -221,15 +221,15 @@ module.exports = {
                 },
             },
 
-            zIndex: {
-                '-10': '-10',
-                '-20': '-20',
+            borderWidth: {
+                DEFAULT: '1px',
+                '0': '0',
+                '2': '2px',
+                '3': '3px',
+                '4': '4px',
+                '6': '6px',
+                '8': '8px',
             },
-
-            minWidth: {
-                '3/4': '75%'
-            },
-
 
             inset: (theme, { negative }) => ({
                 auto: 'auto',
@@ -250,6 +250,34 @@ module.exports = {
                 '-3/4': '-75%',
                 '-full': '-100%',
             }),
+
+            minWidth: {
+                '3/4': '75%'
+            },
+
+            minHeight: {
+                '3/4': '75vh',
+            },
+
+            opacity: {
+                20: '0.2',
+            },
+
+            width: {
+                16: '4rem',
+                200: '200%',
+                300: '300%',
+                400: '400%',
+                500: '500%',
+                600: '600%',
+            },
+
+            zIndex: {
+                '-10': '-10',
+                '-20': '-20',
+                '1': '1',
+                '2': '2',
+            },
         },
     },
     variants: {
@@ -258,6 +286,7 @@ module.exports = {
         inset: ['responsive'],
         scale: ['group-hover'],
         textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+        zIndex: ['responsive', 'hover', 'focus'],
     },
     corePlugins: {},
     plugins: [require('@tailwindcss/typography')],
