@@ -1,14 +1,8 @@
 {%- import '_macros/atoms' as render -%}
 
-{% set swatchProject = {
-    'primary': null,
-    'secondary': null,
-} %}
-
-{% for color in content.colourSwatch.color | slice(0,2) %}
-    {% set key = loop.first ? 'primary' : 'secondary' %}
-    {% set swatchProject = swatchProject|merge({ (key) : color.class }) %}
-{% endfor %}
+{%- set swact = swatch(content.colourSwatch) -%}
+{%- set utilities = utilities ??? '' %}
+{%- set size = size ??? 'small' %}
 
 {%- minify -%}
 <div class="{{- utilities -}}">
@@ -16,11 +10,11 @@
         {{- render.atom('image', 'teaser', {
             image: content.teaserImage[0],
             alt: content.teaserImage[0].title,
-            ratio: 'is1by1 sm:is16by9 lg:is1by1',
+            ratio: size == 'large' ? 'is21by9' : 'is1by1 sm:is16by9 lg:is1by1',
             placeholders: placeholders,
         }) -}}
 
-        <div class="absolute bg-{{- swatchProject.primary }} border-b-8 border-{{- swatchProject.secondary }} bottom-10 p-6 w-4/5 md:w-3/4 group-hover:bg-{{- swatchProject.secondary }} transition-all duration-500 ease-in-out">
+        <div class="absolute bg-{{- swact.primary }} border-b-8 border-{{- swact.secondary }} bottom-10 p-6 w-4/5 md:w-3/4 group-hover:bg-{{- swact.secondary }} transition-all duration-500 ease-in-out">
             {{- render.atom('text', 'overline', {
                     content: content.client[0].title,
                     utilities: 'text-white-100',
