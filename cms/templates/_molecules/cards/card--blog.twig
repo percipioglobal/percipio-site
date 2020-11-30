@@ -7,11 +7,11 @@
 
 {%- minify -%}
 <div class="relative group">
-	<div class="block bg-white-100 -mx-20 group-hover:bg-{{- swatchBlog.primary }}">
+	<div class="block bg-white-100 px-8 lg:px-0 lg:-mx-20 group-hover:bg-{{- swatchBlog.primary }}">
 		<div class="container max-w-screen-lg mx-auto py-8 border-b-4 border-{{- swatchBlog.secondary }} group-hover:border-{{- swatchBlog.primary }}">
 			<div class="flex w-full items-center">
-				<div class="flex-grow">
-					<p class="font-mono text-base pb-1 group-hover:text-white-100">
+				<div class="flex-grow pr-2">
+					<p class="font-mono text-sm md:text-base pb-1 group-hover:text-white-100">
 						<span class="text-{{- swatchCategory.primary }} group-hover:text-white-100">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
 						by
 						{{ functions.authors(content.authors) }}
@@ -26,7 +26,7 @@
                         }) -}}
                     </div>
 				</div>
-				<div class="w-32 h-32">
+				<div class="w-24 md:w-32 h-24 md:h-32 flex-shrink-0">
 					{{- render.atom('image', 'teaser', {
                         image: teaserImage,
                         alt:teaserImage.title,

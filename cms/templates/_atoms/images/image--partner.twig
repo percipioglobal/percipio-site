@@ -1,6 +1,6 @@
 {% extends "_atoms/images/image--variables" %}
 
-{# 
+{#
     ### OPTIONS ###
     ---------------
 
@@ -14,7 +14,7 @@
     author: (STR) -- The author of the image ( not used )
     source: (STR) -- The image source ( not used )
 
-    ## ADDED 
+    ## ADDED
 
     placeholder: (OBJ) --- Add the placeholder image to the atom
     type: (STR) --- Checking the type of the image
@@ -22,28 +22,27 @@
 
 #}
 
-{% set values = {
-    image: options.image ??? null,
-} %}
-
 {% block image %}
 
     {%- set values = values|merge({
         placeholder: options.placeholders.brandingPlaceholder[0] ??? null,
         type: options.image.extension ??? null,
         url: options.url ??? null,
+        utilities: options.utilities ??? '',
+        imageUtilities: options.imageUtilities ??? '',
     }) -%}
 
     {%- minify -%}
-
-        {% if values.type == 'svg' %}
+        <a href="{{- values.url -}}" class="{{- values.utilities -}}" title="{{- values.alt -}}">
             <figure role="figure" aria-label="{{- values.alt -}}" class="h-full">
                 <picture class="h-full">
-                    {{- svg(values.image ??? values.placeholder, sanitize=true) | attr({ class: values.style }) -}}
+                    <img src="{{- values.image.url -}}"
+                        sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                        alt="{{- values.alt -}}"
+                        class="lazyload {{- values.imageUtilities -}}">
                 </picture>
             </figure>
-        {% endif %}
-
+        </a>
     {%- endminify -%}
 
 {% endblock %}

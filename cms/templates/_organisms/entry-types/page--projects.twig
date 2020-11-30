@@ -1,8 +1,8 @@
 {%- import '_macros/atoms' as render -%}
 
-{%- set projects = craft.entries.section('projects')
+{%- set projects = craft.entries.section('work')
     .orderBy('postDate desc')
-    .with(['teaserImage','projectCategories','organisationCategory'])
+    .with(['teaserImage','projectCategories','clients'])
     .all() -%}
 
 {%- do craft.eagerBeaver.eagerLoadElements(entry, [
@@ -15,10 +15,8 @@
 } -%}
 
 <div id="content" class="container max-w-screen-hd px-8 mx-auto">
-    {%- include '_organisms/cards/cards--masonry' ignore missing with {
+    {%- include '_organisms/cards/cards--projects' ignore missing with {
         content: projects,
-        type: 'projects',
-        hasFeatured: true,
     } -%}
 </div>
 

@@ -89,7 +89,7 @@ handle: contentPage
 hasTitleField: true
 name: 'Content Page'
 section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
-sortOrder: 2
+sortOrder: 3
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

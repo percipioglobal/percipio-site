@@ -46,6 +46,12 @@
                             content: entry,
                         } -%}
 
+                    {%- case "contactPage" -%}
+
+                        {%- include '_organisms/entry-types/page--contact' ignore missing with {
+                            content: entry,
+                        } -%}
+
                     {%- case "blog" -%}
 
                         {%- include '_organisms/entry-types/entry--blog' ignore missing with {

@@ -1,5 +1,5 @@
 fieldLayouts:
-  a88ce703-9ba5-42eb-b501-241be2a78b19:
+  9e410af1-cbe3-47f3-93f7-c3c0257972ac:
     tabs:
       -
         elements:
@@ -28,6 +28,15 @@ fieldLayouts:
             width: 100
           -
             fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
             instructions: null
             label: null
             required: false
@@ -72,11 +81,11 @@ fieldLayouts:
             width: 100
         name: SEO
         sortOrder: 3
-handle: teamPage
+handle: contactPage
 hasTitleField: true
-name: 'Team Page'
+name: 'Contact Page'
 section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
-sortOrder: 7
+sortOrder: 2
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
