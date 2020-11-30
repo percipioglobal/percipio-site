@@ -1,14 +1,15 @@
 {% do craft.eagerBeaver.eagerLoadElements(entry, [
     'contentBuilder',
     'contentBuilder.highlightCards:cards',
+    'contentBuilder.highlightCards:cards.client',
+    'contentBuilder.highlightCards:cards.blogCategories',
+    'contentBuilder.highlightCards:cards.authors',
     'contentBuilder.contentGrid:items',
     'contentBuilder.sectionHeader:buttons',
     'contentBuilder.singleImage:image',
     'contentBuilder.galleryImages:images',
     'contentBuilder.slide:image',
     'contentBuilder.resourceList:resources',
-    'contentBuilder.faqList:questions',
-    'contentBuilder.faqList:questions.faqCategory',
     'author.profilePhoto',
     ])
 %}
@@ -56,6 +57,13 @@
 
                     {%- include '_molecules/images/image--single' ignore missing with {
                         content: block,
+                    } -%}
+
+                {%- case "standfirst" -%}
+
+                    {%- include '_molecules/content/content--standfirst' ignore missing with {
+                        content: block,
+                        prose: 'md:prose-3xl',
                     } -%}
 
                 {%- case "galleryImages" -%}

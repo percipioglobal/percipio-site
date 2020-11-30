@@ -15,9 +15,21 @@
                 <h2 class="text-5xl font-bold mb-8">
                     {{- render.atom('text', 'title', { content: content.heading }) -}}
                 </h2>
-                <hr class="h-1 w-32 bg-{{- swatch.primary -}}">
-            </div>
 
+                {% if content.button and content.button.getUrl() %}
+
+                    {{- render.atom('button', 'primary', {
+                        url: content.button.getUrl(),
+                        text: content.button.getText(),
+                        swatch: swatch
+                    }) -}}
+
+                {% else %}
+
+                    <hr class="h-1 w-32 bg-{{- swatch.primary -}}">
+
+                {% endif %}
+            </div>
 
         </div>
 

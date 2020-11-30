@@ -2,7 +2,7 @@
 
     <nav class="fixed z-10 bg-white-100 w-full">
 
-        <div class="container mx-auto flex items-center py-8">
+        <div class="container mx-auto flex items-center py-8 px-8 lg:px-0">
 
             <slot></slot>
 
@@ -13,7 +13,7 @@
         </div>
 
     </nav>
-    
+
 </template>
 
 <script>

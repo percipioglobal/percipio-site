@@ -2,34 +2,31 @@
 
 
 {# Load needed images #}
-{%- set teaserImage = content.teaserImage[0] ?? placeholder.teaserPlaceholder[0] -%}
+{%- set teaserImage = content.teaserImage[0] -%}
 {%- set width = width ??? '' %}
 {%- set isHorizontal = isHorizontal ??? false %}
 {%- set categories = null %}
-{%- set color =  'gray' %}
+{%- set color = swatch(content.colourSwatch) -%}
 
 {%- switch content.type -%}
     {% case "blog" %}
         {% set categories = content.blogCategories ??? null %}
-        {% set color = content.colourSwatch ??? "gray" %}
     {% case "projects" %}
         {% set categories = content.projectCategories ??? null %}
-        {% set color = content.organisationCategory[0].colourSwatch ??? "gray" %}
     {% case "teamMember" %}
         {% set categories = content.teamCategories ??? null %}
-        {% set color = content.colourSwatch ??? "gray" %}
 {%- endswitch -%}
 
 {%- minify -%}
-<div class="hite-100 text-{{color}}-600 border-b-8 border-{{- color -}}-600 mb-8 shadow-md hover:shadow-2xl transition duration-200 ease-in-out {{ width }}">
+<div class="white-100 text-{{- color.primary }} border-b-8 border-{{- color.primary }} mb-8 shadow-md hover:shadow-2xl transition duration-200 ease-in-out {{ width }}">
 	<div class="h-full flex flex-col w-full {{ isHorizontal ? 'xl:grid grid-cols-2 grid-rows-1' : '' -}}">
 		<div class="relative {{ isHorizontal? 'h-full' : '' }}">
 			<a href="{{- content.url -}}" class="w-full block {{ isHorizontal? 'h-full' : 'h-80' }}">
-				{{- render.atom('image', 'teaser', { 
-					image: teaserImage, 
-					alt:teaserImage.title, 
+				{{- render.atom('image', 'teaser', {
+					image: teaserImage,
+					alt:teaserImage.title,
 					ratio: 'w-full h-full',
-					placeholders: placeholders,  
+					placeholders: placeholders,
 				}) -}}
 			</a>
 		</div>

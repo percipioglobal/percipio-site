@@ -48,8 +48,12 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+        name: Options
+        sortOrder: 2
+      -
+        elements:
           -
-            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
+            fieldUid: da9598dc-e9bb-4920-8adf-a712876cb578
             instructions: null
             label: null
             required: false
@@ -57,10 +61,6 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Metadata
-        sortOrder: 2
-      -
-        elements:
           -
             fieldUid: cb2b1336-5ccd-48f4-a973-72fae9fd4069
             instructions: null
@@ -76,7 +76,7 @@ handle: teamPage
 hasTitleField: true
 name: 'Team Page'
 section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
-sortOrder: 5
+sortOrder: 7
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

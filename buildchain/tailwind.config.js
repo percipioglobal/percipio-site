@@ -25,8 +25,14 @@ module.exports = {
                     strong: {
                         color: theme('colors.white.100'),
                     },
-                }
+                },
             },
+            '3xl': {
+                css: {
+                    fontSize: theme('fontSize.3xl'),
+                    fontWeight: theme('fontWeight.medium'),
+                }
+            }
         }),
         extend: {
 
@@ -53,10 +59,10 @@ module.exports = {
                     'dark-navy': 'rgba(0,6,51,1)',
                     black: 'rgba(0,2,20,1)',
                 },
-    
+
                 transparent: 'transparent',
                 current: 'currentColor',
-    
+
                 black: {
                     10: 'rgba(0,0,0,.1)',
                     20: 'rgba(0,0,0,.2)',
@@ -214,16 +220,73 @@ module.exports = {
                     900: '#751a3d',
                 },
             },
+
+            borderWidth: {
+                DEFAULT: '1px',
+                '0': '0',
+                '2': '2px',
+                '3': '3px',
+                '4': '4px',
+                '6': '6px',
+                '8': '8px',
+            },
+
+            inset: (theme, { negative }) => ({
+                auto: 'auto',
+                ...theme('spacing'),
+                ...negative(theme('spacing')),
+                '1/2': '50%',
+                '1/3': '33.333333%',
+                '2/3': '66.666667%',
+                '1/4': '25%',
+                '2/4': '50%',
+                '3/4': '75%',
+                full: '100%',
+                '-1/2': '-50%',
+                '-1/3': '-33.333333%',
+                '-2/3': '-66.666667%',
+                '-1/4': '-25%',
+                '-2/4': '-50%',
+                '-3/4': '-75%',
+                '-full': '-100%',
+            }),
+
+            minWidth: {
+                '3/4': '75%'
+            },
+
+            minHeight: {
+                '3/4': '75vh',
+            },
+
+            opacity: {
+                20: '0.2',
+            },
+
+            width: {
+                16: '4rem',
+                200: '200%',
+                300: '300%',
+                400: '400%',
+                500: '500%',
+                600: '600%',
+            },
+
             zIndex: {
                 '-10': '-10',
                 '-20': '-20',
-            }
+                '1': '1',
+                '2': '2',
+            },
         },
     },
     variants: {
-        extend: {
-            scale: ['group-hover'],
-        }
+        backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
+        borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
+        inset: ['responsive'],
+        scale: ['group-hover'],
+        textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+        zIndex: ['responsive', 'hover', 'focus'],
     },
     corePlugins: {},
     plugins: [require('@tailwindcss/typography')],

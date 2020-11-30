@@ -4,12 +4,14 @@
 
     content: (STR) -- the actual content as a string
     utilities: (STR) -- TW utility classes to be applied for the text container, overrides default settings
+    colour: (STR) -- a colour for the cards title
 
 #}
 
 {% set values = {
     content: options.content ??? null,
     utilities: options.utilities ?? null,
+    colour: options.colour ?? null,
 } %}
 
 {% block text %}

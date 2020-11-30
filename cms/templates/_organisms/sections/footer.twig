@@ -19,7 +19,11 @@
     </div>
 
 	<div class="border-t border-gray-400 text-gray-600 text-xs font-mono flex flex-col md:flex-row md:items-center md:justify-between mx-auto px-4 py-6 lg:py-8">
-        {% include "_organisms/navigations/navigation--social" with {styling: 'mb-4 md:mb-0 md:mx-4 lg:mx-12 order-1 md:order-3 flex flex-1 justify-center md:justify-end space-x-6 md:space-x-2' } %}
+        {% include "_organisms/navigations/navigation--social" with {
+            utilities: 'mb-4 md:mb-0 md:mx-4 lg:mx-12 order-1 md:order-3 flex flex-1 justify-center md:justify-end space-x-6 md:space-x-2',
+            wrapperUtilities: 'text-center md:text-right',
+            linkUtilities: 'text-gray-700 hover:text-gray-500'
+        } %}
 
 		{% include "_organisms/navigations/navigation--legal" with {styling: 'mb-3 md:mb-0 md:mx-4 lg:mx-12 text-md text-center flex flex-1 justify-center space-x-6 leading-6 order-1 md:order-2' } %}
 

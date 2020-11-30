@@ -1,4 +1,4 @@
-dateModified: 1606465409
+dateModified: 1606743297
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -29,6 +29,10 @@ plugins:
   feed-me:
     enabled: true
     schemaVersion: 4.3.0
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   image-optimize:
     edition: standard
     enabled: true
