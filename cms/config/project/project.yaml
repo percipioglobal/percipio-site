@@ -29,10 +29,6 @@ plugins:
   feed-me:
     enabled: true
     schemaVersion: 4.3.0
-  field-manager:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   image-optimize:
     edition: standard
     enabled: true
@@ -72,14 +68,6 @@ plugins:
     settings:
       bypassProjectConfig: false
       pluginName: Navigation
-  notifications:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  password-policy:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   position-fieldtype:
     edition: standard
     enabled: true
@@ -117,11 +105,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  webperf:
-    edition: standard
-    enabled: true
-    licenseKey: null
-    schemaVersion: 1.0.1
   width-fieldtype:
     edition: standard
     enabled: true
