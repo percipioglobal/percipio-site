@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: 1572f461-2a67-47a4-a36c-80839168bcb7
+handle: partners
+instructions: ''
+name: Partners
+searchable: false
+settings:
+  contentTable: '{{%stc_partners}}'
+  fieldLayout: table
+  maxRows: '6'
+  minRows: '1'
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: 'Add a partner'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

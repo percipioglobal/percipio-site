@@ -1,0 +1,166 @@
+field: 589e1f4a-2365-4b58-bc0e-64c5b7160190
+fieldLayouts:
+  b942bd71-6c0a-4c1f-abfb-338b60b15da8:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 2d54b597-732a-41bb-a00a-cf8f7b615317
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2d54b597-732a-41bb-a00a-cf8f7b615317:
+    contentColumnType: string
+    fieldGroup: null
+    handle: target
+    instructions: ''
+    name: Target
+    searchable: true
+    settings:
+      allowCustomText: true
+      allowTarget: false
+      autoNoReferrer: false
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - true
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - site
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - sites
+                  - '*'
+          -
+            - user
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - custom
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField

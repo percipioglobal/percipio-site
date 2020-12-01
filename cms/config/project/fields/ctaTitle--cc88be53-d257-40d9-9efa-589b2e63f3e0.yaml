@@ -1,0 +1,18 @@
+contentColumnType: string(740)
+fieldGroup: 1572f461-2a67-47a4-a36c-80839168bcb7
+handle: ctaTitle
+instructions: ''
+name: 'CTA Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 185
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
