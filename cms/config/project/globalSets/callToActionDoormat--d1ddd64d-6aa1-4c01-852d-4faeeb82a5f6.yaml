@@ -4,7 +4,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: cc88be53-d257-40d9-9efa-589b2e63f3e0
+            fieldUid: 09243cdb-0fbd-4e89-a336-39c5558bb567
             instructions: null
             label: null
             required: false
@@ -13,7 +13,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 767322fe-db85-4630-bb0c-905325ba7222
+            fieldUid: 5179642f-d661-49a6-be40-5fb59743a8c0
             instructions: null
             label: null
             required: false
@@ -22,7 +22,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 589e1f4a-2365-4b58-bc0e-64c5b7160190
+            fieldUid: 8504d7aa-ffd4-42c5-932d-221e2c5e7b29
             instructions: null
             label: null
             required: false

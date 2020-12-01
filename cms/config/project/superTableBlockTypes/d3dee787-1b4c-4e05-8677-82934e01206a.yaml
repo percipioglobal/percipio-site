@@ -1,11 +1,11 @@
-field: 634e13b3-7198-4146-87c6-4495547f7eff
+field: 7fb63ae6-c6ee-4824-9213-420e2da4e008
 fieldLayouts:
-  d7564523-d58c-4c71-8fe2-d46495dbd0c4:
+  6c234cb6-4c8b-4d0e-a3ce-0460e05055f4:
     tabs:
       -
         elements:
           -
-            fieldUid: 0a450f74-18cf-4976-a572-7960c6f49237
+            fieldUid: 2c70613c-0c00-4d9a-96bf-658a6db58d9c
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 62b374b1-e3ce-4d1f-acbc-6fdb43e4ce08
+            fieldUid: 60285741-d9e6-4e21-b26e-3330c2d02f47
             instructions: null
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6210f807-548a-4bd6-b1e7-dad913c9b062
+            fieldUid: faa39bae-b425-4b70-b3f6-c1584cdda9dc
             instructions: null
             label: null
             required: true
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  0a450f74-18cf-4976-a572-7960c6f49237:
+  2c70613c-0c00-4d9a-96bf-658a6db58d9c:
     contentColumnType: string
     fieldGroup: null
     handle: logo
@@ -67,29 +67,16 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  6210f807-548a-4bd6-b1e7-dad913c9b062:
-    contentColumnType: string(255)
-    fieldGroup: null
-    handle: target
-    instructions: ''
-    name: 'Website url'
-    searchable: true
-    settings:
-      maxLength: '255'
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Url
-  62b374b1-e3ce-4d1f-acbc-6fdb43e4ce08:
-    contentColumnType: text
+  60285741-d9e6-4e21-b26e-3330c2d02f47:
+    contentColumnType: string(720)
     fieldGroup: null
     handle: description
     instructions: ''
-    name: Partner
+    name: Name
     searchable: true
     settings:
       byteLimit: null
-      charLimit: null
+      charLimit: 180
       code: ''
       columnType: null
       initialRows: '4'
@@ -99,3 +86,16 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  faa39bae-b425-4b70-b3f6-c1584cdda9dc:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: target
+    instructions: ''
+    name: Website
+    searchable: true
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url

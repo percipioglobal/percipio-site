@@ -5,7 +5,16 @@ instructions: ''
 name: Buttons
 searchable: false
 settings:
-  contentTable: '{{%stc_buttons}}'
+  columns:
+    __assoc__:
+      -
+        - 720b0445-dc28-4b47-85df-59e4f03c666b
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_buttons_1}}'
   fieldLayout: table
   maxRows: ''
   minRows: ''

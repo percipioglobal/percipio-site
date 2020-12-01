@@ -6,7 +6,7 @@ name: Body
 searchable: false
 settings:
   availableTransforms: '*'
-  availableVolumes: ''
+  availableVolumes: '*'
   cleanupHtml: true
   columnType: text
   configSelectionMode: choose
@@ -14,7 +14,7 @@ settings:
   manualConfig: ''
   purifierConfig: ''
   purifyHtml: '1'
-  redactorConfig: Standard.json
+  redactorConfig: Simple.json
   removeEmptyTags: '1'
   removeInlineStyles: '1'
   removeNbsp: '1'

@@ -1,11 +1,11 @@
-field: 589e1f4a-2365-4b58-bc0e-64c5b7160190
+field: 8504d7aa-ffd4-42c5-932d-221e2c5e7b29
 fieldLayouts:
-  b942bd71-6c0a-4c1f-abfb-338b60b15da8:
+  2c6f8cb7-2a00-400f-8ba1-455b6eb5adf1:
     tabs:
       -
         elements:
           -
-            fieldUid: 2d54b597-732a-41bb-a00a-cf8f7b615317
+            fieldUid: 720b0445-dc28-4b47-85df-59e4f03c666b
             instructions: null
             label: null
             required: false
@@ -16,18 +16,18 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  2d54b597-732a-41bb-a00a-cf8f7b615317:
+  720b0445-dc28-4b47-85df-59e4f03c666b:
     contentColumnType: string
     fieldGroup: null
     handle: target
     instructions: ''
-    name: Target
+    name: Button
     searchable: true
     settings:
       allowCustomText: true
       allowTarget: false
       autoNoReferrer: false
-      defaultLinkName: entry
+      defaultLinkName: asset
       defaultText: ''
       enableAllLinkTypes: false
       enableAriaLabel: false

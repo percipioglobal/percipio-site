@@ -5,7 +5,7 @@ instructions: ''
 name: Partners
 searchable: false
 settings:
-  contentTable: '{{%stc_partners}}'
+  contentTable: '{{%stc_partners_1}}'
   fieldLayout: table
   maxRows: '6'
   minRows: '1'

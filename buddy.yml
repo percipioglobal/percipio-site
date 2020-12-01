@@ -7,20 +7,20 @@
   actions:
     - action: "Execute: webpack build"
       type: "BUILD"
-      working_directory: "/buddy/Percipio"
-      docker_image_name: "nystudio107/node-dev-base"
+      working_directory: "/buddy/$PROJECT_SHORTNAME"
+      docker_image_name: "nystudio107/webpack-dev-base"
       docker_image_tag: "latest"
       execute_commands:
         - "cd buildchain"
         - "npm ci"
         - "npm run build"
       volume_mappings:
-        - "/:/buddy/Percipio"
+        - "/:/buddy/$PROJECT_SHORTNAME"
       trigger_condition: "ALWAYS"
       shell: "BASH"
     - action: "Execute: composer install"
       type: "BUILD"
-      working_directory: "/buddy/Percipio"
+      working_directory: "/buddy/$PROJECT_SHORTNAME"
       docker_image_name: "nystudio107/php-dev-base"
       docker_image_tag: "latest"
       execute_commands:
@@ -33,7 +33,7 @@
         - "# php ext pdo_mysql"
         - "docker-php-ext-install pdo_mysql mysqli"
       volume_mappings:
-        - "/:/buddy/Percipio"
+        - "/:/buddy/$PROJECT_SHORTNAME"
       trigger_condition: "ALWAYS"
       shell: "BASH"
     - action: "Rsync files to staging"
