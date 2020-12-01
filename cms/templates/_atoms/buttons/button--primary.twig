@@ -9,6 +9,7 @@
     icon: (STR) -- the icon for the button ( optional )
     utlities: (STR) -- the button utility from TW for the last button in the loop
     swatch: (STR) -- add a colour swatch to button
+    size: (STR) -- define a button size
 
 #}
 
@@ -16,7 +17,12 @@
 
     {%- minify -%}
 
-        <a {{ values.url ? 'href=' ~ values.url : '' }} class="inline-flex border-2 px-8 py-4 font-extrabold text-lg border-{{- values.swatch ? values.swatch.primary : '' }} text-{{- values.swatch ? values.swatch.primary : 'white-100' }} hover:text-white-100 hover:bg-{{- values.swatch ? values.swatch.primary : '' }} {{ values.utilities ? values.utilities : '' -}}">
+        {%- set sizes = {
+            'small': 'px-4 py-2',
+            'large': 'px-8 py-4',
+        } -%}
+
+        <a {{ values.url ? 'href=' ~ values.url : '' }} class="inline-flex border-2 {{ sizes[values.size] is defined ? sizes[values.size] : sizes['large'] }} font-extrabold text-lg border-{{- values.swatch ? values.swatch.primary : '' }} text-{{- values.swatch ? values.swatch.primary : 'white-100' }} hover:text-{{- values.swatch ? values.swatch.primary : 'blue-600' }} hover:bg-white-100 {{ values.utilities ? values.utilities : '' -}}">
             {{- values.text -}}
         </a>
 

@@ -38,6 +38,9 @@
 {% block bodyHtml %}
     <div id="page-container" class="overflow-hidden leading-tight">
 
+            {# -- Cookie consent -- #}
+            {% include "_molecules/notifications/notification--cookie" %}
+
             {# -- Info header, including _navbar.twig -- #}
             {% include "_organisms/sections/header.twig" %}
 
