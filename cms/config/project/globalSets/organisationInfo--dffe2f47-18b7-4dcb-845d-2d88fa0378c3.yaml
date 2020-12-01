@@ -54,5 +54,18 @@ fieldLayouts:
             width: 50
         name: Branding
         sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 7fb63ae6-c6ee-4824-9213-420e2da4e008
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Partners
+        sortOrder: 3
 handle: organisationInfo
 name: 'Organisational Information'
