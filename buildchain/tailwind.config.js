@@ -263,6 +263,10 @@ module.exports = {
                 20: '0.2',
             },
 
+            translate: {
+                '-1/2': '-50%',
+            },
+
             width: {
                 16: '4rem',
                 200: '200%',
@@ -286,6 +290,7 @@ module.exports = {
         inset: ['responsive'],
         scale: ['group-hover'],
         textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+        translate: ['responsive', 'hover', 'focus', 'group-hover'],
         zIndex: ['responsive', 'hover', 'focus'],
     },
     corePlugins: {},
