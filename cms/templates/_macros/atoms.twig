@@ -2,9 +2,9 @@
     # Atom
     # @package   percipioglobal\craft
     # @since     1.0.0
-    # @author    Percipio Global Ltd.
+    # @author    Percipio.London
     # @link      https://percipio.london
-    # @copyright Copyright (c) 2020 Percipio Global Ltd.
+    # @copyright Copyright (c) 2020 Percipio.London
     # @license   MIT
     # @license   https://opensource.org/licenses/MIT MIT Licensed
     #}
@@ -14,34 +14,5 @@
         {% include '_atoms/' ~ type ~ 's/' ~ prefix ~ type ~ '--' ~ atom with {
             options: options,
         } %}
-    {% endspaceless %}
-{% endmacro %}
-
-{# Button - takes url, text, class ( for background-color / text-color + hover ), icon ( font-awesome class ) and icon position ( left or right ) #}
-{% macro button(url, text, class, icon = null, position = 'left') %}
-    {% import _self as atom %}
-    {% spaceless %}
-        <a href="{{- url -}}" class="flex rounded-full font-medium text-base uppercase tracking-widest px-8 py-4 mr-2 transition-colors duration-150 ease-in-out {{ class -}}">
-            {%- if icon and position == 'left' -%}
-                <span class="inline-flex mr-4">
-                    <i class="{{- icon -}}"></i>
-                </span>
-            {%- endif -%}
-            <span>
-                {{- atom.text(text) -}}
-            </span>
-            {%- if icon and position == 'right' -%}
-                <span class="inline-flex ml-4">
-                    <i class="{{- icon -}}"></i>
-                </span>
-            {%- endif -%}
-        </a>
-    {% endspaceless %}
-{% endmacro %}
-
-{# Date #}
-{% macro formatDate(date) %}
-    {% spaceless %}
-        {{- date | date('j F, Y') -}}
     {% endspaceless %}
 {% endmacro %}

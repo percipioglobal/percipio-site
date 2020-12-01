@@ -25,12 +25,35 @@ fields:
     searchable: false
     settings:
       columns:
-        25958ba0-5f4a-48fc-9dee-0064db99f702:
-          width: ''
-        ec91bde6-778d-4030-89fe-45614d871e81:
-          width: ''
-        fbaa4c75-7616-42ca-adea-7615c9b91e38:
-          width: ''
+        __assoc__:
+          -
+            - fbaa4c75-7616-42ca-adea-7615c9b91e38
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - ec91bde6-778d-4030-89fe-45614d871e81
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 25958ba0-5f4a-48fc-9dee-0064db99f702
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - d09756bb-3dd5-4ad8-b6eb-6e3595705141
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
       contentTable: '{{%stc_7_resources}}'
       fieldLayout: table
       maxRows: ''
@@ -44,4 +67,4 @@ fields:
     type: verbb\supertable\fields\SuperTableField
 handle: resourceList
 name: 'Resource List'
-sortOrder: 7
+sortOrder: 8

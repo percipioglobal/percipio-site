@@ -26,10 +26,6 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
-        name: Content
-        sortOrder: 1
-      -
-        elements:
           -
             fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78
             instructions: null
@@ -39,8 +35,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Hero
-        sortOrder: 2
+        name: Content
+        sortOrder: 1
       -
         elements:
           -
@@ -52,8 +48,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Metadata
-        sortOrder: 3
+        name: Options
+        sortOrder: 2
       -
         elements:
           -
@@ -75,12 +71,12 @@ fieldLayouts:
             warning: null
             width: 100
         name: SEO
-        sortOrder: 4
+        sortOrder: 3
 handle: teamPage
 hasTitleField: true
 name: 'Team Page'
 section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
-sortOrder: 5
+sortOrder: 7
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

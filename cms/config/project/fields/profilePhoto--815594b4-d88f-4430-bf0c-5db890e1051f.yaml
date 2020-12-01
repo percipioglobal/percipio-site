@@ -3,7 +3,7 @@ fieldGroup: bbb59518-7cdc-4a7f-b07c-cd6b1fa8201d
 handle: profilePhoto
 instructions: 'Upload the users profilePhoto'
 name: 'Profile Photo'
-searchable: true
+searchable: false
 settings:
   allowSelfRelations: false
   allowUploads: true

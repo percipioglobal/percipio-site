@@ -1,9 +1,5 @@
-{%- set team = craft.entries.section('team')
-    .with(['teaserImage', 'teamCategories'])
-    .all() -%}
-
 {%- do craft.eagerBeaver.eagerLoadElements(entry, [
-        'heroImage'
+        'heroBuilder'
     ])
 -%}
 
@@ -11,11 +7,4 @@
     content: entry,
 } -%}
 
-<div id="content" class="container max-w-screen-hd px-8 mx-auto">
-
-    {%- include '_organisms/cards/cards--highlight' ignore missing with {
-        content: team,
-        type: 'team',
-        showVacantiesCta: true,
-    } -%}
-</div>
+{%- include '_organisms/cards/cards--team' ignore missing -%}

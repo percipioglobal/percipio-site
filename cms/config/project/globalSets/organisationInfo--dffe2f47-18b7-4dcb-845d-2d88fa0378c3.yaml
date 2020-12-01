@@ -32,5 +32,40 @@ fieldLayouts:
             width: 100
         name: 'Organisational Information'
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 6180741d-7a95-4c38-a6b8-13f0cd8dab1f
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 451cb28a-2133-4681-977d-41c5a1cbc887
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Branding
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: cf81afd0-b0ac-4596-8f04-5c8d375795a6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Partners
+        sortOrder: 3
 handle: organisationInfo
 name: 'Organisational Information'

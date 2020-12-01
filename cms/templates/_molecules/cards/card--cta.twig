@@ -7,11 +7,15 @@
 {%- set color =  content.colourSwatch ??? 'gray' %}
 
 {%- minify -%}
-<a href="{{content.callToActionUrl.getUrl()}}" class="z-30 bg-white-100 text-{{color}}-600 border-b-8 border-{{- color -}}-600 mb-8 shadow-md hover:shadow-2xl transition duration-200 ease-in-out {{ width }}">
+<a href="{{content.callToActionUrl.getUrl()}}" class=" bg-white-100 text-{{color}}-600 border-b-8 border-{{- color -}}-600 mb-8 shadow-md hover:shadow-2xl transition duration-200 ease-in-out {{ width }}">
 	<div class="h-full flex flex-col w-full">
 		<div class="relative">
 			<div class="w-full block h-80">
-				{{- render.atom('image', 'teaser', { image: teaserImage, alt:teaserImage.title, ratio: 'w-full h-full'  }) -}}
+				{{- render.atom('image', 'teaser', { 
+					image: teaserImage, 
+					alt:teaserImage.title, ratio: 'w-full h-full',
+					placeholders: placeholders,
+				}) -}}
 			</div>
 		</div>
 		<div class="flex flex-col flex-grow text-left p-8">

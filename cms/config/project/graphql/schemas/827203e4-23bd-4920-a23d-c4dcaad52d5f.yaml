@@ -1,0 +1,4 @@
+isPublic: false
+name: Navigation
+scope:
+  - 'globalsets.64547f99-7471-496a-8b02-5d48e09a72f9:read'

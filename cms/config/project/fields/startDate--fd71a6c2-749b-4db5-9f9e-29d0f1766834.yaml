@@ -1,0 +1,15 @@
+contentColumnType: datetime
+fieldGroup: 58eccc39-1c9e-45ac-bae8-465deff69786
+handle: startDate
+instructions: 'Enter the team member their date they started working for Percipio.London'
+name: 'Started working at Percipio.London'
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: '30'
+  showDate: true
+  showTime: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

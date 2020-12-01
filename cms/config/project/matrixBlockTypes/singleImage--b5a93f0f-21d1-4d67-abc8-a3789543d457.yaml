@@ -53,12 +53,25 @@ fields:
     settings:
       default: center
       options:
-        center: '1'
-        drop-left: ''
-        drop-right: ''
-        full: '1'
-        left: '1'
-        right: '1'
+        __assoc__:
+          -
+            - left
+            - ''
+          -
+            - center
+            - '1'
+          -
+            - right
+            - ''
+          -
+            - full
+            - '1'
+          -
+            - drop-left
+            - ''
+          -
+            - drop-right
+            - ''
     translationKeyFormat: null
     translationMethod: none
     type: rias\positionfieldtype\fields\Position
@@ -92,41 +105,104 @@ fields:
       optgroups: true
       options:
         -
-          default: '1'
-          label: None
-          value: ''
+          __assoc__:
+            -
+              - label
+              - None
+            -
+              - value
+              - ''
+            -
+              - default
+              - '1'
         -
-          default: ''
-          label: '1:1'
-          value: is1by1
+          __assoc__:
+            -
+              - label
+              - '1:1'
+            -
+              - value
+              - is1by1
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: '2:1'
-          value: is2by1
+          __assoc__:
+            -
+              - label
+              - '2:1'
+            -
+              - value
+              - is2by1
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: '4:3'
-          value: is4by3
+          __assoc__:
+            -
+              - label
+              - '4:3'
+            -
+              - value
+              - is4by3
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: '3:4'
-          value: is3by4
+          __assoc__:
+            -
+              - label
+              - '3:4'
+            -
+              - value
+              - is3by4
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: '7:5'
-          value: is7by5
+          __assoc__:
+            -
+              - label
+              - '7:5'
+            -
+              - value
+              - is7by5
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: '8:5'
-          value: is8by5
+          __assoc__:
+            -
+              - label
+              - '8:5'
+            -
+              - value
+              - is8by5
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: '16:9'
-          value: is16by9
+          __assoc__:
+            -
+              - label
+              - '16:9'
+            -
+              - value
+              - is16by9
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: '21:9'
-          value: is21by9
+          __assoc__:
+            -
+              - label
+              - '21:9'
+            -
+              - value
+              - is21by9
+            -
+              - default
+              - ''
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
@@ -165,4 +241,4 @@ fields:
     type: craft\fields\Assets
 handle: singleImage
 name: Image
-sortOrder: 4
+sortOrder: 6

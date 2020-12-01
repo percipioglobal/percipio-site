@@ -5,8 +5,7 @@ instructions: ''
 name: 'Colour Swatch'
 searchable: false
 settings:
-  options: ''
-  palette: ''
+  palette: Percipio
   useConfigFile: '1'
 translationKeyFormat: null
 translationMethod: none

@@ -1,26 +1,53 @@
-<div class="w-full h-screen overflow-hidden relative">
-    <div class="relative z-30 container max-w-screen-lg px-8 mx-auto pt-32 pb-20 md:py-32">
-        <div class="text-gray-800 font-extrabold leading-tight text-5xl lg:text-6xl mb-8 md:mb-16">
-            {{content.description}}
-        </div>
-        {% for button in content.buttons.all() %}
-            <a href="{{ siteUrl }}projects" title="projects" class="inline-block p-4 text-lg bg-transparent hover:bg-{{button.buttonColour}}-500 text-{{button.buttonColour}}-500 font-extrabold hover:text-white-100 hover:border-transparent border-2 border-{{button.buttonColour}}-500 mr-3">
-                What we do
-            </a>
-        {% endfor %}
-    </div>
-    <div class="absolute w-full h-screen-30 md:h-screen-50 bottom-0 z-20">
-        <svg version="1.1" id="Percipio_Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 100 866 1000" xml:space="preserve" preserveAspectRatio="none">
-            <path id="P_Section" fill="none" d="M0 559.5l537.7-309.6-104.2-60.2L164.6 345 0 250 433 0l433 250-537.6 309.6 268.5 155L433 809.5z"/>
-            <g id="Dark_Group" fill="#1c64f2">
-                <path id="Dark_2" d="M433 809.5l163.9-94.9-268.5-155L866 250v500l-433 250z"/>
-                <path id="Dark_1" d="M164.6 345v119.7l268.9-154.8V189.7z"/>
-            </g>
-            <g id="Light_Group" fill="#d61f69">
-                <path id="Light_3" d="M433.5 189.7v120.2l104.2-60z"/>
-                <path id="Light_2" d="M0 559.5l433 250V1000L0 750z"/>
-                <path id="Light_1" d="M0 250l164.6 95v119.7L0 559.5z"/>
-            </g>
-        </svg>
-    <div>
-</div>
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as functions -%}
+
+{%- set heroImage = content.heroImage|length ? content.heroImage[0] : null -%}
+
+{%- minify -%}
+<section class="relative pt-32 w-full {{not heroImage ? 'bg-' ~ swatch.primary ~ ' border-b-8 border-' ~ swatch.secondary : '' }} min-h-3/4 flex items-center overflow-hidden">
+	<div class="container max-w-screen-lg mx-auto py-20">
+
+		<div class="{{heroImage ? 'z-2 relative bg-' ~ swatch.primary ~ ' border-b-8 border-' ~ swatch.secondary : '' }} px-12 py-6">
+
+			<h1 class="sr-only">
+				{{- seomatic.site.identity.genericName -}}:
+				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
+			</h1>
+
+			<h2 class="font-extrabold leading-tight text-6xl text-white-100 max-w-2xl">
+				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
+			</h2>
+
+			{% if content.description %}
+				<div class="max-w-2xl prose prose-lg mt-12 text-white-100">
+					{{- render.atom('text', 'content', { content: content.description }) -}}
+				</div>
+			{% endif %}
+
+            {% if content.buttons %}
+
+                {{- render.atom('button', 'group', {
+
+                    buttons: content.buttons,
+                    type: 'primary',
+                    utilities: 'mt-12 space-x-4',
+
+                }) -}}
+
+            {% endif %}
+
+		</div>
+
+        {% if heroImage %}
+            <div class="absolute inset-0">
+                {{- render.atom('image', 'hero', {
+                    image: heroImage,
+                    placeholders: placeholders,
+                    ratio: 'isFilled'
+                }) -}}
+            </div>
+        {% endif %}
+
+	</div>
+</section>
+{%- endminify -%}

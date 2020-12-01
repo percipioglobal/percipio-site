@@ -1,0 +1,49 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  8bc4a467-312b-471c-b5d4-4c43fd30d7a5:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: bcca818c-5cb3-4998-8165-95f5c9929f23
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  bcca818c-5cb3-4998-8165-95f5c9929f23:
+    contentColumnType: text
+    fieldGroup: null
+    handle: standfirst
+    instructions: ''
+    name: Standfirst
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standfirst.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: standfirst
+name: Standfirst
+sortOrder: 1

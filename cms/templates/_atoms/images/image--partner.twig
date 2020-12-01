@@ -1,38 +1,48 @@
+{% extends "_atoms/images/image--variables" %}
+
 {#
     ### OPTIONS ###
     ---------------
 
-    type: (STR) -- type of the svg
+    ## INHERITED
+
+    image: (OBJ) -- Pass through the image object
+    sizes: (ARR) -- sizes array for responsive images ( not used )
+    alt: (STR) -- The alt text
+    ratio: (STR) -- Give the aspect ratio in the correct format eg. is1by1 / is16by9 ( not used )
+    caption: (STR) -- The caption text ( not used )
+    author: (STR) -- The author of the image ( not used )
+    source: (STR) -- The image source ( not used )
+
+    ## ADDED
+
+    placeholder: (OBJ) --- Add the placeholder image to the atom
+    type: (STR) --- Checking the type of the image
+    url: (STR) --- adding a URL to the image ( in consideration )
 
 #}
 
-{%- set placeholder = craft.globalSets()
-    .handle('placeholders')
-    .with(['brandingPlaceholder'])
-    .one()
--%}
+{% block image %}
 
-{% set values = {
-    image: options.image ??? placeholder.brandingPlaceholder[0],
-    type: options.type ??? "logo",
-    url: options.url ??? alias('@web') ~ '/',
-    title: options.title ??? "",
-    imageStyling: options.imageStyling ??? "",
-    containerStyling: options.containerStyling ??? "",
-} %}
+    {%- set values = values|merge({
+        placeholder: options.placeholders.brandingPlaceholder[0] ??? null,
+        type: options.image.extension ??? null,
+        url: options.url ??? null,
+        utilities: options.utilities ??? '',
+        imageUtilities: options.imageUtilities ??? '',
+    }) -%}
 
-{# Render Logo #}
+    {%- minify -%}
+        <a href="{{- values.url -}}" class="{{- values.utilities -}}" title="{{- values.alt -}}">
+            <figure role="figure" aria-label="{{- values.alt -}}" class="h-full">
+                <picture class="h-full">
+                    <img src="{{- values.image.url -}}"
+                        sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                        alt="{{- values.alt -}}"
+                        class="lazyload {{- values.imageUtilities -}}">
+                </picture>
+            </figure>
+        </a>
+    {%- endminify -%}
 
-{% spaceless %}
-	<a href="{{- values.url -}}" class="block relative z-1 {{ values.containerStyling -}}" title="{{- values.title -}}">
-        <figure role="figure" aria-label="{{- values.title -}}" class="h-full">
-            <picture class="h-full">
-                <img src="{{- values.image.url -}}"
-                    sizes="25vw"
-                    alt="{{- values.title -}}"
-                    class="lazyload {{ values.imageStyling -}}">
-            </picture>
-        </figure>
-        {# {{ svg(values.svg, sanitize=true)|attr({ class: values.style }) }} #}
-	</a>
-{% endspaceless %}
+{% endblock %}

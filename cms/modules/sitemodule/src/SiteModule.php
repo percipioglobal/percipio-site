@@ -22,6 +22,7 @@ use craft\web\twig\variables\CraftVariable;
 use craft\web\View;
 use craft\web\UrlManager;
 use craft\events\RegisterUrlRulesEvent;
+use modules\sitemodule\helpers\Colours;
 
 use yii\base\Event;
 use yii\base\InvalidConfigException;
@@ -115,7 +116,7 @@ class SiteModule extends Module
             UrlManager::EVENT_REGISTER_SITE_URL_RULES,
             function (RegisterUrlRulesEvent $event) {
                 $event->rules['getCsrf'] = 'modules/site-module/csrf/get-csrf';
-                $event->rules['getToken'] = 'modules/site-module/csrf/get-gql-token';
+                $event->rules['getToken'] = 'modules/site-module/csrf/get-gql-navigation-token';
             }
         );
 
@@ -125,7 +126,7 @@ class SiteModule extends Module
             UrlManager::EVENT_REGISTER_CP_URL_RULES,
             function (RegisterUrlRulesEvent $event) {
                 $event->rules['getCsrf'] = 'modules/site-module/csrf/get-csrf';
-                $event->rules['getToken'] = 'modules/site-module/csrf/get-gql-token';
+                $event->rules['getToken'] = 'modules/site-module/csrf/get-gql-navigation-token';
             }
         );
 
@@ -145,6 +146,12 @@ class SiteModule extends Module
                     }
                 }
             );
+        }
+
+        //Register Twig extensions for fetching colours
+        if (Craft::$app->request->getIsSiteRequest()) {
+            $coloursTwigExtension = new Colours();
+            Craft::$app->view->registerTwigExtension($coloursTwigExtension);
         }
 
         Craft::info(

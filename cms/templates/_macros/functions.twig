@@ -1,0 +1,32 @@
+
+{# Calculate total days from a given date #}
+
+{% macro total_days(date) %}
+
+    {% spaceless %}
+        {{- date ? date.diff(now).days : '<span class="text-red-700">no date given</span>' -}}
+    {% endspaceless %}
+
+{% endmacro %}
+
+{# Formats all dates accordingly #}
+{% macro format_date(date) %}
+    {% spaceless %}
+        {{- date | date('j F, Y') -}}
+    {% endspaceless %}
+{% endmacro %}
+
+{% macro authors(authors) %}
+    {% spaceless %}
+        {% for author in authors %}
+            <span class="underline">{{author.title}}</span>{{not loop.last and loop.index != loop.length - 1 ? ', '}}{{loop.index == loop.length - 1 ? ' and ' : ''}}
+        {% endfor %}
+    {% endspaceless %}
+{% endmacro %}
+
+{# Enter a date to show time ago in human readable form #}
+{% macro time_ago(date) %}
+    {% spaceless %}
+        {{- craft.app.formatter.asRelativeTime(date) -}}
+    {% endspaceless %}
+{% endmacro %}

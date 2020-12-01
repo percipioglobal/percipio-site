@@ -3,7 +3,7 @@ fieldGroup: 11cffc84-a18e-49e3-9923-8229743b2a28
 handle: icon
 instructions: ''
 name: 'Logo Icon'
-searchable: true
+searchable: false
 settings:
   allowSelfRelations: false
   allowUploads: true
@@ -23,7 +23,7 @@ settings:
   source: null
   sources: '*'
   targetSiteId: null
-  useSingleFolder: false
+  useSingleFolder: true
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null

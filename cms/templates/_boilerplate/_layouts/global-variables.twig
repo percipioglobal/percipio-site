@@ -24,7 +24,13 @@
     .one()
 -%}
 
-{%- set colour = entry.colourSwatch ??? random(['blue', 'red', 'orange', 'purple', 'teal']) -%}
+{%- set branding = craft.globalSets()
+    .handle('organisationInfo')
+    .with(['logo', 'icon'])
+    .one()
+-%}
+
+{%- set swatch = swatch(entry.colourSwatch) -%}
 
 {# -- Twig output from the render; this must be in a block -- #}
 {% block htmlPage %}

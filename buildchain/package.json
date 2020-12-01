@@ -1,6 +1,6 @@
 {
     "author": {
-        "name": "Percipio Global Ltd.",
+        "name": "Percipio.London",
         "email": "hello@percipio.london",
         "url": "https://sandbox.percipio.london"
     },
@@ -35,7 +35,7 @@
     },
     "dependencies": {
         "@fortawesome/free-brands-svg-icons": "^5.15.1",
-        "@tailwindcss/typography": "^0.2.0",
+        "@tailwindcss/typography": "~0.2.0",
         "axios": "^0.19.0",
         "core-js": "^3.0.0",
         "lazysizes": "^5.2.2",
@@ -49,8 +49,9 @@
         "vuex-persistedstate": "^2.7.1",
         "vuex-shared-mutations": "^1.0.2"
     },
-    "description": "Percipio Global Ltd. brand website",
+    "description": "Percipio.London brand website",
     "devDependencies": {
+        "autoprefixer": "^10.0.0",
         "@babel/core": "^7.12.3",
         "@babel/plugin-proposal-class-properties": "^7.12.1",
         "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
@@ -100,8 +101,8 @@
         "mini-css-extract-plugin": "^1.2.0",
         "postcss": "^8.1.1",
         "postcss-import": "^12.0.0",
-        "postcss-loader": "^4.0.0",
-        "postcss-preset-env": "^6.5.0",
+        "postcss-loader": "^4.1.0",
+        "postcss-nested": "^5.0.0",
         "save-remote-file-webpack-plugin": "^1.0.0",
         "style-loader": "^2.0.0",
         "stylelint": "^13.7.0",

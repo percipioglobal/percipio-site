@@ -3,7 +3,7 @@ fieldGroup: 2473fef2-babd-4336-bb2e-550dc284282c
 handle: faqCategory
 instructions: 'Please select or create a category this entry belongs to.'
 name: 'FAQ Category'
-searchable: true
+searchable: false
 settings:
   allowLimit: false
   allowMultipleSources: false

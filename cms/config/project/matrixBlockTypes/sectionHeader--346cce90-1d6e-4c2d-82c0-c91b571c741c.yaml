@@ -22,48 +22,15 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          -
-            fieldUid: 4285cde2-58a1-4cde-aba3-ccdced328ee2
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Content
         sortOrder: 1
 fields:
-  4285cde2-58a1-4cde-aba3-ccdced328ee2:
-    contentColumnType: string
-    fieldGroup: null
-    handle: buttons
-    instructions: 'Optionally add a button to the section that can refer to another page or entry.'
-    name: Button
-    searchable: false
-    settings:
-      columns:
-        3f37c536-3682-4856-a6af-a9f582d4c782:
-          width: ''
-        4697a491-b07d-46f9-87d8-c6cd9fb804a9:
-          width: ''
-      contentTable: '{{%stc_1_buttons}}'
-      fieldLayout: matrix
-      maxRows: '1'
-      minRows: '1'
-      placeholderKey: null
-      propagationMethod: all
-      selectionLabel: ''
-      staticField: '1'
-    translationKeyFormat: null
-    translationMethod: site
-    type: verbb\supertable\fields\SuperTableField
   6fcc732b-3375-496d-92b8-64f3dcc00d00:
     contentColumnType: text
     fieldGroup: null
-    handle: header
-    instructions: 'Enter a section heading from an article or a page, a page can contain multiple sections, this is preferably 1 -3 words.'
-    name: Header
+    handle: overline
+    instructions: 'Enter an overline for the section heading, a page can contain multiple sections, this is preferably 1 -3 words.'
+    name: Overline
     searchable: true
     settings:
       byteLimit: null
@@ -80,9 +47,9 @@ fields:
   e7b63d80-91cc-438a-b670-59cbb778ca14:
     contentColumnType: string(480)
     fieldGroup: null
-    handle: description
-    instructions: 'Enter a short description what the section is about. Maximum 120 characters.'
-    name: Description
+    handle: heading
+    instructions: 'The full heading of the section header'
+    name: Heading
     searchable: true
     settings:
       byteLimit: null
@@ -98,4 +65,4 @@ fields:
     type: craft\fields\PlainText
 handle: sectionHeader
 name: 'Section Header'
-sortOrder: 1
+sortOrder: 2

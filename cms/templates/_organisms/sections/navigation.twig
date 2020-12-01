@@ -1,15 +1,19 @@
 {% set nodes = craft.navigation.nodes()
     .handle('primaryNavigation')
-	.all() %}
+    .all() %}
+    
+
+
 {% set socialNavigation = socialMedia.socialMedia %}
 
 {% set activeClass = "text-" ~ colour ~ "-500" %}
 
+
 <div>
-    <div class="z-40 container max-w-screen-hd px-8 mx-auto absolute bg-transparent h-12 md:h-20 py-16 flex justify-between items-center">
+    <div class=" container max-w-screen-hd px-8 mx-auto absolute bg-transparent h-12 md:h-20 py-16 flex justify-between items-center">
         <div class="w-16 h-16">
             <a href="{{ siteUrl }}" title="percipio">
-                <svg version="1.1" id="Percipio_Logo" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 120 866 1000" xml:space="preserve">
+                {# <svg version="1.1" id="Percipio_Logo" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 120 866 1000" xml:space="preserve">
                     <path id="P_Section" fill="none" d="M0 559.5l537.7-309.6-104.2-60.2L164.6 345 0 250 433 0l433 250-537.6 309.6 268.5 155L433 809.5z"/>
                     <g id="Dark_Group" fill={{entry.type == 'homepage' or entry.type == 'blog' ? '#1c64f2' : 'none' }} class="{{ entry.type == 'homepage' or entry.type == 'blog' ? "" : 'fill-current text-' ~ colour ~ '-800' }}">
                         <path id="Dark_2" d="M433 809.5l163.9-94.9-268.5-155L866 250v500l-433 250z"/>
@@ -20,12 +24,12 @@
                         <path id="Light_2" d="M0 559.5l433 250V1000L0 750z"/>
                         <path id="Light_1" d="M0 250l164.6 95v119.7L0 559.5z"/>
                     </g>
-                </svg>
+                </svg> #}
             </a>
         </div>
         <div class="w-16 h-16">
             <div @click="toggleMenu" class="flex justify-end items-center cursor-pointer h-16 w-16">
-                <div class="absolute flex justify-end items-center h-16 w-16 z-40">
+                <div class="absolute flex justify-end items-center h-16 w-16 ">
                     <span :class="navOpen ? 'rotate-45 translate-y-2' : 'rotate-0'" class="{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ colour ~ '-600'}} mb-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
                     <span :class="navOpen ? '-rotate-90 -translate-y-4' : 'rotate-0'" class="{{ entry.type == 'homepage' or entry.type == 'blog' ? 'bg-blue-600' : 'bg-' ~ colour ~ '-600'}} mt-4 relative block transform origin-center w-12 h-2 transition-all duration-200 ease-in-out"/>
                 <div>
@@ -33,7 +37,7 @@
         </div>
     </div>
 
-    <div :class="navOpen ? 'block' : 'hidden'" class="bg-white-90 text-gray-800 z-30 overflow-scroll fixed top-0 left-0 w-screen h-screen">
+    <div :class="navOpen ? 'block' : 'hidden'" class="bg-white-90 text-gray-800  overflow-scroll fixed top-0 left-0 w-screen h-screen">
         <div class="relative max-w-md w-full ml-auto bg-white px-4 pt-5 pb-4 flex-1 flex flex-col">
             <div class="mt-24 flex-1 h-0 overflow-y-auto">
                 <nav class="text-xl font-bold px-2 space-y-4" role="menu">

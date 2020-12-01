@@ -1,3 +1,5 @@
+{% extends "_atoms/texts/text--variables" %}
+
 {#
     ### OPTIONS ###
     ---------------
@@ -6,14 +8,15 @@
 
 #}
 
-{% set values = {
-    content: options.content ??? '',
-} %}
+{% block text %}
 
-{# Render Title #}
+    {%- set values = values|merge({
+        utilities: options.utilities ??? 'text-white-100',
+    }) -%}
 
-{% spaceless %}
-   <span class="break-words font-mono mb-1">
-        {{- values.content | typogrify(true) -}}
-    </span>
-{% endspaceless %}
+    {%- minify -%}
+        <span class="inline-block break-words font-mono mb-1 text-base {{ values.utilities -}}">
+            {{- values.content | typogrify(true) -}}
+        </span>
+    {%- endminify -%}
+{% endblock %}

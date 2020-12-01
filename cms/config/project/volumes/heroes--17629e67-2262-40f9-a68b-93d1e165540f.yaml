@@ -53,7 +53,7 @@ settings:
   region: $S3_REGION
   secret: $S3_SECRET
   storageClass: ''
-  subfolder: heroes
+  subfolder: heroes/
 sortOrder: 8
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL

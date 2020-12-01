@@ -3,7 +3,7 @@ fieldGroup: d08a0d16-0e00-49e6-9cd4-465fa2d65d7d
 handle: errorHeadline
 instructions: ''
 name: 'Error Headline'
-searchable: true
+searchable: false
 settings:
   byteLimit: null
   charLimit: null

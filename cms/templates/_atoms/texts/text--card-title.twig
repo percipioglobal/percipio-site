@@ -1,19 +1,22 @@
+{% extends "_atoms/texts/text--variables" %}
+
 {#
     ### OPTIONS ###
     ---------------
 
     content: (STR) -- the actual content as a string
+    utilities: (STR) -- TW utility classes to be applied for the text container, overrides default settings
+    colour: (STR) -- a colour for the cards title
 
 #}
 
-{% set values = {
-    content: options.content ??? '',
-} %}
 
-{# Render Title #}
+{% block text %}
+    {%- set colour = values.colour ??? 'text-white-100' %}
 
-{% spaceless %}
-    <h4 class="break-words text-4xl font-bold mb-3">
-        {{- values.content | typogrify(true) -}}
-    </h4>
-{% endspaceless %}
+    {%- minify -%}
+        <h4 class="break-words font-bold mb-3 text-4xl {{ colour }} {{ values.utilities }}">
+            {{- values.content | typogrify(true) -}}
+        </h4>
+    {%- endminify -%}
+{% endblock %}

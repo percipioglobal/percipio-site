@@ -1,0 +1,33 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- set swact = swatch(content.colourSwatch) -%}
+{%- set utilities = utilities ??? '' %}
+{%- set size = size ??? 'small' %}
+
+{%- minify -%}
+<div class="{{- utilities -}}">
+    <div class="relative group">
+        {{- render.atom('image', 'teaser', {
+            image: content.teaserImage[0],
+            alt: content.teaserImage[0].title,
+            ratio: size == 'large' ? 'is21by9' : 'is1by1 sm:is16by9 lg:is1by1',
+            placeholders: placeholders,
+        }) -}}
+
+        <div class="absolute bg-{{- swact.primary }} border-b-8 border-{{- swact.secondary }} bottom-10 p-6 w-4/5 md:w-3/4 group-hover:bg-{{- swact.secondary }} transition-all duration-500 ease-in-out">
+            {{- render.atom('text', 'overline', {
+                    content: content.client[0].title,
+                    utilities: 'text-white-100',
+                })
+            -}}
+            <div class="-mb-4">
+                {{- render.atom('text', 'card-title', { content: content.title }) -}}
+            </div>
+        </div>
+
+        <a href="{{- content.url -}}" class="absolute inset-0">
+            <span class="sr-only">Read more about {{- content.title -}}</span>
+        </a>
+    </div>
+</div>
+{%- endminify -%}

@@ -12,14 +12,14 @@ class CsrfController extends Controller
     // Constants
     // =========================================================================
 
-    const GQL_TOKEN_NAME = 'API Token';
+    const GQL_NAVIGATION_TOKEN_NAME = 'navigation-token';
 
     // Protected Properties
     // =========================================================================
 
     protected $allowAnonymous = [
         'get-csrf',
-        'get-gql-token',
+        'get-gql-navigation-token',
         'get-field-options',
     ];
 
@@ -55,12 +55,12 @@ class CsrfController extends Controller
      * @return Response
      */
     // get a par­tic­u­lar GraphQL token for access permissions
-    public function actionGetGqlToken(): Response
+    public function actionGetGqlNavigationToken(): Response
     {
         $result = null;
         $tokens = Craft::$app->getGql()->getTokens();
         foreach ($tokens as $token) {
-            if ($token->name === self::GQL_TOKEN_NAME) {
+            if ($token->name === self::GQL_NAVIGATION_TOKEN_NAME) {
                 $result = $token->accessToken;
             }
         }

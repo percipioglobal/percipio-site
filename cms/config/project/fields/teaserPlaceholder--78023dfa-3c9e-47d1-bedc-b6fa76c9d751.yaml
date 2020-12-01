@@ -3,7 +3,7 @@ fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8
 handle: teaserPlaceholder
 instructions: 'Upload an image that will serve as placeholder if the original image can not be found or is not ready for display yet.'
 name: 'Teaser Image Placeholder'
-searchable: true
+searchable: false
 settings:
   allowSelfRelations: false
   allowUploads: true

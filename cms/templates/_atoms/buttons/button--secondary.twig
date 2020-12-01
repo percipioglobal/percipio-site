@@ -4,11 +4,10 @@
 
     {%- minify -%}
 
-        <a {{ values.url ? 'href="' ~ values.url ~ '"': '' }} class="inline-flex {{ values.utility ? values.utility : '' -}}">
+        <a {{ values.url ? 'href=' ~ values.url : '' }} class="inline-flex px-8 py-4 font-bold text-lg text-white-100 bg-{{- values.swatch ? values.swatch.primary : '' }} hover:bg-{{- values.swatch ? values.swatch.secondary : '' }} {{ values.utilities ? values.utilities : '' -}}">
             {{- values.text -}}
         </a>
 
     {%- endminify -%}
 
 {% endblock %}
-

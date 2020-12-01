@@ -27,25 +27,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
+            fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
-            instructions: null
-            label: null
-            required: '0'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959
+            fieldUid: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
             instructions: null
             label: null
             required: false
@@ -66,7 +57,7 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Metadata
+        name: Options
         sortOrder: 2
       -
         elements:
@@ -94,7 +85,7 @@ handle: landingsPage
 hasTitleField: true
 name: 'Landings Page'
 section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
-sortOrder: 1
+sortOrder: 4
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

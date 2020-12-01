@@ -4,19 +4,6 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: Hero
-        sortOrder: 1
-      -
-        elements:
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -40,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959
             instructions: null
             label: null
             required: false
@@ -48,6 +35,10 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+        name: Content
+        sortOrder: 1
+      -
+        elements:
           -
             fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
             instructions: null
@@ -58,7 +49,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 8ec6d021-7d06-41fc-911f-5463f946ed71
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
             instructions: null
             label: null
             required: false
@@ -67,27 +58,14 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 024735a6-b0d6-40f3-88ae-9ae16679bcea
+            fieldUid: c0083422-e548-49c9-9db5-a2477942038d
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
-        name: Content
-        sortOrder: 2
-      -
-        elements:
-          -
-            fieldUid: e8a0c123-70a7-44c6-b08b-d1874d5712e0
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
+            width: 50
           -
             fieldUid: 01b78fde-8a32-4ecc-b1b0-abf0661898ce
             instructions: null
@@ -96,7 +74,29 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 50
+          -
+            fieldUid: fd71a6c2-749b-4db5-9f9e-29d0f1766834
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: ae2f2577-98ad-4416-afb0-0a136fd1680d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Metadata
+        sortOrder: 2
+      -
+        elements:
           -
             fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e
             instructions: null
@@ -106,30 +106,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Metadata
+        name: Options
         sortOrder: 3
-      -
-        elements:
-          -
-            fieldUid: da9598dc-e9bb-4920-8adf-a712876cb578
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: cb2b1336-5ccd-48f4-a973-72fae9fd4069
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: SEO
-        sortOrder: 4
 handle: teamMember
 hasTitleField: true
 name: 'Team Member'

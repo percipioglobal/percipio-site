@@ -46,4 +46,4 @@ fields:
     type: craft\redactor\Field
 handle: article
 name: 'Article Body'
-sortOrder: 2
+sortOrder: 3

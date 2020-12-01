@@ -1,0 +1,12 @@
+{%- minify -%}
+
+    <div class="w-full my-12 md:my-24">
+        {%- for card in content -%}
+            {%- include '_molecules/cards/card--blog' ignore missing with {
+                content: card
+            } -%}
+        {%- endfor -%}
+    </div>
+
+
+{%- endminify -%}

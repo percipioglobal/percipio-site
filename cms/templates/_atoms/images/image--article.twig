@@ -13,6 +13,7 @@
     caption: (STR) -- The caption text ( optional )
     author: (STR) -- The author of the image ( optional )
     source: (STR) -- The image source ( optional )
+    swatch: (OBJ) -- swatch containing primary and secondary colours ( optional )
 
     ## ADDED 
 
@@ -27,14 +28,14 @@
 
     {%- set values = values|merge({
         optimized: options.image.optimizeArticles ??? null,
-        placeholder: placeholder.articlePlaceholder[0].optimizeArticles ??? null
+        placeholder: options.placeholders.articlePlaceholder[0].optimizeArticles ??? null,
     }) -%}
 
     {%- minify -%}
 
         <figure role="figure" aria-labelledby="{{- values.alt ~ '-' ~ values.image.id -}}" class="w-full h-full">
 
-            <picture class="img {{ values.ratio -}}">
+            <picture class="block relative {{ values.ratio -}}">
 
                 <source data-srcset="{{- values.optimized.srcsetWebP() ??? values.placeholder.srcsetWebP() -}}"
                         sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
@@ -45,10 +46,15 @@
                         sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
                 />
 
-                <img    class="lazyload object-cover"
-                        loading="lazy"
+                <img    
+                        src="{{- values.optimized.placeholderImage() -}}"
+                        data-src="{{- values.optimized.src() -}}" 
+                        data-srcset="{{- values.optimized.srcset() ??? values.placeholder.srcset() -}}"
+                        sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                        class="lazyload"        
+                        loading="lazy"    
                         alt="{{- values.alt -}}"
-                        src="{{- values.optimized.placeholderImage() ??? values.placeholder.placeholderImage() -}}"
+                        
                 />
 
             </picture>
@@ -60,6 +66,7 @@
                     author: values.author,
                     source: values.source,
                     id: values.alt ~ '-' ~ values.image.id,
+                    swatch: values.swatch ??? null,
                 }) -}}
 
             {% endif %}

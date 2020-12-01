@@ -1,8 +1,6 @@
 {% do craft.eagerBeaver.eagerLoadElements(entry, [
     'heroBuilder',
-    'heroLanding:image',
-    'heroContent:image',
-    'sectionHeader:buttons',
+    'heroBuilder.heroMain:buttons.buttons',
     ])
 %}
 
@@ -17,27 +15,9 @@
                     content: block,
                 } -%}
 
-            {%- case 'heroTeam' -%}
-
-                {%- include '_organisms/heroes/hero--team' ignore missing with {
-                    content: block,
-                } -%}
-
-            {%- case 'heroLanding' -%}
-
-                {%- include '_organisms/heroes/hero--landing' ignore missing with {
-                    content: block,
-                } -%}
-
             {% case "heroMain" %}
 
                 {%- include '_organisms/heroes/hero--main' ignore missing with {
-                    content: block,
-                } -%}
-
-            {% case "heroSlider" %}
-
-                {%- include '_organisms/heroes/hero--slider' ignore missing with {
                     content: block,
                 } -%}
 
