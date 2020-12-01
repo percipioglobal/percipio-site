@@ -254,9 +254,10 @@ module.exports = {
                 '3/4': '75%'
             },
 
-            minHeight: {
+            minHeight: (theme) => ({
+                ...theme('spacing'),
                 '3/4': '75vh',
-            },
+            }),
 
             opacity: {
                 20: '0.2',

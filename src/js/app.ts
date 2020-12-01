@@ -16,6 +16,7 @@ const site = async () => {
         store,
         components: {
             'navigation--main': () => import(/* webpackChunkName: "navigation--main" */ '../vue/organisms/navigations/navigation--main.vue'),
+            'notification--cookie': () => import(/* webpackChunkName: "notification--cookie" */ '../vue/molecules/notifications/notification--cookie.vue'),
         },
 
         data: () => ({}),

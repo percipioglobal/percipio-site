@@ -11,8 +11,8 @@
             <div class="h-full p-16">
                 <!-- main navigation links -->
 
-                <div 
-                    :class="[ 
+                <div
+                    :class="[
                         'space-y-4 pb-12',
                         getSocialMediaLinks.socialMedia ? 'border-b border-gray-800 mb-12' : ''
                     ]"
@@ -35,8 +35,8 @@
 
                 <div class="space-y-2" v-if="getSocialMediaLinks">
 
-                    <a 
-                        v-for="social in getSocialMediaLinks.socialMedia" 
+                    <a
+                        v-for="social in getSocialMediaLinks.socialMedia"
                         :key="social.id"
                         :href="social.socialMediaUrl.url"
                         class="block capitalize text-lg font-bold hover:underline pr-16"
@@ -70,12 +70,12 @@
             if ( !this.getCsrfToken ) {
                 await this.$store.dispatch('fetchCsrf');
             }
-            
+
             // Wait for the GQL token before attempting GQL queries
             if ( !this.getNavigationGqlToken ) {
                 await this.$store.dispatch('fetchNavigationGqlToken');
             }
-            
+
             // Wait for the Navigation links and Social Media Links to be fetched
             //if ( !this.getSocialMediaLinks || this.getNavigationPrimary ) {
                 await Promise.all([
