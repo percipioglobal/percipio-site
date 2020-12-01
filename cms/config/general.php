@@ -47,4 +47,5 @@ return [
     'useEmailAsUsername' => true,
     'usePathInfo' => true,
     'useProjectConfigFile' => true,
+    'verificationCodeDuration' => 'P1D',
 ];
