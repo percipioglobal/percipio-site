@@ -14,6 +14,24 @@ module.exports = {
             whitelist: [
                 '../src/css/components/**/*.{css}',
             ],
+            whitelistPatterns: [
+                /pink-600$/,
+                /pink-800$/,
+                /red-600$/,
+                /red-800$/,
+                /orange-500$/,
+                /orange-700$/,
+                /yellow-400$/,
+                /yellow-500$/,
+                /green-400$/,
+                /green-600$/,
+                /teal-400$/,
+                /teal-600$/,
+                /blue-600$/,
+                /blue-800$/,
+                /purple-600$/,
+                /purple-800$/,
+            ],
         }
     },
     theme: {
