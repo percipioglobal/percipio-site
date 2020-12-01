@@ -13,27 +13,57 @@ settings:
     - image/gif
   variants:
     -
-      aspectRatioX: '4'
-      aspectRatioY: '3'
-      format: ''
-      quality: '82'
-      retinaSizes:
-        - '1'
-        - '2'
-        - '3'
-      useAspectRatio: '1'
-      width: '1024'
+      __assoc__:
+        -
+          - aspectRatioX
+          - '4'
+        -
+          - aspectRatioY
+          - '3'
+        -
+          - format
+          - ''
+        -
+          - quality
+          - '82'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+            - '3'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - width
+          - '1024'
     -
-      aspectRatioX: '4'
-      aspectRatioY: '3'
-      format: ''
-      quality: '82'
-      retinaSizes:
-        - '1'
-        - '2'
-        - '3'
-      useAspectRatio: '1'
-      width: '640'
+      __assoc__:
+        -
+          - aspectRatioX
+          - '4'
+        -
+          - aspectRatioY
+          - '3'
+        -
+          - format
+          - ''
+        -
+          - quality
+          - '82'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+            - '3'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - width
+          - '640'
 translationKeyFormat: null
 translationMethod: none
 type: nystudio107\imageoptimize\fields\OptimizedImages
