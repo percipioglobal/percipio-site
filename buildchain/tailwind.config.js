@@ -248,6 +248,15 @@ module.exports = {
                 '8': '8px',
             },
 
+            fontFamily: {
+                primary: [
+                    'Open Sans',
+                ],
+                mono: [
+                    'Source Code Pro'
+                ]
+            },
+
             inset: (theme, { negative }) => ({
                 auto: 'auto',
                 ...theme('spacing'),

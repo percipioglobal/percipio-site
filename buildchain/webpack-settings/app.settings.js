@@ -18,6 +18,7 @@ module.exports = {
             '../src/css/app-base.pcss',
             '../src/css/app-components.pcss',
             '../src/css/app-utilities.pcss',
+            '../src/js/assets/fonts.js',
             '../src/js/assets/icons.js',
         ],
         'lazysizes-wrapper': '../src/js/utils/lazysizes-wrapper.ts',
