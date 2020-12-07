@@ -1,0 +1,176 @@
+{% set signature = {
+  firstName: 'David',
+  lastName: 'McGregor',
+  role: 'Front End Developer',
+  color: { 
+    primary: '#1c64f2',
+    secondary: '#d61f69'
+  },
+  email: 'david@percipio.london',
+} %}
+
+<table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;;">
+    <tbody>
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;;">
+                    <tbody>
+                        <tr>
+                            <td style="vertical-align: middle;">
+                                <h3 color="#000107" style="margin: 0px; font-size: 18px; color: rgb(0, 1, 7);"><span>{{ signature.firstName }}</span><span>&nbsp;</span><span>{{ signature.lastName }}</span></h3>
+                                <p color="#000107" font-size="medium" style="margin: 0px; color: rgb(0, 1, 7); font-size: 14px; line-height: 22px;"><span>{{ signature.role }}</span></p>
+                                <p color="#000107" font-size="medium" style="margin: 0px; font-weight: 500; color: rgb(0, 1, 7); font-size: 14px; line-height: 22px;"><span>Percipio Global Ltd</span></p>
+                            </td>
+                            <td width="15">
+                                <div style="width: 15px;"></div>
+                            </td>
+                            <td color="#46869B" direction="vertical" width="1" style="width: 1px; border-bottom: none; border-left: 1px solid; border-left-color:{{- signature.color.primary -}};"></td>
+                            <td width="15">
+                                <div style="width: 15px;"></div>
+                            </td>
+                            <td style="vertical-align: middle;">
+                                <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;;">
+                                    <tbody>
+                                        <tr height="25" style="vertical-align: middle;">
+                                            <td width="30" style="vertical-align: middle;">
+                                                <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                                <span color="#46869B" width="11" style="display: block;">
+                                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" width="20px" height="16px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="{{- signature.color.primary -}}" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td style="padding: 0px; color: rgb(0, 1, 7);"><a href="tel:0208 144 4048" color="#000107" style="text-decoration: none; color: rgb(0, 1, 7); font-size: 12px;"><span>0208 144 4048</span></a></td>
+                                        </tr>
+                                        <tr height="25" style="vertical-align: middle;">
+                                            <td width="30" style="vertical-align: middle;">
+                                                <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                                <span color="#46869B" width="11" style="display: block;">
+                                                                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" width="20px" height="16px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="{{- signature.color.primary -}}" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td style="padding: 0px;"><a href="mailto:emily@percipio.london" color="#000107" style="text-decoration: none; color: rgb(0, 1, 7); font-size: 12px;"><span>{{ signature.email }}</span></a></td>
+                                        </tr>
+                                        <tr height="25" style="vertical-align: middle;">
+                                            <td width="30" style="vertical-align: middle;">
+                                                <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                                <span color="#46869B" width="11" style="display: block;">
+                                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="link" width="20px" height="16px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="{{- signature.color.primary -}}" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td style="padding: 0px;"><a href="https://percipio.london" color="#000107" style="text-decoration: none; color: rgb(0, 1, 7); font-size: 12px;"><span>https://percipio.london</span></a></td>
+                                        </tr>
+                                        <tr height="25" style="vertical-align: middle;">
+                                            <td width="30" style="vertical-align: middle;">
+                                                <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                                <span color="#46869B" width="11" style="display: block;">
+                                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" width="20px" height="16px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="{{- signature.color.primary -}}" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td style="padding: 0px;"><span color="#000107" style="font-size: 12px; color: rgb(0, 1, 7);"><span>Unit 122, 372 Old Street, London, EC1V 9LT</span></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;; width: 100%;">
+                    <tbody>
+                        <tr>
+                            <td height="15"></td>
+                        </tr>
+                        <tr>
+                            <td color="#46869B" direction="horizontal" height="1" style="width: 100%; border-bottom: 1px solid; border-bottom-color: {{- signature.color.primary -}}; border-left: none; display: block;"></td>
+                        </tr>
+                        <tr>
+                            <td height="15"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;; width: 100%;">
+                    <tbody>
+                        <tr>
+                            <td style="vertical-align: top;">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="54px" height="54px" viewBox="0 120 866 1000" xml:space="preserve">
+                                    <path fill="none" d="M0 559.5l537.7-309.6-104.2-60.2L164.6 345 0 250 433 0l433 250-537.6 309.6 268.5 155L433 809.5z"></path>
+                                        <g fill="{{- signature.color.primary -}}">
+                                            <path d="M433 809.5l163.9-94.9-268.5-155L866 250v500l-433 250z"></path>
+                                            <path d="M164.6 345v119.7l268.9-154.8V189.7z"></path>
+                                        </g>
+                                        <g fill="{{- signature.color.secondary -}}">
+                                            <path d="M433.5 189.7v120.2l104.2-60z"></path>
+                                            <path d="M0 559.5l433 250V1000L0 750z"></path>
+                                            <path d="M0 250l164.6 95v119.7L0 559.5z"></path>
+                                        </g>
+                                </svg>
+                            </td>
+                            <td style="text-align: right; vertical-align: top;">
+                                <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;; display: inline-block;">
+                                    <tbody>
+                                        <tr style="text-align: right;">
+                                            <td><a href="https://twitter.com/percipiolondon" color="#000107" style="display: inline-block; padding: 0px;"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#374151" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></a></td>
+                                            <td width="8">
+                                                <div></div>
+                                            </td>
+                                            <td><a href="https://facebook.com/percipio.london" color="#000107" style="display: inline-block; padding: 0px;"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#374151" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></a></td>
+                                            <td width="8">
+                                                <div></div>
+                                            </td>
+                                           <td><a href="https://linkedin.com/percipio.london" color="#000107" style="display: inline-block; padding: 0px;"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#374151" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a></td>
+                                            <td width="8">
+                                                <div></div>
+                                            </td>
+                                            <td><a href="https://instagram.com/percipio.london" color="#000107" style="display: inline-block; padding: 0px;"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#374151" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a></td>
+                                            <td width="8">
+                                                <div></div>
+                                            </td>
+                                            <td><a href="https://github.com/percipio.london" color="#000107" style="display: inline-block; padding: 0px;"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="#374151" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a></td>
+                                            <td width="8">
+                                                <div></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
