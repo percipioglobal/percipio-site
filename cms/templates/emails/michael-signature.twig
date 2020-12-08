@@ -9,7 +9,7 @@
   email: 'michael@percipio.london',
 } %}
 
-<table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;;">
+<table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;; background: white">
     <tbody>
         <tr>
             <td>
@@ -17,14 +17,14 @@
                     <tbody>
                         <tr>
                             <td style="vertical-align: middle;">
-                                <h3 color="#000107" style="margin: 0px; font-size: 18px; color: rgb(0, 1, 7);"><span>David</span><span>&nbsp;</span><span>McGregor</span></h3>
-                                <p color="#000107" font-size="medium" style="margin: 0px; color: rgb(0, 1, 7); font-size: 14px; line-height: 22px;"><span>Front End Developer</span></p>
-                                <p color="#000107" font-size="medium" style="margin: 0px; font-weight: 500; color: rgb(0, 1, 7); font-size: 14px; line-height: 22px;"><span>Percipio Global Ltd</span></p>
+                                <h3 color="#000107" style="margin: 0px; padding-bottom: 2px; font-size: 18px; color: rgb(0, 1, 7);"><span>{{ signature.firstName }}</span><span>&nbsp;</span><span>{{ signature.lastName }}</span></h3>
+                                <p color="#000107" font-size="medium" style="margin: 0px; padding-bottom: 4px; color: rgb(0, 1, 7); font-size: 14px;"><span>{{ signature.role }}</span></p>
+                                <p color="#000107" font-size="medium" style="margin: 0px; font-weight: 500; color: rgb(0, 1, 7); font-size: 14px;"><span>Percipio Global Ltd</span></p>
                             </td>
                             <td width="15">
                                 <div style="width: 15px;"></div>
                             </td>
-                            <td color="#46869B" direction="vertical" width="1" style="width: 1px; border-bottom: none; border-left: 1px solid; border-left-color:#1c64f2;"></td>
+                            <td color="#46869B" direction="vertical" width="1" style="width: 1px; border-bottom: none; border-left: 1px solid; border-left-color:{{- signature.color.primary -}};"></td>
                             <td width="15">
                                 <div style="width: 15px;"></div>
                             </td>
@@ -32,13 +32,13 @@
                                 <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;;">
                                     <tbody>
                                         <tr height="25" style="vertical-align: middle;">
-                                            <td width="30" style="vertical-align: middle;">
+                                            <td width="30" style="vertical-align: middle; padding-top: 1px; padding-right: 4px">
                                                 <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;;">
                                                     <tbody>
                                                         <tr>
                                                             <td style="vertical-align: bottom;">
                                                                 <span color="#46869B" width="11" style="display: block;">
-                                                                    <img src="https://percipio.london/assets/img/emails/phone.png" title="phone">
+                                                                    <img src="https://percipio.london/assets/img/emails/phone.png" title="phone" width="16px">
                                                                 </span>
                                                             </td>
                                                         </tr>
@@ -48,29 +48,29 @@
                                             <td style="padding: 0px; color: rgb(0, 1, 7);"><a href="tel:0208 144 4048" color="#000107" style="text-decoration: none; color: rgb(0, 1, 7); font-size: 12px;"><span>0208 144 4048</span></a></td>
                                         </tr>
                                         <tr height="25" style="vertical-align: middle;">
-                                            <td width="30" style="vertical-align: middle;">
+                                            <td width="30" style="vertical-align: middle; padding-top: 1px; padding-right: 4px">
                                                 <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;;">
                                                     <tbody>
                                                         <tr>
                                                             <td style="vertical-align: bottom;">
                                                                 <span color="#46869B" width="11" style="display: block;">
-                                                                    <img src="https://percipio.london/assets/img/emails/envelope.png" title="envelope">
+                                                                    <img src="https://percipio.london/assets/img/emails/envelope.png" title="envelope" width="16px">
                                                                 </span>
                                                             </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                             </td>
-                                            <td style="padding: 0px;"><a href="mailto:emily@percipio.london" color="#000107" style="text-decoration: none; color: rgb(0, 1, 7); font-size: 12px;"><span>david@percipio.london</span></a></td>
+                                            <td style="padding: 0px;"><a href="mailto:emily@percipio.london" color="#000107" style="text-decoration: none; color: rgb(0, 1, 7); font-size: 12px;"><span>{{ signature.email }}</span></a></td>
                                         </tr>
                                         <tr height="25" style="vertical-align: middle;">
-                                            <td width="30" style="vertical-align: middle;">
+                                            <td width="30" style="vertical-align: middle; padding-top: 1px; padding-right: 4px">
                                                 <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;;">
                                                     <tbody>
                                                         <tr>
                                                             <td style="vertical-align: bottom;">
                                                                 <span color="#46869B" width="11" style="display: block;">
-                                                                    <img src="https://percipio.london/assets/img/emails/link.png" title="link">
+                                                                    <img src="https://percipio.london/assets/img/emails/link.png" title="link" width="16px">
                                                                 </span>
                                                             </td>
                                                         </tr>
@@ -80,13 +80,13 @@
                                             <td style="padding: 0px;"><a href="https://percipio.london" color="#000107" style="text-decoration: none; color: rgb(0, 1, 7); font-size: 12px;"><span>https://percipio.london</span></a></td>
                                         </tr>
                                         <tr height="25" style="vertical-align: middle;">
-                                            <td width="30" style="vertical-align: middle;">
+                                            <td width="30" style="vertical-align: middle; padding-top: 1px; padding-right: 4px">
                                                 <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;;">
                                                     <tbody>
                                                         <tr>
                                                             <td style="vertical-align: bottom;">
                                                                 <span color="#46869B" width="11" style="display: block;">
-                                                                    <img src="https://percipio.london/assets/img/emails/map-marker.png" title="map-marker">
+                                                                    <img src="https://percipio.london/assets/img/emails/map-marker.png" title="map-marker" width="16px">
                                                                 </span>
                                                             </td>
                                                         </tr>
@@ -111,7 +111,7 @@
                             <td height="15"></td>
                         </tr>
                         <tr>
-                            <td color="#46869B" direction="horizontal" height="1" style="width: 100%; border-bottom: 1px solid; border-bottom-color:#1c64f2; border-left: none; display: block;"></td>
+                            <td color="#46869B" direction="horizontal" height="1" style="width: 100%; border-bottom: 1px solid; border-bottom-color: {{- signature.color.primary -}}; border-left: none; display: block;"></td>
                         </tr>
                         <tr>
                             <td height="15"></td>
@@ -126,7 +126,7 @@
                     <tbody>
                         <tr>
                             <td style="vertical-align: top;">
-                                <img src="https://percipio.london/assets/img/emails/logo.png" title="logo">
+                                <img src="https://percipio.london/assets/img/emails/logo.png" title="logo" width="60px">
                             </td>
                             <td style="text-align: right; vertical-align: top;">
                                 <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: &quot;Courier New&quot;; display: inline-block;">
@@ -134,42 +134,42 @@
                                         <tr style="text-align: right;">
                                             <td>
                                                 <a href="https://twitter.com/percipiolondon" color="#000107" style="display: inline-block; padding: 0px;">
-                                                    <img src="https://percipio.london/assets/img/emails/twitter.png" title="twitter">
+                                                    <img src="https://percipio.london/assets/img/emails/twitter.png" title="twitter" width="20px">
                                                 </a>
                                             </td>
-                                            <td width="8">
+                                            <td width="10">
                                                 <div></div>
                                             </td>
                                             <td>
                                                 <a href="https://facebook.com/percipio.london" color="#000107" style="display: inline-block; padding: 0px;">
-                                                    <img src="https://percipio.london/assets/img/emails/facebook.png" title="facebook">
+                                                    <img src="https://percipio.london/assets/img/emails/facebook.png" title="facebook" height="20px">
                                                 </a>
                                             </td>
-                                            <td width="8">
+                                            <td width="10">
                                                 <div></div>
                                             </td>
                                             <td>
                                                 <a href="https://linkedin.com/percipio.london" color="#000107" style="display: inline-block; padding: 0px;">
-                                                    <img src="https://percipio.london/assets/img/emails/linkedin.png" title="linkedin">
+                                                    <img src="https://percipio.london/assets/img/emails/linkedin.png" title="linkedin" width="20px">
                                                 </a>
                                             </td>
-                                            <td width="8">
+                                            <td width="10">
                                                 <div></div>
                                             </td>
                                             <td>
                                                 <a href="https://instagram.com/percipio.london" color="#000107" style="display: inline-block; padding: 0px;">
-                                                    <img src="https://percipio.london/assets/img/emails/instagram.png" title="instagram">
+                                                    <img src="https://percipio.london/assets/img/emails/instagram.png" title="instagram" width="20px">
                                                 </a>
                                             </td>
-                                            <td width="8">
+                                            <td width="10">
                                                 <div></div>
                                             </td>
                                             <td>
                                                 <a href="https://github.com/percipio.london" color="#000107" style="display: inline-block; padding: 0px;">
-                                                    <img src="https://percipio.london/assets/img/emails/github.png" title="github">
+                                                    <img src="https://percipio.london/assets/img/emails/github.png" title="github" width="20px">
                                                 </a>
                                             </td>
-                                            <td width="8">
+                                            <td width="10">
                                                 <div></div>
                                             </td>
                                         </tr>
