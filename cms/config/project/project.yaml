@@ -1,4 +1,4 @@
-dateModified: 1606846504
+dateModified: 1611069853
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -17,8 +17,12 @@ plugins:
     schemaVersion: 1.0.0
   colour-swatches:
     enabled: true
-    schemaVersion: 1.4.0
+    schemaVersion: 1.4.1.1
   eager-beaver:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  embeddedassets:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
@@ -72,11 +76,6 @@ plugins:
   redactor:
     enabled: true
     schemaVersion: 2.3.0
-  retour:
-    edition: standard
-    enabled: true
-    licenseKey: null
-    schemaVersion: 3.0.9
   seomatic:
     edition: standard
     enabled: true
@@ -102,11 +101,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  webperf:
-    edition: standard
-    enabled: true
-    licenseKey: null
-    schemaVersion: 1.0.1
   width-fieldtype:
     edition: standard
     enabled: true
