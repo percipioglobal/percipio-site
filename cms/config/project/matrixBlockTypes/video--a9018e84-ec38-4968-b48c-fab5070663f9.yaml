@@ -1,0 +1,54 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  75bf2d09-26cb-457b-82fd-4e048dfd0d4c:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 147f1c8b-92ec-49ac-a70e-8d6e8fab75ed
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  147f1c8b-92ec-49ac-a70e-8d6e8fab75ed:
+    contentColumnType: string
+    fieldGroup: null
+    handle: video
+    instructions: 'Upload a video or add an embedded URL'
+    name: Video
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: ''
+      selectionLabel: 'Add a video'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:8d3c40c3-2c7f-41ac-975b-38dc08cb0182'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:f52a8f91-da15-4d35-b55d-6c097b9ecc38'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: video
+name: Video
+sortOrder: 11
