@@ -52,6 +52,15 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 50
+          -
+            fieldUid: d476916c-8ec8-4d19-a3f8-ac4854f87275
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Branding
         sortOrder: 2
       -

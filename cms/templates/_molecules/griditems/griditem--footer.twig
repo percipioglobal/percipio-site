@@ -12,7 +12,7 @@
         <div class="mb-8 flex-grow">
             {%- switch type -%}
                 {%- case "catchphrase" -%}
-                    {% include "_molecules/content/content--catchphrase" %}
+                    {% include "_molecules/content/content--catchphrase" with { content: { catchphrase: organisationInfo.catchphrase } } %}
                 {%- case "subscribe" -%}
                     {% include "_molecules/forms/form--subscribe" with { color: color }%}
                 {%- case "contact" -%}
