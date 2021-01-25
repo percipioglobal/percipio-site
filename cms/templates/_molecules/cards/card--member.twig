@@ -13,16 +13,18 @@
 
 <div class="{{- utilities -}}">
 
-    <div class="relative bg-{{- colors.primary }} border-b-4 border-{{- colors.secondary -}}">
+    <div class="relative h-full bg-{{- colors.primary }} border-b-4 border-{{- colors.secondary -}}">
 
-        {{- render.atom('image', 'teaser', { 
-                image: member.teaserImage[0], 
-                sizes: sizes,
-                alt: member.teaserImage[0].title, 
-                ratio: 'is4by3', 
-                placeholders: placeholders,
-            })
-        -}}
+        <div class="relative">
+            {{- render.atom('image', 'teaser', { 
+                    image: member.teaserImage[0], 
+                    sizes: sizes,
+                    alt: member.teaserImage[0].title, 
+                    ratio: 'is4by3 bg-white-100', 
+                    placeholders: placeholders,
+                })
+            -}}
+        </div>
 
         <div class="p-8">
 
