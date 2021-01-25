@@ -84,6 +84,12 @@
                         content: block,
                     } -%}
 
+                {%- case "video" -%}
+
+                    {%- include '_molecules/videos/video--single' ignore missing with {
+                        content: block,
+                    } -%}
+
             {%- endswitch -%}
 
         {%- endfor -%}

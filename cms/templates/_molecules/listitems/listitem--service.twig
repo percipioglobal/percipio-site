@@ -1,8 +1,5 @@
 {% import '_macros/atoms' as render %}
 
-{# set standfirst = service.contentBuilder[0] | filter(block => block.type == 'standfirst' | slice(0,1)) #}
-{% set standfirst = (service.contentBuilder | filter(block => block.type == 'standfirst'))[0].standfirst %}
-
 <div class="flex -mx-8">
 
     <div class="w-1/2 px-8">
@@ -12,7 +9,7 @@
             <h3 class="break-words font-bold mb-8 text-4xl text-{{- swatch.primary -}}">{{- service.title -}}</h3>
 
             <div class="prose prose-lg pr-16 mb-8">
-                {{- standfirst -}}
+                {{- service.description -}}
             </div>
             
             {{- render.atom('button', 'primary', {
@@ -30,9 +27,9 @@
 
         <a href="{{- service.url -}}" class="group">
             {{- render.atom('image', 'teaser', { 
-                    image: service.teaserImage[0], 
+                    image: service.teaserImage[0] ??? null, 
                     sizes: sizes,
-                    alt: service.teaserImage[0].title, 
+                    alt: service.teaserImage[0].title ??? service.title, 
                     ratio: 'is4by3', 
                     placeholders: placeholders,
                     animation: 'scale',
@@ -42,42 +39,3 @@
     </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-{# <div class="flex flex-wrap lg:flex-no-wrap lg:-mx-8 w-full">
-    <div class="w-full lg:w-1/2 py-8 lg:px-8 lg:py-0 order-last lg:order-first">
-        <div class="flex flex-col h-full items-start justify-center lg:border-t border-gray-400  lg:px-8">
-            <h3 class="text-kappa lg:text-lg font-medium tracking-wider leading-snug lg:leading-loose mb-4">  Alex­an­dru Papaianopol</h3>
-            <p class="text-sm leading-loose mb-4 max-w-sm">  Top inter­na­tion­al lat­in and ball­room instructor</p>
-            <div class="flex flex-no-wrap mb-4">
-                <div class="block rounded-full bg-gray-500 h-8 w-8 text-sm flex items-center justify-center font-bold ml-0 mr-0">
-                    <span class="text-white">K</span></div></div><div class="btn--wrapper">
-                        <a href="https://hdac.be/docent/alexandru-papaianopol" class="btn --has-icon --sm --right">
-                            ontdek meer          
-                            <span class="icon --has-arrow">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1108.97 912.68" class="arrow --sm --right">
-                                    <polygon points="1108.97 455.72 653.24 0 482.7 170.54 646.52 334.37 0 334.37 0 575.56 649.28 575.56 482.7 742.14 653.24 912.68 1108.97 456.96 1108.35 456.34 1108.97 455.72"></polygon>
-                                </svg>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full lg:w-1/2 lg:px-8 lg:mx-0 order-first lg:order-last">
-                <a href="https://hdac.be/docent/alexandru-papaianopol" title="Docent Alexandru Papaianopol" class="group">
-                    <figure class="relative w-full h-full"><div class="img is4by3 transition duration-500 ease-in-out transform group-hover:scale-90">
-                        <img src="https://hdac.be/assets/images/team/_768x576_crop_center-center_60_line/11593/alex.jpg" data-src="https://hdac.be/assets/images/team/_768x576_crop_center-center_60_line/11593/alex.jpg" data-srcset="https://hdac.be/assets/images/team/_768x576_crop_center-center_60_line/11593/alex.jpg 768w, https://hdac.be/assets/images/team/_576x432_crop_center-center_60_line/11593/alex.jpg 576w" sizes="100vw" alt="Alex" srcset="https://hdac.be/assets/images/team/_768x576_crop_center-center_60_line/11593/alex.jpg 768w, https://hdac.be/assets/images/team/_576x432_crop_center-center_60_line/11593/alex.jpg 576w" class="object-cover transition duration-500 ease-in-out transform group-hover:scale-125 lazyloading">
-                    </figure>
-                </a>
-            </div>
-        </div>
-    </div>
-</div> #}

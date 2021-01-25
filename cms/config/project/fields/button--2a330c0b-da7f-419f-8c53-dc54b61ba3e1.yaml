@@ -1,0 +1,147 @@
+contentColumnType: string
+fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99
+handle: button
+instructions: ''
+name: Button
+searchable: false
+settings:
+  allowCustomText: true
+  allowTarget: false
+  autoNoReferrer: false
+  defaultLinkName: entry
+  defaultText: ''
+  enableAllLinkTypes: false
+  enableAriaLabel: false
+  enableElementCache: false
+  enableTitle: false
+  typeSettings:
+    __assoc__:
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - category
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - site
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - sites
+              - '*'
+      -
+        - user
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - custom
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - email
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - tel
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+translationKeyFormat: null
+translationMethod: none
+type: lenz\linkfield\fields\LinkField

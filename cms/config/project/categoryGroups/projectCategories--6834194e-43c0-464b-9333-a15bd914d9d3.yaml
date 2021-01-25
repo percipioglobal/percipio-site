@@ -41,9 +41,9 @@ handle: projectCategories
 name: 'Project Categories'
 siteSettings:
   5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
-    hasUrls: true
-    template: _organisms/_page
-    uriFormat: 'project-categories/{slug}'
+    hasUrls: false
+    template: null
+    uriFormat: null
 structure:
   maxLevels: null
   uid: f3c16388-ee6a-4753-8ede-739a6625f5ec

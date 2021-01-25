@@ -26,11 +26,11 @@ class Colours extends \Twig\Extension\AbstractExtension
             'secondary' => null,
         ];
 
-        if(property_exists($swatch, "colour") && gettype($swatch->colour) !== 'string' ){
+        if(property_exists($swatch, "color") && gettype($swatch->color) !== 'string' ){
             $i = 0;
-            foreach ($swatch->colour as $colour) {
+            foreach ($swatch->color as $color) {
                 $key = 0 === $i ? 'primary' : 'secondary';
-                $swatches[$key] = $colour->class;
+                $swatches[$key] = $color->class;
 
                 $i++;
             }

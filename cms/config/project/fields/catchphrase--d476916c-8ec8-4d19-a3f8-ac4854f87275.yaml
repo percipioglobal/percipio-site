@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 11cffc84-a18e-49e3-9923-8229743b2a28
+handle: catchphrase
+instructions: ''
+name: Catchphrase
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

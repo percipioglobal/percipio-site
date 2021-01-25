@@ -19,5 +19,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _organisms/_page.twig
-    uriFormat: 'our-work/{slug}'
+    uriFormat: 'work/{slug}'
 type: channel

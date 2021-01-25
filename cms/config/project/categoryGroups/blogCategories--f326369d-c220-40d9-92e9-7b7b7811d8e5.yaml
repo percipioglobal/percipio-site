@@ -54,9 +54,9 @@ handle: blogCategories
 name: 'Blog Categories'
 siteSettings:
   5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
-    hasUrls: true
-    template: _organisms/_page
-    uriFormat: 'blog-categories/{slug}'
+    hasUrls: false
+    template: null
+    uriFormat: null
 structure:
   maxLevels: null
   uid: de27943a-dea2-419d-90cd-fbdfcf88bc6a

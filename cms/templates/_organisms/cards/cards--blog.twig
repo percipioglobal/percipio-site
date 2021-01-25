@@ -1,9 +1,26 @@
+{%- set blogs = 
+    exclude 
+    ? 
+        
+        craft.entries.section('blog')
+            .id(['not', content.id])
+            .with(['teaserImage', 'blogCategories', 'authors', 'authors.teaserImage']).
+            all() 
+            
+    : 
+
+        craft.entries.section('blog')
+            .with(['teaserImage', 'blogCategories', 'authors', 'authors.teaserImage'])
+            .orderBy('postDate desc')
+            .all() 
+-%}
+
 {%- minify -%}
 
     <div class="w-full my-12 md:my-24">
-        {%- for card in content -%}
+        {%- for blog in blogs -%}
             {%- include '_molecules/cards/card--blog' ignore missing with {
-                content: card
+                content: blog
             } -%}
         {%- endfor -%}
     </div>

@@ -1,8 +1,3 @@
-{%- set blog = craft.entries.section('blog')
-    .with(['teaserImage', 'blogCategories', 'authors', 'authors.teaserImage'])
-    .orderBy('postDate desc')
-    .all() -%}
-
 <div id="content">
 	{%- include '_organisms/builders/hero--builder' with {
         content: entry,
@@ -10,7 +5,7 @@
 
     <div class="-mt-12 md:-mt-32">
         {%- include '_organisms/cards/cards--blog' ignore missing with {
-            content: blog,
+            content: entry,
         } -%}
     </div>
 </div>
