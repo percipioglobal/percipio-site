@@ -8,7 +8,7 @@
 	<div class="container max-w-screen-lg mx-auto py-20">
 
 		{# <div class="{{heroImage ? 'z-2 relative px-12 py-6 bg-' ~ swatch.primary ~ ' border-b-8 border-' ~ swatch.secondary : '' }}"> #}
-		<div class="z-2 relative max-w-2xl px-12 py-6 bg-{{- swatch.primary }} border-b-8 border-{{- swatch.secondary -}}">
+		<div class="z-2 relative {{ heroImage ? 'max-w-2xl' : '' }} px-12 py-6 bg-{{- swatch.primary }} border-b-8 border-{{- swatch.secondary -}}">
 
 			<h1 class="sr-only">
 				{{- seomatic.site.identity.genericName -}}:

@@ -76,11 +76,11 @@ return [
                 'color'   =>  [
                     [
                         'color'     => '#e3a008',  // the colour shown in the fieldtype (required)
-                        'class'     => 'yellow-600', // custom attribute
+                        'class'     => 'yellow-400', // custom attribute
                     ],
                     [
                         'color'     => '#c27803',  // the colour shown in the fieldtype (required)
-                        'class'     => 'yellow-700', // custom attribute
+                        'class'     => 'yellow-500', // custom attribute
                     ],
                 ]
             ],
