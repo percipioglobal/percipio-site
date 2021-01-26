@@ -1,5 +1,5 @@
 <template>
-    <button @click.prevent="toggleMenu" class="ml-auto">
+    <button @click.prevent="toggleMenu" class="ml-auto px-2 py-3 bg-white-100">
 
         <span class="">
             <span 
