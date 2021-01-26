@@ -76,6 +76,12 @@
                             content: entry,
                         } -%}
 
+                    {%- case "vacanciesPage" -%}
+
+                        {%- include '_organisms/entry-types/page--vacancies' ignore missing with {
+                            content: entry,
+                        } -%}
+
             {%- endswitch -%}
 
         {% endif %}

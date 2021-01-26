@@ -3,7 +3,7 @@
 
 {%- set teaserImage = content.teaserImage[0] -%}
 {%- set swatchBlog = swatch(content.colourSwatch) -%}
-{%- set swatchCategory = content.blogCategories[0] ? swatch(content.blogCategories[0].colourSwatch) : swatchBlog -%}
+{# {%- set swatchCategory = content.blogCategories[0] ? swatch(content.blogCategories[0].colourSwatch) : swatchBlog -%} #}
 
 {%- minify -%}
 <div class="container mx-auto max-w-screen-lg">
@@ -13,7 +13,7 @@
                 <div class="flex w-full items-center">
                     <div class="flex-grow pr-2">
                         <p class="font-mono text-sm md:text-base pb-1 group-hover:text-white-100">
-                            <span class="text-{{- swatchCategory.primary }} group-hover:text-white-100">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
+                            <span class="text-{{- swatchBlog.primary }} group-hover:text-white-100">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
                             by
                             {{ functions.authors(content.authors) }}
                             on

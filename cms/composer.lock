@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b525f342bc8c77a39dc8240bb8436020",
+    "content-hash": "3e946e4d3a861bf2d4b00618ac87dd48",
     "packages": [
         {
             "name": "angellco/spoon",

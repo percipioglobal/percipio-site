@@ -10,6 +10,8 @@
     'contentBuilder.galleryImages:images',
     'contentBuilder.slide:image',
     'contentBuilder.resourceList:resources',
+    'contentBuilder.media',
+    'contentBuilder.media:embed',
     'author.profilePhoto',
     ])
 %}
@@ -87,6 +89,12 @@
                 {%- case "video" -%}
 
                     {%- include '_molecules/videos/video--single' ignore missing with {
+                        content: block,
+                    } -%}
+
+                {%- case "media" -%}
+
+                    {%- include '_molecules/media/media--embed' ignore missing with {
                         content: block,
                     } -%}
 

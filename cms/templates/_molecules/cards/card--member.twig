@@ -11,15 +11,15 @@
     {% set colors = colors|merge({ (key) : color.class }) %}
 {% endfor %}
 
-<div class="{{- utilities -}}">
+<div class="group {{ utilities -}}">
 
-    <div class="relative h-full bg-{{- colors.primary }} border-b-4 border-{{- colors.secondary -}}">
+    <div class="relative h-full bg-{{- colors.primary }} transition-all duration-500 ease-in-out group-hover:bg-{{- colors.secondary }} border-b-4 border-{{- colors.secondary -}}">
 
         <div class="relative">
             {{- render.atom('image', 'teaser', { 
-                    image: member.teaserImage[0], 
-                    sizes: sizes,
-                    alt: member.teaserImage[0].title, 
+                    image: member.teaserImage[0] ??? placeholders.teaserPlaceholder, 
+                    sizes: sizes ??? sizes,
+                    alt: member.title, 
                     ratio: 'is4by3 bg-white-100', 
                     placeholders: placeholders,
                 })
@@ -43,7 +43,7 @@
                 chips: member.skillCategories,
                 colors: colors,
                 type: 'skills',
-                utilities: 'mt-12 mb-0 space-x-2',
+                utilities: 'mt-12 mb-0',
             
             }) -}}
 

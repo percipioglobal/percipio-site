@@ -1,0 +1,22 @@
+<div id="content">
+	{%- include '_organisms/builders/hero--builder' with {
+        content: entry,
+    } -%}
+
+    <div class="container mx-auto px-8 lg:px-0 mb-16">
+        {%- set heading = {
+            heading: "There are no open vacancies",
+            overline: "I'm sorry :-(",
+            button: null
+        } -%}
+        {%- include '_molecules/headers/header--section' ignore missing with {
+            content: heading,
+        } -%}
+
+        <div class="container mx-auto px-8 lg:px-0 max-w-screen-lg">
+            <div class="prose md:prose-2xl">
+                <p>We have no career opportunities at the moment. Please do feel free to send your resume to <a href="mailto:jamie@percipio.london">Jamie Taylor</a>. We hope to hear you soon.</p>
+            </div>
+        </div>
+    </div>
+</div>

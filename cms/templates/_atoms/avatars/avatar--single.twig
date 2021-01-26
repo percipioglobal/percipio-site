@@ -6,8 +6,8 @@
     colour: options.colour ??? null,
 } %}
 
-<a href="{{values.author.url}}" title="{{values.author.title}}"
-    class="w-16 h-16 rounded-full overflow-hidden border-3 border-{{- values.colour.primary }} hover:border-{{- values.colour.secondary}} {{ values.utilities -}}">
+<a href="{{- values.author.url -}}" title="{{- values.author.title -}}"
+    class="w-16 h-16 rounded-full overflow-hidden bg-white-100 border-3 border-{{- values.colour.primary }} hover:border-{{- values.colour.secondary}} {{ values.utilities -}}">
     {{- render.atom('image', 'teaser', {
         image: values.author.teaserImage[0],
         alt: values.author.teaserImage[0].title,

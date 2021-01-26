@@ -6,6 +6,13 @@
     ])
 -%}
 
+{%- set blogHeading = {
+	overline: 'Want to read more?',
+	heading: 'Check out our blogs',
+	button: null,
+} -%}
+
+<div>
 	{%- include '_organisms/heroes/hero--main' ignore missing with {
         content: entry,
 	} -%}
@@ -18,22 +25,20 @@
         content: entry,
 	} -%}
 
-	{% set blogHeading = {
-		overline: 'Want to read more?',
-		heading: 'Check our blogs out',
-		button: null,
-	} %}
-	
-	{%- include '_molecules/headers/header--section' with { 
-		content: blogHeading,
-		swatch: swatch,
-	} %}
 
-	<div class="-mt-8 md:-mt-20">
-		{%- include '_organisms/cards/cards--blog' ignore missing with {
-			content: entry,
-			exclude: true,
-            type: 'blog',
-        } -%}
+	<div class="pt-10">
+		
+		{%- include '_molecules/headers/header--section' with { 
+			content: blogHeading,
+			swatch: swatch,
+		} %}
+
+		<div class="-mt-8 md:-mt-20">
+			{%- include '_organisms/cards/cards--blog' ignore missing with {
+				content: entry,
+				exclude: true,
+			} -%}
+		</div>
 	</div>
+</div>
 

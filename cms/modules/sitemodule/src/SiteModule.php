@@ -13,6 +13,7 @@ namespace modules\sitemodule;
 use modules\sitemodule\assetbundles\sitemodule\SiteModuleAsset;
 use modules\sitemodule\services\Helper;
 use modules\sitemodule\variables\SiteVariable;
+use modules\sitemodule\helpers\RatioTwigExtenssion;
 
 use Craft;
 use craft\events\RegisterTemplateRootsEvent;
@@ -152,6 +153,9 @@ class SiteModule extends Module
         if (Craft::$app->request->getIsSiteRequest()) {
             $coloursTwigExtension = new Colours();
             Craft::$app->view->registerTwigExtension($coloursTwigExtension);
+            
+            $ratioTwigExtension = new RatioTwigExtenssion();
+            Craft::$app->view->registerTwigExtension($ratioTwigExtension);
         }
 
         Craft::info(
