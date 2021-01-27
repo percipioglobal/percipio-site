@@ -19,6 +19,12 @@ precacheAndRoute(self.__WB_MANIFEST || []);
 
 // Ignore /admin requests
 registerRoute(
+    /\/cp/,
+    new NetworkOnly({
+    }),
+);
+
+registerRoute(
     /\/admin/,
     new NetworkOnly({
     }),
