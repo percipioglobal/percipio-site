@@ -1,5 +1,5 @@
 <template>
-    <button @click.prevent="toggleMenu" class="ml-auto px-2 py-3 bg-white-100">
+    <button @click.prevent="toggleMenu" class="ml-auto">
 
         <span class="">
             <span 
@@ -43,6 +43,8 @@
         methods: {
             toggleMenu() {
                 this.$store.commit('setNavigationActive', !this.getNavigationActive);
+                console.log("test?");
+                document.body.classList.toggle("overflow-hidden");
             }
         }
 
