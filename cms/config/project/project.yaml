@@ -1,4 +1,4 @@
-dateModified: 1611671691
+dateModified: 1611755052
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -33,7 +33,7 @@ plugins:
   image-optimize:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: L5YE26W49XD3K4PP91RH06RM
     schemaVersion: 1.0.0
     settings:
       allowUpScaledImageVariants: false
@@ -65,6 +65,7 @@ plugins:
   navigation:
     edition: standard
     enabled: true
+    licenseKey: MJERE8SD7TGQIZVQE0CHESXY
     schemaVersion: 1.0.21
     settings:
       bypassProjectConfig: false
@@ -84,11 +85,12 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: 8LN4PPMQDNDW9TA7FLCL3WY5
     schemaVersion: 3.0.9
   spoon:
     edition: standard
     enabled: true
+    licenseKey: 9QEEMHXZL353YMJEKFETFL5A
     schemaVersion: 3.5.0
   super-table:
     edition: standard
@@ -119,5 +121,5 @@ system:
   edition: pro
   live: true
   name: Craft
-  schemaVersion: 3.5.13
+  schemaVersion: 3.6.1
   timeZone: Europe/London

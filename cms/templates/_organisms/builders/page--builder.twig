@@ -17,6 +17,8 @@
 %}
 
 {%- minify -%}
+
+<div class="container mx-auto px-8 xxl:px-0 max-w-screen-lg">
     {%- for block in content.pageBuilder -%}
         {%- switch block.type -%}
 
@@ -67,4 +69,5 @@
         {%- endswitch -%}
 
     {%- endfor -%}
+</div>
 {%- endminify -%}
