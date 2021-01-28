@@ -9,12 +9,14 @@
         {# TODO set maxwidth breakpoints #}
         <div class="container mx-auto max-w-screen-lg {{ utilities -}}">
             <div class="leading-none">
+
                 {{- render.atom('text', 'overline', {
                         content: content.overline,
                         utilities: 'text-' ~ swatch.primary ~ ' mb-4',
                     })
                 -}}
-                <h2 class="text-primary text-5xl font-bold mb-8">
+                
+                <h2 class="font-primary text-5xl font-bold mb-8">
                     {{- render.atom('text', 'title', { content: content.heading }) -}}
                 </h2>
 
@@ -25,10 +27,6 @@
                         text: content.button.getText(),
                         swatch: swatch
                     }) -}}
-
-                {% else %}
-
-                    <hr class="h-1 w-32 bg-{{- swatch.primary -}}">
 
                 {% endif %}
             </div>

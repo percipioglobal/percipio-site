@@ -10,17 +10,16 @@
             }) -}}
         </p>
 
+        {# TODO: add transitions on the URLs, let's get fancy #}
 
-        {# TODO: add transitions #}
-
-        {%- if block.quoteSource.getUrl() -%}
         <footer class="mt-8">
-            <a href="{{- block.quoteSource.getUrl() -}}" class="text-{{- swatch.primary }} text-base hover:text-{{- swatch.secondary -}}">{{- block.quoteAuthor }} &mdash; {{ block.quoteSource.getText() -}}</a>
+            {%- if block.quoteSource.getUrl() -%}
+                <a href="{{- block.quoteSource.getUrl() -}}" class="text-{{- swatch.primary }} text-base hover:text-{{- swatch.secondary -}}">{{- block.quoteAuthor }} &mdash; {{ block.quoteSource.getText() -}}</a>
+            {%- else -%}
+                <span class="text-{{- swatch.primary }} text-base">
+                    {{- block.quoteAuthor -}}
+                </span>
+            {%- endif -%}
         </footer>
-        {%- else -%}
-            <span class="text-{{- swatch.primary }} text-base">
-                {{- block.quoteAuthor -}}
-            </span>
-        {%- endif -%}
     </blockquote>
 {%- endminify -%}
