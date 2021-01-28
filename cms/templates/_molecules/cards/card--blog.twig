@@ -12,7 +12,7 @@
             <div class="py-8 border-b-4 border-{{- swatchBlog.primary }} group-hover:border-{{- swatchBlog.primary }} relative z-1">
                 <div class="flex w-full items-center">
                     <div class="flex-grow pr-2">
-                        <p class="font-mono text-sm md:text-base pb-4 md:pb-1 group-hover:text-white-100">
+                        <p class="font-mono text-sm md:text-base pb-4 group-hover:text-white-100">
                             <span class="text-{{- swatchBlog.primary }} group-hover:text-white-100">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
                             by
                             {{ functions.authors(content.authors) }}

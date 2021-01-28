@@ -1,7 +1,7 @@
 {%- set showVacancies = showVacancies ??? false -%}
 {%- set team = craft.entries.section('team')
     .with(['teaserImage', 'skillCategories'])
-    .orderBy('startDate asc')
+    .orderBy('sortingOrder asc, startDate asc')
     .all() -%}
 
 <section class="my-16">

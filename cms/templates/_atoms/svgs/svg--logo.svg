@@ -4,7 +4,7 @@
         <path d="M433 809.5l163.9-94.9-268.5-155L866 250v500l-433 250z"></path>
         <path d="M164.6 345v119.7l268.9-154.8V189.7z"></path>
     </g>
-    <g class="fill-current text-{{ swatch.secondary -}}">
+    <g class="fill-current text-{{ swatch.secondary -}}" style="border:3px solid red">
         <path d="M433.5 189.7v120.2l104.2-60z"></path>
         <path d="M0 559.5l433 250V1000L0 750z"></path>
         <path d="M0 250l164.6 95v119.7L0 559.5z"></path>

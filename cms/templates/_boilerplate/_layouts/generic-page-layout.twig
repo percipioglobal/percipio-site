@@ -36,7 +36,7 @@
 
 {# -- Page body -- #}
 {% block bodyHtml %}
-    <div id="page-container" class="overflow-hidden leading-tight">
+    <div id="page-container" class="overflow-hidden leading-tight min-h-screen flex flex-col">
 
             {# -- Cookie consent -- #}
             {% include "_molecules/notifications/notification--cookie" %}
@@ -44,7 +44,7 @@
             {# -- Info header, including _navbar.twig -- #}
             {% include "_organisms/sections/header.twig" %}
 
-            <main>
+            <main class="flex-grow flex flex-col">
                 {# -- Primary content block -- #}
                 {% block content %}
                 {% endblock %}

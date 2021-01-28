@@ -20,13 +20,32 @@
 {% extends "_boilerplate/_layouts/generic-page-layout.twig" %}
 
 {% block content %}
-{% endblock %}
-
-{% block subcontent %}
-    <section>
-        <div class="container mx-auto px-8 xxl:px-0 max-w-screen-lg py-8">
+    <section class="flex flex-grow items-center">
+        <div class="container mx-auto px-8 lg:px-0 py-8">
             <div class="text-center p-8 mb-8">
-                <h1 class="font-mono italic font-bold text-5xl pt-4">
+                <div class="h-40 relative mb-12">
+                    <a href="/" title="Homepage" class="absolute w-40 h-40 left-1/2 top-0 transform -translate-x-1/2">
+                        <div class="w-40 absolute left-0 top-0 opacity-75 glitch-blue">
+                            {% set swatchGlitch = {
+                                primary: 'yellow-500',
+                                secondary: 'yellow-600',
+                            } -%}
+                            {% include '_atoms/svgs/svg--logo.svg' with { swatch: swatchGlitch } %}
+                        </div>
+                        <div class="w-40 absolute left-0 top-0 opacity-75 glitch-red">
+                            {% set swatchGlitch = {
+                                primary: 'red-500',
+                                secondary: 'red-600',
+                            } -%}
+                            {% include '_atoms/svgs/svg--logo.svg' with { swatch: swatchGlitch } %}
+                        </div>
+                        <div class="w-40 absolute left-0 top-0">
+                            {% include '_atoms/svgs/svg--logo.svg' with { swatch: swatch } %}
+                        </div>
+                    </a>
+                </div>
+
+                <h1 class="text-primary text-5xl font-bold mb-4">
                     {{ entry.errorHeadline ?? 'Error' }}
                 </h1>
                 <p class="font-sans text-xl pt-4">
@@ -35,7 +54,9 @@
             </div>
         </div>
     </section>
+{% endblock %}
 
+{% block subcontent %}
 {% endblock %}
 
 {# -- Any JavaScript that should be included before </body> -- #}
