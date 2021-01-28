@@ -1,4 +1,4 @@
-{# -- Layout template for error pages -- #}
+{# -- Layout template for HTML pages -- #}
 {#
     ┌─────────────────────────────────────────────────────────────────────────────┐
     │ ┌─────────────────────────────────────────────────────────────────────────┐ │
@@ -17,48 +17,47 @@
     │                                  bodyHtml                                   │
     └─────────────────────────────────────────────────────────────────────────────┘
 #}
-{% extends "_boilerplate/_layouts/generic-page-layout.twig" %}
+{% extends "_boilerplate/_layouts/base-html-layout.twig" %}
 
-{% block content %}
-    <section class="flex flex-grow items-center">
-        <div class="container mx-auto px-8 lg:px-0 py-8">
-            <div class="text-center p-8 mb-8">
-                <div class="h-40 relative mb-12">
-                    <a href="/" title="Homepage" class="absolute w-40 h-40 left-1/2 top-0 transform -translate-x-1/2">
-                        <div class="w-40 absolute left-0 top-0 opacity-75 glitch-blue">
-                            {% set swatchGlitch = {
-                                primary: 'yellow-500',
-                                secondary: 'yellow-600',
-                            } -%}
-                            {% include '_atoms/svgs/svg--logo.svg' with { swatch: swatchGlitch } %}
-                        </div>
-                        <div class="w-40 absolute left-0 top-0 opacity-75 glitch-red">
-                            {% set swatchGlitch = {
-                                primary: 'red-500',
-                                secondary: 'red-600',
-                            } -%}
-                            {% include '_atoms/svgs/svg--logo.svg' with { swatch: swatchGlitch } %}
-                        </div>
-                        <div class="w-40 absolute left-0 top-0">
-                            {% include '_atoms/svgs/svg--logo.svg' with { swatch: swatch } %}
-                        </div>
-                    </a>
-                </div>
+{# -- Any <meta> tags that should be included in the <head> #}
+{% block headMeta %}
+{% endblock headMeta %}
 
-                <h1 class="text-primary text-5xl font-bold mb-4">
-                    {{ entry.errorHeadline ?? 'Error' }}
-                </h1>
-                <p class="font-sans text-xl pt-4">
-                    {{ (entry.errorText ?? 'An error has occurred.') |nl2br }}
-                </p>
-            </div>
-        </div>
-    </section>
-{% endblock %}
+{# -- Any <link> tags that should be included in the <head> #}
+{% block headLinks %}
+{% endblock headLinks %}
 
-{% block subcontent %}
-{% endblock %}
+{# -- Any CSS that should be included before </head> -- #}
+{% block headCss %}
+    {% include "_inline-css/site-fonts.css" %}
+{% endblock headCss %}
 
-{# -- Any JavaScript that should be included before </body> -- #}
-{% block bodyJs %}
-{% endblock bodyJs %}
+{% block entry %}
+{% endblock entry %}
+
+{# -- Page body -- #}
+{% block bodyHtml %}
+    <div id="page-container" class="overflow-hidden leading-tight min-h-screen flex flex-col">
+
+            {# -- Cookie consent -- #}
+            {% include "_molecules/notifications/notification--cookie" %}
+
+            {# -- Info header, including _navbar.twig -- #}
+            {% include "_organisms/sections/header.twig" %}
+
+            <main class="flex-grow flex flex-col">
+                {% block content %}
+                {% endblock %}
+            </main>
+
+        {# -- Content that appears below the primary content block -- #}
+        {% block subcontent %}
+        {% endblock %}
+
+        {# -- Info footer -- #}
+        {% include "_organisms/sections/footer.twig" %}
+
+        {# -- HTML Footer -- #}
+        {% include "_partials/global-footer.twig" %}
+    </div>
+{% endblock bodyHtml %}
