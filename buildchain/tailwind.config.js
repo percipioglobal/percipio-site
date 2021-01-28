@@ -35,24 +35,25 @@ module.exports = {
         }
     },
     theme: {
-        typography: (theme) => ({
-            DEFAULT: {
-                css: {
-                    // maxWidth: '80ch',
-                    maxWidth: theme('maxWidth.screens.lg'),
-                    strong: {
-                        color: theme('colors.white.100'),
+        extend: {
+
+            typography: (theme) => ({
+                DEFAULT: {
+                    css: {
+                        // maxWidth: '80ch',
+                        maxWidth: theme('maxWidth.screens.lg'),
+                        strong: {
+                            color: theme('colors.white.100'),
+                        },
                     },
                 },
-            },
-            '3xl': {
-                css: {
-                    fontSize: theme('fontSize.3xl'),
-                    fontWeight: theme('fontWeight.medium'),
+                '3xl': {
+                    css: {
+                        fontSize: theme('fontSize.3xl'),
+                        fontWeight: theme('fontWeight.medium'),
+                    }
                 }
-            }
-        }),
-        extend: {
+            }),
 
             screens: {
                 '2xl': '1536px',
@@ -268,10 +269,6 @@ module.exports = {
                 '3/4': '75vh',
             }),
 
-            opacity: {
-                20: '0.2',
-            },
-
             translate: {
                 '-1/2': '-50%',
             },
@@ -294,15 +291,18 @@ module.exports = {
             },
         },
     },
+
     variants: {
         backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
         borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
         inset: ['responsive'],
         scale: ['group-hover'],
+        opacity: ['group-hover'],
         textColor: ['responsive', 'hover', 'focus', 'group-hover'],
         translate: ['responsive', 'hover', 'focus', 'group-hover'],
-        zIndex: ['responsive', 'hover', 'focus'],
+        zIndex: ['responsive'],
     },
+
     corePlugins: {},
     plugins: [require('@tailwindcss/typography')],
 };

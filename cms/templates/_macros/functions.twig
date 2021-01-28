@@ -16,14 +16,22 @@
     {% endspaceless %}
 {% endmacro %}
 
-{% macro authors(authors) %}
+{% macro authors(authors, options) %}
+
+    {% set colours = options.swatch ??? null %}
+
     {% spaceless %}
         {% for author in authors %}
-            <a class="underline" href="{{- author.url -}}">
+
+            <a  class="underline {{ colours ? 'transition-colors duration-200 ease-in-out hover:text-' ~ colours.primary : '' -}}" 
+                href="{{- author.url -}}"
+            >
                 {{- author.title -}}
             </a>
+
             {{- not loop.last and loop.index != loop.length - 1 ? ', ' -}}
             {{- loop.index == loop.length - 1 ? ' and ' : '' -}}
+
         {% endfor %}
     {% endspaceless %}
 {% endmacro %}

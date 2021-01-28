@@ -21,7 +21,7 @@
                         <p class="font-mono text-gray-800">
                             <span class="text-{{- swatch.primary }}">{{ content.blogCategories[0].title }}</span>
                             by
-                            {{ functions.authors(content.authors) }}<br/>
+                            {{- functions.authors(content.authors, { swatch: swatch }) -}}<br/>
                             on the
                             <time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
                         </p>

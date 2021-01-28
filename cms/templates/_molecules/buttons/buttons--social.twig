@@ -2,9 +2,11 @@
 
 {%- minify -%}
 
-  <div class="flex flex-no-wrap print:hidden">
+<div class="flex flex-no-wrap print:hidden">
 
-    <a href="https://twitter.com/share?text={{- content.title -}}&url={{- content.url -}}&hashtags=#ntp" title="Share this page on Twitter" data-tag-category="social" data-tag-action="print" data-tag-label="{{- content.url -}}" target="_blank" rel="noreferrer">
+    {# needs a bit of rework #}
+
+    <a href="https://twitter.com/share?text={{- content.title -}}&url={{- content.url -}}&hashtags=#ntp" title="Share this page on Twitter" data-tag-category="social" data-tag-action="print" data-tag-label="{{- content.url -}}" target="_blank" rel="noreferrer" class="group">
         {{- render.atom('icon', 'fa', {
             icon:  'fab fa-twitter',
             size: 'lg',
@@ -13,7 +15,7 @@
         }) -}}
     </a>
 
-    <a href="https://www.facebook.com/sharer/sharer.php?u={{- content.url -}}" title="Share this page on Facebook" data-tag-category="social" data-tag-action="print" data-tag-label="{{- content.url -}}" target="_blank" rel="noreferrer">
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{- content.url -}}" title="Share this page on Facebook" data-tag-category="social" data-tag-action="print" data-tag-label="{{- content.url -}}" target="_blank" rel="noreferrer" class="group">
         {{- render.atom('icon', 'fa', {
             icon:  'fab fa-facebook-f',
             size: 'lg',
@@ -22,7 +24,7 @@
         }) -}}
     </a>
 
-    <a href="mailto:?subject={{- seomatic.site.identity.genericName }}: {{- content.title -}}&body={{- content.url -}}" title="Email this page" data-tag-category="social" data-tag-action="print" data-tag-label="{{- content.url -}}" target="_blank" rel="noreferrer">
+    <a href="mailto:?subject={{- seomatic.site.identity.genericName }}: {{- content.title -}}&body={{- content.url -}}" title="Email this page" data-tag-category="social" data-tag-action="print" data-tag-label="{{- content.url -}}" target="_blank" rel="noreferrer" class="group">
         {{- render.atom('icon', 'fa', {
             icon:  'far fa-envelope',
             size: 'lg',
@@ -31,6 +33,6 @@
         }) -}}
     </a>
 
-  </div>
+</div>
 
 {%- endminify -%}
