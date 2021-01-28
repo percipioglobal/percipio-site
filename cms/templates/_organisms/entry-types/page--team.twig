@@ -7,4 +7,6 @@
     content: entry,
 } -%}
 
-{%- include '_organisms/cards/cards--team' ignore missing -%}
+{%- include '_organisms/cards/cards--team' ignore missing with {
+    showVacancies: true
+} -%}

@@ -10,7 +10,7 @@
         {{- render.atom('image', 'teaser', {
             image: content.teaserImage[0],
             alt: content.teaserImage[0].title,
-            ratio: size == 'large' ? 'is21by9' : 'is1by1 sm:is16by9 lg:is1by1',
+            ratio: size == 'large' ? 'is1by1 sm:is16by9 lg:is21by9' : 'is1by1 md:is16by9 lg:is1by1',
             placeholders: placeholders,
         }) -}}
 

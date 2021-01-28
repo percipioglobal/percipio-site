@@ -22,9 +22,13 @@ class Colours extends \Twig\Extension\AbstractExtension
     public function swatch($swatch)
     {
         $swatches = [
-            'primary' => null,
-            'secondary' => null,
+            'primary' => 'blue-600',
+            'secondary' => 'blue-800',
         ];
+
+        if(empty($swatch)){
+            return $swatches;
+        }
 
         if(property_exists($swatch, "color") && gettype($swatch->color) !== 'string' ){
             $i = 0;

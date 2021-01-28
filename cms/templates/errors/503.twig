@@ -1,3 +1,9 @@
+{% extends "_boilerplate/_layouts/error-page-layout.twig" %}
+
 {% set entry = craft.entries.section('errorPages').slug('error503').one() %}
 
-{% extends "_layouts/error-page-layout.twig" %}
+{% block content %}
+    {%- include '_organisms/entry-types/entry--error' ignore missing with {
+        content: entry,
+    } -%}
+{% endblock %}

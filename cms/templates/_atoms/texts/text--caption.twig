@@ -16,13 +16,14 @@
     author: options.author ??? null,
     source: options.source ??? null,
     id: options.id ??? 'now'|date('U'),
-    swatch: options.swatch ??? null,
+    swatch: options.swatch ??? swatch,
+    utilities: options.utilities ??? '',
 
 } %}
 
 {% spaceless %}
 
-    <figcaption id="{{- values.id -}}" class="text-center text-base text-white-100 border-b-2 italic py-4 {{ values.swatch ? 'bg-' ~ values.swatch.primary ~ ' border-' ~ values.swatch.secondary : 'border-gray-700 bg-gray-500' -}}">
+    <figcaption id="{{- values.id -}}" class="font-mono text-center text-sm text-{{- values.swatch.primary ??? 'red-500' }} border-b-2 italic py-4 bg-white-100 border-{{- values.swatch.secondary ??? 'red-600' }} {{ values.utilities -}}">
 
         {{- values.caption }}
 
