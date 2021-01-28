@@ -19,7 +19,11 @@
 {% macro authors(authors) %}
     {% spaceless %}
         {% for author in authors %}
-            <span class="underline">{{author.title}}</span>{{not loop.last and loop.index != loop.length - 1 ? ', '}}{{loop.index == loop.length - 1 ? ' and ' : ''}}
+            <a class="underline" href="{{- author.url -}}">
+                {{- author.title -}}
+            </a>
+            {{- not loop.last and loop.index != loop.length - 1 ? ', ' -}}
+            {{- loop.index == loop.length - 1 ? ' and ' : '' -}}
         {% endfor %}
     {% endspaceless %}
 {% endmacro %}

@@ -18,14 +18,6 @@
                     {{- render.atom('text', 'title', { content: content.heading }) -}}
                 </h2>
 
-                {% if content.body %}
-
-                    <div class="prose my-8">
-                        {{- render.atom('text', 'content', { content: content.body }) -}}
-                    </div>
-
-                {% endif %}
-
                 {% if content.button and content.button.getUrl() %}
 
                     {{- render.atom('button', 'primary', {
