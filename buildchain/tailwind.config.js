@@ -11,10 +11,7 @@ module.exports = {
         ],
         mode: 'layers',
         options: {
-            whitelist: [
-                '../src/css/components/**/*.{css}',
-            ],
-            whitelistPatterns: [
+            safelist: [
                 /pink-600$/,
                 /pink-800$/,
                 /red-600$/,
