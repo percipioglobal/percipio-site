@@ -247,7 +247,7 @@ fields:
             - ''
           -
             - 1/3
-            - ''
+            - '1'
           -
             - 2/5
             - ''
@@ -323,4 +323,4 @@ fields:
     type: craft\fields\Lightswitch
 handle: singleImage
 name: Image
-sortOrder: 3
+sortOrder: 4

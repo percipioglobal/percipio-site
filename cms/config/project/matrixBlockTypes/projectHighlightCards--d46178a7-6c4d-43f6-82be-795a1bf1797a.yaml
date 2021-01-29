@@ -40,4 +40,4 @@ fields:
     type: craft\fields\Entries
 handle: projectHighlightCards
 name: 'Project Highlight Cards'
-sortOrder: 7
+sortOrder: 8

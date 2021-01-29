@@ -51,7 +51,6 @@ fields:
     name: Swatch
     searchable: false
     settings:
-      options: ''
       palette: Percipio
       useConfigFile: '1'
     translationKeyFormat: null
@@ -93,7 +92,7 @@ fields:
             - ''
           -
             - 1/3
-            - ''
+            - '1'
           -
             - 2/5
             - ''

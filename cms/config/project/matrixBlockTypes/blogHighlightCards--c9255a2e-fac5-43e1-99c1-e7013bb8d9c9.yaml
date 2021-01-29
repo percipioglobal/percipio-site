@@ -40,4 +40,4 @@ fields:
     type: craft\fields\Entries
 handle: blogHighlightCards
 name: 'Blog Highlight Cards'
-sortOrder: 6
+sortOrder: 7

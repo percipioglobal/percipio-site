@@ -40,6 +40,24 @@
 
                 {%- endif -%}
 
+            {%- case 'blockQuote' -%}
+
+                {%- if block.containerise -%}
+
+                    {%- include '_molecules/quotes/quotes--block' ignore missing with {
+                        content: block,
+                        prose: 'md:prose-2xl',
+                    } -%}
+
+                {%- else -%}
+
+                    {%- include '_molecules/quotes/quotes--block-grid' ignore missing with {
+                        content: block,
+                        prose: 'md:prose-2xl',
+                    } -%}
+
+                {%- endif -%}
+
             {%- case "sectionHeader" -%}
 
                 <div class="container mx-auto px-8 xxl:px-0 max-w-screen-lg">

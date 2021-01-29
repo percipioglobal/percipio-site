@@ -1,0 +1,71 @@
+context: global
+field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
+fieldLayout:
+  6c1d06d2-130a-4517-a9bd-55b19634f306:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 5ba9dee9-1843-4b4f-b62c-6f3c7de2e04c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: fc6be63b-f5ea-47c7-9839-cf3289cd1a96
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6f97421f-a077-4f86-ac71-61c6f9cd5bef
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 4be4bd14-ce94-450b-a4f4-e10721ba5b22
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e4fa92d0-02c7-4c27-9eb2-782fb6603654
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ff2b4da8-c253-49e7-8258-9a7a0a40d3c7
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Grid Settings'
+        sortOrder: 2
+groupName: Content
+groupSortOrder: 1
+matrixBlockType: 53319d58-a830-47a6-b6b4-47a0081f6deb
+sortOrder: 3
