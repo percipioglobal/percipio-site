@@ -11,10 +11,7 @@ module.exports = {
         ],
         mode: 'layers',
         options: {
-            whitelist: [
-                '../src/css/components/**/*.{css}',
-            ],
-            whitelistPatterns: [
+            safelist: [
                 /pink-600$/,
                 /pink-800$/,
                 /red-600$/,
@@ -35,48 +32,31 @@ module.exports = {
         }
     },
     theme: {
-        typography: (theme) => ({
-            default: {
-                css: {
-                    // maxWidth: '80ch',
-                    maxWidth: theme('maxWidth.screens.lg'),
-                    strong: {
-                        color: theme('colors.white.100'),
+        extend: {
+
+            typography: (theme) => ({
+                DEFAULT: {
+                    css: {
+                        // maxWidth: '80ch',
+                        maxWidth: theme('maxWidth.screens.lg'),
+                        strong: {
+                            color: theme('colors.white.100'),
+                        },
                     },
                 },
-            },
-            '3xl': {
-                css: {
-                    fontSize: theme('fontSize.3xl'),
-                    fontWeight: theme('fontWeight.medium'),
+                '3xl': {
+                    css: {
+                        fontSize: theme('fontSize.3xl'),
+                        fontWeight: theme('fontWeight.medium'),
+                    }
                 }
-            }
-        }),
-        extend: {
+            }),
 
             screens: {
                 '2xl': '1536px',
             },
 
             colors: {
-
-                primary: {
-                    50: '#ebf5ff',
-                    100: '#e1effe',
-                    200: '#c3ddfd',
-                    300: '#a4cafe',
-                    400: '#76a9fa',
-                    500: '#3f83f8',
-                    600: '#1c64f2',
-                    700: '#1a56db',
-                    800: '#1e429f',
-                    900: '#233876',
-                },
-
-                gradients: {
-                    'dark-navy': 'rgba(0,6,51,1)',
-                    black: 'rgba(0,2,20,1)',
-                },
 
                 transparent: 'transparent',
                 current: 'currentColor',
@@ -93,6 +73,7 @@ module.exports = {
                     '90': 'rgba(0,0,0,.9)',
                     '100': 'rgba(0,0,0,1)',
                 },
+
                 white: {
                     '10': 'rgba(255,255,255,.1)',
                     '20': 'rgba(255,255,255,.2)',
@@ -105,6 +86,7 @@ module.exports = {
                     '90': 'rgba(255,255,255,.9)',
                     '100': 'rgba(255,255,255,1)',
                 },
+
                 gray: {
                     '50': '#f9fafb',
                     '100': '#f4f5f7',
@@ -117,6 +99,7 @@ module.exports = {
                     '800': '#252f3f',
                     '900': '#161e2e',
                 },
+
                 'cool-gray': {
                     '50': '#fbfdfe',
                     '100': '#f1f5f9',
@@ -129,6 +112,7 @@ module.exports = {
                     '800': '#27303f',
                     '900': '#1a202e',
                 },
+
                 red: {
                     '50': '#fdf2f2',
                     '100': '#fde8e8',
@@ -141,6 +125,7 @@ module.exports = {
                     '800': '#9b1c1c',
                     '900': '#771d1d',
                 },
+
                 orange: {
                     '50': '#fff8f1',
                     '100': '#feecdc',
@@ -153,6 +138,7 @@ module.exports = {
                     '800': '#8a2c0d',
                     '900': '#771d1d',
                 },
+
                 yellow: {
                     '50': '#fdfdea',
                     '100': '#fdf6b2',
@@ -165,6 +151,7 @@ module.exports = {
                     '800': '#723b13',
                     '900': '#633112',
                 },
+
                 green: {
                     '50': '#f3faf7',
                     '100': '#def7ec',
@@ -177,6 +164,7 @@ module.exports = {
                     '800': '#03543f',
                     '900': '#014737',
                 },
+
                 teal: {
                     '50': '#edfafa',
                     '100': '#d5f5f6',
@@ -189,6 +177,7 @@ module.exports = {
                     '800': '#05505c',
                     '900': '#014451',
                 },
+
                 blue: {
                     '50': '#ebf5ff',
                     '100': '#e1effe',
@@ -201,6 +190,7 @@ module.exports = {
                     '800': '#1e429f',
                     '900': '#233876',
                 },
+
                 indigo: {
                     '50': '#f0f5ff',
                     '100': '#e5edff',
@@ -213,6 +203,7 @@ module.exports = {
                     '800': '#42389d',
                     '900': '#362f78',
                 },
+
                 purple: {
                     '50': '#f6f5ff',
                     '100': '#edebfe',
@@ -225,6 +216,7 @@ module.exports = {
                     '800': '#5521b5',
                     '900': '#4a1d96',
                 },
+
                 pink: {
                     '50': '#fdf2f8',
                     '100': '#fce8f3',
@@ -237,15 +229,6 @@ module.exports = {
                     '800': '#99154b',
                     '900': '#751a3d',
                 },
-            },
-            borderWidth: {
-                DEFAULT: '1px',
-                '0': '0',
-                '2': '2px',
-                '3': '3px',
-                '4': '4px',
-                '6': '6px',
-                '8': '8px',
             },
 
             inset: (theme, { negative }) => ({
@@ -283,10 +266,6 @@ module.exports = {
                 '3/4': '75vh',
             }),
 
-            opacity: {
-                20: '0.2',
-            },
-
             translate: {
                 '-1/2': '-50%',
             },
@@ -309,15 +288,18 @@ module.exports = {
             },
         },
     },
+
     variants: {
         backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
         borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
         inset: ['responsive'],
         scale: ['group-hover'],
+        opacity: ['group-hover'],
         textColor: ['responsive', 'hover', 'focus', 'group-hover'],
         translate: ['responsive', 'hover', 'focus', 'group-hover'],
-        zIndex: ['responsive', 'hover', 'focus'],
+        zIndex: ['responsive'],
     },
+
     corePlugins: {},
     plugins: [require('@tailwindcss/typography')],
 };
