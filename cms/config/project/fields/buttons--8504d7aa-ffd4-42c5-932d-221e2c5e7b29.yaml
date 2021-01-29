@@ -1,0 +1,27 @@
+contentColumnType: string
+fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99
+handle: buttons
+instructions: ''
+name: Buttons
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 720b0445-dc28-4b47-85df-59e4f03c666b
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_buttons_1}}'
+  fieldLayout: table
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

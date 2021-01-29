@@ -1,0 +1,68 @@
+{% import '_macros/atoms' as render %}
+
+<section class="relative pt-32">
+
+    <div class="container max-w-screen-lg mx-auto px-8 xxl:px-0 py-20">
+
+        <div class="bg-{{- swatch.primary }} border-b-8 border-{{- swatch.secondary }} px-12 py-6">
+
+            <div class="md:flex md:flex-row-reverse">
+
+                <div class="w-1/5 flex items-center justify-end">
+
+                    <div class="rounded-full w-full h-auto overflow-hidden bg-white-100">
+                        {{- render.atom('image', 'teaser', {
+                                image: member.teaserImage[0],
+                                sizes: ['20vw'],
+                                alt: member.teaserImage[0].title,
+                                ratio: 'is1by1',
+                                placeholders: placeholders,
+                            })
+                        -}}
+                    </div>
+
+                </div>
+
+                <div class="w-full md:w-4/5">
+
+                    <h1 class="sr-only">
+                        {{- seomatic.site.identity.genericName -}} team member: {{- render.atom('text', 'title', { content: content.title }) -}}
+                    </h1>
+
+                    {{- render.atom('text', 'overline', {
+                            content: member.role,
+                        })
+                    -}}
+
+                    <h2 class="font-extrabold leading-none text-4xl md:text-6xl text-white-100 max-w-2xl mt-4 mb-8">
+                        {{- render.atom('text', 'title', { content: content.title }) -}}
+                    </h2>
+
+                    {{ render.atom('date', 'jobdays', {
+                        date: member.startDate,
+                        utilities: 'block text-xl md:text-2xl text-white-100 mb-2'
+                    }) }}
+
+                    <span class="block text-xl md:text-2xl text-white-100">
+                        <strong>Location: </strong>
+                        {{- content.location -}}
+                    </span>
+
+                    <div class="mt-6 -mb-6">
+                        {{- render.atom('chip', 'group', { 
+                            chips: content.skillCategories,
+                            colors: swatch,
+                            type: 'skills',
+                            utilities: 'space-x-2',
+                        }) -}}
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

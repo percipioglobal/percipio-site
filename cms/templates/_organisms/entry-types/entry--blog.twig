@@ -1,0 +1,44 @@
+{%- do craft.eagerBeaver.eagerLoadElements(entry, [
+        'teaserImage',
+        'blogCategories',
+        'authors',
+        'authors.teaserImage',
+    ])
+-%}
+
+{%- set blogHeading = {
+	overline: 'Want to read more?',
+	heading: 'Check out our blogs',
+	button: null,
+} -%}
+
+<div>
+	{%- include '_organisms/heroes/hero--main' ignore missing with {
+        content: entry,
+	} -%}
+
+	{%- include '_organisms/metas/meta--blog' ignore missing with { 
+		content: entry,
+	} -%}
+
+	{%- include '_organisms/builders/content--builder' with {
+        content: entry,
+	} -%}
+
+
+	<div class="pb-10 md:pb-24 md:pt-10 container mx-auto px-8 xxl:px-0 max-w-screen-lg">
+		
+		{%- include '_molecules/headers/header--section' with { 
+			content: blogHeading,
+			swatch: swatch,
+		} %}
+
+		<div class="-mt-8 md:-mt-20">
+			{%- include '_organisms/cards/cards--blog' ignore missing with {
+				content: entry,
+				exclude: true,
+			} -%}
+		</div>
+	</div>
+</div>
+

@@ -1,78 +1,105 @@
 {% do craft.eagerBeaver.eagerLoadElements(entry, [
-    'highlightCards:cards',
-    'sectionHeader:buttons',
-    'singleImage:image',
-    'slide:image',
-    'resources:target',
-    'faqList:questions',
-    'faqList:questions.faqCategory',
-    'author:profilePhoto',
-    ]) 
+    'contentBuilder',
+    'contentBuilder.highlightCards:cards',
+    'contentBuilder.highlightCards:cards.client',
+    'contentBuilder.highlightCards:cards.blogCategories',
+    'contentBuilder.highlightCards:cards.authors',
+    'contentBuilder.contentGrid:items',
+    'contentBuilder.sectionHeader:buttons',
+    'contentBuilder.singleImage:image',
+    'contentBuilder.galleryImages:images',
+    'contentBuilder.slide:image',
+    'contentBuilder.resourceList:resources',
+    'contentBuilder.media',
+    'contentBuilder.media:embed',
+    'author.profilePhoto',
+    ])
 %}
 
-<div class="container max-w-screen-xl mx-auto">
-    
+<div class="container mx-auto px-8 xxl:px-0 max-w-screen-lg">
+
     {%- minify -%}
-        {%- for block in content.contentBuilder.all() -%}
+        {%- for block in content.contentBuilder -%}
             {%- switch block.type -%}
-                
+
                 {%- case "article" -%}
-                    
+
                     {%- include '_molecules/content/content--article' ignore missing with {
                         content: block,
+                        prose: 'md:prose-2xl',
                     } -%}
-                
+
                 {%- case "blockQuote" -%}
-                    
+
                     {%- include '_molecules/quotes/quotes--block' ignore missing with {
                         content: block,
                     } -%}
-                
+
+                {%- case "contentGrid" -%}
+
+                    {%- include '_organisms/grids/grid--content' ignore missing with {
+                        grid: block,
+                        spacing: 8,
+                        prose: 'md:prose-xl',
+                    } -%}
+
                 {%- case "sectionHeader" -%}
-                    
+
                     {%- include '_molecules/headers/header--section' ignore missing with {
                         content: block,
-                        type: 'normal',
                     } -%}
-                
+
                 {%- case "basicSlider" -%}
-                
+
                     {%- include '_molecules/sliders/slider--basic' ignore missing with {
                         content: block,
                     } -%}
-                
+
                 {%- case "singleImage" -%}
-                
+
                     {%- include '_molecules/images/image--single' ignore missing with {
                         content: block,
                     } -%}
 
-                {%- case "galleryImage" -%}
-                
+                {%- case "standfirst" -%}
+
+                    {%- include '_molecules/content/content--standfirst' ignore missing with {
+                        content: block,
+                        prose: 'md:prose-3xl',
+                    } -%}
+
+                {%- case "galleryImages" -%}
+
                     {%- include '_molecules/images/image--gallery' ignore missing with {
                         content: block,
                     } -%}
 
                 {%- case "highlightCards" -%}
-            
+
                     {%- include '_organisms/cards/cards--highlight' ignore missing with {
                         content: block,
                     } -%}
 
                 {%- case "resourceList" -%}
-            
+
                     {%- include '_organisms/lists/list--resources' ignore missing with {
                         content: block,
                     } -%}
 
-                {%- case "faqList" -%}
-        
-                    {%- include '_organisms/lists/list--faq.twig' ignore missing with {
+                {%- case "video" -%}
+
+                    {%- include '_molecules/videos/video--single' ignore missing with {
                         content: block,
                     } -%}
-                
+
+                {%- case "media" -%}
+
+                    {%- include '_molecules/media/media--embed' ignore missing with {
+                        content: block,
+                    } -%}
+
             {%- endswitch -%}
-                
+
         {%- endfor -%}
     {%- endminify -%}
 

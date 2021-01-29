@@ -25,6 +25,8 @@
 
 {# -- Any <link> tags that should be included in the <head> #}
 {% block headLinks %}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ siteUrl("/rss") }}" />
+    <link rel="alternate" type="application/json" title="JSON Feed" href="{{ siteUrl("/feed.json") }}" />
 {% endblock headLinks %}
 
 {# -- Any CSS that should be included before </head> -- #}
@@ -34,20 +36,19 @@
 
 {# -- Page body -- #}
 {% block bodyHtml %}
-    <div id="page-container" class="overflow-hidden leading-tight">
-        <div id="content-container" class="bg-repeat header-background">
+    <div id="page-container" class="overflow-hidden leading-tight min-h-screen flex flex-col">
+
+            {# -- Cookie consent -- #}
+            {% include "_molecules/notifications/notification--cookie" %}
 
             {# -- Info header, including _navbar.twig -- #}
             {% include "_organisms/sections/header.twig" %}
 
-            <main>
-                <div class="container mx-auto pb-8">
-                    {# -- Primary content block -- #}
-                    {% block content %}
-                    {% endblock %}
-                </div>
+            <main class="flex-grow flex flex-col">
+                {# -- Primary content block -- #}
+                {% block content %}
+                {% endblock %}
             </main>
-        </div>
 
         {# -- Content that appears below the primary content block -- #}
         {% block subcontent %}

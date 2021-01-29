@@ -1,55 +1,65 @@
-{%- import '_macros/atoms' as atom -%}
+{%- import '_macros/atoms' as render -%}
 
-{# Eager Load categories based on entry types #}
-{%- if entry.type == 'news' -%}
-    {%- do craft.eagerBeaver.eagerLoadElements(entry, [
-        'newsCategory'
-        ]) 
-    -%}
-{%- endif -%}
 
 {# Load needed images #}
-{%- set teaserImage = content.teaserImage[0] ?? placeholders.teaserPlaceholder.one() -%}
-{%- set userImage = entry.author.profilePhoto[0] ?? placeholders.profilePhotoPlaceholder.one() -%}
+{%- set teaserImage = content.teaserImage[0] -%}
+{%- set width = width ??? '' %}
+{%- set isHorizontal = isHorizontal ??? false %}
+{%- set categories = null %}
+{%- set color = swatch(content.colourSwatch) -%}
 
+{%- switch content.type -%}
+    {% case "blog" %}
+        {% set categories = content.blogCategories ??? null %}
+    {% case "projects" %}
+        {% set categories = content.projectCategories ??? null %}
+    {% case "teamMember" %}
+        {% set categories = content.teamCategories ??? null %}
+{%- endswitch -%}
 
 {%- minify -%}
-    <div class="relative w-full border-b-4 border-gray-300">
-
-        <div class="mb-8">
-            {{- atom.teaser_image(teaserImage, teaserImage.title) -}}
-        </div>
-
-        <div class="flex items-center text-left mb-8">
-            {% if entry.type == 'news' %}
-                <div class="flex-shrink-0 h-16 w-16 mr-3">
-                    {{- atom.profile_image(userImage, entry.author) -}}
-                </div>
-            {% endif %}
-
-            <div>
-                <h4 class="text-4xl font-secondary font-normal leading-normal">
-                    <a href="{{- content.url -}}">
-                        {{- atom.text(content.title) -}}
-                    </a>
-                </h4>
-                
-                <span class="text-xs leading-tight text-gray-500 lowercase">
-                    {# Need to add the themes, not just categories, currently only supports one category, create categories atom #}
-                    <p class="text-xs font-bold uppercase tracking-wide leading-normal mb-4">{{- content.newsCategory[0].title ?? 'No Category' }} - {{- atom.formatDate(content.postDate) -}}</p>
-                </span>
-            </div>
-        </div>
-
-        <div class="px-4 pb-8">
-
-
-            <a href="{{- url(alias('@web/' ~ content.uri)) -}}" class="absolute block top-0 left-0 h-full w-full z-1">
-                <span class="sr-only">
-                    {{- "Discover" | t }} {{ atom.text(content.title) }} {{ content.newsCategory.one().title ?? '' -}}
-                </span>
-            </a>
-        
-        </div>               
-    </div>
+<div class="white-100 text-{{- color.primary }} border-b-8 border-{{- color.primary }} mb-8 shadow-md hover:shadow-2xl transition duration-200 ease-in-out {{ width }}">
+	<div class="h-full flex flex-col w-full {{ isHorizontal ? 'xl:grid grid-cols-2 grid-rows-1' : '' -}}">
+		<div class="relative {{ isHorizontal? 'h-full' : '' }}">
+			<a href="{{- content.url -}}" class="w-full block {{ isHorizontal? 'h-full' : 'h-80' }}">
+				{{- render.atom('image', 'teaser', {
+					image: teaserImage,
+					alt:teaserImage.title,
+					ratio: 'w-full h-full',
+					placeholders: placeholders,
+				}) -}}
+			</a>
+		</div>
+		<div class="flex flex-col flex-grow text-left p-8">
+			<a href="{{- content.url -}}" class="flex-grow text-gray-800">
+                {%- switch content.type -%}
+                    {% case "blog" %}
+                        <div class="text-xs leading-tight text-black-100 tracking-wider">
+                            <address rel="author" class="text-2xl font-primary font-medium leading-none not-italic mb-1">{{- content.author -}}</address>
+                            <time datetime="{{- entry.postDate|date('c') -}}" class="text-xs font-primary mt-6 font-medium uppercase tracking-wide leading-normal">{{- render.formatDate(content.postDate) -}}</time>
+                        </div>
+                    {% case "projects" %}
+                        {{- render.atom('text', 'overline', { content: content.organisationName }) -}}
+                    {% case "teamMember" %}
+                        {{- render.atom('text', 'overline', { content: content.teamMemberRole }) -}}
+                {%- endswitch -%}
+                {{- render.atom('text', 'card-title', { content: content.title }) -}}
+                {{- render.atom('text', 'card-description', { content: content.description }) -}}
+			</a>
+			<div>
+				<div class="mt-10 md:mt-16">
+					{%- if categories|length -%}
+						{%- for category in categories -%}
+							<a href="{{- category.url -}}" alt="{{- category.title -}}">
+								<span class="bg-{{- color -}}-700 mt-2 mr-2 px-4 py-2 rounded-full font-secondary inline-block text-white-100 text-xs tracking-wide font-medium">
+									{{- category.title  }}
+								</span>
+							</a>
+						{%- endfor -%}
+					{%- endif -%}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {%- endminify -%}

@@ -1,0 +1,125 @@
+dateModified: 1611856548
+email:
+  fromEmail: $SYSTEM_EMAIL
+  fromName: $SENDER_NAME
+  replyToEmail: $REPLY_TO
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  aws-s3:
+    eager-beaver:
+      enabled: true
+      schemaVersion: 1.0.0
+    enabled: true
+    schemaVersion: '1.2'
+  blitz-recommendations:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  colour-swatches:
+    enabled: true
+    schemaVersion: 1.4.1.1
+  eager-beaver:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  fastcgi-cache-bust:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  image-optimize:
+    edition: standard
+    enabled: true
+    licenseKey: L5YE26W49XD3K4PP91RH06RM
+    schemaVersion: 1.0.0
+    settings:
+      allowUpScaledImageVariants: false
+      assetVolumeSubFolders: true
+      autoSharpenScaledImages: true
+      createColorPalette: true
+      createPlaceholderSilhouettes: false
+      imageTransformTypeSettings:
+        nystudio107\imageoptimizeimgix\imagetransforms\ImgixImageTransform:
+          apiKey: ''
+          domain: ''
+          securityToken: ''
+        nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform:
+          baseUrl: $SERVERLESS_SHARP_CLOUDFRONT_URL
+        nystudio107\imageoptimizethumbor\imagetransforms\ThumborImageTransform:
+          baseUrl: ''
+          includeBucketPrefix: ''
+          securityKey: ''
+      lowerQualityRetinaImageVariants: false
+      transformClass: nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
+  mailgun:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: MJERE8SD7TGQIZVQE0CHESXY
+    schemaVersion: 1.0.21
+    settings:
+      bypassProjectConfig: false
+      pluginName: Navigation
+  position-fieldtype:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    enabled: true
+    schemaVersion: 2.3.0
+  retour:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 3.0.9
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: 8LN4PPMQDNDW9TA7FLCL3WY5
+    schemaVersion: 3.0.9
+  spoon:
+    edition: standard
+    enabled: true
+    licenseKey: 9QEEMHXZL353YMJEKFETFL5A
+    schemaVersion: 3.5.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
+  twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  webperf:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 1.0.1
+  width-fieldtype:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: Craft
+  schemaVersion: 3.6.1
+  timeZone: Europe/London

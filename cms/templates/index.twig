@@ -5,16 +5,18 @@
     <link rel="amphtml" href="{{ siteUrl('/amp') }}">
 {% endblock headLinks %}
 
+
 {% block content %}
-    <section>
-        <h1>content</h1>
-    </section>
+    {%- include '_organisms/builders/hero--builder' with {
+        content: entry,
+    } -%}
+
+    {%- include '_organisms/builders/page--builder' with {
+        content: entry,
+    } -%}
 {% endblock %}
 
 {% block subcontent %}
-    <section>
-        <h2>subcontent</h2>
-    </section>
 {% endblock %}
 
 {# -- Any JavaScript that should be included before </body> -- #}

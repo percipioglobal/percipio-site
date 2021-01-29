@@ -1,0 +1,45 @@
+{%- set showVacancies = showVacancies ??? false -%}
+{%- set team = craft.entries.section('team')
+    .with(['teaserImage', 'skillCategories'])
+    .orderBy('sortingOrder asc, startDate asc')
+    .all() -%}
+
+<section class="my-16">
+
+    <div class="container mx-auto px-8 xxl:px-0">
+
+        <div class="flex flex-wrap -mx-8">
+
+            {% for member in team %}
+
+                {%- include '_molecules/cards/card--member' ignore missing with {
+                    member: member,
+                    sizes: ['33.3vw'],
+                    utilities: 'w-full sm:w-1/2 lg:w-1/3 px-8 mb-8',
+                } -%}
+
+            {% endfor %}
+
+            {% if showVacancies %}
+                {%- set vacanciesPageUrl = craft.entries.section('pages').type('vacanciesPage').one().url ??? "/" -%}
+                {%- set vacancyMember = {
+                    url: vacanciesPageUrl,
+                    title: 'Our vacancies',
+                    role: 'Want to work for us?',
+                    colourSwatch: entry.colourSwatch,
+                    teaserImage: null,
+                    skillCategories: [],
+                } -%}
+                {%- include '_molecules/cards/card--member' ignore missing with {
+                    member: vacancyMember,
+                    utilities: 'w-full sm:w-1/2 lg:w-1/3 px-8 mb-8'
+                } -%}
+            {% endif %}
+
+        </div>
+
+
+
+    </div>
+
+</section>

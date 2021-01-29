@@ -1,0 +1,101 @@
+field: 7fb63ae6-c6ee-4824-9213-420e2da4e008
+fieldLayouts:
+  6c234cb6-4c8b-4d0e-a3ce-0460e05055f4:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 2c70613c-0c00-4d9a-96bf-658a6db58d9c
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 60285741-d9e6-4e21-b26e-3330c2d02f47
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: faa39bae-b425-4b70-b3f6-c1584cdda9dc
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2c70613c-0c00-4d9a-96bf-658a6db58d9c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: logo
+    instructions: ''
+    name: Logo
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Add a logo'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  60285741-d9e6-4e21-b26e-3330c2d02f47:
+    contentColumnType: string(720)
+    fieldGroup: null
+    handle: description
+    instructions: ''
+    name: Name
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: 180
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  faa39bae-b425-4b70-b3f6-c1584cdda9dc:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: target
+    instructions: ''
+    name: Website
+    searchable: true
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url

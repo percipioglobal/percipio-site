@@ -1,0 +1,15 @@
+{% extends "_atoms/texts/text--variables" %}
+
+{#
+    ### OPTIONS ###
+    ---------------
+
+    content: (STR) -- the actual content as a string
+
+#}
+
+{% block text %}
+    {%- minify -%}
+        {{- values.content | typogrify(true) -}}
+    {%- endminify -%}
+{% endblock %}

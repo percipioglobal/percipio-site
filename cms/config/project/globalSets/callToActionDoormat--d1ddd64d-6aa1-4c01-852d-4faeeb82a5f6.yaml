@@ -1,0 +1,36 @@
+fieldLayouts:
+  7325ed35-f613-46d7-b69a-82fd81d5d88d:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 09243cdb-0fbd-4e89-a336-39c5558bb567
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5179642f-d661-49a6-be40-5fb59743a8c0
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8504d7aa-ffd4-42c5-932d-221e2c5e7b29
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: callToActionDoormat
+name: 'Call To Action - Doormat'

@@ -1,0 +1,22 @@
+{% extends "_atoms/texts/text--variables" %}
+
+{#
+    ### OPTIONS ###
+    ---------------
+
+    content: (STR) -- the actual content as a string
+
+#}
+
+{% block text %}
+
+    {%- set values = values|merge({
+        utilities: options.utilities ??? 'text-white-100',
+    }) -%}
+
+    {%- minify -%}
+        <span class="inline-block break-words text-base {{ values.utilities -}}">
+            {{- values.content | typogrify(true) -}}
+        </span>
+    {%- endminify -%}
+{% endblock %}

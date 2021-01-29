@@ -1,0 +1,37 @@
+{% import '_macros/atoms' as render %}
+
+{%- set callToActionDoormat = craft.globalSets()
+    .handle('callToActionDoormat')
+    .with(['buttons'])
+    .one()
+-%}
+
+{% if callToActionDoormat.ctaTitle and callToActionDoormat.body %}
+    <section class="bg-{{ swatch.primary}} py-12 md:py-24">
+        <div class="container mx-auto px-8 xxl:px-0 max-w-screen-lg">
+            <div class="container mx-auto max-w-screen-lg">
+                <h2 class="font-extrabold leading-tight text-6xl text-white-100 max-w-2xl">
+                    {{- render.atom('text', 'title', { content: callToActionDoormat.ctaTitle ??? "" }) -}}
+                </h2>
+
+                {% if callToActionDoormat.body|length %}
+                    <div class="max-w-2xl prose prose-lg mt-12 text-white-100">
+                        {{- render.atom('text', 'content', { content: callToActionDoormat.body }) -}}
+                    </div>
+                {% endif %}
+
+                {% if callToActionDoormat.buttons %}
+
+                    {{- render.atom('button', 'group', {
+
+                        buttons: callToActionDoormat.buttons,
+                        type: 'primary',
+                        utilities: 'mt-12 space-x-4',
+
+                    }) -}}
+
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endif %}

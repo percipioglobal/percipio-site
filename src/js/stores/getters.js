@@ -1,7 +1,19 @@
-export const fetchCsrfToken = (state) => {
+export const getCsrfToken = (state) => {
     return state.csrf;
 }
 
-export const fetchGqlToken = (state) => {
-    return state.gqlToken;
+export const getNavigationGqlToken = (state) => {
+    return state.gqlNavigationToken;
+}
+
+export const getNavigationActive = (state) => {
+    return state.navigationActive;
+}
+
+export const getNavigationPrimary = (state) => {
+    return state.navigationPrimary;
+}
+
+export const getSocialMediaLinks = (state) => {
+    return state.socialMediaLinks;
 }

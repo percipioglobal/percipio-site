@@ -1,0 +1,42 @@
+{%- do craft.eagerBeaver.eagerLoadElements(entry, [
+        'teaserImage',
+        'skillCategories'
+    ])
+-%}
+
+{% set blogHeading = {
+    overline: 'Want to read more?',
+    heading: 'Check out my blogs',
+    button: null,
+} %}
+
+{%- set blogs = craft.entries.section('blog')
+    .with(['teaserImage', 'blogCategories', 'authors', 'authors.teaserImage'])
+    .authors([content.id])
+    .orderBy('postDate desc')
+    .all() 
+-%}
+
+{%- include '_organisms/heroes/hero--member' with {
+    member: entry,
+} -%}
+
+{%- include '_organisms/builders/content--builder' with {
+    content: entry,
+} -%}
+
+{% if blogs|length > 0 %}
+    <div class="pt-10">
+        {%- include '_molecules/headers/header--section' with { 
+            content: blogHeading,
+            swatch: swatch,
+        } %}
+
+        <div class="-mt-8 md:-mt-20">
+            {%- include '_organisms/cards/cards--blog' ignore missing with {
+                content: content,
+                blogs: blogs,
+            } -%}
+        </div>
+    </div>
+{% endif %}

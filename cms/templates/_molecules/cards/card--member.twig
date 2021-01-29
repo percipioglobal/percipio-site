@@ -1,0 +1,58 @@
+{% import '_macros/atoms' as render %}
+{% import '_macros/functions' as function %}
+
+{% set colors = {
+    'primary': null,
+    'secondary': null,
+} %}
+
+{% for color in member.colourSwatch.color | slice(0,2) %}
+    {% set key = loop.first ? 'primary' : 'secondary' %}
+    {% set colors = colors|merge({ (key) : color.class }) %}
+{% endfor %}
+
+<div class="group {{ utilities -}}">
+
+    <div class="relative h-full bg-{{- colors.primary }} transition-all duration-500 ease-in-out group-hover:bg-{{- colors.secondary }} border-b-4 border-{{- colors.secondary -}}">
+
+        <div class="relative">
+            {{- render.atom('image', 'teaser', { 
+                    image: member.teaserImage[0] ??? placeholders.teaserPlaceholder, 
+                    sizes: sizes ??? sizes,
+                    alt: member.title, 
+                    ratio: 'is4by3 bg-white-100', 
+                    placeholders: placeholders,
+                })
+            -}}
+        </div>
+
+        <div class="p-8">
+
+            {{- render.atom('text', 'overline', { 
+                    content: member.role,
+                })
+            -}}
+
+            {{- render.atom('text', 'card-title', { 
+                    content: member.title,
+                })
+            -}}
+
+            {{- render.atom('chip', 'group', { 
+    
+                chips: member.skillCategories,
+                colors: colors,
+                type: 'skills',
+                utilities: 'mt-12 mb-0',
+            
+            }) -}}
+
+        </div>
+
+        <a href="{{- member.url -}}" class="absolute inset-0">
+            <span class="sr-only">Read more about {{- member.title -}}</span>
+        </a>
+
+    </div>
+
+</div>

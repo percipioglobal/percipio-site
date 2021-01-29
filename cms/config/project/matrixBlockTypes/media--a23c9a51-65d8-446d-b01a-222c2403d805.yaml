@@ -1,0 +1,95 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  5158fab7-a860-4511-90c9-3e8f068fede3:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 6325f925-feea-4e28-b6ec-7630d3e70cc8
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 40e441b8-aeac-4f02-878a-60457e5699a8
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  40e441b8-aeac-4f02-878a-60457e5699a8:
+    contentColumnType: string
+    fieldGroup: null
+    handle: position
+    instructions: 'Select the position where you want it to be in the content. Choose full for example if you have a 16:9 video, choose center if you have and instagram or 1:1 post.'
+    name: Position
+    searchable: false
+    settings:
+      default: center
+      options:
+        __assoc__:
+          -
+            - left
+            - ''
+          -
+            - center
+            - '1'
+          -
+            - right
+            - ''
+          -
+            - full
+            - '1'
+          -
+            - drop-left
+            - ''
+          -
+            - drop-right
+            - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\positionfieldtype\fields\Position
+  6325f925-feea-4e28-b6ec-7630d3e70cc8:
+    contentColumnType: string
+    fieldGroup: null
+    handle: embed
+    instructions: 'This can be a Youtube video, Vimeo video, Instagram post, ...'
+    name: Embed
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: false
+      allowedKinds:
+        - json
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Add an Embed URL'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:03bb9bf6-0516-4070-b011-57f7820b7c7c'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: media
+name: Media
+sortOrder: 11

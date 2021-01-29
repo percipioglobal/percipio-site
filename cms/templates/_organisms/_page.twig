@@ -1,0 +1,94 @@
+{% extends "_boilerplate/_layouts/generic-page-layout.twig" %}
+
+{% block headLinks %}
+    {{ parent() }}
+    <link rel="amphtml" href="{{ siteUrl('/amp') }}">
+{% endblock headLinks %}
+
+{% block content %}
+        {% if entry is defined %}
+
+            {%- switch entry.type -%}
+
+                    {%- case "contentPage" -%}
+
+                        {%- include '_organisms/entry-types/page--content' ignore missing with {
+                            content: entry,
+                        } -%}
+
+                    {%- case "landingsPage" -%}
+
+                        {%- include '_organisms/entry-types/page--landing' ignore missing with {
+                            content: entry,
+                        } -%}
+
+                    {%- case "blogPage" -%}
+
+                        {%- include '_organisms/entry-types/page--blog' ignore missing with {
+                            content: entry,
+                        } -%}
+
+                    {%- case "projectsPage" -%}
+
+                        {%- include '_organisms/entry-types/page--projects' ignore missing with {
+                            content: entry,
+                        } -%}
+
+                    {%- case "servicesPage" -%}
+
+                        {%- include '_organisms/entry-types/page--services' ignore missing with {
+                            content: entry,
+                        } -%}
+
+                    {%- case "teamPage" -%}
+
+                        {%- include '_organisms/entry-types/page--team' ignore missing with {
+                            content: entry,
+                        } -%}
+
+                    {%- case "contactPage" -%}
+
+                        {%- include '_organisms/entry-types/page--contact' ignore missing with {
+                            content: entry,
+                        } -%}
+
+                    {%- case "blog" -%}
+
+                        {%- include '_organisms/entry-types/entry--blog' ignore missing with {
+                            content: entry,
+                        } -%}
+
+                    {%- case "projects" -%}
+
+                        {%- include '_organisms/entry-types/entry--project' ignore missing with {
+                            content: entry,
+                        } -%}
+
+                    {%- case "services" -%}
+
+                        {%- include '_organisms/entry-types/entry--service' ignore missing with {
+                            content: entry,
+                        } -%}
+
+                    {%- case "teamMember" -%}
+
+                        {%- include '_organisms/entry-types/entry--member' ignore missing with {
+                            content: entry,
+                        } -%}
+
+                    {%- case "vacanciesPage" -%}
+
+                        {%- include '_organisms/entry-types/page--vacancies' ignore missing with {
+                            content: entry,
+                        } -%}
+
+            {%- endswitch -%}
+
+        {% endif %}
+
+{% endblock %}
+
+{# -- Any JavaScript that should be included before </body> -- #}
+{% block bodyJs %}
+    {{ parent() }}
+{% endblock bodyJs %}

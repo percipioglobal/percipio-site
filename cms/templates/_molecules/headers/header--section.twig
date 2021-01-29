@@ -1,22 +1,37 @@
-{% import '_macros/atoms' as atom %}
+{% import '_macros/atoms' as render %}
+
+{%- set utilities = utilities ??? '' -%}
 
 {%- minify -%}
-    <section class="section--header w-full relative mt-16 mb-16 lg:mb-32 {{ content.options.hasDash ? 'dash-holder' : '' -}}">
-        <h5 class="text-xs font-bold uppercase tracking-wide leading-normal  mb-4">
-            {% if content.options.hasDash %}
-            <hr class="dash">
-            {% endif %}
-            {{- atom.title(content.title) -}}
-        </h5>
-        {% if content.subtitle | length %}
-        <h2 class="font-medium max-w-md leading-loose max-w-md">
-            {{- atom.title(content.subtitle) -}}
-        </h2>
-        {% endif %}
-        {% if content.button is defined %}
-            {% if content.button.target is not null %}
-            {{- atom.button( { url: content.button.target }, content.button.title, content.button.style, content.button.icon) -}}
-            {% endif %}
-        {% endif %}
-    </section>
+
+    <div class="my-16">
+
+        {# TODO set maxwidth breakpoints #}
+        <div class="container mx-auto max-w-screen-lg {{ utilities -}}">
+            <div class="leading-none">
+
+                {{- render.atom('text', 'overline', {
+                        content: content.overline,
+                        utilities: 'text-' ~ swatch.primary ~ ' mb-4',
+                    })
+                -}}
+                
+                <h2 class="font-primary text-5xl font-bold mb-8">
+                    {{- render.atom('text', 'title', { content: content.heading }) -}}
+                </h2>
+
+                {% if content.button and content.button.getUrl() %}
+
+                    {{- render.atom('button', 'primary', {
+                        url: content.button.getUrl(),
+                        text: content.button.getText(),
+                        swatch: swatch
+                    }) -}}
+
+                {% endif %}
+            </div>
+
+        </div>
+
+    </div>
 {%- endminify -%}

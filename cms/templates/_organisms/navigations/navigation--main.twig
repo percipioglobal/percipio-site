@@ -1,0 +1,14 @@
+{# TODO: Need to parse colours #}
+{% import '_macros/atoms' as render %}
+<navigation--main {{ swatch.primary ? 'color=' ~ swatch.primary : '' -}}>
+    {{- render.atom('link', 'home', { 
+    
+        url: baseUrl,
+        title: branding.organisationName,
+        logo: branding.icon[0].extension == 'svg' ? branding.icon[0] : null ??? null,
+        utilities: 'w-16 h-16',
+        placeholder: placeholder,
+        swatch: swatch,
+
+    }) -}}
+</navigation--main>

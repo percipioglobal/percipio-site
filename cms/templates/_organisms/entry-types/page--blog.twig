@@ -1,0 +1,11 @@
+<div id="content">
+	{%- include '_organisms/builders/hero--builder' with {
+        content: entry,
+    } -%}
+
+    <div class="mb-24 -mt-24 md:-mt-32 container mx-auto px-8 xxl:px-0 max-w-screen-lg">
+        {%- include '_organisms/cards/cards--blog' ignore missing with {
+            content: entry,
+        } -%}
+    </div>
+</div>

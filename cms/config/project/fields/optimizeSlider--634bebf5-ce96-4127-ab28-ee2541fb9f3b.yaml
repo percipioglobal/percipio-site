@@ -1,0 +1,116 @@
+contentColumnType: text
+fieldGroup: 1dd95078-7c8a-4ef7-8a16-e33a5341dadb
+handle: optimizeSlider
+instructions: ''
+name: 'Optimize Slider Images'
+searchable: false
+settings:
+  displayDominantColorPalette: '1'
+  displayLazyLoadPlaceholderImages: '1'
+  displayOptimizedImageVariants: '1'
+  variants:
+    -
+      __assoc__:
+        -
+          - aspectRatioX
+          - '8'
+        -
+          - aspectRatioY
+          - '5'
+        -
+          - format
+          - jpg
+        -
+          - quality
+          - '82'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - width
+          - '1200'
+    -
+      __assoc__:
+        -
+          - aspectRatioX
+          - '8'
+        -
+          - aspectRatioY
+          - '5'
+        -
+          - format
+          - jpg
+        -
+          - quality
+          - '82'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - width
+          - '992'
+    -
+      __assoc__:
+        -
+          - aspectRatioX
+          - '8'
+        -
+          - aspectRatioY
+          - '5'
+        -
+          - format
+          - jpg
+        -
+          - quality
+          - '60'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+            - '3'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - width
+          - '768'
+    -
+      __assoc__:
+        -
+          - aspectRatioX
+          - '8'
+        -
+          - aspectRatioY
+          - '5'
+        -
+          - format
+          - jpg
+        -
+          - quality
+          - '60'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+            - '3'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - width
+          - '576'
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\imageoptimize\fields\OptimizedImages

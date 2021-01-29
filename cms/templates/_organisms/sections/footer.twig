@@ -1,3 +1,38 @@
-<footer>
-    <h2>footer</h2>
+{% import '_macros/atoms' as render %}
+
+<footer class="w-full bg-white-100">
+
+    {% include "_molecules/footers/footer--cta" %}
+
+	<div class="relative border-t border-gray-400">
+		<div class="footer-hexagon absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-400">
+			<svg class="stroke-current" width="65" height="74" viewbox="0 0 65 74">
+				<path d="M34.385,1.26l27.21,15.709a5.292,5.292,0,0,1,2.392,4.143V52.531a5.291,5.291,0,0,1-2.392,4.142L34.384,72.383a5.289,5.289,0,0,1-4.783,0L2.392,56.674A5.291,5.291,0,0,1,0,52.531V21.112A5.292,5.292,0,0,1,2.392,16.97L29.6,1.261A5.29,5.29,0,0,1,34.385,1.26Z" transform="translate(0.5 -0.065)" fill="#fff" stroke="currentColor" stroke-width="1"/>
+			</svg>
+		</div>
+		<div class="text-center font-mono text-sm pt-16 text-pink-600">
+			{%- set text = "made with ♥ by Percipio"|raw %}
+			{{- render.atom('text', 'title', { content: text }) -}}
+		</div>
+	</div>
+
+    <div class="container mx-auto px-8 xxl:px-0 max-w-screen-lg pt-10 pb-8 md:pb-12 md:pt-16">
+	    {% include "_organisms/grids/grid--footer" with { spacing: 4 } %}
+    </div>
+
+	<div class="border-t border-gray-400 text-gray-600 text-xs font-mono flex flex-col md:flex-row md:items-center md:justify-between mx-auto px-4 py-6 lg:py-8">
+        {% include "_organisms/navigations/navigation--social" with {
+            utilities: 'mb-4 md:mb-0 md:mx-4 lg:mx-12 order-1 md:order-3 flex flex-1 justify-center md:justify-end space-x-6 md:space-x-2',
+            wrapperUtilities: 'text-center md:text-right',
+            linkUtilities: 'text-gray-700 hover:text-gray-500'
+        } %}
+
+		{% include "_organisms/navigations/navigation--legal" with {styling: 'mb-3 md:mb-0 md:mx-4 lg:mx-12 text-md text-center flex flex-1 justify-center space-x-6 leading-6 order-1 md:order-2' } %}
+
+		<div class="text-md text-center md:text-left md:mx-4 lg:mx-12 flex flex-1 justify-center md:justify-start space-x-6 leading-6 order-3 md:order-1">
+			<p>&copy;
+				{{now|date('Y')}}. Percipio is a Trademark of Percipio Global Ltd</p>
+		</div>
+	</div>
+
 </footer>

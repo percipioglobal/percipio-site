@@ -1,0 +1,82 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  90e11fff-ed8c-4be8-946c-ef601288ca9b:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4a86f07d-200e-4dbc-a06a-223d9cc5c049
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: beef2807-f960-414c-9ff2-690d9c30b6a8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  4a86f07d-200e-4dbc-a06a-223d9cc5c049:
+    contentColumnType: string
+    fieldGroup: null
+    handle: images
+    instructions: 'Select images that you want to display as a grid on the page, maximum 8 images allowed.'
+    name: Images
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSubpath: ''
+      limit: '8'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Add images'
+      showSiteMenu: true
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  beef2807-f960-414c-9ff2-690d9c30b6a8:
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: 'Enter an original caption for the image gallery'
+    name: Caption
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: galleryImages
+name: 'Image Gallery'
+sortOrder: 7
