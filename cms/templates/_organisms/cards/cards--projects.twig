@@ -8,7 +8,7 @@
     .all() -%}
 
 {%- minify -%}
-<div class="{{- spacings ? 'my-12 md:my-24' : '' -}}">
+<div class="{{- spacings ? 'my-12 md:my-24' : '' }} w-full">
     <div class="grid grid-cols-8 gap-{{- spacings -}}">
         {%- for card in projects -%}
             {%- include '_molecules/cards/card--project' ignore missing with {
