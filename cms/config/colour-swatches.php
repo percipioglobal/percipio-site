@@ -113,6 +113,20 @@ return [
                 ]
             ],
             [
+                'label'   => 'redblue',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#1c64f2',  // the colour shown in the fieldtype (required)
+                        'class'     => 'blue-600', // custom attribute
+                    ],
+                    [
+                        'color'     => '#D61F69',  // the colour shown in the fieldtype (required)
+                        'class'     => 'pink-600', // custom attribute
+                    ],
+                ]
+            ],
+            [
                 'label'   => 'blue',
                 'default' => false,
                 'color'   =>  [

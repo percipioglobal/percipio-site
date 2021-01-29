@@ -14,6 +14,8 @@ module.exports = {
             safelist: [
                 /pink-600$/,
                 /pink-800$/,
+                /yellow-300$/,
+                /red-500$/,
                 /red-600$/,
                 /red-800$/,
                 /orange-500$/,
