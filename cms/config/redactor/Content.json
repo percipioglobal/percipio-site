@@ -3,9 +3,11 @@
     "formatting",
     "bold",
     "italic",
-    "unorderedlist",
-    "orderedlist",
-    "link"
+    "lists",
+    "sup",
+    "sub",
+    "link",
+    "html"
     ],
     "formatting": [
     "p",
@@ -14,6 +16,7 @@
     "h5",
     "h6"
     ],
+    "plugins": ["counter"],
     "toolbarFixed": true,
     "pastePlainText": true,
     "pasteImages": false
