@@ -1,7 +1,7 @@
 context: global
 field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
 fieldLayout:
-  5d4e4683-abc6-4901-afb2-01a31c2cf6fc:
+  0bd91a17-b598-4d87-9dce-02eabd2e8e95:
     tabs:
       -
         elements:
@@ -28,15 +28,6 @@ fieldLayout:
             warning: null
             width: 100
           -
-            fieldUid: b9a667dd-8941-472a-89b5-e3d1fe877aec
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
             fieldUid: 69564637-9091-434c-aa5c-50eef46f8c93
             instructions: null
             label: null
@@ -45,7 +36,16 @@ fieldLayout:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Settings
+          -
+            fieldUid: b9a667dd-8941-472a-89b5-e3d1fe877aec
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Grid Settings'
         sortOrder: 2
 groupName: Content
 groupSortOrder: 1

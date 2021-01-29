@@ -42,10 +42,12 @@
 
             {%- case "sectionHeader" -%}
 
-                {%- include '_molecules/headers/header--section' ignore missing with {
-                    content: block,
-                    type: 'normal',
-                } -%}
+                <div class="container mx-auto px-8 xxl:px-0 max-w-screen-lg">
+                    {%- include '_molecules/headers/header--section' ignore missing with {
+                        content: block,
+                        type: 'normal',
+                    } -%}
+                </div>
 
             {%- case "singleImage" -%}
 
@@ -67,9 +69,11 @@
 
             {%- case "galleryImages" -%}
 
-                {%- include '_molecules/images/image--gallery' ignore missing with {
-                    content: block,
-                } -%}
+                <div class="container mx-auto px-8 xxl:px-0 max-w-screen-lg">
+                    {%- include '_molecules/images/image--gallery' ignore missing with {
+                        content: block,
+                    } -%}
+                </div>
 
             {%- case "projectHighlightCards" -%}
 
@@ -86,6 +90,12 @@
             {%- case "serviceHighlightCards" -%}
 
                 {%- include '_organisms/cards/cards--service' ignore missing with {
+                    content: block,
+                } -%}
+
+            {%- case "spotlightCards" -%}
+
+                {%- include '_organisms/cards/cards--spotlight' ignore missing with {
                     content: block,
                 } -%}
 

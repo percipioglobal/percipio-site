@@ -1,6 +1,9 @@
+{%- set limit = limit ??? null -%}
+
 {%- set services = craft.entries.section('services')
     .with(['teaserImage'])
     .orderBy('title asc')
+    .limit(limit)
     .all() -%}
 
 <section class="my-16">
