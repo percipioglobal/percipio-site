@@ -46,6 +46,29 @@ module.exports = {
                         },
                     },
                 },
+                'white': {
+                    css: {
+                        h1: {
+                            color: theme('colors.white.100')
+                        },
+                        h2: {
+                            color: theme('colors.white.100')
+                        },
+                        h3: {
+                            color: theme('colors.white.100')
+                        },
+                        h4: {
+                            color: theme('colors.white.100')
+                        },
+                        h5: {
+                            color: theme('colors.white.100')
+                        },
+                        h6: {
+                            color: theme('colors.white.100')
+                        },
+                        color: theme('colors.white.100')
+                    }
+                },
                 '3xl': {
                     css: {
                         fontSize: theme('fontSize.3xl'),
