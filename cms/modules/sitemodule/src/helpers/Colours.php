@@ -22,12 +22,17 @@ class Colours extends \Twig\Extension\AbstractExtension
     public function swatch($swatch)
     {
         $swatches = [
+            'label' => 'default',
             'primary' => 'blue-600',
             'secondary' => 'blue-800',
         ];
 
         if(empty($swatch)){
             return $swatches;
+        }
+
+        if(property_exists($swatch, "label")){
+            $swatches["label"] = $swatch->label;
         }
 
         if(property_exists($swatch, "color") && gettype($swatch->color) !== 'string' ){

@@ -51,7 +51,8 @@
                     url: '/',
                     text: 'Visit our homepage',
                     swatch: swatch,
-                    utilities: 'mr-4 mb-4'
+                    utilities: 'mr-4 mb-4',
+                    inverted: true,
                 }) -}}
 
                 {%- set articlesUrl = craft.entries.section('pages').type('blogPage').one().url ??? "/"-%}
@@ -59,7 +60,8 @@
                     url: articlesUrl,
                     text: 'Read our articles',
                     swatch: swatch,
-                    utilities: 'mb-4'
+                    utilities: 'mb-4',
+                    fill: true,
                 }) -}}
             </div>
         </div>

@@ -1,5 +1,7 @@
 {% import '_macros/atoms' as render %}
 
+{%- include '_molecules/footers/footer--clients' %}
+
 <footer class="w-full bg-white-100">
 
     {% include "_molecules/footers/footer--cta" %}
@@ -17,7 +19,7 @@
 	</div>
 
     <div class="container mx-auto px-8 xxl:px-0 max-w-screen-lg pt-10 pb-8 md:pb-12 md:pt-16">
-	    {% include "_organisms/grids/grid--footer" with { spacing: 4 } %}
+		{% include "_organisms/grids/grid--footer" with { spacing: 4 } %}
     </div>
 
 	<div class="border-t border-gray-400 text-gray-600 text-xs font-mono flex flex-col md:flex-row md:items-center md:justify-between mx-auto px-4 py-6 lg:py-8">
