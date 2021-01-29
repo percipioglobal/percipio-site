@@ -40,6 +40,24 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: f86e951a-5dea-4768-b733-ae5506291930
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ce64c3ac-ec79-4405-98a9-aea16011e258
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -207,6 +225,56 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  ce64c3ac-ec79-4405-98a9-aea16011e258:
+    contentColumnType: string
+    fieldGroup: null
+    handle: width
+    instructions: ''
+    name: Width
+    searchable: false
+    settings:
+      default: 1/2
+      options:
+        __assoc__:
+          -
+            - 1/6
+            - ''
+          -
+            - 1/5
+            - ''
+          -
+            - 1/4
+            - ''
+          -
+            - 1/3
+            - ''
+          -
+            - 2/5
+            - ''
+          -
+            - 1/2
+            - '1'
+          -
+            - 3/5
+            - ''
+          -
+            - 2/3
+            - ''
+          -
+            - 3/4
+            - ''
+          -
+            - 4/5
+            - ''
+          -
+            - 5/6
+            - ''
+          -
+            - full
+            - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\widthfieldtype\fields\Width
   d7413814-0c30-451d-a383-d39d7cc3f78b:
     contentColumnType: string
     fieldGroup: null
@@ -239,6 +307,20 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: rias\positionfieldtype\fields\Position
+  f86e951a-5dea-4768-b733-ae5506291930:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: containerise
+    instructions: ''
+    name: Containerise
+    searchable: false
+    settings:
+      default: true
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
 handle: singleImage
 name: Image
 sortOrder: 3

@@ -1,0 +1,15 @@
+{% import '_macros/atoms' as render %}
+
+{%- minify -%}
+
+        {# TODO: Add Spacing Class? - Dropdown in Settings #}
+
+        {% set blockSwatch = swatch(content.swatch) %}
+
+        <div class="w-full lg:w-{{- content.width }} bg-{{- blockSwatch.primary -}}">
+            <div class="prose {{ prose ? prose : '' }} text-white-100">
+                {{- render.atom('text', 'content', { content: content.article }) -}}
+            </div>
+        </div>
+
+{%- endminify -%}

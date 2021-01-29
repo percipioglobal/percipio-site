@@ -1,0 +1,21 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- minify -%}
+
+    <div class="w-full lg:w-{{- content.width -}}">
+
+        {{- render.atom('image', 'article', {
+                image: content.image[0],
+                alt: content.image[0].title,
+                ratio: content.ratio,
+                caption: content.caption ?? content.image[0].caption,
+                author: content.image[0].author ?? "",
+                source: content.image[0].source ?? "",
+                placeholders: placeholders,
+                swatch: swatch,
+            })
+        -}}
+
+    </div>
+
+{%- endminify -%}
