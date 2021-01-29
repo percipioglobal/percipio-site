@@ -40,7 +40,7 @@ fields:
                 -
                   - width
                   - ''
-      contentTable: '{{%stc_41_slides}}'
+      contentTable: '{{%stc_47_slides}}'
       fieldLayout: matrix
       maxRows: '9'
       minRows: '2'

@@ -27,7 +27,10 @@
                         text: content.button.getText(),
                         swatch: swatch
                     }) -}}
+                {% else %}
 
+                    <hr class="h-1 w-32 bg-{{- swatch.primary -}}">
+                    
                 {% endif %}
             </div>
 
