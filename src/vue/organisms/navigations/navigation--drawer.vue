@@ -6,16 +6,13 @@
             ]"
     >
 
-        <div class="container mx-auto flex justify-end h-full">
+        <div class="h-full">
 
-            <div class="h-full p-16">
+            <div class="w-full h-full py-16 flex flex-col items-end">
                 <!-- main navigation links -->
 
                 <div
-                    :class="[
-                        'space-y-4 pb-12',
-                        getSocialMediaLinks.socialMedia ? 'border-b border-gray-800 mb-12' : ''
-                    ]"
+                    class="space-y-4 pb-12 w-full"
                     v-if="getNavigationPrimary"
                 >
 
@@ -23,7 +20,7 @@
                         v-for="item in getNavigationPrimary"
                         :key="item.id"
                         :href="item.url"
-                        class="block capitalize text-4xl font-bold hover:underline pr-16"
+                        class="block container mx-auto text-right capitalize text-4xl font-bold hover:underline pr-16"
                         :title="item.title"
                     >
                         {{ item.title }}
@@ -31,15 +28,21 @@
 
                 </div>
 
+                <div class="container mx-auto flex justify-end">
+
+                    <hr class="h-px bg-gray-800 mb-12 w-96" v-if="getSocialMediaLinks">
+
+                </div>
+
                 <!-- social media links -->
 
-                <div class="space-y-2" v-if="getSocialMediaLinks">
+                <div class="space-y-2 container mx-auto" v-if="getSocialMediaLinks">
 
                     <a
                         v-for="social in getSocialMediaLinks.socialMedia"
                         :key="social.id"
                         :href="social.socialMediaUrl.url"
-                        class="block capitalize text-lg font-bold hover:underline pr-16"
+                        class="block capitalize text-lg font-bold hover:underline pr-16 text-right"
                         :title="social.socialMediaType"
                         target="_blank"
                         rel="noopener"
