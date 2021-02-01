@@ -4,6 +4,7 @@
 {# -- Register our Service Worker -- #}
 {% if not craft.app.config.general.devMode %}
     {% include "_boilerplate/_partials/register-service-worker.twig" %}
+    {# {% include "_boilerplate/_partials/google-analytics.twig" %} #}
 {% endif %}
 
 {# -- Handle tabs gracefully as per https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2 -- #}
@@ -11,5 +12,5 @@
 
 {# -- Tiny Cookie JavaScript -- #}
 <script>
-    {{ source("_inline-js/tiny-cookie.min.js") }}
+    {# {{ source("_inline-js/tiny-cookie.min.js") }} #}
 </script>
