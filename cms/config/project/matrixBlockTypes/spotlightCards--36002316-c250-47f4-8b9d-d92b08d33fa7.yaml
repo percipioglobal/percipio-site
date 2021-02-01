@@ -93,4 +93,4 @@ fields:
     type: craft\fields\Number
 handle: spotlightCards
 name: 'Spotlight Cards'
-sortOrder: 9
+sortOrder: 10
