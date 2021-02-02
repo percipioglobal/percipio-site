@@ -10,8 +10,8 @@
     svg: options.svg ??? options.placeholders.brandingPlaceholder[0],
     type: options.type ??? "logo",
     url: options.url ??? alias('@web') ~ '/',
-    title: options.title ??? "",
-    style: options.styling ??? "",
+    title: options.title ?? '',
+    style: options.utilities ?? '',
 } %}
 
 {# Render Logo #}

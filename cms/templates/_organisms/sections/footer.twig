@@ -18,7 +18,7 @@
 		</div>
 	</div>
 
-    <div class="container mx-auto px-8 xxl:px-0 max-w-screen-lg pt-10 pb-8 md:pb-12 md:pt-16">
+    <div class="container mx-auto max-w-screen-lg pt-10 pb-8 md:pb-12 md:pt-16">
 		{% include "_organisms/grids/grid--footer" with { spacing: 4 } %}
     </div>
 
@@ -29,11 +29,11 @@
             linkUtilities: 'text-gray-700 hover:text-gray-500'
         } %}
 
-		{% include "_organisms/navigations/navigation--legal" with {styling: 'mb-3 md:mb-0 md:mx-4 lg:mx-12 text-md text-center flex flex-1 justify-center space-x-6 leading-6 order-1 md:order-2' } %}
+		{% include "_organisms/navigations/navigation--legal" with { utilities: 'mb-3 md:mb-0 md:mx-4 lg:mx-12 text-md text-center flex flex-1 justify-center space-x-6 leading-6 order-1 md:order-2' } %}
 
 		<div class="text-md text-center md:text-left md:mx-4 lg:mx-12 flex flex-1 justify-center md:justify-start space-x-6 leading-6 order-3 md:order-1">
 			<p>&copy;
-				{{now|date('Y')}}. Percipio is a Trademark of Percipio Global Ltd</p>
+				{{ now|date('Y') }}. Percipio is a Trademark of Percipio Global Ltd</p>
 		</div>
 	</div>
 

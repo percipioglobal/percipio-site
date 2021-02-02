@@ -4,19 +4,20 @@
     'contentBuilder.highlightCards:cards.client',
     'contentBuilder.highlightCards:cards.blogCategories',
     'contentBuilder.highlightCards:cards.authors',
+    'contentBuilder.highlightCards:cards.projectCategories',
+    'contentBuilder.highlightCards:cards.teaserImage',
     'contentBuilder.contentGrid:items',
     'contentBuilder.sectionHeader:buttons',
     'contentBuilder.singleImage:image',
     'contentBuilder.galleryImages:images',
     'contentBuilder.slide:image',
     'contentBuilder.resourceList:resources',
+    'contentBuilder.resourceList:resources.target',
     'contentBuilder.media',
     'contentBuilder.media:embed',
     'author.profilePhoto',
     ])
 %}
-
-<div class="container mx-auto px-8 xxl:px-0 max-w-screen-lg">
 
     {%- minify -%}
         {%- for block in content.contentBuilder -%}
@@ -86,12 +87,6 @@
                         content: block,
                     } -%}
 
-                {%- case "video" -%}
-
-                    {%- include '_molecules/videos/video--single' ignore missing with {
-                        content: block,
-                    } -%}
-
                 {%- case "media" -%}
 
                     {%- include '_molecules/media/media--embed' ignore missing with {
@@ -102,5 +97,3 @@
 
         {%- endfor -%}
     {%- endminify -%}
-
-</div>
