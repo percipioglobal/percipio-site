@@ -58,9 +58,59 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: bae060ba-ddb9-4f66-8df8-9055de4e31e5
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 24fd51e7-3c4a-4991-89c1-290d5c79408c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
+  24fd51e7-3c4a-4991-89c1-290d5c79408c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: position
+    instructions: ''
+    name: 'Logo Position'
+    searchable: false
+    settings:
+      default: left
+      options:
+        __assoc__:
+          -
+            - left
+            - '1'
+          -
+            - center
+            - ''
+          -
+            - right
+            - '1'
+          -
+            - full
+            - ''
+          -
+            - drop-left
+            - '1'
+          -
+            - drop-right
+            - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\positionfieldtype\fields\Position
   4be4bd14-ce94-450b-a4f4-e10721ba5b22:
     contentColumnType: boolean
     fieldGroup: null
@@ -244,6 +294,20 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
+  bae060ba-ddb9-4f66-8df8-9055de4e31e5:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: showLogo
+    instructions: ''
+    name: 'Show Logo'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
   e4fa92d0-02c7-4c27-9eb2-782fb6603654:
     contentColumnType: string
     fieldGroup: null
@@ -321,7 +385,6 @@ fields:
     name: Swatch
     searchable: false
     settings:
-      options: ''
       palette: Percipio
       useConfigFile: '1'
     translationKeyFormat: null
