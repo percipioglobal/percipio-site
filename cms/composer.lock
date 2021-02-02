@@ -67,16 +67,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.172.3",
+            "version": "3.172.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "14fd73f12fc70d5f48e034f5dfc33136136adb61"
+                "reference": "506e60798bb7d13bdafadce9727ab9cc9ac987b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/14fd73f12fc70d5f48e034f5dfc33136136adb61",
-                "reference": "14fd73f12fc70d5f48e034f5dfc33136136adb61",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/506e60798bb7d13bdafadce9727ab9cc9ac987b0",
+                "reference": "506e60798bb7d13bdafadce9727ab9cc9ac987b0",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.172.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.172.4"
             },
-            "time": "2021-01-28T19:14:55+00:00"
+            "time": "2021-01-29T19:17:51+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -740,16 +740,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.6.1",
+            "version": "3.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "81cba0ca171cfad5996470dcd8ba6087b96a91bf"
+                "reference": "c2f628aba73d09b0b600e6566a7e91d65a52e713"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/81cba0ca171cfad5996470dcd8ba6087b96a91bf",
-                "reference": "81cba0ca171cfad5996470dcd8ba6087b96a91bf",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/c2f628aba73d09b0b600e6566a7e91d65a52e713",
+                "reference": "c2f628aba73d09b0b600e6566a7e91d65a52e713",
                 "shasum": ""
             },
             "require": {
@@ -781,7 +781,7 @@
                 "twig/twig": "~2.14.3",
                 "voku/portable-utf8": "^5.4.51",
                 "voku/stringy": "^6.4.0",
-                "webonyx/graphql-php": "^14.5.0",
+                "webonyx/graphql-php": "~14.4.1",
                 "yii2tech/ar-softdelete": "^1.0.4",
                 "yiisoft/yii2": "~2.0.40.0",
                 "yiisoft/yii2-debug": "^2.1.16",
@@ -839,7 +839,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2021-01-27T15:50:05+00:00"
+            "time": "2021-01-29T20:51:22+00:00"
         },
         {
             "name": "craftcms/mailgun",
@@ -4483,16 +4483,16 @@
         },
         {
             "name": "php-http/message",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/message.git",
-                "reference": "39db36d5972e9e6d00ea852b650953f928d8f10d"
+                "reference": "fb0dbce7355cad4f4f6a225f537c34d013571f29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/message/zipball/39db36d5972e9e6d00ea852b650953f928d8f10d",
-                "reference": "39db36d5972e9e6d00ea852b650953f928d8f10d",
+                "url": "https://api.github.com/repos/php-http/message/zipball/fb0dbce7355cad4f4f6a225f537c34d013571f29",
+                "reference": "fb0dbce7355cad4f4f6a225f537c34d013571f29",
                 "shasum": ""
             },
             "require": {
@@ -4508,15 +4508,15 @@
                 "ergebnis/composer-normalize": "^2.6",
                 "ext-zlib": "*",
                 "guzzlehttp/psr7": "^1.0",
+                "laminas/laminas-diactoros": "^2.0",
                 "phpspec/phpspec": "^5.1 || ^6.3",
-                "slim/slim": "^3.0",
-                "zendframework/zend-diactoros": "^1.0"
+                "slim/slim": "^3.0"
             },
             "suggest": {
                 "ext-zlib": "Used with compressor/decompressor streams",
                 "guzzlehttp/psr7": "Used with Guzzle PSR-7 Factories",
-                "slim/slim": "Used with Slim Framework PSR-7 implementation",
-                "zendframework/zend-diactoros": "Used with Diactoros Factories"
+                "laminas/laminas-diactoros": "Used with Diactoros Factories",
+                "slim/slim": "Used with Slim Framework PSR-7 implementation"
             },
             "type": "library",
             "extra": {
@@ -4551,9 +4551,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/message/issues",
-                "source": "https://github.com/php-http/message/tree/1.10.0"
+                "source": "https://github.com/php-http/message/tree/1.11.0"
             },
-            "time": "2020-11-11T10:19:56+00:00"
+            "time": "2021-02-01T08:54:58+00:00"
         },
         {
             "name": "php-http/message-factory",
@@ -5511,22 +5511,22 @@
         },
         {
             "name": "sebastianlenz/linkfield",
-            "version": "2.0.0-beta.11",
+            "version": "2.0.0-beta.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastian-lenz/craft-linkfield.git",
-                "reference": "5f2ff82e93abcc735a7b04cc60bbf0650d1d6dcc"
+                "reference": "4651157269ecae048e2d67107c0e74983ea9a02d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastian-lenz/craft-linkfield/zipball/5f2ff82e93abcc735a7b04cc60bbf0650d1d6dcc",
-                "reference": "5f2ff82e93abcc735a7b04cc60bbf0650d1d6dcc",
+                "url": "https://api.github.com/repos/sebastian-lenz/craft-linkfield/zipball/4651157269ecae048e2d67107c0e74983ea9a02d",
+                "reference": "4651157269ecae048e2d67107c0e74983ea9a02d",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.3.3",
                 "php": "^7.0",
-                "sebastianlenz/craft-utils": "^2.2.10"
+                "sebastianlenz/craft-utils": "^2.2.11"
             },
             "require-dev": {
                 "phpunit/phpunit": "^7.5",
@@ -5554,9 +5554,9 @@
             "description": "A Craft field type for selecting links",
             "support": {
                 "issues": "https://github.com/sebastian-lenz/craft-linkfield/issues",
-                "source": "https://github.com/sebastian-lenz/craft-linkfield/tree/2.0.0-beta.11"
+                "source": "https://github.com/sebastian-lenz/craft-linkfield/tree/2.0.0-beta.12"
             },
-            "time": "2020-12-02T22:26:22+00:00"
+            "time": "2021-01-28T20:54:02+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -8448,16 +8448,16 @@
         },
         {
             "name": "voku/arrayy",
-            "version": "7.8.5",
+            "version": "7.8.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/Arrayy.git",
-                "reference": "eacd7fa54f8584ffe919a12d11093b0516081ecf"
+                "reference": "f1e733a9ff28976895f2940d644e518dbe0852f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/Arrayy/zipball/eacd7fa54f8584ffe919a12d11093b0516081ecf",
-                "reference": "eacd7fa54f8584ffe919a12d11093b0516081ecf",
+                "url": "https://api.github.com/repos/voku/Arrayy/zipball/f1e733a9ff28976895f2940d644e518dbe0852f9",
+                "reference": "f1e733a9ff28976895f2940d644e518dbe0852f9",
                 "shasum": ""
             },
             "require": {
@@ -8527,7 +8527,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-02T22:37:00+00:00"
+            "time": "2021-01-30T06:31:33+00:00"
         },
         {
             "name": "voku/email-check",
@@ -9092,16 +9092,16 @@
         },
         {
             "name": "webonyx/graphql-php",
-            "version": "v14.5.0",
+            "version": "v14.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webonyx/graphql-php.git",
-                "reference": "115a20e419439a27092788cdf36f1ac5f0fa429b"
+                "reference": "769a47401f8cbc5f357ea4d05e0191e35a011b0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/115a20e419439a27092788cdf36f1ac5f0fa429b",
-                "reference": "115a20e419439a27092788cdf36f1ac5f0fa429b",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/769a47401f8cbc5f357ea4d05e0191e35a011b0f",
+                "reference": "769a47401f8cbc5f357ea4d05e0191e35a011b0f",
                 "shasum": ""
             },
             "require": {
@@ -9146,7 +9146,7 @@
             ],
             "support": {
                 "issues": "https://github.com/webonyx/graphql-php/issues",
-                "source": "https://github.com/webonyx/graphql-php/tree/v14.5.0"
+                "source": "https://github.com/webonyx/graphql-php/tree/v14.4.1"
             },
             "funding": [
                 {
@@ -9154,7 +9154,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2021-01-23T12:52:35+00:00"
+            "time": "2021-01-23T09:55:10+00:00"
         },
         {
             "name": "yii2tech/ar-softdelete",

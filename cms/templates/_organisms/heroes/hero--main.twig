@@ -1,16 +1,17 @@
-{%- import '_macros/atoms' as render -%}
-{%- import '_macros/functions' as functions -%}
-
-{%- set heroImage = content.heroImage|length ? content.heroImage[0] : null -%}
-
 {%- minify -%}
-	{% if content.heroImage|length > 0 %}
+
+	{% if content.heroImage %}
+
 		{%- include '_organisms/heroes/hero--main-image' ignore missing with {
 			content: content,
 		} -%}
+
 	{% else %}
+
 		{%- include '_organisms/heroes/hero--main-text' ignore missing with {
 			content: content,
 		} -%}
+
 	{% endif %}
+	
 {%- endminify -%}
