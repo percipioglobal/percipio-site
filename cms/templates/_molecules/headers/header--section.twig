@@ -4,42 +4,38 @@
 
 {%- minify -%}
 
-    <div class="container mx-auto max-w-screen-lg">
+    <div class="my-16">
 
-        <div class="my-16">
+        {# TODO set maxwidth breakpoints #}
+        <div class="container mx-auto max-w-screen-lg {{ utilities -}}">
+            <div class="leading-none">
 
-            {# TODO set maxwidth breakpoints #}
-            <div class="container mx-auto max-w-screen-lg {{ utilities -}}">
-                <div class="leading-none">
+                {{- render.atom('text', 'overline', {
+                        content: content.overline,
+                        utilities: 'text-' ~ swatch.primary ~ ' mb-4 font-mono',
+                    })
+                -}}
+                
+                <h2 class="font-primary text-5xl font-bold mb-8">
+                    {{- render.atom('text', 'title', { content: content.heading }) -}}
+                </h2>
 
-                    {{- render.atom('text', 'overline', {
-                            content: content.overline,
-                            utilities: 'text-' ~ swatch.primary ~ ' mb-4 font-mono',
-                        })
-                    -}}
-                    
-                    <h2 class="font-primary text-5xl font-bold mb-8">
-                        {{- render.atom('text', 'title', { content: content.heading }) -}}
-                    </h2>
+                {% if content.button and content.button.getUrl() %}
 
-                    {% if content.button and content.button.getUrl() %}
+                    {{- render.atom('button', 'primary', {
+                        url: content.button.getUrl(),
+                        text: content.button.getText(),
+                        swatch: swatch
+                    }) -}}
+                {% else %}
 
-                        {{- render.atom('button', 'primary', {
-                            url: content.button.getUrl(),
-                            text: content.button.getText(),
-                            swatch: swatch
-                        }) -}}
-                    {% else %}
-
-                        <hr class="h-1 w-32 bg-{{- swatch.primary -}}">
+                    <hr class="h-1 w-32 bg-{{- swatch.primary -}}">
                         
-                    {% endif %}
-                </div>
-
+                {% endif %}
             </div>
 
         </div>
 
     </div>
-    
+
 {%- endminify -%}
