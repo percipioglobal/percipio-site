@@ -318,7 +318,7 @@ module.exports = {
         borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
         inset: ['responsive'],
         scale: ['group-hover'],
-        opacity: ['group-hover'],
+        opacity: ['responsive', 'hover', 'focus', 'group-hover'],
         textColor: ['responsive', 'hover', 'focus', 'group-hover'],
         translate: ['responsive', 'hover', 'focus', 'group-hover'],
         zIndex: ['responsive'],
