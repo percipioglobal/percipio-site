@@ -55,14 +55,16 @@
                     inverted: true,
                 }) -}}
 
-                {%- set articlesUrl = craft.entries.section('pages').type('blogPage').one().url ??? "/"-%}
+                {%- set url = craft.entries.section('pages').type('blogPage').one().url -%}
+
                 {{- render.atom('button', 'primary', {
-                    url: articlesUrl,
+                    url: url,
                     text: 'Read our articles',
                     swatch: swatch,
                     utilities: 'mb-4',
                     fill: true,
                 }) -}}
+
             </div>
         </div>
         
