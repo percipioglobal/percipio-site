@@ -1,7 +1,7 @@
 context: global
 field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
 fieldLayout:
-  6c1d06d2-130a-4517-a9bd-55b19634f306:
+  93525a35-dc4a-4d5a-b18b-871aae7cdc9f:
     tabs:
       -
         elements:
@@ -65,6 +65,28 @@ fieldLayout:
             width: 100
         name: 'Grid Settings'
         sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: bae060ba-ddb9-4f66-8df8-9055de4e31e5
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 24fd51e7-3c4a-4991-89c1-290d5c79408c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Branding
+        sortOrder: 3
 groupName: Content
 groupSortOrder: 1
 matrixBlockType: 53319d58-a830-47a6-b6b4-47a0081f6deb

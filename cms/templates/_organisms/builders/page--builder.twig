@@ -13,6 +13,7 @@
     'pageBuilder.galleryImages:images',
     'pageBuilder.basicSlider:slides',
     'pageBuilder.basicSlider.slides:image',
+    'pageBuilder.grid:items',
     ])
 %}
 
@@ -60,12 +61,10 @@
 
             {%- case "sectionHeader" -%}
 
-                <div class="container mx-auto px-8 xxl:px-0 max-w-screen-lg">
-                    {%- include '_molecules/headers/header--section' ignore missing with {
-                        content: block,
-                        type: 'normal',
-                    } -%}
-                </div>
+                {%- include '_molecules/headers/header--section' ignore missing with {
+                    content: block,
+                    type: 'normal',
+                } -%}
 
             {%- case "singleImage" -%}
 
@@ -84,14 +83,17 @@
 
                 {%- endif -%}
 
-
             {%- case "galleryImages" -%}
 
-                <div class="container mx-auto px-8 xxl:px-0 max-w-screen-lg">
-                    {%- include '_molecules/images/image--gallery' ignore missing with {
-                        content: block,
-                    } -%}
-                </div>
+                {%- include '_molecules/images/image--gallery' ignore missing with {
+                    content: block,
+                } -%}
+
+            {%- case "grid" -%}
+
+                {%- include '_molecules/griditems/griditem--grid' ignore missing with {
+                    content: block,
+                } -%}
 
             {%- case "projectHighlightCards" -%}
 

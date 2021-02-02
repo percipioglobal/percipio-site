@@ -6,19 +6,45 @@
 
     <div class="relative w-full lg:min-h-3/4 flex items-center p-10 lg:px-20 lg:w-{{- content.width }} bg-{{- blockSwatch.primary -}}">
 
-        <!-- create logo option -->
-        <div class="absolute hidden lg:flex top-4 left-4 w-32 h-32 items-center justify-center">
-            {{- render.atom('link', 'home', { 
-        
-                url: baseUrl,
-                title: branding.organisationName,
-                logo: branding.icon[0].extension == 'svg' ? branding.icon[0] : null ??? null,
-                utilities: 'w-16 h-16',
-                placeholder: placeholder,
-                swatch: 'white',
-        
-            }) -}}
-        </div>
+        {% if content.showLogo %}
+
+            {% set position = null %}
+
+            {% switch content.position %}
+
+                {% case 'left' %}
+
+                    {% set position = 'top-10 left-10 lg:left-20' %}
+
+                {% case 'right' %}
+
+                    {% set position = 'top-10 right-10 lg:right-20' %}
+
+                {% case 'drop-left' %}
+
+                    {% set position = 'bottom-10 left-10 lg:left-20' %}
+
+                {% case 'drop-right' %}
+
+                    {% set position = 'bottom-10 right-10 lg:right-20' %}
+
+            {% endswitch %}
+
+            
+
+            <div class="absolute hidden lg:flex w-16 h-16 items-center justify-center {{ position -}}">
+                {{- render.atom('link', 'home', { 
+            
+                    url: baseUrl,
+                    title: branding.organisationName,
+                    logo: branding.icon[0].extension == 'svg' ? branding.icon[0] : null ??? null,
+                    utilities: 'w-16 h-16',
+                    placeholder: placeholder,
+                    swatch: 'white',
+            
+                }) -}}
+            </div>
+        {% endif %}
 
         {# border-l-2 border-t-2 border-{{- swatch.primary }} p-8 #}
         <blockquote {{ block.quoteSource.target ? 'cite="'~ block.quoteSource.target ~ '"' : '' }} class="mx-auto w-full whitespace-normal my-24 font-mono max-w-screen-md px-4 py-16">
