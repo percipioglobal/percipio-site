@@ -32,5 +32,5 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: callToActionDoormat
+handle: doormat
 name: 'Call To Action - Doormat'
