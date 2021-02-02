@@ -1,9 +1,9 @@
-{%- import '_macros/atoms' as render -%}
-
-{%- do craft.eagerBeaver.eagerLoadElements(entry, [
-        'heroImage'
+{% do craft.eagerBeaver.eagerLoadElements(entry, [
+    'metaImage',
     ])
--%}
+%}
+
+{%- import '_macros/atoms' as render -%}
 
 {%- include '_organisms/builders/hero--builder' with {
     content: entry,

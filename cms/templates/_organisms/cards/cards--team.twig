@@ -22,7 +22,7 @@
             {% endfor %}
 
             {% if showVacancies %}
-                {%- set vacancies = craft.entries.section('pages').type('vacanciesPage').with('teaserImage').one() -%}
+                {%- set vacancies = craft.entries.section('pages').type('vacanciesPage').with('metaImage', 'pageBuilder').one() -%}
 
                 {# TODO fetch all skills from all available vacancies #}
 

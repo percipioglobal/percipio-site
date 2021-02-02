@@ -1,3 +1,8 @@
+{% do craft.eagerBeaver.eagerLoadElements(entry, [
+    'metaImage',
+    ])
+%}
+
 {% import '_macros/atoms' as render %}
 
 <div id="content pb-12 md:pb-32">

@@ -3,7 +3,7 @@
 
 {%- set projects = craft.entries.section('work')
     .orderBy('postDate desc')
-    .with(['teaserImage','projectCategories','clients'])
+    .with(['teaserImage', 'projectCategories', 'clients'])
     .limit(limit)
     .all() -%}
 

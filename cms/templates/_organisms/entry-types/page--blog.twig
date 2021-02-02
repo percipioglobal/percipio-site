@@ -1,3 +1,8 @@
+{% do craft.eagerBeaver.eagerLoadElements(entry, [
+    'metaImage',
+    ])
+%}
+
 <div id="content">
 	{%- include '_organisms/builders/hero--builder' with {
         content: entry,
