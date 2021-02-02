@@ -1,8 +1,6 @@
 {%- import '_macros/atoms' as render -%}
 {%- import '_macros/functions' as functions -%}
 
-{%- set heroImage = content.heroImage|length ? content.heroImage[0] : null -%}
-
 {%- minify -%}
 <section class="relative w-full min-h-3/4 pt-32 flex items-center overflow-hidden">
 	<div class="container px-8 xxl:px-0 max-w-screen-lg mx-auto py-20">
@@ -40,7 +38,7 @@
 
 		<div class="absolute inset-0">
 			{{- render.atom('image', 'hero', {
-				image: heroImage,
+				image: content.heroImage[0] ??? null,
 				placeholders: placeholders,
 				ratio: 'isFilled'
 			}) -}}
