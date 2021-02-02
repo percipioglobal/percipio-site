@@ -6,7 +6,7 @@
             showNavigation === true ? 'top-0' : '-top-full'
         ]">
 
-            <div class="container mx-auto flex items-center py-3 px-8 xxl:px-0">
+            <div class="container mx-auto max-w-screen-2xl flex items-center py-3">
 
                 <slot></slot>
 

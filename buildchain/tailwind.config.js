@@ -34,6 +34,15 @@ module.exports = {
         }
     },
     theme: {
+
+        container: {
+            padding: {
+                DEFAULT: '1rem',
+                sm: '2rem',
+                '2xl': '0',
+            },
+        },
+
         extend: {
 
             typography: (theme) => ({
