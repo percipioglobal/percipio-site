@@ -81,6 +81,31 @@ module.exports = {
                 '2xl': '1536px',
             },
 
+            fontFamily: {
+                primary: [
+                    'Open Sans', 
+                    'ui-sans-serif', 
+                    'system-ui', 
+                    '-apple-system', 
+                    'Roboto', 
+                    'Helvetica Neue', 
+                    'Arial', 
+                    'Noto Sans', 
+                    'sans-serif',
+                ],
+                mono: [
+                    'Source Code Pro', 
+                    'ui-monospace', 
+                    'SFMono-Regular', 
+                    'Menlo', 
+                    'Monaco', 
+                    'Consolas', 
+                    'Liberation Mono', 
+                    'Courier New', 
+                    'monospace'
+                ]
+            },
+
             colors: {
 
                 transparent: 'transparent',
