@@ -64,5 +64,7 @@ settings:
   storageClass: ''
   subfolder: covers/
 sortOrder: 6
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL

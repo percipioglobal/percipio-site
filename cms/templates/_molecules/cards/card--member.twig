@@ -49,8 +49,14 @@
 
         </div>
 
-        <a href="{{- member.url -}}" class="absolute inset-0">
-            <span class="sr-only">Read more about {{- member.title -}}</span>
+        <a 
+            href="{{- content.url -}}" 
+            data-tag-category="card-member" 
+            data-tag-action="click" 
+            data-tag-label="{{- content.url -}}" 
+            class="absolute inset-0 z-1"
+        >
+            <span class="sr-only">Read more about {{- content.title -}}</span>
         </a>
 
     </div>

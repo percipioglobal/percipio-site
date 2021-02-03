@@ -15,6 +15,9 @@
     buttons: options.buttons ??? null,
     type: options.type ??? 'primary',
     utilities: options.utilities ??? null,
+    gaCategory: options.gaCategory ??? null,
+    gaAction: options.gaAction ??? null,
+    gaLabel: options.gaLabel ??? null,
 } %}
 
 {%- minify -%}
@@ -25,6 +28,9 @@
                 {{- render.atom('button', values.type, {
                     url: button.target.getUrl(),
                     text: button.target.getText(),
+                    gaCategory: values.gaCategory ??? null,
+                    gaAction: values.gaAction ??? null,
+                    gaLabel: values.gaLabel ??? button.target.getUrl(),
                 }) -}}
             {%- endfor -%}
         {%- endif -%}

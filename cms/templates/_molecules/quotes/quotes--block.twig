@@ -19,7 +19,15 @@
 
                 <footer class="mt-8">
                     {%- if block.quoteSource.getUrl() -%}
-                        <a href="{{- block.quoteSource.getUrl() -}}" class="text-{{- swatch.primary }} text-base hover:text-{{- swatch.secondary -}}">{{- block.quoteAuthor }} &mdash; {{ block.quoteSource.getText() -}}</a>
+                        <a 
+                            href="{{- block.quoteSource.getUrl() -}}" 
+                            data-tag-category="quote-source" 
+                            data-tag-action="click" 
+                            data-tag-label="{{- block.quoteSource.getUrl() -}}" 
+                            class="text-{{- swatch.primary }} text-base hover:text-{{- swatch.secondary -}}"
+                        >
+                            {{- block.quoteAuthor }} &mdash; {{ block.quoteSource.getText() -}}
+                        </a>
                     {%- else -%}
                         <span class="text-{{- swatch.primary }} text-base">
                             {{- block.quoteAuthor -}}

@@ -5,31 +5,30 @@
     .with(['buttons'])
     .one()
 -%}
-
-{% if doormat.heading and doormat.body %}
+{% if doormat.heading and doormat.article %}
     <section class="bg-{{ swatch.primary}} py-12 md:py-24">
         <div class="container mx-auto max-w-screen-lg">
-            <div class="container mx-auto max-w-screen-lg">
-                <h2 class="font-extrabold leading-tight text-6xl text-white-100 max-w-2xl">
-                    {{- render.atom('text', 'title', { content: doormat.heading }) -}}
-                </h2>
-                    
-                <div class="max-w-2xl prose prose-lg mt-12 text-white-100">
-                    {{- render.atom('text', 'content', { content: doormat.article }) -}}
-                </div>
-
-                {% if doormat.buttons %}
-
-                    {{- render.atom('button', 'group', {
-
-                        buttons: doormat.buttons,
-                        type: 'primary',
-                        utilities: 'mt-12 space-x-4',
-
-                    }) -}}
-
-                {% endif %}
+            <h2 class="font-extrabold leading-tight text-6xl text-white-100 max-w-2xl">
+                {{- render.atom('text', 'title', { content: doormat.heading }) -}}
+            </h2>
+                
+            <div class="max-w-2xl prose prose-lg mt-12 text-white-100">
+                {{- render.atom('text', 'content', { content: doormat.article }) -}}
             </div>
+
+            {% if doormat.buttons %}
+
+                {{- render.atom('button', 'group', {
+
+                    buttons: doormat.buttons,
+                    type: 'primary',
+                    utilities: 'mt-12 space-x-4',
+                    gaCategory: 'doormat-cta',
+                    gaAction: 'click'
+                    
+                }) -}}
+
+            {% endif %}
         </div>
     </section>
 {% endif %}

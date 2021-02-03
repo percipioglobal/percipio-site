@@ -26,7 +26,13 @@
             </div>
         </div>
 
-        <a href="{{- content.url -}}" class="absolute inset-0">
+        <a 
+            href="{{- content.url -}}" 
+            data-tag-category="card-project" 
+            data-tag-action="click" 
+            data-tag-label="{{- content.url -}}" 
+            class="absolute inset-0 z-1"
+        >
             <span class="sr-only">Read more about {{- content.title -}}</span>
         </a>
     </div>

@@ -30,7 +30,12 @@
         {% if values.author and values.source -%}
 
             &mdash;
-            <a href="{{- options.source.url -}}">
+            <a 
+                href="{{- options.source.url -}}"
+                data-tag-category="caption" 
+                data-tag-action="click" 
+                data-tag-label="{{- options.source.url -}}"
+            >
                 <span>
                     {{- source.author -}}
                 </span>

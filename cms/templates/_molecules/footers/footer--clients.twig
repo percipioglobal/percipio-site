@@ -2,11 +2,15 @@
 
 {% if organisationInfo.partners|length > 0 %}
     {%- set clients = organisationInfo.partners.with(['logo']).all() ?? null -%}
+
     <section class="bg-gray-100 py-16 px-8">
         <div class="container max-w-screen-xl mx-auto">
             <div class="flex flex-wrap lg:flex-no-wrap justify-between w-full">
+
                 {%- for client in clients -%}
+
                     <div class="w-1/2 md:w-1/3 lg:w-1/6 py-4 px-4">
+
                         {{- render.atom('image', 'partner', {
                             image: client.logo[0] ?? null,
                             url: client.target,
@@ -16,9 +20,13 @@
                             imageUtilities: 'object-contain h-full mx-0 md:mx-auto',
                             sizes: ['25vw']
                         }) -}}
+                        
                     </div>
+
                 {%- endfor -%}
+                
             </div>
         </div>
     </section>
+
 {% endif %}

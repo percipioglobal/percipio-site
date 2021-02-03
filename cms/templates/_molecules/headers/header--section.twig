@@ -26,6 +26,9 @@
                     {{- render.atom('button', 'primary', {
                         url: content.button.getUrl(),
                         text: content.button.getText(),
+                        gaCategory: 'header-section-cta',
+                        gaAction: 'click',
+                        gaLabel: content.button.getUrl(),
                         swatch: swatch
                     }) -}}
                 {% else %}

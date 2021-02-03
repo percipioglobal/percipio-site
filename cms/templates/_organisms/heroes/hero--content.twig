@@ -15,10 +15,10 @@
 		</h2>
 
 		{% if content.description|length %}
-				<div class="max-w-2xl prose prose-lg mt-4 md:mt-12 text-gray-800">
-					{{- render.atom('text', 'content', { content: content.description }) -}}
-				</div>
-			{% endif %}
+			<div class="max-w-2xl prose prose-lg mt-4 md:mt-12 text-gray-800">
+				{{- render.atom('text', 'content', { content: content.description }) -}}
+			</div>
+		{% endif %}
 	</div>
 </section>
 {%- endminify -%}

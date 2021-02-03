@@ -33,7 +33,14 @@
     }) -%}
 
     {%- minify -%}
-        <a href="{{- values.url -}}" class="{{- values.utilities -}}" title="{{- values.alt -}}">
+        <a 
+            href="{{- values.url -}}" 
+            data-tag-category="partner" 
+            data-tag-action="click" 
+            data-tag-label="{{- values.url -}}" 
+            class="{{- values.utilities -}}" 
+            title="{{- values.alt -}}"
+        >
             <figure role="figure" aria-label="{{- values.alt -}}" class="h-full">
                 <picture class="h-full">
                     <img src="{{- values.image.url -}}"
