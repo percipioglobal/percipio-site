@@ -20,7 +20,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: resources
-    instructions: ''
+    instructions: 'Add a downloadable resource to the list'
     name: Resources
     searchable: false
     settings:

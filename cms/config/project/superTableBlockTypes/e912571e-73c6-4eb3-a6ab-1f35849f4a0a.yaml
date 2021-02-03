@@ -1,11 +1,11 @@
-field: dbc7a062-ef19-48ca-bd6f-acda62a18b78
+field: a9ba876e-c0bf-4a8c-b77e-e926de382189
 fieldLayouts:
-  d4cd902e-828e-4c3f-80b7-039de9cbcdcb:
+  ed7ca44c-3723-4c04-a750-376d223f5961:
     tabs:
       -
         elements:
           -
-            fieldUid: a5be1b28-c12a-4a3c-8bf6-8cddef930108
+            fieldUid: 1eb19599-751e-4136-ac0f-385321fd1f98
             instructions: null
             label: null
             required: false
@@ -14,10 +14,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 2a8995d5-6e36-4d6b-8992-419951e154b0
+            fieldUid: d613d12d-ac03-4153-942b-0cca809f451b
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -25,30 +25,11 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  2a8995d5-6e36-4d6b-8992-419951e154b0:
-    contentColumnType: text
-    fieldGroup: null
-    handle: description
-    instructions: 'Add an additional description to the page'
-    name: Description
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  a5be1b28-c12a-4a3c-8bf6-8cddef930108:
+  1eb19599-751e-4136-ac0f-385321fd1f98:
     contentColumnType: text
     fieldGroup: null
     handle: heading
-    instructions: 'Use this if you want a custom title different from the entry title. If you don''t fill in this field, the entry title will be used'
+    instructions: ''
     name: Heading
     searchable: false
     settings:
@@ -63,6 +44,31 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-handle: heroContent
-name: 'Hero Without Background'
-sortOrder: 2
+  d613d12d-ac03-4153-942b-0cca809f451b:
+    contentColumnType: text
+    fieldGroup: null
+    handle: article
+    instructions: ''
+    name: 'Body Content'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field

@@ -8,7 +8,7 @@ fieldLayouts:
             fieldUid: d2e22319-599d-4193-b09f-3d48c90668e6
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -47,7 +47,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: description
-    instructions: ''
+    instructions: 'Add an additional description to the page'
     name: Description
     searchable: false
     settings:
@@ -75,7 +75,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: heroImage
-    instructions: ''
+    instructions: 'Upload a background image. If not uploaded, it will use a white background. The heading and description background will be filled with the chosen colour for this page'
     name: 'Hero Image'
     searchable: false
     settings:
@@ -108,7 +108,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: buttons
-    instructions: ''
+    instructions: 'Create call to action to other pages'
     name: Buttons
     searchable: false
     settings:
@@ -136,7 +136,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: heading
-    instructions: ''
+    instructions: 'Use this if you want a custom title different from the entry title. If you don''t fill in this field, the entry title will be used'
     name: Heading
     searchable: false
     settings:
@@ -152,5 +152,5 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
 handle: heroMain
-name: 'Hero Main'
+name: 'Hero With Background'
 sortOrder: 1

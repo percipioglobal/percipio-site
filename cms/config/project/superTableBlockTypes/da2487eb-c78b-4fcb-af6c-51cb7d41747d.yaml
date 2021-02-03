@@ -20,7 +20,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: target
-    instructions: ''
+    instructions: 'Select and entry you want to refer to'
     name: Target
     searchable: false
     settings:

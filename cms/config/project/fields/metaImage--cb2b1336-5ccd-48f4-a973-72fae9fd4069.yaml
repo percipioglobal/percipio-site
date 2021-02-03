@@ -1,7 +1,7 @@
 contentColumnType: string
 fieldGroup: 04094ed4-0df3-4175-9f40-cbbe84cffa6b
 handle: metaImage
-instructions: ''
+instructions: 'Used when this page is shared on social media sites'
 name: 'Meta Image'
 searchable: false
 settings:
