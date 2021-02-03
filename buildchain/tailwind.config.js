@@ -12,6 +12,7 @@ module.exports = {
         mode: 'layers',
         options: {
             safelist: [
+                'fill-current',
                 /pink-600$/,
                 /pink-800$/,
                 /yellow-300$/,
