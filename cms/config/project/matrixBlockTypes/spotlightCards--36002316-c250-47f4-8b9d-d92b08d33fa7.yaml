@@ -29,7 +29,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: settings
-    instructions: 'Select which cards you want to show in the spotlight. It will take the latest ones.'
+    instructions: 'Select which cards you want to show in the spotlight. It will sort the entries by post date, so the latest one will be at the tom.'
     name: Settings
     searchable: false
     settings:

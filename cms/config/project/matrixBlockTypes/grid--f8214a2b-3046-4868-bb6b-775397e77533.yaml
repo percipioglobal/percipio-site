@@ -38,7 +38,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: swatch
-    instructions: ''
+    instructions: 'Choose a background colour for this block'
     name: Swatch
     searchable: false
     settings:
@@ -86,7 +86,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: width
-    instructions: ''
+    instructions: 'This block is only being used into a grid system (without "Containerise"), you can set the size of this block'
     name: Width
     searchable: false
     settings:

@@ -83,7 +83,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: position
-    instructions: ''
+    instructions: 'This will only work if you don''t "Containerise" this block. This adds the position to the Percipio logo'
     name: 'Logo Position'
     searchable: false
     settings:
@@ -115,11 +115,11 @@ fields:
     contentColumnType: boolean
     fieldGroup: null
     handle: containerise
-    instructions: ''
+    instructions: "Turn on if you want this content block take the full width. If you turn this off, you can put multiple blocks next to each other. You can set size with the \"Width\" property\r\n"
     name: Containerise
     searchable: false
     settings:
-      default: false
+      default: true
       offLabel: null
       onLabel: null
     translationKeyFormat: null
@@ -298,7 +298,7 @@ fields:
     contentColumnType: boolean
     fieldGroup: null
     handle: showLogo
-    instructions: ''
+    instructions: 'This will only work if you don''t "Containerise" this block. This shows the Percipio logo on the position you like'
     name: 'Show Logo'
     searchable: false
     settings:
@@ -312,7 +312,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: width
-    instructions: ''
+    instructions: 'If "Containerise" is off, you can set the size of this block'
     name: Width
     searchable: false
     settings:
@@ -381,7 +381,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: swatch
-    instructions: ''
+    instructions: 'Choose a background colour for this block'
     name: Swatch
     searchable: false
     settings:

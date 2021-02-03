@@ -5,9 +5,10 @@
         {# TODO: Add Spacing Class? - Dropdown in Settings #}
 
         {%- set blockSwatch = swatch(content.swatch) -%}
+        {%- set bgLabel = content.swatch.label -%}
 
         <div class="w-full lg:min-h-3/4 flex items-center lg:w-{{- content.width }} bg-{{- blockSwatch.primary -}}">
-            <div class="prose prose-3xl prose-white p-10 lg:px-20">
+            <div class="prose prose-3xl prose-{{- bgLabel == 'white' ? 'black' : 'white' }} p-10 lg:px-20">
                 {{- render.atom('text', 'content', { content: content.article }) -}}
             </div>
         </div>

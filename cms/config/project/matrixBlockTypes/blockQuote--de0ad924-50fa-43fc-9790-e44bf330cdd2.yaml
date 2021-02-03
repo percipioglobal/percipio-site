@@ -207,7 +207,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: quoteAuthor
-    instructions: ''
+    instructions: 'Add the author''s name to the quote'
     name: 'Quote Author'
     searchable: false
     settings:

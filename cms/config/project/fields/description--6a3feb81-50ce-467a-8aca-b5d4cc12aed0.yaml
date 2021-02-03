@@ -1,7 +1,7 @@
 contentColumnType: string(1120)
 fieldGroup: b2330e68-6c4a-45ab-b5b1-8a510f75ce4f
 handle: description
-instructions: ''
+instructions: 'Used in the card, Google search results and when this page is shared on social media sites'
 name: Description
 searchable: true
 settings:

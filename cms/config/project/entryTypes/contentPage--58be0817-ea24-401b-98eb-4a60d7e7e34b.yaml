@@ -50,9 +50,9 @@ fieldLayouts:
         elements:
           -
             fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
-            instructions: null
-            label: null
-            required: '0'
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null

@@ -1,6 +1,7 @@
 {%- minify -%}
 
     {%- set blockSwatch = swatch(content.swatch) -%}
+    {%- set bgLabel = content.swatch.label -%}
 
     <div class="relative w-full lg:min-h-3/4 flex items-center lg:w-{{- content.width }} bg-{{- blockSwatch.primary -}}">
 

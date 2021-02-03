@@ -47,7 +47,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: swatch
-    instructions: ''
+    instructions: 'Choose a background colour for this block'
     name: Swatch
     searchable: false
     settings:
@@ -60,7 +60,7 @@ fields:
     contentColumnType: boolean
     fieldGroup: null
     handle: containerise
-    instructions: ''
+    instructions: "Turn on if you want this content block take the full width. If you turn this off, you can put multiple blocks next to each other. You can set size with the \"Width\" property\r\n"
     name: Containerise
     searchable: false
     settings:
@@ -74,7 +74,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: width
-    instructions: ''
+    instructions: 'If "Containerise" is off, you can set the size of this block'
     name: Width
     searchable: false
     settings:
