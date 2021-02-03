@@ -1,7 +1,7 @@
 contentColumnType: string
 fieldGroup: 151de730-f956-437c-a617-de5725e4c07a
 handle: client
-instructions: 'Select a client to connect to this entry'
+instructions: ''
 name: Client
 searchable: false
 settings:

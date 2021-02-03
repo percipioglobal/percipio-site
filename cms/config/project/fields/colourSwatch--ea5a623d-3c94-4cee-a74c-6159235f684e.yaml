@@ -1,7 +1,7 @@
 contentColumnType: text
 fieldGroup: 11cffc84-a18e-49e3-9923-8229743b2a28
 handle: colourSwatch
-instructions: 'This colour pallet is used for the logo / navigation and styling elements on the page'
+instructions: ''
 name: 'Colour Swatch'
 searchable: false
 settings:

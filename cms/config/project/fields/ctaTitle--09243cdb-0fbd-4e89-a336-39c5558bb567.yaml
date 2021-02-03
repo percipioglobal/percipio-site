@@ -1,12 +1,12 @@
-contentColumnType: string(1120)
-fieldGroup: b2330e68-6c4a-45ab-b5b1-8a510f75ce4f
-handle: description
+contentColumnType: text
+fieldGroup: 1572f461-2a67-47a4-a36c-80839168bcb7
+handle: ctaTitle
 instructions: ''
-name: Description
-searchable: true
+name: 'CTA title'
+searchable: false
 settings:
   byteLimit: null
-  charLimit: 280
+  charLimit: null
   code: ''
   columnType: null
   initialRows: '4'

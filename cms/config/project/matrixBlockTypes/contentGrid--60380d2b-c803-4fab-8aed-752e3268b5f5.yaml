@@ -20,7 +20,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: items
-    instructions: 'Show multiple text blocks with title next to each other'
+    instructions: ''
     name: 'Grid Item'
     searchable: false
     settings:

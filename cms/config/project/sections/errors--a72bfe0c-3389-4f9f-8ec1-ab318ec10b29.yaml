@@ -1,5 +1,5 @@
 enableVersioning: false
-handle: errorPages
+handle: errors
 name: Errors
 propagationMethod: all
 siteSettings:

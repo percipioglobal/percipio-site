@@ -20,7 +20,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: standfirst
-    instructions: 'This text is being used as intro of an article. This will be most of the time underneath a Section Header title and above content (like Article Body or and Image)'
+    instructions: ''
     name: Standfirst
     searchable: false
     settings:
@@ -46,4 +46,4 @@ fields:
     type: craft\redactor\Field
 handle: standfirst
 name: Standfirst
-sortOrder: 2
+sortOrder: 1

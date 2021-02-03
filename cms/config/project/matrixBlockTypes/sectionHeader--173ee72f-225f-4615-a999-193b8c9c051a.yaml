@@ -8,7 +8,7 @@ fieldLayouts:
             fieldUid: f66247e5-1697-4e5a-976e-ff087ee0911e
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -57,7 +57,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: button
-    instructions: 'Add a cta link to the header'
+    instructions: ''
     name: Button
     searchable: false
     settings:

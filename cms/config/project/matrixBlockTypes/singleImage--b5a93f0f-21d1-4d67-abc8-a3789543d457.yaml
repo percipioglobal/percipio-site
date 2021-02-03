@@ -47,7 +47,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: position
-    instructions: 'Select a position where you want the image to be displayed, if you select the center icon, it will fit into the content container. When using the full icon, it will be wider than the container. If you want multiple images in the same row, please select image gallery.'
+    instructions: 'Select a position where you want the image to be displayed, if you select left or right it will display next to the text. If you want multiple images in the same row, please select image gallery.'
     name: Position
     searchable: false
     settings:

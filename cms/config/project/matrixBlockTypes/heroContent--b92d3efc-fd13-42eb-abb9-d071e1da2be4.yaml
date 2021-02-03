@@ -29,7 +29,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: description
-    instructions: 'Add an additional description to the page'
+    instructions: ''
     name: Description
     searchable: false
     settings:
@@ -48,7 +48,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: heading
-    instructions: 'Use this if you want a custom title different from the entry title. If you don''t fill in this field, the entry title will be used'
+    instructions: ''
     name: Heading
     searchable: false
     settings:
@@ -64,5 +64,5 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
 handle: heroContent
-name: 'Hero Without Background'
+name: 'Hero Content'
 sortOrder: 2
