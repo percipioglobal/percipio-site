@@ -1,7 +1,7 @@
 module.exports = {
     purge: {
         content: [
-            '../cms/templates/**/*.{twig,html}',
+            '../cms/templates/**/*.{twig,html,svg}',
             '../src/vue/**/*.{vue,html}',
         ],
         layers: [
@@ -12,7 +12,6 @@ module.exports = {
         mode: 'layers',
         options: {
             safelist: [
-                'fill-current',
                 /pink-600$/,
                 /pink-800$/,
                 /yellow-300$/,
