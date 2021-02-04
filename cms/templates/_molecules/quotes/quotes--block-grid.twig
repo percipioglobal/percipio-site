@@ -3,7 +3,6 @@
 {%- minify -%}
 
     {%- set blockSwatch = swatch(content.swatch) -%}
-    {%- set bgLabel = content.swatch.label -%}
 
     <div class="relative w-full lg:min-h-3/4 flex items-center p-10 lg:px-20 lg:w-{{- content.width }} bg-{{- blockSwatch.primary -}}">
 
@@ -41,7 +40,7 @@
                     logo: branding.icon[0].extension == 'svg' ? branding.icon[0] : null ??? null,
                     utilities: 'w-16 h-16',
                     placeholder: placeholder,
-                    swatch: bgLabel == 'white' ? swatch : blockSwatch,
+                    swatch: content.swatch.label == 'white' ? swatch : blockSwatch,
             
                 }) -}}
             </div>
@@ -50,7 +49,7 @@
         {# border-l-2 border-t-2 border-{{- swatch.primary }} p-8 #}
         <blockquote {{ block.quoteSource.target ? 'cite="'~ block.quoteSource.target ~ '"' : '' }} class="mx-auto w-full whitespace-normal my-24 font-mono max-w-screen-md px-4 py-16">
 
-            <p class="text-2xl md:text-3xl lg:text-4xl text-{{- bgLabel == 'white' ? 'black' : 'white' }}-100">
+            <p class="text-2xl md:text-3xl lg:text-4xl {{ content.swatch.label == 'white' ?: 'text-white-100' }}">
                 {{- render.atom('text', 'content', { 
                     content: block.quote 
                 }) -}}
@@ -65,12 +64,12 @@
                         data-tag-category="quote-source" 
                         data-tag-action="click" 
                         data-tag-label="{{- block.quoteSource.getUrl() -}}" 
-                        class="text-{{- bgLabel == 'white' ? 'black' : 'white' }}-100 text-base hover:text-{{- swatch.secondary -}}"
+                        class="{{ content.swatch.label == 'white' ?: 'text-white-100' }} text-base hover:text-{{- swatch.secondary -}}"
                     >
                         {{- block.quoteAuthor }} &mdash; {{ block.quoteSource.getText() -}}
                     </a>
                 {%- else -%}
-                    <span class="text-{{- bgLabel == 'white' ? 'black' : 'white' }}-100 text-base">
+                    <span class="{{ content.swatch.label == 'white' ?: 'text-white-100' }} text-base">
                         {{- block.quoteAuthor -}}
                     </span>
                 {%- endif -%}
