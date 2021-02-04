@@ -52,7 +52,7 @@ fields:
     fieldGroup: null
     handle: items
     instructions: ''
-    name: Item
+    name: Items
     searchable: false
     settings:
       columns:
@@ -71,7 +71,7 @@ fields:
                 -
                   - width
                   - ''
-      contentTable: '{{%stc_57_items}}'
+      contentTable: '{{%stc_56_items}}'
       fieldLayout: matrix
       maxRows: '6'
       minRows: '1'

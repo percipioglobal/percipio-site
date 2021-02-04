@@ -25,16 +25,39 @@
 
                 {%- case "article" -%}
 
-                    {%- include '_molecules/content/content--article' ignore missing with {
-                        content: block,
-                        prose: 'md:prose-2xl',
-                    } -%}
+                    {%- if block.containerise -%}
+
+                        {%- include '_molecules/content/content--article' ignore missing with {
+                            content: block,
+                            prose: 'md:prose-2xl',
+                        } -%}
+
+                    {%- else -%}
+
+                        {%- include '_molecules/content/content--article-grid' ignore missing with {
+                            content: block,
+                            prose: 'md:prose-2xl',
+                        } -%}
+
+                    {%- endif -%}
 
                 {%- case "blockQuote" -%}
 
-                    {%- include '_molecules/quotes/quotes--block' ignore missing with {
-                        content: block,
-                    } -%}
+                    {%- if block.containerise -%}
+
+                        {%- include '_molecules/quotes/quotes--block' ignore missing with {
+                            content: block,
+                            prose: 'md:prose-2xl',
+                        } -%}
+
+                    {%- else -%}
+
+                        {%- include '_molecules/quotes/quotes--block-grid' ignore missing with {
+                            content: block,
+                            prose: 'md:prose-2xl',
+                        } -%}
+
+                    {%- endif -%}
 
                 {%- case "contentGrid" -%}
 
@@ -58,9 +81,20 @@
 
                 {%- case "singleImage" -%}
 
-                    {%- include '_molecules/images/image--single' ignore missing with {
-                        content: block,
-                    } -%}
+                    {%- if block.containerise -%}
+
+                        {%- include '_molecules/images/image--single' ignore missing with {
+                            content: block,
+                        } -%}
+
+                    {%- else -%}
+
+                        {%- include '_molecules/images/image--single-grid' ignore missing with {
+                            content: block,
+                            prose: 'md:prose-2xl',
+                        } -%}
+
+                    {%- endif -%}
 
                 {%- case "standfirst" -%}
 
@@ -72,6 +106,12 @@
                 {%- case "galleryImages" -%}
 
                     {%- include '_molecules/images/image--gallery' ignore missing with {
+                        content: block,
+                    } -%}
+
+                {%- case "grid" -%}
+
+                    {%- include '_organisms/grids/grid--builder' ignore missing with {
                         content: block,
                     } -%}
 
