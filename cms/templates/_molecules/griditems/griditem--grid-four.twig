@@ -31,7 +31,7 @@
         <div class="p-10 lg:px-20 flex flex-col justify-start lg:border-dashed lg:border-{{- blockSwatch.secondary }} {{ border -}}">
             <h3 class="text-white-100 text-4xl font-bold mb-4 font-primary">{{- render.atom('text', 'title', { content: item.heading }) -}}</h3>
 
-            <div class="prose prose-2xl prose-{{- bgLabel == 'white' ? 'black' : 'white' }} font-primary">
+            <div class="prose prose-2xl {{ content.swatch.label == 'white' ?: 'prose-white' }} font-primary">
                 {{- render.atom('text', 'content', { content: item.article }) -}}
             </div>
         </div>
