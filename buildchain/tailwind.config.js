@@ -48,8 +48,7 @@ module.exports = {
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
-                        // maxWidth: '80ch',
-                        maxWidth: theme('maxWidth.screens.lg'),
+                        maxWidth: '80ch',
                         strong: {
                             color: theme('colors.white.100'),
                         },

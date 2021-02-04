@@ -64,5 +64,5 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
 handle: heroContent
-name: 'Hero Without Background'
+name: 'Content Hero'
 sortOrder: 2

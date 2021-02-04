@@ -152,5 +152,5 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
 handle: heroMain
-name: 'Hero With Background'
+name: 'Content Hero with Image'
 sortOrder: 1
