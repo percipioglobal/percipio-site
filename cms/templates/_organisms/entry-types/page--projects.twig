@@ -5,18 +5,12 @@
 
 {%- import '_macros/atoms' as render -%}
 
-{%- set projects = craft.entries.section('work')
-    .orderBy('postDate desc')
-    .with(['teaserImage', 'projectCategories', 'clients'])
-    .all() 
--%}
-
 {%- include '_organisms/builders/hero--builder' with {
     content: entry,
 } -%}
 
 <div id="content" class="container max-w-screen-hd px-8 mx-auto">
     {%- include '_organisms/cards/cards--projects' ignore missing with {
-        content: projects,
+        content: entry,
     } -%}
 </div>
