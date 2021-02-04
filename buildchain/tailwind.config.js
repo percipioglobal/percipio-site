@@ -48,8 +48,7 @@ module.exports = {
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
-                        // maxWidth: '80ch',
-                        maxWidth: theme('maxWidth.screens.lg'),
+                        maxWidth: '80ch',
                         strong: {
                             color: theme('colors.white.100'),
                         },
@@ -298,14 +297,12 @@ module.exports = {
                 '1/3': '33.333333%',
                 '2/3': '66.666667%',
                 '1/4': '25%',
-                '2/4': '50%',
                 '3/4': '75%',
                 full: '100%',
                 '-1/2': '-50%',
                 '-1/3': '-33.333333%',
                 '-2/3': '-66.666667%',
                 '-1/4': '-25%',
-                '-2/4': '-50%',
                 '-3/4': '-75%',
                 '-full': '-100%',
             }),
@@ -322,6 +319,7 @@ module.exports = {
 
             minHeight: (theme) => ({
                 ...theme('spacing'),
+                '2/3': '66.666vh',
                 '3/4': '75vh',
             }),
 

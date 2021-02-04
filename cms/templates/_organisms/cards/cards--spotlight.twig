@@ -1,7 +1,7 @@
 {% switch content.settings %}
     {% case "project" %}
         {%- include '_organisms/cards/cards--projects' ignore missing with {
-            spacings: 0,
+            spacing: 0,
             limit: content.limit
         } -%}
     {% case "service" %}

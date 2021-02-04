@@ -1,0 +1,25 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- minify -%}
+    <section class="relative w-full min-h-3/4 pt-32 flex items-center overflow-hidden">
+
+        <div class="container max-w-screen-lg mx-auto">
+
+            <div class="-mx-16">
+
+                {{- render.atom('image', 'header', {
+                    image: content.image[0] ??? null,
+                    placeholders: placeholders,
+                }) -}}
+
+                <h1 class="sr-only">
+                    {{- seomatic.site.identity.genericName -}}:
+                    {{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
+                </h1>
+
+            </div>
+
+        </div>
+        
+    </section>
+{%- endminify -%}

@@ -6,14 +6,9 @@
     ])
 -%}
 
-{%- set blogHeading = {
-	overline: 'Want to read more?',
-	heading: 'Check out our blogs',
-	button: null,
-} -%}
-
 <div>
-	{%- include '_organisms/heroes/hero--main' ignore missing with {
+
+	{%- include '_organisms/builders/hero--builder' ignore missing with {
         content: entry,
 	} -%}
 
@@ -21,15 +16,22 @@
 		content: entry,
 	} -%}
 
+	{%- include '_molecules/headings/heading--blog' ignore missing with {
+		content: entry,	
+	} -%}
+
 	{%- include '_organisms/builders/content--builder' with {
         content: entry,
 	} -%}
 
-
 	<div class="pb-10 md:pb-24 md:pt-10 container mx-auto max-w-screen-lg">
 		
 		{%- include '_molecules/headers/header--section' with { 
-			content: blogHeading,
+			content: {
+				overline: 'Want to read more?',
+				heading: 'Check out our blogs',
+				button: null,
+			},
 			swatch: swatch,
 		} %}
 
@@ -39,6 +41,7 @@
 				exclude: true,
 			} -%}
 		</div>
+		
 	</div>
-</div>
 
+</div>
