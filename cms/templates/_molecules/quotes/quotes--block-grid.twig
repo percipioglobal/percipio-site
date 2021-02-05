@@ -4,7 +4,7 @@
 
     {%- set blockSwatch = swatch(content.swatch) -%}
 
-    <div class="relative w-full lg:min-h-3/4 flex items-center p-10 lg:px-20 lg:w-{{- content.width }} bg-{{- blockSwatch.primary -}}">
+    <div class="relative w-full {{ content.width == '1/1' ? 'lg:min-h-3/4' : '' }} flex items-center p-10 lg:px-20 lg:w-{{- content.width }} bg-{{- blockSwatch.primary -}}">
 
         {% if content.showLogo %}
 
