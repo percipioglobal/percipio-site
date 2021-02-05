@@ -19,7 +19,8 @@
     ])
 %}
 
-    {%- minify -%}
+{%- minify -%}
+    <div class="md:mb-16">
         {%- for block in content.contentBuilder -%}
             {%- switch block.type -%}
 
@@ -136,4 +137,5 @@
             {%- endswitch -%}
 
         {%- endfor -%}
-    {%- endminify -%}
+    </div>
+{%- endminify -%}
