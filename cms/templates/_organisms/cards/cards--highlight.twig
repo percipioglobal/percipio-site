@@ -1,12 +1,15 @@
 {%- minify -%}
     {% switch content.cards[0].type %}
+
         {% case 'blog' %}
+
             {%- include '_organisms/cards/cards--blog' ignore missing with {
                 content: content.cards,
             } -%}
+            
         {% default %}
 
-            <div class="mx-auto my-12 md:my-24">
+            <div class="mx-auto my-12 md:my-24 w-full">
                 <section class="container mx-auto max-w-screen-lg">
                     <div class="flex flex-wrap -mx-8">
                         {%- for card in content.cards -%}

@@ -1,12 +1,9 @@
 
 {%- import '_macros/atoms' as render -%}
-{%- import '_macros/functions' as functions -%}
 
 {%- minify -%}
-<section class="relative w-full min-h-2/4 pt-0 md:pt-24 flex items-center overflow-hidden">
-	<div class="container mx-auto md:px-8 xxl:px-0 max-w-screen-lg">
-
-		{# <div class="{{heroImage ? 'z-2 relative px-12 py-6 bg-' ~ swatch.primary ~ ' border-b-8 border-' ~ swatch.secondary : '' }}"> #}
+<section class="relative w-full min-h-2/3 pt-0 md:pt-24 flex items-center overflow-hidden">
+	<div class="container mx-auto max-w-screen-lg">
 		<div class="z-2 relative px-12 pt-32 md:pt-20 pb-6 md:pb-20 bg-{{- swatch.primary }} border-b-8 border-{{- swatch.secondary -}}">
 
 			<h1 class="sr-only">
@@ -31,6 +28,8 @@
                     buttons: content.buttons,
                     type: 'primary',
                     utilities: 'mt-6 space-x-4',
+                    gaCategory: 'hero-cta',
+                    gaAction: 'click'
 
                 }) -}}
 

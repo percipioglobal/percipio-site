@@ -43,7 +43,6 @@
         methods: {
             toggleMenu() {
                 this.$store.commit('setNavigationActive', !this.getNavigationActive);
-                console.log("test?");
                 document.body.classList.toggle("overflow-hidden");
             }
         }

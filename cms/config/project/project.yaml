@@ -1,4 +1,4 @@
-dateModified: 1611856548
+dateModified: 1612528997
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -120,6 +120,7 @@ plugins:
 system:
   edition: pro
   live: true
-  name: Craft
+  name: 'Percipio Global Ltd.'
+  retryDuration: null
   schemaVersion: 3.6.1
   timeZone: Europe/London

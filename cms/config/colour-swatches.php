@@ -29,8 +29,22 @@ return [
     'palettes' => [
         'Percipio' => [  // custom label
             [
-                'label'   => 'pink',
+                'label'   => 'redblue',
                 'default' => true,
+                'color'   =>  [
+                    [
+                        'color'     => '#1c64f2',  // the colour shown in the fieldtype (required)
+                        'class'     => 'blue-600', // custom attribute
+                    ],
+                    [
+                        'color'     => '#D61F69',  // the colour shown in the fieldtype (required)
+                        'class'     => 'pink-600', // custom attribute
+                    ],
+                ]
+            ],
+            [
+                'label'   => 'pink',
+                'default' => false,
                 'color'   =>  [
                     [
                         'color'     => '#D61F69',  // the colour shown in the fieldtype (required)
@@ -127,6 +141,20 @@ return [
                 ]
             ],
             [
+                'label'   => 'darkblue',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#1e429f',  // the colour shown in the fieldtype (required)
+                        'class'     => 'blue-800', // custom attribute
+                    ],
+                    [
+                        'color'     => '#1c64f2',  // the colour shown in the fieldtype (required)
+                        'class'     => 'blue-600', // custom attribute
+                    ],
+                ]
+            ],
+            [
                 'label'   => 'purple',
                 'default' => false,
                 'color'   =>  [
@@ -137,6 +165,20 @@ return [
                     [
                         'color'     => '#5521b5',  // the colour shown in the fieldtype (required)
                         'class'     => 'purple-800', // custom attribute
+                    ],
+                ]
+            ],
+            [
+                'label'   => 'white',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#FFFFFF',  // the colour shown in the fieldtype (required)
+                        'class'     => 'white-100', // custom attribute
+                    ],
+                    [
+                        'color'     => '#FFFFFF',  // the colour shown in the fieldtype (required)
+                        'class'     => 'white-100', // custom attribute
                     ],
                 ]
             ],

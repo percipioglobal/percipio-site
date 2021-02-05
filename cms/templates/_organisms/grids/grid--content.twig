@@ -1,14 +1,17 @@
-<div class="flex flex-wrap -mx-{{- spacing }} mt-16 mb-32">
+<div class="container mx-auto max-w-screen-2xl">
 
-    {% for item in grid.items %}
+    <div class="flex flex-wrap -mx-{{- spacing }} mt-16 mb-32">
 
-        {%- include '_molecules/griditems/griditem--content' ignore missing with { 
-            content: item,
-            spacing: spacing,
-            prose: prose,
-        } -%}
+        {% for item in grid.items %}
 
-    {% endfor %}
+            {%- include '_molecules/griditems/griditem--content' ignore missing with { 
+                content: item,
+                spacing: spacing,
+                prose: prose,
+            } -%}
+
+        {% endfor %}
+
+    </div>
 
 </div>
-

@@ -1,6 +1,8 @@
 {% do craft.eagerBeaver.eagerLoadElements(entry, [
     'heroBuilder',
     'heroBuilder.heroMain:buttons.buttons',
+    'heroBuilder.heroMain:heroImage',
+    'heroBuilder.heroImage:image',
     ])
 %}
 
@@ -18,6 +20,12 @@
             {% case "heroMain" %}
 
                 {%- include '_organisms/heroes/hero--main' ignore missing with {
+                    content: block,
+                } -%}
+
+            {% case "heroImage" %}
+
+                {%- include '_organisms/heroes/hero--image' ignore missing with {
                     content: block,
                 } -%}
 

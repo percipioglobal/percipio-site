@@ -1,0 +1,93 @@
+context: global
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayout:
+  20a0c568-0da0-48c8-b8ff-677f66580014:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 3ef3485e-6187-4dac-af6b-66d630852b61
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f7cf0694-24fa-4e41-943b-40abaddc797a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4133e37a-d625-476e-91aa-a600e0123064
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 1b99a854-98db-4e61-b98d-3c4e357b1e85
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4ee5d848-5fee-407d-a3aa-7475ef0fe6bc
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6ba3a39a-5d6c-488d-bcab-d047d0942b0e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Grid Settings'
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: ebc9bc3a-83e6-4cab-956d-f254a119f606
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7127ef72-a077-470d-8d8d-96b29a40a27a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Branding
+        sortOrder: 3
+groupName: Quotes
+groupSortOrder: 3
+matrixBlockType: de0ad924-50fa-43fc-9790-e44bf330cdd2
+sortOrder: 1

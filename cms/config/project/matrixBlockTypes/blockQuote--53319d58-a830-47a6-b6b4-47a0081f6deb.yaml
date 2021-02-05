@@ -1,0 +1,395 @@
+field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
+fieldLayouts:
+  8d0de68c-93d2-4036-bac5-ead425f8b519:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 5ba9dee9-1843-4b4f-b62c-6f3c7de2e04c
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: fc6be63b-f5ea-47c7-9839-cf3289cd1a96
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6f97421f-a077-4f86-ac71-61c6f9cd5bef
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4be4bd14-ce94-450b-a4f4-e10721ba5b22
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e4fa92d0-02c7-4c27-9eb2-782fb6603654
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ff2b4da8-c253-49e7-8258-9a7a0a40d3c7
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: bae060ba-ddb9-4f66-8df8-9055de4e31e5
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 24fd51e7-3c4a-4991-89c1-290d5c79408c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  24fd51e7-3c4a-4991-89c1-290d5c79408c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: position
+    instructions: 'This will only work if you don''t "Containerise" this block. This adds the position to the Percipio logo'
+    name: 'Logo Position'
+    searchable: false
+    settings:
+      default: left
+      options:
+        __assoc__:
+          -
+            - left
+            - '1'
+          -
+            - center
+            - ''
+          -
+            - right
+            - '1'
+          -
+            - full
+            - ''
+          -
+            - drop-left
+            - '1'
+          -
+            - drop-right
+            - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\positionfieldtype\fields\Position
+  4be4bd14-ce94-450b-a4f4-e10721ba5b22:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: containerise
+    instructions: "Turn on if you want this content block take the full width. If you turn this off, you can put multiple blocks next to each other. You can set size with the \"Width\" property\r\n"
+    name: Containerise
+    searchable: false
+    settings:
+      default: true
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  5ba9dee9-1843-4b4f-b62c-6f3c7de2e04c:
+    contentColumnType: text
+    fieldGroup: null
+    handle: quote
+    instructions: 'Enter your quote.'
+    name: Quote
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  6f97421f-a077-4f86-ac71-61c6f9cd5bef:
+    contentColumnType: string
+    fieldGroup: null
+    handle: quoteSource
+    instructions: 'Select an entry or enter an external url to point to the source of the quote.'
+    name: 'Quote Source'
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: false
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        __assoc__:
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - true
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - custom
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - true
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - user
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - site
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - sites
+                  - '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  bae060ba-ddb9-4f66-8df8-9055de4e31e5:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: showLogo
+    instructions: 'This will only work if you don''t "Containerise" this block. This shows the Percipio logo on the position you like'
+    name: 'Show Logo'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  e4fa92d0-02c7-4c27-9eb2-782fb6603654:
+    contentColumnType: string
+    fieldGroup: null
+    handle: width
+    instructions: 'If "Containerise" is off, you can set the size of this block'
+    name: Width
+    searchable: false
+    settings:
+      default: 1/2
+      options:
+        __assoc__:
+          -
+            - 1/6
+            - ''
+          -
+            - 1/5
+            - ''
+          -
+            - 1/4
+            - ''
+          -
+            - 1/3
+            - '1'
+          -
+            - 2/5
+            - ''
+          -
+            - 1/2
+            - '1'
+          -
+            - 3/5
+            - ''
+          -
+            - 2/3
+            - ''
+          -
+            - 3/4
+            - ''
+          -
+            - 4/5
+            - ''
+          -
+            - 5/6
+            - ''
+          -
+            - full
+            - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\widthfieldtype\fields\Width
+  fc6be63b-f5ea-47c7-9839-cf3289cd1a96:
+    contentColumnType: text
+    fieldGroup: null
+    handle: quoteAuthor
+    instructions: ''
+    name: 'Quote Author'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ff2b4da8-c253-49e7-8258-9a7a0a40d3c7:
+    contentColumnType: text
+    fieldGroup: null
+    handle: swatch
+    instructions: 'Choose a background colour for this block'
+    name: Swatch
+    searchable: false
+    settings:
+      palette: Percipio
+      useConfigFile: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: percipioglobal\colourswatches\fields\ColourSwatches
+handle: blockQuote
+name: Quotation
+sortOrder: 3

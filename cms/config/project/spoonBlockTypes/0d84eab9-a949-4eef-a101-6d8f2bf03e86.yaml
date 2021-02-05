@@ -1,0 +1,75 @@
+context: global
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayout:
+  3cbb6375-5586-45f8-8402-29a2f9620f44:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: ed4b0f49-8429-4d80-846f-3d441bd3e707
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3fc84cf5-6e3d-46e8-bf13-9a1d4e198438
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 302a5592-8085-472e-9356-ab6b1eaf1635
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 49d732ef-0bfc-46c0-ba09-004de008c0ba
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Image Settings'
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: b928e034-1b69-487e-a45b-b37d0f8a59a9
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 55ac783b-adeb-42fc-98f5-0adf13a8419d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Grid Settings'
+        sortOrder: 3
+groupName: Media
+groupSortOrder: 2
+matrixBlockType: b5a93f0f-21d1-4d67-abc8-a3789543d457
+sortOrder: 1

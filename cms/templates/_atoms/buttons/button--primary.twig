@@ -22,7 +22,21 @@
             'large': 'px-8 py-4',
         } -%}
 
-        <a {{ values.url ? 'href=' ~ values.url : '' }} class="inline-flex border-2 {{ sizes[values.size] is defined ? sizes[values.size] : sizes['large'] }} font-extrabold text-lg border-{{- values.swatch ? values.swatch.primary : '' }} text-{{- values.swatch ? values.swatch.primary : 'white-100' }} hover:text-{{- values.swatch ? values.swatch.primary : 'blue-600' }} hover:bg-white-100 {{ values.utilities ? values.utilities : '' -}}">
+        {%- set inverted = false -%}
+        {% if options.inverted is defined and options.inverted is not null %}
+            {%- set inverted =  options.inverted -%}
+        {% endif %}
+        {%- set primary = values.swatch ? values.swatch.primary : 'blue-600' -%}
+
+        {%- set hoverUtilites = inverted ? "hover:text-white-100 hover:bg-" ~ primary : "hover:text-" ~ primary ~  " hover:bg-white-100" -%}
+
+        <a 
+            {{ values.url ? 'href=' ~ values.url : '' }}
+            {{ values.gaCategory ? 'data-tag-category=' ~ values.gaCategory : '' }}
+            {{ values.gaAction ? 'data-tag-action=' ~ values.gaAction : '' }}
+            {{ values.gaLabel ? 'data-tag-label=' ~ values.gaLabel : '' }}
+            class="inline-flex border-2 {{ sizes[values.size] is defined ? sizes[values.size] : sizes['large'] }} font-extrabold text-lg border-{{- values.swatch ? values.swatch.primary : '' }} text-{{- values.swatch ? values.swatch.primary : 'white-100' }} {{ hoverUtilites }} {{ values.utilities ? values.utilities : '' -}}"
+        >
             {{- values.text -}}
         </a>
 

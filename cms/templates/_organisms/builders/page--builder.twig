@@ -1,33 +1,65 @@
 {% do craft.eagerBeaver.eagerLoadElements(entry, [
     'pageBuilder',
     'pageBuilder.blogHighlightCards:cards',
-    'pageBuilder.blogHighlightCards.cards:teaserImage',
-    'pageBuilder.blogHighlightCards.cards:blogCategories',
+    'pageBuilder.blogHighlightCards:cards.teaserImage',
+    'pageBuilder.blogHighlightCards:cards.blogCategories',
     'pageBuilder.projectHighlightCards:cards',
-    'pageBuilder.projectHighlightCards.cards:teaserImage',
-    'pageBuilder.projectHighlightCards.cards:projectCategories',
+    'pageBuilder.projectHighlightCards:cards',
+    'pageBuilder.projectHighlightCards:cards.teaserImage',
+    'pageBuilder.projectHighlightCards:cards.projectCategories',
+    'pageBuilder.projectHighlightCards:cards.clients',
     'pageBuilder.serviceHighlightCards:cards',
-    'pageBuilder.serviceHighlightCards.cards:teaserImage',
+    'pageBuilder.serviceHighlightCards:cards.teaserImage',
     'pageBuilder.sectionHeader:buttons',
     'pageBuilder.singleImage:image',
     'pageBuilder.galleryImages:images',
     'pageBuilder.basicSlider:slides',
-    'pageBuilder.basicSlider.slides:image',
+    'pageBuilder.basicSlider:slides.image',
+    'pageBuilder.grid:items',
     ])
 %}
 
 {%- minify -%}
 
-<div class="container mx-auto px-8 xxl:px-0 max-w-screen-lg">
+<div class="flex flex-wrap">
     {%- for block in content.pageBuilder -%}
         {%- switch block.type -%}
 
             {%- case "article" -%}
 
-                {%- include '_molecules/content/content--article' ignore missing with {
-                    content: block,
-                    prose: 'md:prose-2xl',
-                } -%}
+                {%- if block.containerise -%}
+
+                    {%- include '_molecules/content/content--article' ignore missing with {
+                        content: block,
+                        prose: 'md:prose-2xl',
+                    } -%}
+
+                {%- else -%}
+
+                    {%- include '_molecules/content/content--article-grid' ignore missing with {
+                        content: block,
+                        prose: 'md:prose-2xl',
+                    } -%}
+
+                {%- endif -%}
+
+            {%- case 'blockQuote' -%}
+
+                {%- if block.containerise -%}
+
+                    {%- include '_molecules/quotes/quotes--block' ignore missing with {
+                        content: block,
+                        prose: 'md:prose-2xl',
+                    } -%}
+
+                {%- else -%}
+
+                    {%- include '_molecules/quotes/quotes--block-grid' ignore missing with {
+                        content: block,
+                        prose: 'md:prose-2xl',
+                    } -%}
+
+                {%- endif -%}
 
             {%- case "sectionHeader" -%}
 
@@ -38,13 +70,30 @@
 
             {%- case "singleImage" -%}
 
-                {%- include '_molecules/images/image--single' ignore missing with {
-                    content: block,
-                } -%}
+                {%- if block.containerise -%}
+
+                    {%- include '_molecules/images/image--single' ignore missing with {
+                        content: block,
+                    } -%}
+
+                {%- else -%}
+
+                    {%- include '_molecules/images/image--single-grid' ignore missing with {
+                        content: block,
+                        prose: 'md:prose-2xl',
+                    } -%}
+
+                {%- endif -%}
 
             {%- case "galleryImages" -%}
 
                 {%- include '_molecules/images/image--gallery' ignore missing with {
+                    content: block,
+                } -%}
+
+            {%- case "grid" -%}
+
+                {%- include '_organisms/grids/grid--builder' ignore missing with {
                     content: block,
                 } -%}
 
@@ -63,6 +112,12 @@
             {%- case "serviceHighlightCards" -%}
 
                 {%- include '_organisms/cards/cards--service' ignore missing with {
+                    content: block,
+                } -%}
+
+            {%- case "spotlightCards" -%}
+
+                {%- include '_organisms/cards/cards--spotlight' ignore missing with {
                     content: block,
                 } -%}
 

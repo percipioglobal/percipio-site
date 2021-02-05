@@ -25,6 +25,9 @@
 
             <a  class="underline {{ colours ? 'transition-colors duration-200 ease-in-out hover:text-' ~ colours.primary : '' -}}" 
                 href="{{- author.url -}}"
+                data-tag-category="author" 
+                data-tag-action="click" 
+                data-tag-label="{{- author.url -}}"
             >
                 {{- author.title -}}
             </a>

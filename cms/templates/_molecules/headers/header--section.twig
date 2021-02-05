@@ -4,15 +4,16 @@
 
 {%- minify -%}
 
-    <div class="my-16">
+    <div class="my-16 w-full">
 
         {# TODO set maxwidth breakpoints #}
         <div class="container mx-auto max-w-screen-lg {{ utilities -}}">
+
             <div class="leading-none">
 
                 {{- render.atom('text', 'overline', {
                         content: content.overline,
-                        utilities: 'text-' ~ swatch.primary ~ ' mb-4',
+                        utilities: 'text-' ~ swatch.primary ~ ' mb-4 font-mono',
                     })
                 -}}
                 
@@ -25,13 +26,20 @@
                     {{- render.atom('button', 'primary', {
                         url: content.button.getUrl(),
                         text: content.button.getText(),
+                        gaCategory: 'header-section-cta',
+                        gaAction: 'click',
+                        gaLabel: content.button.getUrl(),
                         swatch: swatch
                     }) -}}
+                {% else %}
 
+                    <hr class="h-1 w-32 bg-{{- swatch.primary -}}">
+                        
                 {% endif %}
             </div>
 
         </div>
 
     </div>
+
 {%- endminify -%}

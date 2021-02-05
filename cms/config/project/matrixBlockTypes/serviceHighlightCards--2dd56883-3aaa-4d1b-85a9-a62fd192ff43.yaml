@@ -40,4 +40,4 @@ fields:
     type: craft\fields\Entries
 handle: serviceHighlightCards
 name: 'Service Highlight Cards'
-sortOrder: 8
+sortOrder: 9

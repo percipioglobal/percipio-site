@@ -27,7 +27,14 @@
                 {%- if values.source -%}
 
                     <footer>
-                        <a href="{{- values.source.getUrl() -}}">{{- values.source.getText() -}}</a>
+                        <a 
+                            href="{{- values.source.getUrl() -}}"
+                            data-tag-category="quote" 
+                            data-tag-action="click" 
+                            data-tag-label="{{- values.source.getUrl() -}}"
+                        >
+                            {{- values.source.getText() -}}
+                        </a>
                     </footer>
 
                 {%- endif -%}

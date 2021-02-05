@@ -8,7 +8,7 @@ fieldLayouts:
             fieldUid: f66247e5-1697-4e5a-976e-ff087ee0911e
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -57,13 +57,15 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: button
-    instructions: ''
+    instructions: 'Add a cta link to the header'
     name: Button
     searchable: false
     settings:
       allowCustomText: true
       allowTarget: true
       autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
       defaultLinkName: entry
       defaultText: ''
       enableAllLinkTypes: false
@@ -72,6 +74,58 @@ fields:
       enableTitle: false
       typeSettings:
         __assoc__:
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - true
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - custom
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - true
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - true
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
           -
             - asset
             -
@@ -121,16 +175,6 @@ fields:
                   - sources
                   - '*'
           -
-            - site
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - sites
-                  - '*'
-          -
             - user
             -
               __assoc__:
@@ -147,57 +191,15 @@ fields:
                   - sources
                   - '*'
           -
-            - custom
+            - site
             -
               __assoc__:
                 -
                   - enabled
                   - false
                 -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - email
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - true
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - tel
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - true
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - url
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - true
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
+                  - sites
+                  - '*'
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField

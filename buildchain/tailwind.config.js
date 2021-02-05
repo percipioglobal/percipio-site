@@ -1,7 +1,7 @@
 module.exports = {
     purge: {
         content: [
-            '../cms/templates/**/*.{twig,html}',
+            '../cms/templates/**/*.{twig,html,svg}',
             '../src/vue/**/*.{vue,html}',
         ],
         layers: [
@@ -14,6 +14,8 @@ module.exports = {
             safelist: [
                 /pink-600$/,
                 /pink-800$/,
+                /yellow-300$/,
+                /red-500$/,
                 /red-600$/,
                 /red-800$/,
                 /orange-500$/,
@@ -28,32 +30,129 @@ module.exports = {
                 /blue-800$/,
                 /purple-600$/,
                 /purple-800$/,
+                /col-span-1$/,
+                /col-span-2$/,
+                /col-span-3$/,
+                /col-span-4$/,
+                /col-span-5$/,
+                /col-span-6$/,
+                /w-1\/4$/,
+                /w-1\/3$/,
+                /w-1\/2$/,
+                /w-2\/3$/,
+                /w-3\/4$/,
+                /grid-article$/,
+                /grid-article-large$/,
             ],
         }
     },
     theme: {
+
+        container: {
+            padding: {
+                DEFAULT: '1rem',
+                sm: '2rem',
+                '2xl': '0',
+            },
+        },
+
         extend: {
 
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
-                        // maxWidth: '80ch',
-                        maxWidth: theme('maxWidth.screens.lg'),
+                        maxWidth: '80ch',
                         strong: {
                             color: theme('colors.white.100'),
                         },
                     },
+                },
+                'white': {
+                    css: {
+                        h1: {
+                            color: theme('colors.white.100')
+                        },
+                        h2: {
+                            color: theme('colors.white.100')
+                        },
+                        h3: {
+                            color: theme('colors.white.100')
+                        },
+                        h4: {
+                            color: theme('colors.white.100')
+                        },
+                        h5: {
+                            color: theme('colors.white.100')
+                        },
+                        h6: {
+                            color: theme('colors.white.100')
+                        },
+                        color: theme('colors.white.100')
+                    }
                 },
                 '3xl': {
                     css: {
                         fontSize: theme('fontSize.3xl'),
                         fontWeight: theme('fontWeight.medium'),
                     }
+                },
+                'grid': {
+                    css: {
+                        p: {
+                            fontSize: theme('fontSize.xl'),
+                        },
+                        h3: {
+                            fontSize: theme('fontSize.4xl'),
+                        },
+                    }
+                },
+                'grid-article': {
+                    css: {
+                        p: {
+                            fontSize: theme('fontSize.2xl'),
+                        },
+                        h3: {
+                            fontSize: theme('fontSize.6xl'),
+                        },
+                    }
+                },
+                'grid-article-large': {
+                    css: {
+                        p: {
+                            fontWeight: theme('fontWeight.bold'),
+                            fontSize: theme('fontSize.5xl'),
+                        },
+                    }
                 }
             }),
 
             screens: {
                 '2xl': '1536px',
+            },
+
+            fontFamily: {
+                primary: [
+                    'Open Sans', 
+                    'ui-sans-serif', 
+                    'system-ui', 
+                    '-apple-system', 
+                    'Roboto', 
+                    'Helvetica Neue', 
+                    'Arial', 
+                    'Noto Sans', 
+                    'sans-serif',
+                ],
+                mono: [
+                    'Source Code Pro', 
+                    'ui-monospace', 
+                    'SFMono-Regular', 
+                    'Menlo', 
+                    'Monaco', 
+                    'Consolas', 
+                    'Liberation Mono', 
+                    'Courier New', 
+                    'monospace'
+                ]
             },
 
             colors: {
@@ -239,14 +338,12 @@ module.exports = {
                 '1/3': '33.333333%',
                 '2/3': '66.666667%',
                 '1/4': '25%',
-                '2/4': '50%',
                 '3/4': '75%',
                 full: '100%',
                 '-1/2': '-50%',
                 '-1/3': '-33.333333%',
                 '-2/3': '-66.666667%',
                 '-1/4': '-25%',
-                '-2/4': '-50%',
                 '-3/4': '-75%',
                 '-full': '-100%',
             }),
@@ -263,6 +360,7 @@ module.exports = {
 
             minHeight: (theme) => ({
                 ...theme('spacing'),
+                '2/3': '66.666vh',
                 '3/4': '75vh',
             }),
 
@@ -277,7 +375,6 @@ module.exports = {
                 400: '400%',
                 500: '500%',
                 600: '600%',
-                '50vw': '50vw',
             },
 
             zIndex: {
@@ -294,7 +391,7 @@ module.exports = {
         borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
         inset: ['responsive'],
         scale: ['group-hover'],
-        opacity: ['group-hover'],
+        opacity: ['responsive', 'hover', 'focus', 'group-hover'],
         textColor: ['responsive', 'hover', 'focus', 'group-hover'],
         translate: ['responsive', 'hover', 'focus', 'group-hover'],
         zIndex: ['responsive'],
