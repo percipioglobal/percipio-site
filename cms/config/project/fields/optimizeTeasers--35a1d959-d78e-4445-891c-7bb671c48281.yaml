@@ -8,6 +8,11 @@ settings:
   displayDominantColorPalette: '1'
   displayLazyLoadPlaceholderImages: '1'
   displayOptimizedImageVariants: '1'
+  fieldVolumeSettings:
+    __assoc__:
+      -
+        - teasers
+        - '*'
   ignoreFilesOfType:
     - image/svg
     - image/gif
@@ -15,43 +20,42 @@ settings:
     -
       __assoc__:
         -
+          - width
+          - '1024'
+        -
+          - useAspectRatio
+          - '1'
+        -
           - aspectRatioX
           - '4'
         -
           - aspectRatioY
           - '3'
         -
-          - format
-          - ''
-        -
-          - quality
-          - '82'
-        -
           - retinaSizes
           -
             - '1'
             - '2'
-            - '3'
         -
-          - useAspectRatio
-          - '1'
+          - quality
+          - '82'
         -
-          - width
-          - '1024'
+          - format
+          - ''
     -
       __assoc__:
         -
+          - width
+          - '640'
+        -
+          - useAspectRatio
+          - '1'
+        -
           - aspectRatioX
           - '4'
         -
           - aspectRatioY
           - '3'
-        -
-          - format
-          - ''
-        -
-          - quality
-          - '82'
         -
           - retinaSizes
           -
@@ -59,11 +63,11 @@ settings:
             - '2'
             - '3'
         -
-          - useAspectRatio
-          - '1'
+          - quality
+          - '82'
         -
-          - width
-          - '640'
+          - format
+          - ''
 translationKeyFormat: null
 translationMethod: none
 type: nystudio107\imageoptimize\fields\OptimizedImages
