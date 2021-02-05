@@ -64,7 +64,7 @@
                         data-tag-category="quote-source" 
                         data-tag-action="click" 
                         data-tag-label="{{- block.quoteSource.getUrl() -}}" 
-                        class="{{ content.swatch.label == 'white' ?: 'text-white-100' }} text-base hover:text-{{- swatch.secondary -}}"
+                        class="{{ content.swatch.label == 'white' ?: 'text-white-100' }} underline text-base hover:no-underline"
                     >
                         {{- block.quoteAuthor }} &mdash; {{ block.quoteSource.getText() -}}
                     </a>
