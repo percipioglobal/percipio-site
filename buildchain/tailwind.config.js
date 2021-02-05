@@ -82,6 +82,26 @@ module.exports = {
                         fontSize: theme('fontSize.3xl'),
                         fontWeight: theme('fontWeight.medium'),
                     }
+                },
+                'grid': {
+                    css: {
+                        p: {
+                            fontSize: theme('fontSize.xl'),
+                        },
+                        h3: {
+                            fontSize: theme('fontSize.4xl'),
+                        },
+                    }
+                },
+                'grid-article': {
+                    css: {
+                        p: {
+                            fontSize: theme('fontSize.2xl'),
+                        },
+                        h3: {
+                            fontSize: theme('fontSize.6xl'),
+                        },
+                    }
                 }
             }),
 
