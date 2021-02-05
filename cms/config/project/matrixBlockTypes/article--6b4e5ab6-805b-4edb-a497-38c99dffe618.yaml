@@ -40,6 +40,15 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: b723924c-f0d9-4479-945f-b43f96e8e1e5
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -70,6 +79,41 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
+  b723924c-f0d9-4479-945f-b43f96e8e1e5:
+    contentColumnType: string
+    fieldGroup: null
+    handle: prose
+    instructions: ''
+    name: 'Text Size'
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - regular
+            -
+              - value
+              - prose-grid-article
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - large
+            -
+              - value
+              - prose-grid-article-large
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
   b9a667dd-8941-472a-89b5-e3d1fe877aec:
     contentColumnType: string
     fieldGroup: null

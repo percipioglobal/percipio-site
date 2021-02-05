@@ -7,7 +7,7 @@
         {%- set blockSwatch = swatch(content.swatch) -%}
         
         <div class="w-full lg:min-h-3/4 flex items-center lg:w-{{- content.width }} bg-{{- blockSwatch.primary -}}">
-            <div class="prose prose-3xl {{ content.swatch.label == 'white' ?: 'prose-white' }} p-10 lg:px-20">
+            <div class="prose {{ content.prose }} {{ content.swatch.label == 'white' ?: 'prose-white' }} p-10 lg:px-20">
                 {{- render.atom('text', 'content', { content: content.article }) -}}
             </div>
         </div>

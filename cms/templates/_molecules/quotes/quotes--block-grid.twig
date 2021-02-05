@@ -4,7 +4,7 @@
 
     {%- set blockSwatch = swatch(content.swatch) -%}
 
-    <div class="relative w-full lg:min-h-3/4 flex items-center p-10 lg:px-20 lg:w-{{- content.width }} bg-{{- blockSwatch.primary -}}">
+    <div class="relative w-full {{ content.width == '1/1' ? 'lg:min-h-3/4' : '' }} flex items-center p-10 lg:px-20 lg:w-{{- content.width }} bg-{{- blockSwatch.primary -}}">
 
         {% if content.showLogo %}
 
@@ -64,7 +64,7 @@
                         data-tag-category="quote-source" 
                         data-tag-action="click" 
                         data-tag-label="{{- block.quoteSource.getUrl() -}}" 
-                        class="{{ content.swatch.label == 'white' ?: 'text-white-100' }} text-base hover:text-{{- swatch.secondary -}}"
+                        class="{{ content.swatch.label == 'white' ?: 'text-white-100' }} underline text-base hover:no-underline"
                     >
                         {{- block.quoteAuthor }} &mdash; {{ block.quoteSource.getText() -}}
                     </a>

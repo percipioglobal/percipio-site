@@ -30,6 +30,12 @@ module.exports = {
                 /blue-800$/,
                 /purple-600$/,
                 /purple-800$/,
+                /col-span-1$/,
+                /col-span-2$/,
+                /col-span-3$/,
+                /col-span-4$/,
+                /col-span-5$/,
+                /col-span-6$/,
             ],
         }
     },
@@ -81,6 +87,34 @@ module.exports = {
                     css: {
                         fontSize: theme('fontSize.3xl'),
                         fontWeight: theme('fontWeight.medium'),
+                    }
+                },
+                'grid': {
+                    css: {
+                        p: {
+                            fontSize: theme('fontSize.xl'),
+                        },
+                        h3: {
+                            fontSize: theme('fontSize.4xl'),
+                        },
+                    }
+                },
+                'grid-article': {
+                    css: {
+                        p: {
+                            fontSize: theme('fontSize.2xl'),
+                        },
+                        h3: {
+                            fontSize: theme('fontSize.6xl'),
+                        },
+                    }
+                },
+                'grid-article-large': {
+                    css: {
+                        p: {
+                            fontWeight: theme('fontWeight.bold'),
+                            fontSize: theme('fontSize.5xl'),
+                        },
                     }
                 }
             }),

@@ -141,6 +141,20 @@ return [
                 ]
             ],
             [
+                'label'   => 'darkblue',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#1e429f',  // the colour shown in the fieldtype (required)
+                        'class'     => 'blue-800', // custom attribute
+                    ],
+                    [
+                        'color'     => '#1c64f2',  // the colour shown in the fieldtype (required)
+                        'class'     => 'blue-600', // custom attribute
+                    ],
+                ]
+            ],
+            [
                 'label'   => 'purple',
                 'default' => false,
                 'color'   =>  [
