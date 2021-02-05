@@ -40,6 +40,15 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: 29d259da-2846-455c-b5ab-ed43e74ae7fa
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -57,6 +66,41 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
+  29d259da-2846-455c-b5ab-ed43e74ae7fa:
+    contentColumnType: string
+    fieldGroup: null
+    handle: prose
+    instructions: ''
+    name: 'Text Size'
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - regular
+            -
+              - value
+              - prose-grid-article
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - large
+            -
+              - value
+              - prose-grid-article-large
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
   3a3a038a-b887-45f4-8850-96f3b78060f2:
     contentColumnType: string
     fieldGroup: null
@@ -143,7 +187,6 @@ fields:
     name: Swatch
     searchable: false
     settings:
-      options: ''
       palette: Percipio
       useConfigFile: '1'
     translationKeyFormat: null

@@ -41,6 +41,8 @@ module.exports = {
                 /w-1\/2$/,
                 /w-2\/3$/,
                 /w-3\/4$/,
+                /grid-article$/,
+                /grid-article-large$/,
             ],
         }
     },
@@ -92,6 +94,34 @@ module.exports = {
                     css: {
                         fontSize: theme('fontSize.3xl'),
                         fontWeight: theme('fontWeight.medium'),
+                    }
+                },
+                'grid': {
+                    css: {
+                        p: {
+                            fontSize: theme('fontSize.xl'),
+                        },
+                        h3: {
+                            fontSize: theme('fontSize.4xl'),
+                        },
+                    }
+                },
+                'grid-article': {
+                    css: {
+                        p: {
+                            fontSize: theme('fontSize.2xl'),
+                        },
+                        h3: {
+                            fontSize: theme('fontSize.6xl'),
+                        },
+                    }
+                },
+                'grid-article-large': {
+                    css: {
+                        p: {
+                            fontWeight: theme('fontWeight.bold'),
+                            fontSize: theme('fontSize.5xl'),
+                        },
                     }
                 }
             }),
