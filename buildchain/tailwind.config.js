@@ -108,6 +108,14 @@ module.exports = {
                             fontSize: theme('fontSize.6xl'),
                         },
                     }
+                },
+                'grid-article-large': {
+                    css: {
+                        p: {
+                            fontWeight: theme('fontWeight.bold'),
+                            fontSize: theme('fontSize.5xl'),
+                        },
+                    }
                 }
             }),
 

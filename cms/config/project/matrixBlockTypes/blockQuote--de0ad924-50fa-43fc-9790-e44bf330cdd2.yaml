@@ -320,7 +320,6 @@ fields:
     name: Swatch
     searchable: false
     settings:
-      options: ''
       palette: Percipio
       useConfigFile: '1'
     translationKeyFormat: null

@@ -42,7 +42,6 @@ fields:
     name: Swatch
     searchable: false
     settings:
-      options: ''
       palette: Percipio
       useConfigFile: '1'
     translationKeyFormat: null
@@ -106,7 +105,23 @@ fields:
     name: Items
     searchable: false
     settings:
-      contentTable: '{{%stc_items}}'
+      columns:
+        __assoc__:
+          -
+            - 1caabc75-eb3c-43a5-bffd-5b3289015e5c
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 9c4ff5ca-6227-465d-a4a9-5a584eba02b4
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_59_items}}'
       fieldLayout: table
       maxRows: ''
       minRows: ''
