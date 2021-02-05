@@ -364,9 +364,13 @@ module.exports = {
                 '2/3': '66.666vh',
                 '3/4': '75vh',
             }),
+                
+            transitionTimingFunction: {
+                'blog': 'cubic-bezier(.58,.3,.005,1) 0s 1',
+            },
 
             translate: {
-                '-1/2': '-50%',
+                '-full-1/2': '-150%',
             },
 
             width: {
@@ -395,6 +399,7 @@ module.exports = {
         opacity: ['responsive', 'hover', 'focus', 'group-hover'],
         textColor: ['responsive', 'hover', 'focus', 'group-hover'],
         translate: ['responsive', 'hover', 'focus', 'group-hover'],
+        transitionDelay: ['hover'],
         zIndex: ['responsive'],
     },
 
