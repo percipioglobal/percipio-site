@@ -36,6 +36,8 @@ module.exports = {
                 /col-span-4$/,
                 /col-span-5$/,
                 /col-span-6$/,
+                /grid-article$/,
+                /grid-article-large$/,
             ],
         }
     },
