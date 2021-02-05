@@ -65,6 +65,7 @@ module.exports = {
                         strong: {
                             color: theme('colors.white.100'),
                         },
+                        fontFamily: theme('fontFamily.primary'),
                     },
                 },
                 'white': {
