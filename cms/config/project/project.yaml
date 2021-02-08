@@ -1,4 +1,4 @@
-dateModified: 1612528997
+dateModified: 1612799412
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -36,22 +36,46 @@ plugins:
     licenseKey: L5YE26W49XD3K4PP91RH06RM
     schemaVersion: 1.0.0
     settings:
-      allowUpScaledImageVariants: false
+      allowUpScaledImageVariants: true
       assetVolumeSubFolders: true
       autoSharpenScaledImages: true
       createColorPalette: true
       createPlaceholderSilhouettes: false
       imageTransformTypeSettings:
-        nystudio107\imageoptimizeimgix\imagetransforms\ImgixImageTransform:
-          apiKey: ''
-          domain: ''
-          securityToken: ''
-        nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform:
-          baseUrl: $SERVERLESS_SHARP_CLOUDFRONT_URL
-        nystudio107\imageoptimizethumbor\imagetransforms\ThumborImageTransform:
-          baseUrl: ''
-          includeBucketPrefix: ''
-          securityKey: ''
+        __assoc__:
+          -
+            - nystudio107\imageoptimizeimgix\imagetransforms\ImgixImageTransform
+            -
+              __assoc__:
+                -
+                  - domain
+                  - ''
+                -
+                  - apiKey
+                  - ''
+                -
+                  - securityToken
+                  - ''
+          -
+            - nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - $SERVERLESS_SHARP_CLOUDFRONT_URL
+          -
+            - nystudio107\imageoptimizethumbor\imagetransforms\ThumborImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - ''
+                -
+                  - securityKey
+                  - ''
+                -
+                  - includeBucketPrefix
+                  - ''
       lowerQualityRetinaImageVariants: false
       transformClass: nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
   mailgun:
