@@ -1,5 +1,5 @@
 <template>
-    <button @click.prevent="toggleMenu" class="ml-auto">
+    <button @click.prevent="toggleMenu" class="ml-auto" aria-label="navigation-toggle">
 
         <span class="">
             <span 

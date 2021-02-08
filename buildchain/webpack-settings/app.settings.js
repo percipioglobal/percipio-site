@@ -11,6 +11,18 @@ module.exports = {
     copyright: '©2020 Percipio.London',
     entry: {
         'app': [
+            '../src/fonts/open-sans-regular.woff',
+            '../src/fonts/open-sans-regular.woff2',
+            '../src/fonts/open-sans-italic.woff',
+            '../src/fonts/open-sans-italic.woff2',
+            '../src/fonts/open-sans-600.woff',
+            '../src/fonts/open-sans-600.woff2',
+            '../src/fonts/open-sans-700.woff',
+            '../src/fonts/open-sans-700.woff2',
+            '../src/fonts/open-sans-800.woff',
+            '../src/fonts/open-sans-800.woff2',
+            '../src/fonts/source-code-pro-regular.woff',
+            '../src/fonts/source-code-pro-regular.woff2',
             '../src/js/app.ts',
             '../src/css/tailwind-base.pcss',
             '../src/css/tailwind-components.pcss',

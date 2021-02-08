@@ -9,6 +9,7 @@
             {{ values.gaCategory ? 'data-tag-category=' ~ values.gaCategory : '' }}
             {{ values.gaAction ? 'data-tag-action=' ~ values.gaAction : '' }}
             {{ values.gaLabel ? 'data-tag-label=' ~ values.gaLabel : '' }}
+            aria-label="{{- values.text -}}"
             class="inline-flex {{ values.utility ? values.utility : '' -}}"
         >
             {{- values.text -}}

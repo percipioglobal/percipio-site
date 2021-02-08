@@ -35,6 +35,7 @@
             {{ values.gaCategory ? 'data-tag-category=' ~ values.gaCategory : '' }}
             {{ values.gaAction ? 'data-tag-action=' ~ values.gaAction : '' }}
             {{ values.gaLabel ? 'data-tag-label=' ~ values.gaLabel : '' }}
+            aria-label="{{- values.text -}}"
             class="inline-flex border-2 {{ sizes[values.size] is defined ? sizes[values.size] : sizes['large'] }} font-extrabold text-lg border-{{- values.swatch ? values.swatch.primary : '' }} text-{{- values.swatch ? values.swatch.primary : 'white-100' }} {{ hoverUtilites }} {{ values.utilities ? values.utilities : '' -}}"
         >
             {{- values.text -}}
