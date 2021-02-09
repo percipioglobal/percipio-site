@@ -38,10 +38,10 @@
                         {{- render.atom('text', 'title', { content: content.title }) -}}
                     </h2>
 
-                    {{ render.atom('date', 'jobdays', {
+                    {# {{ render.atom('date', 'jobdays', {
                         date: member.startDate,
                         utilities: 'block text-xl md:text-2xl text-white-100 mb-2'
-                    }) }}
+                    }) }} #}
 
                     <span class="block text-xl md:text-2xl text-white-100">
                         <strong>Location: </strong>
@@ -49,7 +49,7 @@
                     </span>
 
                     <div class="mt-6 -mb-6">
-                        {{- render.atom('chip', 'group', { 
+                        {{- render.atom('chip', 'group', {
                             chips: content.skillCategories,
                             colors: swatch,
                             type: 'skills',

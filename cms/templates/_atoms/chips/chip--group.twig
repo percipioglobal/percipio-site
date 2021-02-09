@@ -1,4 +1,4 @@
-{# 
+{#
     ### OPTIONS ###
     ---------------
 
@@ -16,6 +16,7 @@
     colors: options.colors ??? null,
     type: options.type ??? 'primary',
     utilities: options.utilities ??? null,
+    inverted: options.inverted|default(false),
 } %}
 
 {%- minify -%}
@@ -26,6 +27,7 @@
                 {{- render.atom('chip', values.type, {
                     text: chip.title,
                     colors: values.colors,
+                    inverted: values.inverted,
                     utilities: 'mr-2 inline-block'
                 }) -}}
             {%- endfor -%}
