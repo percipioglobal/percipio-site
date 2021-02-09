@@ -107,6 +107,16 @@ module.exports = {
                         },
                     }
                 },
+                'grid-sm': {
+                    css: {
+                        p: {
+                            fontSize: theme('fontSize.lg'),
+                        },
+                        h3: {
+                            fontSize: theme('fontSize.xl'),
+                        },
+                    }
+                },
                 'grid-article': {
                     css: {
                         p: {
@@ -117,14 +127,34 @@ module.exports = {
                         },
                     }
                 },
+                'grid-article-sm': {
+                    css: {
+                        p: {
+                            fontSize: theme('fontSize.lg'),
+                        },
+                        h3: {
+                            fontSize: theme('fontSize.3xl'),
+                        },
+                    }
+                },
                 'grid-article-large': {
                     css: {
                         p: {
                             fontWeight: theme('fontWeight.bold'),
                             fontSize: theme('fontSize.5xl'),
+                            lineHeight: '3rem',
                         },
                     }
-                }
+                },
+                'grid-article-large-sm': {
+                    css: {
+                        p: {
+                            fontWeight: theme('fontWeight.bold'),
+                            fontSize: theme('fontSize.2xl'),
+                            lineHeight: '2rem',
+                        },
+                    }
+                },
             }),
 
             screens: {

@@ -16,7 +16,7 @@
                         utilities: 'text-' ~ swatch.primary ~ ' mb-4 font-mono',
                     })
                 -}}
-                
+
                 <h2 class="font-primary text-5xl font-bold mb-8">
                     {{- render.atom('text', 'title', { content: content.heading }) -}}
                 </h2>
@@ -26,6 +26,7 @@
                     {{- render.atom('button', 'primary', {
                         url: content.button.getUrl(),
                         text: content.button.getText(),
+                        target: content.button.getTarget(),
                         gaCategory: 'header-section-cta',
                         gaAction: 'click',
                         gaLabel: content.button.getUrl(),
@@ -34,7 +35,7 @@
                 {% else %}
 
                     <hr class="h-1 w-32 bg-{{- swatch.primary -}}">
-                        
+
                 {% endif %}
             </div>
 

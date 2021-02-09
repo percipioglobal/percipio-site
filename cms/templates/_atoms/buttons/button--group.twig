@@ -28,6 +28,7 @@
                 {{- render.atom('button', values.type, {
                     url: button.target.getUrl(),
                     text: button.target.getText(),
+                    target: button.target.getTarget(),
                     gaCategory: values.gaCategory ??? null,
                     gaAction: values.gaAction ??? null,
                     gaLabel: values.gaLabel ??? button.target.getUrl(),
