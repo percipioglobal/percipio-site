@@ -42,7 +42,9 @@ module.exports = {
                 /w-2\/3$/,
                 /w-3\/4$/,
                 /grid-article$/,
+                /grid-article-sm$/,
                 /grid-article-large$/,
+                /grid-article-large-sm$/,
             ],
         }
     },
