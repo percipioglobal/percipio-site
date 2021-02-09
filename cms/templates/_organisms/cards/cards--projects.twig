@@ -13,8 +13,8 @@
             {%- for card in projects -%}
                 {%- include '_molecules/cards/card--project' ignore missing with {
                     content: card,
-                    size: loop.first ? 'large' : 'small',
-                    utilities: loop.first ? 'col-span-8' : 'col-span-8 lg:col-span-4',
+                    size: 'large',
+                    utilities: 'col-span-8',
                 } -%}
             {%- endfor -%}
         </div>

@@ -133,25 +133,25 @@ module.exports = {
 
             fontFamily: {
                 primary: [
-                    'Open Sans', 
-                    'ui-sans-serif', 
-                    'system-ui', 
-                    '-apple-system', 
-                    'Roboto', 
-                    'Helvetica Neue', 
-                    'Arial', 
-                    'Noto Sans', 
+                    'Open Sans',
+                    'ui-sans-serif',
+                    'system-ui',
+                    '-apple-system',
+                    'Roboto',
+                    'Helvetica Neue',
+                    'Arial',
+                    'Noto Sans',
                     'sans-serif',
                 ],
                 mono: [
-                    'Source Code Pro', 
-                    'ui-monospace', 
-                    'SFMono-Regular', 
-                    'Menlo', 
-                    'Monaco', 
-                    'Consolas', 
-                    'Liberation Mono', 
-                    'Courier New', 
+                    'Source Code Pro',
+                    'ui-monospace',
+                    'SFMono-Regular',
+                    'Menlo',
+                    'Monaco',
+                    'Consolas',
+                    'Liberation Mono',
+                    'Courier New',
                     'monospace'
                 ]
             },
@@ -363,8 +363,13 @@ module.exports = {
                 ...theme('spacing'),
                 '2/3': '66.666vh',
                 '3/4': '75vh',
+                '90vh': '90vh',
             }),
-                
+
+            height: {
+                '90vh': '90vh',
+            },
+
             transitionTimingFunction: {
                 'blog': 'cubic-bezier(.58,.3,.005,1) 0s 1',
             },

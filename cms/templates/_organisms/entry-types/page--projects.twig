@@ -9,8 +9,9 @@
     content: entry,
 } -%}
 
-<div id="content" class="container max-w-screen-hd px-8 mx-auto">
+<div id="content">
     {%- include '_organisms/cards/cards--projects' ignore missing with {
         content: entry,
+        spacing: 0,
     } -%}
 </div>
