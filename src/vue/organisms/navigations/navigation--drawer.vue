@@ -68,6 +68,23 @@
             ...mapGetters(['getCsrfToken', 'getNavigationActive', 'getNavigationGqlToken', 'getSocialMediaLinks', 'getNavigationPrimary']),
         },
 
+        methods: {
+            closeMenu(evt) {
+                if (evt.keyCode === 27) {
+                    this.$store.commit('setNavigationActive', false);
+                    document.body.classList.remove("overflow-hidden");
+                }
+            }
+        },
+
+        created: function(){
+            document.addEventListener('keyup', this.closeMenu);
+        },
+
+        destroyed: function(){
+            document.removeEventListener('keyup', this.closeMenu);
+        },
+
         async mounted() {
             // Get the CSRF param to verify submissions before attempting any other queries
             if ( !this.getCsrfToken ) {
