@@ -107,6 +107,16 @@ module.exports = {
                         },
                     }
                 },
+                'grid-sm': {
+                    css: {
+                        p: {
+                            fontSize: theme('fontSize.lg'),
+                        },
+                        h3: {
+                            fontSize: theme('fontSize.xl'),
+                        },
+                    }
+                },
                 'grid-article': {
                     css: {
                         p: {
@@ -117,14 +127,34 @@ module.exports = {
                         },
                     }
                 },
+                'grid-article-sm': {
+                    css: {
+                        p: {
+                            fontSize: theme('fontSize.lg'),
+                        },
+                        h3: {
+                            fontSize: theme('fontSize.3xl'),
+                        },
+                    }
+                },
                 'grid-article-large': {
                     css: {
                         p: {
                             fontWeight: theme('fontWeight.bold'),
                             fontSize: theme('fontSize.5xl'),
+                            lineHeight: '3rem',
                         },
                     }
-                }
+                },
+                'grid-article-large-sm': {
+                    css: {
+                        p: {
+                            fontWeight: theme('fontWeight.bold'),
+                            fontSize: theme('fontSize.2xl'),
+                            lineHeight: '2rem',
+                        },
+                    }
+                },
             }),
 
             screens: {
@@ -133,25 +163,25 @@ module.exports = {
 
             fontFamily: {
                 primary: [
-                    'Open Sans', 
-                    'ui-sans-serif', 
-                    'system-ui', 
-                    '-apple-system', 
-                    'Roboto', 
-                    'Helvetica Neue', 
-                    'Arial', 
-                    'Noto Sans', 
+                    'Open Sans',
+                    'ui-sans-serif',
+                    'system-ui',
+                    '-apple-system',
+                    'Roboto',
+                    'Helvetica Neue',
+                    'Arial',
+                    'Noto Sans',
                     'sans-serif',
                 ],
                 mono: [
-                    'Source Code Pro', 
-                    'ui-monospace', 
-                    'SFMono-Regular', 
-                    'Menlo', 
-                    'Monaco', 
-                    'Consolas', 
-                    'Liberation Mono', 
-                    'Courier New', 
+                    'Source Code Pro',
+                    'ui-monospace',
+                    'SFMono-Regular',
+                    'Menlo',
+                    'Monaco',
+                    'Consolas',
+                    'Liberation Mono',
+                    'Courier New',
                     'monospace'
                 ]
             },
@@ -363,8 +393,13 @@ module.exports = {
                 ...theme('spacing'),
                 '2/3': '66.666vh',
                 '3/4': '75vh',
+                '90vh': '90vh',
             }),
-                
+
+            height: {
+                '90vh': '90vh',
+            },
+
             transitionTimingFunction: {
                 'blog': 'cubic-bezier(.58,.3,.005,1) 0s 1',
             },

@@ -93,10 +93,10 @@ fields:
           __assoc__:
             -
               - label
-              - regular
+              - Regular
             -
               - value
-              - prose-grid-article
+              - 'prose-grid-article-sm md:prose-grid-article'
             -
               - default
               - '1'
@@ -104,10 +104,10 @@ fields:
           __assoc__:
             -
               - label
-              - large
+              - Large
             -
               - value
-              - prose-grid-article-large
+              - 'prose-grid-article-large-sm md:prose-grid-article-large'
             -
               - default
               - ''
