@@ -1,0 +1,56 @@
+fieldLayouts:
+  b087f96c-a2d6-4652-9ed3-ab5970df7019:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6c55f6b0-899a-471f-ae96-b7b9f941abce
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: navigation
+hasTitleField: false
+name: Navigation
+section: 92164c9b-e1af-4a4e-b639-44a2b5d79bd3
+sortOrder: 1
+titleFormat: '{navigationButton.getText()}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

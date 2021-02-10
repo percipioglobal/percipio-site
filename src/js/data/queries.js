@@ -1,10 +1,24 @@
 
+// export const NAVIGATION_PRIMARY_QUERY = `
+//     {
+//         nodes (navHandle: "primaryNavigation") {
+//             id,
+//             title,
+//             url,
+//         }
+//     }
+// `
+
 export const NAVIGATION_PRIMARY_QUERY = `
-    {
-        nodes (navHandle: "primaryNavigation") {
-            id,
-            title,
-            url,
+    query {
+        entries(section: "navigation"){
+            ...on navigation_navigation_Entry{
+                navigationButton{
+                    text,
+                    target,
+                    url
+                }
+            }
         }
     }
 `
@@ -23,6 +37,6 @@ export const SOCIAL_MEDIA_QUERY = `
                     }
                 }
             }
-        }  
+        }
     }
 `

@@ -1,6 +1,8 @@
 isPublic: false
 name: Navigation
 scope:
+  - 'sections.92164c9b-e1af-4a4e-b639-44a2b5d79bd3:read'
+  - 'entrytypes.74f6b1ab-d7f2-4df1-89fe-1601cf0697a0:read'
   - 'globalsets.64547f99-7471-496a-8b02-5d48e09a72f9:read'
   - 'navigationNavs.all:read'
   - 'navigationNavs.d8cef538-a756-4496-b7f6-0e0bb61c14c2:read'

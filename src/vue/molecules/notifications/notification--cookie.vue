@@ -24,12 +24,18 @@
       <button
         @click.prevent="acceptCookie"
         :class="[
-          'inline-flex border-2 px-4 py-2 font-extrabold text-lg border-white-100  hover:bg-white-100',
+          'inline-flex relative border-2 px-4 py-2 font-extrabold text-lg border-white-100 group overflow-hidden',
           'hover:text-' + options.colour,
         ]"
         :title="options.accept"
       >
-        {{ options.accept }}
+        <span class="relative z-10 transition-colors duration-200 delay-75 ease-in-out">
+            {{ options.accept }}
+        </span>
+        <div :class="[
+            'absolute top-0 left-0 w-full h-full transform -translate-x-full group-hover:-translate-x-0 transition duration-300 ease-blog',
+            'bg-white-100'
+        ]"></div>
       </button>
     </div>
   </div>

@@ -8,24 +8,33 @@
 
         <div class="h-full">
 
-            <div class="w-full h-full py-16 flex flex-col items-end">
+            <div class="w-full h-full py-16 flex flex-col items-end ">
                 <!-- main navigation links -->
 
-                <div
-                    class="space-y-4 pb-12 w-full"
-                    v-if="getNavigationPrimary"
-                >
-
-                    <a
-                        v-for="item in getNavigationPrimary"
-                        :key="item.id"
-                        :href="item.url"
-                        class="block container mx-auto text-right capitalize text-4xl font-bold hover:underline pr-16"
-                        :title="item.title"
+                <div class="container mx-auto">
+                    <div
+                        class="pb-12"
+                        v-if="getNavigationPrimary"
                     >
-                        {{ item.title }}
-                    </a>
 
+                        <a
+                            v-for="item in getNavigationPrimary"
+                            :key="item.navigationButton.text"
+                            :href="item.navigationButton.url"
+                            :target="item.navigationButton.target ? item.navigationButton.target : '_self'"
+                            class="block text-right capitalize text-4xl font-bold pr-16"
+                            :title="item.navigationButton.text"
+                        >
+                            <div class="inline-block py-2 px-4 relative group overflow-hidden">
+                                <span class="relative z-10 group-hover:text-white-100 transition duration-300">{{ item.navigationButton.text }}</span>
+                                <div :class="[
+                                    'absolute top-0 left-0 w-full h-full transform -translate-x-full group-hover:-translate-x-0 transition duration-300 ease-blog',
+                                    'bg-' + color
+                                ]"></div>
+                            </div>
+                        </a>
+
+                    </div>
                 </div>
 
                 <div class="container mx-auto flex justify-end">
@@ -36,18 +45,24 @@
 
                 <!-- social media links -->
 
-                <div class="space-y-2 container mx-auto" v-if="getSocialMediaLinks">
+                <div class="container mx-auto" v-if="getSocialMediaLinks">
 
                     <a
                         v-for="social in getSocialMediaLinks.socialMedia"
                         :key="social.id"
                         :href="social.socialMediaUrl.url"
-                        class="block capitalize text-lg font-bold hover:underline pr-16 text-right"
+                        class="block capitalize text-lg font-bold pr-16 text-right"
                         :title="social.socialMediaType"
                         target="_blank"
                         rel="noopener"
                     >
-                        {{ social.socialMediaType }}
+                        <div class="inline-block px-2 mx-2 relative group overflow-hidden">
+                            <span class="relative z-10 group-hover:text-white-100 transition duration-300">{{ social.socialMediaType }}</span>
+                            <div :class="[
+                                'absolute top-0 left-0 w-full h-full transform -translate-x-full group-hover:-translate-x-0 transition duration-300 ease-blog',
+                                'bg-' + color
+                            ]"></div>
+                        </div>
                     </a>
 
                 </div>
@@ -64,6 +79,14 @@
     import { mapGetters } from 'vuex';
 
     export default {
+        props: {
+            color: {
+                type: String,
+                required: false,
+                default: 'blue-600',
+            }
+        },
+
         computed: {
             ...mapGetters(['getCsrfToken', 'getNavigationActive', 'getNavigationGqlToken', 'getSocialMediaLinks', 'getNavigationPrimary']),
         },
