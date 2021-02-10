@@ -1,22 +1,34 @@
-
-// export const NAVIGATION_PRIMARY_QUERY = `
-//     {
-//         nodes (navHandle: "primaryNavigation") {
-//             id,
-//             title,
-//             url,
-//         }
-//     }
-// `
-
 export const NAVIGATION_PRIMARY_QUERY = `
     query {
         entries(section: "navigation"){
             ...on navigation_navigation_Entry{
-                navigationButton{
-                    text,
-                    target,
-                    url
+                target {
+                    title,
+                    url,
+                    ...on pages_blogPage_Entry {
+                        colourSwatch,
+                    },
+                    ...on pages_teamPage_Entry {
+                        colourSwatch
+                    },
+                    ...on pages_contentPage_Entry {
+                        colourSwatch
+                    }
+                    ...on pages_contactPage_Entry {
+                        colourSwatch
+                    }
+                    ...on pages_landingsPage_Entry {
+                        colourSwatch
+                    }
+                    ...on pages_projectsPage_Entry {
+                        colourSwatch
+                    }
+                    ...on pages_servicesPage_Entry {
+                        colourSwatch
+                    }
+                    ...on pages_vacanciesPage_Entry {
+                        colourSwatch
+                    }							
                 }
             }
         }
