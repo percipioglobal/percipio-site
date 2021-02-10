@@ -144,7 +144,7 @@ module.exports = {
                         p: {
                             fontWeight: theme('fontWeight.bold'),
                             fontSize: theme('fontSize.5xl'),
-                            lineHeight: '3rem',
+                            lineHeight: '1.25',
                         },
                     }
                 },
@@ -153,7 +153,7 @@ module.exports = {
                         p: {
                             fontWeight: theme('fontWeight.bold'),
                             fontSize: theme('fontSize.2xl'),
-                            lineHeight: '2rem',
+                            lineHeight: '1.25',
                         },
                     }
                 },

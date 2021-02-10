@@ -13,8 +13,9 @@
 			</svg>
 		</div>
 		<div class="text-center font-mono text-sm pt-16 text-pink-600">
-			{%- set text = "made with ♥ by Percipio"|raw %}
-			{{- render.atom('text', 'title', { content: text }) -}}
+			<span class="inline-block ml-4">made with</span><span class="inline-block mx-2">♥</span><span>by Percipio</span>
+			{#} {%- set text = "made with ♥ by Percipio" | raw %}
+			{{- render.atom('text', 'title', { content: text }) -}} #}
 		</div>
 	</div>
 
