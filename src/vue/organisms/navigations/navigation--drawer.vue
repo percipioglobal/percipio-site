@@ -16,24 +16,7 @@
                         class="pb-12"
                         v-if="getNavigationPrimary"
                     >
-
-                        <a
-                            v-for="item in getNavigationPrimary"
-                            :key="item.navigationButton.text"
-                            :href="item.navigationButton.url"
-                            :target="item.navigationButton.target ? item.navigationButton.target : '_self'"
-                            class="block text-right capitalize text-4xl font-bold pr-16"
-                            :title="item.navigationButton.text"
-                        >
-                            <div class="inline-block py-2 px-4 relative group overflow-hidden">
-                                <span class="relative z-10 group-hover:text-white-100 transition duration-300">{{ item.navigationButton.text }}</span>
-                                <div :class="[
-                                    'absolute top-0 left-0 w-full h-full transform -translate-x-full group-hover:-translate-x-0 transition duration-300 ease-blog',
-                                    'bg-' + color
-                                ]"></div>
-                            </div>
-                        </a>
-
+                        <navigation--item v-for="item in getNavigationPrimary" :item="item" :key="item.id"></navigation--item>
                     </div>
                 </div>
 
@@ -45,25 +28,8 @@
 
                 <!-- social media links -->
 
-                <div class="container mx-auto" v-if="getSocialMediaLinks">
-
-                    <a
-                        v-for="social in getSocialMediaLinks.socialMedia"
-                        :key="social.id"
-                        :href="social.socialMediaUrl.url"
-                        class="block capitalize text-lg font-bold pr-16 text-right"
-                        :title="social.socialMediaType"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        <div class="inline-block px-2 mx-2 relative group overflow-hidden">
-                            <span class="relative z-10 group-hover:text-white-100 transition duration-300">{{ social.socialMediaType }}</span>
-                            <div :class="[
-                                'absolute top-0 left-0 w-full h-full transform -translate-x-full group-hover:-translate-x-0 transition duration-300 ease-blog',
-                                'bg-' + color
-                            ]"></div>
-                        </div>
-                    </a>
+                <div class="container mx-auto" v-if="getSocialMediaLinks && typeof(getSocialMediaLinks.socialMedia) !== 'undefined'">
+                    <navigation--social-item v-for="item in getSocialMediaLinks.socialMedia" :item="item" :color="color" :key="item.id"></navigation--social-item>
 
                 </div>
 
@@ -85,6 +51,10 @@
                 required: false,
                 default: 'blue-600',
             }
+        },
+        components: {
+            'navigation--item': () => import(/* webpackChunkName: "navigation--item" */ '../../molecules/navigations/navigation--item.vue'),
+            'navigation--social-item': () => import(/* webpackChunkName: "navigation--social-item" */ '../../molecules/navigations/navigation--social-item.vue'),
         },
 
         computed: {

@@ -3,6 +3,7 @@ export const NAVIGATION_PRIMARY_QUERY = `
         entries(section: "navigation"){
             ...on navigation_navigation_Entry{
                 target {
+                    id,
                     title,
                     url,
                     ...on pages_blogPage_Entry {
@@ -28,7 +29,7 @@ export const NAVIGATION_PRIMARY_QUERY = `
                     }
                     ...on pages_vacanciesPage_Entry {
                         colourSwatch
-                    }							
+                    }
                 }
             }
         }
