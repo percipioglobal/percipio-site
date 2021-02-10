@@ -9,7 +9,10 @@
     <span class="text-2xl font-extrabold block text-white-100 pb-3">{{
       options.title
     }}</span>
-    <slot></slot>
+
+    <div class="text-white-100" v-html="options.article"></div>
+
+
     <div class="w-full flex items-center justify-end mt-5">
       <a
         :href="options.url"
