@@ -11,7 +11,7 @@
 				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
 			</h1>
 
-			<h2 class="font-primary font-extrabold leading-none text-4xl lg:text-6xl text-white-100">
+			<h2 class="font-primary font-extrabold text-4xl lg:text-6xl leading-tight lg:leading-tight text-white-100">
 				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
 			</h2>
 
@@ -29,7 +29,9 @@
                     type: 'primary',
                     utilities: 'mt-6 space-x-4',
                     gaCategory: 'hero-cta',
-                    gaAction: 'click'
+                    gaAction: 'click',
+					swatch: swatch,
+					inverted: false,
 
                 }) -}}
 
