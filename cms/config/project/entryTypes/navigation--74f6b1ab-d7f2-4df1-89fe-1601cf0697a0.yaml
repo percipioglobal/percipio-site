@@ -10,8 +10,8 @@ fieldLayouts:
             class: null
             disabled: false
             id: null
-            instructions: null
-            label: null
+            instructions: ''
+            label: Title
             max: null
             min: null
             name: null
@@ -28,18 +28,9 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 6c55f6b0-899a-471f-ae96-b7b9f941abce
-            instructions: ''
-            label: ''
-            required: '1'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e
-            instructions: ''
-            label: ''
-            required: '1'
+            instructions: null
+            label: null
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
