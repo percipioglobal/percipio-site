@@ -18,6 +18,8 @@
     gaCategory: options.gaCategory ??? null,
     gaAction: options.gaAction ??? null,
     gaLabel: options.gaLabel ??? null,
+    swatch: options.swatch ??? null,
+    inverted: options.inverted ??? false,
 } %}
 
 {%- minify -%}
@@ -29,9 +31,11 @@
                     url: button.target.getUrl(),
                     text: button.target.getText(),
                     target: button.target.getTarget(),
-                    gaCategory: values.gaCategory ??? null,
-                    gaAction: values.gaAction ??? null,
+                    gaCategory: values.gaCategory,
+                    gaAction: values.gaAction,
                     gaLabel: values.gaLabel ??? button.target.getUrl(),
+                    swatch: values.swatch,
+                    inverted: values.inverted,
                 }) -}}
             {%- endfor -%}
         {%- endif -%}
