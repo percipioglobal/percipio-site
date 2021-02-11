@@ -63,8 +63,8 @@ export const fetchNavigationPrimary = async({commit, state}) => {
 
     // Execute the GQL query
     await executeGqlQuery(api, NAVIGATION_PRIMARY_QUERY, variables, (data) => {
-        if (data.nodes) {
-            commit('setNavigationPrimary', data.nodes);
+        if (data.entries) {
+            commit('setNavigationPrimary', data.entries);
         }
     })
 }
