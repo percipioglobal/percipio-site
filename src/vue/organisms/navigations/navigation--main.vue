@@ -12,7 +12,7 @@
 
                 <button--hamburger :color="color"></button--hamburger>
 
-                <navigation--drawer></navigation--drawer>
+                <navigation--drawer :color="color"></navigation--drawer>
 
             </div>
 

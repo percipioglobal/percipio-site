@@ -8,24 +8,16 @@
 
         <div class="h-full">
 
-            <div class="w-full h-full py-16 flex flex-col items-end">
+            <div class="w-full h-full py-16 flex flex-col items-end ">
                 <!-- main navigation links -->
 
-                <div
-                    class="space-y-4 pb-12 w-full"
-                    v-if="getNavigationPrimary"
-                >
-
-                    <a
-                        v-for="item in getNavigationPrimary"
-                        :key="item.id"
-                        :href="item.url"
-                        class="block container mx-auto text-right capitalize text-4xl font-bold hover:underline pr-16"
-                        :title="item.title"
+                <div class="container mx-auto">
+                    <div
+                        class="pb-12"
+                        v-if="getNavigationPrimary"
                     >
-                        {{ item.title }}
-                    </a>
-
+                        <navigation--item v-for="item in getNavigationPrimary" :item="item" :key="item.id"></navigation--item>
+                    </div>
                 </div>
 
                 <div class="container mx-auto flex justify-end">
@@ -36,19 +28,8 @@
 
                 <!-- social media links -->
 
-                <div class="space-y-2 container mx-auto" v-if="getSocialMediaLinks">
-
-                    <a
-                        v-for="social in getSocialMediaLinks.socialMedia"
-                        :key="social.id"
-                        :href="social.socialMediaUrl.url"
-                        class="block capitalize text-lg font-bold hover:underline pr-16 text-right"
-                        :title="social.socialMediaType"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        {{ social.socialMediaType }}
-                    </a>
+                <div class="container mx-auto" v-if="getSocialMediaLinks && typeof(getSocialMediaLinks.socialMedia) !== 'undefined'">
+                    <navigation--social-item v-for="item in getSocialMediaLinks.socialMedia" :item="item" :color="color" :key="item.id"></navigation--social-item>
 
                 </div>
 
@@ -64,6 +45,18 @@
     import { mapGetters } from 'vuex';
 
     export default {
+        props: {
+            color: {
+                type: String,
+                required: false,
+                default: 'blue-600',
+            }
+        },
+        components: {
+            'navigation--item': () => import(/* webpackChunkName: "navigation--item" */ '../../molecules/navigations/navigation--item.vue'),
+            'navigation--social-item': () => import(/* webpackChunkName: "navigation--social-item" */ '../../molecules/navigations/navigation--social-item.vue'),
+        },
+
         computed: {
             ...mapGetters(['getCsrfToken', 'getNavigationActive', 'getNavigationGqlToken', 'getSocialMediaLinks', 'getNavigationPrimary']),
         },

@@ -1,0 +1,21 @@
+contentColumnType: string
+fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99
+handle: target
+instructions: ''
+name: Link
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: 'Add a link'
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2'
+  targetSiteId: null
+  validateRelatedElements: true
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries
