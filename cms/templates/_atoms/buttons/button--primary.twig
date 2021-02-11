@@ -38,11 +38,15 @@
                     {{ values.utilities ? values.utilities : '' -}}
                 "
         >
-            <span class="relative z-10 group-hover:text-{{- values.swatch ? values.swatch.primary : 'black-100' }} transition-colors duration-200 delay-75 ease-in-out">
+            <span class="relative z-10 group-hover:text-{{- values.inverted ? 'white-100' : ( values.swatch ? values.swatch.primary : 'black-100' ) }} transition-colors duration-200 delay-75 ease-in-out">
                 {{- values.text -}}
             </span>
 
-            <div class="absolute top-0 left-0 bg-white-100 w-full h-full transform -translate-x-full group-hover:-translate-x-0 transition duration-300 ease-blog"></div>
+            <div class="
+                absolute top-0 left-0 w-full h-full transform -translate-x-full group-hover:-translate-x-0 transition duration-300 ease-blog
+                {{ values.inverted ? 'bg-' ~ values.swatch.primary : 'bg-white-100 ' -}}
+                ">
+            </div>
         </a>
 
     {%- endminify -%}
