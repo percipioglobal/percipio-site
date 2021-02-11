@@ -23,6 +23,7 @@
     {%- set values = values|merge({
         optimized: options.image.optimizeTeasers ??? null,
         placeholder: options.placeholders.teaserPlaceholder[0].optimizeTeasers ??? null,
+        utilities: options.utilities ??? '',
     }) -%}
 
     {%- set animation = {
@@ -63,7 +64,7 @@
                         data-src="{{- values.optimized.src() ??? values.placeholder.src() -}}"
                         data-srcset="{{- values.optimized.srcset() ??? values.placeholder.srcset() -}}"
                         sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                        class="lazyload"
+                        class="lazyload {{ values.utilities -}}"
                         alt="{{- values.alt -}}"
 
                 />
