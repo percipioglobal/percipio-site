@@ -8,8 +8,6 @@ settings:
   allowCustomText: true
   allowTarget: false
   autoNoReferrer: false
-  customTextMaxLength: 0
-  customTextRequired: false
   defaultLinkName: url
   defaultText: ''
   enableAllLinkTypes: false
@@ -18,58 +16,6 @@ settings:
   enableTitle: false
   typeSettings:
     __assoc__:
-      -
-        - url
-        -
-          __assoc__:
-            -
-              - enabled
-              - true
-            -
-              - allowAliases
-              - false
-            -
-              - disableValidation
-              - false
-      -
-        - custom
-        -
-          __assoc__:
-            -
-              - enabled
-              - false
-            -
-              - allowAliases
-              - false
-            -
-              - disableValidation
-              - false
-      -
-        - email
-        -
-          __assoc__:
-            -
-              - enabled
-              - false
-            -
-              - allowAliases
-              - false
-            -
-              - disableValidation
-              - false
-      -
-        - tel
-        -
-          __assoc__:
-            -
-              - enabled
-              - false
-            -
-              - allowAliases
-              - false
-            -
-              - disableValidation
-              - false
       -
         - asset
         -
@@ -119,6 +65,16 @@ settings:
               - sources
               - '*'
       -
+        - site
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - sites
+              - '*'
+      -
         - user
         -
           __assoc__:
@@ -135,15 +91,57 @@ settings:
               - sources
               - '*'
       -
-        - site
+        - custom
         -
           __assoc__:
             -
               - enabled
               - false
             -
-              - sites
-              - '*'
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - email
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - tel
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
 translationKeyFormat: null
 translationMethod: none
 type: lenz\linkfield\fields\LinkField
