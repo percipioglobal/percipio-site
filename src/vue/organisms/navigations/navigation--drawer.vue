@@ -28,9 +28,8 @@
 
                 <!-- social media links -->
 
-                <div class="container mx-auto" v-if="getSocialMediaLinks && typeof(getSocialMediaLinks.socialMedia) !== 'undefined'">
+                <div class="container mx-auto" v-if="getSocialMediaLinks">
                     <navigation--social-item v-for="item in getSocialMediaLinks.socialMedia" :item="item" :color="color" :key="item.id"></navigation--social-item>
-
                 </div>
 
             </div>

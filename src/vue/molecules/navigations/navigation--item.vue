@@ -18,8 +18,10 @@
 </template>
 
 <script>
-
+    import { swatch } from '../../../js/mixins/computed';
+    
     export default {
+        mixins: [ swatch ],
         props: {
             item: {
                 type: Object,

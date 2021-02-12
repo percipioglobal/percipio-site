@@ -70,6 +70,6 @@ fieldLayout:
         name: 'Grid Settings'
         sortOrder: 3
 groupName: Media
-groupSortOrder: 2
+groupSortOrder: '2'
 matrixBlockType: b5a93f0f-21d1-4d67-abc8-a3789543d457
-sortOrder: 1
+sortOrder: '1'

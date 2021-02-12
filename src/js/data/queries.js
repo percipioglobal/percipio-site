@@ -1,7 +1,7 @@
 export const NAVIGATION_PRIMARY_QUERY = `
     query {
         entries(section: "navigation"){
-            ...on navigation_navigation_Entry{
+            ...on navigation_navigation_Entry {
                 target {
                     id,
                     title,
