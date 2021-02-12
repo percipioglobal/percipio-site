@@ -6,10 +6,10 @@
         target="_blank"
         rel="noopener"
     >
-        <div class="inline-block px-2 mx-2 relative group overflow-hidden">
+        <div class="px-2 mx-2 relative group overflow-hidden">
             <span class="relative z-10 group-hover:text-white-100 transition duration-300">{{ item.socialMediaType }}</span>
             <div :class="[
-                'absolute top-0 left-0 w-full h-full transform -translate-x-full group-hover:-translate-x-0 transition duration-300 ease-blog',
+                'absolute top-0 left-0 w-full h-full transform translate-x-full group-hover:translate-x-0 transition duration-300 ease-blog',
                 'bg-' + color
             ]"></div>
         </div>
