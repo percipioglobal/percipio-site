@@ -55,7 +55,5 @@ settings:
   storageClass: ''
   subfolder: content/
 sortOrder: 5
-titleTranslationKeyFormat: null
-titleTranslationMethod: site
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL

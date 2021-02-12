@@ -57,6 +57,6 @@ fieldLayout:
         name: 'Grid Settings'
         sortOrder: 2
 groupName: Content
-groupSortOrder: '1'
+groupSortOrder: 1
 matrixBlockType: 6b4e5ab6-805b-4edb-a497-38c99dffe618
-sortOrder: '2'
+sortOrder: 2

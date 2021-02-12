@@ -70,6 +70,6 @@ fieldLayout:
         name: 'Grid Settings'
         sortOrder: 3
 groupName: Images
-groupSortOrder: '2'
+groupSortOrder: 2
 matrixBlockType: 5b6038ce-ce47-4fe5-b558-2ac46d701434
-sortOrder: '1'
+sortOrder: 1
