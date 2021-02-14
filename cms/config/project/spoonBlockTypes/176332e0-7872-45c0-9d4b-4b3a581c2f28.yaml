@@ -39,6 +39,6 @@ fieldLayout:
         name: 'Grid Settings'
         sortOrder: 2
 groupName: Grids
-groupSortOrder: '6'
+groupSortOrder: 6
 matrixBlockType: 924c71a7-4d25-4b3b-9a46-2b1ea495cefe
-sortOrder: '2'
+sortOrder: 2

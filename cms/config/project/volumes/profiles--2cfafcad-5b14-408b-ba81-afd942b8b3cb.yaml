@@ -55,7 +55,5 @@ settings:
   storageClass: ''
   subfolder: profile-images/
 sortOrder: 7
-titleTranslationKeyFormat: null
-titleTranslationMethod: site
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL
