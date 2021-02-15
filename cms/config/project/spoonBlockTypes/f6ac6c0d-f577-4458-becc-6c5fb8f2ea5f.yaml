@@ -1,12 +1,12 @@
 context: global
 field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
 fieldLayout:
-  fc506964-3d69-43e7-aad5-b59a2ed2f9a6:
+  819c4e48-3c57-4084-9962-3008eb693bd8:
     tabs:
       -
         elements:
           -
-            fieldUid: c499bc8d-734b-4fe4-b74e-dca793aba082
+            fieldUid: a9ba876e-c0bf-4a8c-b77e-e926de382189
             instructions: null
             label: null
             required: false
@@ -19,7 +19,7 @@ fieldLayout:
       -
         elements:
           -
-            fieldUid: a81ab3c0-c52b-4817-8820-c0e69e9a0d2d
+            fieldUid: c5638e5a-a8f8-4f97-ab00-7247cd30b054
             instructions: null
             label: null
             required: false
@@ -28,25 +28,7 @@ fieldLayout:
             warning: null
             width: 100
           -
-            fieldUid: b9a667dd-8941-472a-89b5-e3d1fe877aec
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: b723924c-f0d9-4479-945f-b43f96e8e1e5
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 69564637-9091-434c-aa5c-50eef46f8c93
+            fieldUid: 082e47d2-643f-411e-a751-0d9f915db739
             instructions: null
             label: null
             required: false
@@ -56,7 +38,7 @@ fieldLayout:
             width: 100
         name: 'Grid Settings'
         sortOrder: 2
-groupName: Content
-groupSortOrder: '1'
-matrixBlockType: 6b4e5ab6-805b-4edb-a497-38c99dffe618
-sortOrder: '2'
+groupName: Grids
+groupSortOrder: 4
+matrixBlockType: f8214a2b-3046-4868-bb6b-775397e77533
+sortOrder: 1

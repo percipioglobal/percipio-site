@@ -1,21 +1,12 @@
 context: global
 field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
 fieldLayout:
-  9388b911-8cc1-46dc-87ab-42ce1bef09f7:
+  fc506964-3d69-43e7-aad5-b59a2ed2f9a6:
     tabs:
       -
         elements:
           -
-            fieldUid: afc7e63f-6b0d-4d17-8c23-b13f049166f3
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 45539eda-7272-4a6b-b4a2-2b629a2742ec
+            fieldUid: c499bc8d-734b-4fe4-b74e-dca793aba082
             instructions: null
             label: null
             required: false
@@ -28,7 +19,7 @@ fieldLayout:
       -
         elements:
           -
-            fieldUid: d7413814-0c30-451d-a383-d39d7cc3f78b
+            fieldUid: a81ab3c0-c52b-4817-8820-c0e69e9a0d2d
             instructions: null
             label: null
             required: false
@@ -37,20 +28,7 @@ fieldLayout:
             warning: null
             width: 100
           -
-            fieldUid: 040f68f0-b32f-4544-8b97-56d71c7f3428
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: 'Image Settings'
-        sortOrder: 2
-      -
-        elements:
-          -
-            fieldUid: f86e951a-5dea-4768-b733-ae5506291930
+            fieldUid: b9a667dd-8941-472a-89b5-e3d1fe877aec
             instructions: null
             label: null
             required: false
@@ -59,7 +37,16 @@ fieldLayout:
             warning: null
             width: 100
           -
-            fieldUid: ce64c3ac-ec79-4405-98a9-aea16011e258
+            fieldUid: b723924c-f0d9-4479-945f-b43f96e8e1e5
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 69564637-9091-434c-aa5c-50eef46f8c93
             instructions: null
             label: null
             required: false
@@ -68,8 +55,8 @@ fieldLayout:
             warning: null
             width: 100
         name: 'Grid Settings'
-        sortOrder: 3
-groupName: Images
-groupSortOrder: '2'
-matrixBlockType: 5b6038ce-ce47-4fe5-b558-2ac46d701434
-sortOrder: '1'
+        sortOrder: 2
+groupName: Content
+groupSortOrder: 1
+matrixBlockType: 6b4e5ab6-805b-4edb-a497-38c99dffe618
+sortOrder: 2
