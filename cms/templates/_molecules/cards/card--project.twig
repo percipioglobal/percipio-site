@@ -6,7 +6,7 @@
 
 {%- minify -%}
 <div class="{{- utilities -}}">
-    <div class="relative group {{ size == 'large' ? 'min-h-90vh' : '' -}}">
+    <div class="relative {{ size == 'large' ? 'min-h-90vh' : '' -}}">
 
         <div class="overflow-hidden w-full {{ size == 'large' ? 'h-90vh' : 'h-full' -}}">
             {{- render.atom('image', 'teaser', {
@@ -19,15 +19,21 @@
             }) -}}
         </div>
 
-        <div class="absolute bg-{{- swatch.primary }} border-b-8 border-{{- swatch.secondary }} top-1/2 transform -translate-y-1/2 p-6 w-4/5 lg:w-1/3">
+        <div class="absolute group bg-{{- swatch.primary }} border-b-8 border-{{- swatch.secondary }} bottom-14 left-14 p-6 w-4/5 lg:w-1/3">
             {{- render.atom('text', 'overline', {
                     content: content.client[0].title,
                     utilities: 'font-mono text-white-100',
                 })
             -}}
 
-            <div class="-mb-4">
-                {{- render.atom('text', 'card-title', { content: content.title }) -}}
+            {{- render.atom('text', 'card-title', { content: content.title }) -}}
+
+            <div class="-mt-2 mb-8">
+                {{- render.atom('button', 'link', {
+                    text: "View case study",
+                    swatch: swatch,
+                    inverted: false,
+                }) -}}
             </div>
 
             {{- render.atom('chip', 'group', {
@@ -35,27 +41,22 @@
                 chips: content.projectCategories,
                 colors: swatch,
                 type: 'skills',
-                utilities: 'mt-10 mb-6',
+                utilities: 'mt-0 mb-0',
 
             }) -}}
 
-            {{- render.atom('button', 'primary', {
-                text: "View case study",
-                swatch: swatch,
-                inverted: false,
-            }) -}}
+            <a
+                href="{{- content.url -}}"
+                data-tag-category="card-project"
+                data-tag-action="click"
+                data-tag-label="{{- content.url -}}"
+                class="absolute inset-0 z-1"
+            >
+                <span class="sr-only">Read more about {{- content.title -}}</span>
+            </a>
 
         </div>
 
-        <a
-            href="{{- content.url -}}"
-            data-tag-category="card-project"
-            data-tag-action="click"
-            data-tag-label="{{- content.url -}}"
-            class="absolute inset-0 z-1"
-        >
-            <span class="sr-only">Read more about {{- content.title -}}</span>
-        </a>
     </div>
 </div>
 {%- endminify -%}
