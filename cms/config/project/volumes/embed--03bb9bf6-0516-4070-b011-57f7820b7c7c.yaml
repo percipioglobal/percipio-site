@@ -46,5 +46,7 @@ settings:
   storageClass: ''
   subfolder: embed/
 sortOrder: 11
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL

@@ -55,5 +55,7 @@ settings:
   storageClass: ''
   subfolder: heroes/
 sortOrder: 8
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL

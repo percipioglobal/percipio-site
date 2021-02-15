@@ -88,6 +88,6 @@ fieldLayout:
         name: Branding
         sortOrder: 3
 groupName: Content
-groupSortOrder: 1
+groupSortOrder: '1'
 matrixBlockType: 53319d58-a830-47a6-b6b4-47a0081f6deb
-sortOrder: 3
+sortOrder: '3'
