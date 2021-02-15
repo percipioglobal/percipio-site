@@ -9,18 +9,12 @@
     icon: (STR) -- the icon for the button ( optional )
     utlities: (STR) -- the button utility from TW for the last button in the loop
     swatch: (STR) -- add a colour swatch to button
-    size: (STR) -- define a button size
 
 #}
 
 {%- block button -%}
 
     {%- minify -%}
-
-        {%- set sizes = {
-            'small': 'px-4 py-2',
-            'large': 'px-8 py-4',
-        } -%}
 
         <a
             {{ values.url ? 'href=' ~ values.url : '' }}
@@ -29,10 +23,7 @@
             {{ values.gaLabel ? 'data-tag-label=' ~ values.gaLabel : '' }}
             {{ values.target ? 'target=' ~ values.target : '' }}
             aria-label="{{- values.text -}}"
-            class="relative overflow-hidden group inline-flex border-2 
-                    {{ sizes[values.size] is defined ? sizes[values.size] : sizes['large'] }} 
-                    font-extrabold text-lg 
-                    {{ values.inverted ? ( values.swatch ? 'border-' ~ values.swatch.primary : '' ) : 'border-white-100' }} 
+            class="relative overflow-hidden group inline-flex uppercase font-bold text-base
                     {{ values.inverted ? ( values.swatch ? 'text-' ~ values.swatch.primary : 'text-white-100' ) : 'text-white-100' }} 
                     {{ values.utilities ? values.utilities : '' -}}"
         >
@@ -40,11 +31,6 @@
                 {{- values.text -}}
             </span>
 
-            <div class="
-                absolute top-0 left-0 w-full h-full transform -translate-x-full group-hover:-translate-x-0 transition duration-300 ease-blog
-                {{ values.inverted ? 'bg-' ~ values.swatch.primary : 'bg-white-100 ' -}}
-                ">
-            </div>
         </a>
 
     {%- endminify -%}

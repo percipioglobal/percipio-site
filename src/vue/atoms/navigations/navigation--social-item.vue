@@ -1,7 +1,7 @@
 <template>
     <a
         :href="item.socialMediaUrl.url"
-        class="block capitalize text-lg font-bold pr-16 text-right"
+        class="block capitalize text-lg font-bold text-right"
         :title="item.socialMediaType"
         target="_blank"
         rel="noopener"

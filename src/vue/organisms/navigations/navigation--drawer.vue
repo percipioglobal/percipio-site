@@ -8,28 +8,30 @@
 
         <div class="h-full">
 
-            <div class="w-full h-full py-16 flex flex-col items-end ">
+            <div class="w-full h-full lg:py-16 flex flex-col items-end ">
                 <!-- main navigation links -->
 
-                <div class="container mx-auto">
-                    <div
-                        class="pb-12"
-                        v-if="getNavigationPrimary"
-                    >
+                <div class="container mx-auto flex flex-col items-end" v-if="getNavigationPrimary">
+
+                    <div class="w-full md:w-1/2 xl:w-1/3 pb-12 lg:pr-16">
                         <navigation--item v-for="item in getNavigationPrimary" :item="item" :key="item.id"></navigation--item>
                     </div>
-                </div>
 
-                <div class="container mx-auto flex justify-end">
+                    <div class="w-full md:w-1/2 xl:w-1/3 lg:pr-16" v-if="getSocialMediaLinks">
 
-                    <hr class="h-px bg-gray-800 mb-12 w-96" v-if="getSocialMediaLinks">
+                        <hr :class="
+                                [
+                                    'h-2 mb-12 w-full mr-16',
+                                    'bg-' + color, 
+                                ]" 
+                        >
 
-                </div>
+                    </div>
 
-                <!-- social media links -->
+                    <div class="w-full md:w-1/2 xl:w-1/3 lg:pr-16" v-if="getSocialMediaLinks">
+                        <navigation--social-item v-for="item in getSocialMediaLinks.socialMedia" :item="item" :color="color" :key="item.id"></navigation--social-item>
+                    </div>
 
-                <div class="container mx-auto" v-if="getSocialMediaLinks">
-                    <navigation--social-item v-for="item in getSocialMediaLinks.socialMedia" :item="item" :color="color" :key="item.id"></navigation--social-item>
                 </div>
 
             </div>
@@ -52,8 +54,8 @@
             }
         },
         components: {
-            'navigation--item': () => import(/* webpackChunkName: "navigation--item" */ '../../molecules/navigations/navigation--item.vue'),
-            'navigation--social-item': () => import(/* webpackChunkName: "navigation--social-item" */ '../../molecules/navigations/navigation--social-item.vue'),
+            'navigation--item': () => import(/* webpackChunkName: "navigation--item" */ '../../atoms/navigations/navigation--item.vue'),
+            'navigation--social-item': () => import(/* webpackChunkName: "navigation--social-item" */ '../../atoms/navigations/navigation--social-item.vue'),
         },
 
         computed: {
