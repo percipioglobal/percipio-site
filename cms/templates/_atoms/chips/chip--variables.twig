@@ -10,7 +10,7 @@
 
 #}
 
-{% set values = {
+{%- set values = {
 
     text: options.text ??? '',
     url: options.url ??? null,
@@ -19,7 +19,7 @@
     colors: options.colors ??? null,
     inverted: options.inverted ??? false,
 
-} %}
+} -%}
 
-{% block chip %}
-{% endblock %}
+{%- block chip -%}
+{%- endblock -%}
