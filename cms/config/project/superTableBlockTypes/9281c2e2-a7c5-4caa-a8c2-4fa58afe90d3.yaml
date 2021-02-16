@@ -1,14 +1,14 @@
-field: 8504d7aa-ffd4-42c5-932d-221e2c5e7b29
+field: 0c678c53-96ff-44d6-a01e-930d8d2c2b58
 fieldLayouts:
-  2c6f8cb7-2a00-400f-8ba1-455b6eb5adf1:
+  e10ccaee-b2fd-4079-96bf-7e12928d56a3:
     tabs:
       -
         elements:
           -
-            fieldUid: 720b0445-dc28-4b47-85df-59e4f03c666b
+            fieldUid: be599311-d84f-452b-a18f-58b4e571c077
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -16,20 +16,20 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  720b0445-dc28-4b47-85df-59e4f03c666b:
+  be599311-d84f-452b-a18f-58b4e571c077:
     contentColumnType: string
     fieldGroup: null
     handle: target
-    instructions: ''
+    instructions: 'Select and entry you want to refer to'
     name: Button
-    searchable: true
+    searchable: false
     settings:
       allowCustomText: true
-      allowTarget: true
+      allowTarget: false
       autoNoReferrer: false
       customTextMaxLength: 0
       customTextRequired: false
-      defaultLinkName: asset
+      defaultLinkName: entry
       defaultText: ''
       enableAllLinkTypes: false
       enableAriaLabel: false
@@ -43,7 +43,7 @@ fields:
               __assoc__:
                 -
                   - enabled
-                  - true
+                  - false
                 -
                   - allowAliases
                   - false

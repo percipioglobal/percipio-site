@@ -3,6 +3,8 @@
     'heroBuilder.heroMain:buttons.buttons',
     'heroBuilder.heroMain:heroImage',
     'heroBuilder.heroImage:image',
+    'heroBuilder.heroVideo:video',
+    'heroBuilder.heroVideo:buttons.buttons',
     ])
 %}
 
@@ -26,6 +28,12 @@
             {% case "heroImage" %}
 
                 {%- include '_organisms/heroes/hero--image' ignore missing with {
+                    content: block,
+                } -%}
+
+            {% case "heroVideo" %}
+
+                {%- include '_organisms/heroes/hero--video' ignore missing with {
                     content: block,
                 } -%}
 

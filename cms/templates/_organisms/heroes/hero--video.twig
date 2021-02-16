@@ -1,0 +1,56 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- minify -%}
+<section class="relative w-full min-h-3/4 pt-32 flex items-center overflow-hidden">
+	<div class="container max-w-screen-lg mx-auto py-20">
+
+		<div class="z-2 relative max-w-2xl px-12 py-6 bg-{{- swatch.primary }} border-b-8 border-{{- swatch.secondary -}}">
+
+			<h1 class="sr-only">
+				{{- seomatic.site.identity.genericName -}}:
+				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
+			</h1>
+
+			<h2 class="font-primary font-extrabold text-4xl lg:text-6xl leading-tight lg:leading-tight text-white-100">
+				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
+			</h2>
+
+			{% if content.description %}
+				<div class="prose prose-lg mt-8 md:mt-5 text-white-100">
+					{{- render.atom('text', 'content', { content: content.description }) -}}
+				</div>
+			{% endif %}
+
+            {% if content.buttons %}
+
+                {{- render.atom('button', 'group', {
+
+                    buttons: content.buttons,
+                    type: 'primary',
+                    utilities: 'mt-6 space-x-4',
+                    gaCategory: 'hero-cta',
+                    gaAction: 'click',
+					swatch: swatch,
+					inverted: false,
+
+                }) -}}
+
+            {% endif %}
+
+		</div>
+
+		<div class="absolute inset-0">
+			
+			{{- render.atom('video', 'hero', {
+				video: content.video[0],
+				attributes: 'muted autoplay loop playsinline',
+				alt: content.heading ??? entry.title,
+				placeholder: content.placeholder[0] ??? placeholders.teaserPlaceholder[0],
+				ratio: 'isFilled'
+			}) -}}
+
+		</div>
+
+	</div>
+</section>
+{%- endminify -%}
