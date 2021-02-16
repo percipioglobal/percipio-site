@@ -2,7 +2,7 @@
 
     <div>
         <nav :class="[
-            'fixed z-10 w-full bg-white-70 transition-all duration-500 ease-in-out',
+            'fixed z-20 w-full bg-white-70 transition-all duration-500 ease-in-out',
             showNavigation === true ? 'top-0' : '-top-full'
         ]">
 
@@ -49,7 +49,7 @@
                 }
                 this.prevScrollpos = currentScrollPos;
 
-                if(this.prevScrollpos === 0){
+                if(this.prevScrollpos < 30){
                     this.showNavigation = true;
                 }
             }
