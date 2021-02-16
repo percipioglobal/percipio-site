@@ -188,6 +188,33 @@ module.exports = {
                 ]
             },
 
+            animation: {
+                arrow: 'arrow .8s cubic-bezier(.58,.3,.005,1) 0s 1',
+                glitch: 'glitch .2s cubic-bezier(.25, .46, .45, .94) both infinite, opacity 4s infinite',
+                'glitch-reverse': 'glitch .2s cubic-bezier(.25, .46, .45, .94) reverse both infinite, opacity 4s infinite',
+            },
+
+            keyframes: {
+                arrow: {
+                    '0%, 100%': { transform: 'translateX(0)' }, 
+                    '50%': { transform: 'translateX(100%)' }, 
+                    '50.01%': { transform: 'translateX(-100%)' }, 
+                },
+                glitch: {
+                    '0%': { transform: 'translate(0)' },
+                    '20%': { transform: 'translate(-6px, 6px)' }, 
+                    '40%': { transform: 'translate(-6px, -6px)' }, 
+                    '60%': { transform: 'translate(6px, 6px)' }, 
+                    '80%': { transform: 'translate(6px, -6px)' },
+                    '100%': { transform: 'translate(0)' }, 
+                },
+                opacity: {
+                    '0%': { opacity: '0' },
+                    '40%': { opacity: '0' }, 
+                    '50%': { opacity: '1' }, 
+                }
+            },
+
             colors: {
 
                 transparent: 'transparent',
@@ -429,6 +456,7 @@ module.exports = {
     },
 
     variants: {
+        animation: ['hover', 'group-hover'],
         backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
         borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
         inset: ['responsive'],

@@ -1,5 +1,5 @@
 fieldLayouts:
-  0f702e3a-1fc0-40b2-8adf-baa8be301aa9:
+  4d23aa42-84b1-424c-ac87-896b08a33527:
     tabs:
       -
         elements:
@@ -26,29 +26,11 @@ fieldLayouts:
             type: craft\fieldlayoutelements\AssetTitleField
             warning: null
             width: 100
-          -
-            fieldUid: 6962a9b1-b802-4295-82b1-398470a9f54c
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: dcdd5839-4bb5-4669-8d82-d46ec4da660a
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Content
         sortOrder: 1
-handle: covers
+handle: video
 hasUrls: true
-name: Covers
+name: Video
 settings:
   addSubfolderToRootUrl: '1'
   autoFocalPoint: ''
@@ -62,9 +44,9 @@ settings:
   region: $S3_REGION
   secret: $S3_SECRET
   storageClass: ''
-  subfolder: covers/
-sortOrder: 6
+  subfolder: videos/
+sortOrder: 12
 titleTranslationKeyFormat: null
-titleTranslationMethod: site
+titleTranslationMethod: null
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL

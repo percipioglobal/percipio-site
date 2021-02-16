@@ -1,7 +1,7 @@
 <template>
     <a
         :href="item.socialMediaUrl.url"
-        class="block capitalize text-lg font-bold pr-16 text-right"
+        class="block capitalize text-lg font-bold text-right"
         :title="item.socialMediaType"
         target="_blank"
         rel="noopener"
@@ -10,7 +10,7 @@
             <span class="relative z-10 group-hover:text-white-100 transition duration-300">{{ item.socialMediaType }}</span>
             <div :class="[
                 'absolute top-0 left-0 w-full h-full transform translate-x-full group-hover:translate-x-0 transition duration-300 ease-blog',
-                'bg-' + color
+                'bg-' + swatch.primary
             ]"></div>
         </div>
     </a>
@@ -25,10 +25,9 @@
                 type: Object,
                 required: true,
             },
-            color: {
-                type: String,
-                required: false,
-                default: 'blue-600',
+            swatch: {
+                type: Object,
+                required: true,
             }
         },
     }

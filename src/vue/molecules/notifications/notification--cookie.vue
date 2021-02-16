@@ -49,24 +49,29 @@ export default {
       required: true,
     }
   },
-  data: function () {
-    return {
+
+  data: () => ({
       showCookie: false,
-      objContent: {}
-    };
-  },
+  }),
+
   methods: {
+
     acceptCookie() {
         const expiry = 5 * 24 * 60 * 60 * 1000;
         localStorage.setItem('cookie:show', expiry);
         this.setCookie();
     },
+
     setCookie() {
         this.showCookie = localStorage.getItem('cookie:show') ? false : true;
     }
+
   },
-  mounted(){
+
+  created() {
+
       this.setCookie();
+
   }
 };
 </script>

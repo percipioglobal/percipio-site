@@ -88,6 +88,6 @@ fieldLayout:
         name: Branding
         sortOrder: 3
 groupName: Quotes
-groupSortOrder: 3
+groupSortOrder: '3'
 matrixBlockType: de0ad924-50fa-43fc-9790-e44bf330cdd2
-sortOrder: 1
+sortOrder: '1'
