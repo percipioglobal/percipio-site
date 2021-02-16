@@ -10,9 +10,9 @@
 
                 <slot></slot>
 
-                <button--hamburger :color="color"></button--hamburger>
+                <button--hamburger :swatch="swatch"></button--hamburger>
 
-                <navigation--drawer :color="color"></navigation--drawer>
+                <navigation--drawer :swatch="swatch"></navigation--drawer>
 
             </div>
 
@@ -25,10 +25,9 @@
 
     export default {
         props: {
-            color: {
-                type: String,
-                required: false,
-                default: 'blue-600',
+            swatch: {
+                type: Object,
+                required: true,
             }
         },
         data: () => ({

@@ -1,14 +1,14 @@
 <template>
     <aside
         :class="[
-            'transform inset-0 bg-white-90 min-h-screen fixed h-full overflow-auto ease-in-out transition-opacity duration-300 -z-10 pt-32',
+            'transform inset-0 bg-white-90 min-h-screen fixed h-full ease-in-out transition-opacity duration-300 -z-10 pt-32',
             getNavigationActive ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
             ]"
     >
 
-        <div class="h-full">
+        <div class="h-full w-full">
 
-            <div class="w-full h-full lg:py-16 flex flex-col items-end ">
+            <div class="w-full h-full lg:py-16 flex flex-col items-end  overflow-auto">
                 <!-- main navigation links -->
 
                 <div class="container mx-auto flex flex-col items-end" v-if="getNavigationPrimary">
@@ -22,14 +22,14 @@
                         <hr :class="
                                 [
                                     'h-2 mb-12 w-full mr-16',
-                                    'bg-' + color, 
+                                    'bg-' + swatch.primary, 
                                 ]" 
                         >
 
                     </div>
 
                     <div class="w-full md:w-1/2 xl:w-1/3 lg:pr-16" v-if="getSocialMediaLinks">
-                        <navigation--social-item v-for="item in getSocialMediaLinks.socialMedia" :item="item" :color="color" :key="item.id"></navigation--social-item>
+                        <navigation--social-item v-for="item in getSocialMediaLinks.socialMedia" :item="item" :swatch="swatch" :key="item.id"></navigation--social-item>
                     </div>
 
                 </div>
@@ -37,6 +37,8 @@
             </div>
 
         </div>
+
+        <logo--main :swatch="swatch"></logo--main>
 
     </aside>
 </template>
@@ -47,15 +49,15 @@
 
     export default {
         props: {
-            color: {
-                type: String,
-                required: false,
-                default: 'blue-600',
+            swatch: {
+                type: Object,
+                required: true,
             }
         },
         components: {
             'navigation--item': () => import(/* webpackChunkName: "navigation--item" */ '../../atoms/navigations/navigation--item.vue'),
             'navigation--social-item': () => import(/* webpackChunkName: "navigation--social-item" */ '../../atoms/navigations/navigation--social-item.vue'),
+            'logo--main': () => import(/* webpackChunkName: "logo--main" */ '../../atoms/logos/logo--main.vue'),
         },
 
         computed: {
