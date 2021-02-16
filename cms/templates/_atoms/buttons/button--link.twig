@@ -29,11 +29,11 @@
                     {{ values.inverted ? ( values.swatch ? 'text-' ~ values.swatch.primary : 'text-white-100' ) : 'text-white-100' }} 
                     {{ values.utilities ? values.utilities : '' -}}"
         >
-            <span class="relative z-10 transition-colors duration-200 delay-75 ease-in-out">
+            <span class="inline-flex items-center relative transition-colors duration-200 delay-75 ease-in-out">
                 <span>{{- values.text -}}</span>
-                {% if icon %}
-                    <i class="ml-3  {{ icon -}}"></i>
-                {% endif %}
+                <span class="inline-flex ml-3 overflow-hidden text-2xl">
+                    <i class="group-hover:animate-arrow {{ icon -}}"></i>
+                </span>
             </span>
 
         </a>
