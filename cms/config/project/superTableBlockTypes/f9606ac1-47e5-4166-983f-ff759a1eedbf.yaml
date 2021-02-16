@@ -25,7 +25,7 @@ fields:
     searchable: true
     settings:
       allowCustomText: true
-      allowTarget: false
+      allowTarget: true
       autoNoReferrer: false
       customTextMaxLength: 0
       customTextRequired: false
@@ -43,7 +43,7 @@ fields:
               __assoc__:
                 -
                   - enabled
-                  - false
+                  - true
                 -
                   - allowAliases
                   - false
