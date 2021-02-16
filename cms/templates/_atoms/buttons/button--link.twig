@@ -16,6 +16,8 @@
 
     {%- minify -%}
 
+        {%- set icon = options.icon ??? '' -%}
+
         <a
             {{ values.url ? 'href=' ~ values.url : '' }}
             {{ values.gaCategory ? 'data-tag-category=' ~ values.gaCategory : '' }}
@@ -27,8 +29,11 @@
                     {{ values.inverted ? ( values.swatch ? 'text-' ~ values.swatch.primary : 'text-white-100' ) : 'text-white-100' }} 
                     {{ values.utilities ? values.utilities : '' -}}"
         >
-            <span class="relative z-10 group-hover:text-{{- values.inverted ? 'white-100' : ( values.swatch ? values.swatch.primary : 'black-100' ) }} transition-colors duration-200 delay-75 ease-in-out">
-                {{- values.text -}}
+            <span class="relative z-10 transition-colors duration-200 delay-75 ease-in-out">
+                <span>{{- values.text -}}</span>
+                {% if icon %}
+                    <i class="ml-3  {{ icon -}}"></i>
+                {% endif %}
             </span>
 
         </a>

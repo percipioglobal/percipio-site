@@ -16,6 +16,7 @@ import {
     faHashtag as fasHashtag,
     faDownload as fasDownload,
     faCircle as fasCircle,
+    faLongArrowAltRight as fasLongArrowAltRight,
     faSquareFull as fasSquareFull
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -50,6 +51,7 @@ library.add(
     fasHashtag,
     fasDownload,
     fasCircle,
+    fasLongArrowAltRight,
     fasSquareFull
 );
 
