@@ -157,6 +157,11 @@ module.exports = {
                         },
                     }
                 },
+                'text-shadow': {
+                    css: {
+                        textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)'
+                    }
+                }
             }),
 
             screens: {
@@ -186,6 +191,18 @@ module.exports = {
                     'Courier New',
                     'monospace'
                 ]
+            },
+
+            animation: {
+                arrow: 'arrow .8s cubic-bezier(.58,.3,.005,1) 0s 1',
+            },
+
+            keyframes: {
+                arrow: {
+                    '0%, 100%': { transform: 'translateX(0)' }, 
+                    '50%': { transform: 'translateX(100%)' }, 
+                    '50.01%': { transform: 'translateX(-100%)' }, 
+                }
             },
 
             colors: {
@@ -429,6 +446,7 @@ module.exports = {
     },
 
     variants: {
+        animation: ['hover', 'group-hover'],
         backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
         borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
         inset: ['responsive'],
