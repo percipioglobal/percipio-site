@@ -2,9 +2,9 @@
 
 	<div class="my-16">
         <div class="container mx-auto max-w-screen-lg">
-            <pre class="line-numbers">
-                <code class="language-{{- content.codeLanguage -}}">
-                    {{- content.code | raw | trim -}}
+            <pre class="line-numbers font-mono">
+                <code class="{{- 'language-' ~ content.codeLanguage -}}" v-pre>
+                    {{- content.code -}}
                 </code>
             </pre>
         </div>
