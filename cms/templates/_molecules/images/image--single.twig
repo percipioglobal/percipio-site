@@ -6,8 +6,8 @@
         <div class="mx-auto my-12 md:my-24 {{ content.position == 'full' ? '-mx-4 md:-mx-32' : '' }}">
 
             {{- render.atom('image', 'article', {
-                    image: content.image[0],
-                    alt: content.image[0].title,
+                    image: content.image[0] ??? null,
+                    alt: content.image[0].title ??? null,
                     ratio: content.ratio,
                     caption: content.caption ?? content.image[0].caption,
                     author: content.image[0].author ?? "",

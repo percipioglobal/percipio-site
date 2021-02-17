@@ -1,4 +1,5 @@
 {%- set spacing = spacing ??? 8 -%}
+{%- set margin = margin ??? "" -%}
 {%- set limit = limit ??? null -%}
 
 {%- set projects = craft.entries.section('work')
@@ -8,7 +9,7 @@
     .all() -%}
 
 {%- minify -%}
-    <div class="{{- spacing ? 'my-12 md:my-24' : '' }} w-full">
+    <div class="w-full {{ margin -}}">
         <div class="grid grid-cols-8 gap-{{- spacing -}}">
             {%- for card in projects -%}
                 {%- include '_molecules/cards/card--project' ignore missing with {
