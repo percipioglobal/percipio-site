@@ -64,9 +64,6 @@ module.exports = {
                 DEFAULT: {
                     css: {
                         maxWidth: '80ch',
-                        strong: {
-                            color: theme('colors.white.100'),
-                        },
                         fontFamily: theme('fontFamily.primary'),
                     },
                 },
