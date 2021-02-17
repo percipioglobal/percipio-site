@@ -2,6 +2,7 @@
     {% case "project" %}
         {%- include '_organisms/cards/cards--projects' ignore missing with {
             spacing: 0,
+            margin: 'my-12 md:my-16',
             limit: content.limit,
         } -%}
     {% case "service" %}
