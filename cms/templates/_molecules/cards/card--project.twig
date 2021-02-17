@@ -7,48 +7,52 @@
 {%- minify -%}
 <div class="{{- utilities -}}">
     <div class="relative {{ size == 'large' ? 'min-h-90vh' : '' -}}">
+        {# md:left-14  #}
+        <div class="card-cta absolute z-1 group w-4/5 lg:w-1/3 bottom-0">
+            <div class="container mx-auto max-w-screen-2xl">
+                <div class="relative bg-{{- swatch.primary }} border-b-8 border-{{- swatch.secondary }} bottom-14 left-0 p-6">
+                    {{- render.atom('text', 'overline', {
+                            content: content.client[0].title,
+                            utilities: 'font-mono text-white-100',
+                        })
+                    -}}
 
-        <div class="card-cta absolute z-1 group bg-{{- swatch.primary }} border-b-8 border-{{- swatch.secondary }} bottom-14 left-0 md:left-14 p-6 w-4/5 lg:w-1/3">
-            {{- render.atom('text', 'overline', {
-                    content: content.client[0].title,
-                    utilities: 'font-mono text-white-100',
-                })
-            -}}
+                    {{- render.atom('text', 'card-title', { content: content.title }) -}}
 
-            {{- render.atom('text', 'card-title', { content: content.title }) -}}
+                    {{- render.atom('chip', 'group', {
 
-            {{- render.atom('chip', 'group', {
+                        chips: content.projectCategories,
+                        colors: swatch,
+                        type: 'skills',
+                        utilities: 'mt-0 mb-0',
 
-                chips: content.projectCategories,
-                colors: swatch,
-                type: 'skills',
-                utilities: 'mt-0 mb-0',
+                    }) -}}
 
-            }) -}}
+                    <div class="mt-8">
 
-            <div class="mt-8">
+                        {{- render.atom('button', 'link', {
+                            url: content.url,
+                            text: "View case study",
+                            gaCategory: "card-project",
+                            gaAction: "click",
+                            gaLabel: content.url,
+                            swatch: swatch,
+                            icon: 'fas fa-long-arrow-alt-right'
+                        }) -}}
 
-                {{- render.atom('button', 'link', {
-                    url: content.url,
-                    text: "View case study",
-                    gaCategory: "card-project",
-                    gaAction: "click",
-                    gaLabel: content.url,
-                    swatch: swatch,
-                    icon: 'fas fa-long-arrow-alt-right'
-                }) -}}
+                    </div>
 
+                    <a
+                        href="{{- content.url -}}"
+                        data-tag-category="card-project"
+                        data-tag-action="click"
+                        data-tag-label="{{- content.url -}}"
+                        class="absolute inset-0 z-1"
+                    >
+                        <span class="sr-only">A case study about {{ content.title -}}</span>
+                    </a>
+                </div>
             </div>
-
-            <a
-                href="{{- content.url -}}"
-                data-tag-category="card-project"
-                data-tag-action="click"
-                data-tag-label="{{- content.url -}}"
-                class="absolute inset-0 z-1"
-            >
-                <span class="sr-only">A case study about {{ content.title -}}</span>
-            </a>
 
         </div>
 
