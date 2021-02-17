@@ -46,6 +46,13 @@ module.exports = (type = 'modern', settings) => {
                                 '@babel/plugin-proposal-object-rest-spread',
                                 '@babel/plugin-proposal-nullish-coalescing-operator',
                                 '@babel/plugin-proposal-optional-chaining',
+                                ['babel-plugin-prismjs',
+                                {
+                                    "languages": ["bash", "css", "docker", "git", "graphql", "javascript", "json", "markdown", "markup", "php", "sql", "twig", "typescript", "yaml"],
+                                    "plugins": ["line-numbers", "show-language"],
+                                    "theme": "okaidia",
+                                    "css": true
+                                }]
                             ],
                             sourceType: 'unambiguous',
                         },

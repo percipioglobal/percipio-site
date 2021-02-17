@@ -134,6 +134,12 @@
                         content: block,
                     } -%}
 
+                {%- case "code" -%}
+
+                    {%- include '_molecules/codeblock/codeblock--main' ignore missing with {
+                        content: block,
+                    } -%}
+
             {%- endswitch -%}
 
         {%- endfor -%}
