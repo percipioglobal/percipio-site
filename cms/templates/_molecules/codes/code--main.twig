@@ -1,0 +1,22 @@
+{%- minify -%}
+
+	<div class="my-16">
+        <div class="container mx-auto max-w-screen-lg">
+            
+            <pre class="font-mono">
+                <code class="{{- 'language-' ~ content.codeLanguage -}}" v-pre>
+                    {{- content.code -}}
+                </code>
+            </pre>
+
+            <aside class="text-center font-mono border-t border-white-10 bg-black-code text-xs py-3">
+                <h5 class="text-gray-200 lowercase">
+                    <i class="far fa-code mr-2"></i>
+                    <span>{{ content.caption -}}</span>
+                </h5>
+            </aside>
+
+        </div>
+    </div>
+
+{%- endminify -%}
