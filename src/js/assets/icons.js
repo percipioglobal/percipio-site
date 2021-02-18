@@ -1,58 +1,63 @@
 // importing and setting up Font Awesome
 import { dom, library } from '@fortawesome/fontawesome-svg-core';
 import {
-    faFilePdf as farFilePdf,
-    faFileExcel as farFileExcel,
-    faFileWord as farFileWord,
-    faFilePowerpoint as farFilePowerPoint,
-    faFileArchive as farFileArchive,
     faEnvelope as farEnvelope,
+    faFileArchive as farFileArchive,
+    faFileExcel as farFileExcel,
+    faFilePdf as farFilePdf,
+    faFilePowerpoint as farFilePowerPoint,
+    faFileWord as farFileWord,
 } from '@fortawesome/free-regular-svg-icons';
 
 import {
-    faCloudDownloadAlt as fasCloudDownloadAlt,
-    faExternalLinkAlt as fasExternalLinkAlt,
-    faPrint as fasPrint,
-    faHashtag as fasHashtag,
-    faDownload as fasDownload,
+    faCode as farCode,
+} from '@fortawesome/pro-regular-svg-icons';
+
+import {
     faCircle as fasCircle,
+    faCloudDownloadAlt as fasCloudDownloadAlt,
+    faDownload as fasDownload,
+    faExternalLinkAlt as fasExternalLinkAlt,
+    faHashtag as fasHashtag,
     faLongArrowAltRight as fasLongArrowAltRight,
+    faPrint as fasPrint,
     faSquareFull as fasSquareFull
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
-    faTwitter as fabTwitter,
     faFacebookF as fabFacebookF,
+    faGithub as fabGithub,
     faInstagram as fabInstagram,
     faLinkedinIn as fabLinkedinIn,
-    faYoutube as fabYoutube,
+    faTwitter as fabTwitter,
     faVimeoV as fabVimeoV,
-    faGithub as fabGithub,
+    faYoutube as fabYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 
 // load font-awesome libraries
 library.add(
-    farFilePdf,
-    farFileExcel,
-    farFileWord,
-    farFilePowerPoint,
-    farFileArchive,
-    fasCloudDownloadAlt,
-    fasExternalLinkAlt,
-    fabTwitter,
     fabFacebookF,
-    farEnvelope,
-    fasPrint,
+    fabGithub,
     fabInstagram,
     fabLinkedinIn,
-    fabYoutube,
+    fabTwitter,
     fabVimeoV,
-    fabGithub,
-    fasHashtag,
-    fasDownload,
+    fabYoutube,
+    farCode,
+    farEnvelope,
+    farFileArchive,
+    farFileExcel,
+    farFilePdf,
+    farFilePowerPoint,
+    farFileWord,
     fasCircle,
+    fasCloudDownloadAlt,
+    fasDownload,
+    fasExternalLinkAlt,
+    fasHashtag,
     fasLongArrowAltRight,
-    fasSquareFull
+    fasPrint,
+    fasSquareFull,
 );
 
 // convert i tags to SVG
