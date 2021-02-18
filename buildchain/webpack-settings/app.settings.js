@@ -12,6 +12,7 @@ module.exports = {
     entry: {
         'app': [
             'prismjs',
+            'prismjs/components/prism-markup-templating', 
             'prismjs/components/prism-bash', 
             'prismjs/components/prism-css', 
             'prismjs/components/prism-docker', 
@@ -25,8 +26,7 @@ module.exports = {
             'prismjs/components/prism-twig', 
             'prismjs/components/prism-typescript', 
             'prismjs/components/prism-yaml',
-            //'prismjs/components/prism-php', 
-            'prismjs/plugins/line-numbers/prism-line-numbers',
+            'prismjs/components/prism-php',
             '../src/fonts/open-sans-regular.woff',
             '../src/fonts/open-sans-regular.woff2',
             '../src/fonts/open-sans-italic.woff',
@@ -46,7 +46,6 @@ module.exports = {
             '../src/css/tailwind-utilities.pcss',
             '../src/css/app-components.pcss',
             '../src/css/app-utilities.pcss',
-            '../src/css/vendor.pcss',
         ],
         'lazysizes-wrapper': '../src/js/utils/lazysizes-wrapper.ts',
     },
