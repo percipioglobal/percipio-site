@@ -83,7 +83,7 @@ fields:
               - regular
             -
               - value
-              - prose-grid-article
+              - 'prose-grid-article-sm md:prose-grid-article'
             -
               - default
               - ''
@@ -94,7 +94,7 @@ fields:
               - large
             -
               - value
-              - prose-grid-article-large
+              - 'prose-grid-article-large-sm md:prose-grid-article-large'
             -
               - default
               - ''

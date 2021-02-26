@@ -20,6 +20,9 @@
 %}
 
 {%- minify -%}
+
+{%- set prevBlock = "" -%}
+
     <div class="md:mb-16 flex flex-wrap">
         {%- for block in content.contentBuilder -%}
             {%- switch block.type -%}
@@ -72,6 +75,7 @@
 
                     {%- include '_molecules/headers/header--section' ignore missing with {
                         content: block,
+                        utilities: loop.last ? 'mb-16' : '',
                     } -%}
 
                 {%- case "basicSlider" -%}
@@ -92,7 +96,7 @@
 
                         {%- include '_molecules/images/image--single-grid' ignore missing with {
                             content: block,
-                            prose: 'md:prose-2xl',
+                            utilities: prevBlock ==  "singleImage" ? ' mb-12 md:mb-0' : '',
                         } -%}
 
                     {%- endif -%}
@@ -141,6 +145,8 @@
                     } -%}
 
             {%- endswitch -%}
+
+            {%- set prevBlock = block.type -%}
 
         {%- endfor -%}
     </div>
