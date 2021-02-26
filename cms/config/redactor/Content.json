@@ -18,6 +18,6 @@
     ],
     "plugins": ["counter"],
     "toolbarFixed": true,
-    "pastePlainText": true,
+    "pastePlainText": false,
     "pasteImages": false
 }
