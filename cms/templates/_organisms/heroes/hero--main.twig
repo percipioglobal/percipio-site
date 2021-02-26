@@ -1,15 +1,19 @@
 {%- minify -%}
 
-	{% if content.heroImage %}
+{%- set categories = categories ??? null -%}
+
+	{% if content.heroImage|length > 0 %}
 
 		{%- include '_organisms/heroes/hero--main-image' ignore missing with {
 			content: content,
+			categories: categories,
 		} -%}
 
 	{% else %}
 
 		{%- include '_organisms/heroes/hero--main-text' ignore missing with {
 			content: content,
+			categories: categories,
 		} -%}
 
 	{% endif %}
