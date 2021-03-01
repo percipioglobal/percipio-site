@@ -1,0 +1,244 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  fe906a3c-e79c-4f19-9559-705e392f27b8:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 633b1b96-cdb8-4c97-a045-aa63d306b41c
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b43847a9-d877-4a56-ba8e-39f6c25c85cb
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 73ee03a9-c989-4d98-bd96-db9bc9cb2a5c
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  633b1b96-cdb8-4c97-a045-aa63d306b41c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: codeLanguage
+    instructions: ''
+    name: Language
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Bash
+            -
+              - value
+              - bash
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - CSS
+            -
+              - value
+              - css
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Docker
+            -
+              - value
+              - docker
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Git
+            -
+              - value
+              - git
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - GraphQL
+            -
+              - value
+              - graphql
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Javascript
+            -
+              - value
+              - javascript
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - JSON
+            -
+              - value
+              - json
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Markdown
+            -
+              - value
+              - markdown
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Markup
+            -
+              - value
+              - markup
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - PHP
+            -
+              - value
+              - php
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - SQL
+            -
+              - value
+              - sql
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Twig
+            -
+              - value
+              - twig
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - TypeScript
+            -
+              - value
+              - typescript
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Yaml
+            -
+              - value
+              - yaml
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  73ee03a9-c989-4d98-bd96-db9bc9cb2a5c:
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: ''
+    name: Caption
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b43847a9-d877-4a56-ba8e-39f6c25c85cb:
+    contentColumnType: text
+    fieldGroup: null
+    handle: code
+    instructions: ''
+    name: Code
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: code
+name: Code
+sortOrder: 13

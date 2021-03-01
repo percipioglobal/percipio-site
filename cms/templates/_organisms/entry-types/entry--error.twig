@@ -16,7 +16,7 @@
                     title="Homepage" 
                     class="relative w-24 h-24 lg:h-40 lg:w-40 block max-w-full left-1/2 top-0 transform -translate-x-1/2"
                 >
-                    <div class="w-full absolute left-0 top-0 opacity-75 glitch-red">
+                    <div class="w-full absolute left-0 top-0 opacity-75 animate-glitch">
                         {% set swatchGlitch = {
                             primary: 'red-500',
                             secondary: 'red-500',
@@ -24,7 +24,7 @@
                         {% include '_atoms/svgs/svg--logo.svg' with { swatch: swatchGlitch } %}
                     </div>
 
-                    <div class="w-full absolute left-0 top-0 opacity-75 glitch-blue">
+                    <div class="w-full absolute left-0 top-0 opacity-75 animate-glitch-reverse">
                         {% set swatchGlitch = {
                             primary: 'yellow-300',
                             secondary: 'yellow-300',
@@ -60,6 +60,7 @@
                     swatch: swatch,
                     utilities: 'mr-4 mb-4',
                     inverted: true,
+                    swatch: swatch,
                 }) -}}
 
                 {%- set url = craft.entries.section('pages').type('blogPage').one().url -%}
@@ -70,6 +71,7 @@
                     swatch: swatch,
                     utilities: 'mb-4',
                     fill: true,
+                    inverted: true,
                 }) -}}
 
             </div>

@@ -42,7 +42,9 @@ module.exports = {
                 /w-2\/3$/,
                 /w-3\/4$/,
                 /grid-article$/,
+                /grid-article-sm$/,
                 /grid-article-large$/,
+                /grid-article-large-sm$/,
             ],
         }
     },
@@ -62,9 +64,7 @@ module.exports = {
                 DEFAULT: {
                     css: {
                         maxWidth: '80ch',
-                        strong: {
-                            color: theme('colors.white.100'),
-                        },
+                        fontFamily: theme('fontFamily.primary'),
                     },
                 },
                 'white': {
@@ -106,6 +106,16 @@ module.exports = {
                         },
                     }
                 },
+                'grid-sm': {
+                    css: {
+                        p: {
+                            fontSize: theme('fontSize.lg'),
+                        },
+                        h3: {
+                            fontSize: theme('fontSize.xl'),
+                        },
+                    }
+                },
                 'grid-article': {
                     css: {
                         p: {
@@ -116,14 +126,34 @@ module.exports = {
                         },
                     }
                 },
+                'grid-article-sm': {
+                    css: {
+                        p: {
+                            fontSize: theme('fontSize.lg'),
+                        },
+                        h3: {
+                            fontSize: theme('fontSize.3xl'),
+                        },
+                    }
+                },
                 'grid-article-large': {
                     css: {
                         p: {
                             fontWeight: theme('fontWeight.bold'),
                             fontSize: theme('fontSize.5xl'),
+                            lineHeight: '1.25',
                         },
                     }
-                }
+                },
+                'grid-article-large-sm': {
+                    css: {
+                        p: {
+                            fontWeight: theme('fontWeight.bold'),
+                            fontSize: theme('fontSize.2xl'),
+                            lineHeight: '1.25',
+                        },
+                    }
+                },
             }),
 
             screens: {
@@ -132,27 +162,54 @@ module.exports = {
 
             fontFamily: {
                 primary: [
-                    'Open Sans', 
-                    'ui-sans-serif', 
-                    'system-ui', 
-                    '-apple-system', 
-                    'Roboto', 
-                    'Helvetica Neue', 
-                    'Arial', 
-                    'Noto Sans', 
+                    'Open Sans',
+                    'ui-sans-serif',
+                    'system-ui',
+                    '-apple-system',
+                    'Roboto',
+                    'Helvetica Neue',
+                    'Arial',
+                    'Noto Sans',
                     'sans-serif',
                 ],
                 mono: [
-                    'Source Code Pro', 
-                    'ui-monospace', 
-                    'SFMono-Regular', 
-                    'Menlo', 
-                    'Monaco', 
-                    'Consolas', 
-                    'Liberation Mono', 
-                    'Courier New', 
+                    'Source Code Pro',
+                    'ui-monospace',
+                    'SFMono-Regular',
+                    'Menlo',
+                    'Monaco',
+                    'Consolas',
+                    'Liberation Mono',
+                    'Courier New',
                     'monospace'
                 ]
+            },
+
+            animation: {
+                arrow: 'arrow .8s cubic-bezier(.58,.3,.005,1) 0s 1',
+                glitch: 'glitch .2s cubic-bezier(.25, .46, .45, .94) both infinite, opacity 4s infinite',
+                'glitch-reverse': 'glitch .2s cubic-bezier(.25, .46, .45, .94) reverse both infinite, opacity 4s infinite',
+            },
+
+            keyframes: {
+                arrow: {
+                    '0%, 100%': { transform: 'translateX(0)' }, 
+                    '50%': { transform: 'translateX(100%)' }, 
+                    '50.01%': { transform: 'translateX(-100%)' }, 
+                },
+                glitch: {
+                    '0%': { transform: 'translate(0)' },
+                    '20%': { transform: 'translate(-6px, 6px)' }, 
+                    '40%': { transform: 'translate(-6px, -6px)' }, 
+                    '60%': { transform: 'translate(6px, 6px)' }, 
+                    '80%': { transform: 'translate(6px, -6px)' },
+                    '100%': { transform: 'translate(0)' }, 
+                },
+                opacity: {
+                    '0%': { opacity: '0' },
+                    '40%': { opacity: '0' }, 
+                    '50%': { opacity: '1' }, 
+                }
             },
 
             colors: {
@@ -171,6 +228,7 @@ module.exports = {
                     '80': 'rgba(0,0,0,.8)',
                     '90': 'rgba(0,0,0,.9)',
                     '100': 'rgba(0,0,0,1)',
+                    'code': '#253238',
                 },
 
                 white: {
@@ -362,10 +420,19 @@ module.exports = {
                 ...theme('spacing'),
                 '2/3': '66.666vh',
                 '3/4': '75vh',
+                '90vh': '90vh',
             }),
 
+            height: {
+                '90vh': '90vh',
+            },
+
+            transitionTimingFunction: {
+                'blog': 'cubic-bezier(.58,.3,.005,1) 0s 1',
+            },
+
             translate: {
-                '-1/2': '-50%',
+                '-full-1/2': '-150%',
             },
 
             width: {
@@ -387,6 +454,7 @@ module.exports = {
     },
 
     variants: {
+        animation: ['hover', 'group-hover'],
         backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
         borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
         inset: ['responsive'],
@@ -394,6 +462,7 @@ module.exports = {
         opacity: ['responsive', 'hover', 'focus', 'group-hover'],
         textColor: ['responsive', 'hover', 'focus', 'group-hover'],
         translate: ['responsive', 'hover', 'focus', 'group-hover'],
+        transitionDelay: ['hover'],
         zIndex: ['responsive'],
     },
 

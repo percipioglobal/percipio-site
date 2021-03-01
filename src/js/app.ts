@@ -3,9 +3,9 @@ import { createStore } from './stores/store.js';
 // App main
 const site = async () => {
     // Async load the vue module
-    const [ Vue, Lazysizes ] = await Promise.all([
+    const [ Vue, Prism ] = await Promise.all([
         import(/* webpackChunkName: "vue" */ 'vue'),
-        import(/* webpackChunkName: "lazysizes" */ 'lazysizes'),
+        import(/* webpackChunkName: "prism" */ 'prismjs'),
     ]).then(arr => arr.map(({ default: defaults }) => defaults));
 
     const store = await createStore(Vue);
@@ -46,17 +46,17 @@ const site = async () => {
                 }
             },
 
-            /* scroll(id){
-                document.getElementById(id).scrollIntoView({
-                behavior: 'smooth'
-                });
-            }, */
-
             printPage() {
                 window.print();
             }
 
         },
+
+        mounted() {
+            window.addEventListener('load', () => {
+                Prism.highlightAll();
+            })
+        }
 
     })
 };

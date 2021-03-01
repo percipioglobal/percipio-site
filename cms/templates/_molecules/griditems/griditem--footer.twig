@@ -1,15 +1,15 @@
 {% import '_macros/atoms' as render %}
 
 <div class="flex-col mb-10 lg:mb-0 w-full lg:w-{{- width }} px-{{- spacing -}}">
-    <div class=" border-b-4 h-full border-{{- color -}}-600">
-        <h5 class="mb-8 font-bold text-xl">
+    <div class=" border-b-8 h-full border-{{- color -}}-600  flex flex-col {{ align == 'right' ? 'items-end' : 'items-start' -}}">
+        <p class="mb-8 font-bold text-xl">
             {{- render.atom('text', 'overline', {
                 content: title,
                 utilities: 'text-' ~ color ~ '-600',
                 })
             -}}
-        </h5>
-        <div class="mb-8 flex-grow">
+        </p>
+        <div class="mb-8 flex-grow {{ align == 'right' ? 'text-right' : 'text-left' -}}">
             {%- switch type -%}
                 {%- case "catchphrase" -%}
                     {% include "_molecules/content/content--catchphrase" with { content: { catchphrase: organisationInfo.catchphrase } } %}

@@ -8,12 +8,12 @@
 {%- minify -%}
 <div class="container mx-auto max-w-screen-lg">
     <div class="relative group">
-        <div class="bg-white-100 group-hover:bg-{{- swatchBlog.primary }}">
-            <div class="py-8 border-b-4 border-{{- swatchBlog.primary }} group-hover:border-{{- swatchBlog.primary }} relative z-1">
+        <div class="bg-white-100">
+            <div class="py-8 border-b-8 border-{{- swatchBlog.primary }} group-hover:border-{{- swatchBlog.primary }} relative z-1">
                 <div class="flex w-full items-center">
                     <div class="flex-grow pr-2">
-                        <p class="font-mono text-sm md:text-base pb-4 group-hover:text-white-100">
-                            <span class="text-{{- swatchBlog.primary }} group-hover:text-white-100">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
+                        <p class="font-mono text-sm md:text-base pb-4 group-hover:text-white-100 transition duration-200 delay-300 ease-in-out">
+                            <span class="text-{{- swatchBlog.primary }} group-hover:text-white-100 transition duration-200 delay-300 ease-in-out">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
                             by
                             {{ functions.authors(content.authors) }}
                             on
@@ -22,7 +22,7 @@
                         <div class="-mb-4">
                             {{- render.atom('text', 'card-title', {
                                 content: content.title,
-                                utilities: 'group-hover:text-white-100',
+                                utilities: 'group-hover:text-white-100 transition duration-200 delay-300 ease-in-out',
                                 colour: 'text-gray-800'
                             }) -}}
                         </div>
@@ -37,7 +37,9 @@
                     </div>
                 </div>
             </div>
-            <span class="group-hover:bg-{{- swatchBlog.primary }} transform -translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2 w-screen h-full">&nbsp;</span>
+
+            <span class="absolute block left-1/2 top-0 bg-{{- swatchBlog.primary }} transform -translate-x-full-1/2 group-hover:-translate-x-1/2 transition duration-1000 ease-blog w-screen h-full"></span>
+
         </div>
 
         <a 

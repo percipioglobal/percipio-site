@@ -1,14 +1,16 @@
-{% extends "_atoms/buttons/button--variables" %}
+{%- extends "_atoms/buttons/button--variables" -%}
 
-{% block button %}
+{%- block button -%}
 
     {%- minify -%}
 
-        <a 
+        <a
             {{ values.url ? 'href="' ~ values.url ~ '"': '' }}
             {{ values.gaCategory ? 'data-tag-category=' ~ values.gaCategory : '' }}
             {{ values.gaAction ? 'data-tag-action=' ~ values.gaAction : '' }}
             {{ values.gaLabel ? 'data-tag-label=' ~ values.gaLabel : '' }}
+            {{ values.target ? 'target=' ~ values.target : '' }}
+            aria-label="{{- values.text -}}"
             class="inline-flex {{ values.utility ? values.utilities : '' -}}"
         >
             {{- values.text -}}
@@ -16,4 +18,4 @@
 
     {%- endminify -%}
 
-{% endblock %}
+{%- endblock -%}

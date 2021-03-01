@@ -21,16 +21,41 @@ settings:
       __assoc__:
         -
           - width
+          - '1200'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
+    -
+      __assoc__:
+        -
+          - width
           - '1024'
         -
           - useAspectRatio
           - '1'
         -
           - aspectRatioX
-          - '4'
+          - '16'
         -
           - aspectRatioY
-          - '3'
+          - '9'
         -
           - retinaSizes
           -
@@ -52,10 +77,10 @@ settings:
           - '1'
         -
           - aspectRatioX
-          - '4'
+          - '16'
         -
           - aspectRatioY
-          - '3'
+          - '9'
         -
           - retinaSizes
           -

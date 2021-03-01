@@ -2,7 +2,7 @@
 
     <div>
         <nav :class="[
-            'fixed z-10 w-full bg-white-70 transition-all duration-500 ease-in-out',
+            'fixed z-20 w-full bg-white-70 transition-all duration-500 ease-in-out',
             showNavigation === true ? 'top-0' : '-top-full'
         ]">
 
@@ -10,9 +10,9 @@
 
                 <slot></slot>
 
-                <button--hamburger :color="color"></button--hamburger>
+                <button--hamburger :swatch="swatch"></button--hamburger>
 
-                <navigation--drawer></navigation--drawer>
+                <navigation--drawer :swatch="swatch"></navigation--drawer>
 
             </div>
 
@@ -25,10 +25,9 @@
 
     export default {
         props: {
-            color: {
-                type: String,
-                required: false,
-                default: 'blue-600',
+            swatch: {
+                type: Object,
+                required: true,
             }
         },
         data: () => ({
@@ -49,7 +48,7 @@
                 }
                 this.prevScrollpos = currentScrollPos;
 
-                if(this.prevScrollpos === 0){
+                if(this.prevScrollpos < 30){
                     this.showNavigation = true;
                 }
             }

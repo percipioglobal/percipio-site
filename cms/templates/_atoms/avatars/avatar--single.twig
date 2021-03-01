@@ -1,23 +1,26 @@
 {%- import '_macros/atoms' as render -%}
 
-{% set values = {
+{%- set values = {
     author: options.author ??? null,
     utilities: options.utilities ??? null,
     colour: options.colour ??? null,
-} %}
+} -%}
 
-<a 
-    href="{{- values.author.url -}}" 
-    title="{{- values.author.title -}}"
-    data-tag-category="avatar" 
-    data-tag-action="click" 
-    data-tag-label="{{- values.author.url -}}"
-    class="w-16 h-16 rounded-full overflow-hidden bg-white-100 border-2 border-{{- values.colour.primary }} hover:border-{{- values.colour.secondary}} {{ values.utilities -}}"
->
-    {{- render.atom('image', 'teaser', {
-        image: values.author.teaserImage[0],
-        alt: values.author.title,
-        ratio: 'is1by1',
-        placeholders: placeholders,
-    }) -}}
-</a>
+
+{%- minify -%}
+    <a 
+        href="{{- values.author.url -}}" 
+        title="{{- values.author.title -}}"
+        data-tag-category="avatar" 
+        data-tag-action="click" 
+        data-tag-label="{{- values.author.url -}}"
+        class="w-16 h-16 rounded-full overflow-hidden bg-white-100 border-2 border-{{- values.colour.primary }} hover:border-{{- values.colour.secondary}} {{ values.utilities -}}"
+    >
+        {{- render.atom('image', 'teaser', {
+            image: values.author.teaserImage[0],
+            alt: values.author.title,
+            ratio: 'is1by1',
+            placeholders: placeholders,
+        }) -}}
+    </a>
+{%- endminify -%}

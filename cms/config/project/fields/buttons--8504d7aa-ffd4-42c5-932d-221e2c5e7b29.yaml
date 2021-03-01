@@ -14,8 +14,8 @@ settings:
             -
               - width
               - ''
-  contentTable: '{{%stc_buttons_1}}'
-  fieldLayout: table
+  contentTable: '{{%stc_buttons}}'
+  fieldLayout: matrix
   maxRows: ''
   minRows: ''
   placeholderKey: null

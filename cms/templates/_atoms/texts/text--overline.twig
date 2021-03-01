@@ -15,7 +15,7 @@
     }) -%}
 
     {%- minify -%}
-        <span class="inline-block break-words text-base {{ values.utilities -}}">
+        <span class="inline-block font-mono break-words text-base {{ values.utilities -}}">
             {{- values.content | typogrify(true) -}}
         </span>
     {%- endminify -%}

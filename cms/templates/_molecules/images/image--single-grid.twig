@@ -2,11 +2,13 @@
 
 {%- minify -%}
 
-    <div class="w-full lg:min-h-3/4 lg:w-{{- content.width -}}">
+{%- set utilities = utilities ??? '' -%}
+
+    <div class="w-full lg:min-h-3/4 lg:w-{{- content.width }} {{ utilities -}}">
 
         {{- render.atom('image', 'article', {
-                image: content.image[0],
-                alt: content.image[0].title,
+                image: content.image[0] ??? null,
+                alt: content.image[0].title ??? null,
                 ratio: 'is16by9 lg:isFilled',
                 caption: content.caption ?? content.image[0].caption,
                 author: content.image[0].author ?? "",

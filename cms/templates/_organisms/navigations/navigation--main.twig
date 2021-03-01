@@ -1,6 +1,7 @@
 {# TODO: Need to parse colours #}
 {% import '_macros/atoms' as render %}
-<navigation--main {{ swatch.primary ? 'color=' ~ swatch.primary : '' -}}>
+
+<navigation--main :swatch="{{- swatch|json_encode -}}">
     {{- render.atom('link', 'home', { 
     
         url: baseUrl,

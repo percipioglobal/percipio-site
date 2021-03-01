@@ -1,6 +1,7 @@
 {%- set exclude = exclude ??? null -%}
 {%- set authors = authors ??? '*' -%}
 {%- set limit = limit ??? null -%}
+{%- set spacing = spacing ??? 'my-12 md:my-24' %}
 
 {%- set blogs = blogs ??? craft.entries.section('blog')
     .with(['teaserImage', 'blogCategories', 'authors', 'authors.teaserImage'])
@@ -12,7 +13,7 @@
 
 {%- minify -%}
 
-    <div class="w-full my-12 md:my-24">
+    <div class="w-full {{ spacing -}}">
         {%- for blog in blogs -%}
             {%- include '_molecules/cards/card--blog' ignore missing with {
                 content: blog

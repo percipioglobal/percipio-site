@@ -10,7 +10,7 @@
 
 #}
 
-{% set values = {
+{%- set values = {
     url: options.url ??? null,
     text: options.text ??? '',
     icon: options.icon ??? null,
@@ -20,7 +20,9 @@
     gaCategory: options.gaCategory ??? null,
     gaAction: options.gaAction ??? null,
     gaLabel: options.gaLabel ??? null,
-} %}
+    target: options.target ??? null,
+    inverted: options.inverted ??? false,
+} -%}
 
-{% block button %}
-{% endblock %}
+{%- block button -%}
+{%- endblock -%}

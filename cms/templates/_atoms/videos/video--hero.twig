@@ -1,0 +1,34 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- minify -%}
+
+    {% set values = {
+        video: options.video ??? null,
+        placeholder: options.placeholder ??? placeholders.teaserPlaceholder[0],
+        ratio: options.ratio ??? 'is16by9',
+        alt: options.alt ??? null,
+        attributes: options.attributes ??? null,
+    } %}
+
+    {%- if values.video -%}
+        <figure role="figure" aria-label="{{- values.alt -}}" class="w-full h-full">
+
+            <div class="relative z-1 {{ values.ratio -}}">
+                <video {{ values.attributes -}}>
+                    <source src="{{- values.video.url -}}" type="video/{{- values.video.extension -}}">
+                </video>
+            </div>
+
+            <div class="absolute left-0 top-0 w-full h-full">
+                {{- render.atom('image', 'teaser-video', {
+                    image: values.placeholder,
+                    alt: values.alt,
+                    ratio: values.ratio,
+                    placeholders: placeholders,
+                }) -}}
+            </div>
+
+        </figure>
+    {%- endif -%}
+
+{%- endminify -%}

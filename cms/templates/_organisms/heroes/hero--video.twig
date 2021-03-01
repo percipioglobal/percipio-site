@@ -1,0 +1,33 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- minify -%}
+<section class="relative w-full min-h-3/4 pt-32 flex items-end overflow-hidden bg-{{- swatch.primary }}">
+	<div class="container mx-auto max-w-screen-2xl mb-5 md:mb-8 lg:mb-12">
+
+		<div class="z-2 relative max-w-3xl px-12 py-6 bg-{{- swatch.primary }} bg-opacity-90 border-b-8 border-{{- swatch.secondary -}}">
+
+			<h1 class="sr-only">
+				{{- seomatic.site.identity.genericName -}}:
+				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
+			</h1>
+
+			<h2 class="font-primary font-extrabold text-3xl lg:text-6xl leading-tight lg:leading-tight text-white-100">
+				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
+			</h2>
+		</div>
+
+		<div class="absolute inset-0 opacity-50">
+			
+			{{- render.atom('video', 'hero', {
+				video: content.video[0],
+				attributes: 'muted autoplay loop playsinline',
+				alt: content.heading ??? entry.title,
+				placeholder: content.placeholder[0] ??? placeholders.teaserPlaceholder[0],
+				ratio: 'isFilled'
+			}) -}}
+
+		</div>
+
+	</div>
+</section>
+{%- endminify -%}

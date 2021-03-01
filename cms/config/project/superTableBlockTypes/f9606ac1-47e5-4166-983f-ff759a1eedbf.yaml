@@ -25,8 +25,10 @@ fields:
     searchable: true
     settings:
       allowCustomText: true
-      allowTarget: false
+      allowTarget: true
       autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
       defaultLinkName: asset
       defaultText: ''
       enableAllLinkTypes: false
@@ -35,6 +37,58 @@ fields:
       enableTitle: false
       typeSettings:
         __assoc__:
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - true
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - custom
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
           -
             - asset
             -
@@ -84,16 +138,6 @@ fields:
                   - sources
                   - '*'
           -
-            - site
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - sites
-                  - '*'
-          -
             - user
             -
               __assoc__:
@@ -110,57 +154,15 @@ fields:
                   - sources
                   - '*'
           -
-            - custom
+            - site
             -
               __assoc__:
                 -
                   - enabled
                   - false
                 -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - email
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - tel
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - url
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
+                  - sites
+                  - '*'
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField

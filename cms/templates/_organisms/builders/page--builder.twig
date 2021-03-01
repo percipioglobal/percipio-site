@@ -21,8 +21,11 @@
 
 {%- minify -%}
 
+{%- set prevBlock = "" -%}
+
 <div class="flex flex-wrap">
     {%- for block in content.pageBuilder -%}
+
         {%- switch block.type -%}
 
             {%- case "article" -%}
@@ -35,7 +38,6 @@
                     } -%}
 
                 {%- else -%}
-
                     {%- include '_molecules/content/content--article-grid' ignore missing with {
                         content: block,
                         prose: 'md:prose-2xl',
@@ -77,10 +79,9 @@
                     } -%}
 
                 {%- else -%}
-
                     {%- include '_molecules/images/image--single-grid' ignore missing with {
                         content: block,
-                        prose: 'md:prose-2xl',
+                        utilities: prevBlock ==  "singleImage" ? 'mt-16 md:mb-0' : '',
                     } -%}
 
                 {%- endif -%}
@@ -122,6 +123,8 @@
                 } -%}
 
         {%- endswitch -%}
+
+        {%- set prevBlock = block.type -%}
 
     {%- endfor -%}
 </div>

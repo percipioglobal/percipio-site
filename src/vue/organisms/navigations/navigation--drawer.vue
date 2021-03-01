@@ -1,60 +1,44 @@
 <template>
     <aside
         :class="[
-            'transform inset-0 bg-white-90 min-h-screen fixed h-full overflow-auto ease-in-out transition-opacity duration-300 -z-10 pt-32',
+            'transform inset-0 bg-white-90 min-h-screen fixed h-full ease-in-out transition-opacity duration-300 -z-10 pt-32',
             getNavigationActive ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
             ]"
     >
 
-        <div class="h-full">
+        <div class="h-full w-full">
 
-            <div class="w-full h-full py-16 flex flex-col items-end">
+            <div class="w-full h-full lg:py-16 flex flex-col items-end  overflow-auto">
                 <!-- main navigation links -->
 
-                <div
-                    class="space-y-4 pb-12 w-full"
-                    v-if="getNavigationPrimary"
-                >
+                <div class="container mx-auto flex flex-col items-end" v-if="getNavigationPrimary">
 
-                    <a
-                        v-for="item in getNavigationPrimary"
-                        :key="item.id"
-                        :href="item.url"
-                        class="block container mx-auto text-right capitalize text-4xl font-bold hover:underline pr-16"
-                        :title="item.title"
-                    >
-                        {{ item.title }}
-                    </a>
+                    <div class="w-full md:w-1/2 xl:w-1/3 pb-12 lg:pr-16">
+                        <navigation--item v-for="item in getNavigationPrimary" :item="item" :key="item.id"></navigation--item>
+                    </div>
 
-                </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 lg:pr-16" v-if="getSocialMediaLinks">
 
-                <div class="container mx-auto flex justify-end">
+                        <hr :class="
+                                [
+                                    'h-2 mb-12 w-full mr-16',
+                                    'bg-' + swatch.primary, 
+                                ]" 
+                        >
 
-                    <hr class="h-px bg-gray-800 mb-12 w-96" v-if="getSocialMediaLinks">
+                    </div>
 
-                </div>
-
-                <!-- social media links -->
-
-                <div class="space-y-2 container mx-auto" v-if="getSocialMediaLinks">
-
-                    <a
-                        v-for="social in getSocialMediaLinks.socialMedia"
-                        :key="social.id"
-                        :href="social.socialMediaUrl.url"
-                        class="block capitalize text-lg font-bold hover:underline pr-16 text-right"
-                        :title="social.socialMediaType"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        {{ social.socialMediaType }}
-                    </a>
+                    <div class="w-full md:w-1/2 xl:w-1/3 lg:pr-16" v-if="getSocialMediaLinks">
+                        <navigation--social-item v-for="item in getSocialMediaLinks.socialMedia" :item="item" :swatch="swatch" :key="item.id"></navigation--social-item>
+                    </div>
 
                 </div>
 
             </div>
 
         </div>
+
+        <logo--main :swatch="swatch"></logo--main>
 
     </aside>
 </template>
@@ -64,8 +48,37 @@
     import { mapGetters } from 'vuex';
 
     export default {
+        props: {
+            swatch: {
+                type: Object,
+                required: true,
+            }
+        },
+        components: {
+            'navigation--item': () => import(/* webpackChunkName: "navigation--item" */ '../../atoms/navigations/navigation--item.vue'),
+            'navigation--social-item': () => import(/* webpackChunkName: "navigation--social-item" */ '../../atoms/navigations/navigation--social-item.vue'),
+            'logo--main': () => import(/* webpackChunkName: "logo--main" */ '../../atoms/logos/logo--main.vue'),
+        },
+
         computed: {
             ...mapGetters(['getCsrfToken', 'getNavigationActive', 'getNavigationGqlToken', 'getSocialMediaLinks', 'getNavigationPrimary']),
+        },
+
+        methods: {
+            closeMenu(evt) {
+                if (evt.keyCode === 27) {
+                    this.$store.commit('setNavigationActive', false);
+                    document.body.classList.remove("overflow-hidden");
+                }
+            }
+        },
+
+        created: function(){
+            document.addEventListener('keyup', this.closeMenu);
+        },
+
+        destroyed: function(){
+            document.removeEventListener('keyup', this.closeMenu);
         },
 
         async mounted() {

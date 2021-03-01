@@ -1,5 +1,11 @@
+{% do craft.eagerBeaver.eagerLoadElements(entry, [
+    'projectCategories',
+    ])
+%}
+
 {%- include '_organisms/heroes/hero--main' with {
     content: entry,
+    categories: entry.projectCategories,
 } -%}
 
 {%- include '_organisms/builders/content--builder' with {

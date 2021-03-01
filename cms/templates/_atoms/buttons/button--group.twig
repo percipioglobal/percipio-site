@@ -9,16 +9,18 @@
 
 #}
 
-{% import '_macros/atoms' as render %}
+{%- import '_macros/atoms' as render -%}
 
-{% set values = {
+{%- set values = {
     buttons: options.buttons ??? null,
     type: options.type ??? 'primary',
     utilities: options.utilities ??? null,
     gaCategory: options.gaCategory ??? null,
     gaAction: options.gaAction ??? null,
     gaLabel: options.gaLabel ??? null,
-} %}
+    swatch: options.swatch ??? null,
+    inverted: options.inverted ??? false,
+} -%}
 
 {%- minify -%}
 
@@ -28,9 +30,12 @@
                 {{- render.atom('button', values.type, {
                     url: button.target.getUrl(),
                     text: button.target.getText(),
-                    gaCategory: values.gaCategory ??? null,
-                    gaAction: values.gaAction ??? null,
+                    target: button.target.getTarget(),
+                    gaCategory: values.gaCategory,
+                    gaAction: values.gaAction,
                     gaLabel: values.gaLabel ??? button.target.getUrl(),
+                    swatch: values.swatch,
+                    inverted: values.inverted,
                 }) -}}
             {%- endfor -%}
         {%- endif -%}

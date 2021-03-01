@@ -4,7 +4,7 @@
 
 {%- minify -%}
 
-    <div class="my-16 w-full">
+    <div class="mt-16 w-full">
 
         {# TODO set maxwidth breakpoints #}
         <div class="container mx-auto max-w-screen-lg {{ utilities -}}">
@@ -16,8 +16,8 @@
                         utilities: 'text-' ~ swatch.primary ~ ' mb-4 font-mono',
                     })
                 -}}
-                
-                <h2 class="font-primary text-5xl font-bold mb-8">
+
+                <h2 class="font-primary text-3xl md:text-5xl font-bold mb-8">
                     {{- render.atom('text', 'title', { content: content.heading }) -}}
                 </h2>
 
@@ -26,15 +26,17 @@
                     {{- render.atom('button', 'primary', {
                         url: content.button.getUrl(),
                         text: content.button.getText(),
+                        target: content.button.getTarget(),
                         gaCategory: 'header-section-cta',
                         gaAction: 'click',
                         gaLabel: content.button.getUrl(),
-                        swatch: swatch
+                        swatch: swatch,
+                        inverted: true,
                     }) -}}
                 {% else %}
 
                     <hr class="h-1 w-32 bg-{{- swatch.primary -}}">
-                        
+
                 {% endif %}
             </div>
 

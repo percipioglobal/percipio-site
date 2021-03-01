@@ -1,10 +1,10 @@
 <template>
-    <button @click.prevent="toggleMenu" class="ml-auto">
+    <button @click.prevent="toggleMenu" class="ml-auto" aria-label="navigation-toggle">
 
         <span class="">
             <span 
                 :class="[
-                    'bg-' + color,
+                    'bg-' + swatch.primary,
                     'mb-2 block w-12 h-2',
                     'transform transition ease-in-out duration-200',
                     getNavigationActive ? 'rotate-45 translate-y-2' : ''
@@ -12,7 +12,7 @@
             </span>
             <span 
                 :class="[
-                    'bg-' + color,
+                    'bg-' + swatch.primary,
                     'block w-12 h-2',
                     'transform transition ease-in-out duration-200',
                     getNavigationActive ? '-rotate-45 -translate-y-2' : ''
@@ -30,8 +30,8 @@
     export default {
 
         props: {
-            color: {
-                type: String,
+            swatch: {
+                type: Object,
                 required: true,
             }
         },

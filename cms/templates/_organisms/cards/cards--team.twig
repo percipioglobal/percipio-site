@@ -22,7 +22,7 @@
             {% endfor %}
 
             {% if showVacancies %}
-                {%- set vacancies = craft.entries.section('pages').type('vacanciesPage').with('metaImage', 'pageBuilder').one() -%}
+                {%- set vacancies = craft.entries.section('pages').type('vacanciesPage').with('teaserImage', 'pageBuilder').one() -%}
 
                 {# TODO fetch all skills from all available vacancies #}
 
@@ -31,8 +31,8 @@
                     title: vacancies.title,
                     role: 'Want to work for us?',
                     colourSwatch: vacancies.colourSwatch,
-                    teaserImage: vacancies.metaImage[0] ??? null,
-                    skillCategories: [], 
+                    teaserImage: vacancies.teaserImage ??? null,
+                    skillCategories: [],
                 } -%}
 
                 {%- include '_molecules/cards/card--member' ignore missing with {
