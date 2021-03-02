@@ -136,7 +136,7 @@
         "Percipio"
     ],
     "license": "SEE LICENSE IN LICENSE.md",
-    "name": "percipio-site",
+    "name": "percipio",
     "private": true,
     "repository": {
         "type": "git",
