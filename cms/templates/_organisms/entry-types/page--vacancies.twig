@@ -7,30 +7,58 @@
     content: entry,
 } -%}
 
+{%- set vacanciesCount = craft.entries.section('vacancies').count() %}
+
 <div id="content">
 
     <div class="container mx-auto max-w-screen-lg mb-16">
-        {%- set heading = {
-            heading: "There are no open vacancies",
-            overline: "I'm sorry :-(",
-            button: null
-        } -%}
-        {%- include '_molecules/headers/header--section' ignore missing with {
-            content: heading,
-        } -%}
+        {%- if vacanciesCount > 0 -%}
+            {%- set heading = {
+                heading: "Checkout our vacancies",
+                overline: "Hey you!",
+                button: null
+            } -%}
+            {%- include '_molecules/headers/header--section' ignore missing with {
+                content: heading,
+            } -%}
 
-        <div class="container mx-auto max-w-screen-lg">
-            <div class="prose md:prose-2xl">
-                <p>We have no career opportunities at the moment. Please do feel free to send your CV to 
-                <a 
-                    href="mailto:jamie@percipio.london"
-                    data-tag-category="open-cv" 
-                    data-tag-action="click" 
-                    data-tag-label="mailto:jamie@percipio.london"
-                >Jamie Taylor</a>. 
-                We hope to hear from you soon.</p>
+            {%- include '_organisms/cards/cards--vacancies' ignore missing with {
+                content: entry,
+            } -%}
+
+            <div class="container mx-auto max-w-screen-lg mt-10">
+                <div class="prose md:prose-xl">
+                    <p>Not the role you're looking for? We're always happy to keep resumes on file for the right individuals.</p>
+                    <p>If you'd like to be notified for roles you may be suitable for when they become available, please email your CV with a covering note to <a 
+                        href="mailto:hr@percipio.london"
+                        data-tag-category="open-cv" 
+                        data-tag-action="click" 
+                        data-tag-label="mailto:hr@percipio.london"
+                    >hr@percipio.london</a>.</p>
+                </div>
             </div>
-        </div>
+        {%- else -%}
+            {%- set heading = {
+                heading: "There are no open vacancies",
+                overline: "I'm sorry :-(",
+                button: null
+            } -%}
+            {%- include '_molecules/headers/header--section' ignore missing with {
+                content: heading,
+            } -%}
+
+            <div class="container mx-auto max-w-screen-lg mt-16">
+                <div class="prose md:prose-2xl">
+                    <p>We have no specific opportunities open currently, but we're always happy to keep résumés on file for the right individuals.</p>
+                    <p>If you'd like to be notified for roles you may be suitable for when they become available, please email your CV with a covering note to <a 
+                        href="mailto:hr@percipio.london"
+                        data-tag-category="open-cv" 
+                        data-tag-action="click" 
+                        data-tag-label="mailto:hr@percipio.london"
+                    >hr@percipio.london</a>.</p>
+                </div>
+            </div>
+        {%- endif -%}
     </div>
 </div>
 
