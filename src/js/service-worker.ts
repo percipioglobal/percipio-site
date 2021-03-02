@@ -3,6 +3,7 @@ import { NetworkOnly, CacheFirst, StaleWhileRevalidate } from 'workbox-strategie
 import { ExpirationPlugin } from 'workbox-expiration';
 import { precacheAndRoute } from 'workbox-precaching';
 import { CacheableResponsePlugin } from 'workbox-cacheable-response';
+import { RangeRequestsPlugin } from 'workbox-range-requests';
 
 declare global {
     interface Window {
@@ -45,6 +46,17 @@ registerRoute(
         cacheName: 'static-resources',
     }),
 );
+
+// Video
+registerRoute(
+    /\.(?:mp4|m4v|webm|ogg)$/,
+    new CacheFirst({
+        cacheName: 'videos',
+        plugins: [
+            new RangeRequestsPlugin(),
+        ]
+    })
+)
 
 // Webfonts
 registerRoute(
