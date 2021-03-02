@@ -2,7 +2,7 @@
   <div
     v-if="showCookie"
     :class="[
-      'fixed z-10 right-0 bottom-0 m-3 p-5 w-11/12 md:w-9/12 lg:w-4/12 text-white-100',
+      'fixed z-20 right-0 bottom-0 m-3 p-5 w-11/12 md:w-9/12 lg:w-4/12 text-white-100',
       'bg-' + options.colour,
     ]"
   >
@@ -10,7 +10,7 @@
       options.title
     }}</span>
 
-    <div class="text-white-100" v-html="options.article"></div>
+    <div class="text-white-100" v-html="options.content"></div>
 
 
     <div class="w-full flex items-center justify-end mt-5">

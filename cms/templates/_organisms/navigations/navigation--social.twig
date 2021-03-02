@@ -11,7 +11,7 @@
 {%- set wrapperUtilities = wrapperUtilities ?? '' %}
 {%- set linkUtilities = linkUtilities ?? '' -%}
 
-<nav role="menu" class="{{- utilities -}}" aria-labelledby="social-navigation">
+<nav role="menu" class="{{- utilities -}}" aria-label="social-navigation">
     <div role="menubar" class="{{- wrapperUtilities }} w-full space-x-3">
         {% for social in seomatic.site.sameAsLinks %}
             <a 

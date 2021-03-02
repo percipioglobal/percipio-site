@@ -33,7 +33,7 @@
 
     {%- minify -%}
 
-        <figure role="figure" aria-labelledby="{{- values.alt ~ '-' ~ values.image.id ??? values.placeholder.id -}}" class="w-full h-full">
+        <figure role="figure" aria-label="{{- values.alt ~ '-' ~ values.image.id ??? values.placeholder.id -}}" class="w-full h-full">
 
             <picture class="block relative {{ values.ratio -}}">
 
