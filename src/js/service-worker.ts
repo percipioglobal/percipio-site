@@ -48,6 +48,7 @@ registerRoute(
 );
 
 // Video
+// /\.(?:mp4|m4v|webm|ogg)$/,
 registerRoute(
     ({url}) => url.pathname.endsWith('.mp4'),
     new CacheFirst({
