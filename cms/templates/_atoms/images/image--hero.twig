@@ -28,6 +28,7 @@
     {%- set values = values|merge({
         optimized: options.image.optimizeHeroes ??? null,
         placeholder: options.placeholders.heroPlaceholder[0].optimizeHeroes ??? null,
+        utilities: options.utilities ??? '',
     }) -%}
 
     {%- minify -%}
@@ -50,7 +51,7 @@
                         data-src="{{- values.optimized.src() ??? values.placeholder.src() -}}"
                         data-srcset="{{- values.optimized.srcset() ??? values.placeholder.srcset() -}}"
                         sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                        class="lazyload"
+                        class="lazyload {{ values.utilities -}}"
                         loading="lazy"
                         alt="{{- values.alt -}}"
 
