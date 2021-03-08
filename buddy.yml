@@ -1,6 +1,6 @@
 - pipeline: "Build & Deploy to Staging"
   trigger_mode: "ON_EVERY_PUSH"
-  ref_name: "hotfix/video"
+  ref_name: "staging"
   ref_type: "BRANCH"
   target_site_url: "https://sandbox.percipio.london"
   trigger_condition: "ALWAYS"
