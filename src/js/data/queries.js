@@ -53,3 +53,14 @@ export const SOCIAL_MEDIA_QUERY = `
         }
     }
 `
+
+export const VACANCIES_QUERY = `
+    query {
+        entries(section: "vacancies") {
+            ...on vacancies_vacancies_Entry{
+            title,
+            url
+            }
+        }
+    }
+`

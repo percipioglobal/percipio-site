@@ -13,6 +13,7 @@ export const createStore = async(Vue) => {
             navigationActive: false,
             navigationPrimary: null,
             socialMediaLinks: null,
+            vacancies: null,
         },
         getters,
         mutations,

@@ -12,6 +12,8 @@ scope:
   - 'entrytypes.8c5e09a3-fcbe-484a-95c1-97e362a260e8:read'
   - 'entrytypes.914b27f9-4dac-42d5-bb42-0e41ba29f93a:read'
   - 'entrytypes.768b3119-7033-4796-be27-562fecd1e4c7:read'
+  - 'sections.1962717b-7da2-4f6f-be49-ee640b8ddfe2:read'
+  - 'entrytypes.00498acf-c1c2-4c00-83f2-39a7255870f8:read'
   - 'globalsets.64547f99-7471-496a-8b02-5d48e09a72f9:read'
   - 'navigationNavs.all:read'
   - 'navigationNavs.d8cef538-a756-4496-b7f6-0e0bb61c14c2:read'
