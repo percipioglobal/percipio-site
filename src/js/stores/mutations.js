@@ -14,7 +14,10 @@ export const setNavigationPrimary = (state, data) => {
     state.navigationPrimary = data;
 }
 
-
 export const setSocialMediaLinks = (state, data) => {
     state.socialMediaLinks = data;
+}
+
+export const setVacancies = (state, data) => {
+    state.vacancies = data;
 }
