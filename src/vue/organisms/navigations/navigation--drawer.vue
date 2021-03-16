@@ -69,10 +69,10 @@
             }
         },
         components: {
-            'navigation--item': () => import(/* webpackChunkName: "navigation--item" */ '../../atoms/navigations/navigation--item.vue'),
-            'navigation--social-item': () => import(/* webpackChunkName: "navigation--social-item" */ '../../atoms/navigations/navigation--social-item.vue'),
-            'navigation--vacancies-item': () => import(/* webpackChunkName: "navigation--vacancies-item" */ '../../atoms/navigations/navigation--vacancies-item.vue'),
-            'logo--main': () => import(/* webpackChunkName: "logo--main" */ '../../atoms/logos/logo--main.vue'),
+            'navigation--item': () => import(/* webpackChunkName: "navigation--item" */ '@/vue/atoms/navigations/navigation--item.vue'),
+            'navigation--social-item': () => import(/* webpackChunkName: "navigation--social-item" */ '@/vue/atoms/navigations/navigation--social-item.vue'),
+            'navigation--vacancies-item': () => import(/* webpackChunkName: "navigation--vacancies-item" */ '@/vue/atoms/navigations/navigation--vacancies-item.vue'),
+            'logo--main': () => import(/* webpackChunkName: "logo--main" */ '@/vue/atoms/logos/logo--main.vue'),
         },
 
         computed: {
