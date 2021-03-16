@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { configureXhrApi, executeXhr } from '../utils/xhr.js';
 import { configureGqlApi, executeGqlQuery } from '../utils/gql.js';
-import { SOCIAL_MEDIA_QUERY, NAVIGATION_PRIMARY_QUERY } from '../data/queries.js';
+import { SOCIAL_MEDIA_QUERY, NAVIGATION_PRIMARY_QUERY, VACANCIES_QUERY } from '../data/queries.js';
 
 
 const CSRF_ENDPOINT = '/actions/site-module/csrf/get-csrf';
@@ -68,3 +68,23 @@ export const fetchNavigationPrimary = async({commit, state}) => {
         }
     })
 }
+
+// Fetch vacancies
+export const fetchVacancies = async({commit, state}) => {
+    const token = state.gqlToken ? state.gqlToken.token : null;
+
+    // Configure our API endpoint
+    const api = axios.create(configureGqlApi(GRAPHQL_ENDPOINT, token));
+
+    // Construct the variables object
+    let variables = {
+    }
+
+    // Execute the GQL query
+    await executeGqlQuery(api, VACANCIES_QUERY, variables, (data) => {
+        if (data.entries) {
+            commit('setVacancies', data.entries);
+        }
+    })
+}
+

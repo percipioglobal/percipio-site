@@ -1,8 +1,7 @@
 <template>
-    <div class="fixed left-0 bottom-0 w-full overflow-hidden">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	        viewBox="0 0 500 200" xml:space="preserve">
-           <g :class="[
+    <div class="hidden md:block fixed left-0 bottom-0 w-full overflow-hidden">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 200" xml:space="preserve">
+            <g :class="[
                 'fill-current',
                 swatch.label === 'redblue' ? 'text-' + swatch.primary : 'text-' + swatch.secondary
             ]">

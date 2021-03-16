@@ -17,3 +17,7 @@ export const getNavigationPrimary = (state) => {
 export const getSocialMediaLinks = (state) => {
     return state.socialMediaLinks;
 }
+
+export const getVacancies = (state) => {
+    return state.vacancies;
+}

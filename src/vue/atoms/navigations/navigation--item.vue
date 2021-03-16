@@ -9,7 +9,7 @@
                 {{ item.target[0].title }}
             </span>
             <div :class="[
-                'absolute top-0 left-0 w-full h-full transform translate-x-full group-hover:translate-x-0 transition duration-300 ease-blog',
+                'absolute top-0 ml-1 group-hover:ml-0 left-0 w-full h-full transform translate-x-full group-hover:translate-x-0 transition duration-300 ease-blog',
                 'bg-' + swatch,
             ]"></div>
         </div>
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-    import { swatch } from '../../../js/mixins/computed';
+    import { swatch } from '@/js/mixins/computed';
     
     export default {
         mixins: [ swatch ],
