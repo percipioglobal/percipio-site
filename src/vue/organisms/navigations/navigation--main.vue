@@ -35,8 +35,8 @@
             showNavigation: true,
         }),
         components: {
-            'button--hamburger': () => import(/* webpackChunkName: "button--hamburger" */ '../../atoms/buttons/button--hamburger.vue'),
-            'navigation--drawer': () => import(/* webpackChunkName: "navigation--drawer" */ './navigation--drawer.vue'),
+            'button--hamburger': () => import(/* webpackChunkName: "button--hamburger" */ '@/vue/atoms/buttons/button--hamburger.vue'),
+            'navigation--drawer': () => import(/* webpackChunkName: "navigation--drawer" */ '@/vue/organisms/navigations/navigation--drawer.vue'),
         },
         methods: {
             handleScroll(evt){
