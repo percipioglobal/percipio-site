@@ -34,7 +34,6 @@
         "url": "https://github.com/percipioglobal/percipio-site/issues"
     },
     "dependencies": {
-        "@fortawesome/free-brands-svg-icons": "^5.15.2",
         "@tailwindcss/typography": "^0.3.0",
         "axios": "^0.21.1",
         "core-js": "^3.8.3",
@@ -64,6 +63,7 @@
         "@babel/register": "^7.12.13",
         "@babel/runtime": "^7.12.13",
         "@fortawesome/fontawesome-svg-core": "^1.2.34",
+        "@fortawesome/free-brands-svg-icons": "^5.15.2",
         "@fortawesome/free-regular-svg-icons": "^5.15.2",
         "@fortawesome/free-solid-svg-icons": "^5.15.2",
         "@fortawesome/pro-regular-svg-icons": "^5.15.2",
