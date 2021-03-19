@@ -2,15 +2,20 @@
 
 // node modules
 require('dotenv').config();
+const path = require('path');
 
 // settings
 module.exports = {
     alias: {
-        'vue$': 'vue/dist/vue.esm.js'
+        'vue$': 'vue/dist/vue.esm.js',
+        '@': path.resolve('../src'),
     },
     copyright: '©2020 Percipio.London',
     entry: {
         'app': [
+            '@/js/app.ts',
+            '@/js/assets/icons.js',
+            '@/css/app.pcss',
             'prismjs',
             'prismjs/components/prism-markup-templating', 
             'prismjs/components/prism-bash', 
@@ -27,35 +32,28 @@ module.exports = {
             'prismjs/components/prism-typescript', 
             'prismjs/components/prism-yaml',
             'prismjs/components/prism-php',
-            '../src/fonts/open-sans-regular.woff',
-            '../src/fonts/open-sans-regular.woff2',
-            '../src/fonts/open-sans-italic.woff',
-            '../src/fonts/open-sans-italic.woff2',
-            '../src/fonts/open-sans-600.woff',
-            '../src/fonts/open-sans-600.woff2',
-            '../src/fonts/open-sans-700.woff',
-            '../src/fonts/open-sans-700.woff2',
-            '../src/fonts/open-sans-800.woff',
-            '../src/fonts/open-sans-800.woff2',
-            '../src/fonts/source-code-pro-regular.woff',
-            '../src/fonts/source-code-pro-regular.woff2',
-            '../src/js/app.ts',
-            '../src/js/assets/icons.js',
-            '../src/css/tailwind-base.pcss',
-            '../src/css/tailwind-components.pcss',
-            '../src/css/tailwind-utilities.pcss',
-            '../src/css/app-components.pcss',
-            '../src/css/app-utilities.pcss',
+            '@/fonts/open-sans-regular.woff',
+            '@/fonts/open-sans-regular.woff2',
+            '@/fonts/open-sans-italic.woff',
+            '@/fonts/open-sans-italic.woff2',
+            '@/fonts/open-sans-600.woff',
+            '@/fonts/open-sans-600.woff2',
+            '@/fonts/open-sans-700.woff',
+            '@/fonts/open-sans-700.woff2',
+            '@/fonts/open-sans-800.woff',
+            '@/fonts/open-sans-800.woff2',
+            '@/fonts/source-code-pro-regular.woff',
+            '@/fonts/source-code-pro-regular.woff2',
         ],
-        'lazysizes-wrapper': '../src/js/utils/lazysizes-wrapper.ts',
+        'lazysizes-wrapper': '@/js/utils/lazysizes-wrapper.ts',
     },
     extensions: ['.ts', '.js', '.vue', '.json'],
     name: 'percipio.london',
     paths: {
-        dist: '../../cms/web/dist/',
+        dist: path.resolve('../cms/web/dist'),
     },
     urls: {
-        criticalCss: 'https://sandbox.percipio.london/',
+        criticalCss: 'https://percipio.london/',
         publicPath: () => process.env.PUBLIC_PATH || '/dist/',
     },
 };
