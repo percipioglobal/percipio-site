@@ -404,6 +404,7 @@ module.exports = {
                 '-1/4': '-25%',
                 '-3/4': '-75%',
                 '-full': '-100%',
+                '-sr': '-10000px',
             }),
 
             maxWidth: {
@@ -454,15 +455,18 @@ module.exports = {
     },
 
     variants: {
-        animation: ['hover', 'group-hover'],
-        backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
-        borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
+        animation: ['hover', 'group-focus', 'group-hover'],
+        backgroundColor: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
+        borderColor: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
+        display: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
+        height: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
         inset: ['responsive'],
         scale: ['group-hover'],
-        opacity: ['responsive', 'hover', 'focus', 'group-hover'],
-        textColor: ['responsive', 'hover', 'focus', 'group-hover'],
-        translate: ['responsive', 'hover', 'focus', 'group-hover'],
+        opacity: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
+        textColor: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
+        translate: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
         transitionDelay: ['hover'],
+        width: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
         zIndex: ['responsive'],
     },
 

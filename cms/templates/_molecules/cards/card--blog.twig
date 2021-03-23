@@ -3,6 +3,10 @@
 
 {%- set teaserImage = content.teaserImage[0] -%}
 {%- set swatchBlog = swatch(content.colourSwatch) -%}
+{%- set category = content.blogCategories|length ? content.blogCategories[0].title : '' -%}
+{%- set authorOptions = {
+    category: category
+} -%}
 {# {%- set swatchCategory = content.blogCategories[0] ? swatch(content.blogCategories[0].colourSwatch) : swatchBlog -%} #}
 
 {%- minify -%}
@@ -13,9 +17,9 @@
                 <div class="flex w-full items-center">
                     <div class="flex-grow pr-2">
                         <p class="font-mono text-sm md:text-base pb-4 group-hover:text-white-100 transition duration-200 delay-300 ease-in-out">
-                            <span class="text-{{- swatchBlog.primary }} group-hover:text-white-100 transition duration-200 delay-300 ease-in-out">{{content.blogCategories|length ? content.blogCategories[0].title : ''}}</span>
+                            <span class="text-{{- swatchBlog.primary }} group-hover:text-white-100 transition duration-200 delay-300 ease-in-out">{{- category -}}</span>
                             by
-                            {{ functions.authors(content.authors) }}
+                            {{ functions.authors(content.authors, authorOptions) }}
                             on
                             <time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
                         </p>
@@ -49,7 +53,7 @@
             data-tag-label="{{- content.url -}}" 
             class="absolute inset-0 z-1"
         >
-            <span class="sr-only">Read more about {{- content.title -}}</span>
+            <span class="sr-only">Read {{- content.title -}}</span>
         </a>
     </div>
 </div>

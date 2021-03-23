@@ -10,8 +10,10 @@
 } -%}
 
 <div id="content">
-    {%- include '_organisms/cards/cards--projects' ignore missing with {
-        content: entry,
-        spacing: 0,
-    } -%}
+    <div id="page">
+        {%- include '_organisms/cards/cards--projects' ignore missing with {
+            content: entry,
+            spacing: 0,
+        } -%}
+    </div>
 </div>

@@ -21,9 +21,11 @@
     member: entry,
 } -%}
 
-{%- include '_organisms/builders/content--builder' with {
-    content: entry,
-} -%}
+<div id="page">
+    {%- include '_organisms/builders/content--builder' with {
+        content: entry,
+    } -%}
+</div>
 
 {% if blogs|length > 0 %}
     <div class="pt-10">

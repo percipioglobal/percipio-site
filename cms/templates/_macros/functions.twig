@@ -19,6 +19,7 @@
 {% macro authors(authors, options) %}
 
     {% set colours = options.swatch ??? null %}
+    {% set category = options.category ??? "" %}
 
     {% spaceless %}
         {% for author in authors %}
@@ -28,6 +29,7 @@
                 data-tag-category="author" 
                 data-tag-action="click" 
                 data-tag-label="{{- author.url -}}"
+                aria-label="{{- 'A ' ~ category ~ ' post by ' ~ author.title -}}"
             >
                 {{- author.title -}}
             </a>

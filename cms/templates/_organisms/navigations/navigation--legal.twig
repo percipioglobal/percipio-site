@@ -5,7 +5,7 @@
     .level(1)
     .all() -%}
 
-<nav class="{{- utilities -}}" role="menu" aria-label="footer-legal-navigation">
+<nav class="{{- utilities -}}" role="menu" aria-label="Footer legal navigation">
 	{% nav node in nodes %}
 	<a 
 		{% if node.url %} 
@@ -14,6 +14,7 @@
 			data-tag-action="click" 
 			data-tag-label="{{- node.url -}}" 
 		{% endif %} 
+		aria-label="{{- node.title -}}"
 		title="{{- node.title -}}" 
 		class="hover:underline {{ node.classes | length ? node.classes : '' }}" {% if node.newWindow %} target="_blank" rel="noopener" {% endif %} {% for attribute in node.customAttributes %} {{ attribute.attribute }}="{{ attribute.value }}" {% endfor %} role="menuitem"
 	>
