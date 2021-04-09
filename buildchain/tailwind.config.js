@@ -64,7 +64,25 @@ module.exports = {
                 DEFAULT: {
                     css: {
                         maxWidth: '80ch',
-                        fontFamily: theme('fontFamily.primary'),
+                        fontFamily: theme('fontFamily.prose'),
+                        h1: {
+                            fontWeight: 'bold'
+                        },
+                        h2: {
+                            fontWeight: 'bold'
+                        },
+                        h3: {
+                            fontWeight: 'bold'
+                        },
+                        h4: {
+                            fontWeight: 'bold'
+                        },
+                        h5: {
+                            fontWeight: 'bold'
+                        },
+                        h6: {
+                            fontWeight: 'bold'
+                        },
                     },
                 },
                 'white': {
@@ -182,6 +200,17 @@ module.exports = {
                     'Liberation Mono',
                     'Courier New',
                     'monospace'
+                ],
+                prose: [
+                    'sans-serif',
+                    'Noto Sans',
+                    'Arial',
+                    'Helvetica Neue',
+                    'Roboto',
+                    '-apple-system',
+                    'system-ui',
+                    'ui-sans-serif',
+                    'Open Sans',
                 ]
             },
 
