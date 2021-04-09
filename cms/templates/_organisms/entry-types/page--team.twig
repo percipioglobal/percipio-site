@@ -7,6 +7,8 @@
     content: entry,
 } -%}
 
-{%- include '_organisms/cards/cards--team' ignore missing with {
-    showVacancies: true
-} -%}
+<div id="page">
+    {%- include '_organisms/cards/cards--team' ignore missing with {
+        showVacancies: true
+    } -%}
+</div>

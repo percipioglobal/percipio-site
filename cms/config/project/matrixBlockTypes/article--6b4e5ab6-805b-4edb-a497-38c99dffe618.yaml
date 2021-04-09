@@ -79,41 +79,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  b723924c-f0d9-4479-945f-b43f96e8e1e5:
-    contentColumnType: string
-    fieldGroup: null
-    handle: prose
-    instructions: ''
-    name: 'Text Size'
-    searchable: false
-    settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Regular
-            -
-              - value
-              - 'prose-grid-article-sm md:prose-grid-article'
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - Large
-            -
-              - value
-              - 'prose-grid-article-large-sm md:prose-grid-article-large'
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
   b9a667dd-8941-472a-89b5-e3d1fe877aec:
     contentColumnType: string
     fieldGroup: null
@@ -164,6 +129,41 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: rias\widthfieldtype\fields\Width
+  b723924c-f0d9-4479-945f-b43f96e8e1e5:
+    contentColumnType: string
+    fieldGroup: null
+    handle: prose
+    instructions: ''
+    name: 'Text Size'
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Regular
+            -
+              - value
+              - 'prose-grid-article-sm md:prose-grid-article'
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Large
+            -
+              - value
+              - 'prose-grid-article-large-sm md:prose-grid-article-large'
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
   c499bc8d-734b-4fe4-b74e-dca793aba082:
     contentColumnType: text
     fieldGroup: null

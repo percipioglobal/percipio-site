@@ -79,38 +79,6 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  24fd51e7-3c4a-4991-89c1-290d5c79408c:
-    contentColumnType: string
-    fieldGroup: null
-    handle: position
-    instructions: 'This will only work if you don''t "Containerise" this block. This adds the position to the Percipio logo'
-    name: 'Logo Position'
-    searchable: false
-    settings:
-      default: left
-      options:
-        __assoc__:
-          -
-            - left
-            - '1'
-          -
-            - center
-            - ''
-          -
-            - right
-            - '1'
-          -
-            - full
-            - ''
-          -
-            - drop-left
-            - '1'
-          -
-            - drop-right
-            - '1'
-    translationKeyFormat: null
-    translationMethod: none
-    type: rias\positionfieldtype\fields\Position
   4be4bd14-ce94-450b-a4f4-e10721ba5b22:
     contentColumnType: boolean
     fieldGroup: null
@@ -294,6 +262,38 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
+  24fd51e7-3c4a-4991-89c1-290d5c79408c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: position
+    instructions: 'This will only work if you don''t "Containerise" this block. This adds the position to the Percipio logo'
+    name: 'Logo Position'
+    searchable: false
+    settings:
+      default: left
+      options:
+        __assoc__:
+          -
+            - left
+            - '1'
+          -
+            - center
+            - ''
+          -
+            - right
+            - '1'
+          -
+            - full
+            - ''
+          -
+            - drop-left
+            - '1'
+          -
+            - drop-right
+            - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\positionfieldtype\fields\Position
   bae060ba-ddb9-4f66-8df8-9055de4e31e5:
     contentColumnType: boolean
     fieldGroup: null

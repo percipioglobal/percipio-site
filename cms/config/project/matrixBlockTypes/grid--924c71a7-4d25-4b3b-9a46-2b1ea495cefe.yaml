@@ -34,19 +34,6 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  18802253-9492-45f9-94a3-1d4c9b68c027:
-    contentColumnType: text
-    fieldGroup: null
-    handle: swatch
-    instructions: ''
-    name: Swatch
-    searchable: false
-    settings:
-      palette: Percipio
-      useConfigFile: '1'
-    translationKeyFormat: null
-    translationMethod: none
-    type: percipioglobal\colourswatches\fields\ColourSwatches
   7b7f1a25-dd1f-40c1-8c62-7af0091d883f:
     contentColumnType: string
     fieldGroup: null
@@ -132,6 +119,19 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
+  18802253-9492-45f9-94a3-1d4c9b68c027:
+    contentColumnType: text
+    fieldGroup: null
+    handle: swatch
+    instructions: ''
+    name: Swatch
+    searchable: false
+    settings:
+      palette: Percipio
+      useConfigFile: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: percipioglobal\colourswatches\fields\ColourSwatches
 handle: grid
 name: 'Text Grid'
 sortOrder: 12

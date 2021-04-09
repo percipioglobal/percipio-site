@@ -43,34 +43,6 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  1750a33c-c911-45de-9392-80a3004cbe0d:
-    contentColumnType: text
-    fieldGroup: null
-    handle: description
-    instructions: 'Add an additional description to the page'
-    name: Description
-    searchable: false
-    settings:
-      availableTransforms: '*'
-      availableVolumes: ''
-      cleanupHtml: true
-      columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
-      redactorConfig: Simple.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      uiMode: enlarged
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\redactor\Field
   284e17ab-cd25-417d-8951-fd69b7169e3d:
     contentColumnType: string
     fieldGroup: null
@@ -104,6 +76,34 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  1750a33c-c911-45de-9392-80a3004cbe0d:
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: 'Add an additional description to the page'
+    name: Description
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
   61518518-d14c-4402-a480-c059af3b7087:
     contentColumnType: string
     fieldGroup: null
