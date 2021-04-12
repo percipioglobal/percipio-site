@@ -4,7 +4,7 @@
             'transform inset-0 bg-white-90 min-h-screen fixed h-full ease-in-out transition-opacity duration-300 -z-10',
             getNavigationActive ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full',
             getVacancies ? 'pt-24' : 'pt-32'
-            ]"
+        ]"
     >
 
         <div class="h-full w-full">
@@ -17,26 +17,26 @@
 
                 <div class="container mx-auto flex flex-col items-end" v-if="getNavigationPrimary">
 
-                    <div class="w-full md:w-1/2 xl:w-1/3 pb-8 lg:pr-16">
+                    <div class="w-full md:w-1/2 xl:w-1/3 pb-8 lg:pr-16" role="menu" aria-label="Main navigation">
                         <navigation--item v-for="item in getNavigationPrimary" :item="item" :key="item.id"></navigation--item>
                     </div>
 
                     <div class="w-full md:w-1/2 xl:w-1/3 lg:pr-16" v-if="getSocialMediaLinks">
 
                         <hr :class="
-                                [
-                                    'h-2 mb-8 w-full mr-16',
-                                    'bg-' + swatch.primary, 
-                                ]" 
+                            [
+                                'h-2 mb-8 w-full mr-16',
+                                'bg-' + swatch.primary, 
+                            ]" 
                         >
 
                     </div>
 
-                    <div class="w-full md:w-1/2 xl:w-1/3 lg:pr-16" v-if="getSocialMediaLinks">
+                    <div class="w-full md:w-1/2 xl:w-1/3 lg:pr-16" v-if="getSocialMediaLinks" role="menu" aria-label="Social media pages from Percipio">
                         <navigation--social-item v-for="item in getSocialMediaLinks.socialMedia" :item="item" :swatch="swatch" :key="item.id"></navigation--social-item>
                     </div>
 
-                    <div v-if="getVacancies && getVacancies.length > 0" class="w-full md:w-1/2 xl:w-1/3 lg:pr-16 pt-8">
+                    <div v-if="getVacancies && getVacancies.length > 0" class="w-full md:w-1/2 xl:w-1/3 lg:pr-16 pt-8" role="menu" aria-label="Percipio vacancies">
                         <p :class="[
                             'block w-full text-right font-bold font-primary px-4 pb-2 text-2xl',
                             'text-' + swatch.primary
@@ -77,23 +77,6 @@
 
         computed: {
             ...mapGetters(['getCsrfToken', 'getNavigationActive', 'getNavigationGqlToken', 'getSocialMediaLinks', 'getNavigationPrimary', 'getVacancies']),
-        },
-
-        methods: {
-            closeMenu(evt) {
-                if (evt.keyCode === 27) {
-                    this.$store.commit('setNavigationActive', false);
-                    document.body.classList.remove("overflow-hidden");
-                }
-            }
-        },
-
-        created: function(){
-            document.addEventListener('keyup', this.closeMenu);
-        },
-
-        destroyed: function(){
-            document.removeEventListener('keyup', this.closeMenu);
         },
 
         async mounted() {

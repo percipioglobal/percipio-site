@@ -34,25 +34,6 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  345c4093-df0a-45dd-9d5f-47fb3fac8c7d:
-    contentColumnType: string(480)
-    fieldGroup: null
-    handle: heading
-    instructions: 'The full heading of the section header'
-    name: Heading
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: 120
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
   9bca25cb-2cf2-4427-baf8-44e347cc8a7a:
     contentColumnType: string
     fieldGroup: null
@@ -203,6 +184,25 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
+  345c4093-df0a-45dd-9d5f-47fb3fac8c7d:
+    contentColumnType: string(480)
+    fieldGroup: null
+    handle: heading
+    instructions: 'The full heading of the section header'
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: 120
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   f66247e5-1697-4e5a-976e-ff087ee0911e:
     contentColumnType: text
     fieldGroup: null
