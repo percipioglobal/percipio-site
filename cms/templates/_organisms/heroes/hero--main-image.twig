@@ -58,8 +58,8 @@
 				{{- render.atom('image', 'hero', {
 					image: content.heroImage[0] ??? null,
 					placeholders: placeholders,
-					ratio: 'isFilled',
-                	utilities: 'object-right md:object-center'
+					ratio: 'w-full h-full',
+                	utilities: 'object-right md:object-center object-cover absolute left-0 top-0 w-full h-full'
 				}) -}}
 			</div>
 

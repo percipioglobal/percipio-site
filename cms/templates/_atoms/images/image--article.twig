@@ -29,13 +29,14 @@
     {%- set values = values|merge({
         optimized: options.image.optimizeArticles ??? null,
         placeholder: options.placeholders.articlePlaceholder[0].optimizeArticles ??? null,
+        utilities: options.utilities ??? ''
     }) -%}
 
     {%- minify -%}
 
         <figure role="figure" aria-label="{{- values.alt ~ '-' ~ values.image.id ??? values.placeholder.id -}}" class="w-full h-full">
 
-            <picture class="block relative {{ values.ratio -}}">
+            <picture class="block relative w-full h-full {{ values.ratio -}}">
 
                 <source data-srcset="{{- values.optimized.srcsetWebP() ??? values.placeholder.srcsetWebP() -}}"
                         sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
@@ -51,8 +52,8 @@
                         data-src="{{- values.optimized.src() ??? values.placeholder.src() -}}" 
                         data-srcset="{{- values.optimized.srcset() ??? values.placeholder.srcset() -}}"
                         sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                        class="lazyload"        
-                        loading="lazy"    
+                        class="lazyload {{ values.utilities -}}"        
+                        loading="lazy"   
                         alt="{{- values.alt -}}"
                         
                 />
