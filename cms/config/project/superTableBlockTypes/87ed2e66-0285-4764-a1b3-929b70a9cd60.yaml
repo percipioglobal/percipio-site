@@ -1,11 +1,11 @@
-field: e531a8df-ea73-4e09-8422-d08a20883128
+field: e531a8df-ea73-4e09-8422-d08a20883128 # Slides
 fieldLayouts:
   db3884af-07d7-46d7-a69c-a5134817e94f:
     tabs:
       -
         elements:
           -
-            fieldUid: 48f153ba-ba26-42dd-b297-c5b428cc259b
+            fieldUid: 48f153ba-ba26-42dd-b297-c5b428cc259b # Image
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 2cb6fb1e-761a-4096-ba9d-e151495efc98
+            fieldUid: 2cb6fb1e-761a-4096-ba9d-e151495efc98 # Caption
             instructions: null
             label: null
             required: false
@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  2cb6fb1e-761a-4096-ba9d-e151495efc98:
+  2cb6fb1e-761a-4096-ba9d-e151495efc98: # Caption
     contentColumnType: text
     fieldGroup: null
     handle: caption
@@ -39,12 +39,12 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  48f153ba-ba26-42dd-b297-c5b428cc259b:
+  48f153ba-ba26-42dd-b297-c5b428cc259b: # Image
     contentColumnType: string
     fieldGroup: null
     handle: image

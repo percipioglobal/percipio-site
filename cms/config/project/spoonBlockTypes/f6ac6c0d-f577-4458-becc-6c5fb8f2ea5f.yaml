@@ -1,12 +1,12 @@
 context: global
-field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
+field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733 # Page Builder
 fieldLayout:
   819c4e48-3c57-4084-9962-3008eb693bd8:
     tabs:
       -
         elements:
           -
-            fieldUid: a9ba876e-c0bf-4a8c-b77e-e926de382189
+            fieldUid: a9ba876e-c0bf-4a8c-b77e-e926de382189 # Items
             instructions: null
             label: null
             required: false
@@ -19,7 +19,7 @@ fieldLayout:
       -
         elements:
           -
-            fieldUid: c5638e5a-a8f8-4f97-ab00-7247cd30b054
+            fieldUid: c5638e5a-a8f8-4f97-ab00-7247cd30b054 # Width
             instructions: null
             label: null
             required: false
@@ -28,7 +28,7 @@ fieldLayout:
             warning: null
             width: 100
           -
-            fieldUid: 082e47d2-643f-411e-a751-0d9f915db739
+            fieldUid: 082e47d2-643f-411e-a751-0d9f915db739 # Swatch
             instructions: null
             label: null
             required: false
@@ -40,5 +40,5 @@ fieldLayout:
         sortOrder: 2
 groupName: Grids
 groupSortOrder: 4
-matrixBlockType: f8214a2b-3046-4868-bb6b-775397e77533
+matrixBlockType: f8214a2b-3046-4868-bb6b-775397e77533 # Text Grid
 sortOrder: 1

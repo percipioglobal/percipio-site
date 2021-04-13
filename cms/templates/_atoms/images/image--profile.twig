@@ -28,7 +28,7 @@
     {%- set values = values|merge({
         optimized: options.image.optimizeProfileImages ??? null,
         placeholder: options.placeholders.profilePhotoPlaceholder[0].optimizeProfileImages ??? null,
-        ratio: 'is1by1',
+        ratio: 'aspect-w-1 aspect-h-1',
     }) -%}
 
     {%- minify -%}

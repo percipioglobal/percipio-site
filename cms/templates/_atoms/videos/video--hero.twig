@@ -8,13 +8,14 @@
         ratio: options.ratio ??? 'is16by9',
         alt: options.alt ??? null,
         attributes: options.attributes ??? null,
+        utilities: options.utilities ??? null,
     } %}
 
     {%- if values.video -%}
         <figure role="figure" aria-label="{{- values.alt -}}" class="w-full h-full">
 
             <div class="relative z-1 {{ values.ratio -}}">
-                <video {{ values.attributes -}}>
+                <video class="{{- values.utilities -}}" {{ values.attributes -}}>
                     <source src="{{- values.video.url -}}" type="video/{{- values.video.extension -}}">
                 </video>
             </div>
@@ -25,6 +26,7 @@
                     alt: values.alt,
                     ratio: values.ratio,
                     placeholders: placeholders,
+                    utilities: values.utilities
                 }) -}}
             </div>
 

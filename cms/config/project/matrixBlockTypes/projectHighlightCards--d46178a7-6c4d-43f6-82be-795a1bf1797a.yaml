@@ -1,11 +1,11 @@
-field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
+field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733 # Page Builder
 fieldLayouts:
   ee8883f2-bbdb-4334-9655-b352088ce656:
     tabs:
       -
         elements:
           -
-            fieldUid: 13653e63-9892-4752-b260-32518bc3bb3d
+            fieldUid: 13653e63-9892-4752-b260-32518bc3bb3d # Cards
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  13653e63-9892-4752-b260-32518bc3bb3d:
+  13653e63-9892-4752-b260-32518bc3bb3d: # Cards
     contentColumnType: string
     fieldGroup: null
     handle: cards
