@@ -9,12 +9,13 @@
         {{- render.atom('image', 'article', {
                 image: content.image[0] ??? null,
                 alt: content.image[0].title ??? null,
-                ratio: 'is16by9 lg:isFilled',
+                ratio: 'aspect-w-16 aspect-h-9 lg:pb-0 lg:w-full lg:h-full',
                 caption: content.caption ?? content.image[0].caption,
                 author: content.image[0].author ?? "",
                 source: content.image[0].source ?? "",
                 placeholders: placeholders,
                 swatch: swatch,
+                utilities: 'lg:object-cover lg:w-full lg:h-full lg:top-0 lg:left-0 lg:absolute'
             })
         -}}
 

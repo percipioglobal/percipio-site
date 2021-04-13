@@ -1,11 +1,11 @@
-field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
+field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733 # Page Builder
 fieldLayouts:
   d6a68640-123a-49f5-907d-1fdedf8e1e84:
     tabs:
       -
         elements:
           -
-            fieldUid: a9ba876e-c0bf-4a8c-b77e-e926de382189
+            fieldUid: a9ba876e-c0bf-4a8c-b77e-e926de382189 # Items
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: c5638e5a-a8f8-4f97-ab00-7247cd30b054
+            fieldUid: c5638e5a-a8f8-4f97-ab00-7247cd30b054 # Width
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 082e47d2-643f-411e-a751-0d9f915db739
+            fieldUid: 082e47d2-643f-411e-a751-0d9f915db739 # Swatch
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  082e47d2-643f-411e-a751-0d9f915db739:
+  082e47d2-643f-411e-a751-0d9f915db739: # Swatch
     contentColumnType: text
     fieldGroup: null
     handle: swatch
@@ -47,7 +47,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: percipioglobal\colourswatches\fields\ColourSwatches
-  a9ba876e-c0bf-4a8c-b77e-e926de382189:
+  a9ba876e-c0bf-4a8c-b77e-e926de382189: # Items
     contentColumnType: string
     fieldGroup: null
     handle: items
@@ -58,14 +58,14 @@ fields:
       columns:
         __assoc__:
           -
-            - 1eb19599-751e-4136-ac0f-385321fd1f98
+            - 1eb19599-751e-4136-ac0f-385321fd1f98 # Heading
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - d613d12d-ac03-4153-942b-0cca809f451b
+            - d613d12d-ac03-4153-942b-0cca809f451b # Body Content
             -
               __assoc__:
                 -
@@ -82,7 +82,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-  c5638e5a-a8f8-4f97-ab00-7247cd30b054:
+  c5638e5a-a8f8-4f97-ab00-7247cd30b054: # Width
     contentColumnType: string
     fieldGroup: null
     handle: width

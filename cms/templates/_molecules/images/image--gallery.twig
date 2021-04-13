@@ -38,7 +38,7 @@
                     {# check sibling size to know which format the image should show #}
                     {% if imageSize == siblingImageSize %}
                         {%- set colspan = "3" -%}
-                        {%- set ratio = imageSize == "landscape" and siblingImageSize == "landscape" ? "is4by3" : imageSize == "portrait" ? "is3by4" : "is1by1" -%}
+                        {%- set ratio = imageSize == "landscape" and siblingImageSize == "landscape" ? "aspect-w-4 aspect-h-3" : imageSize == "portrait" ? "aspect-w-3 aspect-h-4" : "aspect-w-1 aspect-h-1" -%}
                     {% endif %}
                     {% if imageSize == "landscape" and siblingImageSize == "portrait" or imageSize == "landscape" and siblingImageSize == "square" %}
                         {%- set colspan = "4" -%}
@@ -46,15 +46,15 @@
                     {% endif %}
                     {% if imageSize == "portrait" and siblingImageSize == "landscape" or imageSize == "square" and siblingImageSize == "landscape" %}
                         {%- set colspan = "2" -%}
-                        {%- set ratio = imageSize == "portrait" ? "is3by4" : "is1by1" -%}
+                        {%- set ratio = imageSize == "portrait" ? "aspect-w-3 aspect-h-4" : "aspect-w-1 aspect-h-1" -%}
                     {% endif %}
                     {% if imageSize == "portrait" and siblingImageSize == "square" or imageSize == "square" and siblingImageSize == "portrait" %}
                         {%- set colspan = "3" -%}
-                        {%- set ratio = "is1by1" -%}
+                        {%- set ratio = "aspect-w-1 aspect-h-1" -%}
                     {% endif %}
                     {% if siblingImageSize == "" %}
                         {%- set colspan = "6" -%}
-                        {%- set ratio = "is16by9" -%}
+                        {%- set ratio = "aspect-w-16 aspect-h-9" -%}
                     {% endif %}
 
                     <div class="col-span-6 sm:col-span-{{- colspan -}}">
@@ -62,8 +62,8 @@
                             image: image,
                             placeholders: placeholder,
                             alt:image.title,
-                            ratio: ratio,
-                            utilities: 'overflow-hidden'  }) -}}
+                            ratio: ratio == "isFilled" ? "w-full h-full" : ratio,
+                            utilities: 'overflow-hidden object-cover' ~ (ratio == "isFilled" ? 'w-full h-full top-0 left-0 absolute' : '')  }) -}}
                     </div>
                 {% endfor %}
             </div>

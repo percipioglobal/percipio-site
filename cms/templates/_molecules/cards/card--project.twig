@@ -60,11 +60,11 @@
             {{- render.atom('image', 'teaser', {
                 image: content.teaserImage[0],
                 alt: content.teaserImage[0].title,
-                ratio: size == 'large' ? 'isFilled' : 'is1by1 md:is16by9 lg:is1by1',
+                ratio: size != 'large' ? 'aspect-w-1 aspect-h-1 md:aspect-w-16 md:aspect-h-9 lg:aspect-w-1 lg:aspect-h-1' : 'w-full h-full',
                 placeholders: placeholders,
                 animation: 'scale',
                 sizes: ['100vw'],
-                utilities: 'object-right md:object-center'
+                utilities: 'object-right md:object-center ' ~ (size == "large" ? 'object-cover w-full h-full top-0 left-0 absolute' : '')
             }) -}}
         </div>
 

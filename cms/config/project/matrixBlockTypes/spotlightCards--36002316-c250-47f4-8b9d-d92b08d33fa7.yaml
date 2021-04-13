@@ -1,11 +1,11 @@
-field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
+field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733 # Page Builder
 fieldLayouts:
   f82d0146-d06f-43b0-ad09-98cc92349db6:
     tabs:
       -
         elements:
           -
-            fieldUid: 57f60bd3-c5a9-461b-ae37-5a637231ab58
+            fieldUid: 57f60bd3-c5a9-461b-ae37-5a637231ab58 # Settings
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            fieldUid: aee87c60-8ff1-4121-95d8-e29d940f8537
+            fieldUid: aee87c60-8ff1-4121-95d8-e29d940f8537 # Limit
             instructions: null
             label: null
             required: true
@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  57f60bd3-c5a9-461b-ae37-5a637231ab58:
+  57f60bd3-c5a9-461b-ae37-5a637231ab58: # Settings
     contentColumnType: string
     fieldGroup: null
     handle: settings
@@ -71,7 +71,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  aee87c60-8ff1-4121-95d8-e29d940f8537:
+  aee87c60-8ff1-4121-95d8-e29d940f8537: # Limit
     contentColumnType: smallint(1)
     fieldGroup: null
     handle: limit
@@ -83,11 +83,11 @@ fields:
       defaultValue: null
       max: '6'
       min: '1'
-      prefix: ''
+      prefix: null
       previewCurrency: ''
       previewFormat: decimal
       size: null
-      suffix: ''
+      suffix: null
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Number

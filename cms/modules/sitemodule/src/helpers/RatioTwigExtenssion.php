@@ -7,15 +7,15 @@ use Craft;
 class RatioTwigExtenssion extends \Twig\Extension\AbstractExtension
 {
     private $ratios = [
-        100 => 'is1by1',
-        50 => 'is2by1',
-        33 => 'is3by1',
-        75 => 'is4by3',
-        133 => 'is3by4',
-        74 => 'is7by5',
-        62 => 'is8by5',
-        56 => 'is16by9',
-        42 => 'is21by9'
+        100 => 'aspect-w-1 aspect-h-1',
+        50 => 'aspect-w-2 aspect-h-1',
+        33 => 'aspect-w-3 aspect-h-1',
+        75 => 'aspect-w-4 aspect-h-3',
+        133 => 'aspect-w-3 aspect-h-4',
+        74 => 'aspect-w-7 aspect-h-5',
+        62 => 'aspect-w-8 aspect-h-5',
+        56 => 'aspect-w-16 aspect-h-9',
+        42 => 'aspect-w-21 aspect-h-9'
     ];
 
     public function getFilters()
