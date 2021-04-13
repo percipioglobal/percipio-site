@@ -1,11 +1,11 @@
-field: e691301b-7484-40be-a3d4-c3bc590de959
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
 fieldLayouts:
   3041cc5a-1802-4565-802a-5b693e59e93f:
     tabs:
       -
         elements:
           -
-            fieldUid: 3ef3485e-6187-4dac-af6b-66d630852b61
+            fieldUid: 3ef3485e-6187-4dac-af6b-66d630852b61 # Quote
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: f7cf0694-24fa-4e41-943b-40abaddc797a
+            fieldUid: f7cf0694-24fa-4e41-943b-40abaddc797a # Quote Author
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            fieldUid: 4133e37a-d625-476e-91aa-a600e0123064
+            fieldUid: 4133e37a-d625-476e-91aa-a600e0123064 # Quote Source
             instructions: null
             label: null
             required: false
@@ -32,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            fieldUid: 1b99a854-98db-4e61-b98d-3c4e357b1e85
+            fieldUid: 1b99a854-98db-4e61-b98d-3c4e357b1e85 # Containerise
             instructions: null
             label: null
             required: true
@@ -41,7 +41,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 4ee5d848-5fee-407d-a3aa-7475ef0fe6bc
+            fieldUid: 4ee5d848-5fee-407d-a3aa-7475ef0fe6bc # Width
             instructions: null
             label: null
             required: false
@@ -50,7 +50,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6ba3a39a-5d6c-488d-bcab-d047d0942b0e
+            fieldUid: 6ba3a39a-5d6c-488d-bcab-d047d0942b0e # Swatch
             instructions: null
             label: null
             required: false
@@ -59,7 +59,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: ebc9bc3a-83e6-4cab-956d-f254a119f606
+            fieldUid: ebc9bc3a-83e6-4cab-956d-f254a119f606 # Show Logo
             instructions: null
             label: null
             required: false
@@ -68,7 +68,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 7127ef72-a077-470d-8d8d-96b29a40a27a
+            fieldUid: 7127ef72-a077-470d-8d8d-96b29a40a27a # Logo Position
             instructions: null
             label: null
             required: false
@@ -79,7 +79,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  1b99a854-98db-4e61-b98d-3c4e357b1e85:
+  1b99a854-98db-4e61-b98d-3c4e357b1e85: # Containerise
     contentColumnType: boolean
     fieldGroup: null
     handle: containerise
@@ -93,7 +93,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  3ef3485e-6187-4dac-af6b-66d630852b61:
+  3ef3485e-6187-4dac-af6b-66d630852b61: # Quote
     contentColumnType: text
     fieldGroup: null
     handle: quote
@@ -107,12 +107,12 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: '1'
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  4ee5d848-5fee-407d-a3aa-7475ef0fe6bc:
+  4ee5d848-5fee-407d-a3aa-7475ef0fe6bc: # Width
     contentColumnType: string
     fieldGroup: null
     handle: width
@@ -162,7 +162,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: rias\widthfieldtype\fields\Width
-  6ba3a39a-5d6c-488d-bcab-d047d0942b0e:
+  6ba3a39a-5d6c-488d-bcab-d047d0942b0e: # Swatch
     contentColumnType: text
     fieldGroup: null
     handle: swatch
@@ -175,7 +175,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: percipioglobal\colourswatches\fields\ColourSwatches
-  4133e37a-d625-476e-91aa-a600e0123064:
+  4133e37a-d625-476e-91aa-a600e0123064: # Quote Source
     contentColumnType: string
     fieldGroup: null
     handle: quoteSource
@@ -195,137 +195,49 @@ fields:
       enableElementCache: false
       enableTitle: false
       typeSettings:
-        __assoc__:
-          -
-            - url
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - true
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - custom
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - email
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - tel
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - asset
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - category
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - entry
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - true
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - user
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - site
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - sites
-                  - '*'
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
-  7127ef72-a077-470d-8d8d-96b29a40a27a:
+  7127ef72-a077-470d-8d8d-96b29a40a27a: # Logo Position
     contentColumnType: string
     fieldGroup: null
     handle: position
@@ -357,7 +269,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: rias\positionfieldtype\fields\Position
-  ebc9bc3a-83e6-4cab-956d-f254a119f606:
+  ebc9bc3a-83e6-4cab-956d-f254a119f606: # Show Logo
     contentColumnType: boolean
     fieldGroup: null
     handle: showLogo
@@ -371,7 +283,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  f7cf0694-24fa-4e41-943b-40abaddc797a:
+  f7cf0694-24fa-4e41-943b-40abaddc797a: # Quote Author
     contentColumnType: text
     fieldGroup: null
     handle: quoteAuthor
@@ -385,7 +297,7 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none

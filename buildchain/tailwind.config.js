@@ -500,5 +500,8 @@ module.exports = {
     },
 
     corePlugins: {},
-    plugins: [require('@tailwindcss/typography')],
+    plugins: [
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/aspect-ratio')
+    ],
 };

@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
+            fieldUid: 73929e5d-0eaa-424c-8cd1-ce83b47fd733 # Page Builder
             instructions: null
             label: null
             required: false
