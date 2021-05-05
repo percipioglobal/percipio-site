@@ -1,0 +1,38 @@
+fieldLayouts:
+  0a2c79d3-cddc-4216-8ae3-9ec0a7c99c68:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: handbookhomepage
+hasTitleField: false
+name: HandbookHomepage
+section: 897d00cc-4646-4118-ad1f-2000943fdde5 # HandbookHomepage
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
