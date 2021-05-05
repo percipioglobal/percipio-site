@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 12311739-6ceb-4fb4-a572-7f2ea0ad3b69
+fieldGroup: 12311739-6ceb-4fb4-a572-7f2ea0ad3b69 # Documents
 handle: coverPhoto
 instructions: 'Upload the Cover Photo of the Document / eBook or PDF'
 name: 'Cover Photo'

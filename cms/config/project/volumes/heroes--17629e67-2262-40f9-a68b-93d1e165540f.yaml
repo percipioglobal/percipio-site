@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6261508f-6848-476e-a5d1-1ffe3acafb5c
+            fieldUid: 6261508f-6848-476e-a5d1-1ffe3acafb5c # Optimize Heroes
             instructions: null
             label: null
             required: false

@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 9806bc10-174e-4280-b2a8-c684b99a3139
+            fieldUid: 9806bc10-174e-4280-b2a8-c684b99a3139 # Optimize Profile Images
             instructions: null
             label: null
             required: false

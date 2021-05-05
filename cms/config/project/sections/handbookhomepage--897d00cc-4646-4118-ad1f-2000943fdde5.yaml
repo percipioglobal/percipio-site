@@ -1,6 +1,6 @@
 enableVersioning: true
-handle: handbookhomepage
-name: HandbookHomepage
+handle: handbookHomepage
+name: 'Handbook Homepage'
 previewTargets:
   -
     __assoc__:
@@ -18,6 +18,6 @@ siteSettings:
   bc99b68d-e1ef-4e2c-8670-e0edbe3cf507: # Staff Handbook
     enabledByDefault: true
     hasUrls: true
-    template: handbook
+    template: _organisms/_page
     uriFormat: __home__
 type: single

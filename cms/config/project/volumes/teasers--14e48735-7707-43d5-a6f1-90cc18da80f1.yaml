@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 35a1d959-d78e-4445-891c-7bb671c48281
+            fieldUid: 35a1d959-d78e-4445-891c-7bb671c48281 # Optimize Teasers
             instructions: null
             label: null
             required: false
