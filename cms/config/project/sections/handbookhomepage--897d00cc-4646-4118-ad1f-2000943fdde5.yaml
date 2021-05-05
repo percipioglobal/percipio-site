@@ -18,6 +18,6 @@ siteSettings:
   bc99b68d-e1ef-4e2c-8670-e0edbe3cf507: # Staff Handbook
     enabledByDefault: true
     hasUrls: true
-    template: _organisms/_page
+    template: null
     uriFormat: __home__
 type: single
