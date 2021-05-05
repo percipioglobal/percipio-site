@@ -87,6 +87,12 @@
                         {%- include '_organisms/entry-types/entry--vacancies' ignore missing with {
                             content: entry,
                         } -%}
+                    
+                    {%- case "handbookHomepage" -%}
+
+                        {%- include '_organisms/entry-types/page--staffHandbook' ignore missing with {
+                            content: entry,
+                        } -%}
 
             {%- endswitch -%}
 
