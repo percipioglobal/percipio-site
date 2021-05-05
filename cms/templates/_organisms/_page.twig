@@ -94,6 +94,11 @@
                             content: entry,
                         } -%}
 
+                    {%- case "staffHandbook" -%}
+
+                        {%- include '_organisms/entry-types/entry--staffHandbook' ignore missing with {
+                            content: entry,
+                        } -%}
             {%- endswitch -%}
 
         {% endif %}
