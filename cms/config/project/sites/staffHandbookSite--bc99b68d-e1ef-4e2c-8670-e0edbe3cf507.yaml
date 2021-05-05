@@ -1,0 +1,9 @@
+baseUrl: 'http://localhost:8000/staff'
+enabled: true
+handle: staffHandbookSite
+hasUrls: true
+language: en-US
+name: 'Staff Handbook'
+primary: false
+siteGroup: f89601e9-4ba9-4a48-9e99-350aa9914912
+sortOrder: 2
