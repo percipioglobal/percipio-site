@@ -19,5 +19,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: handbook
-    uriFormat: staff
+    uriFormat: __home__
 type: single

@@ -1,4 +1,4 @@
-baseUrl: 'http://localhost:8000/staff'
+baseUrl: /staff/
 enabled: true
 handle: staffHandbookSite
 hasUrls: true
