@@ -1,5 +1,5 @@
 fieldLayouts:
-  56a16cfc-38a8-4edc-afb4-cb971fc69095:
+  0a2c79d3-cddc-4216-8ae3-9ec0a7c99c68:
     tabs:
       -
         elements:
@@ -23,11 +23,11 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\TitleField
+            type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
           -
-            fieldUid: 648e7555-63ed-4228-a6b7-7811c865a7af # Category Description
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
             instructions: null
             label: null
             required: false
@@ -37,13 +37,11 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: projectCategories
-name: 'Project Categories'
-siteSettings:
-  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Default
-    hasUrls: false
-    template: null
-    uriFormat: null
-structure:
-  maxLevels: null
-  uid: f3c16388-ee6a-4753-8ede-739a6625f5ec
+handle: handbookHomepage
+hasTitleField: false
+name: 'Handbook Homepage'
+section: 897d00cc-4646-4118-ad1f-2000943fdde5 # Handbook Homepage
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

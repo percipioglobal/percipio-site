@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: fb099a19-c82b-49e9-9d91-49bc30695253
+            fieldUid: fb099a19-c82b-49e9-9d91-49bc30695253 # Optimize Open Graph
             instructions: null
             label: null
             required: false

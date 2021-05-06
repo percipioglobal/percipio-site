@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8
+fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8 # Placeholders
 handle: photoCoverPlaceholder
 instructions: 'Upload an image that will serve as placeholder if the original image can not be found or is not ready for display yet.'
 name: 'Photo Cover Placeholder'

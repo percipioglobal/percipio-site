@@ -1,9 +1,9 @@
-baseUrl: $SITE_URL
+baseUrl: /staff/
 enabled: true
-handle: default
+handle: staffHandbookSite
 hasUrls: true
 language: en-US
-name: Default
-primary: true
+name: 'Staff Handbook'
+primary: false
 siteGroup: f89601e9-4ba9-4a48-9e99-350aa9914912 # Default
-sortOrder: 1
+sortOrder: 2

@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 0314e405-e731-462f-9381-2cfb6ac91134
+fieldGroup: 0314e405-e731-462f-9381-2cfb6ac91134 # Images
 handle: heroImage
 instructions: 'Upload the hero image here.'
 name: 'Hero Image'

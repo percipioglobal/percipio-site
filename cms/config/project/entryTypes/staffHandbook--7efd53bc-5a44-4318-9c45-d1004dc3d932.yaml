@@ -1,5 +1,5 @@
 fieldLayouts:
-  56a16cfc-38a8-4edc-afb4-cb971fc69095:
+  3203b92c-d1f6-422d-82c7-36aca2736156:
     tabs:
       -
         elements:
@@ -23,11 +23,20 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\TitleField
+            type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
           -
-            fieldUid: 648e7555-63ed-4228-a6b7-7811c865a7af # Category Description
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
             instructions: null
             label: null
             required: false
@@ -37,13 +46,11 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: projectCategories
-name: 'Project Categories'
-siteSettings:
-  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Default
-    hasUrls: false
-    template: null
-    uriFormat: null
-structure:
-  maxLevels: null
-  uid: f3c16388-ee6a-4753-8ede-739a6625f5ec
+handle: staffHandbook
+hasTitleField: true
+name: 'Staff Handbook'
+section: 08f2a758-d849-407f-afd6-2128f3c67a48 # Staff Handbook
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
