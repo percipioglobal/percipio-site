@@ -1,0 +1,17 @@
+{% set pages = craft.entries.section('staffHandbook').all() %}
+
+<nav>
+    <ul>
+        {% nav page in pages %}
+            <li>
+                {{ page.getLink() }}
+                
+                {% ifchildren %}
+                    <ul>
+                        {% children %}
+                    </ul>
+                {% endifchildren %}
+            </li>
+        {% endnav %}
+    </ul>
+</nav>
