@@ -7,24 +7,22 @@
             <li>
                {% set currentPageId = page.id %}
                {% set allPageIds = craft.entries.section('staffHandbook').level(1).ids() %}
-
                {% set pageNumber = '' %}
 
-               {% for key, pageId in allPageIds if pageId == currentPageId %}
+                  {% for key, pageId in allPageIds if pageId == currentPageId %}
+                     {% set pageNumber = key + 1 %}
 
-               {% set pageNumber = key + 1 %}
+                  {% endfor %}
 
-               {% endfor %}
+               <span>{{ pageNumber }}</span>
+               {{ page.getLink() }}
 
-                  <span>{{ pageNumber }}</span>
-                  {{ page.getLink() }}
-   
-                  {% ifchildren %}
-                     <ul>
-                        {% children %}
-                     </ul>
-                  {% endifchildren %}
-               </li>
+               {% ifchildren %}
+                  <ul>
+                     {% children %}
+                  </ul>
+               {% endifchildren %}
+            </li>
          {% endnav %}
       </ul>
 </nav>
