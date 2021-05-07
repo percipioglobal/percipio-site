@@ -1,5 +1,5 @@
 enableVersioning: true
-handle: handbookHomepage
+handle: handbookPage
 name: 'Handbook Homepage'
 previewTargets:
   -

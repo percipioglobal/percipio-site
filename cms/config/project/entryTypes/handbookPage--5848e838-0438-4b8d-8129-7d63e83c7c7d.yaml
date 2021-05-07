@@ -46,7 +46,7 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: handbookHomepage
+handle: handbookPage
 hasTitleField: false
 name: 'Handbook Homepage'
 section: 897d00cc-4646-4118-ad1f-2000943fdde5 # Handbook Homepage
