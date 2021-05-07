@@ -1,28 +1,30 @@
-{% set pages = craft.entries.section('staffHandbook').all() %}
+<ul>
+   {% for entry in craft.entries.section('staffHandbook').level(1).all() %}
 
+      {% set currentPageId = entry.id %}
+         {% set allPageIds = craft.entries.section('staffHandbook').level(1).ids() %}
+      
+         {% set pageNumber = '' %}
 
-<nav>
-    <ul>
-        {% nav page in pages %}
-            <li>
-               {% set currentPageId = page.id %}
-               {% set allPageIds = craft.entries.section('staffHandbook').level(1).ids() %}
-               {% set pageNumber = '' %}
+            {% for key, entryId in allPageIds if entryId == currentPageId %}
+               {% set pageNumber = key + 1 %}
 
-                  {% for key, pageId in allPageIds if pageId == currentPageId %}
-                     {% set pageNumber = key + 1 %}
-
-                  {% endfor %}
-
-               <span>{{ pageNumber }}</span>
-               {{ page.getLink() }}
-
-               {% ifchildren %}
-                  <ul>
-                     {% children %}
-                  </ul>
-               {% endifchildren %}
-            </li>
-         {% endnav %}
-      </ul>
-</nav>
+            {% endfor %}
+   
+         <ol start="{{ pageNumber }}">
+            <li>{{ entry.getLink() }}
+         
+         {% if entry.hasDescendants == true %}
+         <ol>
+            {% for child in craft.entries.section('staffHandbook').descendantOf(entry.id).all() %}
+               
+               <li>{{ child.getLink() }}</li>
+              
+           {% endfor %}
+         </ol>
+            
+            </li>  
+         </ol>
+         {% endif %}
+   {% endfor %}
+</ul>
