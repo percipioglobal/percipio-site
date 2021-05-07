@@ -1,5 +1,5 @@
 enableVersioning: true
-handle: staffHandbook
+handle: handbook
 name: 'Staff Handbook'
 previewTargets:
   -

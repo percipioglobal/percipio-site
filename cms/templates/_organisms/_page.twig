@@ -88,15 +88,15 @@
                             content: entry,
                         } -%}
                     
-                    {%- case "handbookHomepage" -%}
+                    {%- case "handbookPage" -%}
 
-                        {%- include '_organisms/entry-types/page--staffHandbook' ignore missing with {
+                        {%- include '_organisms/entry-types/page--handbookPage' ignore missing with {
                             content: entry,
                         } -%}
 
-                    {%- case "staffHandbook" -%}
+                    {%- case "handbook" -%}
 
-                        {%- include '_organisms/entry-types/entry--staffHandbook' ignore missing with {
+                        {%- include '_organisms/entry-types/entry--handbook' ignore missing with {
                             content: entry,
                         } -%}
             {%- endswitch -%}
