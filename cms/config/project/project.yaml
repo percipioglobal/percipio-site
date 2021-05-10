@@ -1,4 +1,4 @@
-dateModified: 1620286087
+dateModified: 1620390907
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -86,14 +86,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  navigation:
-    edition: standard
-    enabled: true
-    licenseKey: MJERE8SD7TGQIZVQE0CHESXY
-    schemaVersion: 1.0.21
-    settings:
-      bypassProjectConfig: false
-      pluginName: Navigation
   position-fieldtype:
     edition: standard
     enabled: true
