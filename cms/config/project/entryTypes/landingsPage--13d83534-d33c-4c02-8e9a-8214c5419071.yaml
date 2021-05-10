@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78
+            fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78 # Hero Builder
             instructions: null
             label: null
             required: false
@@ -49,7 +49,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e
+            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e # Colour Swatch
             instructions: null
             label: null
             required: false
@@ -62,7 +62,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: da9598dc-e9bb-4920-8adf-a712876cb578
+            fieldUid: da9598dc-e9bb-4920-8adf-a712876cb578 # Meta Description
             instructions: null
             label: null
             required: false
@@ -71,7 +71,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: cb2b1336-5ccd-48f4-a973-72fae9fd4069
+            fieldUid: cb2b1336-5ccd-48f4-a973-72fae9fd4069 # Meta Image
             instructions: null
             label: null
             required: false

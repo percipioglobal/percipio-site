@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: bcca818c-5cb3-4998-8165-95f5c9929f23 # Standfirst
+            fieldUid: bcca818c-5cb3-4998-8165-95f5c9929f23
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  bcca818c-5cb3-4998-8165-95f5c9929f23: # Standfirst
+  bcca818c-5cb3-4998-8165-95f5c9929f23:
     contentColumnType: text
     fieldGroup: null
     handle: standfirst

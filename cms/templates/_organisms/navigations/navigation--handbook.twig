@@ -1,0 +1,37 @@
+{%- minify -%}
+<ul>
+   {%- for entry in craft.entries.section('handbook').level(1).all() -%}
+
+      {%- set currentPageId = entry.id -%}
+      {%- set allPageIds = craft.entries.section('handbook').level(1).ids() -%}
+      {%- set pageNumber = null -%}
+
+      {%- for key, entryId in allPageIds if entryId == currentPageId -%}
+
+         {%- set pageNumber = key + 1 -%}
+
+      {%- endfor -%}
+   
+      <ol start="{{- pageNumber -}}">
+         
+         <li>
+
+            {{- entry.getLink() -}}
+      
+            {%- if entry.hasDescendants == true -%}
+               <ol>
+                  {%- for child in craft.entries.section('handbook').descendantOf(entry.id).all() -%}
+                     
+                     <li>{{- child.getLink() -}}</li>
+                  
+                  {%- endfor -%}
+               </ol>
+            {%- endif -%}
+
+         </li>
+
+      </ol>
+         
+   {%- endfor -%}
+</ul>
+{% endminify %}
