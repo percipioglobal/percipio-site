@@ -13,7 +13,7 @@ settings:
   localizeRelations: false
   selectionLabel: 'Add a skill'
   showSiteMenu: true
-  source: 'group:0536c060-0d97-421e-8c73-3ad5baec52d2' # Skills
+  source: 'group:0536c060-0d97-421e-8c73-3ad5baec52d2'
   sources: '*'
   targetSiteId: null
   validateRelatedElements: true
