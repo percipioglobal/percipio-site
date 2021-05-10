@@ -1,4 +1,4 @@
-dateModified: 1620638950
+dateModified: 1620653735
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -138,5 +138,5 @@ system:
   live: true
   name: 'Percipio Global Ltd.'
   retryDuration: null
-  schemaVersion: 3.6.7
+  schemaVersion: 3.6.8
   timeZone: Europe/London
