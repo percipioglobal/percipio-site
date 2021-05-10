@@ -46,7 +46,7 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: staffHandbook
+handle: handbook
 hasTitleField: true
 name: 'Staff Handbook'
 section: 08f2a758-d849-407f-afd6-2128f3c67a48 # Staff Handbook
