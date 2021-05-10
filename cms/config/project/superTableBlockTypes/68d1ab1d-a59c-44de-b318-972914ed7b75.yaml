@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 33274ae4-f375-4070-b42c-f1cef4e48a81
+            fieldUid: 33274ae4-f375-4070-b42c-f1cef4e48a81 # Heading
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 247bfb7d-d077-42ee-b2ba-84feb1b3fd19
+            fieldUid: 247bfb7d-d077-42ee-b2ba-84feb1b3fd19 # Content
             instructions: null
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 0c7a7b67-3926-4a9f-b449-8d1d1c451f2f
+            fieldUid: 0c7a7b67-3926-4a9f-b449-8d1d1c451f2f # Width
             instructions: null
             label: null
             required: true
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  0c7a7b67-3926-4a9f-b449-8d1d1c451f2f:
+  0c7a7b67-3926-4a9f-b449-8d1d1c451f2f: # Width
     contentColumnType: string
     fieldGroup: null
     handle: width
@@ -84,7 +84,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: rias\widthfieldtype\fields\Width
-  247bfb7d-d077-42ee-b2ba-84feb1b3fd19:
+  247bfb7d-d077-42ee-b2ba-84feb1b3fd19: # Content
     contentColumnType: text
     fieldGroup: null
     handle: body
@@ -112,7 +112,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  33274ae4-f375-4070-b42c-f1cef4e48a81:
+  33274ae4-f375-4070-b42c-f1cef4e48a81: # Heading
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -126,7 +126,7 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none

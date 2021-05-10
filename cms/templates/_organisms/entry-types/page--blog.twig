@@ -8,9 +8,11 @@
         content: entry,
     } -%}
 
-    <div class="mb-24 -mt-24 md:-mt-32">
-        {%- include '_organisms/cards/cards--blog' ignore missing with {
-            content: entry,
-        } -%}
+    <div id="page">
+        <div class="mb-24 -mt-24 md:-mt-32">
+            {%- include '_organisms/cards/cards--blog' ignore missing with {
+                content: entry,
+            } -%}
+        </div>
     </div>
 </div>

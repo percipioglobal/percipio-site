@@ -1,11 +1,11 @@
-field: e691301b-7484-40be-a3d4-c3bc590de959
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
 fieldLayouts:
   fe906a3c-e79c-4f19-9559-705e392f27b8:
     tabs:
       -
         elements:
           -
-            fieldUid: 633b1b96-cdb8-4c97-a045-aa63d306b41c
+            fieldUid: 633b1b96-cdb8-4c97-a045-aa63d306b41c # Language
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: b43847a9-d877-4a56-ba8e-39f6c25c85cb
+            fieldUid: b43847a9-d877-4a56-ba8e-39f6c25c85cb # Code
             instructions: null
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 73ee03a9-c989-4d98-bd96-db9bc9cb2a5c
+            fieldUid: 73ee03a9-c989-4d98-bd96-db9bc9cb2a5c # Caption
             instructions: null
             label: null
             required: true
@@ -34,7 +34,26 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  633b1b96-cdb8-4c97-a045-aa63d306b41c:
+  73ee03a9-c989-4d98-bd96-db9bc9cb2a5c: # Caption
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: ''
+    name: Caption
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  633b1b96-cdb8-4c97-a045-aa63d306b41c: # Language
     contentColumnType: string
     fieldGroup: null
     handle: codeLanguage
@@ -201,26 +220,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  73ee03a9-c989-4d98-bd96-db9bc9cb2a5c:
-    contentColumnType: text
-    fieldGroup: null
-    handle: caption
-    instructions: ''
-    name: Caption
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  b43847a9-d877-4a56-ba8e-39f6c25c85cb:
+  b43847a9-d877-4a56-ba8e-39f6c25c85cb: # Code
     contentColumnType: text
     fieldGroup: null
     handle: code
@@ -234,7 +234,7 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: '1'
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none

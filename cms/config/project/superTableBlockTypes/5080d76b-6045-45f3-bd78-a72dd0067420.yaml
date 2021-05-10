@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: f3960fae-d20a-4473-9a73-315dfed31760
+            fieldUid: f3960fae-d20a-4473-9a73-315dfed31760 # Image
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 085923fe-5934-4d01-a2fd-ec625094c005
+            fieldUid: 085923fe-5934-4d01-a2fd-ec625094c005 # Caption
             instructions: null
             label: null
             required: false
@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  085923fe-5934-4d01-a2fd-ec625094c005:
+  085923fe-5934-4d01-a2fd-ec625094c005: # Caption
     contentColumnType: text
     fieldGroup: null
     handle: caption
@@ -39,12 +39,12 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  f3960fae-d20a-4473-9a73-315dfed31760:
+  f3960fae-d20a-4473-9a73-315dfed31760: # Image
     contentColumnType: string
     fieldGroup: null
     handle: image

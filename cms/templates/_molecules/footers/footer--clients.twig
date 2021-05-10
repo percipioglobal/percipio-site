@@ -5,13 +5,8 @@
 
     <section class="bg-gray-100 py-16 px-8">
         <div class="container max-w-screen-xl mx-auto">
-            {# {{- render.atom('text', 'overline', {
-                    content: "Meet some of our clients",
-                    utilities: 'text-black-40 mb-8 font-mono',
-                })
-            -}} #}
 
-            <h2 class="font-primary text-2xl font-bold mb-6 text-cool-gray-500 w-full text-center">
+            <h2 class="font-primary text-2xl font-bold mb-6 text-cool-gray-500 w-full text-center" role="heading">
                 {{- render.atom('text', 'title', { 
                     content: organisationInfo.heading ??? 'Meet some of our clients'
                 }) -}}
@@ -19,18 +14,18 @@
 
             <hr class="h-1 w-32 mb-8 bg-cool-gray-200 mx-auto">
 
-            <div class="flex flex-wrap lg:flex-no-wrap justify-between w-full">
+            <nav aria-label="Meet some of our clients" role="menu" class="flex flex-wrap lg:flex-no-wrap justify-between w-full">
 
                 {%- for client in clients -%}
 
-                    <div class="w-1/2 sm:w-1/3 md:w-1/6 py-4 {{ loop.first ? 'pr-4 ' : 'px-4' -}}">
+                    <div role="menuitem" class="w-1/2 sm:w-1/3 md:w-1/6 py-4 {{ loop.first ? 'pr-4 ' : 'px-4' -}}">
 
                         {{- render.atom('image', 'partner', {
                             image: client.logo[0] ?? null,
                             url: client.target,
                             alt: client.description|striptags,
                             placeholders: placeholders,
-                            utilities: 'block relative w-full h-full max-w-18 md:max-w-20 max-h-14 md:max-h-16 focus:outline-none opacity-75 hover:opacity-100',
+                            utilities: 'block relative w-full h-full max-w-18 md:max-w-20 max-h-14 md:max-h-16 focus:opacity-100 opacity-75 hover:opacity-100',
                             imageUtilities: 'object-contain h-full mx-0 md:mx-auto',
                             sizes: ['50vw','33vw','25vw']
                         }) -}}

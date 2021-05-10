@@ -19,6 +19,7 @@
 {% macro authors(authors, options) %}
 
     {% set colours = options.swatch ??? null %}
+    {% set category = options.category ??? "" %}
 
     {% spaceless %}
         {% for author in authors %}
@@ -28,6 +29,7 @@
                 data-tag-category="author" 
                 data-tag-action="click" 
                 data-tag-label="{{- author.url -}}"
+                aria-label="{{- 'A ' ~ category ~ ' post by ' ~ author.title -}}"
             >
                 {{- author.title -}}
             </a>
@@ -45,3 +47,36 @@
         {{- craft.app.formatter.asRelativeTime(date) -}}
     {% endspaceless %}
 {% endmacro %}
+
+{# Add blocks for different embedded asset types #}
+{%- macro embed(asset) -%}
+	{% import '_macros/atoms' as render %}
+
+	{%- set lut = {
+		youtube: {
+			type: 'video',
+			atom: 'embed',
+			options : {
+				url: asset.getVideoUrl([]),
+				title: asset.title
+			}
+		},
+		vimeo: {
+			type: 'video',
+			atom: 'embed',
+			options : {
+				url: asset.getVideoUrl([]),
+				title: asset.title
+			}
+		},
+		default: asset ? asset.html,
+	} -%}
+
+	{%- spaceless -%}
+
+		{%- set obj = lut[asset.providerName|lower] ??? null -%}
+
+		{{- obj ? render.atom(obj.type, obj.atom, obj.options) : lut['default'] -}}
+		
+	{%- endspaceless -%}
+{%- endmacro -%}

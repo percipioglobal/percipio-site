@@ -4,7 +4,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 78023dfa-3c9e-47d1-bedc-b6fa76c9d751
+            fieldUid: 78023dfa-3c9e-47d1-bedc-b6fa76c9d751 # Teaser Image Placeholder
             instructions: null
             label: null
             required: '0'
@@ -13,7 +13,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: df090dc9-1e25-4504-abd3-18e7996d8d6d
+            fieldUid: df090dc9-1e25-4504-abd3-18e7996d8d6d # Article Image Placeholder
             instructions: null
             label: null
             required: '0'
@@ -22,7 +22,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: d39b90d3-13a8-4d42-b415-1ef20426a174
+            fieldUid: d39b90d3-13a8-4d42-b415-1ef20426a174 # Photo Cover Placeholder
             instructions: null
             label: null
             required: '0'
@@ -31,7 +31,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 11916eb5-92ff-4945-bb06-1406d6047b36
+            fieldUid: 11916eb5-92ff-4945-bb06-1406d6047b36 # Slider Image Placeholder
             instructions: null
             label: null
             required: '0'
@@ -40,7 +40,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: d08d0466-34f4-441b-acd1-439b514f3810
+            fieldUid: d08d0466-34f4-441b-acd1-439b514f3810 # Profile Photo Placeholder
             instructions: null
             label: null
             required: '0'
@@ -49,7 +49,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: c66a07bc-ece1-4d0c-b7a7-e4922603cabf
+            fieldUid: c66a07bc-ece1-4d0c-b7a7-e4922603cabf # Hero Placeholder
             instructions: null
             label: null
             required: false

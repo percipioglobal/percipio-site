@@ -1,5 +1,11 @@
 <template>
-    <button @click.prevent="toggleMenu" class="ml-auto" aria-label="navigation-toggle">
+    <button 
+        @click.prevent="toggleMenu"
+        class="ml-auto" 
+        aria-label="Open or close navigation"
+        :aria-expanded="getNavigationActive ? 'true' : 'false'"
+        ref="buttonHamburger"
+    >
 
         <span class="">
             <span 
@@ -39,8 +45,25 @@
         computed: {
             ...mapGetters(['getNavigationActive']),
         },
-        
+
+        created: function(){
+            document.addEventListener('keyup', this.keyboardHandle);
+        },
+
+        destroyed: function(){
+            document.removeEventListener('keyup', this.keyboardHandle);
+        },
+
         methods: {
+            keyboardHandle(evt)
+            {
+                if (evt.keyCode === 27)
+                {
+                    // this.closeMenu();
+                    this.$refs.buttonHamburger.focus();
+                    this.$refs.buttonHamburger.click();
+                }
+            },
             toggleMenu() {
                 this.$store.commit('setNavigationActive', !this.getNavigationActive);
                 document.body.classList.toggle("overflow-hidden");
