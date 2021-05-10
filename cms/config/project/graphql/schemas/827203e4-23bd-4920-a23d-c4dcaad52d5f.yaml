@@ -16,7 +16,7 @@ scope:
   - 'entrytypes.00498acf-c1c2-4c00-83f2-39a7255870f8:read'
   - 'globalsets.64547f99-7471-496a-8b02-5d48e09a72f9:read'
   - 'navigationNavs.all:read'
-  - 'navigationNavs.d8cef538-a756-4496-b7f6-0e0bb61c14c2:read' # Primary Navigation
-  - 'navigationNavs.46faf86d-bfa5-4356-bef1-0af3b2a87332:read' # Secondary Navigation
-  - 'navigationNavs.b51f4d5a-4d35-43f1-af05-72e206874892:read' # Footer Navigation
-  - 'navigationNavs.e0745046-9bad-4922-8da8-7f677ba84909:read' # Legal Navigation
+  - 'navigationNavs.d8cef538-a756-4496-b7f6-0e0bb61c14c2:read'
+  - 'navigationNavs.46faf86d-bfa5-4356-bef1-0af3b2a87332:read'
+  - 'navigationNavs.b51f4d5a-4d35-43f1-af05-72e206874892:read'
+  - 'navigationNavs.e0745046-9bad-4922-8da8-7f677ba84909:read'
