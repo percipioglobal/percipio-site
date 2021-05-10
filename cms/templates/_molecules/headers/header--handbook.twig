@@ -7,7 +7,6 @@
 
     <div class="mt-20 w-full bg-blue-600 h-96">
 
-        {# TODO set maxwidth breakpoints #}
         <div class="container mx-auto max-w-screen-lg {{ utilities -}}">
 
             <div class="leading-none">
@@ -15,7 +14,8 @@
                 <h2 class="font-primary text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-white-100">
                     {{- render.atom('text', 'title', { content: content.heading }) -}}
                 </h2>
-
+                
+                <h3>{{ entry.dateUpdated|date('jS F Y') }}</h3>          
             </div>
 
             <h2 class="font-primary text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-gray-100">{{ functions.getEntryPosition(entry) }}</h2>
