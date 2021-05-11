@@ -15,7 +15,17 @@
                     {{- render.atom('text', 'title', { content: content.heading }) -}}
                 </h2>
                 
-                <h3>{{ entry.dateUpdated|date('jS F Y') }}</h3>          
+                {%- if entry.section.type == 'structure' -%}
+                    <h3>This section was updated on the {{ entry.dateUpdated|date('jS F Y') }}</h3>
+                {%- else -%}
+                    <h3>Last section updated: 
+                        {%- for entry in craft.entries.section('handbook').limit(1).orderBy('dateUpdated desc').all() -%}
+                           
+                            <a href="{{ entry.url }}">{{ entry.title }}</a>
+                            <p>on {{ entry.dateUpdated|date('jS F Y') }}
+                        {%- endfor -%}</h3>
+                {%- endif -%}
+                
             </div>
 
             <h2 class="font-primary text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-gray-100">{{ functions.getEntryPosition(entry) }}</h2>
