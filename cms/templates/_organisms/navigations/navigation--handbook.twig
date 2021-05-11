@@ -1,8 +1,8 @@
 {%- minify -%}
-<ul>
+<ol class="list-hierarchical">
    {%- for entry in craft.entries.section('handbook').level(1).all() -%}
 
-      {%- set currentPageId = entry.id -%}
+      {# {%- set currentPageId = entry.id -%}
       {%- set allPageIds = craft.entries.section('handbook').level(1).ids() -%}
       {%- set pageNumber = null -%}
 
@@ -10,28 +10,39 @@
 
          {%- set pageNumber = key + 1 -%}
 
-      {%- endfor -%}
+      {%- endfor -%} #}
    
-      <ol start="{{- pageNumber -}}">
+      {# <ol class="list-decimal" start={{ loop.index }}> #}
          
          <li>
 
-            {{- entry.getLink() -}}
+            {{- entry.title  -}}
       
             {%- if entry.hasDescendants == true -%}
-               <ol>
-                  {%- for child in craft.entries.section('handbook').descendantOf(entry.id).all() -%}
+               <ol class="list-hierarchical">
+                  {%- for child in craft.entries.section('handbook').descendantOf(entry.id).level(2).all() -%}
                      
-                     <li>{{- child.getLink() -}}</li>
-                  
+                     <li>{{- child.title  -}}</li>
+
+                     {%- if child.hasDescendants == true -%}
+
+                        <ol class="list-hierarchical">
+                           {%- for grandChild in craft.entries.section('handbook').descendantOf(child.id).level(3).all() -%}
+                              
+                              <li>{{- grandChild.title  -}}</li>
+                           
+                           {%- endfor -%}
+                        </ol>
+                     {%- endif -%}
+
                   {%- endfor -%}
                </ol>
             {%- endif -%}
 
          </li>
 
-      </ol>
+      {# </ol> #}
          
    {%- endfor -%}
-</ul>
+</ol>
 {% endminify %}
