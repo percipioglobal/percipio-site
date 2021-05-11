@@ -1,5 +1,6 @@
 {%- minify -%}
 <ul>
+
    {%- for entry in craft.entries.section('handbook').level(1).all() -%}
 
       {%- set currentPageId = entry.id -%}
@@ -12,14 +13,14 @@
 
       {%- endfor -%}
    
-      <ol start="{{- pageNumber -}}">
+      <ol class="list-decimal" start="{{- pageNumber -}}">
          
          <li>
 
             {{- entry.getLink() -}}
       
             {%- if entry.hasDescendants == true -%}
-               <ol>
+               <ol class="list-decimal">
                   {%- for child in craft.entries.section('handbook').descendantOf(entry.id).all() -%}
                      
                      <li>{{- child.getLink() -}}</li>
