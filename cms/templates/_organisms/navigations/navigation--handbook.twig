@@ -16,20 +16,20 @@
          
          <li>
 
-            {{- entry.title  -}}
+            {{- entry.getLink()  -}}
       
             {%- if entry.hasDescendants == true -%}
                <ol class="list-hierarchical">
                   {%- for child in craft.entries.section('handbook').descendantOf(entry.id).level(2).all() -%}
                      
-                     <li>{{- child.title  -}}</li>
+                     <li>{{- child.getLink()  -}}</li>
 
                      {%- if child.hasDescendants == true -%}
 
                         <ol class="list-hierarchical">
                            {%- for grandChild in craft.entries.section('handbook').descendantOf(child.id).level(3).all() -%}
                               
-                              <li>{{- grandChild.title  -}}</li>
+                              <li>{{- grandChild.getLink()  -}}</li>
                            
                            {%- endfor -%}
                         </ol>
