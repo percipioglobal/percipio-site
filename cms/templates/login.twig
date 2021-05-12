@@ -2,7 +2,7 @@
 
 {%- block content -%}
 
-<div class="mt-60 mb-60 w-full max-w-xs m-auto bg-blue-600 rounded p-5 text-white-100">
+<div class="mt-60 mb-60 p-12 w-full max-w-md m-auto bg-blue-600 p-5 text-white-100">
 
     <form method="post" accept-charset="UTF-8">
         {{- csrfInput() -}}
@@ -35,7 +35,7 @@
 
         </div>
 
-        <button type="submit" class="w-full bg-white-100 hover:opacity-75 text-black-100 font-bold py-2 px-4 mb-6 rounded">Login</button>
+        <button type="submit" class="w-full bg-white-100 hover:opacity-75 text-black-100 font-bold py-2 px-4 mb-6">Login</button>
 
         {%- if errorMessage is defined -%}
 
@@ -46,7 +46,7 @@
     </form>
 
     <p>
-        <a href="{{- url('reset-password') -}}">Forgot your password?</a>
+        <a href="{{- url('reset-password') -}}" class="underline">Forgot your password?</a>
     </p>
 
 </div>
