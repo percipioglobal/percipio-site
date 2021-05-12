@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 712cce4e-490d-44b8-bf2c-5d00c2de4c40
+fieldGroup: 712cce4e-490d-44b8-bf2c-5d00c2de4c40 # Assets
 handle: embed
 instructions: 'This can be a Youtube video, Vimeo video, Instagram post, ...'
 name: Embed

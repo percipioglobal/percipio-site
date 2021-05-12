@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: bbb59518-7cdc-4a7f-b07c-cd6b1fa8201d
+fieldGroup: bbb59518-7cdc-4a7f-b07c-cd6b1fa8201d # Users
 handle: profilePhoto
 instructions: 'Upload the users profilePhoto'
 name: 'Profile Photo'

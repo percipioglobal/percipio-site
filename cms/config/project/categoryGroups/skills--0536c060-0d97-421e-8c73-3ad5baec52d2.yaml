@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
             instructions: null
             label: null
             required: false
@@ -40,7 +40,7 @@ fieldLayouts:
 handle: skills
 name: Skills
 siteSettings:
-  5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
     hasUrls: false
     template: null
     uriFormat: null

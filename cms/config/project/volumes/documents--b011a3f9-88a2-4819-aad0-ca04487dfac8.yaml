@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 502c51a1-5b82-4368-90e1-aa68b1d4e479
+            fieldUid: 502c51a1-5b82-4368-90e1-aa68b1d4e479 # Cover Photo
             instructions: null
             label: null
             required: false
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6962a9b1-b802-4295-82b1-398470a9f54c
+            fieldUid: 6962a9b1-b802-4295-82b1-398470a9f54c # Author
             instructions: null
             label: null
             required: false
@@ -45,7 +45,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 870c07d7-9341-4f1f-825b-25c76239bc0d
+            fieldUid: 870c07d7-9341-4f1f-825b-25c76239bc0d # Caption
             instructions: null
             label: null
             required: false

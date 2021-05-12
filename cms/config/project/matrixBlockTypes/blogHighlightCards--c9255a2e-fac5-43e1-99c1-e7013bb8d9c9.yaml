@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: b2c99831-d731-447c-8233-c0418cc574bd # Cards
+            fieldUid: b2c99831-d731-447c-8233-c0418cc574bd
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  b2c99831-d731-447c-8233-c0418cc574bd: # Cards
+  b2c99831-d731-447c-8233-c0418cc574bd:
     contentColumnType: string
     fieldGroup: null
     handle: cards

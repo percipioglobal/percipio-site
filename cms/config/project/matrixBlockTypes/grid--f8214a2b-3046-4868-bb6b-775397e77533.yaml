@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: a9ba876e-c0bf-4a8c-b77e-e926de382189 # Items
+            fieldUid: a9ba876e-c0bf-4a8c-b77e-e926de382189
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: c5638e5a-a8f8-4f97-ab00-7247cd30b054 # Width
+            fieldUid: c5638e5a-a8f8-4f97-ab00-7247cd30b054
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 082e47d2-643f-411e-a751-0d9f915db739 # Swatch
+            fieldUid: 082e47d2-643f-411e-a751-0d9f915db739
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  082e47d2-643f-411e-a751-0d9f915db739: # Swatch
+  082e47d2-643f-411e-a751-0d9f915db739:
     contentColumnType: text
     fieldGroup: null
     handle: swatch
@@ -47,7 +47,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: percipioglobal\colourswatches\fields\ColourSwatches
-  a9ba876e-c0bf-4a8c-b77e-e926de382189: # Items
+  a9ba876e-c0bf-4a8c-b77e-e926de382189:
     contentColumnType: string
     fieldGroup: null
     handle: items
@@ -82,7 +82,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-  c5638e5a-a8f8-4f97-ab00-7247cd30b054: # Width
+  c5638e5a-a8f8-4f97-ab00-7247cd30b054:
     contentColumnType: string
     fieldGroup: null
     handle: width
