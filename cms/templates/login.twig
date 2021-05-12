@@ -3,37 +3,46 @@
 {%- block content -%}
 
 <div class="mt-60 mb-60 w-full max-w-xs m-auto bg-blue-600 rounded p-5 text-white-100">
+
     <form method="post" accept-charset="UTF-8">
-    {{- csrfInput() -}}
-    {{- actionInput('users/login') -}}
+        {{- csrfInput() -}}
+        {{- actionInput('users/login') -}}
 
-    <label for="loginName" class="block mb-2">Username or email</label>
+        <label for="loginName" class="block mb-2">Username or email</label>
 
-    {{- input('text', 'loginName', craft.app.user.rememberedUsername, {
-        id: 'loginName',
-        class: 'w-full p-2 mb-6 text-black-100 outline-none focus:bg-gray-300',
-    }) -}}
+        {{- input('text', 'loginName', craft.app.user.rememberedUsername, {
+            id: 'loginName',
+            class: 'w-full p-2 mb-6 text-black-100 outline-none focus:bg-gray-300',
+        }) -}}
 
-    <label for="password" class="block mb-2">Password</label>
-    {{- input('password', 'password', null, {
-        id: 'password',
-        class: 'w-full p-2 mb-6 text-black-100 outline-none focus:bg-gray-300',
-    }) -}}
+        <label for="password" class="block mb-2">Password</label>
 
-    <div class="flex mb-6">
-        <label class="flex items-center">
-            {{- input('checkbox', 'rememberMe', '1', {
-                class:'form-checkbox cursor-pointer',
-            }) -}}
-            <span class="ml-2 cursor-pointer">Remember me</span>
-        </label>
-    </div>
+        {{- input('password', 'password', null, {
+            id: 'password',
+            class: 'w-full p-2 mb-6 text-black-100 outline-none focus:bg-gray-300',
+        }) -}}
 
-    <button type="submit" class="w-full bg-white-100 hover:opacity-75 text-black-100 font-bold py-2 px-4 mb-6 rounded">Login</button>
+        <div class="flex mb-6">
 
-    {%- if errorMessage is defined -%}
-        <p class="mb-6 font-bold">{{ errorMessage }}</p>
-    {%- endif -%}
+            <label class="flex items-center">
+                {{- input('checkbox', 'rememberMe', '1', {
+                    class:'form-checkbox cursor-pointer',
+                }) -}}
+
+                <span class="ml-2 cursor-pointer">Remember me</span>
+
+            </label>
+
+        </div>
+
+        <button type="submit" class="w-full bg-white-100 hover:opacity-75 text-black-100 font-bold py-2 px-4 mb-6 rounded">Login</button>
+
+        {%- if errorMessage is defined -%}
+
+            <p class="mb-6 font-bold">{{- errorMessage -}}</p>
+
+        {%- endif -%}
+
     </form>
 
     <p><a href="{{ url('reset-password') }}">Forgot your password?</a></p>
