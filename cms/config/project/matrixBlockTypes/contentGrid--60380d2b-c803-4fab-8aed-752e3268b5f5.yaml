@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 4610a356-a212-46cd-a7a1-6286620e89ef # Grid Item
+            fieldUid: 4610a356-a212-46cd-a7a1-6286620e89ef
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  4610a356-a212-46cd-a7a1-6286620e89ef: # Grid Item
+  4610a356-a212-46cd-a7a1-6286620e89ef:
     contentColumnType: string
     fieldGroup: null
     handle: items

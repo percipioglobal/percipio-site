@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 0314e405-e731-462f-9381-2cfb6ac91134
+fieldGroup: 0314e405-e731-462f-9381-2cfb6ac91134 # Images
 handle: teaserImage
 instructions: 'Upload the teaser image here, this image will also be used when the post is shared on social media or google.'
 name: 'Teaser Image'

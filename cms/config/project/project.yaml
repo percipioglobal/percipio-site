@@ -1,4 +1,4 @@
-dateModified: 1618323825
+dateModified: 1620848820
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -86,14 +86,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  navigation:
-    edition: standard
-    enabled: true
-    licenseKey: MJERE8SD7TGQIZVQE0CHESXY
-    schemaVersion: 1.0.21
-    settings:
-      bypassProjectConfig: false
-      pluginName: Navigation
   position-fieldtype:
     edition: standard
     enabled: true
@@ -146,5 +138,5 @@ system:
   live: true
   name: 'Percipio Global Ltd.'
   retryDuration: null
-  schemaVersion: 3.6.7
+  schemaVersion: 3.6.8
   timeZone: Europe/London

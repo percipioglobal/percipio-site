@@ -4,7 +4,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 3603960e-5907-4970-921d-18a3c1c86c7e
+            fieldUid: 3603960e-5907-4970-921d-18a3c1c86c7e # Social Media
             instructions: null
             label: null
             required: false

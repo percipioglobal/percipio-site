@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 13653e63-9892-4752-b260-32518bc3bb3d # Cards
+            fieldUid: 13653e63-9892-4752-b260-32518bc3bb3d
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  13653e63-9892-4752-b260-32518bc3bb3d: # Cards
+  13653e63-9892-4752-b260-32518bc3bb3d:
     contentColumnType: string
     fieldGroup: null
     handle: cards

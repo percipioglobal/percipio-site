@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: b74a2d1f-f160-4a53-9a84-05b89c63c277
+fieldGroup: b74a2d1f-f160-4a53-9a84-05b89c63c277 # Blog
 handle: blogCategories
 instructions: 'Please select or create a category this blog belongs to.'
 name: 'Blog Categories'
