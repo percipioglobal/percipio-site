@@ -40,7 +40,7 @@ fieldLayouts:
 handle: projectCategories
 name: 'Project Categories'
 siteSettings:
-  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Default
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
     hasUrls: false
     template: null
     uriFormat: null

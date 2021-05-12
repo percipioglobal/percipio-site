@@ -3,7 +3,7 @@ handle: navigation
 name: Navigation
 propagationMethod: all
 siteSettings:
-  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Default
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
     enabledByDefault: true
     hasUrls: false
     template: null
