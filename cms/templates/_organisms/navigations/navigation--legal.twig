@@ -1,24 +1,20 @@
 {%- set utilities = utilities ?? '' -%}
 
-{# {%- set nodes = craft.navigation.nodes()
-    .handle('legalNavigation')
-    .level(1)
-    .all() -%}
+{%- set legal = craft.entries.section('pages').type('legal').ids() -%}
+{%- set navigation = craft.entries.section('pages').descendantOf(legal).all() -%}
 
 <nav class="{{- utilities -}}" role="menu" aria-label="Footer legal navigation">
-	{% nav node in nodes %}
+	{% for item in navigation %}
 	<a 
-		{% if node.url %} 
-			href="{{- node.url -}}" 
-			data-tag-category="legal-navigation" 
-			data-tag-action="click" 
-			data-tag-label="{{- node.url -}}" 
-		{% endif %} 
-		aria-label="{{- node.title -}}"
-		title="{{- node.title -}}" 
-		class="hover:underline {{ node.classes | length ? node.classes : '' }}" {% if node.newWindow %} target="_blank" rel="noopener" {% endif %} {% for attribute in node.customAttributes %} {{ attribute.attribute }}="{{ attribute.value }}" {% endfor %} role="menuitem"
+		href="{{- item.url -}}" 
+		data-tag-category="legal-navigation" 
+		data-tag-action="click" 
+		data-tag-label="{{- item.url -}}" 
+		aria-label="{{- item.title -}}"
+		title="{{- item.title -}}" 
+		class="hover:underline" role="menuitem"
 	>
-		{{- node.title -}}
+		{{- item.title -}}
 	</a>
-	{% endnav %}
-</nav> #}
+	{% endfor %}
+</nav>
