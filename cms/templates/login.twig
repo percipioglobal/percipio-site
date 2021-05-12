@@ -12,14 +12,14 @@
 
         {{- input('text', 'loginName', craft.app.user.rememberedUsername, {
             id: 'loginName',
-            class: 'w-full p-2 mb-6 text-black-100 outline-none focus:bg-gray-300',
+            class: 'w-full p-4 mb-6 text-black-100 outline-none focus:bg-gray-300',
         }) -}}
 
         <label for="password" class="block mb-2">Password</label>
 
         {{- input('password', 'password', null, {
             id: 'password',
-            class: 'w-full p-2 mb-6 text-black-100 outline-none focus:bg-gray-300',
+            class: 'w-full p-4 mb-6 text-black-100 outline-none focus:bg-gray-300',
         }) -}}
 
         <div class="flex mb-6">
@@ -35,7 +35,7 @@
 
         </div>
 
-        <button type="submit" class="w-full bg-white-100 hover:opacity-75 text-black-100 font-bold py-2 px-4 mb-6">Login</button>
+        <button type="submit" class="w-full bg-white-100 hover:opacity-75 text-black-100 font-bold py-4 px-4 mb-6">Login</button>
 
         {%- if errorMessage is defined -%}
 
