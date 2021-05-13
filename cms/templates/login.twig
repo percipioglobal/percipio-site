@@ -3,7 +3,7 @@
 
 {%- block content -%}
 
-<div class="w-full max-w-md p-5 m-auto bg-blue-600  text-white-100 space-y-6">
+<div class="mt-60 mb-60 p-12 w-full max-w-md m-auto bg-blue-600 p-5 text-white-100">
 
     <form method="post" accept-charset="UTF-8">
         {{- csrfInput() -}}
@@ -13,28 +13,22 @@
             placeholder: 'Enter your email',
             id: 'login',
             name: 'loginName',
+            label: 'Enter your email',
             required: 'true',
         }) -}}
 
-        <label for="password" class="block mb-2">Password</label>
-
-        {{- input('password', 'password', null, {
+        {{- render.atom('input', 'password', {
+            placeholder: 'Password',
             id: 'password',
-            class: 'w-full p-4 mb-6 text-black-100 outline-none focus:bg-gray-300',
+            name: 'password',
+            label: 'Enter your password',
+            required: 'true',
         }) -}}
 
-        <div class="flex mb-6">
-
-            <label class="flex items-center">
-                {{- input('checkbox', 'rememberMe', '1', {
-                    class:'form-checkbox cursor-pointer',
-                }) -}}
-
-                <span class="ml-2 cursor-pointer">Remember me</span>
-
-            </label>
-
-        </div>
+        {{- render.atom('input', 'checkbox', {
+        name: 'rememberMe',
+        label: 'Remember me',
+        }) -}}
         
         <button type="submit" class="mb-6">
             {{- render.atom('button', 'primary', {
