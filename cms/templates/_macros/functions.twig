@@ -86,14 +86,14 @@
     {%- spaceless -%}
         {%- if entry.section.type == 'structure' -%}
 
-            {%- set siblingIds = craft.entries.section('handbook').level(1).ids() -%}
+            {%- set entries = craft.entries.section('handbook').level(1).ids() -%}
             {%- set position = null -%}
 
-            {%- for siblingId in siblingIds -%}
+            {%- for entryId in entries -%}
 
                 {%- if position is null -%}
 
-                    {%- set position = siblingId == entry.id ? loop.index : null -%}
+                    {%- set position = entryId == entry.id ? loop.index : null -%}
 
                 {%- endif -%}
 
@@ -103,4 +103,5 @@
 
         {%- endif -%} 
     {%- endspaceless -%}
+
 {%- endmacro -%}
