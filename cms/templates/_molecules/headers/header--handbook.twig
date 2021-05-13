@@ -2,6 +2,7 @@
 {% import '_macros/functions' as functions %}
 
 {%- set utilities = utilities ??? '' -%}
+{%- set parent = entry.getAncestors().one() -%}
 
 {%- minify -%}
 
@@ -12,7 +13,9 @@
             <div class="leading-none">
 
                 <h2 class="font-primary text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-white-100">
-                    {{- render.atom('text', 'title', { content: content.heading }) -}}
+                    {%- if entry.level > 1 -%}
+                        {{ parent.title }}
+                    {% endif %}
                 </h2>
                 
                 {%- if entry.section.type == 'structure' -%}
@@ -25,22 +28,30 @@
                     
                         {%- for entry in craft.entries.section('handbook').limit(1).orderBy('dateUpdated desc').all() -%}
                            
-                            <a href="{{ entry.url }}"> {{ entry.title }}</a> on {{ entry.dateUpdated|date('jS F Y') }}
+                            <a href="{{ entry.url }}">
+                                {{ entry.title }}
+                            </a> 
+                            on {{ entry.dateUpdated|date('jS F Y') }}
 
-                        {%- endfor -%}</h3>
+                        {%- endfor -%}
+
+                    </h3>
+
                 {%- endif -%}
                 
             </div>
 
             {%- if entry.level == 1 -%}
 
-                <h2 class="font-primary text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-gray-100">{{- functions.getEntryPosition(entry) -}}</h2>
+                <h2 class="font-primary text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-gray-100">
+                    {{- functions.getEntryPosition(entry) -}}
+                </h2>
 
                 {%- elseif entry.level > 1 -%}
 
-                    {%- set parent = entry.getAncestors().one() -%}
-
-                    <h2 class="font-primary text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-gray-100">{{- functions.getEntryPosition(parent) -}}</h2>
+                    <h2 class="font-primary text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-gray-100">
+                        {{- functions.getEntryPosition(parent) -}}
+                    </h2>
 
             {%- endif -%}
 
