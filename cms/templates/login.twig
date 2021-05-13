@@ -1,4 +1,5 @@
 {%- extends "_boilerplate/_layouts/generic-page-layout.twig" -%}
+{% import '_macros/atoms' as render %}
 
 {%- block content -%}
 
@@ -34,8 +35,12 @@
             </label>
 
         </div>
-
-        <button type="submit" class="w-full bg-white-100 hover:opacity-75 text-black-100 font-bold py-4 px-4 mb-6">Login</button>
+        
+        <button type="submit" class="mb-6">
+            {{- render.atom('button', 'primary', {
+                text: 'Login',
+            }) -}}
+        </button>
 
         {%- if errorMessage is defined -%}
 
