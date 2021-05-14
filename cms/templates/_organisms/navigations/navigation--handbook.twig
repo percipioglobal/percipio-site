@@ -1,8 +1,15 @@
 {%- minify -%}
 
-
+{%- set handbookPage = craft.entries.section('handbookPage').all() -%}
 
 <ol class="list-hierarchical font-primary text-sm leading-snug space-y-2.5">
+
+   {%- for entry in handbookPage -%}
+
+      <li class="{{- craft.app.request.url == '/staff' ? 'text-blue-600' : 'text-black-100' }} font-bold">{{- entry.getLink() -}}</li>
+      
+   {%- endfor -%}
+
    {%- for entry in craft.entries.section('handbook').level(1).all() -%}
 
       <li class="{{- craft.app.request.getSegment(1) == entry.slug ? 'text-blue-600' : 'text-black-100' }} font-bold space-y-2.5">
