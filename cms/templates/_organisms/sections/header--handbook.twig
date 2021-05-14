@@ -1,3 +1,5 @@
+{% import '_macros/atoms' as render %}
+
 {% import '_macros/functions' as functions %}
 
 {%- set parent = entry.getAncestors().one() -%}
@@ -12,15 +14,23 @@
 
             <div class="leading-none">
 
-                <h2 class="font-primary text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-white-100">
-                    {%- if entry.level > 1 -%}
-                        {{ parent.title }}
-                    {% endif %}
-                </h2>
+                {%- if entry.level > 1 -%}
+
+                    {{- render.atom('text', 'content', {
+                        content: parent.title
+                    }) -}}
+
+                {% endif %}
                 
                 {%- if entry.section.type == 'structure' -%}
 
-                    <h3>This section was updated on the {{ entry.dateUpdated|date('jS F Y') }}</h3>
+                    {{- render.atom('text', 'content', {
+                        content: 'This section was updated on the '
+                    }) -}}
+
+                    {{- render.atom('text', 'content', {
+                        content: entry.dateUpdated|date('jS F Y')
+                    }) -}}
 
                 {%- else -%}
 
@@ -43,16 +53,16 @@
 
             {%- if entry.level == 1 -%}
 
-                <h2 class="font-primary text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-gray-100">
-                    {{- functions.getEntryPosition(entry) -}}
-                </h2>
+                {{- render.atom('text', 'content', {
+                     content: functions.getEntryPosition(entry)
+                }) -}}
 
                 {%- elseif entry.level > 1 -%}
-
-                    <h2 class="font-primary text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-gray-100">
-                        {{- functions.getEntryPosition(parent) -}}
-                    </h2>
-
+                    
+                    {{- render.atom('text', 'content', {
+                     content: functions.getEntryPosition(parent)
+                    }) -}}
+                    
             {%- endif -%}
 
         </div>
