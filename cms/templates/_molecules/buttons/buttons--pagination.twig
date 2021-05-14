@@ -7,9 +7,9 @@
 {%- set next = entry.getNext(params) -%}
 
 {%- if prev -%}
-    <a href="{{prev.title}}">{{prev.title}}</a>
+    <a href="{{- prev.url -}}">{{- prev.title -}}</a>
 {%- endif -%}
 
 {%- if next -%}
-    <a href="{{next.title}}">{{next.title}}</a>
+    <a href="{{- next.url -}}">{{- next.title -}}</a>
 {%- endif -%}
