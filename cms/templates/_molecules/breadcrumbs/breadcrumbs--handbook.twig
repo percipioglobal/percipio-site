@@ -1,11 +1,18 @@
+{%- set handbookPage = craft.entries.section('handbookPage').all() -%}
+
 {%- if entry.level > 1 -%}
 
     <div>
 
+        {%- for entry in handbookPage -%}
+
+            <span>{{- entry.getLink() -}}</span>
+
+        {%- endfor -%}
+
         {%- set ancestors = entry.getAncestors().level(1).all() -%}
 
         {%- for ancestor in ancestors -%}
-
             <span>{{- ancestor.getLink() -}}</span>
             <span>{{- entry.getLink() -}}</span>
 
@@ -13,4 +20,18 @@
 
     </div>
 
+{%-  else -%}
+
+    <div>
+
+        {%- for entry in handbookPage -%}
+
+            <span>{{- entry.getLink() -}}</span>
+
+        {%- endfor -%}
+
+        <span>{{- entry.getLink() -}}</span>
+
+    </div>
+        
 {%- endif -%}
