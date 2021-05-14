@@ -1,5 +1,15 @@
 {%- minify -%}
+
+{%- set handbookPage = craft.entries.section('handbookPage').all() -%}
+
 <ol class="list-hierarchical">
+
+   {%- for entry in handbookPage -%}
+
+      <li>{{- entry.getLink() -}}</li>
+      
+   {%- endfor -%}
+
    {%- for entry in craft.entries.section('handbook').level(1).all() -%}
          
       <li>
