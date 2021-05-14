@@ -1,0 +1,15 @@
+{%- if entry.level > 1 -%}
+
+    <div>
+
+        {%- set ancestors = entry.getAncestors().level(1).all() -%}
+
+        {%- for ancestor in ancestors -%}
+
+            <span>{{- ancestor.getLink() -}}</span>
+            
+        {%- endfor -%}
+
+    </div>
+
+{%- endif -%}

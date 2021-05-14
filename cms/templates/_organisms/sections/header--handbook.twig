@@ -1,13 +1,14 @@
 {% import '_macros/functions' as functions %}
 
-{%- set utilities = utilities ??? '' -%}
 {%- set parent = entry.getAncestors().one() -%}
 
 {%- minify -%}
 
     <div class="mt-20 w-full bg-blue-600 h-96">
 
-        <div class="container mx-auto max-w-screen-lg {{ utilities -}}">
+        <div class="container mx-auto max-w-screen-lg">
+
+            {%- include '_molecules/breadcrumbs/breadcrumbs--handbook'  -%}
 
             <div class="leading-none">
 
