@@ -1,23 +1,26 @@
 {%- minify -%}
-<ol class="list-hierarchical">
+
+
+
+<ol class="list-hierarchical font-primary mt-60 ml-48 text-sm leading-snug">
    {%- for entry in craft.entries.section('handbook').level(1).all() -%}
-         
-      <li>
+
+      <li class="{{ craft.app.request.getSegment(1) == entry.slug ? 'font-bold text-blue-600' : 'font-bold' }} ">
 
          {{- entry.getLink()  -}}
    
          {%- if entry.hasDescendants == true -%}
-            <ol class="list-hierarchical">
+            <ol class="list-hierarchical font-semibold pl-1">
                {%- for child in craft.entries.section('handbook').descendantOf(entry.id).level(2).all() -%}
                   
-                  <li>{{- child.getLink()  -}}</li>
+                  <li class="{{ craft.app.request.getSegment(1) == entry.slug ? 'text-blue-600' : 'text-black' }} ">{{- child.getLink()  -}}</li>
 
                   {%- if child.hasDescendants == true -%}
 
-                     <ol class="list-hierarchical">
+                     <ol class="list-hierarchical font-semibold pl-1">
                         {%- for grandChild in craft.entries.section('handbook').descendantOf(child.id).level(3).all() -%}
                            
-                           <li>{{- grandChild.getLink()  -}}</li>
+                           <li class="{{ craft.app.request.getSegment(1) == entry.slug ? 'text-blue-600' : 'text-black' }} ">{{- grandChild.getLink()  -}}</li>
                         
                         {%- endfor -%}
                      </ol>
