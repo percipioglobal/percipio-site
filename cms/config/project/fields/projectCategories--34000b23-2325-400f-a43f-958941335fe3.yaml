@@ -13,7 +13,7 @@ settings:
   localizeRelations: false
   selectionLabel: ''
   showSiteMenu: true
-  source: 'group:6834194e-43c0-464b-9333-a15bd914d9d3'
+  source: 'group:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false

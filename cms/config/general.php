@@ -46,6 +46,7 @@ return [
     'omitScriptNameInUrls' => true,
     'useEmailAsUsername' => true,
     'usePathInfo' => true,
-    'useProjectConfigFile' => true,
     'verificationCodeDuration' => 'P1D',
+    'loginPath' => '/login',
+    'setPasswordRequestPath' => '/reset-password'
 ];
