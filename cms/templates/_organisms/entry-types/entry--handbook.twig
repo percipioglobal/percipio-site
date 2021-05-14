@@ -1,9 +1,14 @@
-{%- include '_organisms/sections/header--handbook' -%}
+{% requireLogin %}
 
+{%- include '_organisms/sections/header--handbook' -%}
 {%- include '_organisms/navigations/navigation--handbook' -%}
 
 <div>
+    {%- include '_molecules/metas/meta--handbook' -%}
+
 	{%- include '_organisms/builders/content--builder' with {
         content: entry,
     } -%}
+
+    {%- include '_molecules/buttons/buttons--pagination' -%}
 </div>
