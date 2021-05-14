@@ -1,6 +1,4 @@
-<div>
-    <p class="font-mono text-gray-800">
-        Written by {{ entry.author.fullName}} <br>
-        on the {{ entry.dateUpdated|date('jS F Y') }}
-    </p>
+<div class="font-mono text-gray-800 ">
+    <span>Written by {{ entry.author.fullName }}</span>
+    <span class="block">on the {{ entry.dateUpdated|date('jS F Y') }}</span>
 </div>
