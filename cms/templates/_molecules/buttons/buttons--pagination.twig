@@ -1,5 +1,4 @@
 {%- import '_macros/atoms' as render -%}
-{% import '_macros/functions' as functions %}
 
 {%- set params = {
         section: 'handbook'
@@ -8,33 +7,34 @@
 
 {%- set prev = entry.getPrev(params) -%}
 {%- set next = entry.getNext(params) -%}
-{%- set parent = entry.getAncestors().one() -%}
 
 <div class="text-blue-600 font-semibold text-sm">
     {%- if prev -%}
+
         <span class="space-x-2">
+
             {{- render.atom('icon', 'fa', {
                     icon:  'fas fa-chevron-left',
                     size: 'sm',
                     colour: 'text-blue-600',
             }) -}}
 
-            {# <span class="">{{- functions.getEntryPosition(parent, 1) ~ '.' ~ functions.getEntryPosition(prev, 1)  -}}</span> #}
-
             <a href="{{- prev.url -}}">{{- prev.title -}}</a>
+
         </span>
+
     {%- endif -%}
 
     {%- if next -%}
         <span class="float-right space-x-2">
-
-            {# <span class="">{{- functions.getEntryPosition(parent, 1) ~ '.' ~ functions.getEntryPosition(next, 1)  -}}</span> #}
             <a href="{{- next.url -}}">{{- next.title -}}</a>
+
             {{- render.atom('icon', 'fa', {
                     icon:  'fas fa-chevron-right',
                     size: 'sm',
                     colour: 'text-blue-600',
-                }) -}}
+            }) -}}
+
         </span>
 
     {%- endif -%}
