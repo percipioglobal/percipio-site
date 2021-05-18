@@ -29,11 +29,10 @@
 
                 {% endif %}
 
-                <div class="my-6 space-x-2">
-                    {%- include '_molecules/breadcrumbs/breadcrumbs--handbook'  -%}
-                </div>
-
                 {%- if entry.section.type == 'structure' -%}
+                    <div class="my-6 space-x-2">
+                        {%- include '_molecules/breadcrumbs/breadcrumbs--handbook'  -%}
+                    </div>
 
                     {{- render.atom('text', 'content', {
                         content: 'This section was updated on the '
@@ -74,7 +73,13 @@
                     {%- elseif entry.level > 1 -%}
                         
                         {{- render.atom('text', 'content', {
-                        content: functions.getEntryPosition(parent)
+                            content: functions.getEntryPosition(parent)
+                        }) -}}
+
+                    {%- else -%}
+
+                        {{- render.atom('text', 'content', {
+                            content: 1
                         }) -}}
 
                 {%- endif -%}
