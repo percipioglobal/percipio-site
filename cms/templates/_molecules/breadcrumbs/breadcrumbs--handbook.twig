@@ -1,37 +1,65 @@
+{% import '_macros/atoms' as render %}
+
+
 {%- set handbookPage = craft.entries.section('handbookPage').all() -%}
 
 {%- if entry.level > 1 -%}
 
-    <div>
+    {# <div> #}
 
         {%- for entry in handbookPage -%}
 
-            <span>{{- entry.getLink() -}}</span>
+            <span class="{{- craft.app.request.segments|last == entry.slug ? 'opacity-100' : 'opacity-70' }} text-white-100">{{- entry.getLink() -}}</span>
+            
+            <span class="opacity-75">
+                {{- render.atom('icon', 'fa', {
+                    icon:  'fas fa-chevron-right',
+                    size: 'sm',
+                    colour: 'text-white-100',
+                }) -}}
+            </span>
 
         {%- endfor -%}
 
         {%- set ancestors = entry.getAncestors().level(1).all() -%}
 
         {%- for ancestor in ancestors -%}
-            <span>{{- ancestor.getLink() -}}</span>
-            <span>{{- entry.getLink() -}}</span>
+            <span class="{{- craft.app.request.segments|last == ancestor.slug ? 'opacity-100' : 'opacity-70' }} text-white-100">{{- ancestor.getLink() -}}</span>
+
+            <span class="opacity-75">
+                {{- render.atom('icon', 'fa', {
+                    icon:  'fas fa-chevron-right',
+                    size: 'sm',
+                    colour: 'text-white-100',
+                }) -}}
+            </span>
+
+            <span class="{{- craft.app.request.segments|last == entry.slug ? 'opacity-100' : 'opacity-70' }} text-white-100">{{- entry.getLink() -}}</span>
 
         {%- endfor -%}
 
-    </div>
+    {# </div> #}
 
 {%-  else -%}
 
-    <div>
+    {# <div> #}
 
         {%- for entry in handbookPage -%}
+        
+            <span class="{{- craft.app.request.segments|last == entry.slug ? 'opacity-100' : 'opacity-70' }} text-white-100">{{- entry.getLink() -}}</span>
 
-            <span>{{- entry.getLink() -}}</span>
+            <span class="opacity-75">
+                {{- render.atom('icon', 'fa', {
+                    icon:  'fas fa-chevron-right',
+                    size: 'sm',
+                    colour: 'text-white-100',
+                }) -}}
+            </span>
 
         {%- endfor -%}
 
         <span>{{- entry.getLink() -}}</span>
 
-    </div>
+    {# </div> #}
         
 {%- endif -%}

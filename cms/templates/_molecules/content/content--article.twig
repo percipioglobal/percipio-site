@@ -1,11 +1,10 @@
 {% import '_macros/atoms' as render %}
 
 {%- minify -%}
-
-        <div class="w-full {{ loop.first ? 'pt-10 pb-10 md:pt-16 md:pb-16' : 'my-16' -}}">
+        <div class="w-full {{ handbook == false ? loop.first ? 'pt-10 pb-10 md:pt-16 md:pb-16' : 'my-16' : '' }}">
 
             <div class="container mx-auto max-w-screen-lg">
-                <div class="prose {{ prose ? prose : '' }} {{ content.prose -}}">
+                <div class="prose {{ prose ? prose : '' }} {{ content.prose -}} {{ handbook == true ? ' font-primary' : '' }}">
                     {{- render.atom('text', 'content', { content: content.article }) -}}
                 </div>
             </div>

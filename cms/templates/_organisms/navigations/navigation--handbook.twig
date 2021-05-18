@@ -2,25 +2,31 @@
 
 
 
-<ol class="list-hierarchical font-primary mt-60 ml-48 text-sm leading-snug">
+<ol class="list-hierarchical font-primary text-sm leading-snug space-y-2.5">
    {%- for entry in craft.entries.section('handbook').level(1).all() -%}
 
-      <li class="{{ craft.app.request.getSegment(1) == entry.slug ? 'font-bold text-blue-600' : 'font-bold' }} ">
+      <li class="{{- craft.app.request.getSegment(1) == entry.slug ? 'text-blue-600' : 'text-black-100' }} font-bold space-y-2.5">
 
-         {{- entry.getLink()  -}}
+         <span>{{- entry.getLink()  -}}</span>
    
          {%- if entry.hasDescendants == true -%}
-            <ol class="list-hierarchical font-semibold pl-1">
+            <ol class="list-hierarchical font-semibold space-y-2.5 pl-2">
                {%- for child in craft.entries.section('handbook').descendantOf(entry.id).level(2).all() -%}
                   
-                  <li class="{{ craft.app.request.getSegment(1) == entry.slug ? 'text-blue-600' : 'text-black' }} ">{{- child.getLink()  -}}</li>
+                  <li class="{{- craft.app.request.segments|last == child.slug ? 'text-blue-600' : 'text-black-100' }}">
+                  
+                      <span>{{- child.getLink()  -}}</span>
+                     
+                     </li>
 
                   {%- if child.hasDescendants == true -%}
 
-                     <ol class="list-hierarchical font-semibold pl-1">
+                     <ol class="list-hierarchical font-semibold space-y-2.5">
                         {%- for grandChild in craft.entries.section('handbook').descendantOf(child.id).level(3).all() -%}
                            
-                           <li class="{{ craft.app.request.getSegment(1) == entry.slug ? 'text-blue-600' : 'text-black' }} ">{{- grandChild.getLink()  -}}</li>
+                           <li class="{{- craft.app.request.segments|last == grandChild.slug ? 'text-blue-600' : 'text-black-100' }}">
+                               <span>{{- grandChild.getLink()  -}}</span>         
+                           </li>
                         
                         {%- endfor -%}
                      </ol>

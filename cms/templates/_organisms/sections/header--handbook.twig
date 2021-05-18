@@ -1,29 +1,30 @@
 {% import '_macros/atoms' as render %}
-
 {% import '_macros/functions' as functions %}
 
 {%- set parent = entry.getAncestors().one() -%}
 
 {%- minify -%}
 
-    <div class="mt-24 w-full bg-blue-600 h-96">
+    <div class="mt-24 w-full bg-blue-600 text-white-100 flex overflow-hidden h-462">
 
-        <div class="container mx-auto max-w-screen-lg">
-
-            {%- include '_molecules/breadcrumbs/breadcrumbs--handbook'  -%}
+        <div class="container my-auto mx-36.5">
 
             <div>
 
                 {%- if entry.level > 1 -%}
 
-                    <h2 class="text-6xl font-bold text-white">
+                    <h2 class="text-6xl font-bold">
                     {{- render.atom('text', 'content', {
                         content: parent.title,
                     }) -}}
                     </h2>
 
                 {% endif %}
-                
+
+                <div class="my-6 space-x-2">
+                    {%- include '_molecules/breadcrumbs/breadcrumbs--handbook'  -%}
+                </div>
+
                 {%- if entry.section.type == 'structure' -%}
 
                     {{- render.atom('text', 'content', {
@@ -53,21 +54,23 @@
                 
             </div>
 
-            {%- if entry.level == 1 -%}
-
-                {{- render.atom('text', 'content', {
-                     content: functions.getEntryPosition(entry)
-                }) -}}
-
-                {%- elseif entry.level > 1 -%}
-                    
-                    {{- render.atom('text', 'content', {
-                     content: functions.getEntryPosition(parent)
-                    }) -}}
-                    
-            {%- endif -%}
-
         </div>
+
+        <div class="font-extrabold -mt-32 -mr-6 text-white opacity-50 text-10xl">
+                {%- if entry.level == 1 -%}
+
+                    {{- render.atom('text', 'content', {
+                        content: functions.getEntryPosition(entry)
+                    }) -}}
+
+                    {%- elseif entry.level > 1 -%}
+                        
+                        {{- render.atom('text', 'content', {
+                        content: functions.getEntryPosition(parent)
+                        }) -}}
+
+                {%- endif -%}
+            </div>
     </div>
 
 {%- endminify -%}

@@ -1,14 +1,25 @@
 {% requireLogin %}
 
 {%- include '_organisms/sections/header--handbook' -%}
-{%- include '_organisms/navigations/navigation--handbook' -%}
 
-<div>
-    {%- include '_molecules/metas/meta--handbook' -%}
+<div class="container ml-48 flex mt-5.6 mb-24">
 
-	{%- include '_organisms/builders/content--builder' with {
-        content: entry,
-    } -%}
+    <div class="w-17">
+        {%- include '_organisms/navigations/navigation--handbook' -%}
+    </div>
 
-    {%- include '_molecules/buttons/buttons--pagination' -%}
+    <div class="w-47">
+
+      <div class="ml-28">
+            {%- include '_molecules/metas/meta--handbook' -%}
+
+            {%- include '_organisms/builders/content--builder' with {
+                content: entry,
+                handbook: true,
+            } -%}
+
+            {%- include '_molecules/buttons/buttons--pagination' -%}
+        </div>
+     
+    </div>
 </div>
