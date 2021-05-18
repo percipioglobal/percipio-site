@@ -1,14 +1,15 @@
 {% import '_macros/atoms' as render %}
 
 {%- set utilities = utilities ??? '' -%}
+{%- set handbookCheck = handbook is defined -%}
 
 {%- minify -%}
 
     <div class="mt-16 w-full">
 
         {# TODO set maxwidth breakpoints #}
-        <div class="{{ handbook == false ? 'container mx-auto max-w-screen-lg' ~  utilities : '' }}">
-
+        <div class="{{ handbookCheck == false ? 'container mx-auto max-w-screen-lg' ~  utilities : '' }}">
+  
             <div class="leading-none">
 
                 {{- render.atom('text', 'overline', {
@@ -17,7 +18,7 @@
                     })
                 -}}
 
-                <h2 class="{{ handbook == false ? 'md:text-5xl mb-4 md:mb-8' : 'md:text-6xl mb-3.5 md:mb-7' }} text-3xl font-primary font-bold">
+                <h2 class="{{ handbookCheck == false ? 'md:text-5xl mb-4 md:mb-8' : 'md:text-6xl mb-3.5 md:mb-7' }} text-3xl font-primary font-bold">
                     {{- render.atom('text', 'title', { content: content.heading }) -}}
                 </h2>
 
@@ -35,7 +36,7 @@
                     }) -}}
                 {% else %}
                     
-                    {%- if handbook == false -%}
+                    {%- if handbookCheck == false -%}
                         <hr class="h-1 w-32 bg-{{- swatch.primary -}}">
                     {%- endif -%}
                     
