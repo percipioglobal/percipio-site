@@ -20,6 +20,12 @@
                         content: parent.title
                     }) -}}
 
+                    {%- else -%}
+                    
+                        {{- render.atom('text', 'content', {
+                            content: entry.title
+                        }) -}}
+
                 {% endif %}
                 
                 {%- if entry.section.type == 'structure' -%}
