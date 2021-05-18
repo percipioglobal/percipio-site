@@ -28,17 +28,7 @@
 
                 {% endif %}
                 
-                {%- if entry.section.type == 'structure' -%}
-
-                    {{- render.atom('text', 'content', {
-                        content: 'This section was updated on the '
-                    }) -}}
-
-                    {{- render.atom('text', 'content', {
-                        content: entry.dateUpdated|date('jS F Y')
-                    }) -}}
-
-                {%- else -%}
+                {%- if entry.section.type == 'single' -%}
 
                     <h3>Last section updated:
                     
