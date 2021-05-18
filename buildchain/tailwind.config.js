@@ -455,7 +455,7 @@ module.exports = {
 
             height: {
                 '90vh': '90vh',
-                '462': '462px',
+                '116': '29rem',
             },
 
             transitionTimingFunction: {
@@ -468,8 +468,8 @@ module.exports = {
 
             width: {
                 16: '4rem',
-                17: '17.188rem',
-                47: '47rem',
+                68: '17rem',
+                188: '47rem',
                 200: '200%',
                 300: '300%',
                 400: '400%',
@@ -485,12 +485,11 @@ module.exports = {
             },
 
             fontSize: {
-                '10xl': '37.5rem',
+                '150xl': '37.5rem',
             },
 
             margin: {
-                '36.5': '36.5rem',
-                '5.6': '5.563rem',
+                '144': '36rem',
             },
         },
     },
