@@ -19,6 +19,12 @@
                     }) -}}
                     </h2>
 
+                    {%- else -%}
+                    
+                        {{- render.atom('text', 'content', {
+                            content: entry.title
+                        }) -}}
+
                 {% endif %}
 
                 <div class="my-6 space-x-2">
