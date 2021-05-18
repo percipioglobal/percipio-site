@@ -1,0 +1,67 @@
+{% import '_macros/atoms' as render %}
+
+{% import '_macros/functions' as functions %}
+
+{%- set parent = entry.getAncestors().one() -%}
+
+{%- minify -%}
+
+    <div class="mt-20 w-full bg-blue-600 h-96">
+
+        <div class="container mx-auto max-w-screen-lg">
+
+            {%- include '_molecules/breadcrumbs/breadcrumbs--handbook'  -%}
+
+            <div class="leading-none">
+
+                {%- if entry.level > 1 -%}
+
+                    {{- render.atom('text', 'content', {
+                        content: parent.title
+                    }) -}}
+
+                    {%- else -%}
+                    
+                        {{- render.atom('text', 'content', {
+                            content: entry.title
+                        }) -}}
+
+                {% endif %}
+                
+                {%- if entry.section.type == 'single' -%}
+
+                    <h3>Last section updated:
+                    
+                        {%- for entry in craft.entries.section('handbook').limit(1).orderBy('dateUpdated desc').all() -%}
+                           
+                            <a href="{{ entry.url }}">
+                                {{ entry.title }}
+                            </a> 
+                            on {{ entry.dateUpdated|date('jS F Y') }}
+
+                        {%- endfor -%}
+
+                    </h3>
+
+                {%- endif -%}
+                
+            </div>
+
+            {%- if entry.level == 1 -%}
+
+                {{- render.atom('text', 'content', {
+                     content: functions.getEntryPosition(entry)
+                }) -}}
+
+                {%- elseif entry.level > 1 -%}
+                    
+                    {{- render.atom('text', 'content', {
+                     content: functions.getEntryPosition(parent)
+                    }) -}}
+                    
+            {%- endif -%}
+
+        </div>
+    </div>
+
+{%- endminify -%}
