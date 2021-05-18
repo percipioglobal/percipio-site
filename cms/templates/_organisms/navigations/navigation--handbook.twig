@@ -6,7 +6,7 @@
 
    {%- for entry in handbookPage -%}
 
-      <li class="{{- craft.app.request.url == '/staff' ? 'text-blue-600' : 'text-black-100' }} font-bold">{{- entry.getLink() -}}</li>
+      <li class="{{- craft.app.request.getSegment(1) == '' ? 'text-blue-600' : 'text-black-100' }} font-bold">{{- entry.getLink() -}}</li>
       
    {%- endfor -%}
 
