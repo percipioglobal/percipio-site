@@ -94,7 +94,7 @@
 
                 {%- if position is null -%}
 
-                    {%- set position = entryId == entry.id ? loop.index : null -%}
+                    {%- set position = entryId == entry.id ? loop.index + 1 : null -%}
 
                 {%- endif -%}
 
