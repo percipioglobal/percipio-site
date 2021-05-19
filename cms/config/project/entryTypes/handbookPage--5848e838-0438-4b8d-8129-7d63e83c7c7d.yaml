@@ -37,6 +37,19 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 93892db5-fbae-4955-92ff-5b51c9962812 # Authors
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Metadata
+        sortOrder: 2
 handle: handbookPage
 hasTitleField: false
 name: 'Handbook Homepage'
