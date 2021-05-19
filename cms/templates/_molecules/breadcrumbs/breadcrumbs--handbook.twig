@@ -5,44 +5,39 @@
 
 {%- if entry.level > 1 -%}
 
-    {# <div> #}
+    {%- for entry in handbookPage -%}
 
-        {%- for entry in handbookPage -%}
+        <span class="{{- craft.app.request.segments|last == entry.slug ? 'opacity-100' : 'opacity-70' }} text-white-100">{{- entry.getLink() -}}</span>
+        
+        <span class="opacity-75">
+            {{- render.atom('icon', 'fa', {
+                icon:  'fas fa-chevron-right',
+                size: 'sm',
+                colour: 'text-white-100',
+            }) -}}
+        </span>
 
-            <span class="{{- craft.app.request.segments|last == entry.slug ? 'opacity-100' : 'opacity-70' }} text-white-100">{{- entry.getLink() -}}</span>
-            
-            <span class="opacity-75">
-                {{- render.atom('icon', 'fa', {
-                    icon:  'fas fa-chevron-right',
-                    size: 'sm',
-                    colour: 'text-white-100',
-                }) -}}
-            </span>
+    {%- endfor -%}
 
-        {%- endfor -%}
+    {%- set ancestors = entry.getAncestors().level(1).all() -%}
 
-        {%- set ancestors = entry.getAncestors().level(1).all() -%}
+    {%- for ancestor in ancestors -%}
 
-        {%- for ancestor in ancestors -%}
-            <span class="{{- craft.app.request.segments|last == ancestor.slug ? 'opacity-100' : 'opacity-70' }} text-white-100">{{- ancestor.getLink() -}}</span>
+        <span class="{{- craft.app.request.segments|last == ancestor.slug ? 'opacity-100' : 'opacity-70' }} text-white-100">{{- ancestor.getLink() -}}</span>
 
-            <span class="opacity-75">
-                {{- render.atom('icon', 'fa', {
-                    icon:  'fas fa-chevron-right',
-                    size: 'sm',
-                    colour: 'text-white-100',
-                }) -}}
-            </span>
+        <span class="opacity-75">
+            {{- render.atom('icon', 'fa', {
+                icon:  'fas fa-chevron-right',
+                size: 'sm',
+                colour: 'text-white-100',
+            }) -}}
+        </span>
 
-            <span class="{{- craft.app.request.segments|last == entry.slug ? 'opacity-100' : 'opacity-70' }} text-white-100">{{- entry.getLink() -}}</span>
+        <span class="{{- craft.app.request.segments|last == entry.slug ? 'opacity-100' : 'opacity-70' }} text-white-100">{{- entry.getLink() -}}</span>
 
-        {%- endfor -%}
+    {%- endfor -%}
 
-    {# </div> #}
-
-{%-  else -%}
-
-    {# <div> #}
+    {%-  else -%}
 
         {%- for entry in handbookPage -%}
         
@@ -59,7 +54,5 @@
         {%- endfor -%}
 
         <span>{{- entry.getLink() -}}</span>
-
-    {# </div> #}
         
 {%- endif -%}
