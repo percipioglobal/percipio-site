@@ -5,11 +5,11 @@
 
 {%- minify -%}
 
-    <div class="mt-24 w-full bg-blue-600 text-white-100 flex overflow-hidden h-116">
+    <div class="mt-24 w-full bg-blue-600 text-white-100 relative lg:flex overflow-hidden lg:h-116">
 
-        <div class="container my-auto mx-144">
+        <div class="container lg:my-auto lg:mx-auto">
 
-            <div>
+            <div class="mx-auto">
 
                 {%- if entry.level > 1 -%}
 
@@ -30,7 +30,7 @@
                 {% endif %}
 
                 {%- if entry.section.type == 'structure' -%}
-                    <div class="my-6 space-x-2">
+                    <div class="my-6 space-x-2 whitespace-nowrap">
                         {%- include '_molecules/breadcrumbs/breadcrumbs--handbook'  -%}
                     </div>
 
@@ -63,7 +63,7 @@
 
         </div>
 
-        <div class="font-extrabold -mt-32 -mr-6 text-white opacity-50 text-150xl">
+        <div class="font-extrabold lg:-mt-16 text-white opacity-50 text-6xl lg:text-150xl text-right">
                 {%- if entry.level == 1 -%}
 
                     {{- render.atom('text', 'content', {
