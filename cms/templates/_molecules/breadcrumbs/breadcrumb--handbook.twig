@@ -1,0 +1,29 @@
+{% import '_macros/atoms' as render %}
+
+{%- set ancestors = entry.ancestors.all() -%}
+
+{%- for ancestor in ancestors -%}
+
+    {{- render.atom('link', 'breadcrumb', {
+        url:  ancestor.url,
+        title: ancestor.title,
+        slug: ancestor.slug,
+        utilities: '',
+    }) -}}
+
+    <span class="inline-flex mx-2 opacity-75">
+        {{- render.atom('icon', 'fa', {
+            icon:  'fas fa-chevron-right',
+            size: 'sm',
+            colour: 'text-white-100',
+        }) -}}
+    </span>
+
+{%- endfor -%}
+
+{{- render.atom('link', 'breadcrumb', {
+    url:  entry.url,
+    title: entry.title,
+    slug: entry.slug,
+    utilities: '',
+}) -}}

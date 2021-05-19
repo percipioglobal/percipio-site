@@ -2,49 +2,62 @@
 
 {%- set handbookPage = craft.entries.section('handbookPage').all() -%}
 
-<ol class="list-hierarchical font-primary text-sm leading-snug space-y-2.5">
+<nav class="pt-16 w-full">
 
-   {%- for entry in handbookPage -%}
+   <ol class="list-hierarchical font-primary text-sm">
 
-      <li class="{{- craft.app.request.getSegment(1) == '' ? 'text-blue-600' : 'text-black-100' }} font-bold">{{- entry.getLink() -}}</li>
+      {%- for entry in handbookPage -%}
+
+         <li class="{{- craft.app.request.getSegment(1) == '' ? 'text-blue-600' : 'text-black-100' }} font-bold">{{- entry.getLink() -}}</li>
       
-   {%- endfor -%}
+      {%- endfor -%}
 
-   {%- for entry in craft.entries.section('handbook').level(1).all() -%}
+      {%- for entry in craft.entries.section('handbook').level(1).all() -%}
 
-      <li class="{{- craft.app.request.getSegment(1) == entry.slug ? 'text-blue-600' : 'text-black-100' }} font-bold space-y-2.5">
+         <li class="{{- craft.app.request.getSegment(1) == entry.slug ? 'text-blue-600' : 'text-black-100' }} font-bold space-y-2.5">
 
-         <span>{{- entry.getLink()  -}}</span>
-   
-         {%- if entry.hasDescendants == true -%}
-            <ol class="list-hierarchical font-semibold space-y-2.5 pl-2">
-               {%- for child in craft.entries.section('handbook').descendantOf(entry.id).level(2).all() -%}
-                  
-                  <li class="{{- craft.app.request.segments|last == child.slug ? 'text-blue-600' : 'text-black-100' }}">
-                  
-                      <span>{{- child.getLink()  -}}</span>
+            <span>{{- entry.getLink()  -}}</span>
+      
+            {%- if entry.hasDescendants == true -%}
+
+               <ol class="list-hierarchical font-semibold space-y-2.5 pl-2">
+
+                  {%- for child in craft.entries.section('handbook').descendantOf(entry.id).level(2).all() -%}
                      
+                     <li class="{{- craft.app.request.segments|last == child.slug ? 'text-blue-600' : 'text-black-100' }}">
+                     
+                        <span>{{- child.getLink()  -}}</span>
+                        
                      </li>
 
-                  {%- if child.hasDescendants == true -%}
+                     {%- if child.hasDescendants == true -%}
 
-                     <ol class="list-hierarchical font-semibold space-y-2.5">
-                        {%- for grandChild in craft.entries.section('handbook').descendantOf(child.id).level(3).all() -%}
+                        <ol class="list-hierarchical font-semibold space-y-2.5">
+
+                           {%- for grandChild in craft.entries.section('handbook').descendantOf(child.id).level(3).all() -%}
+                              
+                              <li class="{{- craft.app.request.segments|last == grandChild.slug ? 'text-blue-600' : 'text-black-100' }}">
+                                 <span>{{- grandChild.getLink()  -}}</span>         
+                              </li>
                            
-                           <li class="{{- craft.app.request.segments|last == grandChild.slug ? 'text-blue-600' : 'text-black-100' }}">
-                               <span>{{- grandChild.getLink()  -}}</span>         
-                           </li>
-                        
-                        {%- endfor -%}
-                     </ol>
-                  {%- endif -%}
+                           {%- endfor -%}
 
-               {%- endfor -%}
-            </ol>
-         {%- endif -%}
+                        </ol>
 
-      </li>
-         
-   {%- endfor -%}
-</ol>
-{% endminify %}
+                     {%- endif -%}
+
+                  {%- endfor -%}
+
+               </ol>
+
+            {%- endif -%}
+
+         </li>
+            
+      {%- endfor -%}
+
+   </ol>
+
+</nav>
+
+{%- endminify -%}

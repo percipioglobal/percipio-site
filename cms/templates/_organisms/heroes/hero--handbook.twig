@@ -1,0 +1,101 @@
+{% import '_macros/atoms' as render %}
+{% import '_macros/functions' as functions %}
+
+{%- set parent = content.getAncestors().one() -%}
+
+{%- minify -%}
+    <section class="relative pt-32 pb-20 w-full flex items-center overflow-hidden bg-blue-600 text-white-100 h-116">
+        <div class="container max-w-screen-lg mx-auto">
+
+            <h1 class="sr-only">
+                {{- seomatic.site.identity.genericName -}}:
+                {{- render.atom('text', 'title', { content: content.level > 1 ? parent.title : content.title }) -}}
+            </h1>
+
+            <h2 class="text-6xl font-bold">
+                {{- render.atom('text', 'title', { content: content.level > 1 ? parent.title : content.title }) -}}
+            </h2>
+
+            {%- include '_molecules/breadcrumbs/breadcrumb--handbook'  -%}
+
+            {%- if content.dateUpdated > content.postDate -%}
+
+                {%- include '_molecules/metas/meta--updated' ignore missing with { 
+                    content: entry,
+                } -%}
+
+            {%- endif -%}
+
+            {% if content.description|length %}
+                <div class="max-w-2xl prose prose-lg mt-4 md:mt-12 text-gray-800">
+                    {{- render.atom('text', 'content', { content: content.description }) -}}
+                </div>
+            {% endif %}
+        
+        </div>
+    </section>
+{# 
+    <div class="mt-24 w-full  flex overflow-hidden h-116">
+
+        <div class="container my-auto mx-144">
+
+            <div>
+
+                {%- if content.section.type == 'structure' -%}
+                    <div class="my-6 space-x-2">
+                        {%- include '_molecules/breadcrumbs/breadcrumbs--handbook'  -%}
+                    </div>
+
+                    {{- render.atom('text', 'content', {
+                        content: 'This section was updated on the '
+                    }) -}}
+
+                    {{- render.atom('text', 'content', {
+                        content: content.dateUpdated|date('jS F Y')
+                    }) -}}
+
+                {%- else -%}
+
+                    <h3>Last section updated:
+                    
+                        {%- for content in craft.entries.section('handbook').limit(1).orderBy('dateUpdated desc').all() -%}
+                        
+                            <a href="{{ content.url }}">
+                                {{ content.title }}
+                            </a> 
+                            on {{ content.dateUpdated|date('jS F Y') }}
+
+                        {%- endfor -%}
+
+                    </h3>
+
+                {%- endif -%}
+                
+            </div>
+
+        </div>
+
+        <div class="font-extrabold -mt-32 -mr-6 text-white opacity-50 text-150xl">
+                {%- if content.level == 1 -%}
+
+                    {{- render.atom('text', 'content', {
+                        content: functions.getcontentPosition(content)
+                    }) -}}
+
+                    {%- elseif content.level > 1 -%}
+                        
+                        {{- render.atom('text', 'content', {
+                            content: functions.getEntryPosition(parent)
+                        }) -}}
+
+                    {%- else -%}
+
+                        {{- render.atom('text', 'content', {
+                            content: 1
+                        }) -}}
+
+                {%- endif -%}
+            </div>
+    </div> #}
+
+{%- endminify -%}

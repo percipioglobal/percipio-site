@@ -1,4 +1,24 @@
-<div class="font-mono text-gray-800 ">
-    <span>Written by {{ entry.author.fullName }}</span>
-    <span class="block">on the {{ entry.dateUpdated|date('jS F Y') }}</span>
-</div>
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as functions -%}
+
+{%- minify -%}
+    <div class="pt-16">
+        <div class="container mx-auto max-w-screen-lg">
+            <div class="md:flex items-center">
+
+                <div class="w-full md:w-auto md:flex-grow md:pl-4">
+                    <div class="flex flex-wrap w-full items-center">
+                        <div class="flex-grow">
+                            <p class="font-mono text-gray-800">
+                                Written by {{ content.author }}
+                                on the
+                                <time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{%- endminify -%}
