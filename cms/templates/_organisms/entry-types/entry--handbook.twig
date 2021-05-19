@@ -1,3 +1,5 @@
+{%- set entry = entry ??? craft.entries.section('handbook').one() -%}
+
 {%- do craft.eagerBeaver.eagerLoadElements(entry, [
         'authors',
         'authors.teaserImage',
@@ -8,9 +10,6 @@
 
 {%- import '_macros/atoms' as render -%}
 {%- import '_macros/functions' as functions -%}
-
-{%- set entry = entry.section.handle == 'handbookPage' ? craft.entries.section('handbook').one() : entry -%}
-
 
 
 {%- include '_organisms/heroes/hero--handbook' with {
@@ -34,7 +33,7 @@
 
         {%- include '_organisms/builders/content--builder' with {
             content: entry,
-        } -%}
+        } -%} 
 
         {%- include '_molecules/buttons/buttons--pagination' -%}
 
