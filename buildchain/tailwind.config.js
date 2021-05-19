@@ -436,6 +436,10 @@ module.exports = {
                 '-sr': '-10000px',
             }),
 
+            lineHeight: {
+                'number': '0.75',
+            },
+
             maxWidth: {
                 '1/2': '50%',
                 '1/4': '25%',
@@ -455,7 +459,6 @@ module.exports = {
 
             height: {
                 '90vh': '90vh',
-                '116': '29rem',
             },
 
             transitionTimingFunction: {
@@ -468,8 +471,6 @@ module.exports = {
 
             width: {
                 16: '4rem',
-                68: '17rem',
-                188: '47rem',
                 200: '200%',
                 300: '300%',
                 400: '400%',
@@ -486,10 +487,6 @@ module.exports = {
 
             fontSize: {
                 '150xl': '37.5rem',
-            },
-
-            margin: {
-                '144': '36rem',
             },
         },
     },

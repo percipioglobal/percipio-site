@@ -14,12 +14,11 @@
 
 {% block text %}
 
-    {%- set values = values|merge({
-        words: options.words ??? 60,
-    }) -%}
-
     {%- minify -%}
-        {{- values.content | typogrify(true) | wordLimit(values.words) | raw -}}
+        <div class="absolute bottom-0 -right-6 font-extrabold text-white opacity-50 text-150xl leading-number">
+            {{- values.content | raw -}}
+        </div>
     {%- endminify -%}
     
 {% endblock %}
+
