@@ -1,16 +1,8 @@
 {%- minify -%}
 
-{%- set handbookPage = craft.entries.section('handbookPage').all() -%}
-
 <nav class="pt-16 w-full">
 
    <ol class="list-hierarchical font-primary text-sm">
-
-      {%- for entry in handbookPage -%}
-
-         <li class="{{- craft.app.request.getSegment(1) == '' ? 'text-blue-600' : 'text-black-100' }} font-bold">{{- entry.getLink() -}}</li>
-      
-      {%- endfor -%}
 
       {%- for entry in craft.entries.section('handbook').level(1).all() -%}
 
