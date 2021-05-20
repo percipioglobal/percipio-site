@@ -486,7 +486,7 @@ module.exports = {
             },
 
             fontSize: {
-                '150xl': '37.5rem',
+                'number': '37.5rem',
             },
         },
     },
