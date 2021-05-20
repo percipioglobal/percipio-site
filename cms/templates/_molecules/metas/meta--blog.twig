@@ -11,7 +11,7 @@
                     {{- render.atom('avatar', 'group', {
                         authors: content.authors,
                         colour: swatch,
-                        utilities: content.authors|length == 1 ? 'flex' : '',
+                        utilities: entry.authors|length == 1 ? 'flex' : '',
                     }) -}}
 
                 </div>
@@ -20,7 +20,8 @@
                     <div class="flex flex-wrap w-full items-center">
                         <div class="flex-grow">
                             <p class="font-mono text-gray-800">
-                                Written by
+                                <span class="text-{{- swatch.primary }}">{{ content.blogCategories[0].title }}</span>
+                                by
                                 {{- functions.authors(content.authors, { swatch: swatch }) -}}<br/>
                                 on the
                                 <time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
@@ -28,7 +29,7 @@
                         </div>
 
                         <div class="flex-shrink-0 pt-4 md:pt-0">
-                            {%- include '_molecules/buttons/button--print' with {
+                            {%- include '_molecules/buttons/buttons--social' with {
                                 content: entry,
                             }-%}
                         </div>

@@ -1,0 +1,24 @@
+{% import '_macros/atoms' as render %}
+
+{%- minify -%}
+
+    {%- set utilities = utilities ??? '' -%}
+
+    <div class="flex flex-no-wrap print:hidden {{ utilities -}}">
+
+        <a 
+            href="javascript:window.print();" 
+            rel="noreferrer" 
+            class="group"
+        >
+            {{- render.atom('icon', 'fa', {
+                icon:  'fas fa-print',
+                size: 'lg',
+                variant: 'circle',
+                colour: 'text-' ~ swatch.primary,
+            }) -}}
+        </a>
+
+    </div>
+
+{%- endminify -%}
