@@ -436,6 +436,10 @@ module.exports = {
                 '-sr': '-10000px',
             }),
 
+            lineHeight: {
+                'number': '0.75',
+            },
+
             maxWidth: {
                 '1/2': '50%',
                 '1/4': '25%',
@@ -479,6 +483,10 @@ module.exports = {
                 '-20': '-20',
                 '1': '1',
                 '2': '2',
+            },
+
+            fontSize: {
+                'number': '37.5rem',
             },
         },
     },

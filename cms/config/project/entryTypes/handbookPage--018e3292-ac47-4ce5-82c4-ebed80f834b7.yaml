@@ -1,5 +1,5 @@
 fieldLayouts:
-  0a2c79d3-cddc-4216-8ae3-9ec0a7c99c68:
+  a40cd5a6-50e3-422b-872b-d15dabac37b4:
     tabs:
       -
         elements:
@@ -26,21 +26,12 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
-          -
-            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Content
         sortOrder: 1
 handle: handbookPage
 hasTitleField: false
 name: 'Handbook Homepage'
-section: 897d00cc-4646-4118-ad1f-2000943fdde5 # Handbook Homepage
+section: d2188822-da55-4ce1-b1ab-29523673aa84 # Handbook Homepage
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

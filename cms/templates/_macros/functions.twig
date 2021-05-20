@@ -80,3 +80,29 @@
 		
 	{%- endspaceless -%}
 {%- endmacro -%}
+
+{# Getting entry position in structure section #}
+{%- macro getEntryPosition(entry, level) -%}
+
+    {%- spaceless -%}
+        {%- if entry.section.type == 'structure' -%}
+
+            {%- set entries = craft.entries.section('handbook').level(1).ids() -%}
+            {%- set position = null -%}
+
+            {%- for entryId in entries -%}
+
+                {%- if position is null -%}
+
+                    {%- set position = entryId == entry.id ? loop.index + 1 : null -%}
+
+                {%- endif -%}
+
+            {%- endfor -%}
+
+            {{- position -}}
+
+        {%- endif -%} 
+    {%- endspaceless -%}
+
+{%- endmacro -%}

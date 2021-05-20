@@ -1,0 +1,13 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- minify -%}
+    <div class="flex flex-wrap w-full items-center pt-16">
+        <div class="flex-grow">
+            <p class="font-mono text-white-100">
+                Last updated by {{ content.author }}
+                on the
+                <time datetime="{{ content.dateUpdated|date('c')}}">{{ content.dateUpdated|date('jS F Y')}}</time>
+            </p>
+        </div>
+    </div>
+{%- endminify -%}

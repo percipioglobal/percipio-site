@@ -1,6 +1,6 @@
 baseUrl: /staff/
 enabled: true
-handle: staffHandbookSite
+handle: handbook
 hasUrls: true
 language: en-US
 name: 'Staff Handbook'
