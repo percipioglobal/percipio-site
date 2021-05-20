@@ -1,37 +1,55 @@
 {%- minify -%}
-<ul>
-   {%- for entry in craft.entries.section('handbook').level(1).all() -%}
 
-      {%- set currentPageId = entry.id -%}
-      {%- set allPageIds = craft.entries.section('handbook').level(1).ids() -%}
-      {%- set pageNumber = null -%}
+<nav class="pt-16 w-full">
 
-      {%- for key, entryId in allPageIds if entryId == currentPageId -%}
+   <ol class="list-hierarchical font-primary text-sm">
 
-         {%- set pageNumber = key + 1 -%}
+      {%- for entry in craft.entries.section('handbook').level(1).all() -%}
 
-      {%- endfor -%}
-   
-      <ol start="{{- pageNumber -}}">
-         
-         <li>
+         <li class="{{- craft.app.request.getSegment(1) == entry.slug ? 'text-blue-600' : 'text-black-100' }} font-bold space-y-2.5">
 
-            {{- entry.getLink() -}}
+            <span>{{- entry.getLink()  -}}</span>
       
             {%- if entry.hasDescendants == true -%}
-               <ol>
-                  {%- for child in craft.entries.section('handbook').descendantOf(entry.id).all() -%}
+
+               <ol class="list-hierarchical font-semibold space-y-2.5 pl-2">
+
+                  {%- for child in craft.entries.section('handbook').descendantOf(entry.id).level(2).all() -%}
                      
-                     <li>{{- child.getLink() -}}</li>
-                  
+                     <li class="{{- craft.app.request.segments|last == child.slug ? 'text-blue-600' : 'text-black-100' }}">
+                     
+                        <span>{{- child.getLink()  -}}</span>
+                        
+                     </li>
+
+                     {%- if child.hasDescendants == true -%}
+
+                        <ol class="list-hierarchical font-semibold space-y-2.5">
+
+                           {%- for grandChild in craft.entries.section('handbook').descendantOf(child.id).level(3).all() -%}
+                              
+                              <li class="{{- craft.app.request.segments|last == grandChild.slug ? 'text-blue-600' : 'text-black-100' }}">
+                                 <span>{{- grandChild.getLink()  -}}</span>         
+                              </li>
+                           
+                           {%- endfor -%}
+
+                        </ol>
+
+                     {%- endif -%}
+
                   {%- endfor -%}
+
                </ol>
+
             {%- endif -%}
 
          </li>
+            
+      {%- endfor -%}
 
-      </ol>
-         
-   {%- endfor -%}
-</ul>
-{% endminify %}
+   </ol>
+
+</nav>
+
+{%- endminify -%}

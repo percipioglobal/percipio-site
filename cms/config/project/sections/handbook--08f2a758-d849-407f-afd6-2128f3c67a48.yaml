@@ -19,7 +19,7 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _organisms/_page.twig
-    uriFormat: '{slug}'
+    uriFormat: '{parent.uri ?? parent.uri}/{slug}'
 structure:
   maxLevels: 3
   uid: 801e705e-4cde-47f2-bfa4-a0a6e93d1046

@@ -1,0 +1,35 @@
+{%- extends "_boilerplate/_layouts/generic-page-layout.twig" -%}
+{% import '_macros/atoms' as render %}
+
+{%- block content -%}
+
+<div class="my-60 mx-auto p-12 w-full max-w-md bg-blue-600 text-white-100">
+    <form method="post" accept-charset="UTF-8">
+    {{- csrfInput() -}}
+    {{- actionInput('users/send-password-reset-email') -}}
+    {{- redirectInput('') -}}
+
+    {{- render.atom('input', 'text', {
+            placeholder: 'Enter your email',
+            id: 'login',
+            name: 'loginName',
+            label: 'Enter your email',
+            required: 'true',
+        }) -}}
+
+    {%- if errors ?? false -%}
+
+        {{- ul(errors, {class: 'errors'}) -}}
+
+    {%- endif -%}
+
+    <button type="submit" class="mt-6">
+            {{- render.atom('button', 'primary', {
+                text: 'Submit',
+            }) -}}
+    </button>
+    
+    </form>
+</div>
+
+{%- endblock -%}

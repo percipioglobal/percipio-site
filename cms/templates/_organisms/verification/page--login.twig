@@ -1,0 +1,55 @@
+{%- extends "_boilerplate/_layouts/generic-page-layout.twig" -%}
+{% import '_macros/atoms' as render %}
+
+{%- block content -%}
+
+<div class="w-full my-60 mx-auto max-w-md bg-blue-600 p-12 text-white-100">
+
+    <form method="post" accept-charset="UTF-8" class="space-y-6">
+        {{- csrfInput() -}}
+        {{- actionInput('users/login') -}}
+
+        {{- render.atom('input', 'text', {
+            placeholder: 'Enter your email',
+            id: 'login',
+            name: 'loginName',
+            label: 'Enter your email',
+            required: 'true',
+        }) -}}
+
+        {{- render.atom('input', 'password', {
+            placeholder: 'Password',
+            id: 'password',
+            name: 'password',
+            label: 'Enter your password',
+            required: 'true',
+        }) -}}
+
+        {{- render.atom('input', 'checkbox', {
+            name: 'rememberMe',
+            label: 'Remember me',
+        }) -}}
+        
+        {{- render.atom('button', 'primary', {
+            text: 'Login',
+            type: 'submit',
+            size: 'small',
+        }) -}}
+
+        {%- if errorMessage is defined -%}
+            <div>
+                <p class="font-bold">{{- errorMessage -}}</p>
+            </div>
+            
+        {%- endif -%}
+        
+        <div>
+            <a href="{{- url('reset-password') -}}" class="underline">Forgot your password?</a>
+        </div>
+    </form>
+
+    
+
+</div>
+
+{%- endblock -%}

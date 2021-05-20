@@ -15,6 +15,8 @@ import {
 
 import {
     faCircle as fasCircle,
+    faChevronRight as fasChevronRight,
+    faChevronLeft as fasChevronLeft,
     faCloudDownloadAlt as fasCloudDownloadAlt,
     faDownload as fasDownload,
     faExternalLinkAlt as fasExternalLinkAlt,
@@ -51,6 +53,8 @@ library.add(
     farFilePowerPoint,
     farFileWord,
     fasCircle,
+    fasChevronRight,
+    fasChevronLeft,
     fasCloudDownloadAlt,
     fasDownload,
     fasExternalLinkAlt,

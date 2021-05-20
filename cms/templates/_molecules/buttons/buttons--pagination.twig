@@ -1,0 +1,41 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- set params = {
+        section: 'handbook'
+    } 
+-%}
+
+{%- set prev = entry.getPrev(params) -%}
+{%- set next = entry.getNext(params) -%}
+
+<div class="text-blue-600 font-semibold text-sm">
+    {%- if prev -%}
+
+        <span class="space-x-2">
+
+            {{- render.atom('icon', 'fa', {
+                    icon:  'fas fa-chevron-left',
+                    size: 'sm',
+                    colour: 'text-blue-600',
+            }) -}}
+
+            <a href="{{- prev.url -}}">{{- prev.title -}}</a>
+
+        </span>
+
+    {%- endif -%}
+
+    {%- if next -%}
+        <span class="float-right space-x-2">
+            <a href="{{- next.url -}}">{{- next.title -}}</a>
+
+            {{- render.atom('icon', 'fa', {
+                    icon:  'fas fa-chevron-right',
+                    size: 'sm',
+                    colour: 'text-blue-600',
+            }) -}}
+
+        </span>
+
+    {%- endif -%}
+</div>
