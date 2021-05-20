@@ -3,7 +3,7 @@
 
 {%- block content -%}
 
-<div class="mt-60 mb-60 p-12 w-full max-w-md m-auto bg-blue-600 p-5 text-white-100">
+<div class="my-60 mx-auto p-12 w-full max-w-md bg-blue-600 text-white-100">
     <form method="post" accept-charset="UTF-8">
     {{- csrfInput() -}}
     {{- actionInput('users/send-password-reset-email') -}}
@@ -23,7 +23,7 @@
 
     {%- endif -%}
 
-    <button type="submit" class="mb-6">
+    <button type="submit" class="mt-6">
             {{- render.atom('button', 'primary', {
                 text: 'Submit',
             }) -}}

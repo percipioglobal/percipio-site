@@ -1,44 +1,55 @@
 {%- minify -%}
 
-{%- set handbookPage = craft.entries.section('handbookPage').all() -%}
+<nav class="pt-16 w-full">
 
-<ol class="list-hierarchical">
+   <ol class="list-hierarchical font-primary text-sm">
 
-   {%- for entry in handbookPage -%}
+      {%- for entry in craft.entries.section('handbook').level(1).all() -%}
 
-      <li>{{- entry.getLink() -}}</li>
+         <li class="{{- craft.app.request.getSegment(1) == entry.slug ? 'text-blue-600' : 'text-black-100' }} font-bold space-y-2.5">
+
+            <span>{{- entry.getLink()  -}}</span>
       
-   {%- endfor -%}
+            {%- if entry.hasDescendants == true -%}
 
-   {%- for entry in craft.entries.section('handbook').level(1).all() -%}
-         
-      <li>
+               <ol class="list-hierarchical font-semibold space-y-2.5 pl-2">
 
-         {{- entry.getLink()  -}}
-   
-         {%- if entry.hasDescendants == true -%}
-            <ol class="list-hierarchical">
-               {%- for child in craft.entries.section('handbook').descendantOf(entry.id).level(2).all() -%}
-                  
-                  <li>{{- child.getLink()  -}}</li>
-
-                  {%- if child.hasDescendants == true -%}
-
-                     <ol class="list-hierarchical">
-                        {%- for grandChild in craft.entries.section('handbook').descendantOf(child.id).level(3).all() -%}
-                           
-                           <li>{{- grandChild.getLink()  -}}</li>
+                  {%- for child in craft.entries.section('handbook').descendantOf(entry.id).level(2).all() -%}
+                     
+                     <li class="{{- craft.app.request.segments|last == child.slug ? 'text-blue-600' : 'text-black-100' }}">
+                     
+                        <span>{{- child.getLink()  -}}</span>
                         
-                        {%- endfor -%}
-                     </ol>
-                  {%- endif -%}
+                     </li>
 
-               {%- endfor -%}
-            </ol>
-         {%- endif -%}
+                     {%- if child.hasDescendants == true -%}
 
-      </li>
-         
-   {%- endfor -%}
-</ol>
-{% endminify %}
+                        <ol class="list-hierarchical font-semibold space-y-2.5">
+
+                           {%- for grandChild in craft.entries.section('handbook').descendantOf(child.id).level(3).all() -%}
+                              
+                              <li class="{{- craft.app.request.segments|last == grandChild.slug ? 'text-blue-600' : 'text-black-100' }}">
+                                 <span>{{- grandChild.getLink()  -}}</span>         
+                              </li>
+                           
+                           {%- endfor -%}
+
+                        </ol>
+
+                     {%- endif -%}
+
+                  {%- endfor -%}
+
+               </ol>
+
+            {%- endif -%}
+
+         </li>
+            
+      {%- endfor -%}
+
+   </ol>
+
+</nav>
+
+{%- endminify -%}

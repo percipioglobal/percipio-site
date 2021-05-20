@@ -1,14 +1,42 @@
+{%- set entry = entry ??? craft.entries.section('handbook').one() -%}
+
+{%- do craft.eagerBeaver.eagerLoadElements(entry, [
+        'authors',
+        'authors.teaserImage',
+    ])
+-%}
+
 {% requireLogin %}
 
-{%- include '_organisms/sections/header--handbook' -%}
-{%- include '_organisms/navigations/navigation--handbook' -%}
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as functions -%}
 
-<div>
-    {%- include '_molecules/metas/meta--handbook' -%}
 
-	{%- include '_organisms/builders/content--builder' with {
-        content: entry,
-    } -%}
+{%- include '_organisms/heroes/hero--handbook' with {
+    content: entry,
+} -%}
 
-    {%- include '_molecules/buttons/buttons--pagination' -%}
+<div class="container mx-auto max-w-screen-lg flex flex-nowrap lg:flex mt-20 mb-24">
+
+    <div class="w-1/3  hidden lg:block">
+
+        {%- include '_organisms/navigations/navigation--handbook' -%}
+
+    </div>
+
+
+    <div class="w-auto lg:w-2/3">
+
+        {%- include '_molecules/metas/meta--handbook' ignore missing with { 
+            content: entry,
+        } -%}
+
+        {%- include '_organisms/builders/content--builder' with {
+            content: entry,
+        } -%} 
+
+        {%- include '_molecules/buttons/buttons--pagination' -%}
+
+    </div>
+
 </div>
