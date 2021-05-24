@@ -5,7 +5,7 @@
 
 {%- minify -%}
 
-    <section class="relative pt-64 pb-20 w-full flex items-center overflow-hidden bg-blue-600 text-white-100">
+    <section class="relative pt-44 pb-20 w-full flex items-center overflow-hidden bg-blue-600 text-white-100">
         <div class="relative container max-w-screen-lg mx-auto">
 
             <h1 class="sr-only">
@@ -20,14 +20,6 @@
             <div class="print:hidden">
                 {%- include '_molecules/breadcrumbs/breadcrumb--handbook'  -%}
             </div>
-
-            {%- if content.dateUpdated > content.postDate -%}
-
-                {%- include '_molecules/metas/meta--updated' ignore missing with { 
-                    content: entry,
-                } -%}
-
-            {%- endif -%}
 
             {% if content.description|length %}
                 <div class="max-w-2xl prose prose-lg mt-4 md:mt-12 text-white-100">
