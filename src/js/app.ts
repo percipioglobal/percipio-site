@@ -69,3 +69,24 @@ site().then( (value) => {
 if (module.hot) {
     module.hot.accept();
 }
+
+// Numeric handbook header logic
+const activeItem = document.querySelector('.handbook-active');
+const entryTitle =  document.querySelector('.header-section-title');
+
+if  (activeItem !== null) {
+    const activeItemAttr = activeItem.getAttribute('data-active-index');
+    
+    const span = document.createElement('span');
+    span.textContent = activeItemAttr;
+
+    entryTitle.prepend(span);    
+
+    const heading = document.querySelector('.handbook-content').getElementsByTagName('h3');
+
+    const arr = [].slice.call(heading);
+
+    arr.forEach( (element) => {
+        element.innerHTML = activeItemAttr + '.' + element.getAttribute('data-sub-index') + ' ' + element.getAttribute('data-title');
+    });
+}

@@ -22,6 +22,7 @@
 {%- minify -%}
 
 {%- set prevBlock = "" -%}
+{%- set subIndex = 0 -%}
 
     <div class="md:mb-16 flex flex-wrap">
 
@@ -77,7 +78,10 @@
                     {%- include '_molecules/headers/header--section' ignore missing with {
                         content: block,
                         utilities: loop.last ? 'mb-16' : '',
+                        subIndex: subIndex,
                     } -%}
+
+                    {%- set subIndex = subIndex + 1 -%}
 
                 {%- case "basicSlider" -%}
 
