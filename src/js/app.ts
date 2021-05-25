@@ -77,7 +77,6 @@ const site = async () => {
                 arr.forEach( (element) => {
                     element.innerHTML = activeItemAttr + '.' + element.getAttribute('data-sub-index') + ' ' + element.getAttribute('data-title');
                 });
-                
             }
         }
 
