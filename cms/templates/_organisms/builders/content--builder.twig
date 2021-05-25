@@ -110,7 +110,7 @@
 
                     {%- include '_molecules/content/content--standfirst' ignore missing with {
                         content: block,
-                        prose: 'md:prose-3xl',
+                        prose: currentSite.handle == 'handbook' ? 'md:prose-2xl' : 'md:prose-3xl',
                     } -%}
 
                 {%- case "galleryImages" -%}
