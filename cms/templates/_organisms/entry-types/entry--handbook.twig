@@ -25,22 +25,23 @@
     </div>
 
 
-    <div class="w-auto lg:w-2/3 handbook-content">
+    <div class="w-auto lg:w-2/3">
 
         {%- include '_molecules/metas/meta--handbook' ignore missing with { 
             content: entry,
         } -%}
 
-        <div class="flex space-x-2 header-section-title md:text-5xl mb-4 md:mb-8 text-3xl font-primary font-bold">
-            <h2>
-                {{- entry.title -}}
-            </h2>
-        </div>
-       
+        <div class="flex space-x-2 container mx-auto max-w-screen-lg mt-10 md:mt-20 font-extrabold leading-none text-4xl md:text-6xl max-w-2xl mt-4 font-primar header-section-title">
+            <hspan>
+                {{- render.atom('text', 'title', { content: entry.title }) -}}
+            </span>
+        </div>       
 
-        {%- include '_organisms/builders/content--builder' with {
-            content: entry,
-        } -%} 
+        <div class="handbook">
+            {%- include '_organisms/builders/content--builder' with {
+                content: entry,
+            } -%}
+        </div>
 
         {%- include '_molecules/buttons/buttons--pagination' -%}
 

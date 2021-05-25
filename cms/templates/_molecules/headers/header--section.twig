@@ -19,9 +19,9 @@
                     })
                 -}}
 
-                <h3 data-sub-index="{{ subIndex }}" data-title="{{- render.atom('text', 'title', { content: content.heading }) -}}" class="md:text-5xl mb-4 md:mb-8 text-3xl font-primary font-bold content-heading">
+                <h2 data-sub-index="{{ subIndex }}" data-title="{{- render.atom('text', 'title', { content: content.heading }) -}}" class="md:text-5xl mb-4 md:mb-8 text-3xl font-primary font-bold content-heading">
                     {{- render.atom('text', 'title', { content: content.heading }) -}}
-                </h3>
+                </h2>
 
                 {% if content.button and content.button.getUrl() %}
 
