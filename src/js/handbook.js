@@ -1,4 +1,4 @@
-export const createHandbookLevels = async() => {
+export const createHandbookLevels = () => {
     
     // Numeric handbook header logic
     const activeItem = document.querySelector('.handbook-active');
