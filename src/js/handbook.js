@@ -57,7 +57,7 @@ const contentTitleLevelCreation = (activeItemAttr) => {
             // activeItemAttr: prepend entry title level
             // Filter: filter out indexes equal to 0, and convert array to string joint by dot,
             // Title: add element title after the levels
-            element.innerHTML = activeItemAttr + '.' + arrIndexes.filter(index => index > 0).join('.') + ' ' + element.innerHTML;
+            element.innerHTML = `${activeItemAttr}.${arrIndexes.filter(index => index > 0).join('.')} ${element.innerHTML}`;
         }
 
     });
