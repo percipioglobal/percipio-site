@@ -20,7 +20,7 @@
                      
                      {%- set childIndex = loop.index -%}
 
-                     <li data-active-index="{{ craft.app.request.segments|last == child.slug ? parentIndex ~ '.' ~ childIndex : '' }}" class="{{- craft.app.request.segments|last == child.slug ? 'text-blue-600 active' : 'text-black-100' }}">
+                     <li data-active-index="{{ craft.app.request.segments|last == child.slug ? parentIndex ~ '.' ~ childIndex : '' }}" class="{{- craft.app.request.segments|last == child.slug ? 'text-blue-600 handbook-active' : 'text-black-100' }}">
                      
                         <span>{{- child.getLink()  -}}</span>
                         
