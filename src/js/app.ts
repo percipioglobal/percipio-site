@@ -57,8 +57,11 @@ const site = async () => {
             window.addEventListener('load', () => {
                 Prism.highlightAll();
             })
+
+            const activeItem = document.querySelector('.handbook-active');
+            const activeItemAttr = activeItem.getAttribute('data-active-index'); // Calculated number of level in navigation--handbook.twig
             
-            createHandbookLevels();
+            createHandbookLevels(activeItem, activeItemAttr);
         }
 
     })
