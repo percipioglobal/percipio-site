@@ -46,7 +46,6 @@ module.exports = {
                 /grid-article-sm$/,
                 /grid-article-large$/,
                 /grid-article-large-sm$/,
-                /space-y-2$/,
                 /pl-2$/,
             ],
         }
