@@ -5,30 +5,24 @@
 
 {%- minify -%}
 
-    <section class="relative pt-64 pb-20 w-full flex items-center overflow-hidden bg-blue-600 text-white-100">
-        <div class="relative container max-w-screen-lg mx-auto">
+    <section class="relative flex items-center w-full pb-20 overflow-hidden bg-blue-600 pt-44 text-white-100">
+        <div class="container relative max-w-screen-lg mx-auto">
 
             <h1 class="sr-only">
                 {{- seomatic.site.identity.genericName -}}:
-                {{- render.atom('text', 'title', { content: content.level > 1 ? parent.title : content.title }) -}}
+                {{- render.atom('text', 'title', { content: entry.title }) -}}
             </h1>
 
-            <h2 class="text-6xl font-bold">
+            <span class="text-6xl font-bold">
                 {{- render.atom('text', 'title', { content: content.level > 1 ? parent.title : content.title }) -}}
-            </h2>
+            </span>
     
-            {%- include '_molecules/breadcrumbs/breadcrumb--handbook'  -%}
-
-            {%- if content.dateUpdated > content.postDate -%}
-
-                {%- include '_molecules/metas/meta--updated' ignore missing with { 
-                    content: entry,
-                } -%}
-
-            {%- endif -%}
+            <div class="print:hidden">
+                {%- include '_molecules/breadcrumbs/breadcrumb--handbook'  -%}
+            </div>
 
             {% if content.description|length %}
-                <div class="max-w-2xl prose prose-lg mt-4 md:mt-12 text-gray-800">
+                <div class="max-w-2xl mt-4 prose prose-lg md:mt-12 text-white-100 print:text-black-100">
                     {{- render.atom('text', 'content', { content: content.description }) -}}
                 </div>
             {% endif %}
