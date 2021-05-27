@@ -16,9 +16,9 @@
     content: entry,
 } -%}
 
-<div class="container mx-auto max-w-screen-lg flex flex-nowrap lg:flex mt-20 mb-24">
+<div class="container flex max-w-screen-lg mx-auto mb-24 flex-nowrap lg:flex lg:mt-20">
 
-    <div class="w-1/3  hidden lg:block">
+    <div class="hidden w-96 lg:block">
 
         {%- include '_organisms/navigations/navigation--handbook' -%}
 
@@ -31,9 +31,20 @@
             content: entry,
         } -%}
 
-        {%- include '_organisms/builders/content--builder' with {
-            content: entry,
-        } -%} 
+        <div class="container flex max-w-2xl mx-auto mt-10 space-x-2 text-4xl font-extrabold leading-none md:mt-20 md:text-6xl font-primary">
+            <span class="header-section-title">
+                <span>
+                    {{- render.atom('text', 'title', { content: entry.title }) -}}
+                </span>
+            </span>
+            
+        </div>       
+
+        <div class="handbook">
+            {%- include '_organisms/builders/content--builder' with {
+                content: entry,
+            } -%}
+        </div>
 
         {%- include '_molecules/buttons/buttons--pagination' -%}
 

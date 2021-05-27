@@ -18,14 +18,15 @@
 
                 <div class="w-full md:w-auto md:flex-grow md:pl-4">
                     <div class="flex flex-wrap w-full items-center">
-                        <div class="flex-grow">
-                            <p class="font-mono text-gray-800">
-                                Written by
-                                {{- functions.authors(content.authors, { swatch: swatch }) -}}<br/>
-                                on the
-                                <time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
-                            </p>
-                        </div>
+                    
+                        {%- if content.dateUpdated > content.postDate -%}
+
+                            {%- include '_molecules/metas/meta--updated' ignore missing with { 
+                                content: entry,
+                            } -%}
+
+                        {%- endif -%}
+                        
 
                         <div class="flex-shrink-0 pt-4 md:pt-0">
                             {%- include '_molecules/buttons/button--print' with {

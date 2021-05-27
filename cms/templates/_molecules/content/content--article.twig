@@ -3,7 +3,7 @@
 {%- minify -%}
         <div class="w-full {{ loop.first ? 'pt-10 pb-10 md:pt-16 md:pb-16' : 'my-16' }}">
 
-            <div class="container mx-auto max-w-screen-lg">
+            <div class="container max-w-screen-lg mx-auto">
                 <div class="prose {{ prose ? prose : '' }} {{ content.prose -}}">
                     {{- render.atom('text', 'content', { content: content.article }) -}}
                 </div>
