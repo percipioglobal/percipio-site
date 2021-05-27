@@ -1,22 +1,40 @@
-export const createLevels = (activeItemElem, activeItemElemAttr) => {
+
+/* ### OPTIONS ###
+---------------
+
+    activeItemElem: The active element, e.g: the active navigation item.
+
+    activeItemElemAttr: The active element attribute value, e.g: attribue "data-active-index".
+
+    utilities: The TW utilities that will be added to the element, if it's been passed to the function (so not null).
+
+ */
+
+export const createLevels = (activeItemElem, activeItemElemAttr, utilities = null) => {
     // Numeric handbook header logic
     const activeItem = document.querySelector(activeItemElem);
     const activeItemAttr = activeItem.getAttribute(activeItemElemAttr); // Calculated number of level in navigation--handbook.twig
 
     if  (activeItem) {
 
-        entryTitleLevelCreation(activeItemAttr);
+        entryTitleLevelCreation(activeItemAttr, utilities);
         contentTitleLevelCreation(activeItemAttr);
 
     }
 }
 
-export const entryTitleLevelCreation = (activeItemAttr) => {
+export const entryTitleLevelCreation = (activeItemAttr, utilities) => {
 
     const entryTitle =  document.querySelector('.header-section-title');
 
     // Create span element for calculated level number
     const span = document.createElement('span');
+
+    // Add TW utitilties, if they've been passed to the function.
+    if (utilities) {
+        span.classList.add(utilities);
+    }
+
     // Change span element value to activeItemAttr value
     span.textContent = activeItemAttr;
 
