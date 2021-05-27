@@ -31,10 +31,13 @@
             content: entry,
         } -%}
 
-        <div class="container flex max-w-2xl mx-auto mt-10 space-x-2 text-4xl font-extrabold leading-none md:mt-20 md:text-6xl font-primar header-section-title">
-            <hspan>
-                {{- render.atom('text', 'title', { content: entry.title }) -}}
+        <div class="container flex max-w-2xl mx-auto mt-10 space-x-2 text-4xl font-extrabold leading-none md:mt-20 md:text-6xl font-primary">
+            <span class="header-section-title">
+                <span>
+                    {{- render.atom('text', 'title', { content: entry.title }) -}}
+                </span>
             </span>
+            
         </div>       
 
         <div class="handbook">
