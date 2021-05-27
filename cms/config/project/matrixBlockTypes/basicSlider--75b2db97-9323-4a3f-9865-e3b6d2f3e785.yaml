@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: cc4d5589-5884-4fb2-ba84-ffb388a8806e
+            fieldUid: cc4d5589-5884-4fb2-ba84-ffb388a8806e # Slides
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  cc4d5589-5884-4fb2-ba84-ffb388a8806e:
+  cc4d5589-5884-4fb2-ba84-ffb388a8806e: # Slides
     contentColumnType: string
     fieldGroup: null
     handle: slides

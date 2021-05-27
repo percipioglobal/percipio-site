@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 6325f925-feea-4e28-b6ec-7630d3e70cc8
+            fieldUid: 6325f925-feea-4e28-b6ec-7630d3e70cc8 # Embed
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 40e441b8-aeac-4f02-878a-60457e5699a8
+            fieldUid: 40e441b8-aeac-4f02-878a-60457e5699a8 # Position
             instructions: null
             label: null
             required: true
@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  40e441b8-aeac-4f02-878a-60457e5699a8:
+  40e441b8-aeac-4f02-878a-60457e5699a8: # Position
     contentColumnType: string
     fieldGroup: null
     handle: position
@@ -57,7 +57,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: rias\positionfieldtype\fields\Position
-  6325f925-feea-4e28-b6ec-7630d3e70cc8:
+  6325f925-feea-4e28-b6ec-7630d3e70cc8: # Embed
     contentColumnType: string
     fieldGroup: null
     handle: embed
