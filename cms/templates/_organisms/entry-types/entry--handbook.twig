@@ -16,7 +16,7 @@
     content: entry,
 } -%}
 
-<div class="container flex max-w-screen-lg mx-auto mb-24 flex-nowrap lg:flex lg:mt-20">
+<div class="container flex mx-auto max-w-screen-2xl mb-24 flex-nowrap lg:flex lg:mt-20">
 
     <div class="hidden w-96 lg:block">
 
@@ -31,7 +31,7 @@
             content: entry,
         } -%}
 
-        <div class="container flex max-w-2xl mx-auto mt-10 space-x-2 text-4xl font-extrabold leading-none md:mt-20 md:text-6xl font-primary">
+        <div class="container flex max-w-2xl mt-10 space-x-2 text-4xl font-extrabold leading-none md:mt-20 md:text-6xl font-primary">
             <span class="header-section-title">
                 <span>
                     {{- render.atom('text', 'title', { content: entry.title }) -}}
