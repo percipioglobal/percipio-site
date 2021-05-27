@@ -1,5 +1,5 @@
 import { createStore } from './stores/store.js';
-import { createHandbookLevels } from './handbook';
+import { createLevels } from './handbook';
 
 // App main
 const site = async () => {
@@ -57,11 +57,8 @@ const site = async () => {
             window.addEventListener('load', () => {
                 Prism.highlightAll();
             })
-
-            const activeItem = document.querySelector('.handbook-active');
-            const activeItemAttr = activeItem.getAttribute('data-active-index'); // Calculated number of level in navigation--handbook.twig
             
-            createHandbookLevels(activeItem, activeItemAttr);
+            createLevels('.handbook-active', 'data-active-index');
         }
 
     })

@@ -1,5 +1,7 @@
-export const createHandbookLevels = (activeItem, activeItemAttr) => {
+export const createLevels = (activeItemElem, activeItemElemAttr) => {
     // Numeric handbook header logic
+    const activeItem = document.querySelector(activeItemElem);
+    const activeItemAttr = activeItem.getAttribute(activeItemElemAttr); // Calculated number of level in navigation--handbook.twig
 
     if  (activeItem) {
 
