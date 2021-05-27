@@ -462,6 +462,7 @@ module.exports = {
 
             height: {
                 '90vh': '90vh',
+                '128': '32rem',
             },
 
             transitionTimingFunction: {
