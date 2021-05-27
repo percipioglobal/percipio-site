@@ -30,7 +30,7 @@ module.exports = {
                 /blue-800$/,
                 /purple-600$/,
                 /purple-800$/,
-                /white-100$/,
+                /black-100$/,
                 /col-span-1$/,
                 /col-span-2$/,
                 /col-span-3$/,
