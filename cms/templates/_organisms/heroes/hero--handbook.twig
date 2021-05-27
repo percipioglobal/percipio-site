@@ -31,7 +31,9 @@
 
         {%- set count = craft.entries({ orderBy: 'lft desc', positionedBefore: entry }).level(1).count() -%}
 
-        {{- render.atom('text', 'number', { content: entry.level == 1 ? count + 1 : count }) -}}
+        {%- if entry.section.type == 'structure' -%}
+            {{- render.atom('text', 'number', { content: entry.level == 1 ? count + 1 : count }) -}}
+        {%- endif -%}
 
     </section>
 
