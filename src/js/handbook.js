@@ -44,7 +44,7 @@ export const entryTitleLevelCreation = (activeItemAttr, utilities) => {
 }
 
 const contentTitleLevelCreation = (activeItemAttr) => {
-    const handbookElement = document.querySelector('.handbook').getElementsByTagName("*"); // Select all children elements of handbook
+    const handbookElement = document.querySelector('.handbook').getElementsByTagName('*'); // Select all children elements of handbook
     const arrIndexes = [0, 0, 0, 0, 0]; // Create array for level indexes below activeItemAttr
     const lutHeadings = ['H2', 'H3', 'H4', 'H5', 'H6']; // Create lookup table for entry headings, instead of if statement
     let prevIndex = null; // Create starting value for previous heading
