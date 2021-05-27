@@ -30,6 +30,7 @@ module.exports = {
                 /blue-800$/,
                 /purple-600$/,
                 /purple-800$/,
+                /white-100$/,
                 /col-span-1$/,
                 /col-span-2$/,
                 /col-span-3$/,
@@ -45,6 +46,7 @@ module.exports = {
                 /grid-article-sm$/,
                 /grid-article-large$/,
                 /grid-article-large-sm$/,
+                /pl-2$/,
             ],
         }
     },
@@ -176,6 +178,7 @@ module.exports = {
 
             screens: {
                 '2xl': '1536px',
+                'print': {'raw': 'print'},
             },
 
             fontFamily: {
