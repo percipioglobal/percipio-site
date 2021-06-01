@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: c499bc8d-734b-4fe4-b74e-dca793aba082
+            fieldUid: c499bc8d-734b-4fe4-b74e-dca793aba082 # Body Content
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: a81ab3c0-c52b-4817-8820-c0e69e9a0d2d
+            fieldUid: a81ab3c0-c52b-4817-8820-c0e69e9a0d2d # Containerise
             instructions: null
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: b9a667dd-8941-472a-89b5-e3d1fe877aec
+            fieldUid: b9a667dd-8941-472a-89b5-e3d1fe877aec # Width
             instructions: null
             label: null
             required: false
@@ -32,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 69564637-9091-434c-aa5c-50eef46f8c93
+            fieldUid: 69564637-9091-434c-aa5c-50eef46f8c93 # Swatch
             instructions: null
             label: null
             required: false
@@ -41,7 +41,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: b723924c-f0d9-4479-945f-b43f96e8e1e5
+            fieldUid: b723924c-f0d9-4479-945f-b43f96e8e1e5 # Text Size
             instructions: null
             label: null
             required: true
@@ -52,7 +52,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  69564637-9091-434c-aa5c-50eef46f8c93:
+  69564637-9091-434c-aa5c-50eef46f8c93: # Swatch
     contentColumnType: text
     fieldGroup: null
     handle: swatch
@@ -65,7 +65,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: percipioglobal\colourswatches\fields\ColourSwatches
-  a81ab3c0-c52b-4817-8820-c0e69e9a0d2d:
+  a81ab3c0-c52b-4817-8820-c0e69e9a0d2d: # Containerise
     contentColumnType: boolean
     fieldGroup: null
     handle: containerise
@@ -79,7 +79,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  b9a667dd-8941-472a-89b5-e3d1fe877aec:
+  b9a667dd-8941-472a-89b5-e3d1fe877aec: # Width
     contentColumnType: string
     fieldGroup: null
     handle: width
@@ -129,7 +129,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: rias\widthfieldtype\fields\Width
-  b723924c-f0d9-4479-945f-b43f96e8e1e5:
+  b723924c-f0d9-4479-945f-b43f96e8e1e5: # Text Size
     contentColumnType: string
     fieldGroup: null
     handle: prose
@@ -164,7 +164,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  c499bc8d-734b-4fe4-b74e-dca793aba082:
+  c499bc8d-734b-4fe4-b74e-dca793aba082: # Body Content
     contentColumnType: text
     fieldGroup: null
     handle: article

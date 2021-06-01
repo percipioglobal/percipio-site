@@ -174,6 +174,16 @@ module.exports = {
                         },
                     }
                 },
+                'handbook': {
+                    css: {
+                        'ol > li::before': {
+                            content: 'counter(list-counter, ' + theme('listStyleType.alpha') + ') "."',
+                        },
+                        'ol > li > ol > li::before': {
+                            content: 'counter(list-counter, ' + theme('listStyleType.roman') + ') "."',
+                        }
+                    }
+                },
             }),
 
             screens: {
@@ -441,6 +451,11 @@ module.exports = {
 
             lineHeight: {
                 'number': '0.75',
+            },
+
+            listStyleType: {
+                alpha: 'lower-alpha',
+                roman: 'upper-roman',
             },
 
             maxWidth: {

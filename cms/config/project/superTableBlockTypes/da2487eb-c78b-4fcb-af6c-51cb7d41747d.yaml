@@ -1,11 +1,11 @@
-field: 61518518-d14c-4402-a480-c059af3b7087
+field: 61518518-d14c-4402-a480-c059af3b7087 # Buttons
 fieldLayouts:
   ac68f91d-5cce-48cb-bd2e-58bbbd569950:
     tabs:
       -
         elements:
           -
-            fieldUid: ca8bffb4-dfed-4ca4-b421-ffcc8cca47e2
+            fieldUid: ca8bffb4-dfed-4ca4-b421-ffcc8cca47e2 # Target
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  ca8bffb4-dfed-4ca4-b421-ffcc8cca47e2:
+  ca8bffb4-dfed-4ca4-b421-ffcc8cca47e2: # Target
     contentColumnType: string
     fieldGroup: null
     handle: target

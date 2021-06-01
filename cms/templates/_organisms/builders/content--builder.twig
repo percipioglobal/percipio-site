@@ -34,7 +34,7 @@
 
                         {%- include '_molecules/content/content--article' ignore missing with {
                             content: block,
-                            prose: currentSite.handle == 'handbook' ? 'md:prose-lg' : 'md:prose-2xl',
+                            prose: currentSite.handle == 'handbook' ? 'md:prose-lg max-w-none prose-handbook' : 'md:prose-2xl',
                         } -%}
 
                     {%- else -%}
