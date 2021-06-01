@@ -2,20 +2,20 @@
 
 <address class="text-base leading-6 not-italic">
 	<p>
-        {{- render.atom('text', 'title', { content: seomatic.site.identity.genericStreetAddress }) -}}
+        {{- render.atom('text', 'title', { content: seomatic.site.identity.genericStreetAddress ??? branding.organisationAddress }) -}}
 	</p>
 	<p class="mt-1">
-        {{- render.atom('text', 'title', { content: seomatic.site.identity.genericAddressRegion }) -}}
-        {{- render.atom('text', 'title', { content: seomatic.site.identity.genericPostalCode }) -}}
+        {{- render.atom('text', 'title', { content: seomatic.site.identity.genericAddressRegion ??? branding.organisationAddressRegion }) -}}
+        {{- render.atom('text', 'title', { content: seomatic.site.identity.genericPostalCode ??? branding.organisationAddressPostalCode }) -}}
 	</p>
 </address>
 <div class="text-base leading-6 mt-1">
 	<p>
-		Telephone: <a href="tel:02081444048" title="phone" aria-label="Telephone number to call Percipio">{{ seomatic.site.identity.genericTelephone }}</a>
+		Telephone: <a href="tel:{{- seomatic.site.identity.genericTelephone ??? branding.organisationPhone -}}" title="phone" aria-label="Telephone number to call Percipio">{{ seomatic.site.identity.genericTelephone ??? branding.organisationPhone }}</a>
 	</p>
 </div>
 <div class="text-base leading-6 mt-1">
 	<p>
-		Email: <a href="mailto:{{ seomatic.site.identity.genericEmail }}" title="email" aria-label="Send Percipio an email" class="font-bold">{{ seomatic.site.identity.genericEmail }}</a>
+		Email: <a href="mailto:{{ seomatic.site.identity.genericEmail ??? branding.organisationEmail }}" title="email" aria-label="Send Percipio an email" class="font-bold">{{ seomatic.site.identity.genericEmail ??? branding.organisationEmail }}</a>
 	</p>
 </div>
