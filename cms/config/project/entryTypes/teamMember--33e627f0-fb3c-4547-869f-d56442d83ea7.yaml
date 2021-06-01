@@ -120,7 +120,7 @@ fieldLayouts:
 handle: teamMember
 hasTitleField: true
 name: 'Team Member'
-section: e80a7183-56ec-49d8-81a8-405444fc3077
+section: e80a7183-56ec-49d8-81a8-405444fc3077 # The Team
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
