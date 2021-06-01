@@ -31,7 +31,7 @@ fields:
       showSiteMenu: true
       source: null
       sources:
-        - 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e'
+        - 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null
