@@ -8,47 +8,43 @@
 
          {%- set parentIndex = loop.index -%}
 
-         <li data-active-index="{{ craft.app.request.segments|last == entry.slug ?  parentIndex : '' }}" class="{{- craft.app.request.getSegment(1) == entry.slug ? 'text-blue-600' : 'text-black-100' }} font-bold space-y-3 {{ craft.app.request.segments|last == entry.slug ?  'handbook-active' : '' }}">
-
-            <span>{{- entry.getLink()  -}}</span>
-      
-            {%- if entry.hasDescendants == true -%}
-
-               <ol class="ml-4 space-y-4 font-semibold list-hierarchical">
-
-                  {%- for child in craft.entries.section('handbook').descendantOf(entry.id).level(2).all() -%}
-                     
-                     {%- set childIndex = loop.index -%}
-
-                     <li data-active-index="{{ craft.app.request.segments|last == child.slug ? parentIndex ~ '.' ~ childIndex : '' }}" class="{{- craft.app.request.segments|last == child.slug ? 'text-blue-600 handbook-active' : 'text-black-100' }}">
-                     
-                        <span>{{- child.getLink()  -}}</span>
-                        
-                     </li>
-
-                     {%- if child.hasDescendants == true -%}
-
-                        <ol class="ml-4 space-y-4 font-semibold list-hierarchical">
-
-                           {%- for grandChild in craft.entries.section('handbook').descendantOf(child.id).level(3).all() -%}
-
-                              <li data-active-index="{{ craft.app.request.segments|last == grandChild.slug ? parentIndex ~ '.' ~ childIndex ~ '.' ~ loop.index : '' }}" class="{{- craft.app.request.segments|last == grandChild.slug ? 'text-blue-600 handbook-active' : 'text-black-100' }}">
-                                 <span>{{- grandChild.getLink()  -}}</span>         
-                              </li>
-                           
-                           {%- endfor -%}
-
-                        </ol>
-
-                     {%- endif -%}
-
-                  {%- endfor -%}
-
-               </ol>
-
-            {%- endif -%}
-
+         <li data-active-index="{{ craft.app.request.segments|last == entry.slug ?  parentIndex : '' }}" class="flex {{ craft.app.request.getSegment(1) == entry.slug ? 'text-blue-600' : 'text-black-100' }} font-bold space-y-3 {{ craft.app.request.segments|last == entry.slug ?  'handbook-active' : '' }}">
+            {{- entry.getLink()  -}}
          </li>
+
+         {%- if entry.hasDescendants == true -%}
+
+            <ol class="ml-4 space-y-4 font-semibold list-hierarchical font-primary text-sm">
+
+               {%- for child in craft.entries.section('handbook').descendantOf(entry.id).level(2).all() -%}
+                  
+                  {%- set childIndex = loop.index -%}
+
+                  <li data-active-index="{{ craft.app.request.segments|last == child.slug ? parentIndex ~ '.' ~ childIndex : '' }}" class="flex {{ craft.app.request.segments|last == child.slug ? 'text-blue-600 handbook-active' : 'text-black-100' -}}">
+                     {{- child.getLink() -}}
+                  </li>
+
+                  {%- if child.hasDescendants == true -%}
+
+                     <ol class="ml-4 space-y-4 font-semibold list-hierarchical">
+
+                        {%- for grandChild in craft.entries.section('handbook').descendantOf(child.id).level(3).all() -%}
+
+                           <li data-active-index="{{ craft.app.request.segments|last == grandChild.slug ? parentIndex ~ '.' ~ childIndex ~ '.' ~ loop.index : '' }}" class="flex {{ craft.app.request.segments|last == grandChild.slug ? 'text-blue-600 handbook-active' : 'text-black-100' }}">
+                              {{- grandChild.getLink()  -}}   
+                           </li>
+                        
+                        {%- endfor -%}
+
+                     </ol>
+
+                  {%- endif -%}
+
+               {%- endfor -%}
+
+            </ol>
+
+         {%- endif -%}
             
       {%- endfor -%}
 
