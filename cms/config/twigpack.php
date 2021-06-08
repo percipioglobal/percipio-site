@@ -38,7 +38,7 @@ return [
     // Public server config
     'devServer' => [
         'manifestPath' => '@webroot/dist/',
-        'publicPath' => '/',
+        'publicPath' => '@web/',
     ],
     // Bundle to use with the webpack-dev-server
     'devServerBuildType' => 'modern',
