@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: fbaa4c75-7616-42ca-adea-7615c9b91e38
+            fieldUid: fbaa4c75-7616-42ca-adea-7615c9b91e38 # Label
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: ec91bde6-778d-4030-89fe-45614d871e81
+            fieldUid: ec91bde6-778d-4030-89fe-45614d871e81 # Target
             instructions: null
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 25958ba0-5f4a-48fc-9dee-0064db99f702
+            fieldUid: 25958ba0-5f4a-48fc-9dee-0064db99f702 # Utility Icon
             instructions: null
             label: null
             required: true
@@ -32,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: d09756bb-3dd5-4ad8-b6eb-6e3595705141
+            fieldUid: d09756bb-3dd5-4ad8-b6eb-6e3595705141 # Description
             instructions: null
             label: null
             required: false
@@ -43,7 +43,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  25958ba0-5f4a-48fc-9dee-0064db99f702:
+  25958ba0-5f4a-48fc-9dee-0064db99f702: # Utility Icon
     contentColumnType: string
     fieldGroup: null
     handle: utilityIcon
@@ -78,7 +78,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  d09756bb-3dd5-4ad8-b6eb-6e3595705141:
+  d09756bb-3dd5-4ad8-b6eb-6e3595705141: # Description
     contentColumnType: string(720)
     fieldGroup: null
     handle: description
@@ -92,12 +92,12 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  ec91bde6-778d-4030-89fe-45614d871e81:
+  ec91bde6-778d-4030-89fe-45614d871e81: # Target
     contentColumnType: string
     fieldGroup: null
     handle: target
@@ -136,7 +136,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  fbaa4c75-7616-42ca-adea-7615c9b91e38:
+  fbaa4c75-7616-42ca-adea-7615c9b91e38: # Label
     contentColumnType: text
     fieldGroup: null
     handle: label
@@ -150,7 +150,7 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none

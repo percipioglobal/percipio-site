@@ -1,11 +1,11 @@
-field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
+field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733 # Page Builder
 fieldLayouts:
   3817f653-c60a-4600-a22c-759add88ef6f:
     tabs:
       -
         elements:
           -
-            fieldUid: f66247e5-1697-4e5a-976e-ff087ee0911e
+            fieldUid: f66247e5-1697-4e5a-976e-ff087ee0911e # Overline
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 345c4093-df0a-45dd-9d5f-47fb3fac8c7d
+            fieldUid: 345c4093-df0a-45dd-9d5f-47fb3fac8c7d # Heading
             instructions: null
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 9bca25cb-2cf2-4427-baf8-44e347cc8a7a
+            fieldUid: 9bca25cb-2cf2-4427-baf8-44e347cc8a7a # Button
             instructions: null
             label: null
             required: false
@@ -34,26 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  345c4093-df0a-45dd-9d5f-47fb3fac8c7d:
-    contentColumnType: string(480)
-    fieldGroup: null
-    handle: heading
-    instructions: 'The full heading of the section header'
-    name: Heading
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: 120
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  9bca25cb-2cf2-4427-baf8-44e347cc8a7a:
+  9bca25cb-2cf2-4427-baf8-44e347cc8a7a: # Button
     contentColumnType: string
     fieldGroup: null
     handle: button
@@ -73,137 +54,68 @@ fields:
       enableElementCache: false
       enableTitle: false
       typeSettings:
-        __assoc__:
-          -
-            - url
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - true
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - custom
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - email
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - true
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - tel
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - true
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - asset
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - category
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - true
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - entry
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - true
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - user
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - site
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - sites
-                  - '*'
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
-  f66247e5-1697-4e5a-976e-ff087ee0911e:
+  345c4093-df0a-45dd-9d5f-47fb3fac8c7d: # Heading
+    contentColumnType: string(480)
+    fieldGroup: null
+    handle: heading
+    instructions: 'The full heading of the section header'
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: 120
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f66247e5-1697-4e5a-976e-ff087ee0911e: # Overline
     contentColumnType: text
     fieldGroup: null
     handle: overline
@@ -217,7 +129,7 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none

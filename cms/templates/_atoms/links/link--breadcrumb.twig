@@ -1,0 +1,17 @@
+{% set values = {
+    url: options.url,
+    title: options.title ?? '',
+    slug: options.slug ?? null,
+    utilities: options.utitlities ?? '',
+} %}
+
+<span class="inline-flex items-center text-white-100 {{ craft.app.request.segments|last == values.slug ? 'opacity-100' : 'opacity-70' }} {{ values.utilities -}} pt-8">
+    <a 
+        href="{{- values.url -}}"
+        title="{{- values.title -}}"
+    >
+
+        {{- values.title -}}
+
+    </a>
+</span>

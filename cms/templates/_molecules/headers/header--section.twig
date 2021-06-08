@@ -17,7 +17,7 @@
                     })
                 -}}
 
-                <h2 class="font-primary text-3xl md:text-5xl font-bold mb-4 md:mb-8">
+                <h2 data-title="{{- render.atom('text', 'title', { content: content.heading }) -}}" class="md:text-5xl mb-4 md:mb-8 text-3xl font-primary font-bold content-heading">
                     {{- render.atom('text', 'title', { content: content.heading }) -}}
                 </h2>
 
@@ -34,9 +34,9 @@
                         inverted: true,
                     }) -}}
                 {% else %}
-
+                    
                     <hr class="h-1 w-32 bg-{{- swatch.primary -}}">
-
+                    
                 {% endif %}
             </div>
 

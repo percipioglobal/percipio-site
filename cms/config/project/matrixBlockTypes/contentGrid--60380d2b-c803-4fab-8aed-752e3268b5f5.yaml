@@ -1,4 +1,4 @@
-field: e691301b-7484-40be-a3d4-c3bc590de959
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
 fieldLayouts:
   db9a8613-5991-483e-b361-514f67a40890:
     tabs:
@@ -27,21 +27,21 @@ fields:
       columns:
         __assoc__:
           -
-            - 33274ae4-f375-4070-b42c-f1cef4e48a81
+            - 33274ae4-f375-4070-b42c-f1cef4e48a81 # Heading
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - 247bfb7d-d077-42ee-b2ba-84feb1b3fd19
+            - 247bfb7d-d077-42ee-b2ba-84feb1b3fd19 # Content
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - 0c7a7b67-3926-4a9f-b449-8d1d1c451f2f
+            - 0c7a7b67-3926-4a9f-b449-8d1d1c451f2f # Width
             -
               __assoc__:
                 -

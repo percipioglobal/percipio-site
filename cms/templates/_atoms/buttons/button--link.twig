@@ -18,17 +18,25 @@
 
         {%- set icon = options.icon ??? '' -%}
 
-        <a
-            {{ values.url ? 'href=' ~ values.url : '' }}
-            {{ values.gaCategory ? 'data-tag-category=' ~ values.gaCategory : '' }}
-            {{ values.gaAction ? 'data-tag-action=' ~ values.gaAction : '' }}
-            {{ values.gaLabel ? 'data-tag-label=' ~ values.gaLabel : '' }}
-            {{ values.target ? 'target=' ~ values.target : '' }}
-            aria-label="{{- values.text -}}"
-            class="relative overflow-hidden group inline-flex uppercase font-bold text-base
-                    {{ values.inverted ? ( values.swatch ? 'text-' ~ values.swatch.primary : 'text-white-100' ) : 'text-white-100' }} 
-                    {{ values.utilities ? values.utilities : '' -}}"
+        {%- if values.url -%}
+            <a
+                {{ values.url ? 'href=' ~ values.url : '' }}
+                {{ values.gaCategory ? 'data-tag-category=' ~ values.gaCategory : '' }}
+                {{ values.gaAction ? 'data-tag-action=' ~ values.gaAction : '' }}
+                {{ values.gaLabel ? 'data-tag-label=' ~ values.gaLabel : '' }}
+                {{ values.target ? 'target=' ~ values.target : '' }}
+                aria-label="{{- values.text -}}"
+                class="relative overflow-hidden group inline-flex uppercase font-bold text-base
+                        {{ values.inverted ? ( values.swatch ? 'text-' ~ values.swatch.primary : 'text-white-100' ) : 'text-white-100' }} 
+                        {{ values.utilities ? values.utilities : '' -}}"
         >
+        {%- else -%}
+            <span
+                class="relative overflow-hidden group inline-flex uppercase font-bold text-base
+                        {{ values.inverted ? ( values.swatch ? 'text-' ~ values.swatch.primary : 'text-white-100' ) : 'text-white-100' }} 
+                        {{ values.utilities ? values.utilities : '' -}}"
+            >
+        {%- endif -%}
             <span class="inline-flex items-center relative transition-colors duration-200 delay-75 ease-in-out">
                 <span>{{- values.text -}}</span>
                 <span class="inline-flex ml-3 overflow-hidden text-2xl">
@@ -36,7 +44,11 @@
                 </span>
             </span>
 
-        </a>
+        {%- if values.url -%}
+            </a>
+        {%- else -%}
+            </span>
+        {%- endif -%}
 
     {%- endminify -%}
 

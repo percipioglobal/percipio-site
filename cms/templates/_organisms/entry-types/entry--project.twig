@@ -8,6 +8,8 @@
     categories: entry.projectCategories,
 } -%}
 
-{%- include '_organisms/builders/content--builder' with {
-    content: entry,
-} -%}
+<div id="page">
+    {%- include '_organisms/builders/content--builder' with {
+        content: entry,
+    } -%}
+</div>

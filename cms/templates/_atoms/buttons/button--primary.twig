@@ -22,8 +22,8 @@
             'large': 'px-8 py-4',
         } -%}
 
-        <a
-            {{ values.url ? 'href=' ~ values.url : '' }}
+        <{{- values.type == 'submit' ? 'button' : 'a' }}
+            {{ values.type == 'submit' ? 'type="submit"' : values.url ? 'href=' ~ values.url : '' }}
             {{ values.gaCategory ? 'data-tag-category=' ~ values.gaCategory : '' }}
             {{ values.gaAction ? 'data-tag-action=' ~ values.gaAction : '' }}
             {{ values.gaLabel ? 'data-tag-label=' ~ values.gaLabel : '' }}
@@ -45,8 +45,8 @@
                 {{ values.inverted ? 'bg-' ~ values.swatch.primary : 'bg-white-100 ' -}}
                 ">
             </div>
-        </a>
+        </{{- values.type == 'submit' ? 'button' : 'a' -}}>
 
     {%- endminify -%}
 
-{%- endblock -%}
+{%- endblock -%} 

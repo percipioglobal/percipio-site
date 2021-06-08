@@ -1,0 +1,13 @@
+{%- import '_macros/atoms' as render -%}
+{% import '_macros/functions' as functions %}
+
+{%- minify -%}
+<div class="flex-grow">
+    <p class="font-mono text-gray-800">
+        Last updated by
+        {{- functions.authors(content.authors, { swatch: swatch }) -}}<br/>
+        on the
+        <time datetime="{{ content.dateUpdated|date('c')}}">{{ content.dateUpdated|date('jS F Y')}}</time>
+    </p>
+</div>
+{%- endminify -%}

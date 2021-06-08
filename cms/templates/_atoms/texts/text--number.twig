@@ -1,0 +1,24 @@
+{% extends "_atoms/texts/text--variables" %}
+
+{# 
+    ### OPTIONS ###
+    ---------------
+
+    content: (STR) -- the actual content as a string
+
+    ## ADDED
+
+    words: (INT) -- give the maximum amount of words that can be displayed in the title, default value = 60;
+
+#}
+
+{% block text %}
+
+    {%- minify -%}
+        <div class="absolute bottom-0 font-extrabold text-white pointer-events-none -right-6 opacity-10 lg:opacity-50 text-number leading-number print:hidden">
+            {{- values.content | raw -}}
+        </div>
+    {%- endminify -%}
+    
+{% endblock %}
+

@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 7f94d38a-7e8c-477c-8cca-bff77ee32f0e
+            fieldUid: 7f94d38a-7e8c-477c-8cca-bff77ee32f0e # Hero Image
             instructions: null
             label: null
             required: false
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
             instructions: null
             label: null
             required: false
@@ -49,7 +49,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
             instructions: ''
             label: ''
             required: '1'
@@ -58,7 +58,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: cb2b1336-5ccd-48f4-a973-72fae9fd4069
+            fieldUid: cb2b1336-5ccd-48f4-a973-72fae9fd4069 # Meta Image
             instructions: null
             label: null
             required: false
@@ -71,7 +71,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e
+            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e # Colour Swatch
             instructions: ''
             label: ''
             required: ''

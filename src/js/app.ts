@@ -1,4 +1,5 @@
 import { createStore } from './stores/store.js';
+import { createLevels } from './handbook';
 
 // App main
 const site = async () => {
@@ -56,6 +57,8 @@ const site = async () => {
             window.addEventListener('load', () => {
                 Prism.highlightAll();
             })
+            
+            createLevels('.handbook-active', 'data-active-index');
         }
 
     })

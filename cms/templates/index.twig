@@ -17,9 +17,11 @@
         content: entry,
     } -%}
 
-    {%- include '_organisms/builders/page--builder' with {
-        content: entry,
-    } -%}
+    <div id="page">
+        {%- include '_organisms/builders/page--builder' with {
+            content: entry,
+        } -%}
+    </div>
 {% endblock %}
 
 {% block subcontent %}

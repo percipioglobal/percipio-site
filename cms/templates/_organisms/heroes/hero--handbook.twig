@@ -1,0 +1,40 @@
+{% import '_macros/atoms' as render %}
+{% import '_macros/functions' as functions %}
+
+{%- set parent = content.getAncestors().one() -%}
+
+{%- minify -%}
+
+    <section class="relative flex items-center w-full pb-20 overflow-hidden bg-blue-600 pt-44 text-white-100 lg:h-128">
+        <div class="container max-w-screen-lg mx-auto xl:pl-28">
+
+            <h1 class="sr-only">
+                {{- seomatic.site.identity.genericName -}}:
+                {{- render.atom('text', 'title', { content: entry.title }) -}}
+            </h1>
+
+            <span class="text-6xl font-bold">
+                {{- render.atom('text', 'title', { content: content.level > 1 ? parent.title : content.title }) -}}
+            </span>
+    
+            <div class="print:hidden">
+                {%- include '_molecules/breadcrumbs/breadcrumb--handbook'  -%}
+            </div>
+
+            {% if content.description|length %}
+                <div class="max-w-2xl mt-4 prose prose-lg md:mt-12 text-white-100 print:text-black-100">
+                    {{- render.atom('text', 'content', { content: content.description }) -}}
+                </div>
+            {% endif %}
+            
+        </div>
+
+        {%- set count = craft.entries({ orderBy: 'lft desc', positionedBefore: entry }).level(1).count() -%}
+
+        {%- if entry.section.type == 'structure' -%}
+            {{- render.atom('text', 'number', { content: entry.level == 1 ? count + 1 : count }) -}}
+        {%- endif -%}
+
+    </section>
+
+{%- endminify -%}

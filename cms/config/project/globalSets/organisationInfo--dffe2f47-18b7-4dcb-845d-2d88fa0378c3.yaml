@@ -4,7 +4,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 76099428-f3d4-42a7-9bb8-08f425b41461
+            fieldUid: 76099428-f3d4-42a7-9bb8-08f425b41461 # Organisation Name
             instructions: null
             label: null
             required: false
@@ -13,7 +13,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e0ee7443-387e-4be3-a64f-3c5ae52be354
+            fieldUid: e0ee7443-387e-4be3-a64f-3c5ae52be354 # Organisation Email
             instructions: null
             label: null
             required: false
@@ -22,7 +22,34 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 54daa4d7-b5cf-4458-9e19-67155be19343
+            fieldUid: 54daa4d7-b5cf-4458-9e19-67155be19343 # Organisation Phone
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ab91f872-7263-4250-b647-317386f8f679
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 70d3e848-905a-4246-a20b-02c24af51402
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 74d5a128-4fbc-4ea8-a7d7-c828e87680ff
             instructions: null
             label: null
             required: false
@@ -35,7 +62,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 6180741d-7a95-4c38-a6b8-13f0cd8dab1f
+            fieldUid: 6180741d-7a95-4c38-a6b8-13f0cd8dab1f # Logo Icon
             instructions: null
             label: null
             required: false
@@ -44,7 +71,7 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            fieldUid: 451cb28a-2133-4681-977d-41c5a1cbc887
+            fieldUid: 451cb28a-2133-4681-977d-41c5a1cbc887 # Full Logo
             instructions: null
             label: null
             required: false
@@ -53,7 +80,7 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            fieldUid: d476916c-8ec8-4d19-a3f8-ac4854f87275
+            fieldUid: d476916c-8ec8-4d19-a3f8-ac4854f87275 # Catchphrase
             instructions: null
             label: null
             required: false
@@ -66,7 +93,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 6e609ef7-3af9-4b0e-a278-18e9ed97736e
+            fieldUid: 6e609ef7-3af9-4b0e-a278-18e9ed97736e # Heading
             instructions: null
             label: null
             required: false
@@ -75,7 +102,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 7fb63ae6-c6ee-4824-9213-420e2da4e008
+            fieldUid: 7fb63ae6-c6ee-4824-9213-420e2da4e008 # Partners
             instructions: null
             label: null
             required: false

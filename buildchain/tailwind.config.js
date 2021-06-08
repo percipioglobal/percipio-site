@@ -30,6 +30,7 @@ module.exports = {
                 /blue-800$/,
                 /purple-600$/,
                 /purple-800$/,
+                /black-100$/,
                 /col-span-1$/,
                 /col-span-2$/,
                 /col-span-3$/,
@@ -45,6 +46,7 @@ module.exports = {
                 /grid-article-sm$/,
                 /grid-article-large$/,
                 /grid-article-large-sm$/,
+                /pl-2$/,
             ],
         }
     },
@@ -64,7 +66,25 @@ module.exports = {
                 DEFAULT: {
                     css: {
                         maxWidth: '80ch',
-                        fontFamily: theme('fontFamily.primary'),
+                        fontFamily: theme('fontFamily.prose'),
+                        h1: {
+                            fontWeight: 'bold'
+                        },
+                        h2: {
+                            fontWeight: 'bold'
+                        },
+                        h3: {
+                            fontWeight: 'bold'
+                        },
+                        h4: {
+                            fontWeight: 'bold'
+                        },
+                        h5: {
+                            fontWeight: 'bold'
+                        },
+                        h6: {
+                            fontWeight: 'bold'
+                        },
                     },
                 },
                 'white': {
@@ -154,10 +174,21 @@ module.exports = {
                         },
                     }
                 },
+                'handbook': {
+                    css: {
+                        'ol > li::before': {
+                            content: 'counter(list-counter, ' + theme('listStyleType.alpha') + ') "."',
+                        },
+                        'ol > li > ol > li::before': {
+                            content: 'counter(list-counter, ' + theme('listStyleType.roman') + ') "."',
+                        }
+                    }
+                },
             }),
 
             screens: {
                 '2xl': '1536px',
+                'print': {'raw': 'print'},
             },
 
             fontFamily: {
@@ -182,6 +213,17 @@ module.exports = {
                     'Liberation Mono',
                     'Courier New',
                     'monospace'
+                ],
+                prose: [
+                    'sans-serif',
+                    'Noto Sans',
+                    'Arial',
+                    'Helvetica Neue',
+                    'Roboto',
+                    '-apple-system',
+                    'system-ui',
+                    'ui-sans-serif',
+                    'Open Sans',
                 ]
             },
 
@@ -404,7 +446,17 @@ module.exports = {
                 '-1/4': '-25%',
                 '-3/4': '-75%',
                 '-full': '-100%',
+                '-sr': '-10000px',
             }),
+
+            lineHeight: {
+                'number': '0.75',
+            },
+
+            listStyleType: {
+                alpha: 'lower-alpha',
+                roman: 'upper-roman',
+            },
 
             maxWidth: {
                 '1/2': '50%',
@@ -425,6 +477,7 @@ module.exports = {
 
             height: {
                 '90vh': '90vh',
+                '128': '32rem',
             },
 
             transitionTimingFunction: {
@@ -450,22 +503,32 @@ module.exports = {
                 '1': '1',
                 '2': '2',
             },
+
+            fontSize: {
+                'number': '37.5rem',
+            },
         },
     },
 
     variants: {
-        animation: ['hover', 'group-hover'],
-        backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
-        borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
+        animation: ['hover', 'group-focus', 'group-hover'],
+        backgroundColor: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
+        borderColor: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
+        display: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
+        height: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
         inset: ['responsive'],
         scale: ['group-hover'],
-        opacity: ['responsive', 'hover', 'focus', 'group-hover'],
-        textColor: ['responsive', 'hover', 'focus', 'group-hover'],
-        translate: ['responsive', 'hover', 'focus', 'group-hover'],
+        opacity: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
+        textColor: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
+        translate: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
         transitionDelay: ['hover'],
+        width: ['responsive', 'hover', 'focus', 'group-focus', 'group-hover'],
         zIndex: ['responsive'],
     },
 
     corePlugins: {},
-    plugins: [require('@tailwindcss/typography')],
+    plugins: [
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/aspect-ratio')
+    ],
 };

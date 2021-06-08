@@ -1,4 +1,4 @@
-field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733
+field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733 # Page Builder
 fieldLayouts:
   d6a68640-123a-49f5-907d-1fdedf8e1e84:
     tabs:
@@ -58,14 +58,14 @@ fields:
       columns:
         __assoc__:
           -
-            - 1eb19599-751e-4136-ac0f-385321fd1f98
+            - 1eb19599-751e-4136-ac0f-385321fd1f98 # Heading
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - d613d12d-ac03-4153-942b-0cca809f451b
+            - d613d12d-ac03-4153-942b-0cca809f451b # Body Content
             -
               __assoc__:
                 -

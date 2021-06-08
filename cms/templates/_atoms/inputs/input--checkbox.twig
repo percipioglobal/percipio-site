@@ -1,0 +1,39 @@
+{%- extends "_atoms/inputs/input--variables" -%}
+
+{#
+    ### OPTIONS ###
+    ---------------
+
+    name: (STR) -- the name for the input field
+    label: (STR) -- the name for the input field label
+
+#}
+
+{%- block input -%}
+
+    {%- minify -%}
+
+        <div class="flex">
+
+            <label
+                class="flex items-center" 
+                for="{{- values.name -}}">
+
+                <input 
+                    name="{{- values.name -}}"
+                    type="checkbox"
+                    value="1"
+                    class="form-checkbox cursor-pointer"
+                />
+
+                <span class="ml-2">
+                    {{- values.label -}}
+                </span>
+
+            </label>
+
+        </div>
+
+    {%- endminify -%}
+
+{%- endblock -%} 

@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 2473fef2-babd-4336-bb2e-550dc284282c
+fieldGroup: 2473fef2-babd-4336-bb2e-550dc284282c # FAQ
 handle: faqCategory
 instructions: 'Please select or create a category this entry belongs to.'
 name: 'FAQ Category'

@@ -1,9 +1,12 @@
 {% import '_macros/atoms' as render %}
 
-<footer class="w-full bg-white-100">
+<footer class="w-full bg-white-100 print:hidden">
 
-    {% include "_molecules/footers/footer--cta" %}
-	{%- include '_molecules/footers/footer--clients' %}	
+    {%- include "_molecules/footers/footer--cta" -%}
+
+	{%- if currentSite.handle == 'default' -%}
+		{%- include '_molecules/footers/footer--clients' -%}	
+	{%- endif -%}
 
 	<div class="relative border-t border-{{- swatch.primary -}}">
 		<div class="footer-hexagon absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-{{- swatch.secondary -}}">
@@ -23,7 +26,7 @@
 	<div class="border-t border-gray-400 text-gray-600 text-xs font-mono flex flex-col md:flex-row md:items-center md:justify-between mx-auto px-4 py-6 lg:py-8">
         {% include "_organisms/navigations/navigation--social" with {
             utilities: 'mb-4 md:mb-0 md:mx-4 lg:mx-12 order-1 md:order-3 flex flex-1 justify-center md:justify-end space-x-6 md:space-x-2',
-            wrapperUtilities: 'text-center md:text-right',
+            wrapperUtilities: 'text-center md:text-right md:justify-end',
             linkUtilities: 'text-gray-700 hover:text-gray-500'
         } %}
 

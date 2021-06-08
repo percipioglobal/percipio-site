@@ -14,8 +14,9 @@ module.exports = (type = 'modern', settings) => {
         devServer: {
             client: {
                 progress: false,
+                overlay: true,
             },
-            dev: {
+            devMiddleware: {
                 publicPath: '/',
             },
             firewall: false,
@@ -25,7 +26,6 @@ module.exports = (type = 'modern', settings) => {
             host: settings.host(),
             hot: true,
             https: !!parseInt(settings.https()),
-            overlay: true,
             port: settings.port(),
             public: settings.public(),
             static: {

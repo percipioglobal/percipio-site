@@ -19,8 +19,9 @@
         {{- render.atom('image', 'teaser', {
             image: values.author.teaserImage[0],
             alt: values.author.title,
-            ratio: 'is1by1',
+            ratio: 'aspect-w-1 aspect-h-1',
             placeholders: placeholders,
+            utilities: 'object-cover'
         }) -}}
     </a>
 {%- endminify -%}

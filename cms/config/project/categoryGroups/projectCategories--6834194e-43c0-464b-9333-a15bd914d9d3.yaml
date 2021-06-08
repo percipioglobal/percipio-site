@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 648e7555-63ed-4228-a6b7-7811c865a7af
+            fieldUid: 648e7555-63ed-4228-a6b7-7811c865a7af # Category Description
             instructions: null
             label: null
             required: false
@@ -40,7 +40,7 @@ fieldLayouts:
 handle: projectCategories
 name: 'Project Categories'
 siteSettings:
-  5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
     hasUrls: false
     template: null
     uriFormat: null

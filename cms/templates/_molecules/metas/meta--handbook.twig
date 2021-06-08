@@ -1,0 +1,42 @@
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as functions -%}
+
+{%- minify -%}
+    <div class="pt-16">
+        <div class="container mx-auto max-w-screen-lg">
+            <div class="md:flex items-center">
+
+                <div class="w-full md:w-auto mb-4 md:mb-0 md:flex-shrink-0">
+
+                    {{- render.atom('avatar', 'group', {
+                        authors: content.authors,
+                        colour: swatch,
+                        utilities: content.authors|length == 1 ? 'flex' : '',
+                    }) -}}
+
+                </div>
+
+                <div class="w-full md:w-auto md:flex-grow md:pl-4">
+                    <div class="flex flex-wrap w-full items-center">
+                    
+                        {%- if content.dateUpdated > content.postDate -%}
+
+                            {%- include '_molecules/metas/meta--updated' ignore missing with { 
+                                content: entry,
+                            } -%}
+
+                        {%- endif -%}
+                        
+
+                        <div class="flex-shrink-0 pt-4 md:pt-0">
+                            {%- include '_molecules/buttons/button--print' with {
+                                content: entry,
+                            }-%}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{%- endminify -%}
