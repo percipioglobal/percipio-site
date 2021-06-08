@@ -75,7 +75,7 @@ fieldLayouts:
 handle: servicesPage
 hasTitleField: true
 name: 'Services Page'
-section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
+section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
 sortOrder: 6
 titleFormat: null
 titleTranslationKeyFormat: null

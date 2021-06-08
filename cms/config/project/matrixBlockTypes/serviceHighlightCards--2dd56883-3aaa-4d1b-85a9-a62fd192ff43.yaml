@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 7e7008d5-deb5-4018-9fb7-52f6b2603f34 # Cards
+            fieldUid: 7e7008d5-deb5-4018-9fb7-52f6b2603f34
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  7e7008d5-deb5-4018-9fb7-52f6b2603f34: # Cards
+  7e7008d5-deb5-4018-9fb7-52f6b2603f34:
     contentColumnType: string
     fieldGroup: null
     handle: cards
@@ -31,7 +31,7 @@ fields:
       showSiteMenu: true
       source: null
       sources:
-        - 'section:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
+        - 'section:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21'
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null

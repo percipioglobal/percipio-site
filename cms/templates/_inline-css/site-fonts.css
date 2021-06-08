@@ -6,8 +6,8 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('{{ baseUrl }}dist/fonts/open-sans-regular.woff2') format('woff2'), /* Super Modern Browsers */
-    url('{{ baseUrl }}dist/fonts/open-sans-regular.woff') format('woff'); /* Modern Browsers */
+    src: url('{{- assetsUrl -}}dist/fonts/open-sans-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('{{- assetsUrl -}}dist/fonts/open-sans-regular.woff') format('woff'); /* Modern Browsers */
 }
 
 /* open-sans-italic - latin */
@@ -16,8 +16,8 @@
     font-style: italic;
     font-weight: 400;
     font-display: swap;
-    src: url('{{ baseUrl }}dist/fonts/open-sans-italic.woff2') format('woff2'), /* Super Modern Browsers */
-    url('{{ baseUrl }}dist/fonts/open-sans-italic.woff') format('woff'); /* Modern Browsers */
+    src: url('{{- assetsUrl -}}dist/fonts/open-sans-italic.woff2') format('woff2'), /* Super Modern Browsers */
+    url('{{- assetsUrl -}}dist/fonts/open-sans-italic.woff') format('woff'); /* Modern Browsers */
 }
 
 /* open-sans-600 - latin */
@@ -26,8 +26,8 @@
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url('{{ baseUrl }}dist/fonts/open-sans-600.woff2') format('woff2'), /* Super Modern Browsers */
-    url('{{ baseUrl }}dist/fonts/open-sans-600.woff') format('woff'); /* Modern Browsers */
+    src: url('{{- assetsUrl -}}dist/fonts/open-sans-600.woff2') format('woff2'), /* Super Modern Browsers */
+    url('{{- assetsUrl -}}dist/fonts/open-sans-600.woff') format('woff'); /* Modern Browsers */
 }
 
 /* open-sans-700 - latin */
@@ -36,8 +36,8 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('{{ baseUrl }}dist/fonts/open-sans-700.woff2') format('woff2'), /* Super Modern Browsers */
-    url('{{ baseUrl }}dist/fonts/open-sans-700.woff') format('woff'); /* Modern Browsers */
+    src: url('{{- assetsUrl -}}dist/fonts/open-sans-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('{{- assetsUrl -}}dist/fonts/open-sans-700.woff') format('woff'); /* Modern Browsers */
 }
 
 /* open-sans-800 - latin */
@@ -46,8 +46,8 @@
     font-style: normal;
     font-weight: 800;
     font-display: swap;
-    src: url('{{ baseUrl }}dist/fonts/open-sans-800.woff2') format('woff2'), /* Super Modern Browsers */
-    url('{{ baseUrl }}dist/fonts/open-sans-800.woff') format('woff'); /* Modern Browsers */
+    src: url('{{- assetsUrl -}}dist/fonts/open-sans-800.woff2') format('woff2'), /* Super Modern Browsers */
+    url('{{- assetsUrl -}}dist/fonts/open-sans-800.woff') format('woff'); /* Modern Browsers */
 }
 
 /* source-code-pro-regular - latin */
@@ -56,6 +56,6 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('{{ baseUrl }}dist/fonts/source-code-pro-regular.woff2') format('woff2'), /* Super Modern Browsers */
-    url('{{ baseUrl }}dist/fonts/source-code-pro-regular.woff') format('woff'); /* Modern Browsers */
+    src: url('{{- assetsUrl -}}dist/fonts/source-code-pro-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('{{- assetsUrl -}}dist/fonts/source-code-pro-regular.woff') format('woff'); /* Modern Browsers */
 }

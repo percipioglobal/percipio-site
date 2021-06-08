@@ -1,4 +1,4 @@
-dateModified: 1622550893
+dateModified: 1623173847
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -102,7 +102,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 8LN4PPMQDNDW9TA7FLCL3WY5
-    schemaVersion: 3.0.9
+    schemaVersion: 3.0.10
   spoon:
     edition: standard
     enabled: true

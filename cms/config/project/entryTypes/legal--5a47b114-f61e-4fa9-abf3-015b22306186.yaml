@@ -31,7 +31,7 @@ fieldLayouts:
 handle: legal
 hasTitleField: true
 name: 'Legal Group'
-section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
+section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
 sortOrder: 9
 titleFormat: null
 titleTranslationKeyFormat: null
