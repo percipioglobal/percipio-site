@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: e561deca-d709-4e55-89be-2b9254d635e4 # Heading
+            fieldUid: e561deca-d709-4e55-89be-2b9254d635e4
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 209a0bce-f412-4727-873b-681c4f93c4f7 # Video
+            fieldUid: 209a0bce-f412-4727-873b-681c4f93c4f7
             instructions: null
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 1cd525bc-8beb-4ba2-9452-2e02803421ef # Video Placeholder
+            fieldUid: 1cd525bc-8beb-4ba2-9452-2e02803421ef
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  1cd525bc-8beb-4ba2-9452-2e02803421ef: # Video Placeholder
+  1cd525bc-8beb-4ba2-9452-2e02803421ef:
     contentColumnType: string
     fieldGroup: null
     handle: placeholder
@@ -67,7 +67,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  209a0bce-f412-4727-873b-681c4f93c4f7: # Video
+  209a0bce-f412-4727-873b-681c4f93c4f7:
     contentColumnType: string
     fieldGroup: null
     handle: video
@@ -100,7 +100,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  e561deca-d709-4e55-89be-2b9254d635e4: # Heading
+  e561deca-d709-4e55-89be-2b9254d635e4:
     contentColumnType: text
     fieldGroup: null
     handle: heading

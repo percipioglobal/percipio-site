@@ -31,7 +31,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: ab91f872-7263-4250-b647-317386f8f679 # Organisation Address
+            fieldUid: ab91f872-7263-4250-b647-317386f8f679
             instructions: null
             label: null
             required: false
@@ -40,7 +40,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 70d3e848-905a-4246-a20b-02c24af51402 # Organisation Address Postal Code 
+            fieldUid: 70d3e848-905a-4246-a20b-02c24af51402
             instructions: null
             label: null
             required: false
@@ -49,7 +49,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 74d5a128-4fbc-4ea8-a7d7-c828e87680ff # Organisation Address Region
+            fieldUid: 74d5a128-4fbc-4ea8-a7d7-c828e87680ff
             instructions: null
             label: null
             required: false

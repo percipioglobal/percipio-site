@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: d2e22319-599d-4193-b09f-3d48c90668e6 # Heading
+            fieldUid: d2e22319-599d-4193-b09f-3d48c90668e6
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 1750a33c-c911-45de-9392-80a3004cbe0d # Description
+            fieldUid: 1750a33c-c911-45de-9392-80a3004cbe0d
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 61518518-d14c-4402-a480-c059af3b7087 # Buttons
+            fieldUid: 61518518-d14c-4402-a480-c059af3b7087
             instructions: null
             label: null
             required: false
@@ -32,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 284e17ab-cd25-417d-8951-fd69b7169e3d # Hero Image
+            fieldUid: 284e17ab-cd25-417d-8951-fd69b7169e3d
             instructions: null
             label: null
             required: false
@@ -43,7 +43,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  284e17ab-cd25-417d-8951-fd69b7169e3d: # Hero Image
+  284e17ab-cd25-417d-8951-fd69b7169e3d:
     contentColumnType: string
     fieldGroup: null
     handle: heroImage
@@ -76,7 +76,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  1750a33c-c911-45de-9392-80a3004cbe0d: # Description
+  1750a33c-c911-45de-9392-80a3004cbe0d:
     contentColumnType: text
     fieldGroup: null
     handle: description
@@ -104,7 +104,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  61518518-d14c-4402-a480-c059af3b7087: # Buttons
+  61518518-d14c-4402-a480-c059af3b7087:
     contentColumnType: string
     fieldGroup: null
     handle: buttons
@@ -115,7 +115,7 @@ fields:
       columns:
         __assoc__:
           -
-            - ca8bffb4-dfed-4ca4-b421-ffcc8cca47e2 # Target
+            - ca8bffb4-dfed-4ca4-b421-ffcc8cca47e2
             -
               __assoc__:
                 -
@@ -132,7 +132,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-  d2e22319-599d-4193-b09f-3d48c90668e6: # Heading
+  d2e22319-599d-4193-b09f-3d48c90668e6:
     contentColumnType: text
     fieldGroup: null
     handle: heading
