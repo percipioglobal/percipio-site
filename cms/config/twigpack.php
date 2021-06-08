@@ -36,9 +36,9 @@ return [
         'modern' => 'manifest.json',
     ],
     // Public server config
-    'devServer' => [
+    'server' => [
         'manifestPath' => '@webroot/dist/',
-        'publicPath' => '/',
+        'publicPath' => '@web/',
     ],
     // Bundle to use with the webpack-dev-server
     'devServerBuildType' => 'modern',
