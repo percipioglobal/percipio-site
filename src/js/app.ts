@@ -1,5 +1,5 @@
 import { createStore } from './stores/store.js';
-import { createLevels } from './handbook';
+import { createLevels } from './functions/handbook';
 
 // App main
 const site = async () => {
