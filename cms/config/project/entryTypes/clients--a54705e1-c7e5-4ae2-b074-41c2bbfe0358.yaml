@@ -31,7 +31,7 @@ fieldLayouts:
 handle: clients
 hasTitleField: true
 name: Clients
-section: dbc716a7-2122-4b92-b942-471970256a35 # Clients
+section: dbc716a7-2122-4b92-b942-471970256a35
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

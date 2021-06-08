@@ -75,7 +75,7 @@ fieldLayouts:
 handle: vacanciesPage
 hasTitleField: true
 name: 'Vacancies Page'
-section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
+section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
 sortOrder: 8
 titleFormat: null
 titleTranslationKeyFormat: null

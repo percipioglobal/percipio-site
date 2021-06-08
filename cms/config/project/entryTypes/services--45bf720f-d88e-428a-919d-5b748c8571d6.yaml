@@ -84,7 +84,7 @@ fieldLayouts:
 handle: services
 hasTitleField: true
 name: 'Our Services'
-section: 1ae55366-a3a6-4ed1-bf34-12ead8ae6c21 # Our Services
+section: 1ae55366-a3a6-4ed1-bf34-12ead8ae6c21
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

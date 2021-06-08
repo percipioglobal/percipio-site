@@ -49,7 +49,7 @@ fieldLayouts:
 handle: handbookPage
 hasTitleField: false
 name: 'Handbook Homepage'
-section: d2188822-da55-4ce1-b1ab-29523673aa84 # Handbook Homepage
+section: d2188822-da55-4ce1-b1ab-29523673aa84
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
