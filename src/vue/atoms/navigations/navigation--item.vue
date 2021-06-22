@@ -6,7 +6,7 @@
         role="menuitem"
         tabindex="0"
         v-on:focus="openMenu"
-        :aria-current="location.includes(item.target[0].url) ? 'page' : null"
+        :aria-current="isCurrent ? 'page' : null"
     >
         <div class="py-2 px-4 relative overflow-hidden">
             <span class="relative z-10 group-hover:text-white-100 group-focus:text-white-100 transition duration-300 flex justify-end items-center">
@@ -14,7 +14,7 @@
                 <svg 
                     :class="[
                         'w-4 h-4 mr-4',
-                        location.includes(item.target[0].url) ? 'inline-block' : 'hidden'
+                        isCurrent ? 'inline-block' : 'hidden'
                     ]" 
                     version="1.1" 
                     xmlns="http://www.w3.org/2000/svg" 
@@ -29,23 +29,7 @@
                         'fill-current',
                         'text-' + swatch
                         ]">
-                        <polygon points="0,322.9 310.5,144.2 250.3,109.5 95,199.1 0,144.3 250,0 500,144.2 189.6,322.9 
-                        344.6,412.3 250,467.1 "/>
-                    </g>
-                    <g :class="[
-                        'fill-current',
-                        'text-' + swatch
-                        ]">
-                        <polygon points="250,467.1 344.6,412.3 189.6,322.9 500,144.2 500,432.8 250,577 	"/>
-                        <polygon points="95,199.1 95,268.2 250.3,178.8 250.3,109.5 	"/>
-                    </g>
-                    <g :class="[
-                        'fill-current',
-                        'text-' + swatch
-                        ]">
-                        <polygon points="250.3,109.5 250.3,178.8 310.5,144.2"/>
-                        <polygon points="0,322.9 250,467.1 250,577 0,432.8"/>
-                        <polygon points="0,144.3 95,199.1 95,268.2 0,322.9"/>
+                        <polyline points="0,322.9 0,432.8 250,577 500,432.8 500,144.2 250,0 0,144.3 0,322.9"/>
                     </g>
                 </svg>
 
@@ -73,13 +57,25 @@
         },
 
         computed: {
-            location()
+            isCurrent()
             {
-                return window.location.href;
+                if(this.item && this.item.includeChildren) {
+
+                    return this.location().includes(this.item.target[0].url);
+
+                }else{
+
+                    return this.location() === this.item.target[0].url;
+
+                }
             }
         },
 
         methods: {
+            location()
+            {
+                return window.location.href;
+            },
             openMenu()
             {
                 this.$store.commit('setNavigationActive', true);

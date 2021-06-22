@@ -8,14 +8,14 @@ settings:
   columns:
     __assoc__:
       -
-        - 4d23d076-4a7c-4ad8-969e-ca980aef3815
+        - 4d23d076-4a7c-4ad8-969e-ca980aef3815 # Social Media Type
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 49fc2634-bf3b-4e3e-a1bc-9eeb199fac80
+        - 49fc2634-bf3b-4e3e-a1bc-9eeb199fac80 # Social Media URL
         -
           __assoc__:
             -

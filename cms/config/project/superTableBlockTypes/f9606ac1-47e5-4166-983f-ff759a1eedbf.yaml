@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 720b0445-dc28-4b47-85df-59e4f03c666b
+            fieldUid: 720b0445-dc28-4b47-85df-59e4f03c666b # Button
             instructions: null
             label: null
             required: false
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  720b0445-dc28-4b47-85df-59e4f03c666b:
+  720b0445-dc28-4b47-85df-59e4f03c666b: # Button
     contentColumnType: string
     fieldGroup: null
     handle: target

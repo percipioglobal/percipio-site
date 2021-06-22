@@ -2,9 +2,11 @@ export const NAVIGATION_PRIMARY_QUERY = `
     query {
         entries(section: "navigation"){
             ...on navigation_navigation_Entry {
+                includeChildren,
                 target {
                     id,
                     title,
+                    typeHandle,
                     url,
                     ...on pages_blogPage_Entry {
                         colourSwatch,
