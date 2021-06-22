@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: e561deca-d709-4e55-89be-2b9254d635e4
+            fieldUid: e561deca-d709-4e55-89be-2b9254d635e4 # Heading
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 209a0bce-f412-4727-873b-681c4f93c4f7
+            fieldUid: 209a0bce-f412-4727-873b-681c4f93c4f7 # Video
             instructions: null
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 1cd525bc-8beb-4ba2-9452-2e02803421ef
+            fieldUid: 1cd525bc-8beb-4ba2-9452-2e02803421ef # Video Placeholder
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  1cd525bc-8beb-4ba2-9452-2e02803421ef:
+  1cd525bc-8beb-4ba2-9452-2e02803421ef: # Video Placeholder
     contentColumnType: string
     fieldGroup: null
     handle: placeholder
@@ -46,7 +46,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b'
+      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b' # Headers
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -56,7 +56,7 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:14e48735-7707-43d5-a6f1-90cc18da80f1'
+      singleUploadLocationSource: 'volume:14e48735-7707-43d5-a6f1-90cc18da80f1' # Teasers
       singleUploadLocationSubpath: ''
       source: null
       sources: '*'
@@ -67,7 +67,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  209a0bce-f412-4727-873b-681c4f93c4f7:
+  209a0bce-f412-4727-873b-681c4f93c4f7: # Video
     contentColumnType: string
     fieldGroup: null
     handle: video
@@ -79,7 +79,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - video
-      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b'
+      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b' # Headers
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -89,7 +89,7 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:385e443b-b2c6-4ff0-b84a-a0fe656c51f0'
+      singleUploadLocationSource: 'volume:385e443b-b2c6-4ff0-b84a-a0fe656c51f0' # Video
       singleUploadLocationSubpath: ''
       source: null
       sources: '*'
@@ -100,7 +100,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  e561deca-d709-4e55-89be-2b9254d635e4:
+  e561deca-d709-4e55-89be-2b9254d635e4: # Heading
     contentColumnType: text
     fieldGroup: null
     handle: heading

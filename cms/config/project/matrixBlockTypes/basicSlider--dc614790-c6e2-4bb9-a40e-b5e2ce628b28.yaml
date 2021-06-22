@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: e531a8df-ea73-4e09-8422-d08a20883128
+            fieldUid: e531a8df-ea73-4e09-8422-d08a20883128 # Slides
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  e531a8df-ea73-4e09-8422-d08a20883128:
+  e531a8df-ea73-4e09-8422-d08a20883128: # Slides
     contentColumnType: string
     fieldGroup: null
     handle: slides
