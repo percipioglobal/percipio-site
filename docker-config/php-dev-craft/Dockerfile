@@ -1,4 +1,4 @@
-FROM nystudio107/php-dev-base:7.4-alpine
+FROM nystudio107/php-prod-base:7.4-alpine
 
 # dependencies required for running "phpize"
 # these get automatically installed and removed by "docker-php-ext-*" (unless they're already installed)
@@ -23,6 +23,8 @@ RUN set -eux; \
     && \
     # Packages to install
     apk add --no-cache \
+        su-exec \
+        gifsicle \
         jpegoptim \
         libwebp-tools \
         nano \
@@ -44,13 +46,30 @@ RUN set -eux; \
 
 WORKDIR /var/www/project
 
-# Create the storage directory and make it writeable by PHP
-RUN mkdir -p /var/www/project/cms/storage && \
-    mkdir -p /var/www/project/cms/storage/runtime && \
-    chown -R www-data:www-data /var/www/project/cms/storage
-
-# Create the cpresources directory and make it writeable by PHP
-RUN mkdir -p /var/www/project/cms/web/cpresources && \
-    chown -R www-data:www-data /var/www/project/cms/web/cpresources
+COPY ./run_queue.sh .
+RUN chmod a+x run_queue.sh \
+    && \
+    mkdir -p /var/www/project/cms/storage \
+    && \
+    mkdir -p /var/www/project/cms/web/cpresources \
+    && \
+    chown -R www-data:www-data /var/www/project
 
 WORKDIR /var/www/project/cms
+
+# Force permissions, update Craft, and start php-fpm
+
+# Do a `composer install` without running any Composer scripts
+# - If `composer.lock` is present, it will install what is in the lock file
+# - If `composer.lock` is missing, it will update to the latest dependencies
+#   and create the `composer.lock` file
+# This automatic running adds to the startup overhead of `docker-compose up`
+# but saves far more time in not having to deal with out of sync versions
+# when working with teams or multiple environments
+CMD chown -R www-data:www-data /var/www/project \
+    && \
+    su-exec www-data composer install --verbose --no-progress --no-scripts --optimize-autoloader --no-interaction \
+    && \
+    su-exec www-data composer craft-update \
+    && \
+    php-fpm
