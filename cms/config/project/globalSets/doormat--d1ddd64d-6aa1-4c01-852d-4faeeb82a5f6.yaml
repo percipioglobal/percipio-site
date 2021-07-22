@@ -43,3 +43,4 @@ fieldLayouts:
         sortOrder: 1
 handle: doormat
 name: 'Call To Action - Doormat'
+sortOrder: 2

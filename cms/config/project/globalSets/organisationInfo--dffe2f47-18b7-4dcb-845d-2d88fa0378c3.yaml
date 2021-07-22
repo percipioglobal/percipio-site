@@ -114,3 +114,4 @@ fieldLayouts:
         sortOrder: 3
 handle: organisationInfo
 name: 'Organisational Information'
+sortOrder: 4
