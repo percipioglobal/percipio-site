@@ -8,21 +8,21 @@ settings:
   columns:
     __assoc__:
       -
-        - 2c70613c-0c00-4d9a-96bf-658a6db58d9c # Logo
+        - 2c70613c-0c00-4d9a-96bf-658a6db58d9c
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 60285741-d9e6-4e21-b26e-3330c2d02f47 # Name
+        - 60285741-d9e6-4e21-b26e-3330c2d02f47
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - faa39bae-b425-4b70-b3f6-c1584cdda9dc # Website
+        - faa39bae-b425-4b70-b3f6-c1584cdda9dc
         -
           __assoc__:
             -

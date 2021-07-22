@@ -10,7 +10,7 @@ services:
       - ./cms/.env
     init: true
     ports:
-      - "8000:80"
+      - "8001:80"
     volumes:
       - cpresources:/var/www/project/cms/web/cpresources
       - ./cms/web:/var/www/project/cms/web:cached
@@ -74,7 +74,7 @@ services:
       MYSQL_PASSWORD: project
     init: true
     ports:
-      - "4306:3306"
+      - "5306:3306"
     volumes:
       - db-data:/var/lib/mysql
       - ./db-seed/:/docker-entrypoint-initdb.d
@@ -95,7 +95,7 @@ services:
       *env
     init: true
     ports:
-      - "8080:8080"
+      - "8081:8081"
     volumes:
       - ./tsconfig.json:/var/www/project/tsconfig.json:cached
       - ./buildchain:/var/www/project/buildchain:cached
