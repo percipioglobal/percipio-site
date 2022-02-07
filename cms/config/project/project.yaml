@@ -1,4 +1,4 @@
-dateModified: 1626981159
+dateModified: 1644236760
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -198,7 +198,7 @@ plugins:
     schemaVersion: 1.0.0
   colour-swatches:
     enabled: true
-    schemaVersion: 1.4.1.1
+    schemaVersion: 1.4.2
   eager-beaver:
     edition: standard
     enabled: true
@@ -279,6 +279,8 @@ plugins:
     enabled: true
     licenseKey: null
     schemaVersion: 3.0.9
+  seomatic:
+    schemaVersion: 3.0.11
   spoon:
     edition: standard
     enabled: true
@@ -314,5 +316,5 @@ system:
   live: true
   name: 'Percipio Global Ltd.'
   retryDuration: null
-  schemaVersion: 3.7.7
+  schemaVersion: 3.7.8
   timeZone: Europe/London
