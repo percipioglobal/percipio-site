@@ -1,4 +1,4 @@
-dateModified: 1644236760
+dateModified: 1644313921
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -280,6 +280,8 @@ plugins:
     licenseKey: null
     schemaVersion: 3.0.9
   seomatic:
+    enabled: true
+    licenseKey: LTXK3YQS6PVYFG6P3CKFUNPR
     schemaVersion: 3.0.11
   spoon:
     edition: standard
