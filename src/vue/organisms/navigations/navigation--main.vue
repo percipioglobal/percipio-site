@@ -2,15 +2,20 @@
 
     <div>
         <nav :class="[
-                'fixed z-20 w-full bg-white-70 transition-all duration-500 ease-in-out',
+                'fixed z-20 w-full bg-white-100 transition-all duration-500 ease-in-out',
                 showNavigation === true || getNavigationActive ? 'top-0' : '-top-full'
             ]"
             @blur="closeMenu"
         >
 
             <div class="container mx-auto max-w-screen-2xl flex items-center py-3">
-
-                <slot></slot>
+                <div>
+                    <slot></slot>
+                </div>
+                
+                <div class="hidden lg:flex ml-auto">
+                    <navigation--item v-for="item in getNavigationPrimary" :item="item" :key="item.id"></navigation--item>
+                </div>
 
                 <div>
                     <a href="#page" role="button" tabindex="0" class="absolute left:0 top-sr w-1 h-1 overflow-hidden focus:static focus:w-auto focus:h-auto focus:overflow-visible">
@@ -49,10 +54,11 @@
         components: {
             'button--hamburger': () => import(/* webpackChunkName: "button--hamburger" */ '@/vue/atoms/buttons/button--hamburger.vue'),
             'navigation--drawer': () => import(/* webpackChunkName: "navigation--drawer" */ '@/vue/organisms/navigations/navigation--drawer.vue'),
+            'navigation--item': () => import(/* webpackChunkName: "navigation--item" */ '@/vue/atoms/navigations/navigation--item.vue'),
         },
 
         computed: {
-            ...mapGetters(['getNavigationActive']),
+            ...mapGetters(['getNavigationActive', 'getNavigationPrimary']),
         },
 
         methods: {
