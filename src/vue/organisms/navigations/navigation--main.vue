@@ -61,9 +61,9 @@
                 const topNav = document.getElementById('top-nav');
 
                 if (currentScrollPos > 0) {
-                    topNav.classList.add('shadow-2xl');
+                    topNav.classList.add('shadow-xl');
                 } else {
-                    topNav.classList.remove('shadow-2xl');
+                    topNav.classList.remove('shadow-xl');
                 }
             },
             closeMenu()
