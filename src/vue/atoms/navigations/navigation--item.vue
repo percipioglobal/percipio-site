@@ -20,7 +20,7 @@
             tabindex="0"
             :aria-current="isCurrent ? 'page' : null"
         >
-            <span class="py-3 px-4 relative z-10 hover:text-blue-800 focus:text-blue-800 transition duration-300 flex justify-end items-center">
+            <span class="py-3 relative z-10 hover:text-blue-800 focus:text-blue-800 transition duration-300 flex justify-end items-center">
                 {{ item.target[0].title }}
             </span>
         </a>

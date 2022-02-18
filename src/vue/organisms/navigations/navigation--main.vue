@@ -13,7 +13,7 @@
                     <slot></slot>
                 </div>
                 
-                <div class="hidden lg:flex ml-auto">
+                <div class="hidden lg:flex space-x-10 ml-auto">
                     <navigation--item v-for="item in getNavigationPrimary" :item="item" :key="item.id"></navigation--item>
                 </div>
 
