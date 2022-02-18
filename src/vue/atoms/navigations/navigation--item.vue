@@ -2,7 +2,7 @@
     <div>
         <button 
             v-if="item.target[0].typeHandle == 'contactPage'" 
-            class="group relative block text-right capitalize text-base font-bold border-2 border-blue-600 text-blue-600 transition duration-300"
+            class="group relative mt-3 lg:mt-0 float-right lg:float-none block text-right capitalize text-base font-bold border-2 border-blue-600 text-blue-600 transition duration-300"
         >
             <div class="py-3 px-4 absolute z-10 bg-white-100 w-full h-full group-hover:bg-blue-600 group-hover:opacity-10 group-focus:bg-blue-600 group-focus:opacity-20"></div>
             
