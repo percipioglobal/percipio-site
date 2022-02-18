@@ -1,10 +1,9 @@
 <template>
 
     <div>
-        <nav :class="[
-                'fixed z-20 w-full bg-white-100 transition-all duration-500 ease-in-out',
-                showNavigation === true || getNavigationActive ? 'top-0' : '-top-full'
-            ]"
+        <nav 
+            id="top-nav"
+            class="fixed z-20 w-full bg-white-100 transition-all duration-500 ease-in-out"
             @blur="closeMenu"
         >
 
@@ -46,11 +45,6 @@
             }
         },
 
-        data: () => ({
-            prevScrollpos: null,
-            showNavigation: true,
-        }),
-
         components: {
             'button--hamburger': () => import(/* webpackChunkName: "button--hamburger" */ '@/vue/atoms/buttons/button--hamburger.vue'),
             'navigation--drawer': () => import(/* webpackChunkName: "navigation--drawer" */ '@/vue/organisms/navigations/navigation--drawer.vue'),
@@ -63,16 +57,13 @@
 
         methods: {
             handleScroll(evt){
-                var currentScrollPos = window.pageYOffset;
-                if (this.prevScrollpos > currentScrollPos) {
-                    this.showNavigation = true;
-                } else {
-                    this.showNavigation = false;
-                }
-                this.prevScrollpos = currentScrollPos;
+                const currentScrollPos = window.pageYOffset;
+                const topNav = document.getElementById('top-nav');
 
-                if(this.prevScrollpos < 30){
-                    this.showNavigation = true;
+                if (currentScrollPos > 0) {
+                    topNav.classList.add('shadow-2xl');
+                } else {
+                    topNav.classList.remove('shadow-2xl');
                 }
             },
             closeMenu()
