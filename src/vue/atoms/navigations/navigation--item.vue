@@ -19,7 +19,7 @@
         <a
             v-else
             :href="item.target[0].url"
-            class="block text-right capitalize text-4xl lg:text-base font-bold"
+            class="block w-max ml-auto lg:ml-0 lg:w-auto text-right capitalize text-4xl lg:text-base font-bold"
             :title="item.target[0].title"
             role="menuitem"
             tabindex="0"
@@ -32,7 +32,7 @@
             >
                 {{ item.target[0].title }}
 
-                <hr v-if="isCurrent" class="absolute mt-6 h-0.5 w-full bg-blue-600">
+                <hr v-if="isCurrent" class="absolute mt-10 lg:mt-6 h-0.5 w-full bg-blue-600">
             </span>
         </a>
     </div>
