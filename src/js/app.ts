@@ -52,8 +52,27 @@ const site = async () => {
 
             printPage() {
                 window.print();
+            },
+
+            handleScroll(){
+                const currentScrollPos = window.pageYOffset;
+                const topNav = document.getElementById('top-nav');
+
+                if (currentScrollPos > 0) {
+                    topNav.classList.add('shadow-xl');
+                } else {
+                    topNav.classList.remove('shadow-xl');
+                }
             }
 
+        },
+
+        created () {
+            window.addEventListener('scroll', this.handleScroll);
+        },
+
+        destroyed () {
+            window.removeEventListener('scroll', this.handleScroll);
         },
 
         mounted() {
