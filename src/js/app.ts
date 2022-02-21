@@ -16,6 +16,9 @@ const site = async () => {
         el: '#page-container',
         store,
         components: {
+            'button--hamburger': () => import(/* webpackChunkName: "button--hamburger" */ '@/vue/atoms/buttons/button--hamburger.vue'),
+            'navigation--drawer': () => import(/* webpackChunkName: "navigation--drawer" */ '@/vue/organisms/navigations/navigation--drawer.vue'),
+            'navigation--item': () => import(/* webpackChunkName: "navigation--item" */ '@/vue/atoms/navigations/navigation--item.vue'),
             'navigation--main': () => import(/* webpackChunkName: "navigation--main" */ '@/vue/organisms/navigations/navigation--main.vue'),
             'notification--cookie': () => import(/* webpackChunkName: "notification--cookie" */ '@/vue/molecules/notifications/notification--cookie.vue'),
         },
