@@ -4,7 +4,7 @@
 
 {%- set isCurrent = craft.app.request.absoluteUrl == values.item.target[0].url ? true : false -%}
 
-{%- if values.item.target[0].type.name == 'Contact Page' -%}
+{%- if values.item.target[0].type.handle == 'contactPage' -%}
     <button 
         class="group relative mt-3 lg:mt-0 float-right lg:float-none block text-right capitalize text-4xl lg:text-base font-bold border-2 border-blue-600 text-blue-600 transition duration-300"
         role="menuitem"
