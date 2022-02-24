@@ -26,6 +26,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   4a86f07d-200e-4dbc-a06a-223d9cc5c049: # Images
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: images
@@ -59,6 +60,7 @@ fields:
     translationMethod: site
     type: craft\fields\Assets
   beef2807-f960-414c-9ff2-690d9c30b6a8: # Caption
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: caption
@@ -79,4 +81,4 @@ fields:
     type: craft\fields\PlainText
 handle: galleryImages
 name: 'Image Gallery'
-sortOrder: 7
+sortOrder: 8

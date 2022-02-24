@@ -1,20 +1,11 @@
 field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
 fieldLayouts:
-  7d15571b-c1d6-4a10-ae40-f21cdc67cf8d:
+  c6c05e4b-4197-45b5-96d7-7a8e76563f3b:
     tabs:
       -
         elements:
           -
-            fieldUid: 6fcc732b-3375-496d-92b8-64f3dcc00d00 # Overline
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: e7b63d80-91cc-438a-b670-59cbb778ca14 # Heading
+            fieldUid: 020d5ff3-f24f-48ae-bd4c-ad2beb6b4d8b # Heading
             instructions: null
             label: null
             required: true
@@ -23,7 +14,25 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 31c5270d-1393-4081-ac23-419af7b7b991 # Button
+            fieldUid: 83cafeab-7189-4e6a-8d08-62f9e35de063 # Content
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7bc51fb0-9ad3-4518-bd25-e12e3d2d0acf # Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1e5edb55-fbe5-44a5-8fd2-8f668886557e # Swatch
             instructions: null
             label: null
             required: false
@@ -34,27 +43,23 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  6fcc732b-3375-496d-92b8-64f3dcc00d00: # Overline
-    columnSuffix: null
+  1e5edb55-fbe5-44a5-8fd2-8f668886557e: # Swatch
+    columnSuffix: vzjdausf
     contentColumnType: text
     fieldGroup: null
-    handle: overline
-    instructions: 'Enter an overline for the section heading, a page can contain multiple sections, this is preferably 1 -3 words.'
-    name: Overline
-    searchable: true
+    handle: swatch
+    instructions: ''
+    name: Swatch
+    searchable: false
     settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: null
-      uiMode: normal
+      default: null
+      options: ''
+      palette: Percipio
+      useConfigFile: '1'
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\PlainText
-  31c5270d-1393-4081-ac23-419af7b7b991: # Button
+    type: percipioglobal\colourswatches\fields\ColourSwatches
+  7bc51fb0-9ad3-4518-bd25-e12e3d2d0acf: # Button
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -117,12 +122,12 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
-  e7b63d80-91cc-438a-b670-59cbb778ca14: # Heading
+  020d5ff3-f24f-48ae-bd4c-ad2beb6b4d8b: # Heading
     columnSuffix: null
     contentColumnType: string(480)
     fieldGroup: null
     handle: heading
-    instructions: 'The full heading of the section header'
+    instructions: 'The full heading of the content CTA'
     name: Heading
     searchable: true
     settings:
@@ -137,6 +142,34 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-handle: sectionHeader
-name: 'Section Header'
-sortOrder: 1
+  83cafeab-7189-4e6a-8d08-62f9e35de063: # Content
+    columnSuffix: rkkupdba
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: 'Enter one more paragraphs to create your textual CTA content.'
+    name: Content
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: contentCta
+name: 'Content CTA'
+sortOrder: 5
