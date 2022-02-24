@@ -41,7 +41,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 1e5edb55-fbe5-44a5-8fd2-8f668886557e # Swatch
+            fieldUid: 1e5edb55-fbe5-44a5-8fd2-8f668886557e # Background Color
             instructions: null
             label: null
             required: false
@@ -52,13 +52,13 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  1e5edb55-fbe5-44a5-8fd2-8f668886557e: # Swatch
+  1e5edb55-fbe5-44a5-8fd2-8f668886557e: # Background Color
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: swatch
+    handle: backgroundColor
     instructions: ''
-    name: Swatch
+    name: 'Background Color'
     searchable: false
     settings:
       default: null
