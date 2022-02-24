@@ -63,7 +63,7 @@ fields:
     settings:
       default: null
       options: ''
-      palette: Percipio
+      palette: 'Content CTA'
       useConfigFile: '1'
     translationKeyFormat: null
     translationMethod: none
