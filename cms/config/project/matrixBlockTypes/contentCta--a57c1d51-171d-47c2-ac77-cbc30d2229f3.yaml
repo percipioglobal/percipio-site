@@ -23,6 +23,15 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: 235f6bca-1696-4cae-b788-151de8ea53bf # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: 7bc51fb0-9ad3-4518-bd25-e12e3d2d0acf # Button
             instructions: null
             label: null
@@ -44,7 +53,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   1e5edb55-fbe5-44a5-8fd2-8f668886557e: # Swatch
-    columnSuffix: vzjdausf
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: swatch
@@ -143,7 +152,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   83cafeab-7189-4e6a-8d08-62f9e35de063: # Content
-    columnSuffix: rkkupdba
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: body
@@ -170,6 +179,40 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
+  235f6bca-1696-4cae-b788-151de8ea53bf: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'Select or upload an image to use for this content CTA section.'
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
 handle: contentCta
 name: 'Content CTA'
 sortOrder: 5

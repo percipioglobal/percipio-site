@@ -1,4 +1,4 @@
-dateModified: 1645694306
+dateModified: 1645695464
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -84,6 +84,7 @@ meta:
     94b4d5ac-d7ea-4241-a6cb-92b39f482f99: Common # Common
     151de730-f956-437c-a617-de5725e4c07a: Projects # Projects
     173ee72f-225f-4615-a999-193b8c9c051a: 'Section Header' # Section Header
+    235f6bca-1696-4cae-b788-151de8ea53bf: Image # Image
     247bfb7d-d077-42ee-b2ba-84feb1b3fd19: Content # Content
     302a5592-8085-472e-9356-ab6b1eaf1635: Position # Position
     0314e405-e731-462f-9381-2cfb6ac91134: Images # Images
