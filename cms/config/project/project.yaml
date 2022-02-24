@@ -1,4 +1,4 @@
-dateModified: 1645708166
+dateModified: 1645710906
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -15,7 +15,7 @@ meta:
     1caabc75-eb3c-43a5-bffd-5b3289015e5c: Heading # Heading
     1d22d2ae-5175-4154-b830-51c806bfbf5b: 'Article Body' # Article Body
     1dd95078-7c8a-4ef7-8a16-e33a5341dadb: 'Image Optimisations ' # Image Optimisations 
-    1e5edb55-fbe5-44a5-8fd2-8f668886557e: Swatch # Swatch
+    1e5edb55-fbe5-44a5-8fd2-8f668886557e: 'Background Color' # Background Color
     1eb19599-751e-4136-ac0f-385321fd1f98: Heading # Heading
     1ecbeef5-820f-4123-a8db-30daae3cd4f7: Images # Images
     2a330c0b-da7f-419f-8c53-dc54b61ba3e1: Button # Button
