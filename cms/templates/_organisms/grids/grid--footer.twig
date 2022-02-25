@@ -1,27 +1,15 @@
 {% import '_macros/atoms' as render %}
 
-<div class="-mx-{{- spacing }} flex justify-around flex-col lg:flex-row text-gray-700">
+<div class="flex justify-around flex-col lg:flex-row text-gray-700">
     {% include "_molecules/griditems/griditem--footer" with {
-        width: "6/12",
-        color: "blue",
-        spacing,
-        type: "catchphrase",
+        width: "1/2",
+        type: "location",
         title: seomatic.site.identity.genericName ??? branding.organisationName,
-        align: 'left',
-    } %}
-    {# {% include "_molecules/griditems/griditem--footer" with {
-        width: "6/12",
-        color: "red",
-        spacing,
+    } -%}
+
+    {% include "_molecules/griditems/griditem--footer" with {
+        width: "1/2",
         type: "subscribe",
         title: "Newsletter",
-    } %} #}
-    {% include "_molecules/griditems/griditem--footer" with {
-        width: "6/12",
-        color: "purple",
-        spacing,
-        type: "contact",
-        title: "Contact",
-        align: 'right',
-    } %}
+    } -%}
 </div>
