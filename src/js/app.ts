@@ -16,7 +16,9 @@ const site = async () => {
         el: '#page-container',
         store,
         components: {
-            'navigation--main': () => import(/* webpackChunkName: "navigation--main" */ '@/vue/organisms/navigations/navigation--main.vue'),
+            'button--hamburger': () => import(/* webpackChunkName: "button--hamburger" */ '@/vue/atoms/buttons/button--hamburger.vue'),
+            'navigation--drawer': () => import(/* webpackChunkName: "navigation--drawer" */ '@/vue/organisms/navigations/navigation--drawer.vue'),
+            'navigation--item': () => import(/* webpackChunkName: "navigation--item" */ '@/vue/atoms/navigations/navigation--item.vue'),
             'notification--cookie': () => import(/* webpackChunkName: "notification--cookie" */ '@/vue/molecules/notifications/notification--cookie.vue'),
         },
 
@@ -49,8 +51,27 @@ const site = async () => {
 
             printPage() {
                 window.print();
+            },
+
+            handleScroll(){
+                const currentScrollPos = window.pageYOffset;
+                const topNav = document.getElementById('top-nav');
+
+                if (currentScrollPos > 0) {
+                    topNav.classList.add('shadow-xl');
+                } else {
+                    topNav.classList.remove('shadow-xl');
+                }
             }
 
+        },
+
+        created () {
+            window.addEventListener('scroll', this.handleScroll);
+        },
+
+        destroyed () {
+            window.removeEventListener('scroll', this.handleScroll);
         },
 
         mounted() {

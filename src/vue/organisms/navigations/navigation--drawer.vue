@@ -1,7 +1,7 @@
 <template>
     <aside
         :class="[
-            'transform inset-0 bg-white-90 min-h-screen fixed h-full ease-in-out transition-opacity duration-300 -z-10',
+            'lg:hidden transform inset-0 bg-white-90 min-h-screen fixed h-full ease-in-out transition-opacity duration-300 -z-10',
             getNavigationActive ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full',
             getVacancies ? 'pt-24' : 'pt-32'
         ]"
