@@ -7,20 +7,6 @@
 	{%- if currentSite.handle == 'default' -%}
 		{%- include '_molecules/footers/footer--clients' -%}	
 	{%- endif -%}
-
-	{%- include '_organisms/content/cta--content' with { 
-			content: {
-				heading: 'Work with us',
-				body: 'We would love to work with you',
-				image: placeholders.teaserPlaceholder,
-				ratio: '',
-				button: {
-					url: '/contact-us',
-					customText: 'Contact',
-				}
-			}
-		} 
-	-%}
 	
 	<div class="container mx-auto max-w-screen-xl">
 		<div class="pt-10 pb-8 md:pt-16">
