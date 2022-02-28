@@ -18,22 +18,22 @@
 
         <aside class="clearfix {{- values.position =='left' ? 'float-left' : 'float-right' -}}">
 
-            <blockquote {{ values.source ? 'cite="'~ values.source.getText() ~ '"' : '' }}>
+            <blockquote {{ (options.source ? 'cite="'~ options.source.getText(options.source.getUrl()) ~ '"' : '')|raw }}>
 
                 <p>
                     {{- render.atom('text', 'content', { content: values.content }) -}}
                 </p>
 
-                {%- if values.source -%}
+                {%- if options.source -%}
 
                     <footer>
                         <a 
-                            href="{{- values.source.getUrl() -}}"
+                            href="{{- options.source.getUrl() -}}"
                             data-tag-category="quote" 
                             data-tag-action="click" 
-                            data-tag-label="{{- values.source.getUrl() -}}"
+                            data-tag-label="{{- options.source.getUrl() -}}"
                         >
-                            {{- values.source.getText() -}}
+                            {{- options.source.getText(options.source.getUrl()) -}}
                         </a>
                     </footer>
 
