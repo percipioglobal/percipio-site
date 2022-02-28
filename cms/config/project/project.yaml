@@ -1,4 +1,4 @@
-dateModified: 1644915051
+dateModified: 1645710906
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -15,9 +15,11 @@ meta:
     1caabc75-eb3c-43a5-bffd-5b3289015e5c: Heading # Heading
     1d22d2ae-5175-4154-b830-51c806bfbf5b: 'Article Body' # Article Body
     1dd95078-7c8a-4ef7-8a16-e33a5341dadb: 'Image Optimisations ' # Image Optimisations 
+    1e5edb55-fbe5-44a5-8fd2-8f668886557e: 'Background Color' # Background Color
     1eb19599-751e-4136-ac0f-385321fd1f98: Heading # Heading
     1ecbeef5-820f-4123-a8db-30daae3cd4f7: Images # Images
     2a330c0b-da7f-419f-8c53-dc54b61ba3e1: Button # Button
+    2c244265-381c-45ad-b439-7845b814e5ee: Resources # Resources
     2cb6fb1e-761a-4096-ba9d-e151495efc98: Caption # Caption
     3a030d4d-66bf-4bff-af6b-a3366b617b7e: 'Image Gallery' # Image Gallery
     3a3a038a-b887-45f4-8850-96f3b78060f2: Width # Width
@@ -35,14 +37,18 @@ meta:
     05e07097-2450-4ce9-9bf6-a198b2c1470a: Containerise # Containerise
     6a3feb81-50ce-467a-8aca-b5d4cc12aed0: Description # Description
     6ba3a39a-5d6c-488d-bcab-d047d0942b0e: Swatch # Swatch
+    6c47b7b0-71d0-4acb-92d5-6d8624f711fb: Cards # Cards
     6c55f6b0-899a-471f-ae96-b7b9f941abce: Link # Link
     6e609ef7-3af9-4b0e-a278-18e9ed97736e: Heading # Heading
     6f97421f-a077-4f86-ac71-61c6f9cd5bef: 'Quote Source' # Quote Source
     6fcc732b-3375-496d-92b8-64f3dcc00d00: Overline # Overline
     07a123c0-4e8e-4c19-a79e-61829f5d88c0: Builders # Builders
+    7b7f1a25-dd1f-40c1-8c62-7af0091d883f: Width # Width
+    7bc51fb0-9ad3-4518-bd25-e12e3d2d0acf: Button # Button
     7efd53bc-5a44-4318-9c45-d1004dc3d932: 'Staff Handbook' # Staff Handbook
     7f94d38a-7e8c-477c-8cca-bff77ee32f0e: 'Hero Image' # Hero Image
     7fb63ae6-c6ee-4824-9213-420e2da4e008: Partners # Partners
+    8a8aa24a-d558-4d4c-83a5-e5983ab32e77: Items # Items
     8ce2faf2-a20a-4547-8145-4e3f9e75eb87: 'Blog Categories' # Blog Categories
     8dba6cfd-fcec-45be-8178-e5334e10aafa: 'Branding Image Placeholder' # Branding Image Placeholder
     08f2a758-d849-407f-afd6-2128f3c67a48: 'Staff Handbook' # Staff Handbook
@@ -52,12 +58,15 @@ meta:
     11cffc84-a18e-49e3-9923-8229743b2a28: Branding # Branding
     014b68dd-cb2e-4a34-a2b4-91eba4de1e16: Code # Code
     018e3292-ac47-4ce5-82c4-ebed80f834b7: 'Handbook Homepage' # Handbook Homepage
+    020d5ff3-f24f-48ae-bd4c-ad2beb6b4d8b: Heading # Heading
     24fd51e7-3c4a-4991-89c1-290d5c79408c: 'Logo Position' # Logo Position
     29d259da-2846-455c-b5ab-ed43e74ae7fa: 'Text Size' # Text Size
     31c5270d-1393-4081-ac23-419af7b7b991: Button # Button
     35a1d959-d78e-4445-891c-7bb671c48281: 'Optimize Teasers' # Optimize Teasers
+    40e441b8-aeac-4f02-878a-60457e5699a8: Position # Position
     040f68f0-b32f-4544-8b97-56d71c7f3428: Ratio # Ratio
     46faf86d-bfa5-4356-bef1-0af3b2a87332: 'Secondary Navigation' # Secondary Navigation
+    47c98ad7-c9a9-402c-9171-9fd14eb7e8f4: 'Highlight Cards' # Highlight Cards
     48f153ba-ba26-42dd-b297-c5b428cc259b: Image # Image
     49d732ef-0bfc-46c0-ba09-004de008c0ba: Ratio # Ratio
     54daa4d7-b5cf-4458-9e19-67155be19343: 'Organisation Phone' # Organisation Phone
@@ -70,9 +79,12 @@ meta:
     73ee03a9-c989-4d98-bd96-db9bc9cb2a5c: Caption # Caption
     74d5a128-4fbc-4ea8-a7d7-c828e87680ff: 'Organisation Address Region' # Organisation Address Region
     74f6b1ab-d7f2-4df1-89fe-1601cf0697a0: Navigation # Navigation
+    75b2db97-9323-4a3f-9865-e3b6d2f3e785: 'Basic Slider' # Basic Slider
+    83cafeab-7189-4e6a-8d08-62f9e35de063: Content # Content
     94b4d5ac-d7ea-4241-a6cb-92b39f482f99: Common # Common
     151de730-f956-437c-a617-de5725e4c07a: Projects # Projects
     173ee72f-225f-4615-a999-193b8c9c051a: 'Section Header' # Section Header
+    235f6bca-1696-4cae-b788-151de8ea53bf: Image # Image
     247bfb7d-d077-42ee-b2ba-84feb1b3fd19: Content # Content
     302a5592-8085-472e-9356-ab6b1eaf1635: Position # Position
     0314e405-e731-462f-9381-2cfb6ac91134: Images # Images
@@ -87,13 +99,17 @@ meta:
     712cce4e-490d-44b8-bf2c-5d00c2de4c40: Assets # Assets
     0827c9dd-2ea2-4e98-b743-3161e028a304: 'FAQ Category' # FAQ Category
     870c07d7-9341-4f1f-825b-25c76239bc0d: Caption # Caption
+    924c71a7-4d25-4b3b-9a46-2b1ea495cefe: 'Text Grid' # Text Grid
     1572f461-2a67-47a4-a36c-80839168bcb7: Globals # Globals
     2473fef2-babd-4336-bb2e-550dc284282c: FAQ # FAQ
     04094ed4-0df3-4175-9f40-cbbe84cffa6b: SEO # SEO
     4133e37a-d625-476e-91aa-a600e0123064: 'Quote Source' # Quote Source
+    4610a356-a212-46cd-a7a1-6286620e89ef: 'Grid Item' # Grid Item
     5053ff27-8e1b-49ea-85c6-c2a1dece3b8e: 'Body Content' # Body Content
+    6325f925-feea-4e28-b6ec-7630d3e70cc8: Embed # Embed
     6962a9b1-b802-4295-82b1-398470a9f54c: Author # Author
     7127ef72-a077-470d-8d8d-96b29a40a27a: 'Logo Position' # Logo Position
+    8242f176-ff64-4969-8ece-037c27beea0a: Standfirst # Standfirst
     8504d7aa-ffd4-42c5-932d-221e2c5e7b29: Buttons # Buttons
     9475b42a-7657-4e3f-9d5b-1e1b5a1732ca: Swatch # Swatch
     9806bc10-174e-4280-b2a8-c684b99a3139: 'Optimize Profile Images' # Optimize Profile Images
@@ -103,6 +119,7 @@ meta:
     34000b23-2325-400f-a43f-958941335fe3: 'Project Categories' # Project Categories
     45539eda-7272-4a6b-b4a2-2b629a2742ec: Caption # Caption
     53319d58-a830-47a6-b6b4-47a0081f6deb: Quotation # Quotation
+    60380d2b-c803-4fab-8aed-752e3268b5f5: 'Content Grid' # Content Grid
     64547f99-7471-496a-8b02-5d48e09a72f9: 'Social Media' # Social Media
     73929e5d-0eaa-424c-8cd1-ce83b47fd733: 'Page Builder' # Page Builder
     78023dfa-3c9e-47d1-bedc-b6fa76c9d751: 'Teaser Image Placeholder' # Teaser Image Placeholder
@@ -119,11 +136,14 @@ meta:
     6261508f-6848-476e-a5d1-1ffe3acafb5c: 'Optimize Heroes' # Optimize Heroes
     6834194e-43c0-464b-9333-a15bd914d9d3: 'Project Categories' # Project Categories
     12311739-6ceb-4fb4-a572-7f2ea0ad3b69: Documents # Documents
+    18802253-9492-45f9-94a3-1d4c9b68c027: Swatch # Swatch
     36002316-c250-47f4-8b9d-d92b08d33fa7: 'Spotlight Cards' # Spotlight Cards
     76099428-f3d4-42a7-9bb8-08f425b41461: 'Organisation Name' # Organisation Name
     a2aa1ca5-9822-4918-9c36-9b612669921b: Placeholders # Placeholders
     a5cb77be-c4d9-4d3e-88fb-d5384ca13941: 'Error Image' # Error Image
     a9df6c46-5d2c-4b29-96f7-4490417448b6: 'The Question' # The Question
+    a23c9a51-65d8-446d-b01a-222c2403d805: Media # Media
+    a57c1d51-171d-47c2-ac77-cbc30d2229f3: 'Content CTA' # Content CTA
     ab91f872-7263-4250-b647-317386f8f679: 'Organisation Address' # Organisation Address
     ae2f2577-98ad-4416-afb0-0a136fd1680d: Location # Location
     aee87c60-8ff1-4121-95d8-e29d940f8537: Limit # Limit
@@ -141,12 +161,14 @@ meta:
     bbb59518-7cdc-4a7f-b07c-cd6b1fa8201d: Users # Users
     bc1fcbcc-41d9-4390-a366-5285be08d482: Cookie # Cookie
     bc99b68d-e1ef-4e2c-8670-e0edbe3cf507: 'Staff Handbook' # Staff Handbook
+    bcca818c-5cb3-4998-8165-95f5c9929f23: Standfirst # Standfirst
     beef2807-f960-414c-9ff2-690d9c30b6a8: Caption # Caption
     c0083422-e548-49c9-9db5-a2477942038d: 'Job Role' # Job Role
     c014f72e-6101-4377-a9e4-bbea0f16bce8: Placeholders # Placeholders
     c66a07bc-ece1-4d0c-b7a7-e4922603cabf: 'Hero Placeholder' # Hero Placeholder
     cb2b1336-5ccd-48f4-a973-72fae9fd4069: 'Meta Image' # Meta Image
     cbbbac66-4ad4-4edc-b9fe-ef597989736f: 'Sort order' # Sort order
+    cc4d5589-5884-4fb2-ba84-ffb388a8806e: Slides # Slides
     ce64c3ac-ec79-4405-98a9-aea16011e258: Width # Width
     d08a0d16-0e00-49e6-9cd4-465fa2d65d7d: Errors # Errors
     d08d0466-34f4-441b-acd1-439b514f3810: 'Profile Photo Placeholder' # Profile Photo Placeholder
@@ -166,6 +188,7 @@ meta:
     dffe2f47-18b7-4dcb-845d-2d88fa0378c3: 'Organisational Information' # Organisational Information
     e0ee7443-387e-4be3-a64f-3c5ae52be354: 'Organisation Email' # Organisation Email
     e0745046-9bad-4922-8da8-7f677ba84909: 'Legal Navigation' # Legal Navigation
+    e2c376a5-8341-40da-993a-68704f00171e: 'Resource List' # Resource List
     e4fa92d0-02c7-4c27-9eb2-782fb6603654: Width # Width
     e6d658aa-c335-4f15-bbcd-59fe05d9e913: 'Error Text' # Error Text
     e7b63d80-91cc-438a-b670-59cbb778ca14: Heading # Heading
@@ -318,5 +341,5 @@ system:
   live: true
   name: 'Percipio Global Ltd.'
   retryDuration: null
-  schemaVersion: 3.7.32
+  schemaVersion: 3.7.33
   timeZone: Europe/London

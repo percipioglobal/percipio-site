@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 4610a356-a212-46cd-a7a1-6286620e89ef
+            fieldUid: 4610a356-a212-46cd-a7a1-6286620e89ef # Grid Item
             instructions: null
             label: null
             required: true
@@ -16,7 +16,8 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  4610a356-a212-46cd-a7a1-6286620e89ef:
+  4610a356-a212-46cd-a7a1-6286620e89ef: # Grid Item
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: items
@@ -52,6 +53,7 @@ fields:
       maxRows: ''
       minRows: '2'
       placeholderKey: null
+      propagationKeyFormat: null
       propagationMethod: all
       selectionLabel: 'Add a grid item'
       staticField: ''

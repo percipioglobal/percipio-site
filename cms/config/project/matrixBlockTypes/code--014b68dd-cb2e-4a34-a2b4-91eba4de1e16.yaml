@@ -35,6 +35,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   73ee03a9-c989-4d98-bd96-db9bc9cb2a5c: # Caption
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: caption
@@ -54,6 +55,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   633b1b96-cdb8-4c97-a045-aa63d306b41c: # Language
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: codeLanguage
@@ -221,6 +223,7 @@ fields:
     translationMethod: none
     type: craft\fields\Dropdown
   b43847a9-d877-4a56-ba8e-39f6c25c85cb: # Code
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: code
@@ -241,4 +244,4 @@ fields:
     type: craft\fields\PlainText
 handle: code
 name: Code
-sortOrder: 13
+sortOrder: 14

@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 8a8aa24a-d558-4d4c-83a5-e5983ab32e77
+            fieldUid: 8a8aa24a-d558-4d4c-83a5-e5983ab32e77 # Items
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 7b7f1a25-dd1f-40c1-8c62-7af0091d883f
+            fieldUid: 7b7f1a25-dd1f-40c1-8c62-7af0091d883f # Width
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 18802253-9492-45f9-94a3-1d4c9b68c027
+            fieldUid: 18802253-9492-45f9-94a3-1d4c9b68c027 # Swatch
             instructions: null
             label: null
             required: false
@@ -34,7 +34,8 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  7b7f1a25-dd1f-40c1-8c62-7af0091d883f:
+  7b7f1a25-dd1f-40c1-8c62-7af0091d883f: # Width
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: width
@@ -84,7 +85,8 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: rias\widthfieldtype\fields\Width
-  8a8aa24a-d558-4d4c-83a5-e5983ab32e77:
+  8a8aa24a-d558-4d4c-83a5-e5983ab32e77: # Items
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: items
@@ -113,13 +115,15 @@ fields:
       maxRows: ''
       minRows: ''
       placeholderKey: null
+      propagationKeyFormat: null
       propagationMethod: all
       selectionLabel: ''
       staticField: ''
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-  18802253-9492-45f9-94a3-1d4c9b68c027:
+  18802253-9492-45f9-94a3-1d4c9b68c027: # Swatch
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: swatch
@@ -127,6 +131,8 @@ fields:
     name: Swatch
     searchable: false
     settings:
+      default: null
+      options: ''
       palette: Percipio
       useConfigFile: '1'
     translationKeyFormat: null
@@ -134,4 +140,4 @@ fields:
     type: percipioglobal\colourswatches\fields\ColourSwatches
 handle: grid
 name: 'Text Grid'
-sortOrder: 12
+sortOrder: 13
