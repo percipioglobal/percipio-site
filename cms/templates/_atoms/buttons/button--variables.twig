@@ -11,19 +11,17 @@
 #}
 
 {%- set values = {
-    url: options.url ??? null,
-    text: options.text ??? '',
+    active: options.active ?? false,
+    disabled: options.disabled ?? false,
     icon: options.icon ??? null,
+    ga: {
+        category: options.ga.category ?? null,
+        action: options.ga.action ?? null,
+        label: options.ga.label ?? null,
+    },
+    text: options.text ??? '',
+    url: options.url ??? null,
     utilities: options.utilities ??? null,
-    size: options.size ??? 'large',
-    swatch: options.swatch ??? null,
-    gaCategory: options.gaCategory ??? null,
-    gaAction: options.gaAction ??? null,
-    gaLabel: options.gaLabel ??? null,
-    target: options.target ??? null,
-    inverted: options.inverted ??? false,
-    type: options.type ??? 'link',
-    outlined: options.outlined ??? false,
 } -%}
 
 {%- block button -%}

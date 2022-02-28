@@ -1,4 +1,5 @@
 {% extends "_boilerplate/_layouts/generic-page-layout.twig" %}
+{%- import '_macros/atoms' as render -%}
 
 {%- set projects = craft.entries.section('work')
     .orderBy('postDate desc')
@@ -9,19 +10,42 @@
 
 {% block headLinks %}
     {{ parent() }}
-    <link rel="amphtml" href="{{ siteUrl('/amp') }}">
 {% endblock headLinks %}
 
 {% block content %}
-    {%- include '_organisms/builders/hero--builder' with {
+    {# {%- include '_organisms/builders/hero--builder' with {
         content: entry,
-    } -%}
+    } -%} #}
 
-    <div id="page">
+    <div class="max-w-md flex flex-col mx-auto space-y-4">
+
+    {{- render.atom('button', 'secondary-outline', { 
+        text: 'Normal',
+        url: 'https://google.com',
+        ga: {
+            category: 'navigation',
+            action: 'click',
+            label: 'test'
+        }
+    }) -}}
+
+    {{- render.atom('button', 'primary-outline', { 
+        text: 'Normal',
+        url: 'https://google.com',
+        ga: {
+            category: 'navigation',
+            action: 'click',
+            label: 'test'
+        }
+    }) -}}
+
+    </div>
+
+    {# <div id="page">
         {%- include '_organisms/builders/page--builder' with {
             content: entry,
         } -%}
-    </div>
+    </div> #}
 {% endblock %}
 
 {% block subcontent %}
