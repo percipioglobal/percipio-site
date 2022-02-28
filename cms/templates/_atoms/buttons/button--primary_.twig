@@ -28,6 +28,7 @@
             {{ values.gaLabel ? 'data-tag-label=' ~ values.gaLabel : '' }}
             {{ values.target ? 'target=' ~ values.target : '' }}
             aria-label="{{- values.text -}}"
+            title="{{- values.text -}}"
             class="inline-flex items-center space-x-3.5 px-4 py-3 font-bold text-white-100 transition ease-in-out duration-300 bg-pink-600 hover:bg-pink-800 focus:bg-pink-600 active:bg-pink-600 {{ values.utilities ? values.utilities : '' -}}"
         >
 
