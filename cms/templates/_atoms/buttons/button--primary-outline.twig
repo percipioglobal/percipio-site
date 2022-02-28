@@ -15,9 +15,13 @@
         {{ parse.ga(options.ga) -}}
     >
 
-        <span class="inline-block {{ values.active and not values.cta ? 'border-b border-pink-600' : '' -}}">
+        <span class="inline-flex">
             {{- values.text -}}
         </span>
+
+        {%- if values.icon.type -%}
+            {{- parse.icon(values.icon) -}}
+        {%- endif -%}
 
     </a>
 {%- endblock -%}
