@@ -1,4 +1,4 @@
-field: cc4d5589-5884-4fb2-ba84-ffb388a8806e
+field: cc4d5589-5884-4fb2-ba84-ffb388a8806e # Slides
 fieldLayouts:
   1250dda9-6a10-41e5-9491-8e054eb76d83:
     tabs:
@@ -26,6 +26,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   085923fe-5934-4d01-a2fd-ec625094c005: # Caption
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: caption
@@ -45,6 +46,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   f3960fae-d20a-4473-9a73-315dfed31760: # Image
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: image

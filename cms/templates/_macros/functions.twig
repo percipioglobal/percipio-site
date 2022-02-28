@@ -48,6 +48,16 @@
     {% endspaceless %}
 {% endmacro %}
 
+{# fetch an icon from the Font Awesome library #}
+{%- macro fa_icon_lut(type) -%}
+	{%- set lut = {
+        'arrow-right-long': 'far fa-long-arrow-right',
+	} -%}
+	{%- spaceless -%}
+		{{- lut[type] ??? 'fas fa-hashtag' -}}
+	{%- endspaceless -%}
+{%- endmacro -%}x
+
 {# Add blocks for different embedded asset types #}
 {%- macro embed(asset) -%}
 	{% import '_macros/atoms' as render %}

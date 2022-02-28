@@ -183,6 +183,28 @@ return [
                 ]
             ],
         ],
+        'Content CTA' => [  // custom label
+            [
+                'label'   => 'blue',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#1c64f2',  // the colour shown in the fieldtype (required)
+                        'class'     => 'blue-600', // custom attribute
+                    ],
+                ]
+            ],
+            [
+                'label'   => 'pink',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#d61f69',  // the colour shown in the fieldtype (required)
+                        'class'     => 'pink-600', // custom attribute
+                    ],
+                ]
+            ],
+        ],
     ]
 
 ];

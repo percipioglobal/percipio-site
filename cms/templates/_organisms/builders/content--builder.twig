@@ -7,6 +7,7 @@
     'contentBuilder.highlightCards:cards.projectCategories',
     'contentBuilder.highlightCards:cards.teaserImage',
     'contentBuilder.contentGrid:items',
+    'contentBuilder.contentCta',
     'contentBuilder.sectionHeader:buttons',
     'contentBuilder.singleImage:image',
     'contentBuilder.galleryImages:images',
@@ -63,6 +64,12 @@
                         } -%}
 
                     {%- endif -%}
+
+                {%- case "contentCta" -%}
+
+                    {%- include '_organisms/content/cta--content' ignore missing with {
+                        content: block,
+                    } -%}
 
                 {%- case "contentGrid" -%}
 

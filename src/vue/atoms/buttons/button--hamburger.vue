@@ -1,7 +1,7 @@
 <template>
     <button 
         @click.prevent="toggleMenu"
-        class="ml-auto" 
+        class="ml-auto lg:hidden" 
         aria-label="Open or close navigation"
         :aria-expanded="getNavigationActive ? 'true' : 'false'"
         ref="buttonHamburger"

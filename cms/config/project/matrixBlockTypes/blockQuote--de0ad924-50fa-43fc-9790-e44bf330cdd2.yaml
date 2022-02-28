@@ -80,6 +80,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   1b99a854-98db-4e61-b98d-3c4e357b1e85: # Containerise
+    columnSuffix: null
     contentColumnType: boolean
     fieldGroup: null
     handle: containerise
@@ -94,6 +95,7 @@ fields:
     translationMethod: none
     type: craft\fields\Lightswitch
   3ef3485e-6187-4dac-af6b-66d630852b61: # Quote
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: quote
@@ -113,6 +115,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   4ee5d848-5fee-407d-a3aa-7475ef0fe6bc: # Width
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: width
@@ -163,6 +166,7 @@ fields:
     translationMethod: none
     type: rias\widthfieldtype\fields\Width
   6ba3a39a-5d6c-488d-bcab-d047d0942b0e: # Swatch
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: swatch
@@ -170,12 +174,15 @@ fields:
     name: Swatch
     searchable: false
     settings:
+      default: null
+      options: ''
       palette: Percipio
       useConfigFile: '1'
     translationKeyFormat: null
     translationMethod: none
     type: percipioglobal\colourswatches\fields\ColourSwatches
   4133e37a-d625-476e-91aa-a600e0123064: # Quote Source
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: quoteSource
@@ -238,6 +245,7 @@ fields:
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
   7127ef72-a077-470d-8d8d-96b29a40a27a: # Logo Position
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: position
@@ -270,6 +278,7 @@ fields:
     translationMethod: none
     type: rias\positionfieldtype\fields\Position
   ebc9bc3a-83e6-4cab-956d-f254a119f606: # Show Logo
+    columnSuffix: null
     contentColumnType: boolean
     fieldGroup: null
     handle: showLogo
@@ -284,6 +293,7 @@ fields:
     translationMethod: none
     type: craft\fields\Lightswitch
   f7cf0694-24fa-4e41-943b-40abaddc797a: # Quote Author
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: quoteAuthor
@@ -304,4 +314,4 @@ fields:
     type: craft\fields\PlainText
 handle: blockQuote
 name: Quotation
-sortOrder: 5
+sortOrder: 6

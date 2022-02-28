@@ -1,15 +1,46 @@
 {# TODO: Need to parse colours #}
-{% import '_macros/atoms' as render %}
+{%- import '_macros/atoms' as render -%}
 
-<navigation--main :swatch="{{- swatch|json_encode -}}">
-    {{- render.atom('link', 'home', { 
-    
-        url: baseUrl,
-        title: branding.organisationName,
-        logo: branding.icon[0].extension == 'svg' ? branding.icon[0] : null ??? null,
-        utilities: 'w-16 h-16',
-        placeholder: placeholder,
-        swatch: swatch,
+{%- set navigation = craft.entries.section('navigation')
+    .orderBy('postDate')
+    .with(['target'])
+    .all()
+-%}
 
-    }) -}}
-</navigation--main>
+{%- set swatch = {
+    primary: 'pink-600',
+    secondary: 'blue-600'
+} -%}
+
+<nav id="top-nav" class="fixed z-20 w-full bg-white-100 transition-all duration-500 ease-in-out">
+
+    <div class="container mx-auto max-w-screen-2xl flex items-center py-3">
+        <div>
+            {{- render.atom('link', 'home', { 
+                url: baseUrl,
+                title: branding.organisationName,
+                logo: branding.icon[0].extension == 'svg' ? branding.icon[0] : null ??? null,
+                utilities: 'w-16 h-16',
+                placeholder: placeholder,
+                swatch: swatch,
+            }) -}}
+        </div>
+        
+        <div class="hidden lg:flex lg:space-x-10 ml-auto">
+            {%- for item in navigation -%}
+                {{- render.atom('navigation', 'item', { item: item }) -}}
+            {%- endfor -%}
+        </div>
+
+        <div>
+            <a href="#page" role="button" tabindex="0" class="absolute left:0 top-sr w-1 h-1 overflow-hidden focus:static focus:w-auto focus:h-auto focus:overflow-visible">
+                Skip navigation
+            </a>
+        </div>
+
+        <button--hamburger :swatch="{{ swatch|json_encode }}"></button--hamburger>
+
+        <navigation--drawer :swatch="{{ swatch|json_encode }}"></navigation--drawer>
+    </div>
+
+</nav>
