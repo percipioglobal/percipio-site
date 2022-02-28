@@ -2,17 +2,17 @@
 {%- import '_macros/functions' as parse -%}
 
 {%- block button -%}
-    <a 
+    <a
         href="{{- values.url -}}"
         class="
-            capitalize inline-flex items-center justify-center text-base font-bold py-3 px-4 transition-colors 
-            {{ values.active ? 'text-pink-600' : '' }} 
+            capitalize inline-flex items-center justify-center text-base font-bold py-3 px-4 transition-colors
+            {{ values.active ? 'text-pink-600' : '' }}
             border-2 border-pink-600 text-pink-600 hover:bg-pink-600 hover:bg-opacity-10
-            {{ values.disabled ? 'pointer-events-none bg-opacity-10 text-opacity-20 border-opacity-20' : '' }}    
+            {{ values.disabled ? 'pointer-events-none bg-opacity-10 text-opacity-20 border-opacity-20' : '' }}
         "
-        role="menuitem"
-        {{ values.active ? 'aria-current="page"' : '' }}
-        {{ parse.ga(options.ga) -}}
+        title="{{- values.text -}}"
+        aria-label="{{- values.text -}}"
+        {{ parse.ga(values.ga) -}}
     >
 
         <span class="inline-block {{ values.active and not values.cta ? 'border-b border-pink-600' : '' -}}">
