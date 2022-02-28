@@ -23,7 +23,6 @@
 
         <a
             {{ values.url ? 'href=' ~ values.url : '' }}
-            {{ values.target ? 'target=' ~ values.target : '' }}
             aria-label="{{- values.text -}}"
             title="{{- values.text -}}"
             {{ parse.ga(options.ga) -}}
