@@ -31,7 +31,6 @@ services:
     tty: true
     volumes: &php-volumes
       # Change the path below to map to your local plugin repositories
-      - /Users/michtio/dev/craft-plugins:/Users/michtio/dev/craft-plugins
       - cpresources:/var/www/project/cms/web/cpresources:delegated
       - storage:/var/www/project/cms/storage:delegated
       - ./cms:/var/www/project/cms:cached

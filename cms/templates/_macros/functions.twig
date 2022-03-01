@@ -103,3 +103,14 @@
     {%- endspaceless -%}
 
 {%- endmacro -%}
+
+{# Parse fa icon #}
+{%- macro icon(options) -%}
+
+    {%- spaceless -%}
+        <span class="inline-flex ml-4 text-2xl {{ options.utilities -}}">
+            <i class="{{ options.type -}}"></i>
+        </span>
+    {%- endspaceless -%}
+
+{%- endmacro -%}
