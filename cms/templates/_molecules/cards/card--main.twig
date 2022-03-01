@@ -1,37 +1,36 @@
 {%- import '_macros/atoms' as render -%}
 
+{%- set swatch = content.swatch -%}
+
 {%- minify -%}
-    <div class="container mx-auto max-w-screen-lg">
-        {# <div class="grid grid-cols-3">
-            
-
-        </div> #}
-
-        <div class="bg-white-100 shadow-xl">
+    <div class="group card-cta bg-white-100 shadow-lg transition-shadow duration-500 ease-in-out hover:shadow-2xl border-b-8 border-{{ swatch -}}">
+        
+        <div class="teaser overflow-hidden">
             {{- render.atom('image', 'teaser', {
                     image: placeholders.teaserPlaceholder,
                     sizes: sizes ??? sizes,
                     alt: 'test',
+                    animation: 'scale',
                     ratio: 'aspect-video',
                     placeholders: placeholders,
                 })
             -}}
+        </div>
 
-            <div class="py-8 px-6">
-                {{- render.atom('text', 'card-title', { 
-                        content: content.title,
-                    }) 
-                -}}
-                
-                {{- render.atom('text', 'category-group', { 
-                        categories: [
-                            'Web development',
-                            'Design'
-                        ],
-                        utilities: 'pt-4'
-                    }) 
-                -}}
-            </div>
+        <div class="py-8 px-6">
+            {{- render.atom('text', 'card-title', { 
+                    content: content.title,
+                }) 
+            -}}
+            
+            {{- render.atom('text', 'category-group', { 
+                    categories: [
+                        'Web development',
+                        'Design'
+                    ],
+                    utilities: 'pt-4'
+                }) 
+            -}}
         </div>
     </div>
 {%- endminify -%}
