@@ -1,0 +1,24 @@
+{% extends "_atoms/texts/text--variables" %}
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### OPTIONS ###
+    ---------------
+
+    content: (STR) -- the actual content as a string
+    utilities: (STR) -- TW utility classes to be applied for the text container, overrides default settings
+
+#}
+
+{% block text %}
+    {%- minify -%}
+        <div class="flex space-x-1 pt-4 {{ values.utilities -}}">
+            {%- if values.categories -%}
+                {%- for category in values.categories -%}
+                    {{- render.atom('text', 'category', { category: category })  -}}
+                    {{- loop.last ? '' : ',' -}}
+                {%- endfor -%}
+            {%- endif -%}
+        </div>
+    {%- endminify -%}
+{% endblock %}

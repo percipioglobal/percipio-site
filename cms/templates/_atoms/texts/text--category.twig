@@ -1,0 +1,21 @@
+{% extends "_atoms/texts/text--variables" %}
+
+{#
+    ### OPTIONS ###
+    ---------------
+
+    content: (STR) -- the actual content as a string
+    utilities: (STR) -- TW utility classes to be applied for the text container, overrides default settings
+
+#}
+
+{% block text %}
+    {%- minify -%}
+
+
+        <h5 class="text-gray-900 break-words text-base font-primary font-bold">
+            {{- values.category | typogrify(true) -}}
+        </h5>
+        
+    {%- endminify -%}
+{% endblock %}

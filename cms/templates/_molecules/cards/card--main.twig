@@ -7,7 +7,7 @@
 
         </div> #}
 
-        <div class="bg-white-100">
+        <div class="bg-white-100 shadow-xl">
             {{- render.atom('image', 'teaser', {
                     image: placeholders.teaserPlaceholder,
                     sizes: sizes ??? sizes,
@@ -17,15 +17,21 @@
                 })
             -}}
 
-            {{- render.atom('text', 'card-title', { 
-                    content: content.title,
-                }) 
-            -}}
-
-            {{- render.atom('text', 'card-description', { 
-                    content: content.description,
-                }) 
-            -}}
+            <div class="py-8 px-6">
+                {{- render.atom('text', 'card-title', { 
+                        content: content.title,
+                    }) 
+                -}}
+                
+                {{- render.atom('text', 'category-group', { 
+                        categories: [
+                            'Web development',
+                            'Design'
+                        ],
+                        utilities: 'pt-4'
+                    }) 
+                -}}
+            </div>
         </div>
     </div>
 {%- endminify -%}
