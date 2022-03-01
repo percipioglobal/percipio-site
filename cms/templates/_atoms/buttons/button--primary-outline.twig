@@ -4,12 +4,14 @@
     ### OPTIONS ###
     ---------------
 
-    url: (STR) -- the url for the button
-    text: (STR) -- the text for the button
-    icon: (OBJ) -- the icon for the button ( optional )
-    utlities: (STR) -- the button utility from TW for the last button in the loop
-    target: (STR) -- add _blank if you want to open the button in a new window
+    active: (BOOL) -- Set active button state 
+    disabled: (BOOL) -- Set disabled button state
     ga: (OBJ) -- GTM Tracking object
+    icon: (OBJ) -- the icon for the button ( optional )
+    target: (STR) -- add _blank if you want to open the button in a new window
+    text: (STR) -- the text for the button
+    url: (STR) -- the url for the button
+    utlities: (STR) -- the button utility from TW for the last button in the loop
 #}
 
 {%- import '_macros/functions' as parse -%}
