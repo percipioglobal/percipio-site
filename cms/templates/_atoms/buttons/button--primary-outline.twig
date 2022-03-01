@@ -18,7 +18,8 @@
     <a
         href="{{- values.url -}}"
         class="
-            capitalize inline-flex items-center justify-center text-base font-bold py-3 px-4 transition-colors
+            capitalize inline-flex items-center justify-center self-start px-4 py-3 text-base font-bold
+            transition-colors ease-in-out duration-300
             {{ values.active ? 'text-pink-600' : '' }}
             border-2 border-pink-600 text-pink-600 hover:bg-pink-600 hover:bg-opacity-10
             {{ values.disabled ? 'pointer-events-none bg-opacity-10 text-opacity-20 border-opacity-20' : '' }}
