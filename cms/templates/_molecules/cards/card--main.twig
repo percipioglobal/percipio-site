@@ -1,0 +1,31 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- minify -%}
+    <div class="container mx-auto max-w-screen-lg">
+        {# <div class="grid grid-cols-3">
+            
+
+        </div> #}
+
+        <div class="bg-white-100">
+            {{- render.atom('image', 'teaser', {
+                    image: placeholders.teaserPlaceholder,
+                    sizes: sizes ??? sizes,
+                    alt: 'test',
+                    ratio: 'aspect-video',
+                    placeholders: placeholders,
+                })
+            -}}
+
+            {{- render.atom('text', 'card-title', { 
+                    content: content.title,
+                }) 
+            -}}
+
+            {{- render.atom('text', 'card-description', { 
+                    content: content.description,
+                }) 
+            -}}
+        </div>
+    </div>
+{%- endminify -%}

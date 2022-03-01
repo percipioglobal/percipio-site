@@ -64,6 +64,24 @@
 
     </div>
 
+    <div class="mt-10">
+        {%- include '_molecules/cards/card--main' ignore missing with {
+            content: {
+                overline: 'Test overline',
+                title: 'Test heading',
+                description: 'Test desc'
+            }
+        } -%}
+
+        {# {%- include '_molecules/cards/card--blog' ignore missing with {
+            content: {
+                overline: 'Test overline',
+                title: 'Test heading',
+                description: 'Test desc'
+            }
+        } -%} #}
+    </div>
+
     {# <div id="page">
         {%- include '_organisms/builders/page--builder' with {
             content: entry,
