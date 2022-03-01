@@ -64,22 +64,28 @@
 
     </div>
 
-    <div class="mt-10">
-        {%- include '_molecules/cards/card--main' ignore missing with {
-            content: {
-                overline: 'Test overline',
-                title: 'Test heading',
-                description: 'Test desc'
-            }
-        } -%}
+    <div class="grid grid-cols-2 gap-8 mt-10">
+        <div class="container mx-auto max-w-screen-lg">
+            {%- include '_molecules/cards/card--main' ignore missing with {
+                content: {
+                    title: 'Test heading',
+                    swatch: 'pink-600',
+                    url: 'https://google.com'
+                },
+                ga: {
+                    category: 'card-main',
+                    action: 'click',
+                    label: 'Card main'
+                }
+            } -%}
 
         {# {%- include '_molecules/cards/card--blog' ignore missing with {
             content: {
-                overline: 'Test overline',
                 title: 'Test heading',
                 description: 'Test desc'
             }
         } -%} #}
+        </div>
     </div>
 
     {# <div id="page">

@@ -1,9 +1,10 @@
 {%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as parse -%}
 
 {%- set swatch = content.swatch -%}
 
 {%- minify -%}
-    <div class="group card-cta bg-white-100 shadow-lg transition-shadow duration-500 ease-in-out hover:shadow-2xl border-b-8 border-{{ swatch -}}">
+    <div class="relative group card-cta bg-white-100 shadow-lg transition-shadow duration-500 ease-in-out hover:shadow-2xl border-b-8 border-{{ swatch -}}">
         
         <div class="teaser overflow-hidden">
             {{- render.atom('image', 'teaser', {
@@ -32,5 +33,15 @@
                 }) 
             -}}
         </div>
+
+        <a
+            href="{{- content.url -}}"
+            title="{{- content.title -}}"
+            aria-label="{{- content.title -}}"
+            class="absolute inset-0"
+            {{ parse.ga(ga) -}}
+        >
+            <span class="sr-only">Read more about {{ content.title -}}</span>
+        </a>
     </div>
 {%- endminify -%}
