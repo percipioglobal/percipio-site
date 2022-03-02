@@ -1,4 +1,4 @@
-{% extends "_atoms/texts/text--variables" %}
+{# {% extends "_atoms/texts/text--variables" %} #}
 
 {#
     ### OPTIONS ###
@@ -10,12 +10,16 @@
 #}
 
 {% block text %}
+
+    {%- set category = options.category -%}
+
     {%- minify -%}
 
 
-        <h5 class="text-gray-900 break-words text-base font-primary font-bold">
-            {{- values.category | typogrify(true) -}}
-        </h5>
+        <span class="text-gray-900 break-words text-base font-primary font-bold">
+            {{- category | typogrify(true) -}}
+        </span>
         
     {%- endminify -%}
+
 {% endblock %}

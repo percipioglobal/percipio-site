@@ -22,19 +22,16 @@
             
             {{- render.atom('text', 'category-group', { 
                     categories: content.categories,
-                    utilities: 'pt-4'
+                    utilities: 'mt-4'
                 }) 
             -}}
         </div>
 
-        <a
-            href="{{- content.url -}}"
-            title="{{- content.title -}}"
-            aria-label="{{- content.title -}}"
-            class="absolute inset-0"
-            {{ parse.ga(ga) -}}
-        >
-            <span class="sr-only">Read more about {{ content.title -}}</span>
-        </a>
+        {{- render.atom('link', 'card', {
+                url: 'https://google.com',
+                title: 'Card link',
+                ga: ga
+            })
+        -}}
     </div>
 {%- endminify -%}
