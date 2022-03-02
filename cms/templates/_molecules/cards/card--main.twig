@@ -21,10 +21,7 @@
             {{- render.atom('text', 'card-title', { content: content.title }) -}}
             
             {{- render.atom('text', 'category-group', { 
-                    categories: [
-                        'Web development',
-                        'Design'
-                    ],
+                    categories: content.categories,
                     utilities: 'pt-4'
                 }) 
             -}}
