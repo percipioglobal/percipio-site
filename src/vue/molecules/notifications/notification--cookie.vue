@@ -34,7 +34,7 @@
         </span>
         <div :class="[
             'absolute top-0 left-0 w-full h-full transform -translate-x-full group-hover:-translate-x-0 transition duration-300 ease-blog',
-            'bg-white-100'
+            'bg-white'
         ]"></div>
       </button>
     </div>
