@@ -64,8 +64,8 @@
 
     </div>
 
-    <div class="grid grid-cols-2 gap-8 mt-10">
-        {%- include '_molecules/cards/card--main' ignore missing with {
+    <div class="grid grid-cols-2 gap-8 mt-10 px-5">
+        {# {%- include '_molecules/cards/card--main' ignore missing with {
             content: {
                 title: 'Test heading',
                 swatch: 'pink-600',
@@ -80,14 +80,28 @@
                 action: 'click',
                 label: 'Card main'
             }
-        } -%}
-
-        {# {%- include '_molecules/cards/card--blog' ignore missing with {
-            content: {
-                title: 'Test heading',
-                description: 'Test desc'
-            }
         } -%} #}
+
+        {%- include '_molecules/cards/card--blog' ignore missing with {
+            content: {
+                title: 'Four Peaks Challenge in aid of Great Ormond Street',
+                url: 'https://google.com',
+                authors: [
+                    {
+                        title:'Stuart Byford',
+                        url: 'https://percipio.london/team/stuart-byford',
+                    }, 
+                ],
+                postDate: '23rd July 2021',
+                category: 'Blog',
+                swatch: 'blue-600'
+            },
+            ga: {
+                category: 'card-blog',
+                action: 'click',
+                label: 'Card blog'
+            }
+        } -%}
     </div>
 
     {# <div id="page">
