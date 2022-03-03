@@ -64,148 +64,146 @@
 
     </div>
 
-    <div class="container mx-auto max-w-screen-xl">
-        {%- include '_organisms/grids/grid--card-main' ignore missing with {
-            cards: [
-                {
-                    content: {
-                        title: 'Test heading',
-                        swatch: 'pink-600',
-                        url: 'https://google.com',
-                        categories: [
-                            'Web development',
-                            'Design'
-                        ],
-                    },
-                    ga: {
-                        category: 'card-main',
-                        action: 'click',
-                        label: 'Card main'
-                    },
-                    size: 'large',
+    {%- include '_organisms/grids/grid--card-main' ignore missing with {
+        cards: [
+            {
+                content: {
+                    title: 'Test heading',
+                    swatch: 'pink-600',
+                    url: 'https://google.com',
+                    categories: [
+                        'Web development',
+                        'Design'
+                    ],
                 },
-
-                {
-                    content: {
-                        title: 'Test heading 2',
-                        swatch: 'blue-600',
-                        url: 'https://google.com',
-                        categories: [
-                            'Web development',
-                        ],
-                    },
-                    ga: {
-                        category: 'card-main',
-                        action: 'click',
-                        label: 'Card main'
-                    }
+                ga: {
+                    category: 'card-main',
+                    action: 'click',
+                    label: 'Card main'
                 },
+                size: 'large',
+            },
 
-                {
-                    content: {
-                        title: 'Test heading 3',
-                        swatch: 'pink-600',
-                        url: 'https://google.com',
-                        categories: [
-                            'Web development',
-                        ],
-                    },
-                    ga: {
-                        category: 'card-main',
-                        action: 'click',
-                        label: 'Card main'
-                    }
+            {
+                content: {
+                    title: 'Test heading 2',
+                    swatch: 'blue-600',
+                    url: 'https://google.com',
+                    categories: [
+                        'Web development',
+                    ],
                 },
+                ga: {
+                    category: 'card-main',
+                    action: 'click',
+                    label: 'Card main'
+                }
+            },
 
-                {
-                    content: {
-                        title: 'Test heading 4',
-                        swatch: 'blue-600',
-                        url: 'https://google.com',
-                        categories: [
-                            'Web development',
-                        ],
-                    },
-                    ga: {
-                        category: 'card-main',
-                        action: 'click',
-                        label: 'Card main'
-                    },
-                    size: 'large',
+            {
+                content: {
+                    title: 'Test heading 3',
+                    swatch: 'pink-600',
+                    url: 'https://google.com',
+                    categories: [
+                        'Web development',
+                    ],
                 },
+                ga: {
+                    category: 'card-main',
+                    action: 'click',
+                    label: 'Card main'
+                }
+            },
 
-                {
-                    content: {
-                        title: 'Test heading 5',
-                        swatch: 'pink-600',
-                        url: 'https://google.com',
-                        categories: [
-                            'Web development',
-                        ],
-                    },
-                    ga: {
-                        category: 'card-main',
-                        action: 'click',
-                        label: 'Card main'
-                    },
-                    size: 'large',
+            {
+                content: {
+                    title: 'Test heading 4',
+                    swatch: 'blue-600',
+                    url: 'https://google.com',
+                    categories: [
+                        'Web development',
+                    ],
                 },
+                ga: {
+                    category: 'card-main',
+                    action: 'click',
+                    label: 'Card main'
+                },
+                size: 'large',
+            },
 
+            {
+                content: {
+                    title: 'Test heading 5',
+                    swatch: 'pink-600',
+                    url: 'https://google.com',
+                    categories: [
+                        'Web development',
+                    ],
+                },
+                ga: {
+                    category: 'card-main',
+                    action: 'click',
+                    label: 'Card main'
+                },
+                size: 'large',
+            },
+
+            {
+                content: {
+                    title: 'Test heading 6',
+                    swatch: 'blue-600',
+                    url: 'https://google.com',
+                    categories: [
+                        'Web development',
+                    ],
+                },
+                ga: {
+                    category: 'card-main',
+                    action: 'click',
+                    label: 'Card main'
+                }
+            },
+        ],
+    } -%}
+    {# {%- include '_molecules/cards/card--main' ignore missing with {
+        content: {
+            title: 'Test heading',
+            swatch: 'pink-600',
+            url: 'https://google.com',
+            categories: [
+                'Web development',
+                'Design'
+            ],
+        },
+        ga: {
+            category: 'card-main',
+            action: 'click',
+            label: 'Card main'
+        }
+    } -%} #}
+
+    {# {%- include '_molecules/cards/card--blog' ignore missing with {
+        content: {
+            title: 'Four Peaks Challenge in aid of Great Ormond Street',
+            url: 'https://google.com',
+            authors: [
                 {
-                    content: {
-                        title: 'Test heading 6',
-                        swatch: 'blue-600',
-                        url: 'https://google.com',
-                        categories: [
-                            'Web development',
-                        ],
-                    },
-                    ga: {
-                        category: 'card-main',
-                        action: 'click',
-                        label: 'Card main'
-                    }
+                    title:'Stuart Byford',
+                    url: 'https://percipio.london/team/stuart-byford',
                 },
             ],
-        } -%}
-        {# {%- include '_molecules/cards/card--main' ignore missing with {
-            content: {
-                title: 'Test heading',
-                swatch: 'pink-600',
-                url: 'https://google.com',
-                categories: [
-                    'Web development',
-                    'Design'
-                ],
-            },
-            ga: {
-                category: 'card-main',
-                action: 'click',
-                label: 'Card main'
-            }
-        } -%} #}
-
-        {# {%- include '_molecules/cards/card--blog' ignore missing with {
-            content: {
-                title: 'Four Peaks Challenge in aid of Great Ormond Street',
-                url: 'https://google.com',
-                authors: [
-                    {
-                        title:'Stuart Byford',
-                        url: 'https://percipio.london/team/stuart-byford',
-                    },
-                ],
-                postDate: '23rd July 2021',
-                category: 'Blog',
-                swatch: 'blue-600'
-            },
-            ga: {
-                category: 'card-blog',
-                action: 'click',
-                label: 'Card blog'
-            }
-        } -%} #}
-    </div>
+            postDate: '23rd July 2021',
+            category: 'Blog',
+            swatch: 'blue-600'
+        },
+        ga: {
+            category: 'card-blog',
+            action: 'click',
+            label: 'Card blog'
+        }
+    } -%} #}
 
     {# <div id="page">
         {%- include '_organisms/builders/page--builder' with {
