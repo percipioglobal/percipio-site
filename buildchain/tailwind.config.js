@@ -210,6 +210,14 @@ module.exports = {
                 'glitch-reverse': 'glitch .2s cubic-bezier(.25, .46, .45, .94) reverse both infinite, opacity 4s infinite',
             },
 
+            aspectRatio: {
+                '26/27': '26 / 27',
+            },
+
+            spacing: {
+                '102': '25.5rem'
+            },
+
             keyframes: {
                 glitch: {
                     '0%': { transform: 'translate(0)' },

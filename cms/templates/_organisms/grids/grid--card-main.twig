@@ -1,9 +1,10 @@
-<div class="grid grid-cols-3 gap-8 mt-10">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
     {%- for card in cards -%}
         {%- include '_molecules/cards/card--main' ignore missing with {
                 content: card.content,
                 ga: card.ga,
-                utilities: card.utilities ??? null
+                utilities: card.utilities ??? null,
+                size: card.size ??? null,
             } -%}
     {%- endfor -%}
 </div>
