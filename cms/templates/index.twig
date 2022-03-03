@@ -64,7 +64,110 @@
 
     </div>
 
-    <div class="grid grid-cols-2 gap-8 mt-10 px-5">
+    <div class="container mx-auto max-w-screen-2xl">
+        {%- include '_organisms/grids/grid--card-main' ignore missing with {
+            cards: [
+                {
+                    content: {
+                        title: 'Test heading',
+                        swatch: 'pink-600',
+                        url: 'https://google.com',
+                        categories: [
+                            'Web development',
+                            'Design'
+                        ],
+                    },
+                    ga: {
+                        category: 'card-main',
+                        action: 'click',
+                        label: 'Card main'
+                    },
+                    utilities: 'col-span-2'
+                },
+
+                {
+                    content: {
+                        title: 'Test heading 2',
+                        swatch: 'blue-600',
+                        url: 'https://google.com',
+                        categories: [
+                            'Web development',
+                        ],
+                    },
+                    ga: {
+                        category: 'card-main',
+                        action: 'click',
+                        label: 'Card main'
+                    }
+                },
+
+                {
+                    content: {
+                        title: 'Test heading 3',
+                        swatch: 'pink-600',
+                        url: 'https://google.com',
+                        categories: [
+                            'Web development',
+                        ],
+                    },
+                    ga: {
+                        category: 'card-main',
+                        action: 'click',
+                        label: 'Card main'
+                    }
+                },
+
+                {
+                    content: {
+                        title: 'Test heading 4',
+                        swatch: 'blue-600',
+                        url: 'https://google.com',
+                        categories: [
+                            'Web development',
+                        ],
+                    },
+                    ga: {
+                        category: 'card-main',
+                        action: 'click',
+                        label: 'Card main'
+                    },
+                    utilities: 'col-span-2'
+                },
+
+                {
+                    content: {
+                        title: 'Test heading 5',
+                        swatch: 'pink-600',
+                        url: 'https://google.com',
+                        categories: [
+                            'Web development',
+                        ],
+                    },
+                    ga: {
+                        category: 'card-main',
+                        action: 'click',
+                        label: 'Card main'
+                    },
+                    utilities: 'col-span-2'
+                },
+
+                {
+                    content: {
+                        title: 'Test heading 6',
+                        swatch: 'blue-600',
+                        url: 'https://google.com',
+                        categories: [
+                            'Web development',
+                        ],
+                    },
+                    ga: {
+                        category: 'card-main',
+                        action: 'click',
+                        label: 'Card main'
+                    }
+                },
+            ],
+        } -%}
         {# {%- include '_molecules/cards/card--main' ignore missing with {
             content: {
                 title: 'Test heading',
@@ -82,7 +185,7 @@
             }
         } -%} #}
 
-        {%- include '_molecules/cards/card--blog' ignore missing with {
+        {# {%- include '_molecules/cards/card--blog' ignore missing with {
             content: {
                 title: 'Four Peaks Challenge in aid of Great Ormond Street',
                 url: 'https://google.com',
@@ -101,7 +204,7 @@
                 action: 'click',
                 label: 'Card blog'
             }
-        } -%}
+        } -%} #}
     </div>
 
     {# <div id="page">
