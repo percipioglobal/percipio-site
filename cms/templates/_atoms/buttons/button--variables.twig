@@ -2,28 +2,33 @@
     ### OPTIONS ###
     ---------------
 
-    url: (STR) -- the url for the button
+    active: (BOOL) -- Set active button state 
+    disabled: (BOOL) -- Set disabled button state
+    ga: (OBJ) -- GTM Tracking object
+    icon: (OBJ) -- the icon for the button ( optional )
+    target: (STR) -- add _blank if you want to open the button in a new window
     text: (STR) -- the text for the button
-    icon: (STR) -- the icon for the button ( optional )
+    url: (STR) -- the url for the button
     utlities: (STR) -- the button utility from TW for the last button in the loop
-    swatch: (STR) -- add a colour swatch to button
-
 #}
 
 {%- set values = {
-    url: options.url ??? null,
-    text: options.text ??? '',
-    icon: options.icon ??? null,
-    utilities: options.utilities ??? null,
-    size: options.size ??? 'large',
-    swatch: options.swatch ??? null,
-    gaCategory: options.gaCategory ??? null,
-    gaAction: options.gaAction ??? null,
-    gaLabel: options.gaLabel ??? null,
+    active: options.active ?? false,
+    disabled: options.disabled ?? false,
+    ga: {
+        category: options.ga.category ?? null,
+        action: options.ga.action ?? null,
+        label: options.ga.label ?? null,
+    },
+    icon: {
+        type: options.icon.type ??? null,
+        utilities: options.icon.utilities ??? null,
+    },
     target: options.target ??? null,
-    inverted: options.inverted ??? false,
-    type: options.type ??? 'link',
-    outlined: options.outlined ??? false,
+    text: options.text ??? '',
+    url: options.url ??? null,
+    utilities: options.utilities ??? null,
+    
 } -%}
 
 {%- block button -%}
