@@ -16,35 +16,35 @@
             size: 'xl',
             variant: '',
             parentcss: '',
-            iconcss: 'group-hover:text-white-100',
+            iconcss: 'group-hover:text-white',
             colour: 'text-' ~ swatch.primary
         }) -}}
 	</div>
 
 	<div class="relative flex-grow px-4 md:px-8">
-		<h4 class="text-base font-medium sm:text-2xl group-hover:text-white-100 trans-button inline-block w-full">
+		<h4 class="text-base font-medium sm:text-2xl group-hover:text-white trans-button inline-block w-full">
 			{{- render.atom('text', 'content', { content: content.label }) -}}
 		</h4>
 
         {% if content.description|length %}
-            <p class="text-base inline-block w-full group-hover:text-white-100">
+            <p class="text-base inline-block w-full group-hover:text-white">
                 {{- render.atom('text', 'content', { content: content.description }) -}}
             </p>
         {% endif %}
 
-		<span class="text-xs text-gray-500 group-hover:text-white-100 pt-2 inline-block">
-			<span class="text-{{- swatch.secondary }} group-hover:text-white-100">{{ content.target[0].filename }}</span> - [{{- content.target[0].size | filesize(1) }}
+		<span class="text-xs text-gray-500 group-hover:text-white pt-2 inline-block">
+			<span class="text-{{- swatch.secondary }} group-hover:text-white">{{ content.target[0].filename }}</span> - [{{- content.target[0].size | filesize(1) }}
 			{{ resource.target[0].kind | lower }}]
 		</span>
 	</div>
 
 	<div class="relative flex items-center">
-		<span class="px-5 py-3 bg-{{- swatch.primary }} font-bold text-white-100 group-hover:bg-{{- swatch.secondary }} flex">
+		<span class="px-5 py-3 bg-{{- swatch.primary }} font-bold text-white group-hover:bg-{{- swatch.secondary }} flex">
             <span class="pr-2">Download</span>
             {{- render.atom('icon', 'fa', {
                 icon: 'fas fa-download',
                 size: 'xs',
-                colour: 'text-white-100'
+                colour: 'text-white'
             }) -}}
         </span>
 	</div>

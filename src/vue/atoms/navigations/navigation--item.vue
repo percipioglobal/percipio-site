@@ -8,7 +8,7 @@
             tabindex="0"
             :aria-current="isCurrent ? 'page' : null"
         >
-            <div class="py-3 px-4 absolute z-10 bg-white-100 w-full h-full group-hover:bg-blue-600 group-hover:opacity-10 group-focus:bg-blue-600 group-focus:opacity-20"></div>
+            <div class="py-3 px-4 absolute z-10 bg-white w-full h-full group-hover:bg-blue-600 group-hover:opacity-10 group-focus:bg-blue-600 group-focus:opacity-20"></div>
             
             <span class="py-3 px-4 relative z-20 flex justify-end items-center">
                 {{ item.target[0].title }}
