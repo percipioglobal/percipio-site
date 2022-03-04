@@ -214,6 +214,12 @@ module.exports = {
                 '26/27': '26 / 27',
             },
 
+            colors: {
+                'cool-gray': {
+                    '800': '#27303f',
+                },
+            },
+
             spacing: {
                 '102': '25.5rem'
             },
