@@ -8,9 +8,7 @@
     'github': 'fa-github'
 } -%}
 
-{%- set utilities = utilities ?? '' -%}
-{%- set wrapperUtilities = wrapperUtilities ?? '' %}
-{%- set linkUtilities = linkUtilities ?? '' -%}
+{%- set utilities = utilities ??? null -%}
 
 <nav class="{{- utilities -}}" role="menu" aria-label="Social media pages of Percipio">
     {% for social in seomatic.site.sameAsLinks %}
