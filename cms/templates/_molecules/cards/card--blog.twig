@@ -1,8 +1,10 @@
 {%- import '_macros/atoms' as render -%}
 {%- import '_macros/functions' as parse -%}
 
+{%- set size = size ??? 'small' -%}
+
 {%- minify -%}
-    <div class="group relative bg-white">     
+    <div class="group relative bg-white {{ size == 'large' ? 'lg:col-span-3' : 'lg:col-span-2' -}}">     
         <div class="overflow-hidden">
             {{- render.atom('image', 'teaser', {
                     image: placeholders.teaserPlaceholder,
@@ -10,6 +12,7 @@
                     alt: 'test',
                     ratio: 'aspect-video',
                     placeholders: placeholders,
+                    utilities: 'object-center'
                 })
             -}}
         </div>
