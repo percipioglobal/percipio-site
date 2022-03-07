@@ -28,15 +28,15 @@
         {%- if values.buttons -%}
             {%- for button in values.buttons -%}
                 {{- render.atom('button', values.type, {
-                    url: button.target.getUrl(),
-                    text: button.target.getText(),
-                    target: button.target.getTarget(),
-                    gaCategory: values.gaCategory,
-                    gaAction: values.gaAction,
-                    gaLabel: values.gaLabel ??? button.target.getUrl(),
-                    swatch: values.swatch,
-                    inverted: values.inverted,
+                    url: button.url,
+                    text: button.text,
+                    target: button.target ??? null,
+                    ga: button.ga,
+                    icon: button.icon ??? null,
                 }) -}}
+                    {# url: button.target.getUrl(),
+                    text: button.target.getText(),
+                    target: button.target.getTarget(), #}
             {%- endfor -%}
         {%- endif -%}
     </div>

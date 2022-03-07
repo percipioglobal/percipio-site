@@ -5,13 +5,14 @@
     ---------------
 
     content: (STR) -- the actual content as a string
+    color: (STR) -- a colour for the overline text
 
 #}
 
 {% block text %}
 
     {%- minify -%}
-        <span class="block break-words text-xl lg:text-3xl text-gray-900 {{ values.utilities -}}">
+        <span class="block break-words text-xl lg:text-3xl {{ values.color }} {{ values.utilities -}}">
             {{- values.content | typogrify(true) -}}
         </span>
     {%- endminify -%}

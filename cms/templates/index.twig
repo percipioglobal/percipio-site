@@ -24,6 +24,31 @@
         },
     } -%}
 
+    {%- include '_organisms/heroes/hero--video' ignore missing with {
+        content: {
+            heading: 'We empower our clients to think differently.',
+            overline: 'Our Work',
+            buttons: [
+                    {
+                        text: 'Normal',
+                        url: 'https://google.com',
+                        ga: {
+                            category: 'navigation',
+                            action: 'click',
+                            label: 'test'
+                        }
+                    },
+                ],
+            video: [
+                {
+                    url: 'https://d138q4p46ztipc.cloudfront.net/videos/Home-header-0.4.1.mp4?mtime=20210225162553&focal=none',
+                    extension: 'mp4',
+                }
+            ],
+            placeholder: null
+        },
+    } -%}
+
     <div class="max-w-md flex mx-auto">
 
     {{- render.atom('button', 'secondary-outline', {
