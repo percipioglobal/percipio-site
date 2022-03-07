@@ -3,58 +3,38 @@
 
 {%- minify -%}
 
-	{%- set categories = categories ??? null -%}
+	<section class="relative w-full min-h-2/3 flex items-center overflow-hidden">
+		<div class="container mx-auto max-w-screen-2xl px-8 lg:px-0">
+			{{- render.atom('text', 'overline', {
+					content: content.overline,
+					utilities: 'text-' ~ swatch.primary ~ ' mb-5 font-mono',
+				})
+			-}}
+			
+			<h1 class="sr-only">
+				{{- seomatic.site.identity.genericName -}}:
+				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
+			</h1>
 
-	<section class="relative w-full min-h-2/3 pt-0 md:pt-24 flex items-center overflow-hidden">
-		<div class="container mx-auto max-w-screen-lg">
-			<div class="z-2 relative px-12 pt-32 md:pt-20 pb-6 md:pb-20 bg-{{- swatch.primary }} border-b-8 border-{{- swatch.secondary -}}">
+			<h2 class="font-primary text-4xl lg:text-7xl text-gray-900">
+				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
+			</h2>
+{# 
+			{% if content.buttons %}
 
-				<h1 class="sr-only">
-					{{- seomatic.site.identity.genericName -}}:
-					{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
-				</h1>
+				{{- render.atom('button', 'group', {
 
-				<h2 class="font-extrabold leading-none text-4xl lg:text-6xl text-white">
-					{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
-				</h2>
+					buttons: content.buttons,
+					type: 'primary',
+					utilities: 'mt-6 space-x-4',
+					gaCategory: 'hero-cta',
+					gaAction: 'click',
+					swatch: swatch,
+					inverted: false,
 
-				{% if content.description %}
-					<div class="prose prose-lg mt-8 md:mt-5 text-white">
-						{{- render.atom('text', 'content', { content: content.description }) -}}
-					</div>
-				{% endif %}
+				}) -}}
 
-				{% if content.buttons %}
-
-					{{- render.atom('button', 'group', {
-
-						buttons: content.buttons,
-						type: 'primary',
-						utilities: 'mt-6 space-x-4',
-						gaCategory: 'hero-cta',
-						gaAction: 'click',
-						swatch: swatch,
-						inverted: false,
-
-					}) -}}
-
-				{% endif %}
-
-				{% if categories|length %}
-
-					{{- render.atom('chip', 'group', {
-
-                        chips: categories,
-                        colors: swatch,
-                        type: 'skills',
-                        utilities: 'mb-0',
-
-                    }) -}}
-
-				{% endif %}
-
-			</div>
-
+			{% endif %} #}
 		</div>
 	</section>
 

@@ -17,6 +17,13 @@
         content: entry,
     } -%} #}
 
+    {%- include '_organisms/heroes/hero--main-text' ignore missing with {
+        content: {
+            heading: 'We empower our clients to think differently.',
+            overline: 'Our Work',
+        },
+    } -%}
+
     <div class="max-w-md flex mx-auto">
 
     {{- render.atom('button', 'secondary-outline', {
