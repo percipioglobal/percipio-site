@@ -11,7 +11,7 @@
 {% block text %}
 
     {%- minify -%}
-        <span class="inline-block font-primary break-words text-3xl text-gray-900 {{ values.utilities -}}">
+        <span class="inline-block font-primary break-words text-xl lg:text-3xl text-gray-900 {{ values.utilities -}}">
             {{- values.content | typogrify(true) -}}
         </span>
     {%- endminify -%}

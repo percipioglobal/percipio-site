@@ -4,10 +4,10 @@
 {%- minify -%}
 
 	<section class="relative w-full min-h-2/3 flex items-center overflow-hidden">
-		<div class="container mx-auto max-w-screen-2xl px-8 lg:px-0">
+		<div class="container mx-auto max-w-screen-2xl px-8 2xl:px-0">
 			{{- render.atom('text', 'overline', {
 					content: content.overline,
-					utilities: 'text-' ~ swatch.primary ~ ' mb-5 font-mono',
+					utilities: 'mb-5 font-mono',
 				})
 			-}}
 			
@@ -16,25 +16,9 @@
 				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
 			</h1>
 
-			<h2 class="font-primary text-4xl lg:text-7xl text-gray-900">
+			<h2 class="font-primary text-3xl lg:text-7xl text-gray-900">
 				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
 			</h2>
-{# 
-			{% if content.buttons %}
-
-				{{- render.atom('button', 'group', {
-
-					buttons: content.buttons,
-					type: 'primary',
-					utilities: 'mt-6 space-x-4',
-					gaCategory: 'hero-cta',
-					gaAction: 'click',
-					swatch: swatch,
-					inverted: false,
-
-				}) -}}
-
-			{% endif %} #}
 		</div>
 	</section>
 
