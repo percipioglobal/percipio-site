@@ -1,0 +1,89 @@
+{%- macro pagination(total, current, url, nearbyPagesLimit = 2) -%}
+    {%- spaceless -%}
+
+        {%- if total > 1 -%}
+
+            <nav aria-label="pagination">
+
+                <ul class="flex items-center space-x-2">
+
+                    {%- for i in 1..total -%}
+
+                        {%- if 0 == (current - nearbyPagesLimit) - loop.index -%}
+                            <li class="
+                                    relative capitalize inline-flex items-center justify-center self-start px-4 py-3 text-base font-primary font-bold h-12
+                                    transition-colors ease-in-out duration-300
+                                    border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:bg-opacity-10
+                                "
+                            >
+                                <a href="{{- (url ~ 1)|e -}}">
+                                    1
+                                </a>
+                            </li>
+
+                            {%- if 1 != loop.index -%}
+
+                                <li class="text-blue-600 font-bold">
+                                    <span>…</span>
+                                </li>
+
+                            {%- endif -%}
+
+                        {%- elseif 0 == (current + nearbyPagesLimit) - loop.index  and (current + nearbyPagesLimit) < total -%}
+                            
+                            <li class="text-blue-600 font-bold">
+                                <span>…</span>
+                            </li>
+
+                        {%- elseif 0 < (current - nearbyPagesLimit) - loop.index -%}
+
+                        {%- elseif 0 > (current + nearbyPagesLimit) - loop.index -%}
+
+                        {%- else -%}
+
+                            <li class="
+                                    relative capitalize inline-flex items-center justify-center self-start px-4 py-3 text-base font-primary font-bold h-12
+                                    transition-colors ease-in-out duration-300
+                                    {{ current == loop.index ? 'bg-blue-600 bg-opacity-10' : '' }}
+                                    border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:bg-opacity-10
+                                "
+                            >
+                                {%- if current == loop.index  -%}
+
+                                    <span>{{- loop.index -}}</span>
+
+                                {%- else -%}
+
+                                    <a href="{{- url ~ loop.index -}}">
+                                        {{- loop.index -}}
+                                    </a>
+                                
+                                {%- endif -%}
+                            </li>
+
+                        {%- endif -%}
+                        
+                    {%- endfor -%}
+
+                    {%- if current != total  and (current + nearbyPagesLimit) < total -%}
+                        
+                        <li class="
+                                relative capitalize inline-flex items-center justify-center self-start px-4 py-3 text-base font-primary font-bold h-12
+                                transition-colors ease-in-out duration-300
+                                border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:bg-opacity-10
+                            "
+                        >
+                            <a href="{{- (url ~ total)|e -}}">
+                                {{- total -}}
+                            </a>
+                        </li>
+
+                    {%- endif -%}
+                
+                </ul>
+                
+            </nav>
+
+        {%- endif -%}
+    {%- endspaceless -%}
+{%- endmacro -%}
