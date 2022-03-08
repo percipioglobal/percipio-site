@@ -7,17 +7,23 @@
     .with(['teaserImage', 'blogCategories', 'authors', 'authors.teaserImage'])
     .orderBy('postDate desc')
     .limit(limit)
-    .all() 
 -%}
+
+{%- paginate blogs as pageInfo, pageEntries -%}
+
 
 <div class="container mx-auto px-8 2xl:px-0 max-w-screen-2xl">
 
     <div class="grid grid-cols-1 lg:grid-cols-6 gap-8 mt-10">
 
-        {%- for blog in blogs -%}
+        {%- for blog in pageEntries -%}
             {%- include '_molecules/cards/card--blog' ignore missing with {
                     content: blog,
-                    ga: ga,
+                    ga: {
+                        category: 'card-blog',
+                        action: 'click',
+                        label: 'Card blog'
+                    },
                     category: category,
                     utilities: utilities ??? null,
                     size: loop.first or loop.index == 2 ? 'large' : null,

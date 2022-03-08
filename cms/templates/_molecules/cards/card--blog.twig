@@ -2,6 +2,7 @@
 {%- import '_macros/functions' as parse -%}
 
 {%- set size = size ??? 'small' -%}
+{%- set category = category ??? null -%}
 
 {%- minify -%}
     <div class="group relative bg-white {{ size == 'large' ? 'lg:col-span-3' : 'lg:col-span-2' -}}">     
@@ -25,10 +26,11 @@
                 }) 
             -}}
             
-            {# {%- include '_molecules/metas/meta--blog' ignore missing with { 
+            {%- include '_molecules/metas/meta--blog' ignore missing with { 
                 content: content,
+                category: category,
                 utilities: 'pt-3'
-            } -%} #}
+            } -%}
         </div>
 
         {{- render.atom('link', 'card', {
