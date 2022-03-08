@@ -10,6 +10,7 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 
 import {
+    faLongArrowLeft as farLongArrowLight,
     faLongArrowRight as farLongArrowRight,
     faCode as farCode,
 } from '@fortawesome/pro-regular-svg-icons';
@@ -46,6 +47,7 @@ library.add(
     fabTwitter,
     fabVimeoV,
     fabYoutube,
+    farLongArrowLight,
     farLongArrowRight,
     farCode,
     farEnvelope,

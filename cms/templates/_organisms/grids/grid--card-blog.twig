@@ -1,4 +1,3 @@
-{%- import '_macros/pagination' as paginate -%}
 {%- import '_macros/atoms' as render -%}
 
 
@@ -24,23 +23,23 @@
 
         {%- for blog in pageEntries -%}
             {%- include '_molecules/cards/card--blog' ignore missing with {
-                    content: blog,
-                    ga: {
-                        category: 'card-blog',
-                        action: 'click',
-                        label: 'Card blog'
-                    },
-                    category: category,
-                    utilities: utilities ??? null,
-                    size: loop.first or loop.index == 2 ? 'large' : null,
-                } -%}
+                content: blog,
+                ga: {
+                    category: 'card-blog',
+                    action: 'click',
+                    label: 'Card blog'
+                },
+                category: category,
+                utilities: utilities ??? null,
+                size: loop.first or loop.index == 2 ? 'large' : null,
+            } -%}
         {%- endfor -%}
 
     </div>
 
     <div class="flex items-center justify-center space-x-3">
 
-    {%- if pageInfo.prevUrl %}
+        {%- if pageInfo.prevUrl %}
             {{- render.atom('button', 'secondary-outline', {
                 text: 'Previous',
                 url: pageInfo.prevUrl,
@@ -54,9 +53,15 @@
                     position: 'left',
                 }
             }) -}}
-    {%- endif -%}
+        {%- endif -%}
 
-    {{- paginate.pagination(totalBlogs|round, pageInfo.currentPage, 'p') }}
+        {# {{- paginate.pagination(totalBlogs|round, pageInfo.currentPage, 'p') }} #}
+
+        {%- include '_molecules/navigations/navigation--pagination' ignore missing with {
+            total: totalBlogs|round,
+            current: pageInfo.currentPage,
+            url: 'p',
+        } -%}
 
         {%- if pageInfo.nextUrl -%}
             {{- render.atom('button', 'secondary-outline', {

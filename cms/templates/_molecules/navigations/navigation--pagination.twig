@@ -1,0 +1,100 @@
+{%- set total = total ??? null -%}
+{%- set current = current ??? null -%}
+{%- set url = url ??? null -%}
+{%- set nearbyPagesLimit = 2 -%}
+
+{%- minify -%}
+
+    {%- if total > 1 -%}
+
+        <nav 
+            role="navigation" 
+            aria-label="Pagination Navigation"
+        >
+
+            <ul class="flex items-center space-x-3">
+
+                {%- for i in 1..total -%}
+                    {%- set currentPage = current == loop.index ? true : false -%}
+
+                    {%- if 0 == current - nearbyPagesLimit - loop.index -%}
+                        <li class="
+                                relative inline-flex items-center justify-center self-start px-4 py-3 text-base font-primary font-bold h-12
+                                transition-colors ease-in-out duration-300
+                                border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:bg-opacity-10
+                            "
+                        >
+                            <a href="{{- (url ~ 1)|e -}}">
+                                1
+                            </a>
+                        </li>
+
+                        {%- if 1 != loop.index -%}
+
+                            <li class="text-blue-600 font-bold">
+                                <span>…</span>
+                            </li>
+
+                        {%- endif -%}
+
+                    {%- elseif 0 == current + nearbyPagesLimit - loop.index  and current + nearbyPagesLimit < total -%}
+                        
+                        <li class="text-blue-600 font-bold">
+                            <span>…</span>
+                        </li>
+
+                    {%- elseif 0 < current - nearbyPagesLimit - loop.index -%}
+
+                    {%- elseif 0 > current + nearbyPagesLimit - loop.index -%}
+
+                    {%- else -%}
+
+                        <li 
+                            aria-label="{{ 'Page ' ~ loop.index ~ currentPage ? ', Current Page' ~ '' : '' }}"
+                            aria-current="{{- currentPage ? 'page' : null -}}"
+                            class="
+                                relative inline-flex items-center justify-center self-start px-4 py-3 text-base font-primary font-bold h-12
+                                transition-colors ease-in-out duration-300
+                                {{ currentPage ? 'bg-blue-600 bg-opacity-10' : '' }}
+                                border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:bg-opacity-10
+                            "
+                        >
+                            {%- if currentPage  -%}
+
+                                <span>{{- loop.index -}}</span>
+
+                            {%- else -%}
+
+                                <a href="{{- url ~ loop.index -}}">
+                                    {{- loop.index -}}
+                                </a>
+                            
+                            {%- endif -%}
+                        </li>
+
+                    {%- endif -%}
+                    
+                {%- endfor -%}
+
+                {%- if current != total  and current + nearbyPagesLimit < total -%}
+                    
+                    <li 
+                        class="
+                            relative inline-flex items-center justify-center self-start px-4 py-3 text-base font-primary font-bold h-12
+                            transition-colors ease-in-out duration-300
+                            border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:bg-opacity-10
+                        "
+                    >
+                        <a href="{{- (url ~ total)|e -}}">
+                            {{- total -}}
+                        </a>
+                    </li>
+
+                {%- endif -%}
+            
+            </ul>
+            
+        </nav>
+
+    {%- endif -%}
+{%- endminify -%}
