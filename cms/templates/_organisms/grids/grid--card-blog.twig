@@ -1,3 +1,7 @@
+{%- import '_macros/pagination' as paginate -%}
+{%- import '_macros/atoms' as render -%}
+
+
 {%- set limit = limit ??? null -%}
 {%- set utilities = utilities ??? null -%}
 {%- set ga = ga ??? null -%}
@@ -8,6 +12,8 @@
     .orderBy('postDate desc')
     .limit(limit)
 -%}
+
+{%- set totalBlogs =  blogs|length / limit -%}
 
 {%- paginate blogs as pageInfo, pageEntries -%}
 
@@ -29,7 +35,43 @@
                     size: loop.first or loop.index == 2 ? 'large' : null,
                 } -%}
         {%- endfor -%}
-        
+
+    </div>
+
+    <div class="flex items-center justify-center space-x-3">
+
+    {%- if pageInfo.prevUrl %}
+            {{- render.atom('button', 'secondary-outline', {
+                text: 'Previous',
+                url: pageInfo.prevUrl,
+                ga: {
+                    category: 'navigation',
+                    action: 'click',
+                    label: 'test'
+                },
+                icon: {
+                    type: 'far fa-long-arrow-left',
+                    position: 'left',
+                }
+            }) -}}
+    {%- endif -%}
+
+    {{- paginate.pagination(totalBlogs|round, pageInfo.currentPage, 'p') }}
+
+        {%- if pageInfo.nextUrl -%}
+            {{- render.atom('button', 'secondary-outline', {
+                text: 'Next',
+                url: pageInfo.nextUrl,
+                ga: {
+                    category: 'navigation',
+                    action: 'click',
+                    label: 'test'
+                },
+                icon: {
+                    type: 'far fa-long-arrow-right',
+                }
+            }) -}}
+        {%- endif -%}
     </div>
 
 </div>

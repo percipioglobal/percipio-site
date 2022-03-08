@@ -51,6 +51,7 @@
 {# fetch an icon from the Font Awesome library #}
 {%- macro fa_icon_lut(type) -%}
 	{%- set lut = {
+        'arrow-left-long': 'far fa-long-arrow-left',
         'arrow-right-long': 'far fa-long-arrow-right',
 	} -%}
 	{%- spaceless -%}
@@ -108,7 +109,7 @@
 {%- macro icon(options) -%}
 
     {%- spaceless -%}
-        <span class="inline-flex ml-4 text-2xl {{ options.utilities -}}">
+        <span class="inline-flex text-2xl {{ options.position == 'left' ? 'mr-4' : 'ml-4' }} {{ options.utilities -}}">
             <i class="{{ options.type -}}"></i>
         </span>
     {%- endspaceless -%}
