@@ -55,12 +55,8 @@
             }) -}}
         {%- endif -%}
 
-        {# {{- paginate.pagination(totalBlogs|round, pageInfo.currentPage, 'p') }} #}
-
         {%- include '_molecules/navigations/navigation--pagination' ignore missing with {
-            total: totalBlogs|round,
-            current: pageInfo.currentPage,
-            url: 'p',
+            pageInfo: pageInfo,
         } -%}
 
         {%- if pageInfo.nextUrl -%}
