@@ -1,3 +1,5 @@
+{%- set filter = craft.app.request.getQueryParam('filter') -%}
+
 <div class="container mx-auto px-8 2xl:px-0 max-w-screen-2xl">
     
     {%- include '_molecules/filters/filter--projects' -%}
@@ -5,12 +7,43 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
 
         {%- for card in cards -%}
-            {%- include '_molecules/cards/card--main' ignore missing with {
-                    content: card.content,
-                    ga: card.ga,
-                    utilities: card.utilities ??? null,
-                    size: card.size ??? null,
-                } -%}
+
+            {%- switch(filter) -%}
+            
+                {%- case 'all' -%}
+
+                    {%- include '_molecules/cards/card--main' ignore missing with {
+                            content: card.content,
+                            ga: card.ga,
+                            utilities: card.utilities ??? null,
+                            size: card.size ??? null,
+                    } -%}
+
+                {%- case 'development' -%}
+
+                    {%- if filter in card.content.categories[0] -%}
+                        {%- include '_molecules/cards/card--main' ignore missing with {
+                                content: card.content,
+                                ga: card.ga,
+                                utilities: card.utilities ??? null,
+                                size: card.size ??? null,
+                        } -%}
+                    {%- endif -%}
+
+                {%- case 'design' -%}
+
+                    {%- if filter in card.content.categories[0] -%}
+                        {%- include '_molecules/cards/card--main' ignore missing with {
+                                content: card.content,
+                                ga: card.ga,
+                                utilities: card.utilities ??? null,
+                                size: card.size ??? null,
+                        } -%}
+                    {%- endif -%}
+
+            {%- endswitch -%}
+            
+            
         {%- endfor -%}
         
     </div>
