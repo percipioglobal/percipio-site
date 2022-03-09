@@ -3,6 +3,7 @@
 {%- set pageInfo = pageInfo ??? null -%}
 
 {%- minify -%}
+
     <div class="flex items-center justify-center space-x-3">
 
         {%- if pageInfo.prevUrl %}
@@ -20,7 +21,7 @@
                 }
             }) -}}
         {%- endif -%}
-        
+
         <nav 
             role="navigation" 
             aria-label="Pagination Navigation"
@@ -132,4 +133,5 @@
         {%- endif -%}
 
     </div>
+
 {%- endminify -%}
