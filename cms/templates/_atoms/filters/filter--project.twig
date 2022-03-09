@@ -12,7 +12,7 @@
     <a
         aria-label="{{- values.ariaLabel -}}"
         href="?filter={{- values.filter.slug -}}"
-        class="text-3xl font-primary font-bold text-gray-900 hover:text-blue-800 focus:text-blue-800 transition-colors duration-300 {{ values.current == values.filter.slug ? 'border-b-2 border-blue-600 pb-1' : 'pb-1.5' -}}"
+        class="text-xl lg:text-3xl font-primary font-bold text-gray-900 hover:text-blue-800 focus:text-blue-800 transition-colors duration-300 {{ values.current == values.filter.slug ? 'border-b-2 border-blue-600 pb-1' : 'pb-1.5' -}}"
         {{ parse.ga(values.ga) -}}
     >
         {{- values.filter.label -}}
