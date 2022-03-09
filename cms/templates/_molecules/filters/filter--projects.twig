@@ -1,0 +1,44 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- minify -%}
+    <div class="flex items-center space-x-4">
+        {{- render.atom('filter', 'project', {
+                filter: { 
+                    label: 'All',
+                    handle: 'all'
+                },
+                ga: {
+                    category: 'project-filter',
+                    action: 'click',
+                    label: 'Project filter'
+                }
+            })
+        -}}
+
+        {{- render.atom('filter', 'project', {
+                filter: { 
+                    label: 'Development',
+                    handle: 'development'
+                },
+                ga: {
+                    category: 'project-filter',
+                    action: 'click',
+                    label: 'Project filter'
+                }
+            })
+        -}}
+
+        {{- render.atom('filter', 'project', {
+                filter: { 
+                    label: 'Design',
+                    handle: 'design'
+                },
+                ga: {
+                    category: 'project-filter',
+                    action: 'click',
+                    label: 'Project filter'
+                }
+            })
+        -}}
+    </div>
+{%- endminify -%}

@@ -1,0 +1,21 @@
+{%- import '_macros/functions' as parse -%}
+
+{%- set values = {
+    ariaLabel: options.ariaLabel ??? null,
+    current: options.current ??? false,
+    filter: options.filter ??? null,
+    ga: options.ga ??? null,
+} -%}
+
+{%- minify -%}
+
+    <a
+        aria-label="{{- values.ariaLabel -}}"
+        href="?filter={{- values.filter.handle -}}"
+        class="text-3xl font-primary font-bold text-gray-900"
+        {{ parse.ga(values.ga) -}}
+    >
+        {{- values.filter.label -}}
+    </a>
+
+{%- endminify -%}
