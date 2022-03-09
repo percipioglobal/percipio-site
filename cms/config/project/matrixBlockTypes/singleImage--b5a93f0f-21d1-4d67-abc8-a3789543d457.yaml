@@ -62,6 +62,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   3fc84cf5-6e3d-46e8-bf13-9a1d4e198438: # Caption
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: caption
@@ -81,6 +82,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   49d732ef-0bfc-46c0-ba09-004de008c0ba: # Ratio
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: ratio
@@ -193,6 +195,7 @@ fields:
     translationMethod: none
     type: craft\fields\Dropdown
   55ac783b-adeb-42fc-98f5-0adf13a8419d: # Width
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: width
@@ -243,6 +246,7 @@ fields:
     translationMethod: none
     type: rias\widthfieldtype\fields\Width
   302a5592-8085-472e-9356-ab6b1eaf1635: # Position
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: position
@@ -275,6 +279,7 @@ fields:
     translationMethod: none
     type: rias\positionfieldtype\fields\Position
   b928e034-1b69-487e-a45b-b37d0f8a59a9: # Containerise
+    columnSuffix: null
     contentColumnType: boolean
     fieldGroup: null
     handle: containerise
@@ -289,6 +294,7 @@ fields:
     translationMethod: none
     type: craft\fields\Lightswitch
   ed4b0f49-8429-4d80-846f-3d441bd3e707: # Image
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -323,4 +329,4 @@ fields:
     type: craft\fields\Assets
 handle: singleImage
 name: Image
-sortOrder: 6
+sortOrder: 7

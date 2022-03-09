@@ -1,0 +1,11 @@
+{% import '_macros/atoms' as render %}
+
+<span class="font-primary text-3xl text-white-100">
+	{{- render.atom('text', 'title', { content: content.title }) -}}
+</span>
+
+<ul class="flex flex-col space-y-2 text-white-100 text-lg mt-2.5">
+	{%- for location in content.locations -%}
+		<li>{{- location -}}</li>
+	{%- endfor -%}
+</ul>

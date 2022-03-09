@@ -1,0 +1,54 @@
+{% import '_macros/atoms' as render %}
+
+{%- if content.backgroundColor is defined -%}
+
+    {%- set bgSwatch = content.backgroundColor ? content.backgroundColor.color[0].class : 'cool-gray-800' -%}
+    
+    {%- else -%}
+
+    {%- set bgSwatch = 'cool-gray-800' -%}
+
+{%- endif -%}
+
+{%- set content = content ??? null -%}
+
+
+<section class="relative w-full bg-{{ bgSwatch -}}">
+    <div class="container relative mx-auto max-w-screen-xl md:grid md:grid-cols-2">
+
+        <div class="pt-10 md:py-9 flex items-center mx-auto lg:mx-0 col-start-2 row-start-1 justify-end">
+            {{- render.atom('image', 'article', {
+                    image: content.image[0] ??? null,
+                    alt: content.image[0].title ??? null,
+                    ratio: content.ratio,
+                    caption: content.caption ?? content.image[0].caption,
+                    author: content.image[0].author ?? "",
+                    source: content.image[0].source ?? "",
+                    placeholders: placeholders,
+                    swatch: swatch,
+                })
+            -}}
+        </div>
+
+        <div class="text-white-100 font-primary flex flex-col justify-center py-10 md:py-0 col-start-1 row-start-1">
+            <h2 class="text-5xl md:text-6xl lg:text-7xl">{{- content.heading -}}</h2>
+
+            <span class="block text-xl md:text-2xl lg:text-3xl mt-2.5">
+                {{- render.atom('text', 'content', { content: content.body }) -}}
+            </span>
+
+            {%- if content.button.url -%}
+                <div>
+                    {{- render.atom('button', 'icon', {
+                        url: content.button.url,
+                        text: custom.button.customText ??? content.button.text,
+                        utilities: 'mt-10',
+                        swatch: 'pink',
+                        icon: 'arrow-right-long'
+                    }) -}}
+                </div>
+            {%- endif -%} 
+        </div>
+        
+    </div>
+</section>

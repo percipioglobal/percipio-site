@@ -1,4 +1,4 @@
-field: 8a8aa24a-d558-4d4c-83a5-e5983ab32e77
+field: 8a8aa24a-d558-4d4c-83a5-e5983ab32e77 # Items
 fieldLayouts:
   d9b89fc9-266b-4990-818f-4405cb5a403c:
     tabs:
@@ -26,6 +26,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   1caabc75-eb3c-43a5-bffd-5b3289015e5c: # Heading
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -45,6 +46,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   9c4ff5ca-6227-465d-a4a9-5a584eba02b4: # Body Content
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: article
@@ -54,7 +56,6 @@ fields:
     settings:
       availableTransforms: '*'
       availableVolumes: ''
-      cleanupHtml: true
       columnType: text
       configSelectionMode: choose
       defaultTransform: ''

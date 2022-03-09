@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 2c244265-381c-45ad-b439-7845b814e5ee
+            fieldUid: 2c244265-381c-45ad-b439-7845b814e5ee # Resources
             instructions: null
             label: null
             required: true
@@ -16,7 +16,8 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  2c244265-381c-45ad-b439-7845b814e5ee:
+  2c244265-381c-45ad-b439-7845b814e5ee: # Resources
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: resources
@@ -59,6 +60,7 @@ fields:
       maxRows: ''
       minRows: '1'
       placeholderKey: null
+      propagationKeyFormat: null
       propagationMethod: all
       selectionLabel: 'Add a resource'
       staticField: ''
@@ -67,4 +69,4 @@ fields:
     type: verbb\supertable\fields\SuperTableField
 handle: resourceList
 name: 'Resource List'
-sortOrder: 9
+sortOrder: 10
