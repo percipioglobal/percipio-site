@@ -10,7 +10,7 @@ services:
       - ./cms/.env
     init: true
     ports:
-      - "8001:80"
+      - "3500:80"
     tty: true
     volumes:
       - cpresources:/var/www/project/cms/web/cpresources
@@ -21,7 +21,7 @@ services:
       context: ./docker-config/php-prod-craft
       dockerfile: ./Dockerfile
     depends_on:
-      - "mariadb"
+      - "mysql"
       - "redis"
     env_file:
       *env
@@ -84,7 +84,7 @@ services:
       MYSQL_PASSWORD: project
     init: true
     ports:
-      - "5306:3306"
+      - "3502:3306"
     tty: true
     volumes:
       - db-data:/var/lib/mysql
@@ -108,7 +108,7 @@ services:
     init: true
     tty: true
     ports:
-      - "8081:8081"
+      - "3501:3501"
     volumes:
       - ./tsconfig.json:/var/www/project/tsconfig.json:cached
       - ./buildchain:/var/www/project/buildchain:cached
