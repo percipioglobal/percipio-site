@@ -17,7 +17,7 @@
         content: entry,
     } -%} #}
 
-    {%- include '_organisms/heroes/hero--main-text' ignore missing with {
+    {# {%- include '_organisms/heroes/hero--main-text' ignore missing with {
         content: {
             heading: 'We empower our clients to think differently.',
             overline: 'Our Work',
@@ -47,7 +47,7 @@
             ],
             placeholder: null
         },
-    } -%}
+    } -%} #}
 
     <div class="max-w-md flex mx-auto">
 
@@ -95,6 +95,11 @@
     }) -}}
 
     </div>
+
+    {%- include '_organisms/grids/grid--card-blog' ignore missing with {
+        category: 'Blog',
+        limit: 1,
+    } -%}
 
     {# {%- include '_organisms/grids/grid--card-blog' ignore missing with {
         cards: [

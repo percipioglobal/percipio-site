@@ -31,7 +31,7 @@
         {{ parse.ga(values.ga) -}}
     >
 
-        <span class="inline-block {{ values.active and not values.cta ? 'border-b border-blue-600' : '' -}}">
+        <span class="inline-block {{ values.icon.position == 'left' ? 'order-last' : '' }} {{ values.active and not values.cta ? 'border-b border-blue-600' : '' -}}">
             {{- values.text -}}
         </span>
 

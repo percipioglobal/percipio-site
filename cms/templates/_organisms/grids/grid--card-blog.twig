@@ -1,16 +1,42 @@
+{%- import '_macros/atoms' as render -%}
+
+
+{%- set limit = limit ??? null -%}
+{%- set utilities = utilities ??? null -%}
+{%- set ga = ga ??? null -%}
+{%- set category = category ??? null -%}
+
+{%- set blogs = blogs ??? craft.entries.section('blog')
+    .with(['teaserImage', 'blogCategories', 'authors', 'authors.teaserImage'])
+    .orderBy('postDate desc')
+    .limit(limit)
+-%}
+
+{%- paginate blogs as pageInfo, pageEntries -%}
+
 <div class="container mx-auto px-8 2xl:px-0 max-w-screen-2xl">
 
     <div class="grid grid-cols-1 lg:grid-cols-6 gap-8 mt-10">
 
-        {%- for card in cards -%}
+        {%- for blog in pageEntries -%}
             {%- include '_molecules/cards/card--blog' ignore missing with {
-                    content: card.content,
-                    ga: card.ga,
-                    utilities: card.utilities ??? null,
-                    size: loop.first or loop.index == 2 ? 'large' : null,
-                } -%}
+                content: blog,
+                ga: {
+                    category: 'card-blog',
+                    action: 'click',
+                    label: 'Card blog'
+                },
+                category: category,
+                utilities: utilities ??? null,
+                size: loop.first or loop.index == 2 ? 'large' : null,
+            } -%}
         {%- endfor -%}
-        
+
     </div>
+
+    {%- include '_molecules/navigations/navigation--pagination' ignore missing with {
+        pageInfo: pageInfo,
+        utilities: 'mt-16'
+    } -%}
 
 </div>
