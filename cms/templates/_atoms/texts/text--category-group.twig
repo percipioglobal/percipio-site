@@ -16,7 +16,7 @@
         <div class="flex flex-wrap md:space-x-1 {{ values.utilities -}}">
             {%- if values.categories -%}
                 {%- for category in values.categories -%}
-                    {{- render.atom('text', 'category', { category: category })  -}}
+                    {{- render.atom('text', 'category', { category: category.title })  -}}
                     {{- loop.last ? '' : ',' -}}
                 {%- endfor -%}
             {%- endif -%}

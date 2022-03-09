@@ -96,9 +96,69 @@
 
     </div>
 
-    {%- include '_organisms/grids/grid--card-blog' ignore missing with {
-        category: 'Blog',
-        limit: 1,
+    {%- include '_organisms/grids/grid--card-main' ignore missing with {
+        cards: [
+            {
+                content: {
+                    title: 'Test heading',
+                    swatch: 'pink-600',
+                    url: 'https://google.com',
+                    categories: [
+                        {
+                            title: 'Web development',
+                            slug: 'development',
+                        },
+                        {
+                            title: 'Design',
+                            slug: 'design',
+                        },
+                    ],
+                },
+                ga: {
+                    category: 'card-main',
+                    action: 'click',
+                    label: 'Card main'
+                }
+            },
+
+            {
+                content: {
+                    title: 'Test heading',
+                    swatch: 'pink-600',
+                    url: 'https://google.com',
+                    categories: [
+                        {
+                            title: 'Design',
+                            slug: 'design',
+                        },
+                    ],
+                },
+                ga: {
+                    category: 'card-main',
+                    action: 'click',
+                    label: 'Card main'
+                }
+            },
+
+            {
+                content: {
+                    title: 'Test heading',
+                    swatch: 'pink-600',
+                    url: 'https://google.com',
+                    categories: [
+                        {
+                            title: 'Web development',
+                            slug: 'development',
+                        },
+                    ],
+                },
+                ga: {
+                    category: 'card-main',
+                    action: 'click',
+                    label: 'Card main'
+                }
+            },
+        ]
     } -%}
 
     {# {%- include '_organisms/grids/grid--card-blog' ignore missing with {
