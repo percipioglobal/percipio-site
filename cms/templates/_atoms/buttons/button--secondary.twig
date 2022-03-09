@@ -4,35 +4,44 @@
     ### OPTIONS ###
     ---------------
 
-    url: (STR) -- the url for the button
-    text: (STR) -- the text for the button
-    icon: (STR) -- the icon for the button ( optional )
-    utlities: (STR) -- the button utility from TW for the last button in the loop
+    active: (BOOL) -- Set active button state 
+    disabled: (BOOL) -- Set disabled button state
+    ga: (OBJ) -- GTM Tracking object
+    icon: (OBJ) -- the icon for the button ( optional )
     target: (STR) -- add _blank if you want to open the button in a new window
-    gaCategory: (STR) -- add a category for GTM tracking
-    gaAction: (STR) -- add an acction to GTM. This can be click / download / submit
-    gaLabel: (STR) -- add a value to the category for GTM tracking
+    text: (STR) -- the text for the button
+    url: (STR) -- the url for the button
+    utlities: (STR) -- the button utility from TW for the last button in the loop
 #}
 
-{%- import '_macros/atoms' as render -%}
-{%- import '_macros/functions' as functions -%}
+{%- import '_macros/functions' as parse -%}
 
 {%- block button -%}
 
     {%- minify -%}
 
         <a
-            {{ values.url ? 'href=' ~ values.url : '' }}
-            {{ values.target ? 'target=' ~ values.target : '' }}
+            href="{{- values.url -}}"
+            class="
+                capitalize inline-flex items-center justify-center self-start px-4 py-3 font-bold font-primary text-white bg-blue-600 h-12
+                transition-colors ease-in-out duration-300
+                hover:bg-blue-800 focus:bg-blue-600
+                {{ values.active ? 'bg-blue-600' : '' }}
+                {{ values.disabled ? 'pointer-events-none bg-opacity-10 text-opacity-20' : '' }}
+                {{ values.utilities ? values.utilities : '' -}}
+            "
             aria-label="{{- values.text -}}"
             title="{{- values.text -}}"
             {{ parse.ga(options.ga) -}}
-            class="inline-flex items-center space-x-3.5 px-4 py-3 font-bold text-white-100 transition ease-in-out duration-300 bg-blue-600 hover:bg-blue-800 focus:bg-blue-600 active:bg-blue-600 {{ values.utilities ? values.utilities : '' -}}"
         >
 
             <span class="text-base overflow-hidden overflow-ellipsis">
                 {{- values.text -}}
             </span>
+
+            {%- if values.icon.type -%}
+                {{- parse.icon(values.icon) -}}
+            {%- endif -%}
 
         </a>
 

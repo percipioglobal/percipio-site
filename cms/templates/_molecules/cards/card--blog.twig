@@ -1,61 +1,38 @@
 {%- import '_macros/atoms' as render -%}
-{%- import '_macros/functions' as functions -%}
-
-{%- set teaserImage = content.teaserImage[0] -%}
-{%- set swatchBlog = swatch(content.colourSwatch) -%}
-{%- set category = content.blogCategories|length ? content.blogCategories[0].title : '' -%}
-{%- set authorOptions = {
-    category: category
-} -%}
-{# {%- set swatchCategory = content.blogCategories[0] ? swatch(content.blogCategories[0].colourSwatch) : swatchBlog -%} #}
+{%- import '_macros/functions' as parse -%}
 
 {%- minify -%}
-<div class="container mx-auto max-w-screen-lg">
-    <div class="relative group">
-        <div class="bg-white-100">
-            <div class="py-8 border-b-8 border-{{- swatchBlog.primary }} group-hover:border-{{- swatchBlog.primary }} relative z-1">
-                <div class="flex w-full items-center">
-                    <div class="flex-grow pr-2">
-                        <p class="font-mono text-sm md:text-base pb-4 group-hover:text-white-100 transition duration-200 delay-300 ease-in-out">
-                            <span class="text-{{- swatchBlog.primary }} group-hover:text-white-100 transition duration-200 delay-300 ease-in-out">{{- category -}}</span>
-                            by
-                            {{ functions.authors(content.authors, authorOptions) }}
-                            on
-                            <time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
-                        </p>
-                        <div class="-mb-4">
-                            {{- render.atom('text', 'card-title', {
-                                content: content.title,
-                                utilities: 'group-hover:text-white-100 transition duration-200 delay-300 ease-in-out',
-                                colour: 'text-gray-800'
-                            }) -}}
-                        </div>
-                    </div>
-                    <div class="w-24 md:w-32 h-24 md:h-32 flex-shrink-0">
-                        {{- render.atom('image', 'teaser', {
-                            image: teaserImage,
-                            alt:teaserImage.title,
-                            ratio: 'aspect-w-1 aspect-h-1 rounded-full overflow-hidden',
-                            placeholders: placeholders,
-                            utilities: 'object-cover'
-                        }) -}}
-                    </div>
-                </div>
-            </div>
-
-            <span class="absolute block left-1/2 top-0 bg-{{- swatchBlog.primary }} transform -translate-x-full-1/2 group-hover:-translate-x-1/2 transition duration-1000 ease-blog w-screen h-full"></span>
-
+    <div class="group relative bg-white">     
+        <div class="overflow-hidden">
+            {{- render.atom('image', 'teaser', {
+                    image: placeholders.teaserPlaceholder,
+                    sizes: sizes ??? sizes,
+                    alt: 'test',
+                    ratio: 'aspect-video',
+                    placeholders: placeholders,
+                })
+            -}}
         </div>
 
-        <a 
-            href="{{- content.url -}}" 
-            data-tag-category="card-blog" 
-            data-tag-action="click" 
-            data-tag-label="{{- content.url -}}" 
-            class="absolute inset-0 z-1"
-        >
-            <span class="sr-only">Read {{- content.title -}}</span>
-        </a>
+
+        <div class="py-6">
+            {{- render.atom('text', 'card-title', { 
+                    content: content.title,
+                    utilities: 'group-hover:text-blue-800'
+                }) 
+            -}}
+            
+            {%- include '_molecules/metas/meta--blog' ignore missing with { 
+                content: content,
+                utilities: 'pt-3'
+            } -%}
+        </div>
+
+        {{- render.atom('link', 'card', {
+                url: content.url,
+                title: content.title,
+                ga: ga
+            })
+        -}}
     </div>
-</div>
 {%- endminify -%}

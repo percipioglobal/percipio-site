@@ -5,7 +5,7 @@
 
 {%- minify -%}
 
-    <section class="relative flex items-center w-full pb-20 overflow-hidden bg-blue-600 pt-44 text-white-100 lg:h-128">
+    <section class="relative flex items-center w-full pb-20 overflow-hidden bg-blue-600 pt-44 text-white lg:h-128">
         <div class="container max-w-screen-lg mx-auto xl:pl-28">
 
             <h1 class="sr-only">
@@ -22,7 +22,7 @@
             </div>
 
             {% if content.description|length %}
-                <div class="max-w-2xl mt-4 prose prose-lg md:mt-12 text-white-100 print:text-black-100">
+                <div class="max-w-2xl mt-4 prose prose-lg md:mt-12 text-white print:text-black-100">
                     {{- render.atom('text', 'content', { content: content.description }) -}}
                 </div>
             {% endif %}

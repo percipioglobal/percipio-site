@@ -1,0 +1,43 @@
+{%- extends "_atoms/buttons/button--variables" -%}
+
+{#
+    ### OPTIONS ###
+    ---------------
+
+    active: (BOOL) -- Set active button state 
+    disabled: (BOOL) -- Set disabled button state
+    ga: (OBJ) -- GTM Tracking object
+    icon: (OBJ) -- the icon for the button ( optional )
+    target: (STR) -- add _blank if you want to open the button in a new window
+    text: (STR) -- the text for the button
+    url: (STR) -- the url for the button
+    utlities: (STR) -- the button utility from TW for the last button in the loop
+#}
+
+{%- import '_macros/functions' as parse -%}
+
+{%- block button -%}
+    <a
+        href="{{- values.url -}}"
+        class="
+            capitalize inline-flex items-center justify-center self-start px-4 py-3 text-base font-primary font-bold h-12
+            transition-colors ease-in-out duration-300
+            {{ values.active ? 'text-blue-600' : '' }}
+            border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:bg-opacity-10
+            {{ values.disabled ? 'pointer-events-none bg-opacity-10 text-opacity-20 border-opacity-20' : '' }}
+        "
+        title="{{- values.text -}}"
+        aria-label="{{- values.text -}}"
+        {{ parse.ga(values.ga) -}}
+    >
+
+        <span class="inline-block {{ values.active and not values.cta ? 'border-b border-blue-600' : '' -}}">
+            {{- values.text -}}
+        </span>
+
+        {%- if values.icon.type -%}
+            {{- parse.icon(values.icon) -}}
+        {%- endif -%}
+
+    </a>
+{%- endblock -%}

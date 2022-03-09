@@ -12,10 +12,9 @@
 
 
 {% block text %}
-    {%- set colour = values.colour ??? 'text-white-100' %}
 
     {%- minify -%}
-        <h2 class="break-words font-bold mb-3 leading-none text-2xl md:text-4xl {{ colour }} {{ values.utilities }}">
+        <h2 class="break-words font-primary font-bold text-3xl text-gray-900 {{ values.utilities }}">
             {{- values.content | typogrify(true) -}}
         </h2>
     {%- endminify -%}
