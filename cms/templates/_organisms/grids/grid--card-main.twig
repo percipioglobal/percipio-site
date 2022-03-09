@@ -15,20 +15,20 @@
                 {%- case 'all' -%}
 
                     {%- include '_molecules/cards/card--main' ignore missing with {
-                            content: card.content,
-                            ga: card.ga,
-                            utilities: card.utilities ??? null,
-                            size: card.size ??? null,
+                        content: card.content,
+                        ga: card.ga,
+                        utilities: card.utilities ??? null,
+                        size: card.size ??? null,
                     } -%}
 
                 {%- case 'development' -%}
 
                     {%- if filter in card.content.categories[0] -%}
                         {%- include '_molecules/cards/card--main' ignore missing with {
-                                content: card.content,
-                                ga: card.ga,
-                                utilities: card.utilities ??? null,
-                                size: card.size ??? null,
+                            content: card.content,
+                            ga: card.ga,
+                            utilities: card.utilities ??? null,
+                            size: card.size ??? null,
                         } -%}
                     {%- endif -%}
 
@@ -36,10 +36,10 @@
 
                     {%- if filter in card.content.categories[0] -%}
                         {%- include '_molecules/cards/card--main' ignore missing with {
-                                content: card.content,
-                                ga: card.ga,
-                                utilities: card.utilities ??? null,
-                                size: card.size ??? null,
+                            content: card.content,
+                            ga: card.ga,
+                            utilities: card.utilities ??? null,
+                            size: card.size ??? null,
                         } -%}
                     {%- endif -%}
 
