@@ -1,0 +1,19 @@
+{%- import '_macros/functions' as parse -%}
+
+{%- set values = {
+    url: options.url,
+    title: options.title ?? '',
+    ga: options.ga ?? null,
+} -%}
+
+{%- minify -%}
+    <a
+        href="{{- values.url -}}"
+        title="{{- values.title -}}"
+        aria-label="{{- values.title -}}"
+        class="absolute inset-0 z-1"
+        {{ parse.ga(values.ga) -}}
+        >
+        <span class="sr-only">Read more about {{ values.title -}}</span>
+    </a>
+{%- endminify -%}

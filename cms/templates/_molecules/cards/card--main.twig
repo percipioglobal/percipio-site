@@ -1,0 +1,37 @@
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as parse -%}
+
+{%- set swatch = content.swatch -%}
+
+{%- minify -%}
+    <div class="relative group card-cta bg-white-100 shadow-lg transition-shadow duration-500 ease-in-out hover:shadow-2xl border-b-8 border-{{ swatch -}}">     
+        <div class="teaser overflow-hidden">
+            {{- render.atom('image', 'teaser', {
+                    image: placeholders.teaserPlaceholder,
+                    sizes: sizes ??? sizes,
+                    alt: 'test',
+                    animation: 'scale',
+                    ratio: 'aspect-video',
+                    placeholders: placeholders,
+                })
+            -}}
+        </div>
+
+        <div class="py-8 px-6">
+            {{- render.atom('text', 'card-title', { content: content.title }) -}}
+            
+            {{- render.atom('text', 'category-group', { 
+                    categories: content.categories,
+                    utilities: 'mt-4'
+                }) 
+            -}}
+        </div>
+
+        {{- render.atom('link', 'card', {
+                url: 'https://google.com',
+                title: 'Card link',
+                ga: ga
+            })
+        -}}
+    </div>
+{%- endminify -%}

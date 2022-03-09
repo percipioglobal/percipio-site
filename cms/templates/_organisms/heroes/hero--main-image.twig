@@ -14,12 +14,12 @@
 					{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
 				</h1>
 
-				<h2 class="font-primary font-extrabold text-4xl lg:text-6xl leading-tight lg:leading-tight text-white-100">
+				<h2 class="font-primary font-extrabold text-4xl lg:text-6xl leading-tight lg:leading-tight text-white">
 					{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
 				</h2>
 
 				{% if content.description %}
-					<div class="prose prose-lg mt-8 md:mt-5 text-white-100">
+					<div class="prose prose-lg mt-8 md:mt-5 text-white">
 						{{- render.atom('text', 'content', { content: content.description }) -}}
 					</div>
 				{% endif %}

@@ -34,7 +34,7 @@
             <i class="{{ variantsIcon[values.variant] is defined ? variantsIcon[values.variant] : '' }} {{ sizes[values.size] is defined ? sizes[values.size] : sizes['sm'] }} {{ values.colour }} opacity-20 group-hover:opacity-100 transition-opacity duration-200 ease-in-out"></i>
         {% endif %}
 
-        <i class="{{ sizes[values.size] is defined ? sizes[values.size] : sizes['sm'] }} {{ values.variant != '' ? 'fa-stack-1x ' : '' }} {{ values.icon }} {{ values.iconcss }} {{ values.colour }} group-hover:text-white-100 transition-colors duration-200 ease-in-out"></i>
+        <i class="{{ sizes[values.size] is defined ? sizes[values.size] : sizes['sm'] }} {{ values.variant != '' ? 'fa-stack-1x ' : '' }} {{ values.icon }} {{ values.iconcss }} {{ values.colour }} group-hover:text-white transition-colors duration-200 ease-in-out"></i>
 
     </span>
 {% endblock %}

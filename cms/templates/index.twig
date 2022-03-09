@@ -64,6 +64,32 @@
 
     </div>
 
+    <div class="grid grid-cols-2 gap-8 mt-10">
+        {%- include '_molecules/cards/card--main' ignore missing with {
+            content: {
+                title: 'Test heading',
+                swatch: 'pink-600',
+                url: 'https://google.com',
+                categories: [
+                    'Web development',
+                    'Design'
+                ],
+            },
+            ga: {
+                category: 'card-main',
+                action: 'click',
+                label: 'Card main'
+            }
+        } -%}
+
+        {# {%- include '_molecules/cards/card--blog' ignore missing with {
+            content: {
+                title: 'Test heading',
+                description: 'Test desc'
+            }
+        } -%} #}
+    </div>
+
     {# <div id="page">
         {%- include '_organisms/builders/page--builder' with {
             content: entry,
