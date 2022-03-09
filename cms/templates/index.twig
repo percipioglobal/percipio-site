@@ -17,6 +17,38 @@
         content: entry,
     } -%} #}
 
+    {# {%- include '_organisms/heroes/hero--main-text' ignore missing with {
+        content: {
+            heading: 'We empower our clients to think differently.',
+            overline: 'Our Work',
+        },
+    } -%}
+
+    {%- include '_organisms/heroes/hero--video' ignore missing with {
+        content: {
+            heading: 'We empower our clients to think differently.',
+            overline: 'Our Work',
+            buttons: [
+                    {
+                        text: 'Normal',
+                        url: 'https://google.com',
+                        ga: {
+                            category: 'navigation',
+                            action: 'click',
+                            label: 'test'
+                        }
+                    },
+                ],
+            video: [
+                {
+                    url: 'https://d138q4p46ztipc.cloudfront.net/videos/Home-header-0.4.1.mp4?mtime=20210225162553&focal=none',
+                    extension: 'mp4',
+                }
+            ],
+            placeholder: null
+        },
+    } -%} #}
+
     <div class="max-w-md flex mx-auto">
 
     {{- render.atom('button', 'secondary-outline', {
@@ -63,6 +95,178 @@
     }) -}}
 
     </div>
+
+    {%- include '_organisms/grids/grid--card-blog' ignore missing with {
+        category: 'Blog',
+        limit: 1,
+    } -%}
+
+    {# {%- include '_organisms/grids/grid--card-blog' ignore missing with {
+        cards: [
+            {
+                content: {
+                    title: 'Four Peaks Challenge in aid of Great Ormond Street',
+                    url: 'https://google.com',
+                    authors: [
+                        {
+                            title:'Stuart Byford',
+                            url: 'https://percipio.london/team/stuart-byford',
+                        },
+                    ],
+                    postDate: '23rd July 2021',
+                    category: 'Blog',
+                    swatch: 'blue-600'
+                },
+                ga: {
+                    category: 'card-blog',
+                    action: 'click',
+                    label: 'Card blog'
+                }
+            },
+
+            {
+                content: {
+                    title: 'Four Peaks Challenge in aid of Great Ormond Street',
+                    url: 'https://google.com',
+                    authors: [
+                        {
+                            title:'Stuart Byford',
+                            url: 'https://percipio.london/team/stuart-byford',
+                        },
+                    ],
+                    postDate: '23rd July 2021',
+                    category: 'Blog',
+                    swatch: 'blue-600'
+                },
+                ga: {
+                    category: 'card-blog',
+                    action: 'click',
+                    label: 'Card blog'
+                }
+            },
+
+            {
+                content: {
+                    title: 'Four Peaks Challenge in aid of Great Ormond Street',
+                    url: 'https://google.com',
+                    authors: [
+                        {
+                            title:'Stuart Byford',
+                            url: 'https://percipio.london/team/stuart-byford',
+                        },
+                    ],
+                    postDate: '23rd July 2021',
+                    category: 'Blog',
+                    swatch: 'blue-600'
+                },
+                ga: {
+                    category: 'card-blog',
+                    action: 'click',
+                    label: 'Card blog'
+                }
+            },
+
+            {
+                content: {
+                    title: 'Four Peaks Challenge in aid of Great Ormond Street',
+                    url: 'https://google.com',
+                    authors: [
+                        {
+                            title:'Stuart Byford',
+                            url: 'https://percipio.london/team/stuart-byford',
+                        },
+                    ],
+                    postDate: '23rd July 2021',
+                    category: 'Blog',
+                    swatch: 'blue-600'
+                },
+                ga: {
+                    category: 'card-blog',
+                    action: 'click',
+                    label: 'Card blog'
+                }
+            },
+
+            {
+                content: {
+                    title: 'Four Peaks Challenge in aid of Great Ormond Street',
+                    url: 'https://google.com',
+                    authors: [
+                        {
+                            title:'Stuart Byford',
+                            url: 'https://percipio.london/team/stuart-byford',
+                        },
+                    ],
+                    postDate: '23rd July 2021',
+                    category: 'Blog',
+                    swatch: 'blue-600'
+                },
+                ga: {
+                    category: 'card-blog',
+                    action: 'click',
+                    label: 'Card blog'
+                }
+            },
+
+            {
+                content: {
+                    title: 'Four Peaks Challenge in aid of Great Ormond Street',
+                    url: 'https://google.com',
+                    authors: [
+                        {
+                            title:'Stuart Byford',
+                            url: 'https://percipio.london/team/stuart-byford',
+                        },
+                    ],
+                    postDate: '23rd July 2021',
+                    category: 'Blog',
+                    swatch: 'blue-600'
+                },
+                ga: {
+                    category: 'card-blog',
+                    action: 'click',
+                    label: 'Card blog'
+                }
+            },
+        ],
+    } -%} #}
+    {# {%- include '_molecules/cards/card--main' ignore missing with {
+        content: {
+            title: 'Test heading',
+            swatch: 'pink-600',
+            url: 'https://google.com',
+            categories: [
+                'Web development',
+                'Design'
+            ],
+        },
+        ga: {
+            category: 'card-main',
+            action: 'click',
+            label: 'Card main'
+        }
+    } -%} #}
+
+    {# {%- include '_molecules/cards/card--blog' ignore missing with {
+        content: {
+            title: 'Four Peaks Challenge in aid of Great Ormond Street',
+            url: 'https://google.com',
+            authors: [
+                {
+                    title:'Stuart Byford',
+                    url: 'https://percipio.london/team/stuart-byford',
+                },
+            ],
+            postDate: '23rd July 2021',
+            category: 'Blog',
+            swatch: 'blue-600'
+        },
+        ga: {
+            category: 'card-blog',
+            action: 'click',
+            label: 'Card blog'
+        }
+    } -%} #}
 
     {# <div id="page">
         {%- include '_organisms/builders/page--builder' with {

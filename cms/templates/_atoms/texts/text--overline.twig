@@ -5,17 +5,14 @@
     ---------------
 
     content: (STR) -- the actual content as a string
+    color: (STR) -- a colour for the overline text
 
 #}
 
 {% block text %}
 
-    {%- set values = values|merge({
-        utilities: options.utilities ??? 'text-white-100',
-    }) -%}
-
     {%- minify -%}
-        <span class="inline-block font-mono break-words text-base {{ values.utilities -}}">
+        <span class="block break-words text-xl lg:text-3xl {{ values.color }} {{ values.utilities -}}">
             {{- values.content | typogrify(true) -}}
         </span>
     {%- endminify -%}

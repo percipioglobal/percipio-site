@@ -1,0 +1,43 @@
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as parse -%}
+
+{%- set swatch = content.swatch -%}
+{%- set utilities = utilities ??? null -%}
+{%- set size = size ??? 'small' -%}
+
+{%- minify -%}
+    <div class="relative flex flex-col group card-cta bg-white shadow-lg transition-shadow duration-500 ease-in-out hover:shadow-2xl border-b-8 border-{{ swatch }} {{ utilities }} {{ size == 'large' ? 'lg:col-span-2' : '' -}}">     
+        <div class="flex-grow flex-shrink-0 relative teaser overflow-hidden bg-blue-200 h-80 lg:h-102">
+            {{- render.atom('image', 'teaser', {
+                    image: placeholders.teaserPlaceholder,
+                    sizes: sizes ??? sizes,
+                    alt: 'test',
+                    animation: 'scale',
+                    ratio: 'w-full h-full',
+                    placeholders: placeholders,
+                    utilities: 'object-cover object-center w-full h-full'
+                })
+            -}}
+
+            {# ratio: size == 'large' ? 'aspect-16/9' : 'aspect-26/27', #}
+
+        </div>
+
+        <div class="py-8 px-6 flex flex-col flex-grow">
+            {{- render.atom('text', 'card-title', { content: content.title }) -}}
+            
+            {{- render.atom('text', 'category-group', { 
+                    categories: content.categories,
+                    utilities: 'mt-4'
+                }) 
+            -}}
+        </div>
+
+        {{- render.atom('link', 'card', {
+                url: 'https://google.com',
+                title: 'Card link',
+                ga: ga
+            })
+        -}}
+    </div>
+{%- endminify -%}

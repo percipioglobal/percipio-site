@@ -14,7 +14,7 @@
         data-tag-category="avatar" 
         data-tag-action="click" 
         data-tag-label="{{- values.author.url -}}"
-        class="w-16 h-16 rounded-full overflow-hidden bg-white-100 border-2 border-{{- values.colour.primary }} hover:border-{{- values.colour.secondary}} {{ values.utilities -}}"
+        class="w-16 h-16 rounded-full overflow-hidden bg-white border-2 border-{{- values.colour.primary }} hover:border-{{- values.colour.secondary}} {{ values.utilities -}}"
     >
         {{- render.atom('image', 'teaser', {
             image: values.author.teaserImage[0],

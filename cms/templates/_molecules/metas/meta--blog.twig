@@ -1,42 +1,18 @@
 {%- import '_macros/atoms' as render -%}
 {%- import '_macros/functions' as functions -%}
 
+{%- set utilities = utilities ??? null -%}
+{%- set category = category ??? null -%}
+{%- set swatch = content.swatch ??? 'blue-600' -%}
+
 {%- minify -%}
-    <div class="pt-16">
-        <div class="container mx-auto max-w-screen-lg">
-            <div class="md:flex items-center">
-
-                <div class="w-full md:w-auto mb-4 md:mb-0 md:flex-shrink-0">
-
-                    {{- render.atom('avatar', 'group', {
-                        authors: content.authors,
-                        colour: swatch,
-                        utilities: entry.authors|length == 1 ? 'flex' : '',
-                    }) -}}
-
-                </div>
-
-                <div class="w-full md:w-auto md:flex-grow md:pl-4">
-                    <div class="flex flex-wrap w-full items-center">
-                        <div class="flex-grow">
-                            <p class="font-mono text-gray-800">
-                                <span class="text-{{- swatch.primary }}">{{ content.blogCategories[0].title }}</span>
-                                by
-                                {{- functions.authors(content.authors, { swatch: swatch }) -}}<br/>
-                                on the
-                                <time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
-                            </p>
-                        </div>
-
-                        <div class="flex-shrink-0 pt-4 md:pt-0">
-                            {%- include '_molecules/buttons/buttons--social' with {
-                                content: entry,
-                            }-%}
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="reative z-2 {{ utilities -}}">
+            <p class="font-mono text-gray-900 text-base">
+                <span class="text-{{- swatch }}">{{ category }}</span>
+                by
+                {{- functions.authors(content.authors, { swatch: swatch }) }}
+                on the
+                <time datetime="{{ content.postDate|date('c')}}">{{ content.postDate|date('jS F Y')}}</time>
+            </p>
         </div>
-    </div>
 {%- endminify -%}

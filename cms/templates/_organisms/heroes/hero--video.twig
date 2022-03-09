@@ -1,22 +1,44 @@
 {%- import '_macros/atoms' as render -%}
 
 {%- minify -%}
-<section class="relative w-full min-h-3/4 pt-32 flex items-end overflow-hidden bg-gradient-to-br from-{{- swatch.primary }} to-{{- swatch.secondary }}">
-	<div class="container mx-auto max-w-screen-2xl mb-5 md:mb-8 lg:mb-12">
+<section class="relative w-full min-h-3/4 flex items-center overflow-hidden">
+	<div class="container mx-auto max-w-screen-xl px-8 2xl:px-0">
 
-		<div class="z-2 relative max-w-3xl px-12 py-6 bg-{{- swatch.primary }} bg-opacity-90 border-b-8 border-{{- swatch.secondary -}}">
+		<div class="z-2 relative max-w-3xl">
+			{{- render.atom('text', 'overline', {
+					content: content.overline,
+					utilities: 'mb-5 font-mono',
+					color: 'text-white'
+				})
+			-}}
 
 			<h1 class="sr-only">
 				{{- seomatic.site.identity.genericName -}}:
 				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
 			</h1>
 
-			<h2 class="font-primary font-extrabold text-3xl lg:text-6xl leading-tight lg:leading-tight text-white-100">
+			<h2 class="font-primary text-3xl lg:text-7xl text-white">
 				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
 			</h2>
+
+			{% if content.buttons %}
+
+					{{- render.atom('button', 'group', {
+
+						buttons: content.buttons,
+						type: 'primary-outline',
+						utilities: 'mt-10 space-x-4',
+						gaCategory: 'hero-cta',
+						gaAction: 'click',
+						swatch: swatch,
+						inverted: false,
+
+					}) -}}
+
+				{% endif %}
 		</div>
 
-		<div class="absolute inset-0 opacity-30">
+		<div class="absolute inset-0">
 			
 			{{- render.atom('video', 'hero', {
 				video: content.video[0],

@@ -16,7 +16,12 @@
     <div class="w-full {{ spacing -}}">
         {%- for blog in blogs -%}
             {%- include '_molecules/cards/card--blog' ignore missing with {
-                content: blog
+                content: blog,
+                ga: {
+                    category: 'card-blog',
+                    action: 'click',
+                    label: 'Card blog'
+                }
             } -%}
         {%- endfor -%}
     </div>

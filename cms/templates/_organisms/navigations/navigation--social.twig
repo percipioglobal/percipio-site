@@ -7,15 +7,14 @@
     'vimeo': 'fa-vimeo-v',
     'github': 'fa-github'
 } -%}
-{%- set utilities = utilities ?? '' -%}
-{%- set wrapperUtilities = wrapperUtilities ?? '' %}
-{%- set linkUtilities = linkUtilities ?? '' -%}
+
+{%- set utilities = utilities ??? null -%}
 
 <nav class="{{- utilities -}}" role="menu" aria-label="Social media pages of Percipio">
     {% for social in seomatic.site.sameAsLinks %}
         <a 
             href="{{- social.url -}}" 
-            class="{{- linkUtilities }} inline-block text-lg px-3" 
+            class="text-white hover:opacity-75 inline-block text-lg" 
             title="{{- social.siteName -}}" 
             aria-label="{{- social.siteName -}}" 
             target="_blank" 

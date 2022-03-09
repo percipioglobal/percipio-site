@@ -2,21 +2,21 @@
   <div
     v-if="showCookie"
     :class="[
-      'fixed z-20 right-0 bottom-0 m-3 p-5 w-11/12 md:w-9/12 lg:w-4/12 text-white-100',
+      'fixed z-20 right-0 bottom-0 m-3 p-5 w-11/12 md:w-9/12 lg:w-4/12 text-white',
       'bg-' + options.colour,
     ]"
   >
-    <span class="text-2xl font-extrabold block text-white-100 pb-3">{{
+    <span class="text-2xl font-extrabold block text-white pb-3">{{
       options.title
     }}</span>
 
-    <div class="text-white-100" v-html="options.content"></div>
+    <div class="text-white" v-html="options.content"></div>
 
 
     <div class="w-full flex items-center justify-end mt-5">
       <a
         :href="options.url"
-        class="text-white-100 underline mr-5"
+        class="text-white underline mr-5"
         :title="options.privacy"
       >
         {{ options.privacy }}
@@ -34,7 +34,7 @@
         </span>
         <div :class="[
             'absolute top-0 left-0 w-full h-full transform -translate-x-full group-hover:-translate-x-0 transition duration-300 ease-blog',
-            'bg-white-100'
+            'bg-white'
         ]"></div>
       </button>
     </div>
