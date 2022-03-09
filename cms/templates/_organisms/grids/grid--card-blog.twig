@@ -37,42 +37,8 @@
 
     </div>
 
-    <div class="flex items-center justify-center space-x-3">
-
-        {%- if pageInfo.prevUrl %}
-            {{- render.atom('button', 'secondary-outline', {
-                text: 'Previous',
-                url: pageInfo.prevUrl,
-                ga: {
-                    category: 'navigation',
-                    action: 'click',
-                    label: 'test'
-                },
-                icon: {
-                    type: 'far fa-long-arrow-left',
-                    position: 'left',
-                }
-            }) -}}
-        {%- endif -%}
-
-        {%- include '_molecules/navigations/navigation--pagination' ignore missing with {
-            pageInfo: pageInfo,
-        } -%}
-
-        {%- if pageInfo.nextUrl -%}
-            {{- render.atom('button', 'secondary-outline', {
-                text: 'Next',
-                url: pageInfo.nextUrl,
-                ga: {
-                    category: 'navigation',
-                    action: 'click',
-                    label: 'test'
-                },
-                icon: {
-                    type: 'far fa-long-arrow-right',
-                }
-            }) -}}
-        {%- endif -%}
-    </div>
+    {%- include '_molecules/navigations/navigation--pagination' ignore missing with {
+        pageInfo: pageInfo,
+    } -%}
 
 </div>

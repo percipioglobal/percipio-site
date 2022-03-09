@@ -1,0 +1,42 @@
+{%- import '_macros/functions' as parse -%}
+
+{%- set values = {
+    ariaCurrent: options.ariaCurrent ??? null,
+    ariaLabel: options.ariaLabel ??? null,
+    current: options.current ??? false,
+    ga: options.ga ??? null,
+    page: options.page ??? null,
+    separator: options.separator ??? false,
+    url: options.url ??? null,
+} -%}
+
+<li 
+    aria-label="{{- values.ariaLabel -}}"
+    aria-current="{{- values.current ? 'page' : null -}}"
+    class="
+        text-blue-600 font-bold 
+        {{ values.separator == true ? '' : 
+        'relative inline-flex items-center justify-center self-start px-4 py-3 text-base font-primary h-12
+        transition-colors ease-in-out duration-300 border-2 border-blue-600 hover:bg-blue-600 hover:bg-opacity-10' }}
+        {{ values.current ? 'bg-blue-600 bg-opacity-10' : '' -}}
+    "
+>
+    {%- if values.current -%}
+
+        <span>{{- values.page -}}</span>
+    
+    {%- elseif values.separator -%}
+
+        <span>…</span>
+
+    {%- else -%}
+
+        <a
+            href="{{- values.url -}}"
+            {{ parse.ga(values.ga) -}}
+        >
+            {{- values.page -}}
+        </a>
+
+    {%- endif -%}
+</li>
