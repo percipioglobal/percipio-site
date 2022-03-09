@@ -15,25 +15,32 @@
     <li 
         aria-label="{{- values.ariaLabel -}}"
         aria-current="{{- values.current ? 'page' : null -}}"
-        class="
-            text-blue-600 font-bold 
-            {{ values.separator == true ? '' : 
-            'relative inline-flex items-center justify-center self-start px-4 py-3 text-base font-primary h-12
-            transition-colors ease-in-out duration-300 border-2 border-blue-600 hover:bg-blue-600 hover:bg-opacity-10' }}
-            {{ values.current ? 'bg-blue-600 bg-opacity-10' : '' -}}
-        "
+        class="relative inline-flex items-center justify-center self-start"
     >
         {%- if values.current -%}
 
-            <span>{{- values.page -}}</span>
+            <span 
+                class="
+                    text-blue-600 font-bold relative inline-flex items-center justify-center self-start px-4 py-3 text-base font-primary h-12
+                    transition-colors ease-in-out duration-300 border-2 border-blue-600 hover:bg-blue-600 hover:bg-opacity-10 bg-blue-600 bg-opacity-10
+                "
+            >
+                {{- values.page -}}
+            </span>
         
         {%- elseif values.separator -%}
 
-            <span>…</span>
+            <span class="text-blue-600 font-bold relative inline-flex items-center justify-center self-start text-base font-primary h-12">
+                …
+            </span>
 
         {%- else -%}
 
             <a
+                class="
+                    text-blue-600 font-bold relative inline-flex items-center justify-center self-start px-4 py-3 text-base font-primary h-12
+                    transition-colors ease-in-out duration-300 border-2 border-blue-600 hover:bg-blue-600 hover:bg-opacity-10
+                "
                 href="{{- values.url -}}"
                 {{ parse.ga(values.ga) -}}
             >
@@ -42,5 +49,5 @@
 
         {%- endif -%}
     </li>
-    
+
 {%- endminify -%}
