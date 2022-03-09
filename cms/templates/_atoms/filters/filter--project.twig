@@ -11,8 +11,8 @@
 
     <a
         aria-label="{{- values.ariaLabel -}}"
-        href="?filter={{- values.filter.handle -}}"
-        class="text-3xl font-primary font-bold text-gray-900"
+        href="?filter={{- values.filter.slug -}}"
+        class="text-3xl font-primary font-bold text-gray-900 {{ values.current == values.filter.slug ? 'border-b-2 border-blue-600 pb-1' : 'pb-1.5' -}}"
         {{ parse.ga(values.ga) -}}
     >
         {{- values.filter.label -}}
