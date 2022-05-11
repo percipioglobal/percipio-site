@@ -4551,16 +4551,16 @@
         },
         {
             "name": "percipioglobal/craft-colour-swatches",
-            "version": "4.0.2",
+            "version": "4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/percipioglobal/craft-colour-swatches.git",
-                "reference": "878b8410f603170313e825da557eae3b4ac7d6eb"
+                "reference": "f875a102a3a69602bc89bee96193c995864aa8d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/percipioglobal/craft-colour-swatches/zipball/878b8410f603170313e825da557eae3b4ac7d6eb",
-                "reference": "878b8410f603170313e825da557eae3b4ac7d6eb",
+                "url": "https://api.github.com/repos/percipioglobal/craft-colour-swatches/zipball/f875a102a3a69602bc89bee96193c995864aa8d3",
+                "reference": "f875a102a3a69602bc89bee96193c995864aa8d3",
                 "shasum": ""
             },
             "require": {
@@ -4612,9 +4612,9 @@
                 "docs": "https://github.com/percipioglobal/craft-colour-swatches/blob/v4/README.md",
                 "email": "support@percipio.london",
                 "issues": "https://github.com/percipioglobal/craft-colour-swatches/issues",
-                "source": "https://github.com/percipioglobal/craft-colour-swatches/tree/4.0.2"
+                "source": "https://github.com/percipioglobal/craft-colour-swatches/tree/4.0.3"
             },
-            "time": "2022-05-11T12:02:52+00:00"
+            "time": "2022-05-11T15:10:30+00:00"
         },
         {
             "name": "percipiolondon/craft-timeloop",
