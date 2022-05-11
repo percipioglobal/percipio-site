@@ -3,17 +3,17 @@
 
 {% macro total_days(date) %}
 
-    {% spaceless %}
+    {% apply spaceless %}
         {{- date ? date.diff(now).days : '<span class="text-red-700">no date given</span>' -}}
-    {% endspaceless %}
+    {% endapply %}
 
 {% endmacro %}
 
 {# Formats all dates accordingly #}
 {% macro format_date(date) %}
-    {% spaceless %}
+    {% apply spaceless %}
         {{- date | date('j F, Y') -}}
-    {% endspaceless %}
+    {% endapply %}
 {% endmacro %}
 
 {% macro authors(authors, options) %}
@@ -21,13 +21,13 @@
     {% set colour = options.swatch ??? null %}
     {% set category = options.category ??? "" %}
 
-    {% spaceless %}
+    {% apply spaceless %}
         {% for author in authors %}
 
-            <a  class="{{ colour ? 'text-' ~ colour : '' -}}" 
+            <a  class="{{ colour ? 'text-' ~ colour : '' -}}"
                 href="{{- author.url -}}"
-                data-tag-category="author" 
-                data-tag-action="click" 
+                data-tag-category="author"
+                data-tag-action="click"
                 data-tag-label="{{- author.url -}}"
                 aria-label="{{- 'A ' ~ category ~ ' post by ' ~ author.title -}}"
             >
@@ -38,14 +38,14 @@
             {{- loop.index == loop.length - 1 ? ' and ' : '' -}}
 
         {% endfor %}
-    {% endspaceless %}
+    {% endapply %}
 {% endmacro %}
 
 {# Enter a date to show time ago in human readable form #}
 {% macro time_ago(date) %}
-    {% spaceless %}
+    {% apply spaceless %}
         {{- craft.app.formatter.asRelativeTime(date) -}}
-    {% endspaceless %}
+    {% endapply %}
 {% endmacro %}
 
 {# fetch an icon from the Font Awesome library #}
@@ -88,7 +88,7 @@
 		{%- set obj = lut[asset.providerName|lower] ??? null -%}
 
 		{{- obj ? render.atom(obj.type, obj.atom, obj.options) : lut['default'] -}}
-		
+
 	{%- endspaceless -%}
 {%- endmacro -%}
 

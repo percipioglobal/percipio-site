@@ -39,7 +39,7 @@ class Colours extends \Twig\Extension\AbstractExtension
             $i = 0;
             foreach ($swatch->color as $color) {
                 $key = 0 === $i ? 'primary' : 'secondary';
-                $swatches[$key] = $color->class;
+                $swatches[$key] = $color['class'];
 
                 $i++;
             }
