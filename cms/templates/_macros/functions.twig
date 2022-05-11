@@ -18,13 +18,12 @@
 
 {% macro authors(authors, options) %}
 
-    {% set colour = options.swatch ??? null %}
     {% set category = options.category ??? "" %}
 
     {% apply spaceless %}
         {% for author in authors %}
 
-            <a  class="{{ colour ? 'text-' ~ colour : '' -}}"
+            <a class="text-red-500"
                 href="{{- author.url -}}"
                 data-tag-category="author"
                 data-tag-action="click"
