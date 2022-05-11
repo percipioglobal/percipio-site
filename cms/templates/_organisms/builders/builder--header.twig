@@ -13,27 +13,20 @@
 
         {%- switch block.type -%}
 
-            {%- case 'heroContent' -%}
+            {%- case 'heroPrimary' -%}
 
-                {%- include '_organisms/heroes/hero--content' ignore missing with {
+                {%- include '_organisms/heroes/hero--primary' ignore missing with {
                     content: block,
                 } -%}
 
-            {% case "heroMain" %}
+            {%- case "heroSecondary" -%}
 
-                {%- include '_organisms/heroes/hero--main' ignore missing with {
+                {%- include '_organisms/heroes/hero--secondary' ignore missing with {
                     content: block,
                 } -%}
 
-            {% case "heroImage" %}
-
-                {%- include '_organisms/heroes/hero--image' ignore missing with {
-                    content: block,
-                } -%}
-
-            {% case "heroVideo" %}
-
-                {%- include '_organisms/heroes/hero--video' ignore missing with {
+            {%- default -%}
+                {%- include '_organisms/heroes/hero--primary' ignore missing with {
                     content: block,
                 } -%}
 

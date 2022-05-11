@@ -78,7 +78,7 @@ const site = async () => {
             window.addEventListener('load', () => {
                 Prism.highlightAll();
             })
-            
+
             createLevels('.handbook-active', 'data-active-index');
         }
 
