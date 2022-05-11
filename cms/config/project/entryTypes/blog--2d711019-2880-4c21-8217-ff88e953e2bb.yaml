@@ -23,7 +23,7 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
             warning: null
             width: 100
           -
@@ -102,7 +102,7 @@ fieldLayouts:
 handle: blog
 hasTitleField: true
 name: Blog
-section: 9de367ab-77b8-47bb-bbc3-63e79a202c3e
+section: 9de367ab-77b8-47bb-bbc3-63e79a202c3e # News
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

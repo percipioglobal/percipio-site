@@ -1,0 +1,47 @@
+enableVersioning: true
+entryTypes:
+  88bcc4ff-c9d0-4c32-9891-2d01044026a6: # FAQ
+    fieldLayouts:
+      8d6d7f6f-a7f0-4423-8600-7969d6883742:
+        tabs:
+          -
+            fields:
+              1aad5a2f-f77c-42d8-8c02-c97817b9cb18: # The Answer
+                required: false
+                sortOrder: 2
+              0827c9dd-2ea2-4e98-b743-3161e028a304: # FAQ Category
+                required: false
+                sortOrder: 3
+              a9df6c46-5d2c-4b29-96f7-4490417448b6: # The Question
+                required: false
+                sortOrder: 1
+            name: 'FAQ Entry'
+            sortOrder: 1
+    handle: faq
+    hasTitleField: false
+    name: FAQ
+    sortOrder: 1
+    titleFormat: '{question}'
+    titleLabel: Title
+handle: faq
+name: FAQ
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
+    enabledByDefault: true
+    hasUrls: true
+    template: ''
+    uriFormat: 'faq/{slug}'
+type: channel

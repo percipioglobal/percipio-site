@@ -117,7 +117,7 @@ fields:
         - powerpoint
         - text
         - word
-      defaultUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
+      defaultUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5' # Articles
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -127,11 +127,11 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5' # Branding
       singleUploadLocationSubpath: ''
       source: null
       sources:
-        - 'volume:b011a3f9-88a2-4819-aad0-ca04487dfac8'
+        - 'volume:b011a3f9-88a2-4819-aad0-ca04487dfac8' # Documents
       targetSiteId: null
       useSingleFolder: true
       validateRelatedElements: false

@@ -23,7 +23,7 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\AssetTitleField
+            type: craft\fieldlayoutelements\assets\AssetTitleField
             warning: null
             width: 100
           -
@@ -37,25 +37,11 @@ fieldLayouts:
             width: 100
         name: 'Optimized Images'
         sortOrder: 1
+fs: article
 handle: article
 hasUrls: true
 name: Articles
-settings:
-  addSubfolderToRootUrl: '1'
-  autoFocalPoint: ''
-  bucket: $S3_BUCKET
-  bucketSelectionMode: manual
-  cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-  cfPrefix: $CLOUDFRONT_PATH_PREFIX
-  expires: '3 months'
-  keyId: $S3_KEY_ID
-  makeUploadsPublic: '1'
-  region: $S3_REGION
-  secret: $S3_SECRET
-  storageClass: ''
-  subfolder: content/
 sortOrder: 5
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-type: craft\awss3\Volume
 url: $CLOUDFRONT_URL

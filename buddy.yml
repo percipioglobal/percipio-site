@@ -5,11 +5,11 @@
   target_site_url: "https://sandbox.percipio.london"
   trigger_condition: "ALWAYS"
   actions:
-    - action: "Execute: webpack build"
+    - action: "Execute: vite build"
       type: "BUILD"
       working_directory: "/buddy/$PROJECT_SHORTNAME"
       docker_image_name: "nystudio107/node-dev-base"
-      docker_image_tag: "14-alpine"
+      docker_image_tag: "16-alpine"
       execute_commands:
         - "cd buildchain"
         - "npm install"
@@ -133,11 +133,11 @@
   target_site_url: "https://percipio.london"
   trigger_condition: "ALWAYS"
   actions:
-    - action: "Execute: webpack build"
+    - action: "Execute: vite build"
       type: "BUILD"
       working_directory: "/buddy/$PROJECT_SHORTNAME"
       docker_image_name: "nystudio107/node-dev-base"
-      docker_image_tag: "14-alpine"
+      docker_image_tag: "16-alpine"
       execute_commands:
         - "cd buildchain"
         - "npm install"

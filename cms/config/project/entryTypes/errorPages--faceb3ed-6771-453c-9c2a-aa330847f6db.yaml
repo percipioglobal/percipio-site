@@ -23,7 +23,7 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
             warning: null
             width: 100
         name: Content
@@ -44,7 +44,7 @@ fieldLayouts:
 handle: errorPages
 hasTitleField: true
 name: Errors
-section: a72bfe0c-3389-4f9f-8ec1-ab318ec10b29
+section: a72bfe0c-3389-4f9f-8ec1-ab318ec10b29 # Errors
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

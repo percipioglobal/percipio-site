@@ -21,3 +21,5 @@ scope:
   - 'navigationNavs.b51f4d5a-4d35-43f1-af05-72e206874892:read' # Footer Navigation
   - 'navigationNavs.e0745046-9bad-4922-8da8-7f677ba84909:read' # Legal Navigation
   - 'seomatic.all:read'
+  - 'sites.5da841b1-ca0d-46ff-8bb1-04d6c889ac54:read' # Percipio
+  - 'sites.bc99b68d-e1ef-4e2c-8670-e0edbe3cf507:read' # Staff Handbook

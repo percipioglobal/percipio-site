@@ -1,0 +1,19 @@
+enableVersioning: false
+entryTypes:
+  faceb3ed-6771-453c-9c2a-aa330847f6db: # Errors
+    handle: errors
+    hasTitleField: true
+    name: Errors
+    sortOrder: 1
+    titleFormat: null
+    titleLabel: Title
+handle: errors
+name: Errors
+propagationMethod: all
+siteSettings:
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

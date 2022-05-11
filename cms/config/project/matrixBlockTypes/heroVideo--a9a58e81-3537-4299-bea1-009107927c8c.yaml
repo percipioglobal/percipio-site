@@ -46,7 +46,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b'
+      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b' # Headers
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -56,7 +56,7 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:14e48735-7707-43d5-a6f1-90cc18da80f1'
+      singleUploadLocationSource: 'volume:14e48735-7707-43d5-a6f1-90cc18da80f1' # Teasers
       singleUploadLocationSubpath: ''
       source: null
       sources: '*'
@@ -79,7 +79,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - video
-      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b'
+      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b' # Headers
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -89,7 +89,7 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:385e443b-b2c6-4ff0-b84a-a0fe656c51f0'
+      singleUploadLocationSource: 'volume:385e443b-b2c6-4ff0-b84a-a0fe656c51f0' # Video
       singleUploadLocationSubpath: ''
       source: null
       sources: '*'
