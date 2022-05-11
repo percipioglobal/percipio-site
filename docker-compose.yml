@@ -11,7 +11,6 @@ services:
     init: true
     ports:
       - "3500:80"
-    tty: true
     volumes:
       - cpresources:/var/www/project/cms/web/cpresources
       - ./cms/web:/var/www/project/cms/web:cached
@@ -28,7 +27,6 @@ services:
     expose:
       - "9000"
     init: true
-    tty: true
     volumes: &php-volumes
       # Change the path below to map to your local plugin repositories
       - cpresources:/var/www/project/cms/web/cpresources:delegated
@@ -41,7 +39,7 @@ services:
       - ./cms/vendor:/var/www/project/cms/vendor:delegated
       - ./cms/storage/rebrand:/var/www/project/cms/storage/rebrand:delegated
   # php - run php-fpm with xdebug
-  php_xdebug: 
+  php_xdebug:
     build:
       context: ./docker-config/php-dev-craft
       dockerfile: ./Dockerfile
@@ -49,10 +47,9 @@ services:
       - "php"
     env_file:
       *env
-    expose: 
+    expose:
       - "9000"
     init: true
-    tty: true
     volumes:
       *php-volumes
   # queue - runs queue jobs via php craft queue/listen
@@ -65,7 +62,6 @@ services:
     env_file:
       *env
     init: true
-    tty: true
     volumes:
       *php-volumes
   # mariadb - database
@@ -85,7 +81,6 @@ services:
     init: true
     ports:
       - "3502:3306"
-    tty: true
     volumes:
       - db-data:/var/lib/mysql
       - ./db-seed/:/docker-entrypoint-initdb.d
@@ -97,7 +92,6 @@ services:
     expose:
       - "6379"
     init: true
-    tty: true
   # webpack - frontend build system
   webpack:
     build:
@@ -106,7 +100,6 @@ services:
     env_file:
       *env
     init: true
-    tty: true
     ports:
       - "3501:3501"
     volumes:
