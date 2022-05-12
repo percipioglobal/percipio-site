@@ -65,9 +65,13 @@ module.exports = {
                 'base-extra': ['1rem','1.875rem'],
                 'xl-extra': ['1.25rem', '2.25rem'],
                 '2xl': ['1.5rem', '2.25rem'],
+                '2xl-md': ['1.5rem', '2rem'],
+                '3xl-md': ['1.5rem', '1.75rem'],
+                '5xl-md': ['2.25rem', '2.875rem'],
                 '5xl': ['3rem', '3.5rem'],
+                '7xl-md': ['3.75rem', '4.5rem'],
                 '7xl': ['4.5rem', '5rem'],
-                standfirst: ['1.875rem', '3rem'],
+                'standfirst': ['1.875rem', '3rem'],
             },
 
             letterSpacing: {
