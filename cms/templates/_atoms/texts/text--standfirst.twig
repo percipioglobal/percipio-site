@@ -1,4 +1,4 @@
-{%- extends "_atoms/texts/text--variables" -%}
+{%- extends "_atoms/texts/text--props" -%}
 
 {#
     ### PROPERTIES ###
@@ -13,8 +13,8 @@
 {%- block text -%}
 
     {%- minify -%}
-        <div class="prose-standfirst {{ props.utilities -}}">
-            {{- values.content | typogrify(true) -}}
+        <div class="prose prose-standfirst {{ props.alignment }} {{ props.utilities -}}">
+            {{- props.content | typogrify(true) -}}
         </div>
     {%- endminify -%}
 
