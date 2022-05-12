@@ -10,7 +10,7 @@ const main = async () => {
 
     const app = createApp(App)
 
-    // Mount the app 
+    // Mount the app
     return app.mount('#page-container')
 }
 

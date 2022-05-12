@@ -1,16 +1,7 @@
-{% do craft.eagerBeaver.eagerLoadElements(entry, [
-    'metaImage',
-    ])
-%}
+{%- include '_organisms/builders/builder--header' ignore missing with {
+    content: entry,
+} -%}
 
-<div id="content">
-	{%- include '_organisms/builders/hero--builder' with {
-        content: entry,
-    } -%}
-
-    <div id="page">
-        {%- include '_organisms/builders/page--builder' with {
-            content: entry,
-        } -%}
-    </div>
-</div>
+{%- include '_organisms/builders/builder--page' with {
+    content: entry,
+} -%}

@@ -31,7 +31,6 @@
 
 {# -- Any CSS that should be included before </head> -- #}
 {% block headCss %}
-    {% include "_inline-css/site-fonts.css" %}
 {% endblock headCss %}
 
 {# -- Page body -- #}
@@ -39,7 +38,7 @@
     <div id="page-container" class="overflow-hidden leading-tight min-h-screen flex flex-col">
 
             {# -- Cookie consent -- #}
-            {% include "_molecules/notifications/notification--cookie" %}
+            {# {% include "_molecules/notifications/notification--cookie" %} #}
 
             {# -- Info header, including _navbar.twig -- #}
             {# {% include "_organisms/sections/header.twig" %} #}
@@ -55,7 +54,7 @@
         {% endblock %}
 
         {# -- Info footer -- #}
-        {% include "_organisms/sections/footer.twig" %}
+        {# {% include "_organisms/sections/footer.twig" %} #}
 
         {# -- HTML Footer -- #}
         {# {% include "_partials/global-footer.twig" %} #}
