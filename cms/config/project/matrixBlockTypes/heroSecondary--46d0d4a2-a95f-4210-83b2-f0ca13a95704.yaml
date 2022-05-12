@@ -5,13 +5,13 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 32d5ec8b-e9ee-4409-ba69-616e0502bf3a
+            fieldUid: f4de4bd2-7a0e-4563-b290-a2a72c8d23df # Thumb
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e7bc203a-6f84-4fc8-83d5-304abfa9df3e
+            uid: acb78c7e-2b62-4b69-a051-5afcec1b4f06
             warning: null
             width: 100
           -
@@ -21,7 +21,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: eeb607ae-f806-4e24-8b68-2d449a654599
+            uid: 69c6a17d-17c4-470e-b5be-295cab92ffab
             warning: null
             width: 100
           -
@@ -31,17 +31,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 43c2137b-2cb3-4b26-b776-40d6e95ce04e
+            uid: ee8e4f80-6154-4dfc-9e46-4f399744403b
             warning: null
             width: 100
           -
-            fieldUid: f4de4bd2-7a0e-4563-b290-a2a72c8d23df # Thumb
+            fieldUid: 37b4ca60-ef63-4bbb-a7ab-de771a39a327 # Buttons
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d4b77243-d591-450b-9a62-8036f07af838
+            uid: 34ea7269-96b0-4333-a83f-930de03f68c3
             warning: null
             width: 100
         name: Content
@@ -75,26 +75,35 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  32d5ec8b-e9ee-4409-ba69-616e0502bf3a:
-    columnSuffix: qwromtyv
-    contentColumnType: text
+  37b4ca60-ef63-4bbb-a7ab-de771a39a327: # Buttons
+    columnSuffix: null
+    contentColumnType: string
     fieldGroup: null
-    handle: overline
-    instructions: null
-    name: Overline
+    handle: buttons
+    instructions: 'Create call to action to other pages'
+    name: Buttons
     searchable: false
     settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
+      columns:
+        __assoc__:
+          -
+            - 714aef78-b2cb-46ab-82b4-e1cbf362b65c # Target
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_58_buttons}}'
+      fieldLayout: row
+      maxRows: 2
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
     translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
   9151f126-34cf-4f3a-960f-107acc9842ad: # Heading
     columnSuffix: null
     contentColumnType: text
