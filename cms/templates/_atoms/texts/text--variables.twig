@@ -1,0 +1,19 @@
+{#
+    ### OPTIONS ###
+    ---------------
+
+    content: (STR) -- the actual content as a string
+    utilities: (STR) -- the specific TW spacing utilities to add
+    color: (STR) -- the color of the text
+    alignment: (STR) -- the text alignment
+#}
+
+{%- set properties = {
+    content: options.content ??? null,
+    color: options.color ??? 'text-black',
+    utilities: options.utilities ?? null,
+    alignment: options.alignment ??? 'text-left',
+} -%}
+
+{%- block text -%}
+{%- endblock -%}
