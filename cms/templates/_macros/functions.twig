@@ -53,9 +53,9 @@
         'arrow-left-long': 'far fa-long-arrow-left',
         'arrow-right-long': 'far fa-long-arrow-right',
 	} -%}
-	{%- spaceless -%}
+	{%- apply spaceless -%}
 		{{- lut[type] ??? 'fas fa-hashtag' -}}
-	{%- endspaceless -%}
+	{%- endapply -%}
 {%- endmacro -%}x
 
 {# Add blocks for different embedded asset types #}
@@ -82,35 +82,35 @@
 		default: asset ? asset.html,
 	} -%}
 
-	{%- spaceless -%}
+	{%- apply spaceless -%}
 
 		{%- set obj = lut[asset.providerName|lower] ??? null -%}
 
 		{{- obj ? render.atom(obj.type, obj.atom, obj.options) : lut['default'] -}}
 
-	{%- endspaceless -%}
+	{%- endapply -%}
 {%- endmacro -%}
 
 {# Add ga tags #}
 {%- macro ga(tags) -%}
 
-    {%- spaceless -%}
+    {%- apply spaceless -%}
 
         {{ tags.category ? 'data-tag-category=' ~ tags.category : '' }}
         {{ tags.action ? 'data-tag-action=' ~ tags.action : '' }}
         {{ tags.label ? 'data-tag-label=' ~ tags.label : '' }}
 
-    {%- endspaceless -%}
+    {%- endapply -%}
 
 {%- endmacro -%}
 
 {# Parse fa icon #}
 {%- macro icon(options) -%}
 
-    {%- spaceless -%}
+    {%- apply spaceless -%}
         <span class="inline-flex text-2xl {{ options.position == 'left' ? 'mr-4' : 'ml-4' }} {{ options.utilities -}}">
             <i class="{{ options.type -}}"></i>
         </span>
-    {%- endspaceless -%}
+    {%- endapply -%}
 
 {%- endmacro -%}

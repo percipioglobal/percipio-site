@@ -1,0 +1,24 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- set utilities = utilities|default('') -%}
+{%- set buttons = buttons|default([]) -%}
+
+{%- minify -%}
+    <div class="mt-11 {{ utilities -}}">
+        {%- for button in buttons -%}
+
+            {%- set type = loop.first ? 'primary' : 'secondary' -%}
+
+            {{- render.atom('button', type, {
+                url: button.target.getUrl() ??? null,
+                text: button.target.getText() ??? null,
+                target: button.target.getTarget() ??? '_self',
+                gaCategory: values.gaCategory ??? null,
+                gaAction: values.gaAction ??? null,
+                gaLabel: values.gaLabel ??? button.target.getUrl(),
+                utilities: not loop.last ? 'mr-2' : ''
+            }) -}}
+
+        {%- endfor -%}
+    </div>
+{%- endminify -%}

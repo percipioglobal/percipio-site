@@ -13,9 +13,9 @@
 {%- block text -%}
 
     {%- minify -%}
-        <div class="prose prose-standfirst {{ props.alignment }} {{ props.utilities -}}">
-            {{- props.content | typogrify(true) -}}
-        </div>
+        <span class="text-pink-500 font-mono text-2xl {{ props.utilities -}}">
+            {{- props.content | typogrify(true) | raw -}}
+        </span>
     {%- endminify -%}
 
 {%- endblock -%}

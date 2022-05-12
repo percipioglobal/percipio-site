@@ -5,13 +5,23 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: e0eb66ab-e5e9-4342-9c73-f3034283641e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: decb7a7e-6caa-4526-9f0e-cd1154d309c1
+            warning: null
+            width: 100
+          -
             fieldUid: d2e22319-599d-4193-b09f-3d48c90668e6 # Heading
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 25bca615-f94a-45cf-bcfd-d2237b34a28e
+            uid: d831d29e-d952-4761-a4f0-56b24ecdd779
             warning: null
             width: 100
           -
@@ -21,7 +31,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 3e41f8f9-a777-4347-9a7a-b7bdfe87ee66
+            uid: dee7213a-9eac-469a-a05e-50b71f2728a1
             warning: null
             width: 100
           -
@@ -31,7 +41,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a9076df3-ccdf-4894-a380-3adfbbc68911
+            uid: 3634ca0c-19ec-442d-a96c-ed3f292227af
             warning: null
             width: 100
           -
@@ -41,7 +51,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 82351ef6-eadd-4944-a538-95475427cffc
+            uid: d6c54d32-159a-4eb9-b3fc-94a4c8040f20
             warning: null
             width: 100
         name: Content
@@ -181,6 +191,26 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
+  e0eb66ab-e5e9-4342-9c73-f3034283641e:
+    columnSuffix: cakfbcei
+    contentColumnType: text
+    fieldGroup: null
+    handle: overline
+    instructions: null
+    name: Overline
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
 handle: heroPrimary
 name: 'Hero content with background image'
 sortOrder: 1
