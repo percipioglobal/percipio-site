@@ -1,0 +1,69 @@
+{%- extends '_atoms/images/image--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ---------------
+
+    image: (OBJ) -- Pass through the image object
+    sizes: (ARR) -- sizes array for responsive images
+    alt: (STR) -- The alt text
+    ratio: (STR) -- Give the aspect ratio in the correct format eg. aspect-4/3 / aspect-16/9 ( optional )
+    caption: (STR) -- The caption text ( optional )
+    author: (STR) -- The author of the image ( optional )
+    source: (STR) -- The image source ( optional )
+    utilities: (STR) -- The specific TW spacing utilities to add
+    optimized: (OBJ) -- The image optimizations for the image
+    placeholder: (OBJ) --- Add the placeholder image to the atom
+
+#}
+
+{%- set props = props|merge({
+    ratio: options.ratio ??? 'aspect-4/3',
+    optimized: options.image.optimizeDefault ??? null,
+    placeholder: options.placeholders.defaultPlaceholder[0].optimizeDefault,
+}) -%}
+
+{%- minify -%}
+
+    <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
+
+        <picture class="{{ props.ratio -}}">
+
+            <source 
+                data-srcset="{{- props.optimized.srcsetWebP() ??? props.placeholder.srcsetWebP() -}}"
+                sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                type="image/webp"
+            />
+
+            <source 
+                data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
+                sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+            />
+
+            <img
+                src="{{- props.optimized.placeholderImage() ??? props.placeholder.placeholderImage() -}}"
+                data-src="{{- props.optimized.src() ??? props.placeholder.src() -}}"
+                data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
+                sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                class="lazyload"
+                loading="lazy"
+                alt="{{- props.alt -}}"
+            />
+
+        </picture>
+
+            {# {%- if values.caption -%}
+
+                {{- render.atom('text', 'caption', {
+                    caption: values.caption,
+                    author: values.author,
+                    source: values.source,
+                    id: values.alt ~ '-' ~ values.image.id,
+                    textColour: options.textColour ??? 'gray-500',
+                }) -}}
+
+            {%- endif -%} #}
+
+    </figure>
+
+{%- endminify -%}
