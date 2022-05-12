@@ -1,7 +1,24 @@
-{% extends '_boilerplate/_layouts/generic-page-layout.twig' %}
+{% extends "_boilerplate/_layouts/generic-page-layout.twig" %}
+
+{% block headLinks %}
+    {{ parent() }}
+{% endblock headLinks %}
 
 {% block content %}
-<span class="bg-red-500 text-white">
-    testjeuh
-</span>
+    {%- include '_organisms/builders/builder--header' ignore missing with {
+        content: entry,
+    } -%}
+
+    {%- include '_organisms/builders/builder--page' with {
+        content: entry,
+    } -%}
+
 {% endblock %}
+
+{% block subcontent %}
+{% endblock %}
+
+{# -- Any JavaScript that should be included before </body> -- #}
+{% block bodyJs %}
+    {{ parent() }}
+{% endblock bodyJs %}
