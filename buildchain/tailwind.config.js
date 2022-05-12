@@ -19,6 +19,7 @@ module.exports = {
                     700: '#03543F',
                 },
                 'gray': {
+                    600: '#64748B',
                     800: '#27303F',
                     900: '#161E2E',
                 },
@@ -51,7 +52,7 @@ module.exports = {
             fontFamily: {
                 primary: [
                     'Open Sans',
-                    'sans-serif',
+                    'sans-serif'
                 ],
                 mono: [
                     'Source Code Pro',
@@ -59,11 +60,35 @@ module.exports = {
                 ],
             },
 
+            fontSize: {
+                'sm': ['0.875rem', '1.5rem'],
+                'base-extra': ['1rem','1.875rem'],
+                'xl-extra': ['1.25rem', '2.25rem'],
+                '2xl': ['1.5rem', '2.25rem'],
+                '5xl': ['3rem', '3.5rem'],
+                '7xl': ['4.5rem', '5rem'],
+                standfirst: ['1.875rem', '3rem'],
+            },
+
+            letterSpacing: {
+                'tightest': '-.07em',
+                'tighter': '-.04em',
+            },
+
             typography: (theme) => ({
+                DEFAULT: {
+                    css: {
+                        color: theme('colors.gray.900'),
+                        fontFamily: theme('fontFamily.primary').map(font => `'${font}'`).join(', '),
+                    }
+                },
                 'standfirst': {
                     css: { 
-                        color: theme('colors.gray.900')
-                        
+                        color: theme('colors.gray.900'),
+                        fontFamily: theme('fontFamily.primary').map(font => `'${font}'`).join(', '),
+                        fontSize: theme('fontSize.standfirst')[0],
+                        letterSpacing: theme('tracking.tighter'),
+                        lineHeight: theme('fontSize.standfirst')[1],
                     }
                 }
             }),

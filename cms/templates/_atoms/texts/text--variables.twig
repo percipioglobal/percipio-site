@@ -1,5 +1,5 @@
 {#
-    ### OPTIONS ###
+    ### PROPERTIES ###
     ---------------
 
     content: (STR) -- the actual content as a string
@@ -8,9 +8,9 @@
     alignment: (STR) -- the text alignment
 #}
 
-{%- set properties = {
+{%- set props = {
     content: options.content ??? null,
-    color: options.color ??? 'text-black',
+    color: options.color ??? 'text-gray-900',
     utilities: options.utilities ?? null,
     alignment: options.alignment ??? 'text-left',
 } -%}

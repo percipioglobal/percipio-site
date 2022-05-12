@@ -1,7 +1,7 @@
 {%- extends "_atoms/texts/text--variables" -%}
 
 {#
-    ### OPTIONS ###
+    ### PROPERTIES ###
     ---------------
 
     content: (STR) -- the actual content as a string
@@ -13,8 +13,8 @@
 {%- block text -%}
 
     {%- minify -%}
-        <div class="prose-standfirst {{ properties.utilities -}}">
-            {{- values.content | typogrify(true) -}}
+        <div class="prose prose-standfirst {{ props.alignment }} {{ props.utilities -}}">
+            {{- props.content | typogrify(true) -}}
         </div>
     {%- endminify -%}
 
