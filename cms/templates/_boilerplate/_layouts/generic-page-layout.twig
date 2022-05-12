@@ -33,11 +33,11 @@
 
 {# -- Page body -- #}
 {% block bodyHtml %}
-    <main class="flex-grow flex flex-col">
+    <main>
         {# -- Primary content block -- #}
         {% block content %}
         {% endblock %}
     </main>
     {# -- HTML Footer -- #}
-    {% include "_partials/global-footer.twig" %}
+    {% include '_boilerplate/_partials/global-footer.twig' %}
 {% endblock bodyHtml %}

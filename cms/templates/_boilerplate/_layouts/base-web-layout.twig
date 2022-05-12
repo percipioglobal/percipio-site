@@ -26,13 +26,13 @@
     │                                  htmlPage                                   │
     └─────────────────────────────────────────────────────────────────────────────┘
 #}
-{% extends "_boilerplate/_layouts/global-variables.twig" %}
+{% extends '_boilerplate/_layouts/global-variables.twig' %}
 
 {%- block htmlPage -%}
     {% minify %}
     <!DOCTYPE html>
         {% block htmlTag %}
-            <html lang="{{ craft.app.language |slice(0,2) }}">
+            <html lang="{{- craft.app.language |slice(0,2) -}}">
         {% endblock htmlTag %}
         {% block headTag %}
             <head>

@@ -13,6 +13,21 @@
     <link rel="dns-prefetch" href="{{ url }}">
     <link rel="preconnect" href="{{ url }}" crossorigin>
 {% endfor %}
+
+<link   rel="preconnect" 
+        href="https://fonts.googleapis.com">
+<link   rel="preconnect" 
+        href="https://fonts.gstatic.com" 
+        crossorigin>
+<link   rel="preload" 
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap" 
+        as="style" 
+        onload="this.rel='stylesheet'">
+<link   rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap" 
+        media="print"
+        onload="this.media='all'">
+
 {% header headerLink %}
 
 {# -- Favicons, webapp manifests, etc. -- #}
