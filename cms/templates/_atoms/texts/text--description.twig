@@ -8,14 +8,13 @@
     utilities: (STR) -- the specific TW spacing utilities to add
     color: (STR) -- the color of the text
     alignment: (STR) -- the text alignment
+
 #}
 
 {%- block text -%}
-
     {%- minify -%}
-        <div class="prose-standfirst {{ props.utilities -}}">
-            {{- values.content | typogrify(true) -}}
-        </div>
+        <span class="font-primary text-lg text-{{- props.color }} {{ props.alignment }} {{ props.utilities -}}">
+            {{- props.content | typogrify(true) -}}
+        </span>
     {%- endminify -%}
-
 {%- endblock -%}

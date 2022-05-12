@@ -1,5 +1,7 @@
+{%- extends "_atoms/texts/text--variables" -%}
+
 {#
-    ### OPTIONS ###
+    ### PROPERTIES ###
     ---------------
 
     content: (STR) -- the actual content as a string
@@ -8,12 +10,12 @@
     alignment: (STR) -- the text alignment
 #}
 
-{%- set props = {
-    content: options.content ??? null,
-    color: options.color ??? 'text-black',
-    utilities: options.utilities ?? null,
-    alignment: options.alignment ??? 'text-left',
-} -%}
-
 {%- block text -%}
+
+    {%- minify -%}
+        <span class="text-pink-500 font-mono text-2xl {{ props.utilities -}}">
+            {{- props.content | typogrify(true) | raw -}}
+        </span>
+    {%- endminify -%}
+
 {%- endblock -%}
