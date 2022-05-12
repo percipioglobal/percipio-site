@@ -1,0 +1,21 @@
+{%- extends "_atoms/texts/text--variables" -%}
+
+{#
+    ### OPTIONS ###
+    ---------------
+
+    content: (STR) -- the actual content as a string
+    utilities: (STR) -- the specific TW spacing utilities to add
+    color: (STR) -- the color of the text
+    alignment: (STR) -- the text alignment
+#}
+
+{%- block text -%}
+
+    {%- minify -%}
+        <div class="prose-standfirst {{ properties.utilities -}}">
+            {{- values.content | typogrify(true) -}}
+        </div>
+    {%- endminify -%}
+
+{%- endblock -%}

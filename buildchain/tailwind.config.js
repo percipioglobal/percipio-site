@@ -1,53 +1,50 @@
-const { convertToObject } = require('typescript');
-
 module.exports = {
     content: [
         '../cms/templates/**/*.{twig,html,svg}',
         '../src/vue/**/*.{vue,html}',
     ],
+
     safelist: [
     ],
 
     theme: {
-
         extend: {
-
             colors: {
-                'percipio-blue': {
+                'blue': {
                     500: '#1C64F2',
-                    700: '#1E429F'
+                    700: '#1E429F',
                 },
-                'percipio-green': {
+                'green': {
                     500: '#057A55',
-                    700: '#03543F'
+                    700: '#03543F',
                 },
-                'percipio-grey': {
-                    500: '#27303F',
-                    700: '#03543F'
+                'gray': {
+                    800: '#27303F',
+                    900: '#161E2E',
                 },
-                'percipio-orange': {
+                'orange': {
                     500: '#FF5A1F',
-                    700: '#B43403'
+                    700: '#B43403',
                 },
-                'percipio-pink': {
+                'pink': {
                     500: '#D61F69',
-                    700: '#99154B'
+                    700: '#99154B',
                 },
-                'percipio-purple': {
+                'purple': {
                     500: '#7E3AF2',
-                    700: '#5521B5'
+                    700: '#5521B5',
                 },
-                'percipio-red': {
+                'red': {
                     500: '#E02424',
-                    700: '#9B1C1C'
+                    700: '#9B1C1C',
                 },
-                'percipio-teal': {
+                'teal': {
                     500: '#0694A2',
-                    700: '#036672'
+                    700: '#036672',
                 },
-                'percipio-yellow': {
+                'yellow': {
                     500: '#FACA15',
-                    700: '#C27803'
+                    700: '#C27803',
                 },
             },
 
@@ -60,70 +57,22 @@ module.exports = {
                     'Source Code Pro',
                     'monospace'
                 ],
-                prose: [
-                    'sans-serif',
-                    'Open Sans',
-                ]
-            },
-
-            height: {
-                '90vh': '90vh',
             },
 
             typography: (theme) => ({
-                DEFAULT: {
-                    css: {
-                        maxWidth: '80ch',
-                        fontFamily: theme('fontFamily.prose'),
-                        h1: {
-                            fontWeight: 'bold'
-                        },
-                        h2: {
-                            fontWeight: 'bold'
-                        },
-                        h3: {
-                            fontWeight: 'bold'
-                        },
-                        h4: {
-                            fontWeight: 'bold'
-                        },
-                        h5: {
-                            fontWeight: 'bold'
-                        },
-                        h6: {
-                            fontWeight: 'bold'
-                        },
-                    },
-                },
-                'white': {
-                    css: {
-                        h1: {
-                            color: theme('colors.white.100')
-                        },
-                        h2: {
-                            color: theme('colors.white.100')
-                        },
-                        h3: {
-                            color: theme('colors.white.100')
-                        },
-                        h4: {
-                            color: theme('colors.white.100')
-                        },
-                        h5: {
-                            color: theme('colors.white.100')
-                        },
-                        h6: {
-                            color: theme('colors.white.100')
-                        },
-                        color: theme('colors.white.100')
+                'standfirst': {
+                    css: { 
+                        color: theme('colors.gray.900')
+                        
                     }
-                },
+                }
             }),
         },
     },
 
     plugins: [
-        require('@tailwindcss/typography'),
-        // require('@tailwindcss/aspect-ratio'),
+        require('@tailwindcss/aspect-ratio'),
+        require('@tailwindcss/line-clamp'),
+        require('@tailwindcss/typography')
     ],
 };
