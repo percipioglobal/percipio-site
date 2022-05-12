@@ -1,5 +1,36 @@
-{%- minify -%}
-    <header class="bg-percipio-blue-700 w-full h-[90vh]">
+{%- import '_macros/atoms' as render -%}
 
+{%- minify -%}
+    <header class="bg-gray-900 w-full h-[90vh] flex items-center justify-center">
+        <div class="flex flex-col items-center">
+            {# overline #}
+            {{- render.atom('text', 'overline', {
+                content: content.overline ??? 'Percipio.London',
+                utilities: 'mb-8'
+            }) -}}
+
+            {# heading #}
+            <h1>
+                <span class="sr-only">{{- seomatic.site.identity.genericName }} :</span>
+                {{- render.atom('text', 'title', {
+                    content: content.heading ??? entry.title,
+                    color: 'white'
+                }) -}}
+            </h1>
+
+            {# description #}
+            {%- if content.description -%}
+                {{- render.atom('text', 'description', {
+                    content: content.description,
+                    color: 'white',
+                    utilities: 'mt-8'
+                }) -}}
+            {%- endif -%}
+
+            {# buttons #}
+            {%- include '_molecules/buttons/button--group-primary' ignore missing with {
+                buttons: content.buttons,
+            } -%}
+        </div>
     </header>
 {%- endminify -%}
