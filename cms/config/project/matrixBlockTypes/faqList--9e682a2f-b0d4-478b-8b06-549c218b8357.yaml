@@ -24,7 +24,7 @@ fields:
       selectionLabel: 'Add questions'
       source: null
       sources:
-        - 'section:47b7409b-e345-48d9-b684-06ec0a2972f5' # FAQ
+        - 'section:47b7409b-e345-48d9-b684-06ec0a2972f5'
       targetSiteId: null
       validateRelatedElements: ''
       viewMode: null

@@ -17,7 +17,7 @@
     │                                  bodyHtml                                   │
     └─────────────────────────────────────────────────────────────────────────────┘
 #}
-{% extends "_boilerplate/_layouts/base-html-layout.twig" %}
+{% extends '_boilerplate/_layouts/base-html-layout.twig' %}
 
 {# -- Any <meta> tags that should be included in the <head> #}
 {% block headMeta %}
@@ -36,27 +36,11 @@
 
 {# -- Page body -- #}
 {% block bodyHtml %}
-    <div id="page-container" class="overflow-hidden leading-tight min-h-screen flex flex-col">
-
-            {# -- Cookie consent -- #}
-            {% include "_molecules/notifications/notification--cookie" %}
-
-            {# -- Info header, including _navbar.twig -- #}
-            {% include "_organisms/sections/header.twig" %}
-
-            <main class="flex-grow flex flex-col">
-                {% block content %}
-                {% endblock %}
-            </main>
-
-        {# -- Content that appears below the primary content block -- #}
-        {% block subcontent %}
+    <main class="flex-grow flex flex-col">
+        {% block content %}
         {% endblock %}
+    </main>
 
-        {# -- Info footer -- #}
-        {% include "_organisms/sections/footer.twig" %}
-
-        {# -- HTML Footer -- #}
-        {% include "_partials/global-footer.twig" %}
-    </div>
+    {# -- HTML Footer -- #}
+    {% include "_partials/global-footer.twig" %}
 {% endblock bodyHtml %}

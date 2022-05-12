@@ -1,6 +1,7 @@
+defaultPlacement: end
 enableVersioning: true
-handle: handbookPage
-name: 'Handbook Homepage'
+handle: blog
+name: Blog
 previewTargets:
   -
     __assoc__:
@@ -19,10 +20,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: null
-    uriFormat: handbook-homepage
-  bc99b68d-e1ef-4e2c-8670-e0edbe3cf507: # Staff Handbook
-    enabledByDefault: true
-    hasUrls: true
-    template: _organisms/_page
-    uriFormat: __home__
-type: single
+    uriFormat: 'blog/{slug}'
+type: channel

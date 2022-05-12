@@ -1,4 +1,4 @@
-dateModified: 1652279153
+dateModified: 1652345558
 elementSources:
   craft\elements\Entry:
     -
@@ -28,7 +28,7 @@ elementSources:
       heading: Channels
       type: heading
     -
-      key: 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # News
+      key: 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
       tableAttributes:
         - slug
         - 'field:8ce2faf2-a20a-4547-8145-4e3f9e75eb87' # Blog Categories
@@ -80,7 +80,7 @@ elementSources:
       heading: 'Staff Handbook'
       type: heading
     -
-      key: 'section:08f2a758-d849-407f-afd6-2128f3c67a48' # Staff Handbook
+      key: 'section:08f2a758-d849-407f-afd6-2128f3c67a48'
       tableAttributes:
         - postDate
         - dateUpdated
@@ -375,23 +375,20 @@ meta:
     07a123c0-4e8e-4c19-a79e-61829f5d88c0: Builders # Builders
     7b7f1a25-dd1f-40c1-8c62-7af0091d883f: Width # Width
     7bc51fb0-9ad3-4518-bd25-e12e3d2d0acf: Button # Button
-    7efd53bc-5a44-4318-9c45-d1004dc3d932: 'Staff Handbook' # Staff Handbook
     7f94d38a-7e8c-477c-8cca-bff77ee32f0e: 'Hero Image' # Hero Image
     7fb63ae6-c6ee-4824-9213-420e2da4e008: Partners # Partners
     8a8aa24a-d558-4d4c-83a5-e5983ab32e77: Items # Items
     8ce2faf2-a20a-4547-8145-4e3f9e75eb87: 'Blog Categories' # Blog Categories
     8dba6cfd-fcec-45be-8178-e5334e10aafa: 'Branding Image Placeholder' # Branding Image Placeholder
-    08f2a758-d849-407f-afd6-2128f3c67a48: 'Staff Handbook' # Staff Handbook
     9bca25cb-2cf2-4427-baf8-44e347cc8a7a: Button # Button
     9c4ff5ca-6227-465d-a4a9-5a584eba02b4: 'Body Content' # Body Content
-    9de367ab-77b8-47bb-bbc3-63e79a202c3e: News # News
+    9de367ab-77b8-47bb-bbc3-63e79a202c3e: Blog # Blog
     9e682a2f-b0d4-478b-8b06-549c218b8357: 'FAQ List' # FAQ List
     10a7e511-e02a-46ff-8524-7390d3e9be19: Client # Client
     11cffc84-a18e-49e3-9923-8229743b2a28: Branding # Branding
     014b68dd-cb2e-4a34-a2b4-91eba4de1e16: Code # Code
     14e48735-7707-43d5-a6f1-90cc18da80f1: Teasers # Teasers
     17ffd720-73f0-4e0c-9878-ea089fcc6863: Sliders # Sliders
-    018e3292-ac47-4ce5-82c4-ebed80f834b7: 'Handbook Homepage' # Handbook Homepage
     020d5ff3-f24f-48ae-bd4c-ad2beb6b4d8b: Heading # Heading
     24fd51e7-3c4a-4991-89c1-290d5c79408c: 'Logo Position' # Logo Position
     29d259da-2846-455c-b5ab-ed43e74ae7fa: 'Text Size' # Text Size
@@ -400,7 +397,6 @@ meta:
     40e441b8-aeac-4f02-878a-60457e5699a8: Position # Position
     040f68f0-b32f-4544-8b97-56d71c7f3428: Ratio # Ratio
     46faf86d-bfa5-4356-bef1-0af3b2a87332: 'Secondary Navigation' # Secondary Navigation
-    47b7409b-e345-48d9-b684-06ec0a2972f5: FAQ # FAQ
     47c98ad7-c9a9-402c-9171-9fd14eb7e8f4: 'Highlight Cards' # Highlight Cards
     48f153ba-ba26-42dd-b297-c5b428cc259b: Image # Image
     49d732ef-0bfc-46c0-ba09-004de008c0ba: Ratio # Ratio
@@ -506,7 +502,6 @@ meta:
     bae060ba-ddb9-4f66-8df8-9055de4e31e5: 'Show Logo' # Show Logo
     bbb59518-7cdc-4a7f-b07c-cd6b1fa8201d: Users # Users
     bc1fcbcc-41d9-4390-a366-5285be08d482: Cookie # Cookie
-    bc99b68d-e1ef-4e2c-8670-e0edbe3cf507: 'Staff Handbook' # Staff Handbook
     bcca818c-5cb3-4998-8165-95f5c9929f23: Standfirst # Standfirst
     beef2807-f960-414c-9ff2-690d9c30b6a8: Caption # Caption
     c0083422-e548-49c9-9db5-a2477942038d: 'Job Role' # Job Role
@@ -526,7 +521,6 @@ meta:
     d39b90d3-13a8-4d42-b415-1ef20426a174: 'Photo Cover Placeholder' # Photo Cover Placeholder
     d613d12d-ac03-4153-942b-0cca809f451b: 'Body Content' # Body Content
     d476916c-8ec8-4d19-a3f8-ac4854f87275: Catchphrase # Catchphrase
-    d2188822-da55-4ce1-b1ab-29523673aa84: 'Handbook Homepage' # Handbook Homepage
     d7413814-0c30-451d-a383-d39d7cc3f78b: Position # Position
     da9598dc-e9bb-4920-8adf-a712876cb578: 'Meta Description' # Meta Description
     dbb9d34a-ed00-430b-a6cd-e61927f7b2d5: Articles # Articles
@@ -652,8 +646,8 @@ plugins:
   retour:
     edition: standard
     enabled: true
-    licenseKey: null
-    schemaVersion: 3.0.9
+    licenseKey: 514KT3JMO8YM0A8ZTPI1PLW3
+    schemaVersion: 3.0.10
   seomatic:
     enabled: true
     licenseKey: 8LN4PPMQDNDW9TA7FLCL3WY5

@@ -32,7 +32,7 @@ fields:
       showSiteMenu: true
       source: null
       sources:
-        - 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # News
+        - 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
         - 'section:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd'
       targetSiteId: null
       validateRelatedElements: false
