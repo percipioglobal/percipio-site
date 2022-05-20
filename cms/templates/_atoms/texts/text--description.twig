@@ -13,8 +13,8 @@
 
 {%- block text -%}
     {%- minify -%}
-        <span class="font-primary text-lg text-{{- props.color }} {{ props.alignment }} {{ props.utilities -}}">
+        <div class="font-primary text-base md:text-lg text-{{- props.color }} {{ props.alignment }} {{ props.utilities -}}">
             {{- props.content | typogrify(true) -}}
-        </span>
+        </div>
     {%- endminify -%}
 {%- endblock -%}
