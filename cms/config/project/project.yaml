@@ -1,4 +1,4 @@
-dateModified: 1652380580
+dateModified: 1653052981
 elementSources:
   craft\elements\Entry:
     -
@@ -11,7 +11,7 @@ elementSources:
       heading: Structures
       type: heading
     -
-      key: 'section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2'
+      key: 'section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
       tableAttributes:
         - type
         - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e' # Colour Swatch
@@ -20,9 +20,11 @@ elementSources:
         - link
       type: native
     -
+      disabled: false
       key: 'section:92164c9b-e1af-4a4e-b639-44a2b5d79bd3'
       tableAttributes:
         - uri
+        - 'field:b884a1be-f354-4202-8335-78016b5d035a' # Show link as button
       type: native
     -
       heading: Channels
@@ -75,17 +77,6 @@ elementSources:
       type: heading
     -
       key: 'section:a72bfe0c-3389-4f9f-8ec1-ab318ec10b29' # Errors
-      type: native
-    -
-      heading: 'Staff Handbook'
-      type: heading
-    -
-      key: 'section:08f2a758-d849-407f-afd6-2128f3c67a48'
-      tableAttributes:
-        - postDate
-        - dateUpdated
-        - revisionCreator
-        - link
       type: native
 email:
   fromEmail: $SYSTEM_EMAIL
@@ -507,7 +498,7 @@ meta:
     b8ba7115-3804-4c06-8a96-501963d1fc5c: 'Error Headline' # Error Headline
     b51f4d5a-4d35-43f1-af05-72e206874892: 'Footer Navigation' # Footer Navigation
     b74a2d1f-f160-4a53-9a84-05b89c63c277: Blog # Blog
-    b884a1be-f354-4202-8335-78016b5d035a: 'Include children as active in the navigation' # Include children as active in the navigation
+    b884a1be-f354-4202-8335-78016b5d035a: 'Show link as button' # Show link as button
     b928e034-1b69-487e-a45b-b37d0f8a59a9: Containerise # Containerise
     b2330e68-6c4a-45ab-b5b1-8a510f75ce4f: General # General
     b8684f7c-8658-44df-abd4-882f0c55484b: Embed # Embed
@@ -557,7 +548,7 @@ meta:
     ebc9bc3a-83e6-4cab-956d-f254a119f606: 'Show Logo' # Show Logo
     ec91bde6-778d-4030-89fe-45614d871e81: Target # Target
     ed4b0f49-8429-4d80-846f-3d441bd3e707: Image # Image
-    ef841ba4-7bcd-4ef5-9c12-96377bf7fba2: Pages
+    ef841ba4-7bcd-4ef5-9c12-96377bf7fba2: Pages # Pages
     f4cbe95b-c71a-42f8-a9d8-464dcf3916a9: 'Primary Navigation' # Primary Navigation
     f4de4bd2-7a0e-4563-b290-a2a72c8d23df: Thumb # Thumb
     f7cf0694-24fa-4e41-943b-40abaddc797a: 'Quote Author' # Quote Author

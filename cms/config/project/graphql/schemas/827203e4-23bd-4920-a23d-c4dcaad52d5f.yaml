@@ -3,7 +3,7 @@ name: Navigation
 scope:
   - 'sections.92164c9b-e1af-4a4e-b639-44a2b5d79bd3:read'
   - 'entrytypes.74f6b1ab-d7f2-4df1-89fe-1601cf0697a0:read' # Navigation
-  - 'sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2:read'
+  - 'sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2:read' # Pages
   - 'entrytypes.13d83534-d33c-4c02-8e9a-8214c5419071:read'
   - 'entrytypes.58be0817-ea24-401b-98eb-4a60d7e7e34b:read'
   - 'entrytypes.210a0701-869d-41da-a862-26f5e894743c:read'
