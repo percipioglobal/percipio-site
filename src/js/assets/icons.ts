@@ -2,9 +2,8 @@
 import { dom, library } from '@fortawesome/fontawesome-svg-core';
 
 import {
-    faLongArrowLeft as farLongArrowLight,
-    faLongArrowRight as farLongArrowRight,
-    faCode as farCode,
+    faAngleRight as farAngleRight,
+    faHashtag as farHashtag
 } from '@fortawesome/pro-regular-svg-icons';
 
 import {
@@ -26,13 +25,13 @@ library.add(
     fabTwitter,
     fabVimeoV,
     fabYoutube,
-    farLongArrowLight,
-    farLongArrowRight,
-    farCode,
+    farAngleRight,
+    farHashtag
 );
 
 // convert i tags to SVG
-dom.watch({
-    autoReplaceSvgRoot: document,
-    observeMutationsRoot: document.body
-});
+// dom.watch({
+//     autoReplaceSvgRoot: document,
+//     observeMutationsRoot: document.body
+// });
+dom.watch()

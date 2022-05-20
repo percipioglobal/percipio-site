@@ -1,7 +1,7 @@
 // import App from '@/vue/App.vue'
 // import { createApp } from 'vue'
-import './assets/icons.js'
-import { initNavigation } from './utils/navigation';
+import './assets/icons'
+import { init as initNavigation } from './animations/navigation';
 
 // Import our CSS
 import '@/css/app.pcss';

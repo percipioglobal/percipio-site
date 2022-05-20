@@ -10,12 +10,12 @@
     alignment: (STR) -- the text alignment
 #}
 
-{%- set strongUtilities = 'prose-strong:text-pink-500 prose-strong:font-normal' -%}
+{%- set strong = 'prose-strong:text-pink-500 prose-strong:font-normal' -%}
 
 {%- block text -%}
 
     {%- minify -%}
-        <span class="text-{{- props.color }} prose text-4xl md:text-7xl-md lg:text-7xl tracking-tightest {{ strongUtilities}} {{ props.utilities -}}">
+        <span class="{{- props.color }} prose text-4xl md:text-7xl-md lg:text-7xl tracking-tightest {{ strong}} {{ props.utilities -}}">
             {{- props.content | striptags('<strong>') | typogrify(true) | raw -}}
         </span>
     {%- endminify -%}

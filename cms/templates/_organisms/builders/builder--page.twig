@@ -1,1 +1,31 @@
-builder--page
+{%- do craft.eagerBeaver.eagerLoadElements(entry,
+    [
+        'pageBuilder',
+        'pageBuilder.contentCta',
+        'pageBuilder.contentCta:image'
+    ])
+-%}
+
+{%- minify -%}
+
+    {%- for block in content.pageBuilder -%}
+
+        {%- switch block.type -%}
+
+            {%- case 'contentCta' -%}
+
+                {%- if block.image|length -%}
+                    {# dark #}
+                {%- else -%}
+                    {%- include '_molecules/ctas/cta--light' ignore missing with {
+                        heading: block.heading ??? '',
+                        content: block.body ??? '',
+                        button: block.target ??? null
+                    } -%}
+                {%- endif -%}
+
+        {%- endswitch -%}
+
+    {%- endfor -%}
+
+{%- endminify -%}

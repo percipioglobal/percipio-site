@@ -11,7 +11,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ad255b71-868a-41fb-a69e-29b7339b94f1
+            uid: 49bcdbba-fde0-4f64-9dbb-58467a944ede
             warning: null
             width: 100
           -
@@ -21,7 +21,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6a6ead4e-44a1-480e-875f-2b79cac26e4c
+            uid: 985521fd-5c65-4da8-b186-79ece5639f65
             warning: null
             width: 50
           -
@@ -31,7 +31,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 054fafd8-ee5a-420c-bda0-5714077418b4
+            uid: 79db6bad-165a-45ce-8608-f5ebc6c05986
             warning: null
             width: 50
           -
@@ -41,7 +41,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c2de3200-fc08-4223-900f-f2323f769604
+            uid: 89e0da54-1de7-406c-bd11-ae4eb687a461
             warning: null
             width: 100
           -
@@ -51,7 +51,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 29ab4628-17e8-414f-84dd-76558bde99d3
+            uid: 6e98f72d-2bd5-4b37-b370-9bf4823f81dd
             warning: null
             width: 100
           -
@@ -61,7 +61,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 3c8a23c3-ea5c-4e84-a3df-5d46db3625e7
+            uid: 2afcfee1-22a0-416b-a0ac-d8193153366a
             warning: null
             width: 100
           -
@@ -71,7 +71,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 236a5dca-f5c9-44e7-8a1e-43064b7b55c2
+            uid: 004b826c-3836-4a55-834c-ecab4846a2b1
             warning: null
             width: 100
         name: Content

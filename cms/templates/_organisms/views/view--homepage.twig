@@ -1,11 +1,11 @@
-{% extends '_boilerplate/_layouts/generic-page-layout.twig' %}
-{% import '_macros/atoms' as render %}
+{%- extends '_boilerplate/_layouts/generic-page-layout.twig' -%}
+{%- import '_macros/atoms' as render -%}
 
-{% block headLinks %}
+{%- block headLinks -%}
     {{ parent() }}
-{% endblock headLinks %}
+{%- endblock headLinks -%}
 
-{% block content %}
+{%- block content -%}
     {%- include '_organisms/builders/builder--hero' ignore missing with {
         content: entry,
     } -%}
@@ -19,15 +19,15 @@
 
     </div>
 
-
-
     {%- include '_organisms/builders/builder--page' with {
         content: entry,
     } -%}
 
-{% endblock %}
+    <div>&nbsp;</div>
+
+{%- endblock -%}
 
 {# -- Any JavaScript that should be included before </body> -- #}
-{% block bodyJs %}
+{%- block bodyJs -%}
     {{ parent() }}
-{% endblock bodyJs %}
+{%- endblock bodyJs -%}

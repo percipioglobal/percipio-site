@@ -8,13 +8,16 @@
     utilities: (STR) -- the specific TW spacing utilities to add
     color: (STR) -- the color of the text
     alignment: (STR) -- the text alignment
-
 #}
 
+{%- set strong = 'prose-strong:text-pink-500 prose-strong:font-normal' -%}
+
 {%- block text -%}
+
     {%- minify -%}
-        <div class="font-primary text-lg md:text-xl {{ props.color }} {{ props.alignment }} {{ props.utilities -}}">
-            {{- props.content | typogrify(true) -}}
-        </div>
+        <span class="text-{{- props.color }} prose text-3xl md:text-5xl-md lg:text-5xl tracking-tightest {{ strong}} {{ props.utilities -}}">
+            {{- props.content | striptags('<strong>') | typogrify(true) | raw -}}
+        </span>
     {%- endminify -%}
+
 {%- endblock -%}
