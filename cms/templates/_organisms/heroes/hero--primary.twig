@@ -4,7 +4,7 @@
 
     {%- set backgroundImage = content.heroImage -%}
 
-    <header class="{{- backgroundImage|length ? 'bg-gray-800' : '' }} w-full min-h-[90vh] py-6 md:py-12 flex items-center justify-center">
+    <header class="{{- backgroundImage|length ? 'bg-gray-800' : '' }} w-full min-h-[85vh] py-6 md:py-12 flex items-center justify-center">
         <div class="container max-w-screen-xl mx-auto flex flex-col items-center">
             {# overline #}
             {{- render.atom('text', 'overline', {
@@ -34,6 +34,11 @@
             {# buttons #}
             {%- include '_molecules/buttons/button--group-primary' ignore missing with {
                 buttons: content.buttons,
+                ga: {
+                    category: 'Hero CTA',
+                    action: 'click'
+                },
+                utilities: 'flex flex-wrap justify-center'
             } -%}
 
             {# @TODO: add background image with a small opacity so the white text will always be readable #}

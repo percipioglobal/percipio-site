@@ -29,6 +29,10 @@
             {# buttons #}
             {%- include '_molecules/buttons/button--group-primary' ignore missing with {
                 buttons: content.buttons,
+                ga: {
+                    category: 'Hero CTA',
+                    action: 'click'
+                }
             } -%}
         </div>
     </header>
