@@ -1,8 +1,11 @@
 {%- import '_macros/atoms' as render -%}
 
 {%- minify -%}
-    <header class="bg-gray-900 w-full h-[90vh] flex items-center justify-center">
-        <div class="flex flex-col items-center">
+
+    {%- set backgroundImage = content.heroImage -%}
+
+    <header class="{{- backgroundImage|length ? 'bg-gray-800' : '' }} w-full min-h-[90vh] py-6 md:py-12 flex items-center justify-center">
+        <div class="container max-w-screen-xl mx-auto flex flex-col items-center">
             {# overline #}
             {{- render.atom('text', 'overline', {
                 content: content.overline ??? 'Percipio.London',
@@ -10,11 +13,11 @@
             }) -}}
 
             {# heading #}
-            <h1>
-                <span class="sr-only">{{- seomatic.site.identity.genericName }} :</span>
+            <h1 class="text-center">
+                <span class="sr-only">{{- seomatic.site.identity.genericName }}: </span>
                 {{- render.atom('text', 'title', {
                     content: content.heading ??? entry.title,
-                    color: 'white'
+                    color: backgroundImage|length ? 'white' : 'gray-800'
                 }) -}}
             </h1>
 
@@ -22,7 +25,8 @@
             {%- if content.description -%}
                 {{- render.atom('text', 'description', {
                     content: content.description,
-                    color: 'white',
+                    color: backgroundImage|length ? 'white' : 'gray-800',
+                    alignment: 'text-center',
                     utilities: 'mt-8'
                 }) -}}
             {%- endif -%}
@@ -32,7 +36,10 @@
                 buttons: content.buttons,
             } -%}
 
-            {# @TODO: add background image #}
+            {# @TODO: add background image with a small opacity so the white text will always be readable #}
+            {%- if backgroundImage|length -%}
+
+            {%- endif -%}
         </div>
     </header>
 {%- endminify -%}
