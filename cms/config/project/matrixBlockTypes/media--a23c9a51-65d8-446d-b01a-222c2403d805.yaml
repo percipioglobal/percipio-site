@@ -11,6 +11,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c2afc960-a975-41c6-a39a-f7c94044b187
             warning: null
             width: 100
           -
@@ -20,10 +21,11 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: b0ab733a-7b74-46b3-bd20-e7ee6de02299
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: f0a95661-f4fd-4a63-b2c2-edcf21f1cd58
 fields:
   40e441b8-aeac-4f02-878a-60457e5699a8: # Position
     columnSuffix: null
@@ -68,25 +70,39 @@ fields:
     searchable: false
     settings:
       allowSelfRelations: false
+      allowSubfolders: false
       allowUploads: false
       allowedKinds:
         - json
       defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5' # Branding
-      defaultUploadLocationSubpath: ''
-      limit: '1'
+      defaultUploadLocationSubpath: null
       localizeRelations: false
+      maxRelations: 1
+      minRelations: null
       previewMode: full
-      restrictFiles: '1'
+      restrictFiles: true
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:03bb9bf6-0516-4070-b011-57f7820b7c7c' # Embed
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
       selectionLabel: 'Add an Embed URL'
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:03bb9bf6-0516-4070-b011-57f7820b7c7c' # Embed
-      singleUploadLocationSubpath: ''
       source: null
       sources: '*'
       targetSiteId: null
-      useSingleFolder: true
       validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null
@@ -94,4 +110,4 @@ fields:
     type: craft\fields\Assets
 handle: media
 name: Media
-sortOrder: 12
+sortOrder: 13

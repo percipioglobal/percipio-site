@@ -11,6 +11,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: cc5568ee-90a8-4856-b89e-2eb33d263727
             warning: null
             width: 100
           -
@@ -20,6 +21,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 1c4f6613-7b35-49f5-bb66-ebd85ca42382
             warning: null
             width: 100
           -
@@ -29,10 +31,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: df8039f2-7167-4763-8c3f-f9df8a0a84b9
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 77420046-8b89-462e-97a5-c10d770f6003
 fields:
   6fcc732b-3375-496d-92b8-64f3dcc00d00: # Overline
     columnSuffix: null
@@ -45,10 +48,10 @@ fields:
     settings:
       byteLimit: null
       charLimit: null
-      code: ''
+      code: false
       columnType: null
-      initialRows: '4'
-      multiline: ''
+      initialRows: 4
+      multiline: false
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -59,7 +62,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: button
-    instructions: ''
+    instructions: null
     name: Button
     searchable: false
     settings:
@@ -119,24 +122,32 @@ fields:
     type: lenz\linkfield\fields\LinkField
   e7b63d80-91cc-438a-b670-59cbb778ca14: # Heading
     columnSuffix: null
-    contentColumnType: string(480)
+    contentColumnType: text
     fieldGroup: null
     handle: heading
     instructions: 'The full heading of the section header'
     name: Heading
     searchable: true
     settings:
-      byteLimit: null
-      charLimit: 120
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: null
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Title.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\PlainText
+    type: craft\redactor\Field
 handle: sectionHeader
 name: 'Section Header'
 sortOrder: 1

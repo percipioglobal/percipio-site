@@ -11,6 +11,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 5ac3473d-c580-440f-beea-6c232f1c83bd
             warning: null
             width: 100
           -
@@ -20,6 +21,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 27f5e9b3-308d-4acf-9b14-06242c6b785b
             warning: null
             width: 100
           -
@@ -29,62 +31,32 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: d53a3bed-f9ef-44d0-bf23-c853335e218d
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 55862012-5fe5-4182-91de-7dd142bb5a93
 fields:
   0c7a7b67-3926-4a9f-b449-8d1d1c451f2f: # Width
     columnSuffix: null
-    contentColumnType: string
+    contentColumnType: text
     fieldGroup: null
     handle: width
     instructions: 'Set size of the block'
     name: Width
     searchable: true
     settings:
-      default: 1/3
-      options:
-        __assoc__:
-          -
-            - 1/6
-            - ''
-          -
-            - 1/5
-            - ''
-          -
-            - 1/4
-            - '1'
-          -
-            - 1/3
-            - '1'
-          -
-            - 2/5
-            - ''
-          -
-            - 1/2
-            - '1'
-          -
-            - 3/5
-            - ''
-          -
-            - 2/3
-            - '1'
-          -
-            - 3/4
-            - '1'
-          -
-            - 4/5
-            - ''
-          -
-            - 5/6
-            - ''
-          -
-            - full
-            - ''
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
-    type: rias\widthfieldtype\fields\Width
+    type: craft\fields\PlainText
   247bfb7d-d077-42ee-b2ba-84feb1b3fd19: # Content
     columnSuffix: null
     contentColumnType: text
@@ -100,13 +72,13 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
+      purifierConfig: null
+      purifyHtml: true
       redactorConfig: Content.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: enlarged
@@ -124,10 +96,10 @@ fields:
     settings:
       byteLimit: null
       charLimit: null
-      code: ''
+      code: false
       columnType: null
-      initialRows: '4'
-      multiline: ''
+      initialRows: 4
+      multiline: false
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
