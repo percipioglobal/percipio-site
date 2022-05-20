@@ -16,7 +16,7 @@
                 gaCategory: values.gaCategory ??? null,
                 gaAction: values.gaAction ??? null,
                 gaLabel: values.gaLabel ??? button.target.getUrl(),
-                utilities: not loop.last ? 'mr-2' : ''
+                utilities: 'my-2 md:my-0 ' ~ (not loop.last ? 'mr-2' : '')
             }) -}}
 
         {%- endfor -%}
