@@ -8,9 +8,7 @@
     iconPosition: (STR) -- the position of the icon ( optional )
     utlities: (STR) -- the button utility from TW for the last button in the loop
     target: (STR) -- add _blank if you want to open the button in a new window
-    gaCategory: (STR) -- add a category for GTM tracking
-    gaAction: (STR) -- add an acction to GTM. This can be click / download / submit
-    gaLabel: (STR) -- add a value to the category for GTM tracking
+    ga: (OBJ) -- add a category / action / label for GTM tracking
 #}
 
 {%- set props = {
@@ -20,9 +18,7 @@
     iconPosition: options.iconPosition ??? null,
     utilities: options.utilities ??? null,
     target: options.target ??? null,
-    gaCategory: options.gaCategory ??? null,
-    gaAction: options.gaAction ??? null,
-    gaLabel: options.gaLabel ??? null,
+    ga: options.ga ??? null,
 } -%}
 
 {%- block button -%}
