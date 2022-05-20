@@ -105,6 +105,10 @@ module.exports = {
                 'tighter': '-.04em',
             },
 
+            transitionTimingFunction: {
+                'slide': 'cubic-bezier(0.99, 0.3, 0.22, 0.85)'
+            },
+
             typography: (theme) => ({
                 DEFAULT: {
                     css: {

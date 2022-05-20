@@ -1,0 +1,59 @@
+{%- extends "_atoms/buttons/button--props" -%}
+
+{#
+    ### PROPS ###
+    ---------------
+
+    text: (STR) -- the text for the button
+    icon: (STR) -- the icon for the button ( optional )
+    iconPosition: (STR) -- the position of the icon ( optional )
+    utlities: (STR) -- the button utility from TW for the last button in the loop
+    target: (STR) -- add _blank if you want to open the button in a new window
+    ga: (OBJ) -- add a category / action / label for GTM tracking
+#}
+
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as functions -%}
+
+{%- block button -%}
+
+    {%- set classes = {
+        '_default': 'fixed right-4 top-4 w-8 h-8 z-10',
+        'padding': '',
+    }-%}
+
+    {%- set lines = {
+        '_child': 'absolute left-0 block w-[28px] h-[3px]',
+        '_parent': 'relative w-full h-full block hamburger',
+        'animation': 'transition-all duration-500 ease-in-out',
+        'color': 'bg-blue-500',
+    } -%}
+
+    {%- minify -%}
+
+        <button
+            {{ functions.ga({
+                category: 'Hamburger button',
+                action: 'click',
+                label: 'Show the mobile site navigation'
+            }) }}
+            aria-label="Hamburger menu"
+            aria-owns="mobile-site-navigation"
+            id="hamburger-mobile-navigation"
+            class="{{ classes._default }} {{ classes.padding }} {{ props.utilities }}"
+        >
+            <span class="sr-only">
+                <span class="hamburger-sr">Open</span> Mobile Navigation
+            </span>
+
+            <span class="hamburger-parent {{ lines._parent -}}">
+                <span class="top-0 {{ lines._child }} {{ lines.animation }} {{ lines.color }}"></span>
+                <span class="-mt-0.5 top-1/2 {{ lines._child }} {{ lines.animation }} {{ lines.color }}"></span>
+                <span class="bottom-0 {{ lines._child }} {{ lines.animation }} {{ lines.color }}"></span>
+            </span>
+
+        </button>
+
+    {%- endminify -%}
+
+{%- endblock -%}

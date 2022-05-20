@@ -33,10 +33,29 @@
 
 {# -- Page body -- #}
 {% block bodyHtml %}
+
+    {%- set navigation = craft.entries.section('navigation')
+        .with(['target'])
+        .all()
+    -%}
+
     <main>
-        {# -- Primary content block -- #}
-        {% block content %}
-        {% endblock %}
+        {# -- Navigation --  #}
+        {%- include '_organisms/navigations/navigation--primary' ignore missing with {
+            navigation: navigation
+        } -%}
+
+        {# -- Primary content block with bypass id -- #}
+        <div class="page-content w-full bg-white relative transition-transform duration-500 ease-slide" id="page">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        {%- include '_organisms/navigations/navigation--mobile' ignore missing with {
+            navigation: navigation
+        } -%}
+
+        {# -- Footer -- #}
     </main>
     {# -- HTML Footer -- #}
     {% include '_boilerplate/_partials/global-footer.twig' %}

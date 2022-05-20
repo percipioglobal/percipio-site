@@ -1,6 +1,5 @@
 
 {# Calculate total days from a given date #}
-
 {% macro total_days(date) %}
 
     {% apply spaceless %}
@@ -96,9 +95,9 @@
 
     {%- apply spaceless -%}
 
-        {{ tags.category ? 'data-tag-category=' ~ tags.category : '' }}
-        {{ tags.action ? 'data-tag-action=' ~ tags.action : '' }}
-        {{ tags.label ? 'data-tag-label=' ~ tags.label : '' }}
+        {{ tags.category ??? null ? 'data-tag-category=' ~ tags.category : '' }}
+        {{ tags.action ??? null ? 'data-tag-action=' ~ tags.action : '' }}
+        {{ tags.label ??? null ? 'data-tag-label=' ~ tags.label : '' }}
 
     {%- endapply -%}
 

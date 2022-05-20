@@ -1,17 +1,20 @@
-import App from '@/vue/App.vue'
-import { createApp } from 'vue'
+// import App from '@/vue/App.vue'
+// import { createApp } from 'vue'
 import './assets/icons.js'
+import { initNavigation } from './utils/navigation';
 
 // Import our CSS
-import '@/css/app.css';
+import '@/css/app.pcss';
 
 // App main
 const main = async () => {
 
-    const app = createApp(App)
+    initNavigation()
 
-    // Mount the app
-    return app.mount('#page-container')
+    // const app = createApp(App)
+
+    // // Mount the app
+    // return app.mount('#page-container')
 }
 
 // Execute async function
