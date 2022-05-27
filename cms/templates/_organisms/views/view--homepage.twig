@@ -1,27 +1,33 @@
-{% extends '_boilerplate/_layouts/generic-page-layout.twig' %}
-{% import '_macros/atoms' as render %}
+{%- extends '_boilerplate/_layouts/generic-page-layout.twig' -%}
+{%- import '_macros/atoms' as render -%}
 
-{% block headLinks %}
+{%- block headLinks -%}
     {{ parent() }}
-{% endblock headLinks %}
+{%- endblock headLinks -%}
 
-{% block content %}
+{%- block content -%}
     {%- include '_organisms/builders/builder--hero' ignore missing with {
         content: entry,
     } -%}
+
+    <div class="container max-w-screen-xl mx-auto">
+
+        {{- render.atom('text', 'standfirst', {
+            content: "The Education Endowment Foundation is an independent charity dedicated to breaking the link between family income and educational achievement. Part of the way towards accomplishing this aim is by summarising the best available evidence in plain language for busy, time poor teachers. Over the past few years we have been working with the EEF’s analysts and content authors to create a series of nationally distributed ~40 page, graphic heavy Guidance Reports on a range of high-priority issues based such as on the best available evidence.",
+            alignment: 'md:text-center'
+        }) -}}
+
+    </div>
 
     {%- include '_organisms/builders/builder--page' with {
         content: entry,
     } -%}
 
-    {{- render.atom('text', 'standfirst', {
-        content: "The Education Endowment Foundation is an independent charity dedicated to breaking the link between family income and educational achievement. Part of the way towards accomplishing this aim is by summarising the best available evidence in plain language for busy, time poor teachers. Over the past few years we have been working with the EEF’s analysts and content authors to create a series of nationally distributed ~40 page, graphic heavy Guidance Reports on a range of high-priority issues based such as on the best available evidence.",
-        alignment: 'text-center'
-    }) -}}
+    <div>&nbsp;</div>
 
-{% endblock %}
+{%- endblock -%}
 
 {# -- Any JavaScript that should be included before </body> -- #}
-{% block bodyJs %}
+{%- block bodyJs -%}
     {{ parent() }}
-{% endblock bodyJs %}
+{%- endblock bodyJs -%}

@@ -13,8 +13,8 @@
 {%- block text -%}
 
     {%- minify -%}
-        <div class="prose prose-standfirst {{ props.alignment }} {{ props.utilities -}}">
-            {{- props.content | typogrify(true) -}}
+        <div class="prose prose-standfirst-md lg:prose-standfirst my-12 md:my-18 lg:my-32 {{ props.alignment }} {{ props.utilities -}}">
+            <p>{{- props.content | typogrify(true) -}}</p>
         </div>
     {%- endminify -%}
 

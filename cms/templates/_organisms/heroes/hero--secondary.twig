@@ -1,7 +1,39 @@
 {%- import '_macros/atoms' as render -%}
 
 {%- minify -%}
-    <header class="bg-red-500">
+    <header class="w-full min-h-[90vh] py-12 flex items-center justify-center">
+        <div class="flex flex-col items-center">
 
+            <div class="bg-pink-500 w-32 h-32 rounded-full mb-8">
+                {# @TODO: add thumb image #}
+            </div>
+
+            {# heading #}
+            <h1>
+                <span class="sr-only">{{- seomatic.site.identity.genericName }} :</span>
+                {{- render.atom('text', 'title', {
+                    content: content.heading ??? entry.title,
+                    color: 'text-gray-800'
+                }) -}}
+            </h1>
+
+            {# description #}
+            {%- if content.description -%}
+                {{- render.atom('text', 'description', {
+                    content: content.description,
+                    color: 'text-gray-600',
+                    utilities: 'mt-8'
+                }) -}}
+            {%- endif -%}
+
+            {# buttons #}
+            {%- include '_molecules/buttons/button--group-primary' ignore missing with {
+                buttons: content.buttons,
+                ga: {
+                    category: 'Hero CTA',
+                    action: 'click'
+                }
+            } -%}
+        </div>
     </header>
 {%- endminify -%}

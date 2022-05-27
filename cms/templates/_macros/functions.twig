@@ -1,6 +1,5 @@
 
 {# Calculate total days from a given date #}
-
 {% macro total_days(date) %}
 
     {% apply spaceless %}
@@ -47,17 +46,6 @@
     {% endapply %}
 {% endmacro %}
 
-{# fetch an icon from the Font Awesome library #}
-{%- macro fa_icon_lut(type) -%}
-	{%- set lut = {
-        'arrow-left-long': 'far fa-long-arrow-left',
-        'arrow-right-long': 'far fa-long-arrow-right',
-	} -%}
-	{%- apply spaceless -%}
-		{{- lut[type] ??? 'fas fa-hashtag' -}}
-	{%- endapply -%}
-{%- endmacro -%}x
-
 {# Add blocks for different embedded asset types #}
 {%- macro embed(asset) -%}
 	{% import '_macros/atoms' as render %}
@@ -96,9 +84,9 @@
 
     {%- apply spaceless -%}
 
-        {{ tags.category ? 'data-tag-category=' ~ tags.category : '' }}
-        {{ tags.action ? 'data-tag-action=' ~ tags.action : '' }}
-        {{ tags.label ? 'data-tag-label=' ~ tags.label : '' }}
+        {{ tags.category ??? null ? 'data-tag-category=' ~ tags.category : '' }}
+        {{ tags.action ??? null ? 'data-tag-action=' ~ tags.action : '' }}
+        {{ tags.label ??? null ? 'data-tag-label=' ~ tags.label : '' }}
 
     {%- endapply -%}
 

@@ -5,18 +5,20 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: b2c99831-d731-447c-8233-c0418cc574bd
+            fieldUid: b2c99831-d731-447c-8233-c0418cc574bd # Cards
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: a03bed2c-0238-4b89-a80e-67d9e30da54a
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 654477f7-c5a3-4e5f-b646-aa717bba1f21
 fields:
-  b2c99831-d731-447c-8233-c0418cc574bd:
+  b2c99831-d731-447c-8233-c0418cc574bd: # Cards
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: cards
@@ -25,8 +27,20 @@ fields:
     searchable: false
     settings:
       allowSelfRelations: false
-      limit: ''
       localizeRelations: false
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
       selectionLabel: 'Add a card to highlight'
       showSiteMenu: true
       source: null

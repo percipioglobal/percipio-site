@@ -1,4 +1,4 @@
-field: e531a8df-ea73-4e09-8422-d08a20883128
+field: e531a8df-ea73-4e09-8422-d08a20883128 # Slides
 fieldLayouts:
   db3884af-07d7-46d7-a69c-a5134817e94f:
     tabs:
@@ -11,6 +11,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 6865b3d9-1077-47f1-b0db-5eb23e030997
             warning: null
             width: 100
           -
@@ -20,31 +21,34 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: a8ef2931-cc7a-4e90-82e8-46d5e362b39c
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 1e9d1dfc-4c9b-4503-9112-0cf78734cb1b
 fields:
   2cb6fb1e-761a-4096-ba9d-e151495efc98: # Caption
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: caption
-    instructions: ''
+    instructions: null
     name: Caption
     searchable: true
     settings:
       byteLimit: null
       charLimit: null
-      code: ''
+      code: false
       columnType: null
-      initialRows: '4'
-      multiline: ''
+      initialRows: 4
+      multiline: false
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
   48f153ba-ba26-42dd-b297-c5b428cc259b: # Image
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -53,26 +57,40 @@ fields:
     searchable: false
     settings:
       allowSelfRelations: false
+      allowSubfolders: false
       allowUploads: true
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5' # Branding
-      defaultUploadLocationSubpath: ''
-      limit: '1'
+      defaultUploadLocationSubpath: null
       localizeRelations: false
+      maxRelations: 1
+      minRelations: null
       previewMode: full
-      restrictFiles: '1'
+      restrictFiles: true
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863' # Sliders
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
       selectionLabel: 'Add a slider image'
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863' # Sliders
-      singleUploadLocationSubpath: ''
       source: null
       sources:
         - 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863' # Sliders
       targetSiteId: null
-      useSingleFolder: true
       validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null

@@ -11,69 +11,48 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: aaaf3b03-8ea5-47df-90ff-8c7ed96bfa67
             warning: null
             width: 100
           -
             fieldUid: 83cafeab-7189-4e6a-8d08-62f9e35de063 # Content
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 235f6bca-1696-4cae-b788-151de8ea53bf # Image
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
+            uid: e15afdcf-b7a6-48ad-a3df-6370d5313d43
             warning: null
             width: 100
           -
             fieldUid: 7bc51fb0-9ad3-4518-bd25-e12e3d2d0acf # Button
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 47cd9fb4-359e-4d0b-87e7-020d2e9629a9
             warning: null
             width: 100
           -
-            fieldUid: 1e5edb55-fbe5-44a5-8fd2-8f668886557e # Background Color
+            fieldUid: 91602cc8-0f1b-49b4-b806-9b424f7b0206 # Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 91cc28f6-c0eb-43be-851f-9a6b19c8ba9b
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 6a8e4244-4354-474d-970a-2b5edfb66a2a
 fields:
-  1e5edb55-fbe5-44a5-8fd2-8f668886557e: # Background Color
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: backgroundColor
-    instructions: ''
-    name: 'Background Color'
-    searchable: false
-    settings:
-      default: null
-      options: ''
-      palette: 'Content CTA'
-      useConfigFile: '1'
-    translationKeyFormat: null
-    translationMethod: none
-    type: percipioglobal\colourswatches\fields\ColourSwatches
   7bc51fb0-9ad3-4518-bd25-e12e3d2d0acf: # Button
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: button
-    instructions: ''
+    handle: target
+    instructions: null
     name: Button
     searchable: false
     settings:
@@ -133,24 +112,32 @@ fields:
     type: lenz\linkfield\fields\LinkField
   020d5ff3-f24f-48ae-bd4c-ad2beb6b4d8b: # Heading
     columnSuffix: null
-    contentColumnType: string(480)
+    contentColumnType: text
     fieldGroup: null
     handle: heading
     instructions: 'The full heading of the content CTA'
     name: Heading
     searchable: true
     settings:
-      byteLimit: null
-      charLimit: 120
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: null
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Title.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\PlainText
+    type: craft\redactor\Field
   83cafeab-7189-4e6a-8d08-62f9e35de063: # Content
     columnSuffix: null
     contentColumnType: text
@@ -166,48 +153,61 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
-      redactorConfig: ''
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: '1'
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: enlarged
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  235f6bca-1696-4cae-b788-151de8ea53bf: # Image
+  91602cc8-0f1b-49b4-b806-9b424f7b0206: # Image
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: image
-    instructions: 'Select or upload an image to use for this content CTA section.'
+    instructions: 'By selecting an image, the CTA will have a dark background'
     name: Image
     searchable: false
     settings:
       allowSelfRelations: false
+      allowSubfolders: false
       allowUploads: true
-      allowedKinds:
-        - image
+      allowedKinds: null
       defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b' # Headers
-      defaultUploadLocationSubpath: ''
-      limit: '1'
+      defaultUploadLocationSubpath: null
       localizeRelations: false
+      maxRelations: 1
+      minRelations: null
       previewMode: full
-      restrictFiles: '1'
-      selectionLabel: ''
+      restrictFiles: false
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5' # Articles
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
       showSiteMenu: true
-      showUnpermittedFiles: true
+      showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b' # Headers
-      singleUploadLocationSubpath: ''
       source: null
       sources: '*'
       targetSiteId: null
-      useSingleFolder: true
       validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null

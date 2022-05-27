@@ -2,6 +2,7 @@
 
 {%- set utilities = utilities|default('') -%}
 {%- set buttons = buttons|default([]) -%}
+{%- set ga = ga|default({}) -%}
 
 {%- minify -%}
     <div class="mt-11 {{ utilities -}}">
@@ -13,10 +14,12 @@
                 url: button.target.getUrl() ??? null,
                 text: button.target.getText() ??? null,
                 target: button.target.getTarget() ??? '_self',
-                gaCategory: values.gaCategory ??? null,
-                gaAction: values.gaAction ??? null,
-                gaLabel: values.gaLabel ??? button.target.getUrl(),
-                utilities: not loop.last ? 'mr-2' : ''
+                ga: {
+                    category: ga.category ??? null,
+                    action: ga.action ??? null,
+                    label: button.target.getUrl() ??? null,
+                },
+                utilities: 'my-2 md:my-0 ' ~ (not loop.last ? 'mr-2' : '')
             }) -}}
 
         {%- endfor -%}

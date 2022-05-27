@@ -11,10 +11,11 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c1d592fe-e132-4613-a25e-53f6bfe3b90a
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 9eb89136-f927-400f-97e5-7455f3223371
 fields:
   2c244265-381c-45ad-b439-7845b814e5ee: # Resources
     columnSuffix: null
@@ -57,16 +58,15 @@ fields:
                   - ''
       contentTable: '{{%stc_7_resources}}'
       fieldLayout: table
-      maxRows: ''
-      minRows: '1'
-      placeholderKey: null
+      maxRows: null
+      minRows: 1
       propagationKeyFormat: null
       propagationMethod: all
       selectionLabel: 'Add a resource'
-      staticField: ''
+      staticField: null
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
 handle: resourceList
 name: 'Resource List'
-sortOrder: 10
+sortOrder: 11

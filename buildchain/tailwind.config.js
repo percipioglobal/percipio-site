@@ -5,9 +5,25 @@ module.exports = {
     ],
 
     safelist: [
+        'bg-gray-600',
+        'bg-gray-800',
+        'bg-gray-900',
+        {
+            pattern: /bg-(blue|green|orange|pink|purple|red|teal|yellow)-(500|700)/,
+            variants: ['hover','focus','md','lg'],
+        },
     ],
 
     theme: {
+
+        container: {
+            padding: {
+                DEFAULT: '1.5rem',
+                sm: '2rem',
+                '2xl': '0',
+            },
+        },
+
         extend: {
             aspectRatio: {
                 '3/2': '3 / 2',
@@ -80,11 +96,16 @@ module.exports = {
                 '7xl-md': ['3.75rem', '4.5rem'],
                 '7xl': ['4.5rem', '5rem'],
                 'standfirst': ['1.875rem', '3rem'],
+                'standfirst-md': ['1.25rem', '2rem'],
             },
 
             letterSpacing: {
                 'tightest': '-.07em',
                 'tighter': '-.04em',
+            },
+
+            transitionTimingFunction: {
+                'slide': 'cubic-bezier(0.99, 0.3, 0.22, 0.85)'
             },
 
             typography: (theme) => ({
@@ -95,12 +116,21 @@ module.exports = {
                     }
                 },
                 'standfirst': {
-                    css: { 
+                    css: {
                         color: theme('colors.gray.900'),
                         fontFamily: theme('fontFamily.primary').map(font => `'${font}'`).join(', '),
                         fontSize: theme('fontSize.standfirst')[0],
-                        letterSpacing: theme('tracking.tighter'),
-                        lineHeight: theme('fontSize.standfirst')[1],
+                        letterSpacing: theme('letterSpacing.tighter'),
+                        lineHeight: theme('fontSize.standfirst')[1]
+                    }
+                },
+                'standfirst-md': {
+                    css: {
+                        color: theme('colors.gray.900'),
+                        fontFamily: theme('fontFamily.primary').map(font => `'${font}'`).join(', '),
+                        fontSize: theme('fontSize.standfirst-md')[0],
+                        letterSpacing: theme('letterSpacing.thighter'),
+                        lineHeight: theme('fontSize.standfirst-md')[1]
                     }
                 }
             }),
