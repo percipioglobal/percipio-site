@@ -23,6 +23,9 @@
     author: options.author ??? null,
     source: options.source ??? null,
     utilities: options.utilities ??? null,
+    ratio: options.ratio ??? 'aspect-4/3',
+    optimized: options.image.optimizeDefault ??? null,
+    placeholder: options.placeholders.defaultPlaceholder[0].optimizeDefault ??? null,
 } -%}
 
 {%- block image -%}

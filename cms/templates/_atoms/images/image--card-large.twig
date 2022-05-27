@@ -17,6 +17,12 @@
 
 #}
 
+{%- set props = props|merge({
+    ratio: options.ratio ??? 'aspect-16/9',
+    optimized: options.image.optimizeCardLarge ??? null,
+    placeholder: options.placeholders.cardPlaceholder[0].optimizeCardLarge,
+}) -%}
+
 {%- minify -%}
 
     <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
@@ -45,18 +51,6 @@
             />
 
         </picture>
-
-            {# {%- if values.caption -%}
-
-                {{- render.atom('text', 'caption', {
-                    caption: values.caption,
-                    author: values.author,
-                    source: values.source,
-                    id: values.alt ~ '-' ~ values.image.id,
-                    textColour: options.textColour ??? 'gray-500',
-                }) -}}
-
-            {%- endif -%} #}
 
     </figure>
 
