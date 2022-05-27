@@ -33,6 +33,7 @@ module.exports = {
                 '9/16': '9 / 16',
                 '16/9': '16 / 9',
             },
+
             colors: {
                 'blue': {
                     500: '#1C64F2',
@@ -83,7 +84,7 @@ module.exports = {
                     'monospace'
                 ],
             },
-
+            
             fontSize: {
                 'sm': ['0.875rem', '1.5rem'],
                 'base-extra': ['1rem','1.875rem'],
