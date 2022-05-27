@@ -11,11 +11,10 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e0d9eb5a-9368-42c5-a0ca-741cabf76b46
             warning: null
             width: 100
         name: Content
-        uid: 7b2c88a7-3d29-44b8-ba35-3539654ae3e3
+        sortOrder: 1
 fields:
   bcca818c-5cb3-4998-8165-95f5c9929f23: # Standfirst
     columnSuffix: null
@@ -32,13 +31,13 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: null
-      purifyHtml: true
+      purifierConfig: ''
+      purifyHtml: '1'
       redactorConfig: Standfirst.json
-      removeEmptyTags: true
-      removeInlineStyles: true
-      removeNbsp: true
-      showHtmlButtonForNonAdmins: false
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: enlarged

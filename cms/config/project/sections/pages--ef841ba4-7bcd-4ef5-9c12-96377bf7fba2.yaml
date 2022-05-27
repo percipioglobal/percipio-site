@@ -1,4 +1,3 @@
-defaultPlacement: end
 enableVersioning: true
 handle: pages
 name: Pages
@@ -9,17 +8,17 @@ previewTargets:
         - label
         - 'Primary entry page'
       -
-        - urlFormat
-        - '{url}'
-      -
         - refresh
         - '1'
+      -
+        - urlFormat
+        - '{url}'
 propagationMethod: all
 siteSettings:
   5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
     enabledByDefault: true
     hasUrls: true
-    template: _organisms/page.twig
+    template: _organisms/_page
     uriFormat: '{parent.uri ?? parent.uri}/{slug}'
 structure:
   maxLevels: 3

@@ -11,11 +11,10 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 14e3377b-3ddf-4d7c-b60a-fe41b79dc6d9
             warning: null
             width: 100
         name: Content
-        uid: 5fe5248f-0021-4ec0-8516-363d4389e227
+        sortOrder: 1
 fields:
   4610a356-a212-46cd-a7a1-6286620e89ef: # Grid Item
     columnSuffix: null
@@ -51,12 +50,13 @@ fields:
                   - ''
       contentTable: '{{%stc_31_items}}'
       fieldLayout: matrix
-      maxRows: null
-      minRows: 2
+      maxRows: ''
+      minRows: '2'
+      placeholderKey: null
       propagationKeyFormat: null
       propagationMethod: all
       selectionLabel: 'Add a grid item'
-      staticField: null
+      staticField: ''
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField

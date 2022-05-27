@@ -1,0 +1,124 @@
+field: dbc7a062-ef19-48ca-bd6f-acda62a18b78 # Hero Builder
+fieldLayouts:
+  9834bd62-0ae8-4d9a-8bdc-6d8d79c1a5d9:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: e561deca-d709-4e55-89be-2b9254d635e4
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 209a0bce-f412-4727-873b-681c4f93c4f7
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1cd525bc-8beb-4ba2-9452-2e02803421ef
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  1cd525bc-8beb-4ba2-9452-2e02803421ef:
+    contentColumnType: string
+    fieldGroup: null
+    handle: placeholder
+    instructions: 'This is used when the video isn''t loaded yet'
+    name: 'Video Placeholder'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b' # Headers
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Add a placeholder'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:14e48735-7707-43d5-a6f1-90cc18da80f1' # Teasers
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  209a0bce-f412-4727-873b-681c4f93c4f7:
+    contentColumnType: string
+    fieldGroup: null
+    handle: video
+    instructions: ''
+    name: Video
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - video
+      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b' # Headers
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:385e443b-b2c6-4ff0-b84a-a0fe656c51f0' # Video
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  e561deca-d709-4e55-89be-2b9254d635e4:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: 'Use this if you want a custom title different from the entry title. If you don''t fill in this field, the entry title will be used'
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: heroVideo
+name: 'Hero Video'
+sortOrder: 4

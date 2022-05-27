@@ -11,7 +11,6 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9654328d-2e75-4e3c-9ac9-a5b22f64c14b
             warning: null
             width: 100
           -
@@ -21,11 +20,10 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d4477ef0-cb15-4631-9dad-e1936d897b44
             warning: null
             width: 100
         name: Content
-        uid: f0ea4d42-992d-43d9-a7f9-e1ce6079f6d0
+        sortOrder: 1
 fields:
   4a86f07d-200e-4dbc-a06a-223d9cc5c049: # Images
     columnSuffix: null
@@ -37,39 +35,25 @@ fields:
     searchable: false
     settings:
       allowSelfRelations: false
-      allowSubfolders: false
       allowUploads: true
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5' # Branding
-      defaultUploadLocationSubpath: null
+      defaultUploadLocationSubpath: ''
+      limit: '8'
       localizeRelations: false
-      maxRelations: 8
-      minRelations: null
       previewMode: full
-      restrictFiles: true
-      restrictLocation: true
-      restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5' # Articles
-      restrictedLocationSubpath: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Asset
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\assets\AssetCondition
+      restrictFiles: '1'
       selectionLabel: 'Add images'
       showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5' # Articles
+      singleUploadLocationSubpath: ''
       source: null
       sources: '*'
       targetSiteId: null
+      useSingleFolder: true
       validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null
@@ -86,10 +70,10 @@ fields:
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: null
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null

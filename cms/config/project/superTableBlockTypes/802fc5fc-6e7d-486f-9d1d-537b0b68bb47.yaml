@@ -11,7 +11,6 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f72355cf-a02e-4529-a345-2a8a66476cbf
             warning: null
             width: 100
           -
@@ -21,27 +20,26 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 5ee23854-5910-4795-9f07-b29ef87b8423
             warning: null
             width: 100
         name: Content
-        uid: 1e5177c1-4fc7-4eba-9c1f-5c918a0eb9ac
+        sortOrder: 1
 fields:
   1caabc75-eb3c-43a5-bffd-5b3289015e5c: # Heading
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: heading
-    instructions: null
+    instructions: ''
     name: Heading
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: null
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -52,7 +50,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: article
-    instructions: null
+    instructions: ''
     name: 'Body Content'
     searchable: false
     settings:
@@ -62,13 +60,13 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: null
-      purifyHtml: true
+      purifierConfig: ''
+      purifyHtml: '1'
       redactorConfig: Simple.json
-      removeEmptyTags: true
-      removeInlineStyles: true
-      removeNbsp: true
-      showHtmlButtonForNonAdmins: false
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: enlarged

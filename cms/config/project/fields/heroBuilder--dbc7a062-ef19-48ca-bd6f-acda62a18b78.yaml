@@ -1,4 +1,3 @@
-columnSuffix: null
 contentColumnType: string
 fieldGroup: 07a123c0-4e8e-4c19-a79e-61829f5d88c0 # Builders
 handle: heroBuilder
@@ -7,9 +6,8 @@ name: 'Hero Builder'
 searchable: false
 settings:
   contentTable: '{{%matrixcontent_herobuilder}}'
-  maxBlocks: 1
-  minBlocks: 1
-  propagationKeyFormat: null
+  maxBlocks: '1'
+  minBlocks: '1'
   propagationMethod: all
 translationKeyFormat: null
 translationMethod: site

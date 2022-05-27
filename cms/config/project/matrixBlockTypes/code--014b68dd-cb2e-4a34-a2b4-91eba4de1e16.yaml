@@ -11,7 +11,6 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a343c7b5-5278-4a21-971f-e841b6fa038e
             warning: null
             width: 100
           -
@@ -21,7 +20,6 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7750644f-7d9c-4518-ae88-72ee0e583ca6
             warning: null
             width: 100
           -
@@ -31,27 +29,26 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2741bc95-1ec6-4ea2-b206-5880b3998106
             warning: null
             width: 100
         name: Content
-        uid: e223bf44-5252-468d-9f0a-602c67369de1
+        sortOrder: 1
 fields:
   73ee03a9-c989-4d98-bd96-db9bc9cb2a5c: # Caption
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: caption
-    instructions: null
+    instructions: ''
     name: Caption
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: null
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -62,10 +59,11 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: codeLanguage
-    instructions: null
+    instructions: ''
     name: Language
     searchable: false
     settings:
+      optgroups: true
       options:
         -
           __assoc__:
@@ -229,16 +227,16 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: code
-    instructions: null
+    instructions: ''
     name: Code
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: null
-      initialRows: 4
-      multiline: true
+      initialRows: '4'
+      multiline: '1'
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -246,4 +244,4 @@ fields:
     type: craft\fields\PlainText
 handle: code
 name: Code
-sortOrder: 15
+sortOrder: 14

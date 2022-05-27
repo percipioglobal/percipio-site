@@ -1,4 +1,4 @@
-field: a9ba876e-c0bf-4a8c-b77e-e926de382189 # Items
+field: a9ba876e-c0bf-4a8c-b77e-e926de382189
 fieldLayouts:
   ed7ca44c-3723-4c04-a750-376d223f5961:
     tabs:
@@ -11,7 +11,6 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e034455d-3f49-40f0-a8fe-a5af026f7b66
             warning: null
             width: 100
           -
@@ -21,54 +20,52 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d62b346a-9469-466b-8540-3b25d81551c5
             warning: null
             width: 100
         name: Content
-        uid: 16cc154e-2afa-4703-b09e-7a8fe35bdcfd
+        sortOrder: 1
 fields:
   1eb19599-751e-4136-ac0f-385321fd1f98: # Heading
-    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: heading
-    instructions: null
+    instructions: ''
     name: Heading
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: null
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
   d613d12d-ac03-4153-942b-0cca809f451b: # Body Content
-    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: article
-    instructions: null
+    instructions: ''
     name: 'Body Content'
     searchable: false
     settings:
       availableTransforms: '*'
       availableVolumes: ''
+      cleanupHtml: true
       columnType: text
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: null
-      purifyHtml: true
+      purifierConfig: ''
+      purifyHtml: '1'
       redactorConfig: Simple.json
-      removeEmptyTags: true
-      removeInlineStyles: true
-      removeNbsp: true
-      showHtmlButtonForNonAdmins: false
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: enlarged

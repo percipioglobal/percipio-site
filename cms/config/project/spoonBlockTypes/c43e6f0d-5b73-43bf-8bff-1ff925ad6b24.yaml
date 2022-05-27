@@ -6,7 +6,7 @@ fieldLayout:
       -
         elements:
           -
-            fieldUid: c499bc8d-734b-4fe4-b74e-dca793aba082 # Body Content
+            fieldUid: c499bc8d-734b-4fe4-b74e-dca793aba082
             instructions: null
             label: null
             required: false
@@ -19,7 +19,7 @@ fieldLayout:
       -
         elements:
           -
-            fieldUid: a81ab3c0-c52b-4817-8820-c0e69e9a0d2d # Containerise
+            fieldUid: a81ab3c0-c52b-4817-8820-c0e69e9a0d2d
             instructions: null
             label: null
             required: false
@@ -37,7 +37,7 @@ fieldLayout:
             warning: null
             width: 100
           -
-            fieldUid: b723924c-f0d9-4479-945f-b43f96e8e1e5 # Text Size
+            fieldUid: b723924c-f0d9-4479-945f-b43f96e8e1e5
             instructions: null
             label: null
             required: false
@@ -46,7 +46,7 @@ fieldLayout:
             warning: null
             width: 100
           -
-            fieldUid: 69564637-9091-434c-aa5c-50eef46f8c93 # Swatch
+            fieldUid: 69564637-9091-434c-aa5c-50eef46f8c93
             instructions: null
             label: null
             required: false
@@ -58,5 +58,5 @@ fieldLayout:
         sortOrder: 2
 groupName: Content
 groupSortOrder: 1
-matrixBlockType: 6b4e5ab6-805b-4edb-a497-38c99dffe618 # Article Body
+matrixBlockType: 6b4e5ab6-805b-4edb-a497-38c99dffe618
 sortOrder: 2

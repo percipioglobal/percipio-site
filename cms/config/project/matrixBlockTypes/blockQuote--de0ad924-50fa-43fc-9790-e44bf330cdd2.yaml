@@ -11,7 +11,6 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 49bcdbba-fde0-4f64-9dbb-58467a944ede
             warning: null
             width: 100
           -
@@ -21,7 +20,6 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 985521fd-5c65-4da8-b186-79ece5639f65
             warning: null
             width: 50
           -
@@ -31,7 +29,6 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 79db6bad-165a-45ce-8608-f5ebc6c05986
             warning: null
             width: 50
           -
@@ -41,7 +38,15 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 89e0da54-1de7-406c-bd11-ae4eb687a461
+            warning: null
+            width: 100
+          -
+            fieldUid: 4ee5d848-5fee-407d-a3aa-7475ef0fe6bc # Width
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
@@ -51,7 +56,6 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6e98f72d-2bd5-4b37-b370-9bf4823f81dd
             warning: null
             width: 100
           -
@@ -61,7 +65,6 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2afcfee1-22a0-416b-a0ac-d8193153366a
             warning: null
             width: 100
           -
@@ -71,18 +74,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 004b826c-3836-4a55-834c-ecab4846a2b1
             warning: null
             width: 100
         name: Content
-        uid: 0db162a9-f78a-40d6-8165-56823b0ce30e
+        sortOrder: 1
 fields:
   1b99a854-98db-4e61-b98d-3c4e357b1e85: # Containerise
     columnSuffix: null
     contentColumnType: boolean
     fieldGroup: null
     handle: containerise
-    instructions: null
+    instructions: ''
     name: Containerise
     searchable: false
     settings:
@@ -103,30 +105,82 @@ fields:
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: null
-      initialRows: 4
-      multiline: true
+      initialRows: '4'
+      multiline: '1'
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  4ee5d848-5fee-407d-a3aa-7475ef0fe6bc: # Width
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: width
+    instructions: ''
+    name: Width
+    searchable: false
+    settings:
+      default: 1/2
+      options:
+        __assoc__:
+          -
+            - 1/6
+            - ''
+          -
+            - 1/5
+            - ''
+          -
+            - 1/4
+            - ''
+          -
+            - 1/3
+            - '1'
+          -
+            - 2/5
+            - ''
+          -
+            - 1/2
+            - '1'
+          -
+            - 3/5
+            - ''
+          -
+            - 2/3
+            - ''
+          -
+            - 3/4
+            - ''
+          -
+            - 4/5
+            - ''
+          -
+            - 5/6
+            - ''
+          -
+            - full
+            - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\widthfieldtype\fields\Width
   6ba3a39a-5d6c-488d-bcab-d047d0942b0e: # Swatch
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: swatch
-    instructions: null
+    instructions: ''
     name: Swatch
     searchable: false
     settings:
       default: null
+      options: ''
       palette: Percipio
-      useConfigFile: true
+      useConfigFile: '1'
     translationKeyFormat: null
     translationMethod: none
-    type: percipiolondon\colourswatches\fields\ColourSwatches
+    type: percipioglobal\colourswatches\fields\ColourSwatches
   4133e37a-d625-476e-91aa-a600e0123064: # Quote Source
     columnSuffix: null
     contentColumnType: string
@@ -195,7 +249,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: position
-    instructions: null
+    instructions: ''
     name: 'Logo Position'
     searchable: false
     settings:
@@ -228,7 +282,7 @@ fields:
     contentColumnType: boolean
     fieldGroup: null
     handle: showLogo
-    instructions: null
+    instructions: ''
     name: 'Show Logo'
     searchable: false
     settings:
@@ -249,10 +303,10 @@ fields:
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: null
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null

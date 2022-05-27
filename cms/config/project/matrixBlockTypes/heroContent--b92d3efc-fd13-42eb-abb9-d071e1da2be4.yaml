@@ -1,0 +1,68 @@
+field: dbc7a062-ef19-48ca-bd6f-acda62a18b78 # Hero Builder
+fieldLayouts:
+  d4cd902e-828e-4c3f-80b7-039de9cbcdcb:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a5be1b28-c12a-4a3c-8bf6-8cddef930108
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2a8995d5-6e36-4d6b-8992-419951e154b0
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2a8995d5-6e36-4d6b-8992-419951e154b0:
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: 'Add an additional description to the page'
+    name: Description
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a5be1b28-c12a-4a3c-8bf6-8cddef930108:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: 'Use this if you want a custom title different from the entry title. If you don''t fill in this field, the entry title will be used'
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: heroContent
+name: 'Hero Content'
+sortOrder: 2

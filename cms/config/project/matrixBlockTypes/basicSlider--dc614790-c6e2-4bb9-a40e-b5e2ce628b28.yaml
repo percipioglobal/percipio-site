@@ -5,24 +5,22 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: e531a8df-ea73-4e09-8422-d08a20883128 # Slides
+            fieldUid: e531a8df-ea73-4e09-8422-d08a20883128
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 30a5f991-3fcd-4198-adb0-ea2bab5f0bbc
             warning: null
             width: 100
         name: Content
-        uid: a46aa67c-fdf7-443a-a28e-f52c83092b51
+        sortOrder: 1
 fields:
-  e531a8df-ea73-4e09-8422-d08a20883128: # Slides
-    columnSuffix: null
+  e531a8df-ea73-4e09-8422-d08a20883128:
     contentColumnType: string
     fieldGroup: null
     handle: slides
-    instructions: null
+    instructions: ''
     name: Slides
     searchable: false
     settings:
@@ -44,12 +42,12 @@ fields:
                   - ''
       contentTable: '{{%stc_47_slides}}'
       fieldLayout: matrix
-      maxRows: 9
-      minRows: 2
-      propagationKeyFormat: null
+      maxRows: '9'
+      minRows: '2'
+      placeholderKey: null
       propagationMethod: all
       selectionLabel: 'Add a new slide'
-      staticField: null
+      staticField: ''
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField

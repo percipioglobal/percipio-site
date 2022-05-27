@@ -11,7 +11,6 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 164f718e-9b36-4ab8-b7be-21534eef4dd2
             warning: null
             width: 100
           -
@@ -21,7 +20,6 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d013a0d0-489f-467f-b779-10e8e7f580ae
             warning: null
             width: 100
           -
@@ -31,7 +29,6 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 27a9e12c-7121-4859-a924-41760583ae4e
             warning: null
             width: 100
           -
@@ -41,11 +38,10 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 4f111a1b-70ab-4cd8-9118-f98bb4ca7f21
             warning: null
             width: 100
         name: Content
-        uid: f7fb8c24-5c2f-4a87-ab31-5ba358df274e
+        sortOrder: 1
 fields:
   25958ba0-5f4a-48fc-9dee-0064db99f702: # Utility Icon
     columnSuffix: null
@@ -56,6 +52,7 @@ fields:
     name: 'Utility Icon'
     searchable: false
     settings:
+      optgroups: true
       options:
         -
           __assoc__:
@@ -87,16 +84,16 @@ fields:
     contentColumnType: string(720)
     fieldGroup: null
     handle: description
-    instructions: null
+    instructions: ''
     name: Description
     searchable: true
     settings:
       byteLimit: null
       charLimit: 180
-      code: false
+      code: ''
       columnType: null
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -112,7 +109,6 @@ fields:
     searchable: false
     settings:
       allowSelfRelations: false
-      allowSubfolders: false
       allowUploads: true
       allowedKinds:
         - compressed
@@ -122,35 +118,22 @@ fields:
         - text
         - word
       defaultUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5' # Articles
-      defaultUploadLocationSubpath: null
+      defaultUploadLocationSubpath: ''
+      limit: '1'
       localizeRelations: false
-      maxRelations: 1
-      minRelations: null
       previewMode: full
-      restrictFiles: true
-      restrictLocation: true
-      restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5' # Branding
-      restrictedLocationSubpath: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Asset
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\assets\AssetCondition
+      restrictFiles: '1'
       selectionLabel: 'Add a resource'
       showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5' # Branding
+      singleUploadLocationSubpath: ''
       source: null
       sources:
         - 'volume:b011a3f9-88a2-4819-aad0-ca04487dfac8' # Documents
       targetSiteId: null
+      useSingleFolder: true
       validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null
@@ -167,10 +150,10 @@ fields:
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: null
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
