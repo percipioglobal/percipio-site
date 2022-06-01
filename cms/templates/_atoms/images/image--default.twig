@@ -4,18 +4,24 @@
     ### PROPERTIES ###
     ------------------
 
+    alt: (STR) -- The alt text
+    author: (STR) -- The author of the image ( optional )
+    caption: (STR) -- The caption text ( optional )
     image: (OBJ) -- Pass through the image object
     optimized: (STR) -- the specific optimized field on the image (required)
     placeholder: (OBJ) -- The object that contains all placeholders ( required )
-    sizes: (ARR) -- sizes array for responsive images
-    alt: (STR) -- The alt text
     ratio: (STR) -- Give the aspect ratio in the correct format eg. is1by1 / is16by9 ( optional )
-    caption: (STR) -- The caption text ( optional )
-    author: (STR) -- The author of the image ( optional )
+    sizes: (ARR) -- sizes array for responsive images
     source: (STR) -- The image source ( optional )
     utilities: (STR) -- the specific TW spacing utilities to add
 
 #}
+
+{%- set props = props|merge({
+    optimized: options.image.optimizeDefault ??? null,
+    placeholder: options.placeholders.cardPlaceholder.first.optimizeDefault,
+    ratio: options.ratio ??? 'aspect-4/5',
+}) -%}
 
 {%- block image -%}
     {%- minify -%}

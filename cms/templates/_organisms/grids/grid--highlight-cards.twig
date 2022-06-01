@@ -11,12 +11,10 @@
                     {%- if loop.index is odd -%}
                         {%- include '_molecules/cards/card--primary-large' ignore missing with {
                             content: card,
-                            teaser: card.teaserImage[0] ??? null,
                         } -%}
                     {%- else -%}
                         {%- include '_molecules/cards/card--primary-small' ignore missing with {
                             content: card,
-                            teaser: card.teaserImage[0] ??? null,
                         } -%}
                     {%- endif -%}
 

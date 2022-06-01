@@ -4,31 +4,33 @@
     ### PROPERTIES ###
     ------------------
 
-    image: (OBJ) -- Pass through the image object
-    sizes: (ARR) -- sizes array for responsive images
     alt: (STR) -- The alt text
-    ratio: (STR) -- Give the aspect ratio in the correct format eg. aspect-4/3 / aspect-16/9 ( optional )
-    caption: (STR) -- The caption text ( optional )
     author: (STR) -- The author of the image ( optional )
-    source: (STR) -- The image source ( optional )
-    utilities: (STR) -- The specific TW spacing utilities to add
+    caption: (STR) -- The caption text ( optional )
+    image: (OBJ) -- Pass through the image object
     optimized: (OBJ) -- The image optimizations for the image
     placeholder: (OBJ) -- Add the placeholder image to the atom
+    ratio: (STR) -- Give the aspect ratio in the correct format eg. aspect-4/3 / aspect-16/9 ( optional )
+    sizes: (ARR) -- sizes array for responsive images
+    source: (STR) -- The image source ( optional )
+    utilities: (STR) -- The specific TW spacing utilities to add
 
 #}
 
 {# {%- set props = props|merge({
-    ratio: options.ratio ??? 'aspect-4/5',
     optimized: options.image.optimizeCardSmall ??? null,
-    placeholder: options.placeholders.cardPlaceholder[0].optimizeCardSmall,
+    placeholder: options.placeholders.cardPlaceholder.first.optimizeCardSmall,
+    ratio: options.ratio ??? 'aspect-16/9',
 }) -%} #}
-
 
 {%- block image -%}
 
     {%- minify -%}
+        <pre>
+        {{ dump(props) }}
+        </pre>
 
-        <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
+        {# <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
 
             <picture class="{{ props.ratio -}}">
 
@@ -55,7 +57,7 @@
 
             </picture>
 
-        </figure>
+        </figure> #}
 
     {%- endminify -%}
 

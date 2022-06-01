@@ -74,7 +74,7 @@ fields:
       allowUploads: false
       allowedKinds:
         - json
-      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5' # Branding
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maxRelations: 1
@@ -83,7 +83,7 @@ fields:
       restrictFiles: true
       restrictLocation: true
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:03bb9bf6-0516-4070-b011-57f7820b7c7c' # Embed
+      restrictedLocationSource: 'volume:03bb9bf6-0516-4070-b011-57f7820b7c7c'
       restrictedLocationSubpath: null
       selectionCondition:
         __assoc__:

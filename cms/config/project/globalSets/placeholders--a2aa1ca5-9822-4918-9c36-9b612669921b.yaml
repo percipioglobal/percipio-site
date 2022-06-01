@@ -4,57 +4,26 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: df090dc9-1e25-4504-abd3-18e7996d8d6d # Article Image Placeholder
-            instructions: null
-            label: null
-            required: false
+            fieldUid: 1a84863b-861a-4293-b8ca-c88d90b87ae8 # Card Placeholder
+            instructions: 'Upload an image that will be used if no image is available to display.'
+            label: 'Placeholder for the primary cards'
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 99254350-8eaf-45ed-9c9a-29df81cdc9a9
+            uid: 39b30474-55f2-47af-82d3-bd604256be58
+            userCondition:
+              class: craft\elements\conditions\users\UserCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\users\AdminConditionRule
+                  uid: 14115e0d-79a2-4f9c-8dd1-b945f6990631
+                  value: true
+              elementType: craft\elements\User
+              fieldContext: global
             warning: null
             width: 100
-          -
-            fieldUid: 11680160-76bb-4537-b686-d1f6cfcbf34e # Call To Action Placeholder
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 777c831a-224a-4eff-8e0e-36656e272f10
-            warning: null
-            width: 100
-          -
-            fieldUid: 40c9dffd-9181-4098-b4fa-c1f67eeb73ea # Card Placeholder
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 5b5348da-669c-4615-bc28-77c673db064c
-            warning: null
-            width: 100
-          -
-            fieldUid: 78023dfa-3c9e-47d1-bedc-b6fa76c9d751 # Teaser Image Placeholder
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 20d582ef-b397-4722-9d00-d03c91342c94
-            warning: null
-            width: 100
-          -
-            fieldUid: 11916eb5-92ff-4945-bb06-1406d6047b36 # Slider Image Placeholder
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c824eef3-8e1e-4f6f-9d66-12b276b99383
-            warning: null
-            width: 100
-        name: 'Placeholder Images'
-        uid: ab7fafb7-e4b6-4971-82df-562d4b6cf6a3
+        name: Images
+        uid: ef338e55-b258-4cf0-b10b-c7b4fd3d60f1
 handle: placeholders
 name: Placeholders
 sortOrder: 5

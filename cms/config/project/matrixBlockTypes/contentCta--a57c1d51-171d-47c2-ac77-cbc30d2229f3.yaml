@@ -204,7 +204,7 @@ fields:
       allowSubfolders: false
       allowUploads: true
       allowedKinds: null
-      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b' # Headers
+      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b'
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maxRelations: 1
@@ -213,7 +213,7 @@ fields:
       restrictFiles: false
       restrictLocation: true
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:0e70c434-c06e-43ce-a978-d2db6c487ed3' # Call To Actions
+      restrictedLocationSource: 'volume:0e70c434-c06e-43ce-a978-d2db6c487ed3'
       restrictedLocationSubpath: null
       selectionCondition:
         __assoc__:

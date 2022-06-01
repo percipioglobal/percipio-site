@@ -8,11 +8,10 @@
 
     <div class="relative rounded-[20px] overflow-hidden">
         {{- render.atom('image', 'card-small', {
-                image: content.teaserImage[0],
-                optimized: teaser.optimizeTeasers,
+                image: content.cardImage.first,
                 sizes: ['33.3vw'],
                 alt: content.title,
-                placeholder: placeholder.cardPlaceholder[0].optimizeTeasers,
+                placeholders: placeholders,
             })
         -}}
     </div>

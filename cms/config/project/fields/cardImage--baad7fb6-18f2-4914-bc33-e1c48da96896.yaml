@@ -1,25 +1,25 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8 # Placeholders
-handle: cardPlaceholder
+fieldGroup: 0314e405-e731-462f-9381-2cfb6ac91134 # Images
+handle: cardImage
 instructions: null
-name: 'Card Image Placeholder'
+name: 'Card Image'
 searchable: false
 settings:
   allowSelfRelations: false
-  allowSubfolders: false
+  allowSubfolders: true
   allowUploads: true
   allowedKinds: null
-  defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b' # Headers
+  defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
   defaultUploadLocationSubpath: null
   localizeRelations: false
-  maxRelations: null
-  minRelations: null
+  maxRelations: 1
+  minRelations: 1
   previewMode: full
   restrictFiles: false
   restrictLocation: true
-  restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:14e48735-7707-43d5-a6f1-90cc18da80f1' # Teasers
+  restrictedDefaultUploadSubpath: '{slug}'
+  restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
   restrictedLocationSubpath: null
   selectionCondition:
     __assoc__:
@@ -32,14 +32,15 @@ settings:
       -
         - class
         - craft\elements\conditions\assets\AssetCondition
-  selectionLabel: null
-  showSiteMenu: true
+  selectionLabel: 'Add an image'
+  showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   source: null
-  sources: '*'
+  sources:
+    - 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
   targetSiteId: null
-  validateRelatedElements: false
+  validateRelatedElements: true
   viewMode: list
 translationKeyFormat: null
 translationMethod: site

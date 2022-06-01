@@ -71,7 +71,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b' # Headers
+      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b'
       defaultUploadLocationSubpath: backgrounds
       localizeRelations: false
       maxRelations: 1
@@ -99,7 +99,7 @@ fields:
       showUnpermittedVolumes: false
       source: null
       sources:
-        - 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b' # Headers
+        - 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b'
       targetSiteId: null
       validateRelatedElements: false
       viewMode: list

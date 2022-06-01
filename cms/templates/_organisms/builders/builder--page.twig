@@ -4,7 +4,7 @@
         'pageBuilder.contentCta',
         'pageBuilder.contentCta:image',
         'pageBuilder.highlightCards:cards',
-        'pageBuilder.highlightCards:cards.teaserImage',
+        'pageBuilder.highlightCards:cards.cardImage',
     ])
 -%}
 
@@ -20,6 +20,7 @@
 
                 {# check which cta should be loaded #}
                 {%- set component = '_molecules/ctas/cta--text' -%}
+
                 {%- if block.image|length -%}
                     {%- set component = '_molecules/ctas/cta--image' -%}
                 {%- endif -%}

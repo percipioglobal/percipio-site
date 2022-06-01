@@ -1,9 +1,9 @@
-columnSuffix: ctoaaxdo
+columnSuffix: pxkakipg
 contentColumnType: text
 fieldGroup: 1dd95078-7c8a-4ef7-8a16-e33a5341dadb # Image Optimisations 
-handle: optimizeCta
-instructions: 'Optimisations for the cta images'
-name: 'Optimize Call To Actions'
+handle: optimizeCardLarge
+instructions: null
+name: 'Large Cards Optimisation'
 searchable: false
 settings:
   displayDominantColorPalette: true
@@ -14,33 +14,7 @@ settings:
       __assoc__:
         -
           - width
-          - '665'
-        -
-          - useAspectRatio
-          - '1'
-        -
-          - aspectRatioX
-          - '16'
-        -
-          - aspectRatioY
-          - '9'
-        -
-          - retinaSizes
-          -
-            - '1'
-            - '2'
-            - '3'
-        -
-          - quality
-          - '82'
-        -
-          - format
-          - jpg
-    -
-      __assoc__:
-        -
-          - width
-          - '385'
+          - '1200'
         -
           - useAspectRatio
           - '1'
@@ -64,25 +38,71 @@ settings:
       __assoc__:
         -
           - width
-          - '288'
+          - '992'
         -
           - useAspectRatio
           - '1'
         -
           - aspectRatioX
-          - '4'
+          - '16'
         -
           - aspectRatioY
-          - '3'
+          - '9'
         -
           - retinaSizes
           -
             - '1'
-            - '2'
-            - '3'
         -
           - quality
           - '82'
+        -
+          - format
+          - jpg
+    -
+      __assoc__:
+        -
+          - width
+          - '768'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '60'
+        -
+          - format
+          - jpg
+    -
+      __assoc__:
+        -
+          - width
+          - '576'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '60'
         -
           - format
           - jpg

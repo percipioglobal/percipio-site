@@ -20,25 +20,18 @@
 {%- set baseUrl = alias('@web') ~ '/' -%}
 {%- set assetsUrl = alias('@assetsUrl') ~ '/' -%}
 
-{%- set placeholder = craft.globalSets()
+{%- set placeholders = craft.globalSets()
     .handle('placeholders')
     .with([
-        'articlePlaceholder',
         'cardPlaceholder',
-        'ctaPlaceholder',
-        'defaultPlaceholder',
-        'sliderPlaceholder',
-        'teaserPlaceholder',
-        'heroPlaceholder',
-        'brandingPlaceholder'
     ])
-    .one()
+    .collect()
 -%}
 
 {%- set branding = craft.globalSets()
     .handle('organisationInfo')
     .with(['logo', 'icon'])
-    .one()
+    .collect()
 -%}
 
 {# -- Twig output from the render; this must be in a block -- #}
