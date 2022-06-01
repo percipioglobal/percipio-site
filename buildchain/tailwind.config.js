@@ -34,6 +34,10 @@ module.exports = {
                 '16/9': '16 / 9',
             },
 
+            borderRadius: {
+                '4xl': '30px',
+            },
+
             colors: {
                 'blue': {
                     500: '#1C64F2',

@@ -15,7 +15,7 @@
 {%- block text -%}
 
     {%- minify -%}
-        <span class="text-{{- props.color }} prose text-3xl md:text-5xl-md lg:text-5xl tracking-tightest {{ strong}} {{ props.utilities -}}">
+        <span class="text-{{- props.color }} prose text-3xl md:text-5xl-md lg:text-5xl tracking-tightest {{ strong }} {{ props.utilities -}}">
             {{- props.content | striptags('<strong>') | typogrify(true) | raw -}}
         </span>
     {%- endminify -%}

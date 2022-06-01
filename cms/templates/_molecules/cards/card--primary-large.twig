@@ -1,0 +1,30 @@
+{% import '_macros/atoms' as render %}
+
+<div class="relative bg-white shadow-2xl rounded-4xl p-6 pb-9 overflow-hidden">
+
+    <div class="relative rounded-[20px] overflow-hidden">
+        {{- render.atom('image', 'card-large', {
+                image: content.teaserImage[0]
+                sizes: ['66.6vw']
+                alt: content.title
+                placeholders: placeholders,
+            })
+        -}}
+    </div>
+
+    <div class="space-y-4">
+        <h3>
+            {{- render.atom('text', 'card-title', {
+                content: content.title
+            }) -}}
+        </h3>
+
+        <h4>
+            {{- render.atom('text', 'card-subtitle', {
+                content: content.subtitle
+            }) -}}
+        </h4>
+    </div>
+
+    <div class="bg-pink-500 h-3 absolute bottom-0 left-0 w-full"></div>
+</div>

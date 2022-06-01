@@ -1,0 +1,19 @@
+{%- extends "_atoms/texts/text--props" -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    content: (STR) -- the actual content as a string
+    utilities: (STR) -- the specific TW spacing utilities to add
+#}
+
+{%- block text -%}
+
+    {%- minify -%}
+        <span class="text-gray-600 text-xl tracking-tightest {{ props.utilities -}}">
+            {{- props.content | typogrify(true) | raw -}}
+        </span>
+    {%- endminify -%}
+
+{%- endblock -%}
