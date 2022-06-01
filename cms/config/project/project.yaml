@@ -1,4 +1,4 @@
-dateModified: 1654081024
+dateModified: 1654088714
 elementSources:
   craft\elements\Entry:
     -
@@ -21,7 +21,7 @@ elementSources:
       type: native
     -
       disabled: false
-      key: 'section:92164c9b-e1af-4a4e-b639-44a2b5d79bd3'
+      key: 'section:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
       tableAttributes:
         - uri
         - 'field:b884a1be-f354-4202-8335-78016b5d035a' # Show link as button
@@ -40,7 +40,7 @@ elementSources:
         - link
       type: native
     -
-      key: 'section:dbc716a7-2122-4b92-b942-471970256a35'
+      key: 'section:dbc716a7-2122-4b92-b942-471970256a35' # Clients
       tableAttributes:
         - postDate
         - expiryDate
@@ -48,10 +48,10 @@ elementSources:
         - link
       type: native
     -
-      key: 'section:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21'
+      key: 'section:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
       type: native
     -
-      key: 'section:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd'
+      key: 'section:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
       tableAttributes:
         - 'field:10a7e511-e02a-46ff-8524-7390d3e9be19' # Client
         - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e' # Colour Swatch
@@ -61,7 +61,7 @@ elementSources:
         - link
       type: native
     -
-      key: 'section:e80a7183-56ec-49d8-81a8-405444fc3077'
+      key: 'section:e80a7183-56ec-49d8-81a8-405444fc3077' # The Team
       tableAttributes:
         - slug
         - postDate
@@ -70,7 +70,7 @@ elementSources:
         - 'field:cbbbac66-4ad4-4edc-b9fe-ef597989736f' # Sort order
       type: native
     -
-      key: 'section:1962717b-7da2-4f6f-be49-ee640b8ddfe2'
+      key: 'section:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
       type: native
     -
       heading: Misc
@@ -323,15 +323,16 @@ meta:
     0c7a7b67-3926-4a9f-b449-8d1d1c451f2f: Width # Width
     0d208796-7b7c-4677-bab0-0c107ff1c99b: Button # Button
     0dd08fc1-c043-49cb-bdcf-80521b7bd98a: Settings # Settings
-    1aad5a2f-f77c-42d8-8c02-c97817b9cb18: 'The Answer'
-    1ae55366-a3a6-4ed1-bf34-12ead8ae6c21: 'Our Services'
+    1aad5a2f-f77c-42d8-8c02-c97817b9cb18: 'The Answer' # The Answer
+    1ae55366-a3a6-4ed1-bf34-12ead8ae6c21: 'Our Services' # Our Services
     01b78fde-8a32-4ecc-b1b0-abf0661898ce: Skills # Skills
     1b99a854-98db-4e61-b98d-3c4e357b1e85: Containerise # Containerise
     1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3: 'Teaser Image' # Teaser Image
+    1c70a707-ac77-4b59-b166-37219108f31b: Background # Background
     1caabc75-eb3c-43a5-bffd-5b3289015e5c: Heading # Heading
     1cd525bc-8beb-4ba2-9452-2e02803421ef: 'Video Placeholder' # Video Placeholder
     1d22d2ae-5175-4154-b830-51c806bfbf5b: 'Article Body' # Article Body
-    1dd95078-7c8a-4ef7-8a16-e33a5341dadb: 'Image Optimisations ' # Image Optimisations
+    1dd95078-7c8a-4ef7-8a16-e33a5341dadb: 'Image Optimisations ' # Image Optimisations 
     1e5edb55-fbe5-44a5-8fd2-8f668886557e: 'Background Color' # Background Color
     1eb19599-751e-4136-ac0f-385321fd1f98: Heading # Heading
     1ecbeef5-820f-4123-a8db-30daae3cd4f7: Images # Images
@@ -351,6 +352,7 @@ meta:
     3fc84cf5-6e3d-46e8-bf13-9a1d4e198438: Caption # Caption
     4a86f07d-200e-4dbc-a06a-223d9cc5c049: Images # Images
     4be4bd14-ce94-450b-a4f4-e10721ba5b22: Containerise # Containerise
+    4de07f3d-82ea-44fa-a35b-d77a9ee4206d: 'Optimize Default' # Optimize Default
     4e026396-d7ab-43ef-a817-226fb2dada30: 'FAQ Categories' # FAQ Categories
     4ee5d848-5fee-407d-a3aa-7475ef0fe6bc: Width # Width
     4f6c2efe-5cf4-46b5-82e5-79a8796af5c5: Content # Content
@@ -399,7 +401,7 @@ meta:
     37b4ca60-ef63-4bbb-a7ab-de771a39a327: Buttons # Buttons
     40e441b8-aeac-4f02-878a-60457e5699a8: Position # Position
     040f68f0-b32f-4544-8b97-56d71c7f3428: Ratio # Ratio
-    46d0d4a2-a95f-4210-83b2-f0ca13a95704: 'Hero Image' # Hero content with thumb
+    46d0d4a2-a95f-4210-83b2-f0ca13a95704: 'Hero Image' # Hero Image
     46faf86d-bfa5-4356-bef1-0af3b2a87332: 'Secondary Navigation' # Secondary Navigation
     47c98ad7-c9a9-402c-9171-9fd14eb7e8f4: 'Highlight Cards' # Highlight Cards
     48f153ba-ba26-42dd-b297-c5b428cc259b: Image # Image
@@ -411,7 +413,7 @@ meta:
     58ba1445-a78a-411a-b2d2-4850c8433b9b: Headers # Headers
     58eccc39-1c9e-45ac-bae8-465deff69786: Team # Team
     062e0067-ec18-423d-9e99-cce96beada4b: 'Optimize Covers' # Optimize Covers
-    70d3e848-905a-4246-a20b-02c24af51402: 'Organisation Address Postal Code ' # Organisation Address Postal Code
+    70d3e848-905a-4246-a20b-02c24af51402: 'Organisation Address Postal Code ' # Organisation Address Postal Code 
     73ee03a9-c989-4d98-bd96-db9bc9cb2a5c: Caption # Caption
     74c703ba-fb2c-421f-9b09-2bd3762770de: 'Footer Navigation' # Footer Navigation
     74d5a128-4fbc-4ea8-a7d7-c828e87680ff: 'Organisation Address Region' # Organisation Address Region
@@ -429,6 +431,7 @@ meta:
     284e17ab-cd25-417d-8951-fd69b7169e3d: 'Hero Image' # Hero Image
     302a5592-8085-472e-9356-ab6b1eaf1635: Position # Position
     0314e405-e731-462f-9381-2cfb6ac91134: Images # Images
+    0345c44d-88e4-4280-842b-158ec0307b5a: Background # Background
     345c4093-df0a-45dd-9d5f-47fb3fac8c7d: Heading # Heading
     346cce90-1d6e-4c2d-82c0-c91b571c741c: 'Section Header' # Section Header
     385e443b-b2c6-4ff0-b84a-a0fe656c51f0: Video # Video
@@ -477,14 +480,14 @@ meta:
     78023dfa-3c9e-47d1-bedc-b6fa76c9d751: 'Teaser Image Placeholder' # Teaser Image Placeholder
     085923fe-5934-4d01-a2fd-ec625094c005: Caption # Caption
     91602cc8-0f1b-49b4-b806-9b424f7b0206: Image # Image
-    92164c9b-e1af-4a4e-b639-44a2b5d79bd3: Navigation
+    92164c9b-e1af-4a4e-b639-44a2b5d79bd3: Navigation # Navigation
     93892db5-fbae-4955-92ff-5b51c9962812: Authors # Authors
     97956e7f-3294-43b2-9d6a-e717706432bc: 'Optimize Articles' # Optimize Articles
     209738f8-00a6-45b2-b594-50afccb1662e: 'Image Gallery' # Image Gallery
     815594b4-d88f-4430-bf0c-5db890e1051f: 'Profile Photo' # Profile Photo
     827203e4-23bd-4920-a23d-c4dcaad52d5f: Navigation # Navigation
     985978cb-f5c1-4dc7-a9d3-4f278773ccff: Caption # Caption
-    1962717b-7da2-4f6f-be49-ee640b8ddfe2: Vacancies
+    1962717b-7da2-4f6f-be49-ee640b8ddfe2: Vacancies # Vacancies
     3603960e-5907-4970-921d-18a3c1c86c7e: 'Social Media' # Social Media
     5179642f-d661-49a6-be40-5fb59743a8c0: Body # Body
     6180741d-7a95-4c38-a6b8-13f0cd8dab1f: 'Logo Icon' # Logo Icon
@@ -516,7 +519,7 @@ meta:
     b8ba7115-3804-4c06-8a96-501963d1fc5c: 'Error Headline' # Error Headline
     b51f4d5a-4d35-43f1-af05-72e206874892: 'Footer Navigation' # Footer Navigation
     b74a2d1f-f160-4a53-9a84-05b89c63c277: Blog # Blog
-    b884a1be-f354-4202-8335-78016b5d035a: 'Include children as active in the navigation' # Show link as button
+    b884a1be-f354-4202-8335-78016b5d035a: 'Show link as button' # Show link as button
     b928e034-1b69-487e-a45b-b37d0f8a59a9: Containerise # Containerise
     b2330e68-6c4a-45ab-b5b1-8a510f75ce4f: General # General
     b8684f7c-8658-44df-abd4-882f0c55484b: Embed # Embed
@@ -555,7 +558,7 @@ meta:
     da9598dc-e9bb-4920-8adf-a712876cb578: 'Meta Description' # Meta Description
     dbb9d34a-ed00-430b-a6cd-e61927f7b2d5: Articles # Articles
     dbc7a062-ef19-48ca-bd6f-acda62a18b78: 'Hero Builder' # Hero Builder
-    dbc716a7-2122-4b92-b942-471970256a35: Clients
+    dbc716a7-2122-4b92-b942-471970256a35: Clients # Clients
     dc614790-c6e2-4bb9-a40e-b5e2ce628b28: 'Basic Slider' # Basic Slider
     dcdd5839-4bb5-4669-8d82-d46ec4da660a: 'Image Source' # Image Source
     de0ad924-50fa-43fc-9790-e44bf330cdd2: Quotation # Quotation
@@ -568,7 +571,7 @@ meta:
     e4fa92d0-02c7-4c27-9eb2-782fb6603654: Width # Width
     e6d658aa-c335-4f15-bbcd-59fe05d9e913: 'Error Text' # Error Text
     e7b63d80-91cc-438a-b670-59cbb778ca14: Heading # Heading
-    e80a7183-56ec-49d8-81a8-405444fc3077: 'The Team'
+    e80a7183-56ec-49d8-81a8-405444fc3077: 'The Team' # The Team
     e531a8df-ea73-4e09-8422-d08a20883128: Slides # Slides
     e561deca-d709-4e55-89be-2b9254d635e4: Heading # Heading
     e691301b-7484-40be-a3d4-c3bc590de959: 'Content Builder' # Content Builder
@@ -577,9 +580,9 @@ meta:
     ec91bde6-778d-4030-89fe-45614d871e81: Target # Target
     ed4b0f49-8429-4d80-846f-3d441bd3e707: Image # Image
     ef841ba4-7bcd-4ef5-9c12-96377bf7fba2: Pages # Pages
-    f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd: 'Our Work'
+    f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd: 'Our Work' # Our Work
     f4cbe95b-c71a-42f8-a9d8-464dcf3916a9: 'Primary Navigation' # Primary Navigation
-    f4de4bd2-7a0e-4563-b290-a2a72c8d23df: Image # Thumb
+    f4de4bd2-7a0e-4563-b290-a2a72c8d23df: Image # Image
     f7cf0694-24fa-4e41-943b-40abaddc797a: 'Quote Author' # Quote Author
     f27f8ee3-d869-4cf7-9d0f-2ca70f938708: 'Page Title' # Page Title
     f52a8f91-da15-4d35-b55d-6c097b9ecc38: Projects # Projects
