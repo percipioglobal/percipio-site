@@ -49,7 +49,7 @@ fieldLayouts:
 handle: navigation
 hasTitleField: true
 name: Navigation
-section: 92164c9b-e1af-4a4e-b639-44a2b5d79bd3
+section: 92164c9b-e1af-4a4e-b639-44a2b5d79bd3 # Navigation
 sortOrder: 1
 titleFormat: '{navigationButton.getText()}'
 titleTranslationKeyFormat: null

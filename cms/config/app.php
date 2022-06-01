@@ -20,6 +20,12 @@
 use craft\helpers\App;
 
 return [
+    'modules' => [
+        'site-module' => [
+            'class' => \modules\sitemodule\SiteModule::class,
+        ],
+    ],
+    'bootstrap' => ['site-module'],
     'components' => [
         'redis' => [
             'class' => yii\redis\Connection::class,

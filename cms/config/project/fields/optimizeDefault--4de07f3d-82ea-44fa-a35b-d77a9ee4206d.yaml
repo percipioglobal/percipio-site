@@ -1,0 +1,63 @@
+columnSuffix: ctoaaxdo
+contentColumnType: text
+fieldGroup: 1dd95078-7c8a-4ef7-8a16-e33a5341dadb # Image Optimisations 
+handle: optimizeDefault
+instructions: 'Optimisations for the default images'
+name: 'Optimize Default'
+searchable: false
+settings:
+  displayDominantColorPalette: true
+  displayLazyLoadPlaceholderImages: true
+  displayOptimizedImageVariants: true
+  variants:
+    -
+      __assoc__:
+        -
+          - width
+          - '385'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
+    -
+      __assoc__:
+        -
+          - width
+          - '288'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '4'
+        -
+          - aspectRatioY
+          - '3'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\imageoptimize\fields\OptimizedImages

@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: f4de4bd2-7a0e-4563-b290-a2a72c8d23df # Thumb
+            fieldUid: f4de4bd2-7a0e-4563-b290-a2a72c8d23df # Image
             instructions: null
             label: null
             required: true
@@ -44,7 +44,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  f4de4bd2-7a0e-4563-b290-a2a72c8d23df: # Thumb
+  f4de4bd2-7a0e-4563-b290-a2a72c8d23df: # Image
     contentColumnType: string
     fieldGroup: null
     handle: image
