@@ -1,0 +1,28 @@
+{%- set cards = cards|default([]) -%}
+
+{%- minify -%}
+    <section class="grid grid-cols-3 py-12 md:py-32 container max-w-screen-xl mx-auto">
+        {%- for card in cards -%}
+
+            {%- switch card.type -%}
+
+                {%- default -%}
+
+                    {%- if loop.index is odd -%}
+                        {%- include '_molecules/cards/card--primary-large' ignore missing with {
+                            content: card,
+                            teaser: card.teaserImage[0] ??? null,
+                        } -%}
+                    {%- else -%}
+                        {%- include '_molecules/cards/card--primary-small' ignore missing with {
+                            content: card,
+                            teaser: card.teaserImage[0] ??? null,
+                        } -%}
+                    {%- endif -%}
+
+
+            {%- endswitch -%}
+
+        {%- endfor -%}
+    </section>
+{%- endminify -%}

@@ -1,28 +1,28 @@
 field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733 # Page Builder
 fieldLayouts:
-  b779d71a-bb85-476c-82de-a1fa66266727:
+  313015d1-e8ce-4279-86bc-ffc788b1d893:
     tabs:
       -
         elements:
           -
-            fieldUid: b2c99831-d731-447c-8233-c0418cc574bd # Cards
+            fieldUid: 7e7008d5-deb5-4018-9fb7-52f6b2603f34 # Cards
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a03bed2c-0238-4b89-a80e-67d9e30da54a
+            uid: 2d1e63a3-cd2d-4f7c-90eb-e599dbef3d07
             warning: null
             width: 100
         name: Content
-        uid: 654477f7-c5a3-4e5f-b646-aa717bba1f21
+        uid: ca98058f-53d1-4a03-ab90-cf16cfc61b5f
 fields:
-  b2c99831-d731-447c-8233-c0418cc574bd: # Cards
+  7e7008d5-deb5-4018-9fb7-52f6b2603f34: # Cards
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: cards
-    instructions: 'Select entries to be displayed on the page'
+    instructions: 'Make sure you only select cards from the same sections'
     name: Cards
     searchable: false
     settings:
@@ -46,12 +46,14 @@ fields:
       source: null
       sources:
         - 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
+        - 'section:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
+        - 'section:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
-handle: blogHighlightCards
-name: 'Blog Highlight Cards'
+handle: highlightCards
+name: 'Highlight Cards'
 sortOrder: 7

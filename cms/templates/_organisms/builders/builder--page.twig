@@ -2,7 +2,9 @@
     [
         'pageBuilder',
         'pageBuilder.contentCta',
-        'pageBuilder.contentCta:image'
+        'pageBuilder.contentCta:image',
+        'pageBuilder.highlightCards:cards',
+        'pageBuilder.highlightCards:cards.teaserImage',
     ])
 -%}
 
@@ -14,15 +16,28 @@
 
             {%- case 'contentCta' -%}
 
+                {%- set background = swatch(block.background) -%}
+
+                {# check which cta should be loaded #}
+                {%- set component = '_molecules/ctas/cta--text' -%}
                 {%- if block.image|length -%}
-                    {# dark #}
-                {%- else -%}
-                    {%- include '_molecules/ctas/cta--light' ignore missing with {
-                        heading: block.heading ??? '',
-                        content: block.body ??? '',
-                        button: block.target ??? null
-                    } -%}
+                    {%- set component = '_molecules/ctas/cta--image' -%}
                 {%- endif -%}
+
+                {# load component #}
+                {%- include component ignore missing with {
+                    heading: block.heading ??? '',
+                    content: block.body ??? '',
+                    button: block.target ??? null,
+                    background: background.primary ?? 'white',
+                    image: block.image ??? null
+                } -%}
+
+            {%- case 'highlightCards' -%}
+
+                {%- include '_organisms/grids/grid--highlight-cards' ignore missing with {
+                    cards: block.cards,
+                } -%}
 
         {%- endswitch -%}
 

@@ -4,61 +4,57 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 78023dfa-3c9e-47d1-bedc-b6fa76c9d751 # Teaser Image Placeholder
-            instructions: null
-            label: null
-            required: '0'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
             fieldUid: df090dc9-1e25-4504-abd3-18e7996d8d6d # Article Image Placeholder
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 99254350-8eaf-45ed-9c9a-29df81cdc9a9
             warning: null
             width: 100
           -
-            fieldUid: d39b90d3-13a8-4d42-b415-1ef20426a174 # Photo Cover Placeholder
+            fieldUid: 11680160-76bb-4537-b686-d1f6cfcbf34e # Call To Action Placeholder
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 777c831a-224a-4eff-8e0e-36656e272f10
+            warning: null
+            width: 100
+          -
+            fieldUid: 40c9dffd-9181-4098-b4fa-c1f67eeb73ea # Card Placeholder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5b5348da-669c-4615-bc28-77c673db064c
+            warning: null
+            width: 100
+          -
+            fieldUid: 78023dfa-3c9e-47d1-bedc-b6fa76c9d751 # Teaser Image Placeholder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 20d582ef-b397-4722-9d00-d03c91342c94
             warning: null
             width: 100
           -
             fieldUid: 11916eb5-92ff-4945-bb06-1406d6047b36 # Slider Image Placeholder
             instructions: null
             label: null
-            required: '0'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: d08d0466-34f4-441b-acd1-439b514f3810 # Profile Photo Placeholder
-            instructions: null
-            label: null
-            required: '0'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: c66a07bc-ece1-4d0c-b7a7-e4922603cabf # Hero Placeholder
-            instructions: null
-            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c824eef3-8e1e-4f6f-9d66-12b276b99383
             warning: null
             width: 100
         name: 'Placeholder Images'
-        sortOrder: 1
+        uid: ab7fafb7-e4b6-4971-82df-562d4b6cf6a3
 handle: placeholders
 name: Placeholders
 sortOrder: 5
