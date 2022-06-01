@@ -22,7 +22,16 @@
 
 {%- set placeholder = craft.globalSets()
     .handle('placeholders')
-    .with(['articlePlaceholder', 'photoCoverPlaceholder', 'profilePhotoPlaceholder', 'sliderPlaceholder', 'teaserPlaceholder', 'heroPlaceholder', 'brandingPlaceholder'])
+    .with([
+        'articlePlaceholder',
+        'defaultPlaceholder',
+        'photoCoverPlaceholder',
+        'profilePhotoPlaceholder',
+        'sliderPlaceholder',
+        'teaserPlaceholder',
+        'heroPlaceholder',
+        'brandingPlaceholder'
+    ])
     .one()
 -%}
 

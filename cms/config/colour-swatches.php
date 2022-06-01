@@ -27,6 +27,28 @@ return [
 
     // Custom  palettes, fixed options [label, default (boolean), colour (array(colour, customOptions)) ]
     'palettes' => [
+        'Dark/Light'=> [
+            [
+                'label'   => 'light',
+                'default' => true,
+                'color'   =>  [
+                    [
+                        'color'     => '#FFFFFF',  // the colour shown in the fieldtype (required)
+                        'class'     => 'white', // custom attribute
+                    ],
+                ]
+            ],
+            [
+                'label'   => 'dark',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#273040',  // the colour shown in the fieldtype (required)
+                        'class'     => 'gray-800', // custom attribute
+                    ],
+                ]
+            ],
+        ],
         'Percipio' => [  // custom label
             [
                 'label'   => 'redblue',

@@ -14,15 +14,23 @@
 
             {%- case 'contentCta' -%}
 
+                {%- set background = swatch(block.background) -%}
+                {%- set component = '_molecules/ctas/cta--light' -%}
+
                 {%- if block.image|length -%}
-                    {# dark #}
+                    {%- set component = '_molecules/ctas/cta--image' -%}
                 {%- else -%}
-                    {%- include '_molecules/ctas/cta--light' ignore missing with {
-                        heading: block.heading ??? '',
-                        content: block.body ??? '',
-                        button: block.target ??? null
-                    } -%}
+                    {%- set component = '_molecules/ctas/cta--text' -%}
                 {%- endif -%}
+
+
+                {%- include component ignore missing with {
+                    heading: block.heading ??? '',
+                    content: block.body ??? '',
+                    button: block.target ??? null,
+                    background: background.primary ?? 'white',
+                    image: block.image ??? null
+                } -%}
 
         {%- endswitch -%}
 

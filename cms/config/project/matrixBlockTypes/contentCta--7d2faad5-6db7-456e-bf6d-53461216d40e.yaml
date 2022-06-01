@@ -213,7 +213,7 @@ fields:
       restrictFiles: false
       restrictLocation: true
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5' # Articles
+      restrictedLocationSource: 'volume:0e70c434-c06e-43ce-a978-d2db6c487ed3' # Call To Actions
       restrictedLocationSubpath: null
       selectionCondition:
         __assoc__:
