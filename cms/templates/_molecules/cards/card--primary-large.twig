@@ -1,22 +1,15 @@
 {% import '_macros/atoms' as render %}
 
-{%- set content = content|default(null) -%}
-{%- set utilities = utilities|default('') -%}
-{%- set teaser = teaser|default(null) -%}
-
-<div class="col-span-2 relative bg-white shadow-2xl rounded-4xl p-6 pb-9 overflow-hidden {{ utilities -}}">
+<div class="col-span-2 relative bg-white shadow-2xl rounded-4xl p-6 pb-9 overflow-hidden">
 
     <div class="relative rounded-[20px] overflow-hidden">
-        {%- if teaser -%}
-            {{- render.atom('image', 'card-large', {
-                    image: content.cardImage.first,
-                    sizes: ['66.6vw'],
-                    alt: content.title,
-                    placeholders: placeholders,
-                    utilities: 'w-full'
-                })
-            -}}
-        {%- endif -%}
+        {{- render.atom('image', 'card-large', {
+                image: content.cardImage.collect().first(),
+                sizes: ['66.6vw'],
+                alt: content.title,
+                placeholders: placeholders,
+            })
+        -}}
     </div>
 
     <div class="space-y-4">

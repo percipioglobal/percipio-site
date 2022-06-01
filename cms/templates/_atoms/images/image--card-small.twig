@@ -13,24 +13,20 @@
     ratio: (STR) -- Give the aspect ratio in the correct format eg. aspect-4/3 / aspect-16/9 ( optional )
     sizes: (ARR) -- sizes array for responsive images
     source: (STR) -- The image source ( optional )
-    utilities: (STR) -- The specific TW spacing utilities to add
 
 #}
 
-{# {%- set props = props|merge({
-    optimized: options.image.optimizeCardSmall ??? null,
-    placeholder: options.placeholders.cardPlaceholder.first.optimizeCardSmall,
-    ratio: options.ratio ??? 'aspect-16/9',
-}) -%} #}
-
 {%- block image -%}
 
-    {%- minify -%}
-        <pre>
-        {{ dump(props) }}
-        </pre>
+    {%- set props = props|merge({
+        optimized: options.image.optimizeCardSmall ??? null,
+        placeholder: options.placeholders.cardPlaceholder.first.optimizeCardSmall,
+        ratio: options.ratio ??? 'aspect-16/9',
+    }) -%}
 
-        {# <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
+    {%- minify -%}
+
+        <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
 
             <picture class="{{ props.ratio -}}">
 
@@ -57,7 +53,7 @@
 
             </picture>
 
-        </figure> #}
+        </figure>
 
     {%- endminify -%}
 
