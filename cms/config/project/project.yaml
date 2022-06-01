@@ -262,7 +262,7 @@ meta:
     1caabc75-eb3c-43a5-bffd-5b3289015e5c: Heading # Heading
     1cd525bc-8beb-4ba2-9452-2e02803421ef: 'Video Placeholder' # Video Placeholder
     1d22d2ae-5175-4154-b830-51c806bfbf5b: 'Article Body' # Article Body
-    1dd95078-7c8a-4ef7-8a16-e33a5341dadb: 'Image Optimisations ' # Image Optimisations 
+    1dd95078-7c8a-4ef7-8a16-e33a5341dadb: 'Image Optimisations ' # Image Optimisations
     1e5edb55-fbe5-44a5-8fd2-8f668886557e: 'Background Color' # Background Color
     1eb19599-751e-4136-ac0f-385321fd1f98: Heading # Heading
     1ecbeef5-820f-4123-a8db-30daae3cd4f7: Images # Images
@@ -342,7 +342,7 @@ meta:
     58ba1445-a78a-411a-b2d2-4850c8433b9b: Headers # Headers
     58eccc39-1c9e-45ac-bae8-465deff69786: Team # Team
     062e0067-ec18-423d-9e99-cce96beada4b: 'Optimize Covers' # Optimize Covers
-    70d3e848-905a-4246-a20b-02c24af51402: 'Organisation Address Postal Code ' # Organisation Address Postal Code 
+    70d3e848-905a-4246-a20b-02c24af51402: 'Organisation Address Postal Code ' # Organisation Address Postal Code
     73ee03a9-c989-4d98-bd96-db9bc9cb2a5c: Caption # Caption
     74c703ba-fb2c-421f-9b09-2bd3762770de: 'Footer Navigation' # Footer Navigation
     74d5a128-4fbc-4ea8-a7d7-c828e87680ff: 'Organisation Address Region' # Organisation Address Region
@@ -526,9 +526,6 @@ meta:
     ff2b4da8-c253-49e7-8258-9a7a0a40d3c7: Swatch # Swatch
 plugins:
   aws-s3:
-    eager-beaver:
-      enabled: true
-      schemaVersion: 1.0.0
     enabled: true
     schemaVersion: '2.0'
   blitz-recommendations:
@@ -543,10 +540,6 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
   embeddedassets:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  fastcgi-cache-bust:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
@@ -622,11 +615,6 @@ plugins:
     enabled: true
     licenseKey: 8LN4PPMQDNDW9TA7FLCL3WY5
     schemaVersion: 3.0.11
-  spoon:
-    edition: standard
-    enabled: true
-    licenseKey: 9QEEMHXZL353YMJEKFETFL5A
-    schemaVersion: 3.5.0
   super-table:
     edition: standard
     enabled: true
@@ -635,10 +623,6 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: YLR368QSFHK7JWHSZ1NBI9N3
-    schemaVersion: 1.0.0
-  twigpack:
-    edition: standard
-    enabled: true
     schemaVersion: 1.0.0
   typedlinkfield:
     edition: standard
@@ -652,11 +636,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  webperf:
+  width-fieldtype:
     edition: standard
     enabled: true
-    licenseKey: null
-    schemaVersion: 1.0.1
+    schemaVersion: 1.0.0
 system:
   edition: pro
   live: true
