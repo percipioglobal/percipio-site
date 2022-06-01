@@ -17,41 +17,38 @@
 
 #}
 
-{%- set props = props|merge({
-    ratio: options.ratio ??? 'aspect-16/9',
-    optimized: options.image.optimizeCardLarge ??? null,
-    placeholder: options.placeholders.cardPlaceholder[0].optimizeCardLarge,
-}) -%}
+{%- block image -%}
 
-{%- minify -%}
+    {%- minify -%}
 
-    <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
+        <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
 
-        <picture class="{{ props.ratio -}}">
+            <picture class="{{ props.ratio -}}">
 
-            <source 
-                data-srcset="{{- props.optimized.srcsetWebP() ??? props.placeholder.srcsetWebP() -}}"
-                sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                type="image/webp"
-            />
+                <source
+                    data-srcset="{{- props.optimized.srcsetWebP() ??? props.placeholder.srcsetWebP() -}}"
+                    sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                    type="image/webp"
+                />
 
-            <source 
-                data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
-                sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-            />
+                <source
+                    data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
+                    sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                />
 
-            <img
-                src="{{- props.optimized.placeholderImage() ??? props.placeholder.placeholderImage() -}}"
-                data-src="{{- props.optimized.src() ??? props.placeholder.src() -}}"
-                data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
-                sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                class="lazyload"
-                loading="lazy"
-                alt="{{- props.alt -}}"
-            />
+                <img
+                    src="{{- props.optimized.placeholderImage() ??? props.placeholder.placeholderImage() -}}"
+                    data-src="{{- props.optimized.src() ??? props.placeholder.src() -}}"
+                    data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
+                    sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                    class="lazyload {{ props.utilities -}}"
+                    loading="lazy"
+                    alt="{{- props.alt -}}"
+                />
 
-        </picture>
+            </picture>
 
-    </figure>
+        </figure>
 
-{%- endminify -%}
+    {%- endminify -%}
+{%- endblock -%}

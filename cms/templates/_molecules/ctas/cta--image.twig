@@ -7,51 +7,53 @@
 {%- set image = image|default(null) -%}
 
 {%- minify -%}
-    <section class="lg:flex lg:flex-row-reverse items-center py-12 md:py-32 container max-w-screen-xl mx-auto bg-{{- background -}}">
-        <div class="w-full lg:w-1/2">
-            {%- if image -%}
-                {{- render.atom('image', 'default', {
-                        image: image[0],
-                        optimized: image[0].optimizeCta,
-                        placeholder: placeholder.articlePlaceholder[0].optimizeArticles,
-                        sizes: ['(max-width:768px) 18rem', '(min-width:768px) and (max-width:1024px) 41.5625rem', '(min-width:1024px) 24.0625rem'],
-                        alt: image[0].title,
-                        ratio: image[0].ratio,
-                        author: image[0].author ?? "",
-                        source: image[0].source ?? "",
-                        utilities: 'w-full max-w-[665px] mb-4 md:mb-20 lg:mb-0',
-                    })
-                -}}
-            {%- endif -%}
-        </div>
-        <div class="w-full lg:w-1/2 lg:pr-10">
-            <h2>{{- render.atom('text', 'h2', {
-                content: heading,
-                color: background == 'white' ? 'text-gray-800' : 'text-white',
-            }) -}}</h2>
+    <section class="py-12 md:py-32 bg-{{- background -}}">
+        <div class="lg:flex lg:flex-row-reverse items-center container max-w-screen-xl mx-auto">
+            <div class="w-full lg:w-1/2">
+                {%- if image -%}
+                    {{- render.atom('image', 'default', {
+                            image: image[0],
+                            optimized: image[0].optimizeCta,
+                            placeholder: placeholder.ctaPlaceholder[0].optimizeCta,
+                            sizes: ['(max-width:768px) 18rem', '(min-width:768px) and (max-width:1024px) 41.5625rem', '(min-width:1024px) 24.0625rem'],
+                            alt: image[0].title,
+                            ratio: image[0].ratio,
+                            author: image[0].author ?? "",
+                            source: image[0].source ?? "",
+                            utilities: 'w-full max-w-[665px] mb-4 md:mb-20 lg:mb-0',
+                        })
+                    -}}
+                {%- endif -%}
+            </div>
+            <div class="w-full lg:w-1/2 lg:pr-10">
+                <h2>{{- render.atom('text', 'h2', {
+                    content: heading,
+                    color: background == 'white' ? 'gray-800' : 'white',
+                }) -}}</h2>
 
-            {%- if content -%}
-                {{- render.atom('text', 'description', {
-                    content: content,
-                    color: background == 'white' ? 'text-gray-600' : 'text-white',
-                    utilities: 'mt-8'
-                }) -}}
-            {%- endif -%}
+                {%- if content -%}
+                    {{- render.atom('text', 'description', {
+                        content: content,
+                        color: background == 'white' ? 'text-gray-600' : 'text-white',
+                        utilities: 'mt-8'
+                    }) -}}
+                {%- endif -%}
 
-            {%- if button -%}
-                {{- render.atom('button', 'primary', {
-                    url: button.getUrl() ??? null,
-                    text: button.getText() ??? null,
-                    target: button.getTarget() ??? '_self',
-                    icon: 'angle-right',
-                    ga: {
-                        category: 'Call to action',
-                        action: 'click',
-                        label: button.getUrl() ??? null,
-                    },
-                    utilities: 'mt-4 md:mt-8'
-                }) -}}
-            {%- endif -%}
+                {%- if button -%}
+                    {{- render.atom('button', 'primary', {
+                        url: button.getUrl() ??? null,
+                        text: button.getText() ??? null,
+                        target: button.getTarget() ??? '_self',
+                        icon: 'angle-right',
+                        ga: {
+                            category: 'Call to action',
+                            action: 'click',
+                            label: button.getUrl() ??? null,
+                        },
+                        utilities: 'mt-4 md:mt-8'
+                    }) -}}
+                {%- endif -%}
+            </div>
         </div>
     </section>
 {%- endminify -%}

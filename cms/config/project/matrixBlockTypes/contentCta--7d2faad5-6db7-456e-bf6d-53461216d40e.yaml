@@ -240,4 +240,4 @@ fields:
     type: craft\fields\Assets
 handle: contentCta
 name: 'Content CTA'
-sortOrder: 12
+sortOrder: 10

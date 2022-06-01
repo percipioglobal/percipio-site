@@ -1,4 +1,4 @@
-dateModified: 1654091314
+dateModified: 1654099776
 elementSources:
   craft\elements\Entry:
     -
@@ -272,7 +272,7 @@ meta:
     2c244265-381c-45ad-b439-7845b814e5ee: Resources # Resources
     2cb6fb1e-761a-4096-ba9d-e151495efc98: Caption # Caption
     2d711019-2880-4c21-8217-ff88e953e2bb: News # News
-    2dd56883-3aaa-4d1b-85a9-a62fd192ff43: 'Service Highlight Cards' # Service Highlight Cards
+    2dd56883-3aaa-4d1b-85a9-a62fd192ff43: 'Highlight Cards' # Highlight Cards
     3a030d4d-66bf-4bff-af6b-a3366b617b7e: 'Image Gallery' # Image Gallery
     3a3a038a-b887-45f4-8850-96f3b78060f2: Width # Width
     03bb9bf6-0516-4070-b011-57f7820b7c7c: Embed # Embed
@@ -328,6 +328,7 @@ meta:
     32d5ec8b-e9ee-4409-ba69-616e0502bf3a: Overline # Overline
     35a1d959-d78e-4445-891c-7bb671c48281: 'Optimize Teasers' # Optimize Teasers
     37b4ca60-ef63-4bbb-a7ab-de771a39a327: Buttons # Buttons
+    40c9dffd-9181-4098-b4fa-c1f67eeb73ea: 'Card Image Placeholder' # Card Placeholder
     40e441b8-aeac-4f02-878a-60457e5699a8: Position # Position
     040f68f0-b32f-4544-8b97-56d71c7f3428: Ratio # Ratio
     46d0d4a2-a95f-4210-83b2-f0ca13a95704: 'Hero Image' # Hero Image
@@ -419,6 +420,7 @@ meta:
     6180741d-7a95-4c38-a6b8-13f0cd8dab1f: 'Logo Icon' # Logo Icon
     6261508f-6848-476e-a5d1-1ffe3acafb5c: 'Optimize Heroes' # Optimize Heroes
     6834194e-43c0-464b-9333-a15bd914d9d3: 'Project Categories' # Project Categories
+    11680160-76bb-4537-b686-d1f6cfcbf34e: 'Call To Action Placeholder' # Call To Action Placeholder
     12311739-6ceb-4fb4-a572-7f2ea0ad3b69: Documents # Documents
     18802253-9492-45f9-94a3-1d4c9b68c027: Swatch # Swatch
     36002316-c250-47f4-8b9d-d92b08d33fa7: 'Spotlight Cards' # Spotlight Cards
@@ -462,7 +464,6 @@ meta:
     c439e251-a130-434d-a716-aab4d0651420: 'Navigation Settings' # Navigation Settings
     c499bc8d-734b-4fe4-b74e-dca793aba082: 'Body Content' # Body Content
     c5638e5a-a8f8-4f97-ab00-7247cd30b054: Width # Width
-    c9255a2e-fac5-43e1-99c1-e7013bb8d9c9: 'Blog Highlight Cards' # Blog Highlight Cards
     ca8bffb4-dfed-4ca4-b421-ffcc8cca47e2: Target # Target
     cb2b1336-5ccd-48f4-a973-72fae9fd4069: 'Meta Image' # Meta Image
     cbbbac66-4ad4-4edc-b9fe-ef597989736f: 'Sort order' # Sort order
@@ -477,7 +478,6 @@ meta:
     d8cef538-a756-4496-b7f6-0e0bb61c14c2: 'Primary Navigation' # Primary Navigation
     d39b90d3-13a8-4d42-b415-1ef20426a174: 'Photo Cover Placeholder' # Photo Cover Placeholder
     d613d12d-ac03-4153-942b-0cca809f451b: 'Body Content' # Body Content
-    d46178a7-6c4d-43f6-82be-795a1bf1797a: 'Project Highlight Cards' # Project Highlight Cards
     d476916c-8ec8-4d19-a3f8-ac4854f87275: Catchphrase # Catchphrase
     d7413814-0c30-451d-a383-d39d7cc3f78b: Position # Position
     da9598dc-e9bb-4920-8adf-a712876cb578: 'Meta Description' # Meta Description
