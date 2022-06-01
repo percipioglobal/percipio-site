@@ -1,4 +1,4 @@
-dateModified: 1654088714
+dateModified: 1654091131
 elementSources:
   craft\elements\Entry:
     -
@@ -120,22 +120,23 @@ fs:
       subfolder: branding/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
-  covers:
+  callToActions:
     hasUrls: true
-    name: Covers
+    name: 'Call To Actions'
     settings:
-      addSubfolderToRootUrl: '1'
-      autoFocalPoint: ''
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
       bucket: $S3_BUCKET
       bucketSelectionMode: manual
       cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
       cfPrefix: $CLOUDFRONT_PATH_PREFIX
       expires: '3 months'
       keyId: $S3_KEY_ID
-      makeUploadsPublic: '1'
+      makeUploadsPublic: true
       region: $S3_REGION
       secret: $S3_SECRET
-      subfolder: covers/
+      storageClass: ''
+      subfolder: cta/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   documents:
@@ -192,60 +193,6 @@ fs:
       subfolder: headers/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
-  heroes:
-    hasUrls: true
-    name: Heroes
-    settings:
-      addSubfolderToRootUrl: '1'
-      autoFocalPoint: ''
-      bucket: $S3_BUCKET
-      bucketSelectionMode: manual
-      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-      cfPrefix: $CLOUDFRONT_PATH_PREFIX
-      expires: '3 months'
-      keyId: $S3_KEY_ID
-      makeUploadsPublic: '1'
-      region: $S3_REGION
-      secret: $S3_SECRET
-      subfolder: heroes/
-    type: craft\awss3\Fs
-    url: $CLOUDFRONT_URL
-  openGraphImage:
-    hasUrls: true
-    name: 'Open Graph Image'
-    settings:
-      addSubfolderToRootUrl: '1'
-      autoFocalPoint: ''
-      bucket: $S3_BUCKET
-      bucketSelectionMode: manual
-      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-      cfPrefix: $CLOUDFRONT_PATH_PREFIX
-      expires: '3 months'
-      keyId: $S3_KEY_ID
-      makeUploadsPublic: '1'
-      region: $S3_REGION
-      secret: $S3_SECRET
-      subfolder: opengraph/
-    type: craft\awss3\Fs
-    url: $CLOUDFRONT_URL
-  profiles:
-    hasUrls: true
-    name: 'Profile Images'
-    settings:
-      addSubfolderToRootUrl: '1'
-      autoFocalPoint: ''
-      bucket: $S3_BUCKET
-      bucketSelectionMode: manual
-      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-      cfPrefix: $CLOUDFRONT_PATH_PREFIX
-      expires: '3 months'
-      keyId: $S3_KEY_ID
-      makeUploadsPublic: '1'
-      region: $S3_REGION
-      secret: $S3_SECRET
-      subfolder: profile-images/
-    type: craft\awss3\Fs
-    url: $CLOUDFRONT_URL
   projects:
     hasUrls: true
     name: Projects
@@ -300,29 +247,12 @@ fs:
       subfolder: teasers/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
-  video:
-    hasUrls: true
-    name: Video
-    settings:
-      addSubfolderToRootUrl: '1'
-      autoFocalPoint: ''
-      bucket: $S3_BUCKET
-      bucketSelectionMode: manual
-      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-      cfPrefix: $CLOUDFRONT_PATH_PREFIX
-      expires: '3 months'
-      keyId: $S3_KEY_ID
-      makeUploadsPublic: '1'
-      region: $S3_REGION
-      secret: $S3_SECRET
-      subfolder: videos/
-    type: craft\awss3\Fs
-    url: $CLOUDFRONT_URL
 meta:
   __names__:
     0c7a7b67-3926-4a9f-b449-8d1d1c451f2f: Width # Width
     0d208796-7b7c-4677-bab0-0c107ff1c99b: Button # Button
     0dd08fc1-c043-49cb-bdcf-80521b7bd98a: Settings # Settings
+    0e70c434-c06e-43ce-a978-d2db6c487ed3: 'Call To Actions' # Call To Actions
     1aad5a2f-f77c-42d8-8c02-c97817b9cb18: 'The Answer' # The Answer
     1ae55366-a3a6-4ed1-bf34-12ead8ae6c21: 'Our Services' # Our Services
     01b78fde-8a32-4ecc-b1b0-abf0661898ce: Skills # Skills
@@ -341,7 +271,6 @@ meta:
     2b415d29-2051-4baf-988f-da71364afc60: Description # Description
     2c244265-381c-45ad-b439-7845b814e5ee: Resources # Resources
     2cb6fb1e-761a-4096-ba9d-e151495efc98: Caption # Caption
-    2cfafcad-5b14-408b-ba81-afd942b8b3cb: 'Profile Images' # Profile Images
     2d711019-2880-4c21-8217-ff88e953e2bb: News # News
     2dd56883-3aaa-4d1b-85a9-a62fd192ff43: 'Service Highlight Cards' # Service Highlight Cards
     3a030d4d-66bf-4bff-af6b-a3366b617b7e: 'Image Gallery' # Image Gallery
@@ -352,7 +281,7 @@ meta:
     3fc84cf5-6e3d-46e8-bf13-9a1d4e198438: Caption # Caption
     4a86f07d-200e-4dbc-a06a-223d9cc5c049: Images # Images
     4be4bd14-ce94-450b-a4f4-e10721ba5b22: Containerise # Containerise
-    4de07f3d-82ea-44fa-a35b-d77a9ee4206d: 'Optimize Default' # Optimize Default
+    4de07f3d-82ea-44fa-a35b-d77a9ee4206d: 'Optimize Call To Actions' # Optimize Call To Actions
     4e026396-d7ab-43ef-a817-226fb2dada30: 'FAQ Categories' # FAQ Categories
     4ee5d848-5fee-407d-a3aa-7475ef0fe6bc: Width # Width
     4f6c2efe-5cf4-46b5-82e5-79a8796af5c5: Content # Content
@@ -434,7 +363,6 @@ meta:
     0345c44d-88e4-4280-842b-158ec0307b5a: Background # Background
     345c4093-df0a-45dd-9d5f-47fb3fac8c7d: Heading # Heading
     346cce90-1d6e-4c2d-82c0-c91b571c741c: 'Section Header' # Section Header
-    385e443b-b2c6-4ff0-b84a-a0fe656c51f0: Video # Video
     451cb28a-2133-4681-977d-41c5a1cbc887: 'Full Logo' # Full Logo
     490fdbcf-1817-4de2-8278-1098e796f288: 'Hero content with background image' # Hero content with background image
     502c51a1-5b82-4368-90e1-aa68b1d4e479: 'Cover Photo' # Cover Photo
@@ -446,7 +374,6 @@ meta:
     714aef78-b2cb-46ab-82b4-e1cbf362b65c: Target # Target
     0827c9dd-2ea2-4e98-b743-3161e028a304: 'FAQ Category' # FAQ Category
     870c07d7-9341-4f1f-825b-25c76239bc0d: Caption # Caption
-    918b50e1-632c-4e92-a8c5-55eeb7b8571e: Covers # Covers
     924c71a7-4d25-4b3b-9a46-2b1ea495cefe: 'Text Grid' # Text Grid
     1572f461-2a67-47a4-a36c-80839168bcb7: Globals # Globals
     1750a33c-c911-45de-9392-80a3004cbe0d: Description # Description
@@ -467,7 +394,6 @@ meta:
     9806bc10-174e-4280-b2a8-c684b99a3139: 'Optimize Profile Images' # Optimize Profile Images
     11916eb5-92ff-4945-bb06-1406d6047b36: 'Slider Image Placeholder' # Slider Image Placeholder
     13653e63-9892-4752-b260-32518bc3bb3d: Cards # Cards
-    17629e67-2262-40f9-a68b-93d1e165540f: Heroes # Heroes
     25958ba0-5f4a-48fc-9dee-0064db99f702: 'Utility Icon' # Utility Icon
     33274ae4-f375-4070-b42c-f1cef4e48a81: Heading # Heading
     34000b23-2325-400f-a43f-958941335fe3: 'Project Categories' # Project Categories
@@ -543,7 +469,6 @@ meta:
     cc4d5589-5884-4fb2-ba84-ffb388a8806e: Slides # Slides
     cd0c5467-595b-44e8-b0b0-aa3cd2e4f87e: Image # Image
     ce64c3ac-ec79-4405-98a9-aea16011e258: Width # Width
-    cf85bfd4-591a-49d3-8d0e-b89ba77da9bb: 'Open Graph Image' # Open Graph Image
     d08a0d16-0e00-49e6-9cd4-465fa2d65d7d: Errors # Errors
     d08d0466-34f4-441b-acd1-439b514f3810: 'Profile Photo Placeholder' # Profile Photo Placeholder
     d09756bb-3dd5-4ad8-b6eb-6e3595705141: Description # Description

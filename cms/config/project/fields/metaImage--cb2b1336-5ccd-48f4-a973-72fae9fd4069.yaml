@@ -19,7 +19,7 @@ settings:
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  singleUploadLocationSource: 'volume:cf85bfd4-591a-49d3-8d0e-b89ba77da9bb' # Open Graph Image
+  singleUploadLocationSource: 'volume:cf85bfd4-591a-49d3-8d0e-b89ba77da9bb'
   singleUploadLocationSubpath: ''
   source: null
   sources: '*'

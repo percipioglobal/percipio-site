@@ -18,7 +18,7 @@ settings:
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  singleUploadLocationSource: 'volume:918b50e1-632c-4e92-a8c5-55eeb7b8571e' # Covers
+  singleUploadLocationSource: 'volume:918b50e1-632c-4e92-a8c5-55eeb7b8571e'
   singleUploadLocationSubpath: ''
   source: null
   sources: '*'

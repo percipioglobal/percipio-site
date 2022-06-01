@@ -19,7 +19,7 @@ settings:
   showSiteMenu: true
   showUnpermittedFiles: true
   showUnpermittedVolumes: false
-  singleUploadLocationSource: 'volume:2cfafcad-5b14-408b-ba81-afd942b8b3cb' # Profile Images
+  singleUploadLocationSource: 'volume:2cfafcad-5b14-408b-ba81-afd942b8b3cb'
   singleUploadLocationSubpath: ''
   source: null
   sources: '*'
