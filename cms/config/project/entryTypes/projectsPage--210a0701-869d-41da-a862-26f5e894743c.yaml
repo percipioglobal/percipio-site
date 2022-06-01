@@ -75,7 +75,7 @@ fieldLayouts:
 handle: projectsPage
 hasTitleField: true
 name: 'Projects Page'
-section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
+section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
 sortOrder: 5
 titleFormat: null
 titleTranslationKeyFormat: null

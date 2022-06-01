@@ -1,53 +1,53 @@
-field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733 # Page Builder
 fieldLayouts:
-  c6c05e4b-4197-45b5-96d7-7a8e76563f3b:
+  13adee58-a452-4167-beb6-6a5bb81b25da:
     tabs:
       -
         elements:
           -
-            fieldUid: 020d5ff3-f24f-48ae-bd4c-ad2beb6b4d8b # Heading
+            fieldUid: 7094bca5-b1bf-4bdd-8699-baa53877dc85 # Heading
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: aaaf3b03-8ea5-47df-90ff-8c7ed96bfa67
+            uid: 8fdd3e09-8c54-4ff0-8012-490b075ceb62
             warning: null
             width: 100
           -
-            fieldUid: 83cafeab-7189-4e6a-8d08-62f9e35de063 # Content
+            fieldUid: 4f6c2efe-5cf4-46b5-82e5-79a8796af5c5 # Content
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e15afdcf-b7a6-48ad-a3df-6370d5313d43
+            uid: ca4c1681-68a4-40c6-926b-e8cbcdc2dec2
             warning: null
             width: 100
           -
-            fieldUid: 7bc51fb0-9ad3-4518-bd25-e12e3d2d0acf # Button
+            fieldUid: 0d208796-7b7c-4677-bab0-0c107ff1c99b # Button
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 47cd9fb4-359e-4d0b-87e7-020d2e9629a9
+            uid: 6f3901b1-afc4-45c2-9d5f-8bee40ee6a14
             warning: null
             width: 100
           -
-            fieldUid: 91602cc8-0f1b-49b4-b806-9b424f7b0206 # Image
+            fieldUid: cd0c5467-595b-44e8-b0b0-aa3cd2e4f87e # Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 91cc28f6-c0eb-43be-851f-9a6b19c8ba9b
+            uid: ea529030-bedd-406d-9dff-d7b69ea4882f
             warning: null
             width: 100
         name: Content
-        uid: 6a8e4244-4354-474d-970a-2b5edfb66a2a
+        uid: c6edba34-8976-4b4e-90e3-a748f6be5da3
 fields:
-  7bc51fb0-9ad3-4518-bd25-e12e3d2d0acf: # Button
+  0d208796-7b7c-4677-bab0-0c107ff1c99b: # Button
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -76,7 +76,7 @@ fields:
         category:
           allowCrossSiteLink: false
           allowCustomQuery: false
-          enabled: true
+          enabled: false
           sources: '*'
         custom:
           allowAliases: false
@@ -110,8 +110,36 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
-  020d5ff3-f24f-48ae-bd4c-ad2beb6b4d8b: # Heading
-    columnSuffix: null
+  4f6c2efe-5cf4-46b5-82e5-79a8796af5c5: # Content
+    columnSuffix: nkevrmka
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: 'Enter one more paragraphs to create your textual CTA content.'
+    name: Content
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  7094bca5-b1bf-4bdd-8699-baa53877dc85: # Heading
+    columnSuffix: ymncopxu
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -138,35 +166,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  83cafeab-7189-4e6a-8d08-62f9e35de063: # Content
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: body
-    instructions: 'Enter one more paragraphs to create your textual CTA content.'
-    name: Content
-    searchable: true
-    settings:
-      availableTransforms: '*'
-      availableVolumes: ''
-      columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
-      purifierConfig: null
-      purifyHtml: true
-      redactorConfig: null
-      removeEmptyTags: true
-      removeInlineStyles: true
-      removeNbsp: true
-      showHtmlButtonForNonAdmins: true
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      uiMode: enlarged
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\redactor\Field
-  91602cc8-0f1b-49b4-b806-9b424f7b0206: # Image
+  cd0c5467-595b-44e8-b0b0-aa3cd2e4f87e: # Image
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -179,7 +179,7 @@ fields:
       allowSubfolders: false
       allowUploads: true
       allowedKinds: null
-      defaultUploadLocationSource: 'volume:58ba1445-a78a-411a-b2d2-4850c8433b9b' # Headers
+      defaultUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5' # Articles
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maxRelations: 1
@@ -215,4 +215,4 @@ fields:
     type: craft\fields\Assets
 handle: contentCta
 name: 'Content CTA'
-sortOrder: 5
+sortOrder: 12
