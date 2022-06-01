@@ -3,14 +3,22 @@ fieldLayouts:
   083a08b4-c833-4b37-8a9f-4ecfa12f4e34:
     tabs:
       -
-        fields:
-          35981b2e-d04e-4366-939a-c0673263711a: # Questions
+        elements:
+          -
+            fieldUid: 35981b2e-d04e-4366-939a-c0673263711a # Questions
+            instructions: null
+            label: null
             required: true
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 645a9baf-3c67-4155-9ccd-fe1008562b6e
+            warning: null
+            width: 100
         name: Content
-        sortOrder: 1
+        uid: 00997d64-115a-4ccf-8c26-e2162c0d93f2
 fields:
   35981b2e-d04e-4366-939a-c0673263711a: # Questions
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: questions
@@ -18,19 +26,31 @@ fields:
     name: Questions
     searchable: false
     settings:
-      allowSelfRelations: ''
-      limit: ''
+      allowSelfRelations: false
       localizeRelations: false
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
       selectionLabel: 'Add questions'
+      showSiteMenu: true
       source: null
-      sources:
-        - 'section:47b7409b-e345-48d9-b684-06ec0a2972f5'
+      sources: '*'
       targetSiteId: null
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: null
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
 handle: faqList
 name: 'FAQ List'
-sortOrder: 9
+sortOrder: 10

@@ -1064,16 +1064,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.223.0",
+            "version": "3.224.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "78fcf4a43f7201c01cc623c5092827b1f072aec6"
+                "reference": "97bbc5682472883233e4b6a1184e2da8755c5b38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/78fcf4a43f7201c01cc623c5092827b1f072aec6",
-                "reference": "78fcf4a43f7201c01cc623c5092827b1f072aec6",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/97bbc5682472883233e4b6a1184e2da8755c5b38",
+                "reference": "97bbc5682472883233e4b6a1184e2da8755c5b38",
                 "shasum": ""
             },
             "require": {
@@ -1149,9 +1149,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.223.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.224.1"
             },
-            "time": "2022-05-26T18:18:03+00:00"
+            "time": "2022-05-31T18:45:52+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -2771,16 +2771,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "3.1.2",
+            "version": "3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "ee0db30118f661fb166bcffbf5d82032df484697"
+                "reference": "a5ed8d58ed0c340a7c2109f587951b1c84cf6286"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/ee0db30118f661fb166bcffbf5d82032df484697",
-                "reference": "ee0db30118f661fb166bcffbf5d82032df484697",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/a5ed8d58ed0c340a7c2109f587951b1c84cf6286",
+                "reference": "a5ed8d58ed0c340a7c2109f587951b1c84cf6286",
                 "shasum": ""
             },
             "require": {
@@ -2827,7 +2827,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/3.1.2"
+                "source": "https://github.com/egulias/EmailValidator/tree/3.2"
             },
             "funding": [
                 {
@@ -2835,7 +2835,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-10-11T09:18:27+00:00"
+            "time": "2022-05-28T22:19:18+00:00"
         },
         {
             "name": "elvanto/litemoji",
@@ -3535,16 +3535,16 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.14.1",
+            "version": "v9.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "0a33aa68dfe98bcaa14b3b0b9eba355112c0a8d6"
+                "reference": "5aac36506247e4f0e50afe815ba711c16e65bcef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/0a33aa68dfe98bcaa14b3b0b9eba355112c0a8d6",
-                "reference": "0a33aa68dfe98bcaa14b3b0b9eba355112c0a8d6",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/5aac36506247e4f0e50afe815ba711c16e65bcef",
+                "reference": "5aac36506247e4f0e50afe815ba711c16e65bcef",
                 "shasum": ""
             },
             "require": {
@@ -3586,20 +3586,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-05-19T14:29:30+00:00"
+            "time": "2022-05-30T13:16:45+00:00"
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.14.1",
+            "version": "v9.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
-                "reference": "56b4ba1166c264064bf63896f498a2bee320d16a"
+                "reference": "46b7beed47948bd2e67f523d0a76daa62775031e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/conditionable/zipball/56b4ba1166c264064bf63896f498a2bee320d16a",
-                "reference": "56b4ba1166c264064bf63896f498a2bee320d16a",
+                "url": "https://api.github.com/repos/illuminate/conditionable/zipball/46b7beed47948bd2e67f523d0a76daa62775031e",
+                "reference": "46b7beed47948bd2e67f523d0a76daa62775031e",
                 "shasum": ""
             },
             "require": {
@@ -3632,11 +3632,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-02-28T16:37:46+00:00"
+            "time": "2022-05-31T14:47:50+00:00"
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.14.1",
+            "version": "v9.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -3684,7 +3684,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.14.1",
+            "version": "v9.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -4426,33 +4426,35 @@
         },
         {
             "name": "league/uri",
-            "version": "6.5.0",
+            "version": "6.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/uri.git",
-                "reference": "c68ca445abb04817d740ddd6d0b3551826ef0c5a"
+                "reference": "4147f19b9de3b5af6a258f35d7a0efbbf9963298"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri/zipball/c68ca445abb04817d740ddd6d0b3551826ef0c5a",
-                "reference": "c68ca445abb04817d740ddd6d0b3551826ef0c5a",
+                "url": "https://api.github.com/repos/thephpleague/uri/zipball/4147f19b9de3b5af6a258f35d7a0efbbf9963298",
+                "reference": "4147f19b9de3b5af6a258f35d7a0efbbf9963298",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "league/uri-interfaces": "^2.3",
-                "php": "^7.3 || ^8.0",
+                "php": "^7.4 || ^8.0",
                 "psr/http-message": "^1.0"
             },
             "conflict": {
                 "league/uri-schemes": "^1.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.19 || ^3.0",
-                "phpstan/phpstan": "^0.12.90",
-                "phpstan/phpstan-phpunit": "^0.12.22",
-                "phpstan/phpstan-strict-rules": "^0.12.11",
-                "phpunit/phpunit": "^8.0 || ^9.0",
+                "friendsofphp/php-cs-fixer": "^v3.3.2",
+                "php-http/psr7-integration-tests": "^1.1",
+                "phpstan/phpstan": "^1.2.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0.0",
+                "phpstan/phpstan-strict-rules": "^1.1.0",
+                "phpunit/phpunit": "^9.5.10",
                 "psr/http-factory": "^1.0"
             },
             "suggest": {
@@ -4484,7 +4486,7 @@
                 }
             ],
             "description": "URI manipulation library",
-            "homepage": "http://uri.thephpleague.com",
+            "homepage": "https://uri.thephpleague.com",
             "keywords": [
                 "data-uri",
                 "file-uri",
@@ -4510,7 +4512,7 @@
                 "docs": "https://uri.thephpleague.com",
                 "forum": "https://thephpleague.slack.com",
                 "issues": "https://github.com/thephpleague/uri/issues",
-                "source": "https://github.com/thephpleague/uri/tree/6.5.0"
+                "source": "https://github.com/thephpleague/uri/tree/6.6.0"
             },
             "funding": [
                 {
@@ -4518,7 +4520,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-27T09:54:07+00:00"
+            "time": "2022-05-28T05:44:35+00:00"
         },
         {
             "name": "league/uri-interfaces",
@@ -5928,16 +5930,16 @@
         },
         {
             "name": "nystudio107/craft-retour",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-retour.git",
-                "reference": "9365346b2525c8b824310dc483d4ccb904fd7ac0"
+                "reference": "7a4e69b367b33ddab643b79b7697cd795940b50f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-retour/zipball/9365346b2525c8b824310dc483d4ccb904fd7ac0",
-                "reference": "9365346b2525c8b824310dc483d4ccb904fd7ac0",
+                "url": "https://api.github.com/repos/nystudio107/craft-retour/zipball/7a4e69b367b33ddab643b79b7697cd795940b50f",
+                "reference": "7a4e69b367b33ddab643b79b7697cd795940b50f",
                 "shasum": ""
             },
             "require": {
@@ -5991,20 +5993,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-18T22:32:48+00:00"
+            "time": "2022-05-31T19:09:03+00:00"
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "a31f7d211b52d55d274c66a291310ceec64c733f"
+                "reference": "a3df81bbe4a7f1c71d1adfa6340c0bb62024d828"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/a31f7d211b52d55d274c66a291310ceec64c733f",
-                "reference": "a31f7d211b52d55d274c66a291310ceec64c733f",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/a3df81bbe4a7f1c71d1adfa6340c0bb62024d828",
+                "reference": "a3df81bbe4a7f1c71d1adfa6340c0bb62024d828",
                 "shasum": ""
             },
             "require": {
@@ -6066,7 +6068,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-16T16:46:40+00:00"
+            "time": "2022-05-31T19:13:03+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
@@ -9960,6 +9962,7 @@
                     "type": "github"
                 }
             ],
+            "abandoned": "gitonomy/gitlib",
             "time": "2022-03-06T19:09:17+00:00"
         },
         {

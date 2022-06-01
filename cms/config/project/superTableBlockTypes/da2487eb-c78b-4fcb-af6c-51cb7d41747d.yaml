@@ -1,22 +1,24 @@
-field: 61518518-d14c-4402-a480-c059af3b7087
+field: 61518518-d14c-4402-a480-c059af3b7087 # Buttons
 fieldLayouts:
   ac68f91d-5cce-48cb-bd2e-58bbbd569950:
     tabs:
       -
         elements:
           -
-            fieldUid: ca8bffb4-dfed-4ca4-b421-ffcc8cca47e2
+            fieldUid: ca8bffb4-dfed-4ca4-b421-ffcc8cca47e2 # Target
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 2aad726e-1a72-43c7-b6bd-0a6d4da817f4
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 4490c727-6412-4849-a9bd-058384b11a80
 fields:
-  ca8bffb4-dfed-4ca4-b421-ffcc8cca47e2:
+  ca8bffb4-dfed-4ca4-b421-ffcc8cca47e2: # Target
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: target
@@ -36,133 +38,45 @@ fields:
       enableElementCache: false
       enableTitle: false
       typeSettings:
-        __assoc__:
-          -
-            - url
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - custom
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - email
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - tel
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - asset
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - category
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - entry
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - true
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - user
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - site
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - sites
-                  - '*'
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
