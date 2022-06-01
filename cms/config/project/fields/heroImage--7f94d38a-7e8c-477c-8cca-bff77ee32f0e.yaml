@@ -18,7 +18,7 @@ settings:
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  singleUploadLocationSource: 'volume:17629e67-2262-40f9-a68b-93d1e165540f' # Heroes
+  singleUploadLocationSource: 'volume:17629e67-2262-40f9-a68b-93d1e165540f'
   singleUploadLocationSubpath: ''
   source: null
   sources: '*'

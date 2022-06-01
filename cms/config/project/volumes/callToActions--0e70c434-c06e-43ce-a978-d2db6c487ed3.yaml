@@ -1,5 +1,5 @@
 fieldLayouts:
-  e8b47e71-94ef-4b05-85a2-f9578c687105:
+  32503dd5-984d-400b-ad37-108b089e623d:
     tabs:
       -
         elements:
@@ -24,24 +24,30 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 4030e206-a7a1-48df-9f9d-77f2121e7784
             warning: null
             width: 100
+        name: Content
+        uid: af4ca4f9-a2ee-4da8-a2f3-b004d05d25b2
+      -
+        elements:
           -
-            fieldUid: 9806bc10-174e-4280-b2a8-c684b99a3139 # Optimize Profile Images
+            fieldUid: 4de07f3d-82ea-44fa-a35b-d77a9ee4206d # Optimize Call To Actions
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: ff2b4f4b-bf6a-4ec5-8a77-2749fdd9298b
             warning: null
             width: 100
-        name: 'Image Optimizations'
-        sortOrder: 1
-fs: profiles
-handle: profiles
-hasUrls: true
-name: 'Profile Images'
-sortOrder: 7
+        name: Optimisation
+        uid: cb540a28-d7af-40c3-95b0-d7d43be8f5db
+fs: callToActions
+handle: callToActions
+name: 'Call To Actions'
+sortOrder: 13
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-url: $CLOUDFRONT_URL
+transformFs: ''
+transformSubpath: ''

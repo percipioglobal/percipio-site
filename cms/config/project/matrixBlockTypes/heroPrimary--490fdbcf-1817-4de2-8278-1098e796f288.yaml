@@ -80,7 +80,7 @@ fields:
       restrictFiles: true
       restrictLocation: false
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:17629e67-2262-40f9-a68b-93d1e165540f' # Heroes
+      restrictedLocationSource: 'volume:17629e67-2262-40f9-a68b-93d1e165540f'
       restrictedLocationSubpath: backgrounds
       selectionCondition:
         __assoc__:

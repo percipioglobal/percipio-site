@@ -1,15 +1,41 @@
 columnSuffix: ctoaaxdo
 contentColumnType: text
 fieldGroup: 1dd95078-7c8a-4ef7-8a16-e33a5341dadb # Image Optimisations 
-handle: optimizeDefault
-instructions: 'Optimisations for the default images'
-name: 'Optimize Default'
+handle: optimizeCta
+instructions: 'Optimisations for the cta images'
+name: 'Optimize Call To Actions'
 searchable: false
 settings:
   displayDominantColorPalette: true
   displayLazyLoadPlaceholderImages: true
   displayOptimizedImageVariants: true
   variants:
+    -
+      __assoc__:
+        -
+          - width
+          - '665'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+            - '3'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
     -
       __assoc__:
         -
@@ -52,6 +78,8 @@ settings:
           - retinaSizes
           -
             - '1'
+            - '2'
+            - '3'
         -
           - quality
           - '82'
