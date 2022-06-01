@@ -1,4 +1,4 @@
-dateModified: 1654088714
+dateModified: 1654090727
 elementSources:
   craft\elements\Entry:
     -
@@ -601,9 +601,6 @@ meta:
     ff2b4da8-c253-49e7-8258-9a7a0a40d3c7: Swatch # Swatch
 plugins:
   aws-s3:
-    eager-beaver:
-      enabled: true
-      schemaVersion: 1.0.0
     enabled: true
     schemaVersion: '2.0'
   blitz-recommendations:
@@ -618,10 +615,6 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
   embeddedassets:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  fastcgi-cache-bust:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
@@ -697,11 +690,6 @@ plugins:
     enabled: true
     licenseKey: 8LN4PPMQDNDW9TA7FLCL3WY5
     schemaVersion: 3.0.11
-  spoon:
-    edition: standard
-    enabled: true
-    licenseKey: 9QEEMHXZL353YMJEKFETFL5A
-    schemaVersion: 3.5.0
   super-table:
     edition: standard
     enabled: true
@@ -710,10 +698,6 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: YLR368QSFHK7JWHSZ1NBI9N3
-    schemaVersion: 1.0.0
-  twigpack:
-    edition: standard
-    enabled: true
     schemaVersion: 1.0.0
   typedlinkfield:
     edition: standard
@@ -727,11 +711,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  webperf:
+  width-fieldtype:
     edition: standard
     enabled: true
-    licenseKey: null
-    schemaVersion: 1.0.1
+    schemaVersion: 1.0.0
 system:
   edition: pro
   live: true
