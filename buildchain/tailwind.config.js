@@ -88,7 +88,7 @@ module.exports = {
                     'monospace'
                 ],
             },
-            
+
             fontSize: {
                 'sm': ['0.875rem', '1.5rem'],
                 'base-extra': ['1rem','1.875rem'],
@@ -118,6 +118,13 @@ module.exports = {
                     css: {
                         color: theme('colors.gray.900'),
                         fontFamily: theme('fontFamily.primary').map(font => `'${font}'`).join(', '),
+                        ul: {
+                            '& > li': {
+                                '&::marker': {
+                                    'color': theme('colors.gray.600')
+                                }
+                            }
+                        }
                     }
                 },
                 'standfirst': {
