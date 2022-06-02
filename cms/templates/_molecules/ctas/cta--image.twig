@@ -13,8 +13,8 @@
                 {%- if image -%}
                     {{- render.atom('image', 'default', {
                             image: image[0],
-                            optimized: image[0].optimizeCta,
-                            placeholder: placeholder.ctaPlaceholder[0].optimizeCta,
+                            optimized: image.collect().first().optimizeCta,
+                            placeholder: placeholder.collect().first().ctaPlaceholder[0].optimizeCta,
                             sizes: ['(max-width:768px) 18rem', '(min-width:768px) and (max-width:1024px) 41.5625rem', '(min-width:1024px) 24.0625rem'],
                             alt: image[0].title,
                             ratio: image[0].ratio,
