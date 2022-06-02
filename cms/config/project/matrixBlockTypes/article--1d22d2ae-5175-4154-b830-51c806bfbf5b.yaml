@@ -14,100 +14,9 @@ fieldLayouts:
             uid: 32e0e3b6-2789-45ba-9513-eb6f5d6f4381
             warning: null
             width: 100
-          -
-            fieldUid: 05e07097-2450-4ce9-9bf6-a198b2c1470a # Containerise
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 612cb4cc-83ef-441d-af73-1c3c5da31808
-            warning: null
-            width: 100
-          -
-            fieldUid: 9475b42a-7657-4e3f-9d5b-1e1b5a1732ca # Swatch
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: ba74c4d4-f0a6-42a0-9961-c86024bd1a3e
-            warning: null
-            width: 100
-          -
-            fieldUid: 29d259da-2846-455c-b5ab-ed43e74ae7fa # Text Size
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 6b85abcc-0798-4419-b90a-1cca9b9ed0d3
-            warning: null
-            width: 100
         name: Content
         uid: 859e1220-5465-425e-851d-59a49b69b5a6
 fields:
-  05e07097-2450-4ce9-9bf6-a198b2c1470a: # Containerise
-    columnSuffix: null
-    contentColumnType: boolean
-    fieldGroup: null
-    handle: containerise
-    instructions: null
-    name: Containerise
-    searchable: false
-    settings:
-      default: true
-      offLabel: null
-      onLabel: null
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Lightswitch
-  29d259da-2846-455c-b5ab-ed43e74ae7fa: # Text Size
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: prose
-    instructions: null
-    name: 'Text Size'
-    searchable: false
-    settings:
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - small
-            -
-              - value
-              - prose-grid-sm
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - regular
-            -
-              - value
-              - 'prose-grid-article-sm md:prose-grid-article'
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - large
-            -
-              - value
-              - 'prose-grid-article-large-sm md:prose-grid-article-large'
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
   5053ff27-8e1b-49ea-85c6-c2a1dece3b8e: # Body Content
     columnSuffix: null
     contentColumnType: text
@@ -136,21 +45,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  9475b42a-7657-4e3f-9d5b-1e1b5a1732ca: # Swatch
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: swatch
-    instructions: null
-    name: Swatch
-    searchable: false
-    settings:
-      default: null
-      palette: Percipio
-      useConfigFile: true
-    translationKeyFormat: null
-    translationMethod: none
-    type: percipiolondon\colourswatches\fields\ColourSwatches
 handle: article
 name: 'Article Body'
 sortOrder: 3

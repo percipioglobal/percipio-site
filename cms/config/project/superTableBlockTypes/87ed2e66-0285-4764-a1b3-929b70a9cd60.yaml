@@ -11,7 +11,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6865b3d9-1077-47f1-b0db-5eb23e030997
+            uid: 5c71394d-dada-49c6-8c0c-9e51ab864fac
             warning: null
             width: 100
           -
@@ -21,7 +21,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a8ef2931-cc7a-4e90-82e8-46d5e362b39c
+            uid: 26e9418e-c1c0-44fc-aa26-fdf5b2908b2d
             warning: null
             width: 100
         name: Content
@@ -61,7 +61,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maxRelations: 1
@@ -70,7 +70,7 @@ fields:
       restrictFiles: true
       restrictLocation: true
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863'
+      restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
       restrictedLocationSubpath: null
       selectionCondition:
         __assoc__:
@@ -88,8 +88,7 @@ fields:
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       source: null
-      sources:
-        - 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863'
+      sources: '*'
       targetSiteId: null
       validateRelatedElements: false
       viewMode: list

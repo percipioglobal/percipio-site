@@ -56,4 +56,4 @@ fields:
     type: craft\fields\Entries
 handle: highlightCards
 name: 'Highlight Cards'
-sortOrder: 7
+sortOrder: 4
