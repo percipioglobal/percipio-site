@@ -8,7 +8,7 @@
         <div class="container max-w-screen-xl mx-auto flex flex-col items-center">
             {# overline #}
             {{- render.atom('text', 'overline', {
-                content: content.overline ??? 'Percipio.London',
+                content: content.overline ??? entry.section.name ??? 'Percipio.London',
                 utilities: 'mb-8'
             }) -}}
 
