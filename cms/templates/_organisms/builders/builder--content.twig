@@ -1,0 +1,59 @@
+{%- do craft.eagerBeaver.eagerLoadElements(entry,
+    [
+        'contentBuilder',
+        'contentBuilder.contentCta',
+        'contentBuilder.contentCta:image',
+        'contentBuilder.highlightCards:cards',
+        'contentBuilder.highlightCards:cards.cardImage',
+    ])
+-%}
+
+{%- minify -%}
+
+    {%- for block in content.contentBuilder -%}
+
+        {%- switch block.type -%}
+
+            {%- case 'article' -%}
+
+                {%- include '_molecules/content/content--article' ignore missing with {
+                    content: block.article,
+                } -%}
+
+            {%- case 'contentCta' -%}
+
+                {%- set background = swatch(block.background) -%}
+
+                {# check which cta should be loaded #}
+                {%- set component = '_molecules/ctas/cta--text' -%}
+
+                {%- if block.image|length -%}
+                    {%- set component = '_molecules/ctas/cta--image' -%}
+                {%- endif -%}
+
+                {# load component #}
+                {%- include component ignore missing with {
+                    heading: block.heading ??? '',
+                    content: block.body ??? '',
+                    button: block.target ??? null,
+                    background: background.primary ?? 'white',
+                    image: block.image ??? null
+                } -%}
+
+            {%- case 'highlightCards' -%}
+
+                {%- include '_organisms/grids/grid--highlight-cards' ignore missing with {
+                    cards: block.cards,
+                } -%}
+
+            {%- case 'sectionHeader' -%}
+
+                {%- include '_molecules/content/content--section-header' ignore missing with {
+                    content: block,
+                } -%}
+
+        {%- endswitch -%}
+
+    {%- endfor -%}
+
+{%- endminify -%}
