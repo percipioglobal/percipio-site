@@ -5,8 +5,13 @@
         'contentBuilder.contentCta:image',
         'contentBuilder.highlightCards:cards',
         'contentBuilder.highlightCards:cards.cardImage',
+        'contentBuilder.gridContent:gridItems',
+        'contentBuilder.gridContentAnimation:gridItems',
+        'contentBuilder.gridContentAnimation:gridItems.image',
         'contentBuilder.gridContentImageHalfBackground:gridItems',
         'contentBuilder.gridContentImageHalfBackground:gridItems.image',
+        'contentBuilder.gridContentImageThird:gridItems',
+        'contentBuilder.gridContentImageThird:gridItems.image',
     ])
 -%}
 
@@ -38,13 +43,19 @@
                     heading: block.heading ??? '',
                     content: block.body ??? '',
                     button: block.target ??? null,
-                    background: background.primary ?? 'white',
+                    background: background,
                     image: block.image ??? null
                 } -%}
 
             {%- case 'gridContent' -%}
 
                 {%- include '_organisms/grids/grid--content' ignore missing with {
+                    items: block
+                } -%}
+
+            {%- case 'gridContentAnimation' -%}
+
+                {%- include '_organisms/grids/grid--content-animation' ignore missing with {
                     items: block
                 } -%}
 

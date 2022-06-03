@@ -8,7 +8,7 @@ fieldLayouts:
             fieldUid: b37bf9ac-438e-4850-89da-517bdcc6a0b2 # Grid Items
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: da565b21-65ef-4f21-adfa-099f9d030537

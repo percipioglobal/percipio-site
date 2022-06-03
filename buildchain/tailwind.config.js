@@ -8,6 +8,8 @@ module.exports = {
         'bg-gray-600',
         'bg-gray-800',
         'bg-gray-900',
+        'from-blue-600',
+        'to-pink-600',
         {
             pattern: /bg-(blue|green|orange|pink|purple|red|teal|yellow)-(500|700)/,
             variants: ['hover','focus','md','lg'],
