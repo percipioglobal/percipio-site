@@ -1,4 +1,4 @@
-dateModified: 1654251849
+dateModified: 1654254145
 elementSources:
   craft\elements\Entry:
     -
@@ -181,7 +181,7 @@ meta:
     40e441b8-aeac-4f02-878a-60457e5699a8: Position # Position
     040f68f0-b32f-4544-8b97-56d71c7f3428: Ratio # Ratio
     46d0d4a2-a95f-4210-83b2-f0ca13a95704: 'Hero Image' # Hero Image
-    46d6543c-b83e-4b73-be6e-edcfb691204e: 'Grid Item' # Grid Item
+    46d6543c-b83e-4b73-be6e-edcfb691204e: 'Grid Items' # Grid Items
     46faf86d-bfa5-4356-bef1-0af3b2a87332: 'Secondary Navigation' # Secondary Navigation
     47c98ad7-c9a9-402c-9171-9fd14eb7e8f4: 'Highlight Cards' # Highlight Cards
     48f153ba-ba26-42dd-b297-c5b428cc259b: Image # Image

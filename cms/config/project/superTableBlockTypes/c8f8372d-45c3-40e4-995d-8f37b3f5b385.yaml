@@ -1,9 +1,19 @@
-field: 46d6543c-b83e-4b73-be6e-edcfb691204e # Grid Item
+field: 46d6543c-b83e-4b73-be6e-edcfb691204e # Grid Items
 fieldLayouts:
   af8044a4-866e-4bfd-9dac-05ce4c085fe3:
     tabs:
       -
         elements:
+          -
+            fieldUid: f665a550-cb91-431e-bfa3-1428815affad # Heading Callout
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a6b4402e-0c17-4e71-8df0-6f3ba366618a
+            warning: null
+            width: 100
           -
             fieldUid: 4103b2f0-dd71-494b-919a-621d2a5e959e # Heading
             instructions: null
@@ -11,7 +21,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 80abffec-a359-4cb5-9720-ca2b28fc0cea
+            uid: eb72f842-8804-40fe-a3c2-27baff3ff816
             warning: null
             width: 100
           -
@@ -21,17 +31,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8234b4e2-f9ea-41ee-a8e5-bb6b6015f8df
-            warning: null
-            width: 100
-          -
-            fieldUid: f665a550-cb91-431e-bfa3-1428815affad # Heading Callout
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 4d569f9b-d9ca-4325-b0b1-e98ee9e9e56a
+            uid: 242f56cf-c433-41c9-9286-3c7692c4d1ca
             warning: null
             width: 100
         name: Content
@@ -66,17 +66,25 @@ fields:
     name: Content
     searchable: false
     settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\PlainText
+    type: craft\redactor\Field
   f665a550-cb91-431e-bfa3-1428815affad: # Heading Callout
     columnSuffix: null
     contentColumnType: text

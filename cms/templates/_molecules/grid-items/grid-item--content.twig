@@ -1,0 +1,46 @@
+{%- import '_macros/atoms' as render -%}
+
+{# props #}
+{%- set item = {
+    headingCallout: item.headingCallout ??? '',
+    heading: item.heading ??? '',
+    body: item.body ??? '',
+    image: item.image ??? ''
+} -%}
+{%- set settings = {
+    position: settings.position ??? 'right',
+} -%}
+{%- set utilities = utilities|default('') -%}
+
+{# custom #}
+{%- set style = {
+    box: "w-full md:w-1/2 flex items-center flex-shrink-0 flex-grow-0"
+}-%}
+
+{%- minify -%}
+    <article class="md:flex {{ settings.position == 'right' ? 'md:flex-row-reverse' : '' }} {{ utilities }}">
+
+        <div class="{{- settings.position == 'left' ? 'md:pr-10 lg:pr-32' : 'md:pl-10 lg:pl-32' }} {{ style.box -}}">
+            <h2 class="mt-3.5 mb-6">
+                {{- render.atom('text', 'h2', {
+                    content: item.headingCallout,
+                }) -}}
+            </h2>
+        </div>
+
+        <div class="{{ style.box -}}">
+            <div>
+                <h3 class="mt-3.5 mb-6">
+                    {{- render.atom('text', 'h4', {
+                            content: item.heading,
+                            color: 'pink-500'
+                    }) -}}
+                </h3>
+
+                {%- include '_molecules/content/content--prose' ignore missing with {
+                    content: item.body,
+                } -%}
+            </div>
+        </div>
+    </article>
+{%- endminify -%}

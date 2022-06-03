@@ -5,10 +5,10 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 46d6543c-b83e-4b73-be6e-edcfb691204e # Grid Item
+            fieldUid: 46d6543c-b83e-4b73-be6e-edcfb691204e # Grid Items
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 2c348661-9bce-4625-84fa-dd5b8c2ed4b0
@@ -17,17 +17,24 @@ fieldLayouts:
         name: Content
         uid: 34c3fd38-4071-411c-a93d-899f8fb42ff8
 fields:
-  46d6543c-b83e-4b73-be6e-edcfb691204e: # Grid Item
+  46d6543c-b83e-4b73-be6e-edcfb691204e: # Grid Items
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: gridItem
+    handle: gridItems
     instructions: null
-    name: 'Grid Item'
+    name: 'Grid Items'
     searchable: false
     settings:
       columns:
         __assoc__:
+          -
+            - f665a550-cb91-431e-bfa3-1428815affad # Heading Callout
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
           -
             - 4103b2f0-dd71-494b-919a-621d2a5e959e # Heading
             -
@@ -42,14 +49,7 @@ fields:
                 -
                   - width
                   - ''
-          -
-            - f665a550-cb91-431e-bfa3-1428815affad # Heading Callout
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-      contentTable: '{{%stc_69_griditem}}'
+      contentTable: '{{%stc_69_griditems}}'
       fieldLayout: matrix
       maxRows: null
       minRows: null
