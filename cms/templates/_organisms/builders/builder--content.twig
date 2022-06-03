@@ -5,6 +5,8 @@
         'contentBuilder.contentCta:image',
         'contentBuilder.highlightCards:cards',
         'contentBuilder.highlightCards:cards.cardImage',
+        'contentBuilder.gridContentImageHalfBackground:gridItems',
+        'contentBuilder.gridContentImageHalfBackground:gridItems.image',
     ])
 -%}
 
@@ -40,6 +42,18 @@
                     image: block.image ??? null
                 } -%}
 
+            {%- case 'gridContentImageHalfBackground' -%}
+
+                {%- include '_organisms/grids/grid--content-image-half-background' ignore missing with {
+                    items: block
+                } -%}
+
+            {%- case 'gridContentImageThird' -%}
+
+                {%- include '_organisms/grids/grid--content-image-third' ignore missing with {
+                    items: block
+                } -%}
+
             {%- case 'highlightCards' -%}
 
                 {%- include '_organisms/grids/grid--highlight-cards' ignore missing with {
@@ -49,6 +63,12 @@
             {%- case 'sectionHeader' -%}
 
                 {%- include '_molecules/content/content--section-header' ignore missing with {
+                    content: block,
+                } -%}
+
+            {%- case 'standfirst' -%}
+
+                {%- include '_molecules/content/content--standfirst' ignore missing with {
                     content: block,
                 } -%}
 

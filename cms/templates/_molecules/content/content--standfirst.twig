@@ -1,0 +1,18 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- set content = content|default({
+    standfirst: '',
+    alignment: ''
+}) -%}
+{%- set utilities = utilities|default('') -%}
+
+{%- minify -%}
+    <div class="container max-w-screen-lg mx-auto {{ utilities -}}">
+
+        {{- render.atom('text', 'standfirst', {
+            content: content.standfirst,
+            alignment: content.alignment == 'center' ? 'md:text-center' : ''
+        }) -}}
+
+    </div>
+{%- endminify -%}

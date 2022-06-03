@@ -49,6 +49,28 @@ return [
                 ]
             ],
         ],
+        'Grid Background' => [
+            [
+                'label'   => 'blue',
+                'default' => true,
+                'color'   =>  [
+                    [
+                        'color'     => '#1E429F',  // the colour shown in the fieldtype (required)
+                        'class'     => 'blue-700', // custom attribute
+                    ],
+                ]
+            ],
+            [
+                'label'   => 'orange',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#FF5A1F',  // the colour shown in the fieldtype (required)
+                        'class'     => 'orange-500', // custom attribute
+                    ],
+                ]
+            ],
+        ],
         'Percipio' => [  // custom label
             [
                 'label'   => 'redblue',

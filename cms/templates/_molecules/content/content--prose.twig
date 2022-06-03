@@ -1,0 +1,22 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- set content = content|default('') -%}
+
+{%- set style = {
+    _default: 'font-primary',
+    color: 'text-gray-600',
+    print: 'print:table print:text-black print:text-sm print:leading-6',
+    prose: 'prose md:prose-lg lg:prose-xl prose:max-w-auto',
+    prose_link: 'prose-a:text-blue-500 prose-a:no-underline',
+    prose_h3: 'prose-h3:2xl md:prose-h3:3xl tracking-tightest prose-h3:font-medium prose-h3:text-gray-800',
+    prose_h4: 'prose-h4:xl md:prose-h4:2xl tracking-tightest prose-h4:font-medium prose-h4:text-gray-800',
+    prose_list: 'prose-ul:pl-4 prose-ul:mb-10 prose-ol:pl-4 prose-ol:mb-10'
+} -%}
+
+{%- minify -%}
+
+    <article class="{{- style._default }} {{ style.color}} {{ style.print }} {{ style.prose }} {{ style.prose_link }} {{ style.prose_h3 }} {{ style.prose_h4 }} {{ style.prose_list }}">
+        {{- render.atom('text', 'content', { content: content }) -}}
+    </article>
+
+{%- endminify -%}
