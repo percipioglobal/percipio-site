@@ -2,6 +2,7 @@
 {%- macro fa_icon_lut(type) -%}
 	{%- set lut = {
         'angle-right': 'far fa-angle-right',
+        'clipboard': 'far fa-clipboard',
 	} -%}
 	{%- apply spaceless -%}
 		{{- lut[type] ??? 'far fa-hashtag' -}}

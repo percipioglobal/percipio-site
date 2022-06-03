@@ -27,6 +27,14 @@
                     content: block.article,
                 } -%}
 
+            {%- case 'code' -%}
+
+                {%- include '_molecules/content/content--code' ignore missing with {
+                    code: block.code ??? '',
+                    language: block.codeLanguage ??? '',
+                    filename: block.filename ??? ''
+                } -%}
+
             {%- case 'contentCta' -%}
 
                 {%- set background = swatch(block.background) -%}
