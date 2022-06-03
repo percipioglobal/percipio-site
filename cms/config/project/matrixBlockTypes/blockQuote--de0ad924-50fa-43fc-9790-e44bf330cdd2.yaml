@@ -260,4 +260,4 @@ fields:
     type: craft\fields\PlainText
 handle: blockQuote
 name: Quotation
-sortOrder: 6
+sortOrder: 10

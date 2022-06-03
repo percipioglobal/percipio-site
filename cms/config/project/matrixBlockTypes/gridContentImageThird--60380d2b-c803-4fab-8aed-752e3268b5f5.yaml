@@ -1,72 +1,72 @@
 field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
 fieldLayouts:
-  9078b0df-811f-4c76-b011-5d7d75e21f16:
+  db9a8613-5991-483e-b361-514f67a40890:
     tabs:
       -
         elements:
           -
-            fieldUid: 2c244265-381c-45ad-b439-7845b814e5ee # Resources
+            fieldUid: 4610a356-a212-46cd-a7a1-6286620e89ef # Grid Items
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c1d592fe-e132-4613-a25e-53f6bfe3b90a
+            uid: 14e3377b-3ddf-4d7c-b60a-fe41b79dc6d9
             warning: null
             width: 100
         name: Content
-        uid: 9eb89136-f927-400f-97e5-7455f3223371
+        uid: 5fe5248f-0021-4ec0-8516-363d4389e227
 fields:
-  2c244265-381c-45ad-b439-7845b814e5ee: # Resources
+  4610a356-a212-46cd-a7a1-6286620e89ef: # Grid Items
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: resources
-    instructions: 'Add a downloadable resource to the list'
-    name: Resources
+    handle: gridItems
+    instructions: 'Show grid item with an image that fills up 33% of the space'
+    name: 'Grid Items'
     searchable: false
     settings:
       columns:
         __assoc__:
           -
-            - fbaa4c75-7616-42ca-adea-7615c9b91e38 # Label
+            - d3594d38-4b2c-48a2-b77c-c0819aa700c7 # Overline
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - ec91bde6-778d-4030-89fe-45614d871e81 # Target
+            - 33274ae4-f375-4070-b42c-f1cef4e48a81 # Heading
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - 25958ba0-5f4a-48fc-9dee-0064db99f702 # Utility Icon
+            - 247bfb7d-d077-42ee-b2ba-84feb1b3fd19 # Content
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - d09756bb-3dd5-4ad8-b6eb-6e3595705141 # Description
+            - 85f7ea92-40ac-44bf-b3fe-20f8075fe802 # Image
             -
               __assoc__:
                 -
                   - width
                   - ''
-      contentTable: '{{%stc_7_resources}}'
-      fieldLayout: table
+      contentTable: '{{%stc_31_griditems}}'
+      fieldLayout: matrix
       maxRows: null
-      minRows: 1
+      minRows: null
       propagationKeyFormat: null
       propagationMethod: all
-      selectionLabel: 'Add a resource'
+      selectionLabel: 'Add a grid item'
       staticField: null
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-handle: resourceList
-name: 'Resource List'
-sortOrder: 15
+handle: gridContentImageThird
+name: 'Grid Content Image - 33%'
+sortOrder: 5

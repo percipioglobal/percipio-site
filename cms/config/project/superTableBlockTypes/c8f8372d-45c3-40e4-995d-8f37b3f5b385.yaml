@@ -1,0 +1,107 @@
+field: 46d6543c-b83e-4b73-be6e-edcfb691204e # Grid Item
+fieldLayouts:
+  af8044a4-866e-4bfd-9dac-05ce4c085fe3:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4103b2f0-dd71-494b-919a-621d2a5e959e # Heading
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 80abffec-a359-4cb5-9720-ca2b28fc0cea
+            warning: null
+            width: 100
+          -
+            fieldUid: a6d05f0a-f046-4a8d-bddd-dd368b675507 # Content
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8234b4e2-f9ea-41ee-a8e5-bb6b6015f8df
+            warning: null
+            width: 100
+          -
+            fieldUid: f665a550-cb91-431e-bfa3-1428815affad # Heading Callout
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4d569f9b-d9ca-4325-b0b1-e98ee9e9e56a
+            warning: null
+            width: 100
+        name: Content
+        uid: d488e807-1725-452c-8872-825d537fa0b3
+fields:
+  4103b2f0-dd71-494b-919a-621d2a5e959e: # Heading
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a6d05f0a-f046-4a8d-bddd-dd368b675507: # Content
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: null
+    name: Content
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f665a550-cb91-431e-bfa3-1428815affad: # Heading Callout
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: headingCallout
+    instructions: null
+    name: 'Heading Callout'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Title.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field

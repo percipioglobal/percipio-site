@@ -1,58 +1,65 @@
 field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
 fieldLayouts:
-  f5c867a3-9fde-4150-b6d0-71459f184ef2:
+  ac8c2724-7a67-4cb7-acc4-8a4ea1dd3f09:
     tabs:
       -
         elements:
           -
-            fieldUid: cc4d5589-5884-4fb2-ba84-ffb388a8806e # Slides
+            fieldUid: c77ea1bd-e263-4198-b915-5cd6ebf7f78d # Grid Items
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a7436bed-8b39-4a70-a2aa-22094a6b3fe4
+            uid: 8e3a950d-1c60-4d86-81e8-643a4b464b6a
             warning: null
             width: 100
         name: Content
-        uid: dff59099-e901-4032-8551-62d2afb39ada
+        uid: be389ced-a2b3-4eb2-a818-ebccf1de39cd
 fields:
-  cc4d5589-5884-4fb2-ba84-ffb388a8806e: # Slides
+  c77ea1bd-e263-4198-b915-5cd6ebf7f78d: # Grid Items
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: slides
-    instructions: null
-    name: Slides
+    handle: gridItems
+    instructions: 'Show grid item with an image that fills up 50% of the space and with a background'
+    name: 'Grid Items'
     searchable: false
     settings:
       columns:
         __assoc__:
           -
-            - f3960fae-d20a-4473-9a73-315dfed31760 # Image
+            - fb9ce4c2-c0b0-4eb5-9543-61fce2682a0e # Content
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - 085923fe-5934-4d01-a2fd-ec625094c005 # Caption
+            - 211c30fd-38d1-4538-a639-0fa6572f5273 # Image
             -
               __assoc__:
                 -
                   - width
                   - ''
-      contentTable: '{{%stc_6_slides}}'
+          -
+            - 0568325a-5e70-4dde-982d-1cad58a42365 # Background
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_70_griditems}}'
       fieldLayout: matrix
-      maxRows: 9
-      minRows: 2
+      maxRows: null
+      minRows: null
       propagationKeyFormat: null
       propagationMethod: all
-      selectionLabel: 'Add a new slide'
+      selectionLabel: null
       staticField: null
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-handle: basicSlider
-name: 'Basic Slider'
-sortOrder: 13
+handle: gridContentImageHalfBackground
+name: 'Grid Content Image - 50% background'
+sortOrder: 8

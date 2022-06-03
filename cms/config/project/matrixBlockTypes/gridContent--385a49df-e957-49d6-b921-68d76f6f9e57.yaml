@@ -1,58 +1,65 @@
 field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
 fieldLayouts:
-  f5c867a3-9fde-4150-b6d0-71459f184ef2:
+  9c47e732-acea-4391-bd41-f04e3a02a0b9:
     tabs:
       -
         elements:
           -
-            fieldUid: cc4d5589-5884-4fb2-ba84-ffb388a8806e # Slides
+            fieldUid: 46d6543c-b83e-4b73-be6e-edcfb691204e # Grid Item
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a7436bed-8b39-4a70-a2aa-22094a6b3fe4
+            uid: 2c348661-9bce-4625-84fa-dd5b8c2ed4b0
             warning: null
             width: 100
         name: Content
-        uid: dff59099-e901-4032-8551-62d2afb39ada
+        uid: 34c3fd38-4071-411c-a93d-899f8fb42ff8
 fields:
-  cc4d5589-5884-4fb2-ba84-ffb388a8806e: # Slides
+  46d6543c-b83e-4b73-be6e-edcfb691204e: # Grid Item
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: slides
+    handle: gridItem
     instructions: null
-    name: Slides
+    name: 'Grid Item'
     searchable: false
     settings:
       columns:
         __assoc__:
           -
-            - f3960fae-d20a-4473-9a73-315dfed31760 # Image
+            - 4103b2f0-dd71-494b-919a-621d2a5e959e # Heading
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - 085923fe-5934-4d01-a2fd-ec625094c005 # Caption
+            - a6d05f0a-f046-4a8d-bddd-dd368b675507 # Content
             -
               __assoc__:
                 -
                   - width
                   - ''
-      contentTable: '{{%stc_6_slides}}'
+          -
+            - f665a550-cb91-431e-bfa3-1428815affad # Heading Callout
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_69_griditem}}'
       fieldLayout: matrix
-      maxRows: 9
-      minRows: 2
+      maxRows: null
+      minRows: null
       propagationKeyFormat: null
       propagationMethod: all
-      selectionLabel: 'Add a new slide'
+      selectionLabel: null
       staticField: null
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-handle: basicSlider
-name: 'Basic Slider'
-sortOrder: 13
+handle: gridContent
+name: 'Grid Content'
+sortOrder: 4

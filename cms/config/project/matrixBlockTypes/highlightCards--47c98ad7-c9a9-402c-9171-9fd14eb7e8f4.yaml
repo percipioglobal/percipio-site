@@ -55,4 +55,4 @@ fields:
     type: craft\fields\Entries
 handle: highlightCards
 name: 'Highlight Cards'
-sortOrder: 12
+sortOrder: 16

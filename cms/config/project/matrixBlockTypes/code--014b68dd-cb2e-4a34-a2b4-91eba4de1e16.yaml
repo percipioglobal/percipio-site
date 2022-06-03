@@ -246,4 +246,4 @@ fields:
     type: craft\fields\PlainText
 handle: code
 name: Code
-sortOrder: 15
+sortOrder: 19

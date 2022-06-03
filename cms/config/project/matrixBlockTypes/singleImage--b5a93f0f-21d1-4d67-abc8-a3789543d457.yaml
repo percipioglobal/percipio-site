@@ -287,4 +287,4 @@ fields:
     type: craft\fields\Assets
 handle: singleImage
 name: Image
-sortOrder: 7
+sortOrder: 11
