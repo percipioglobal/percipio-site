@@ -1,0 +1,20 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- set content = content|default('') -%}
+{%- set utilities = utilities|default('') -%}
+
+{%- set style = {
+    _default: 'block font-primary',
+    color: 'text-gray-800',
+    print: 'print:text-black print:text-lg print:leading-6 break-avoid',
+} -%}
+
+{%- minify -%}
+
+    <div class="container max-w-[80ch] mx-auto mt-5 md:mt-10 {{ utilities -}}">
+        <h2 class="{{- style._default }} {{ style.color}} {{ style.print }}">
+            {{- render.atom('text', 'h2', { content: content.heading }) -}}
+        </h2>
+    </div>
+
+{%- endminify -%}

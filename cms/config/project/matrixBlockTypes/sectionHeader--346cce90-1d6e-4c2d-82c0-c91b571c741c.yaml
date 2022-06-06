@@ -5,16 +5,6 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 6fcc732b-3375-496d-92b8-64f3dcc00d00 # Overline
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a69f0529-41c3-4b7b-b195-d60cc1ae9d08
-            warning: null
-            width: 100
-          -
             fieldUid: e7b63d80-91cc-438a-b670-59cbb778ca14 # Heading
             instructions: null
             label: null
@@ -24,102 +14,9 @@ fieldLayouts:
             uid: a238ef66-d312-4549-98e8-c47370083a80
             warning: null
             width: 100
-          -
-            fieldUid: 31c5270d-1393-4081-ac23-419af7b7b991 # Button
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 1f8f74ff-1abf-4f35-9841-36770e815216
-            warning: null
-            width: 100
         name: Content
         uid: 77420046-8b89-462e-97a5-c10d770f6003
 fields:
-  6fcc732b-3375-496d-92b8-64f3dcc00d00: # Overline
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: overline
-    instructions: 'Enter an overline for the section heading, a page can contain multiple sections, this is preferably 1 -3 words.'
-    name: Overline
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  31c5270d-1393-4081-ac23-419af7b7b991: # Button
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: button
-    instructions: null
-    name: Button
-    searchable: false
-    settings:
-      allowCustomText: true
-      allowTarget: false
-      autoNoReferrer: false
-      customTextMaxLength: 0
-      customTextRequired: false
-      defaultLinkName: asset
-      defaultText: ''
-      enableAllLinkTypes: false
-      enableAriaLabel: false
-      enableElementCache: false
-      enableTitle: false
-      typeSettings:
-        asset:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
-        category:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: true
-          sources: '*'
-        custom:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        email:
-          allowAliases: false
-          disableValidation: false
-          enabled: true
-        entry:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: true
-          sources: '*'
-        site:
-          enabled: false
-          sites: '*'
-        tel:
-          allowAliases: false
-          disableValidation: false
-          enabled: true
-        url:
-          allowAliases: false
-          disableValidation: false
-          enabled: true
-        user:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
-    translationKeyFormat: null
-    translationMethod: none
-    type: lenz\linkfield\fields\LinkField
   e7b63d80-91cc-438a-b670-59cbb778ca14: # Heading
     columnSuffix: null
     contentColumnType: text

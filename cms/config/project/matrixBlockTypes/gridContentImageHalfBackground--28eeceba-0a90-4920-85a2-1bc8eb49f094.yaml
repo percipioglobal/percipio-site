@@ -1,65 +1,65 @@
 field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
 fieldLayouts:
-  db9a8613-5991-483e-b361-514f67a40890:
+  ac8c2724-7a67-4cb7-acc4-8a4ea1dd3f09:
     tabs:
       -
         elements:
           -
-            fieldUid: 4610a356-a212-46cd-a7a1-6286620e89ef # Grid Item
+            fieldUid: c77ea1bd-e263-4198-b915-5cd6ebf7f78d # Grid Items
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 14e3377b-3ddf-4d7c-b60a-fe41b79dc6d9
+            uid: 8e3a950d-1c60-4d86-81e8-643a4b464b6a
             warning: null
             width: 100
         name: Content
-        uid: 5fe5248f-0021-4ec0-8516-363d4389e227
+        uid: be389ced-a2b3-4eb2-a818-ebccf1de39cd
 fields:
-  4610a356-a212-46cd-a7a1-6286620e89ef: # Grid Item
+  c77ea1bd-e263-4198-b915-5cd6ebf7f78d: # Grid Items
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: items
-    instructions: 'Show multiple text blocks with title next to each other'
-    name: 'Grid Item'
+    handle: gridItems
+    instructions: 'Show grid item with an image that fills up 50% of the space and with a background'
+    name: 'Grid Items'
     searchable: false
     settings:
       columns:
         __assoc__:
           -
-            - 33274ae4-f375-4070-b42c-f1cef4e48a81 # Heading
+            - fb9ce4c2-c0b0-4eb5-9543-61fce2682a0e # Content
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - 247bfb7d-d077-42ee-b2ba-84feb1b3fd19 # Content
+            - 211c30fd-38d1-4538-a639-0fa6572f5273 # Image
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - 0c7a7b67-3926-4a9f-b449-8d1d1c451f2f # Width
+            - 0568325a-5e70-4dde-982d-1cad58a42365 # Background
             -
               __assoc__:
                 -
                   - width
                   - ''
-      contentTable: '{{%stc_31_items}}'
+      contentTable: '{{%stc_70_griditems}}'
       fieldLayout: matrix
       maxRows: null
-      minRows: 2
+      minRows: null
       propagationKeyFormat: null
       propagationMethod: all
-      selectionLabel: 'Add a grid item'
+      selectionLabel: null
       staticField: null
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-handle: contentGrid
-name: 'Content Grid'
-sortOrder: 4
+handle: gridContentImageHalfBackground
+name: 'Grid Content Image - 50% background'
+sortOrder: 8

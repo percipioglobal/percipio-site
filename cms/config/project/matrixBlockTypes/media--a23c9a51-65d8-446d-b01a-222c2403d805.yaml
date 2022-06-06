@@ -74,7 +74,7 @@ fields:
       allowUploads: false
       allowedKinds:
         - json
-      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maxRelations: 1
@@ -83,7 +83,7 @@ fields:
       restrictFiles: true
       restrictLocation: true
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:03bb9bf6-0516-4070-b011-57f7820b7c7c'
+      restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
       restrictedLocationSubpath: null
       selectionCondition:
         __assoc__:
@@ -110,4 +110,4 @@ fields:
     type: craft\fields\Assets
 handle: media
 name: Media
-sortOrder: 13
+sortOrder: 17

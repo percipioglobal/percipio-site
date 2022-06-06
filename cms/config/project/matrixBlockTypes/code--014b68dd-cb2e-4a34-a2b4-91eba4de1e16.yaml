@@ -25,25 +25,25 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 73ee03a9-c989-4d98-bd96-db9bc9cb2a5c # Caption
+            fieldUid: 1cc6350b-c0ba-4f7f-8034-dbcec8643016
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2741bc95-1ec6-4ea2-b206-5880b3998106
+            uid: fc1b2763-5b4c-4e9c-b239-2ce4bac317aa
             warning: null
             width: 100
         name: Content
         uid: e223bf44-5252-468d-9f0a-602c67369de1
 fields:
-  73ee03a9-c989-4d98-bd96-db9bc9cb2a5c: # Caption
-    columnSuffix: null
+  1cc6350b-c0ba-4f7f-8034-dbcec8643016:
+    columnSuffix: eshbcqtk
     contentColumnType: text
     fieldGroup: null
-    handle: caption
+    handle: filename
     instructions: null
-    name: Caption
+    name: Filename
     searchable: false
     settings:
       byteLimit: null
@@ -246,4 +246,4 @@ fields:
     type: craft\fields\PlainText
 handle: code
 name: Code
-sortOrder: 15
+sortOrder: 19

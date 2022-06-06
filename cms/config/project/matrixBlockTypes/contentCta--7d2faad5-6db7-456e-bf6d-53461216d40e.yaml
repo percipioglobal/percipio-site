@@ -204,7 +204,7 @@ fields:
       allowSubfolders: false
       allowUploads: true
       allowedKinds: null
-      defaultUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
+      defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maxRelations: 1
@@ -213,7 +213,7 @@ fields:
       restrictFiles: false
       restrictLocation: true
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:0e70c434-c06e-43ce-a978-d2db6c487ed3'
+      restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
       restrictedLocationSubpath: null
       selectionCondition:
         __assoc__:
@@ -240,4 +240,4 @@ fields:
     type: craft\fields\Assets
 handle: contentCta
 name: 'Content CTA'
-sortOrder: 10
+sortOrder: 6

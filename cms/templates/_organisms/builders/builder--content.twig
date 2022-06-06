@@ -1,0 +1,104 @@
+{%- do craft.eagerBeaver.eagerLoadElements(entry,
+    [
+        'contentBuilder',
+        'contentBuilder.contentCta',
+        'contentBuilder.contentCta:image',
+        'contentBuilder.highlightCards:cards',
+        'contentBuilder.highlightCards:cards.cardImage',
+        'contentBuilder.gridContent:gridItems',
+        'contentBuilder.gridContentAnimation:gridItems',
+        'contentBuilder.gridContentAnimation:gridItems.image',
+        'contentBuilder.gridContentImageHalfBackground:gridItems',
+        'contentBuilder.gridContentImageHalfBackground:gridItems.image',
+        'contentBuilder.gridContentImageThird:gridItems',
+        'contentBuilder.gridContentImageThird:gridItems.image',
+    ])
+-%}
+
+{%- minify -%}
+
+    {%- for block in content.contentBuilder -%}
+
+        {%- switch block.type -%}
+
+            {%- case 'article' -%}
+
+                {%- include '_molecules/content/content--article' ignore missing with {
+                    content: block.article,
+                } -%}
+
+            {%- case 'code' -%}
+
+                {%- include '_molecules/content/content--code' ignore missing with {
+                    code: block.code ??? '',
+                    language: block.codeLanguage ??? '',
+                    filename: block.filename ??? ''
+                } -%}
+
+            {%- case 'contentCta' -%}
+
+                {%- set background = swatch(block.background) -%}
+
+                {# check which cta should be loaded #}
+                {%- set component = '_molecules/ctas/cta--text' -%}
+
+                {%- if block.image|length -%}
+                    {%- set component = '_molecules/ctas/cta--image' -%}
+                {%- endif -%}
+
+                {# load component #}
+                {%- include component ignore missing with {
+                    heading: block.heading ??? '',
+                    content: block.body ??? '',
+                    button: block.target ??? null,
+                    background: background,
+                    image: block.image ??? null
+                } -%}
+
+            {%- case 'gridContent' -%}
+
+                {%- include '_organisms/grids/grid--content' ignore missing with {
+                    items: block
+                } -%}
+
+            {%- case 'gridContentAnimation' -%}
+
+                {%- include '_organisms/grids/grid--content-animation' ignore missing with {
+                    items: block
+                } -%}
+
+            {%- case 'gridContentImageHalfBackground' -%}
+
+                {%- include '_organisms/grids/grid--content-image-half-background' ignore missing with {
+                    items: block
+                } -%}
+
+            {%- case 'gridContentImageThird' -%}
+
+                {%- include '_organisms/grids/grid--content-image-third' ignore missing with {
+                    items: block
+                } -%}
+
+            {%- case 'highlightCards' -%}
+
+                {%- include '_organisms/grids/grid--highlight-cards' ignore missing with {
+                    cards: block.cards,
+                } -%}
+
+            {%- case 'sectionHeader' -%}
+
+                {%- include '_molecules/content/content--section-header' ignore missing with {
+                    content: block,
+                } -%}
+
+            {%- case 'standfirst' -%}
+
+                {%- include '_molecules/content/content--standfirst' ignore missing with {
+                    content: block,
+                } -%}
+
+        {%- endswitch -%}
+
+    {%- endfor -%}
+
+{%- endminify -%}

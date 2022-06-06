@@ -1,0 +1,65 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+fieldLayouts:
+  9c47e732-acea-4391-bd41-f04e3a02a0b9:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 46d6543c-b83e-4b73-be6e-edcfb691204e # Grid Items
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2c348661-9bce-4625-84fa-dd5b8c2ed4b0
+            warning: null
+            width: 100
+        name: Content
+        uid: 34c3fd38-4071-411c-a93d-899f8fb42ff8
+fields:
+  46d6543c-b83e-4b73-be6e-edcfb691204e: # Grid Items
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: gridItems
+    instructions: null
+    name: 'Grid Items'
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - f665a550-cb91-431e-bfa3-1428815affad # Heading Callout
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 4103b2f0-dd71-494b-919a-621d2a5e959e # Heading
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - a6d05f0a-f046-4a8d-bddd-dd368b675507 # Content
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_69_griditems}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: gridContent
+name: 'Grid Content'
+sortOrder: 4

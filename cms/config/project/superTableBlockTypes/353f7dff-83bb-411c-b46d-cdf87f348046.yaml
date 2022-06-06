@@ -1,0 +1,107 @@
+field: 9a6ec17a-0ce8-43a1-8526-80f2db164c2d # Grid Items
+fieldLayouts:
+  997426d2-2146-44f8-ab94-87ff49b17bb9:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 5075f768-2e40-45a6-a82b-61721232c356 # Heading
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 58d66efe-16ca-46ff-a5ee-2b01d97cba7c
+            warning: null
+            width: 100
+          -
+            fieldUid: 6c7ac939-e852-4b9b-8598-65aa98581027 # Content
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 894e8fe9-8bcc-4fc1-98ff-cacf72bbca79
+            warning: null
+            width: 100
+          -
+            fieldUid: ae57f7d7-6764-4fd4-84e9-3e526e23b520 # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cd079e60-719f-4b47-a6bf-8413897c4b96
+            warning: null
+            width: 100
+        name: Content
+        uid: 5fc906bb-c4be-468d-a86b-91b88a3154e2
+fields:
+  6c7ac939-e852-4b9b-8598-65aa98581027: # Content
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: null
+    name: Content
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Content.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  5075f768-2e40-45a6-a82b-61721232c356: # Heading
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ae57f7d7-6764-4fd4-84e9-3e526e23b520: # Image
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

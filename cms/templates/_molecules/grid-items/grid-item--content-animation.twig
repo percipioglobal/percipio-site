@@ -1,0 +1,25 @@
+{%- import '_macros/atoms' as render -%}
+
+{# props #}
+{%- set item = {
+    heading: item.heading ??? '',
+    body: item.body ??? '',
+    image: item.image ??? ''
+} -%}
+{%- set utilities = utilities|default('') -%}
+
+{# custom #}
+
+{%- minify -%}
+    <article class="border-b border-gray-300 {{ utilities }}">
+        <h2 class="mb-4">
+            {{- render.atom('text', 'h4', {
+                content: item.heading,
+            }) -}}
+        </h2>
+
+        {%- include '_molecules/content/content--prose' ignore missing with {
+            content: item.body,
+        } -%}
+    </article>
+{%- endminify -%}

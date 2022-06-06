@@ -80,4 +80,4 @@ fields:
     type: percipiolondon\colourswatches\fields\ColourSwatches
 handle: grid
 name: 'Text Grid'
-sortOrder: 14
+sortOrder: 18

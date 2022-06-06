@@ -8,6 +8,8 @@ module.exports = {
         'bg-gray-600',
         'bg-gray-800',
         'bg-gray-900',
+        'from-blue-600',
+        'to-pink-600',
         {
             pattern: /bg-(blue|green|orange|pink|purple|red|teal|yellow)-(500|700)/,
             variants: ['hover','focus','md','lg'],
@@ -88,7 +90,7 @@ module.exports = {
                     'monospace'
                 ],
             },
-            
+
             fontSize: {
                 'sm': ['0.875rem', '1.5rem'],
                 'base-extra': ['1rem','1.875rem'],
@@ -118,6 +120,13 @@ module.exports = {
                     css: {
                         color: theme('colors.gray.900'),
                         fontFamily: theme('fontFamily.primary').map(font => `'${font}'`).join(', '),
+                        ul: {
+                            '& > li': {
+                                '&::marker': {
+                                    'color': theme('colors.gray.600')
+                                }
+                            }
+                        }
                     }
                 },
                 'standfirst': {

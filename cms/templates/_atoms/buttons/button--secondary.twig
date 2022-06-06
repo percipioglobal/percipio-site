@@ -15,6 +15,7 @@
 
 {%- import '_macros/atoms' as render -%}
 {%- import '_macros/functions' as functions -%}
+{%- import '_macros/icons' as icons -%}
 
 {%- block button -%}
 
@@ -45,10 +46,10 @@
                 {{- props.text -}}
             </span>
 
-            {%- if props.target == '_blank' -%}
+            {%- if props.icon -%}
 
                 {{- render.atom('icon', 'fa', {
-                    icon:  functions.fa_icon_lut('external-link'),
+                    icon:  icons.fa_icon_lut(props.icon),
                     size: 'md',
                     parentcss: 'ml-2 inline-block',
                     colour: 'text-white',

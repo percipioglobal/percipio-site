@@ -1,0 +1,65 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+fieldLayouts:
+  65d78224-2712-4754-93ec-e73079ca0308:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: b37bf9ac-438e-4850-89da-517bdcc6a0b2 # Grid Items
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: da565b21-65ef-4f21-adfa-099f9d030537
+            warning: null
+            width: 100
+        name: Content
+        uid: d26f3dce-359a-43d5-8833-db5fb68d50ba
+fields:
+  b37bf9ac-438e-4850-89da-517bdcc6a0b2: # Grid Items
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: gridItems
+    instructions: 'Show the grid item with a the image that fills up 66% and animates on hover'
+    name: 'Grid Items'
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - b176a5a8-9d76-4653-9f6c-9ecb212d6f1a # Heading
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 107c46d5-29f5-404d-95b7-0d92ca6eb688 # Content
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - ccc50eb1-1bd2-4306-842a-0a31f567c135 # Image
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_68_griditems}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: gridContentAnimation
+name: 'Grid Content Animation'
+sortOrder: 7
