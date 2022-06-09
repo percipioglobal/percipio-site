@@ -1,19 +1,16 @@
-{%- extends "_atoms/buttons/button--props" -%}
+{%- extends '_atoms/buttons/button--props' -%}
+{%- import '_macros/functions' as functions -%}
 
 {#
-    ### PROPS ###
-    ---------------
+    ### PROPERTIES ###
+    ------------------
 
-    text: (STR) -- the text for the button
-    icon: (STR) -- the icon for the button ( optional )
-    iconPosition: (STR) -- the position of the icon ( optional )
-    utlities: (STR) -- the button utility from TW for the last button in the loop
-    target: (STR) -- add _blank if you want to open the button in a new window
-    ga: (OBJ) -- add a category / action / label for GTM tracking
+    INHERITED FROM: `_atoms/buttons/button--props.twig`
+
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
 #}
-
-{%- import '_macros/atoms' as render -%}
-{%- import '_macros/functions' as functions -%}
 
 {%- block button -%}
 

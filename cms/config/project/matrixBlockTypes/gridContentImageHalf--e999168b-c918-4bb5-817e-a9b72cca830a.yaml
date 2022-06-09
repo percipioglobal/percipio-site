@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 9a6ec17a-0ce8-43a1-8526-80f2db164c2d # Grid Items
+            fieldUid: 9a6ec17a-0ce8-43a1-8526-80f2db164c2d
             instructions: null
             label: null
             required: true
@@ -17,7 +17,7 @@ fieldLayouts:
         name: Content
         uid: 2d4252d3-0831-469a-ab67-28c88bd46150
 fields:
-  9a6ec17a-0ce8-43a1-8526-80f2db164c2d: # Grid Items
+  9a6ec17a-0ce8-43a1-8526-80f2db164c2d:
     columnSuffix: swdoweno
     contentColumnType: string
     fieldGroup: null
@@ -29,21 +29,21 @@ fields:
       columns:
         __assoc__:
           -
-            - 5075f768-2e40-45a6-a82b-61721232c356 # Heading
+            - 5075f768-2e40-45a6-a82b-61721232c356
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - 6c7ac939-e852-4b9b-8598-65aa98581027 # Content
+            - 6c7ac939-e852-4b9b-8598-65aa98581027
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - ae57f7d7-6764-4fd4-84e9-3e526e23b520 # Image
+            - ae57f7d7-6764-4fd4-84e9-3e526e23b520
             -
               __assoc__:
                 -

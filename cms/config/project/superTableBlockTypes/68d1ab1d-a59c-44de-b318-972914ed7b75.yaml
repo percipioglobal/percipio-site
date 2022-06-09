@@ -1,11 +1,11 @@
-field: 4610a356-a212-46cd-a7a1-6286620e89ef # Grid Items
+field: 4610a356-a212-46cd-a7a1-6286620e89ef # Grid Item
 fieldLayouts:
   865c9e91-fe72-4841-886c-dc7ce1eb16e7:
     tabs:
       -
         elements:
           -
-            fieldUid: d3594d38-4b2c-48a2-b77c-c0819aa700c7 # Overline
+            fieldUid: d3594d38-4b2c-48a2-b77c-c0819aa700c7
             instructions: null
             label: null
             required: false
@@ -35,7 +35,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 85f7ea92-40ac-44bf-b3fe-20f8075fe802 # Image
+            fieldUid: 85f7ea92-40ac-44bf-b3fe-20f8075fe802
             instructions: null
             label: null
             required: true
@@ -47,7 +47,7 @@ fieldLayouts:
         name: Content
         uid: 55862012-5fe5-4182-91de-7dd142bb5a93
 fields:
-  85f7ea92-40ac-44bf-b3fe-20f8075fe802: # Image
+  85f7ea92-40ac-44bf-b3fe-20f8075fe802:
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
@@ -115,7 +115,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  d3594d38-4b2c-48a2-b77c-c0819aa700c7: # Overline
+  d3594d38-4b2c-48a2-b77c-c0819aa700c7:
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null

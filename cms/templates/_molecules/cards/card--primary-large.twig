@@ -5,14 +5,14 @@
     <div class="relative rounded-[20px] overflow-hidden">
         {{- render.atom('image', 'card-large', {
                 image: content.cardImage.collect().first(),
-                sizes: ['66.6vw'],
+                sizes: ['(max-width:768px) 100vw', '(min-width:768px) 66.6vw'],
                 alt: content.title,
                 placeholders: placeholders,
             })
         -}}
     </div>
 
-    <div class="space-y-4">
+    <div class="space-y-4 mt-8">
         <h3>
             {{- render.atom('text', 'card-title', {
                 content: content.title ??? ''
@@ -22,7 +22,7 @@
         {%- if content.subtitle ??? null -%}
             <h4>
                 {{- render.atom('text', 'card-subtitle', {
-                    content: content.subtitle ??? ''
+                    content: content.subtitle
                 }) -}}
             </h4>
         {%- endif -%}

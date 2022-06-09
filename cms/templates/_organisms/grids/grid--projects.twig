@@ -6,6 +6,12 @@
 
     INHERITED FROM: `_organisms/grids/grid--props.twig`
 
+    EXTENDED
+    --------
+
+    ODD (READONLY): determines card size on the odd loop
+    EVEN (READONLY): determines card size on the even loop
+
     ### COMPONENTS ###
     ------------------
 
@@ -19,8 +25,8 @@
 {%- block grid -%}
 
     {%- set props = props|merge({
-        odd: props.startSize == 'large' ? 'small' : 'large',
-        even: props.startSize == 'large' ? 'large' : 'small',
+        ODD: constant(props.startSize == 'large' ? 'small' : 'large'),
+        EVEN: constant(props.startSize == 'large' ? 'large' : 'small'),
     }) -%}
 
     {%- minify -%}
@@ -32,7 +38,7 @@
 
             {%- for cards in props.chunks -%}
 
-                {%- set size = loop.index is odd ? props.odd : props.even -%}
+                {%- set size = loop.index is odd ? props.ODD : props.EVEN -%}
 
                 {%- for card in cards -%}
 

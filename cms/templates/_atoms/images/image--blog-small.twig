@@ -4,26 +4,23 @@
     ### PROPERTIES ###
     ------------------
 
-    image: (OBJ) -- Pass through the image object
-    sizes: (ARR) -- sizes array for responsive images
-    alt: (STR) -- The alt text
+    INHERITED FROM: `_atoms/images/image--props.twig`
+
+    EXTENDED
+    --------
+
     ratio: (STR) -- Give the aspect ratio in the correct format eg. aspect-4/3 / aspect-16/9 ( optional )
-    caption: (STR) -- The caption text ( optional )
-    author: (STR) -- The author of the image ( optional )
-    source: (STR) -- The image source ( optional )
-    utilities: (STR) -- The specific TW spacing utilities to add
     optimized: (OBJ) -- The image optimizations for the image
     placeholder: (OBJ) -- Add the placeholder image to the atom
-
 #}
 
-{%- set props = props|merge({
-    ratio: options.ratio ??? 'aspect-4/5',
-    optimized: options.image.optimizeCardBlogSmall ??? null,
-    placeholder: options.placeholders.cardPlaceholder[0].optimizeCardBlogSmall,
-}) -%}
-
 {%- minify -%}
+
+    {%- set props = props|merge({
+        ratio: options.ratio ??? 'aspect-4/5',
+        optimized: options.image.optimizeCardBlogSmall ??? null,
+        placeholder: options.placeholders.cardPlaceholder[0].optimizeCardBlogSmall,
+    }) -%}
 
     <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
 

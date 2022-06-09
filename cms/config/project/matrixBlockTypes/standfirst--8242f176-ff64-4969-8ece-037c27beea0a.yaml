@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 9ecea484-fe9d-4944-8519-dee7181de25c # Alignment
+            fieldUid: 9ecea484-fe9d-4944-8519-dee7181de25c
             instructions: null
             label: null
             required: false
@@ -27,7 +27,7 @@ fieldLayouts:
         name: Content
         uid: 7b2c88a7-3d29-44b8-ba35-3539654ae3e3
 fields:
-  9ecea484-fe9d-4944-8519-dee7181de25c: # Alignment
+  9ecea484-fe9d-4944-8519-dee7181de25c:
     columnSuffix: fqltiypo
     contentColumnType: string
     fieldGroup: null

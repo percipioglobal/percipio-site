@@ -106,6 +106,7 @@ module.exports = {
                 'standfirst-md': ['1.25rem', '2rem'],
             },
 
+        
             letterSpacing: {
                 'tightest': '-.07em',
                 'tighter': '-.04em',
