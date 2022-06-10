@@ -24,8 +24,8 @@
 {%- block grid -%}
 
     {%- set props = props|merge({
-        ODD: constant(props.startSize == 'large' ? 'small' : 'large'),
-        EVEN: constant(props.startSize == 'large' ? 'large' : 'small'),
+        ODD: props.startSize == 'large' ? 'small' : 'large',
+        EVEN: props.startSize == 'large' ? 'large' : 'small',
     }) -%}
 
     {%- minify -%}

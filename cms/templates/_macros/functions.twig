@@ -15,14 +15,15 @@
     {% endapply %}
 {% endmacro %}
 
-{% macro authors(authors, options) %}
+{# Parses authors metadata #}
+{% macro authors(authors, props) %}
 
-    {% set category = options.category ??? "" %}
+    {% set category = props.category.collect().first() ??? null %}
 
     {% apply spaceless %}
         {% for author in authors %}
 
-            <a class="text-red-500"
+            <a class="text-blue-500"
                 href="{{- author.url -}}"
                 data-tag-category="author"
                 data-tag-action="click"
@@ -35,6 +36,23 @@
             {{- not loop.last and loop.index != loop.length - 1 ? ', ' -}}
             {{- loop.index == loop.length - 1 ? ' and ' : '' -}}
 
+        {% endfor %}
+    {% endapply %}
+{% endmacro %}
+
+{# Parses categories metadata #}
+{% macro categories(categories) %}
+    {% apply spaceless %}
+        {% for category in categories %}
+            <a class="text-blue-500"
+                href="{{- category.url -}}"
+                data-tag-category="author"
+                data-tag-action="click"
+                data-tag-label="{{- category.url -}}"
+                aria-label="{{- 'A ' ~ category ~ ' post' -}}"
+            >
+                {{- category.title -}}
+            </a>
         {% endfor %}
     {% endapply %}
 {% endmacro %}

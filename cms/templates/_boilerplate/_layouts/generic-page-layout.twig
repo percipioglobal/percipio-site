@@ -36,6 +36,7 @@
 
     {%- set navigation = craft.entries.section('navigation')
         .with(['target'])
+        .collect()
         .all()
     -%}
 
@@ -56,6 +57,7 @@
         } -%}
 
         {# -- Footer -- #}
+        {%- include '_organisms/footers/footer--primary' ignore missing -%}
     </main>
     {# -- HTML Footer -- #}
     {% include '_boilerplate/_partials/global-footer.twig' %}

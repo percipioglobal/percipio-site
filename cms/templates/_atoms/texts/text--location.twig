@@ -9,6 +9,8 @@
 
 {%- block text -%}
     {%- minify -%}
-        {{- props.content | typogrify(true) -}}
+        <div class="font-primary text-base {{ props.color }} {{ props.utilities -}}">
+            {{- props.content | typogrify(true) -}}
+        </div>
     {%- endminify -%}
 {%- endblock -%}

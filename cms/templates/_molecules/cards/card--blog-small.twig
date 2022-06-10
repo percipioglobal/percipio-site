@@ -22,10 +22,10 @@
 #}
 
 {%- block card -%}
-    <article class="col-span-3 relative bg-white overflow-hidden {{ props.utilities -}}">
+    <article class="col-span-2 relative bg-white overflow-hidden {{ props.utilities -}}">
 
         <div class="relative rounded-[20px] overflow-hidden">
-            {{- render.atom('image', 'blog-large', {
+            {{- render.atom('image', 'blog-small', {
                     image: content.cardImage.collect().first(),
                     sizes: ['(max-width:768px) 100vw', '(min-width:768px) 66.6vw'],
                     alt: content.title,

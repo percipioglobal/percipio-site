@@ -12,13 +12,13 @@
     {%- set classes = {
         '_default': 'inline-flex text-center',
         'animation': 'transition-colors duration-200 ease-in-out',
-        'border': props.active ? 'border-r-4 border-blue-500 lg:border-0' : '',
+        'border': props.active ? 'border-r-4 border-white lg:border-0' : '',
         'color': props.color ~ ' ' ~ (props.active ? 'lg:text-blue-500' : ''),
-        'focus' : 'focus:outline focus:outline-4 focus:outline-blue-500/30',
-        'font': 'font-primary text-base sm:text-3xl lg:text-base font-bold',
-        'hover': 'hover:text-blue-500',
+        'focus' : 'focus:outline focus:outline-4 focus:outline-white/30',
+        'font': 'font-mono text-base',
+        'hover': 'hover:text-opacity-50',
         'padding': 'py-3 px-5',
-        'cursor': 'cursor-pointer',
+        'cursor': 'cursor-pointer'
     }-%}
 
     {%- minify -%}
@@ -28,12 +28,11 @@
             {{ props.ga.category ??? null ? 'data-tag-category=' ~ props.ga.category : '' }}
             {{ props.ga.action ??? null ? 'data-tag-action=' ~ props.ga.action : '' }}
             {{ props.ga.label ??? nulll ? 'data-tag-label=' ~ props.ga.label : '' }}
-            {{ props.target ? 'target=' ~ props.target : '' }}
             aria-label="{{- props.text -}}"
             class="{{ classes._default }} {{ classes.animation }} {{ classes.border }} {{ classes.color }} {{ classes.focus }} {{ classes.font }} {{ classes.hover }} {{ classes.padding }} {{ classes.cursor }} {{ props.utilities }}"
         >
             <span class="sr-only">
-                {{- props.target == '_self' ? 'Go to: ' : 'Go to external page: ' -}}
+                Go to:
             </span>
 
             <span>

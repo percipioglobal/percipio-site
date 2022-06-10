@@ -29,6 +29,16 @@
     .first()
 -%}
 
+{%- set footerData = craft.globalSets()
+    .handle('footer') 
+    .with([
+        'legalNavigation',
+        'locations',
+    ])
+    .collect()
+    .first()
+-%}
+
 {%- set branding = craft.globalSets()
     .handle('organisationInfo')
     .with(['logo', 'icon'])
