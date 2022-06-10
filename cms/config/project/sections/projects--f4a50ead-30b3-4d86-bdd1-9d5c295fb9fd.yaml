@@ -1,5 +1,6 @@
+defaultPlacement: end
 enableVersioning: true
-handle: work
+handle: projects
 name: 'Our Work'
 previewTargets:
   -

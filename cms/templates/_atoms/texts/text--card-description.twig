@@ -9,7 +9,7 @@
 
 {%- block text -%}
     {%- minify -%}
-        <div class="font-primary text-lg md:text-xl {{ props.color }} {{ props.alignment }} {{ props.utilities -}}">
+        <div class="font-primary text-base {{ props.color }} {{ props.alignment }} {{ props.utilities -}}">
             {{- props.content | typogrify(true) -}}
         </div>
     {%- endminify -%}

@@ -213,7 +213,7 @@ fields:
       restrictFiles: false
       restrictLocation: true
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      restrictedLocationSource: 'volume:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
       restrictedLocationSubpath: null
       selectionCondition:
         __assoc__:
@@ -226,18 +226,18 @@ fields:
           -
             - class
             - craft\elements\conditions\assets\AssetCondition
-      selectionLabel: null
+      selectionLabel: 'Add an image'
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       source: null
       sources: '*'
       targetSiteId: null
-      validateRelatedElements: false
+      validateRelatedElements: true
       viewMode: list
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
 handle: contentCta
 name: 'Content CTA'
-sortOrder: 6
+sortOrder: 5

@@ -12,16 +12,20 @@
 
     ## ATOMS
 
-    image--card-large: `_atoms/images/image--card-large`
-    text--card-subtitle: `_atoms/texts/text--card-subtitle`
-    text--card-title: `_atoms/texts/text--card-title`
+    image--blog-large: `_atoms/images/image--card-large.twig`
+    text--card-description: `_atoms/texts/text--card-description.twig`
+    text--card-title: `_atoms/texts/text--card-title.twig`
+
+    ## Molecules
+
+    meta--blog: `_molecules/metas/meta--blog.twig`
 #}
 
 {%- block card -%}
-    <article class="col-span-2 relative bg-white shadow-2xl rounded-4xl p-6 pb-9 overflow-hidden {{ props.utilities -}}">
+    <article class="col-span-3 relative bg-white overflow-hidden {{ props.utilities -}}">
 
         <div class="relative rounded-[20px] overflow-hidden">
-            {{- render.atom('image', 'card-large', {
+            {{- render.atom('image', 'blog-large', {
                     image: content.cardImage.collect().first(),
                     sizes: ['(max-width:768px) 100vw', '(min-width:768px) 66.6vw'],
                     alt: content.title,
@@ -37,15 +41,17 @@
                 }) -}}
             </h3>
 
-            {%- if content.subtitle ??? null -%}
+
+
+            {%- if content.description ??? null -%}
                 <h4>
-                    {{- render.atom('text', 'card-subtitle', {
-                        content: content.subtitle
+                    {{- render.atom('text', 'card-description', {
+                        content: content.description,
+                        color: 'gray-800'
                     }) -}}
                 </h4>
             {%- endif -%}
         </div>
 
-        <div class="bg-pink-500 h-3 absolute bottom-0 left-0 w-full"></div>
     </article>
 {%- endblock -%}

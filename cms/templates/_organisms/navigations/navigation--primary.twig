@@ -7,7 +7,7 @@
 {%- endset -%}
 
 {%- minify -%}
-    <div class="bg-white bg-opacity-[0.95] z-10 sticky left-0 top-0 w-full transition-transform duration-500 ease-slide" id="site-navigation">
+    <div class="bg-white py-6 bg-opacity-[0.95] z-10 sticky left-0 top-0 w-full transition-transform duration-500 ease-slide" id="site-navigation">
 
         <a href="#page" class="sr-only focus:not-sr-only">
             Skip to content
@@ -19,7 +19,7 @@
                 {# Logo #}
                 <li role="none" class="flex-grow">
                     <a href="/" role="menuitem" tabindex="0">
-                        {{- logo | attr({ class: 'w-10' }) -}}
+                        {{- logo -}}
                     </a>
                 </li>
 
@@ -43,7 +43,7 @@
                                 url: item.target[0].url ??? null,
                                 text: item.title ??? null,
                                 target: '_self',
-                                active: entry.id == item.target[0].id,
+                                active: entry.id == item.target[0].id ??? null,
                                 ga: {
                                     category:'Navigation link',
                                     action:'click',

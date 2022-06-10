@@ -1,4 +1,4 @@
-{%- extends '_atoms/images/image--props' -%}
+{%- extends '_atoms/images/_image--props' -%}
 
 {#
     ### PROPERTIES ###
@@ -18,15 +18,15 @@
 
     {%- set props = props|merge({
         ratio: options.ratio ??? 'aspect-16/9',
-        optimized: options.image.optimizeHero ??? null,
-        placeholder: options.placeholders.cardPlaceholder[0].optimizeHero,
+        optimized: options.image.optimizeHeroes ??? null,
+        placeholder: options.placeholders.cardPlaceholder[0].optimizeHeroes,
     }) -%}
 
     {%- minify -%}
 
-        <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
+        <figure  class="w-full h-full" role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
 
-            <picture class="{{ props.ratio -}}">
+            <picture>
 
                 <source 
                     data-srcset="{{- props.optimized.srcsetWebP() ??? props.placeholder.srcsetWebP() -}}"
@@ -44,7 +44,7 @@
                     data-src="{{- props.optimized.src() ??? props.placeholder.src() -}}"
                     data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
                     sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                    class="lazyload"
+                    class="lazyload object-cover w-full h-full opacity-50"
                     loading="lazy"
                     alt="{{- props.alt -}}"
                 />

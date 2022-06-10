@@ -1,68 +1,80 @@
+{%- extends '_organisms/ctas/_cta--props' -%}
 {% import '_macros/atoms' as render %}
 
-{%- set heading = heading|default('') -%}
-{%- set content = content|default('') -%}
-{%- set button = button|default(null) -%}
-{%- set background = background|default({
-    primary: 'white',
-    secondary: null
-}) -%}
-{%- set image = image|default(null) -%}
+{#
+    ### PROPERTIES ###
+    ------------------
 
-{# custom #}
-{%- set style = {
-    background: background.secondary ??? null ? 'bg-gradient-to-r from-' ~ background.primary ~ ' to-' ~ background.secondary : 'bg-' ~ background.primary
-} -%}
-{%- set buttonType = background.secondary ??? null ? 'tertiary' : 'primary' -%}
+    INHERITED FROM: `_organisms/ctas/_cta--props.twig`
 
-{%- minify -%}
-    <section class="py-12 md:py-32 {{ style.background -}}">
-        <div class="lg:flex lg:flex-row-reverse items-center container max-w-screen-xl mx-auto">
-            <div class="w-full lg:w-1/2">
-                {%- if image -%}
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+
+    image--default: `_atoms/images/image--default.twig`
+    text--h2: `_atoms/texts/text--h2.twig`
+    text--description: `_atoms/texts/text--description.twig`
+    button--primary: `_atoms/buttons/button--primary.twig`
+    button--tertiary: `_atoms/buttons/button--tertiary.twig`
+#}
+
+{%- block cta -%}
+
+    {# custom #}
+    {%- set classes = {
+        background: props.background.secondary ? 'bg-gradient-to-r from-' ~ props.background.primary ~ ' to-' ~ props.background.secondary : 'bg-' ~ props.background.primary
+    } -%}
+    {%- set buttonType = props.background.secondary ? 'tertiary' : 'primary' -%}
+
+    {%- minify -%}
+        <section class="py-12 md:py-32 {{ classes.background -}}">
+            <div class="lg:flex lg:flex-row-reverse items-center container max-w-screen-xl mx-auto">
+                <div class="w-full lg:w-1/2">
                     {{- render.atom('image', 'default', {
-                            image: image[0],
-                            optimized: image.collect().first().optimizeCta,
-                            placeholder: placeholder.collect().first().ctaPlaceholder[0].optimizeCta,
+                            image: props.image.collect().first() ??? null,
+                            optimized: props.image.collect().first().optimizeCta ??? null,
+                            placeholders: placeholders,
                             sizes: ['(max-width:768px) 18rem', '(min-width:768px) and (max-width:1024px) 41.5625rem', '(min-width:1024px) 24.0625rem'],
-                            alt: image[0].title,
-                            ratio: image[0].ratio,
-                            author: image[0].author ?? "",
-                            source: image[0].source ?? "",
+                            alt: props.image.collect().first().title ??? null,
+                            ratio: props.image.collect().first().ratio ??? null,
+                            author: props.image.collect().first().author ?? '',
+                            source: props.image.collect().first().source ?? '',
                             utilities: 'w-full max-w-[665px] mb-4 md:mb-20 lg:mb-0',
                         })
                     -}}
-                {%- endif -%}
-            </div>
-            <div class="w-full lg:w-1/2 lg:pr-10">
-                <h2>{{- render.atom('text', 'h2', {
-                    content: heading,
-                    color: background.primary == 'white' ? 'gray-800' : 'white',
-                }) -}}</h2>
+                </div>
+                <div class="w-full lg:w-1/2 lg:pr-10">
+                    <h2>{{- render.atom('text', 'h2', {
+                        content: props.heading,
+                        color: props.background.primary == 'white' ? 'gray-800' : 'white',
+                    }) -}}</h2>
 
-                {%- if content -%}
-                    {{- render.atom('text', 'description', {
-                        content: content,
-                        color: background.primary == 'white' ? 'text-gray-600' : 'text-white',
-                        utilities: 'mt-8'
-                    }) -}}
-                {%- endif -%}
+                    {%- if content -%}
+                        {{- render.atom('text', 'description', {
+                            content: props.content,
+                            color: props.background.primary == 'white' ? 'text-gray-600' : 'text-white',
+                            utilities: 'mt-8'
+                        }) -}}
+                    {%- endif -%}
 
-                {%- if button -%}
-                    {{- render.atom('button', buttonType, {
-                        url: button.getUrl() ??? null,
-                        text: button.getText() ??? null,
-                        target: button.getTarget() ??? '_self',
-                        icon: 'angle-right',
-                        ga: {
-                            category: 'Call to action',
-                            action: 'click',
-                            label: button.getUrl() ??? null,
-                        },
-                        utilities: 'mt-4 md:mt-8'
-                    }) -}}
-                {%- endif -%}
+                    {%- if props.button -%}
+                        {{- render.atom('button', buttonType, {
+                            url: props.button.getUrl() ??? null,
+                            text: props.button.getText() ??? null,
+                            target: props.button.getTarget() ??? '_self',
+                            icon: 'angle-right',
+                            ga: {
+                                category: 'Call to action',
+                                action: 'click',
+                                label: props.button.getUrl() ??? null,
+                            },
+                            utilities: 'mt-4 md:mt-8'
+                        }) -}}
+                    {%- endif -%}
+                </div>
             </div>
-        </div>
-    </section>
-{%- endminify -%}
+        </section>
+    {%- endminify -%}
+
+{%- endblock -%}

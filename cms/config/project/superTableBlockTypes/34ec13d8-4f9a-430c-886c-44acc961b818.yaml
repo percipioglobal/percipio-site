@@ -1,11 +1,11 @@
-field: c77ea1bd-e263-4198-b915-5cd6ebf7f78d
+field: c77ea1bd-e263-4198-b915-5cd6ebf7f78d # Grid Items
 fieldLayouts:
   bb69129c-611b-47dd-a848-83040d15e43f:
     tabs:
       -
         elements:
           -
-            fieldUid: fb9ce4c2-c0b0-4eb5-9543-61fce2682a0e
+            fieldUid: fb9ce4c2-c0b0-4eb5-9543-61fce2682a0e # Content
             instructions: null
             label: null
             required: true
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 211c30fd-38d1-4538-a639-0fa6572f5273
+            fieldUid: 211c30fd-38d1-4538-a639-0fa6572f5273 # Image
             instructions: null
             label: null
             required: true
@@ -25,7 +25,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 0568325a-5e70-4dde-982d-1cad58a42365
+            fieldUid: 0568325a-5e70-4dde-982d-1cad58a42365 # Background
             instructions: null
             label: null
             required: true
@@ -37,7 +37,7 @@ fieldLayouts:
         name: Content
         uid: 8d2984ad-d938-446c-9030-405c265ca042
 fields:
-  211c30fd-38d1-4538-a639-0fa6572f5273:
+  211c30fd-38d1-4538-a639-0fa6572f5273: # Image
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
@@ -57,7 +57,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  0568325a-5e70-4dde-982d-1cad58a42365:
+  0568325a-5e70-4dde-982d-1cad58a42365: # Background
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
@@ -72,7 +72,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: percipiolondon\colourswatches\fields\ColourSwatches
-  fb9ce4c2-c0b0-4eb5-9543-61fce2682a0e:
+  fb9ce4c2-c0b0-4eb5-9543-61fce2682a0e: # Content
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
