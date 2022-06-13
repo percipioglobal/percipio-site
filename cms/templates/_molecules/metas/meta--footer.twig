@@ -1,26 +1,31 @@
 {%- import '_macros/atoms' as render -%}
 
-<div class="container mx-auto max-w-screen-xl flex flex-row justify-center flex-nowrap space-x-8">
+<div class="container mx-auto max-w-screen-xl flex flex-col md:flex-row justify-center flex-nowrap space-x-8">
     {%- if copyright -%}
-        <p class="font-mono text-base text-white py-3">
-            {{- copyright | raw -}}
-        </p>
+        {{- render.atom('text', 'copyright', {
+            alignment: 'text-center md:text-left',
+            color: 'text-white',
+            content: copyright,
+            utilities: 'py-3 order-2 md:order-1',
+        }) -}}
     {%- endif -%}
     {%- if legals -%}
-        {%- for legal in legals -%}
-            {{- render.atom('link', 'footer', {
-                url: legal.target.collect().first().url ??? null,
-                text: legal.title ??? null,
-                target: '_self',
-                active: entry.id == legal.target.collect().first().id ??? null,
-                ga: {
-                    category:'Legal link',
-                    action:'click',
-                    label: legal.title ??? null,
-                },
-                color: 'text-white',
-                utilities: 'py-3 ' ~ (loop.last ? 'pr-0' : '')
-            }) -}}
-        {%- endfor -%}
+        <div class="flex space-x-8 order-1 md:order-2">
+            {%- for legal in legals -%}
+                {{- render.atom('link', 'footer', {
+                    url: legal.target.collect().first().url ??? null,
+                    text: legal.title ??? null,
+                    target: '_self',
+                    active: entry.id == legal.target.collect().first().id ??? null,
+                    ga: {
+                        category:'Legal link',
+                        action:'click',
+                        label: legal.title ??? null,
+                    },
+                    color: 'text-white',
+                    utilities: 'py-3 ' ~ (loop.last ? 'pr-0' : '')
+                }) -}}
+            {%- endfor -%}
+        </div>
     {%- endif -%}
 </div>
