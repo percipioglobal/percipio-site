@@ -6,6 +6,35 @@
 {% endblock headLinks %}
 
 {% block content %}
+
+    {%- if entry ??? null %}
+
+        {%- switch -%}
+
+            {%- case 'blogOverview' -%}
+                {%- set component = '_organisms/entry-types/overview--blog' -%}
+
+            {%- case 'projectsOverview' -%}
+                {%- set component = '_organisms/entry-types/overview--projects' -%}
+
+            {%- case 'servicesOverview' -%}
+                {%- set component = '_organisms/entry-types/overview--services' -%}
+
+            {%- case 'teamOverview' -%}
+                {%- set component = '_organisms/entry-types/overview--team' -%}
+
+            {%- case 'pluginsOverview' -%}
+                {%- set component = '_organisms/entry-types/overview--plugins' -%}
+                
+
+        {%- endswitch -%}
+
+        {%- include component ignore missing with {
+            content: entry,
+        } -%}
+
+    {%- endif -%}
+
 {% endblock %}
 
 {# -- Any JavaScript that should be included before </body> -- #}

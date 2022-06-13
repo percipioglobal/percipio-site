@@ -87,9 +87,9 @@ fieldLayouts:
             width: 100
         name: SEO
         uid: 6dc36b40-1cc5-4c1b-940d-5ee9c0ef84da
-handle: landingsPage
+handle: landingPage
 hasTitleField: true
-name: 'Landings Page'
+name: 'Landing Page'
 section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
 sortOrder: 4
 titleFormat: null

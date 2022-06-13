@@ -1,4 +1,4 @@
-dateModified: 1655150166
+dateModified: 1655150662
 elementSources:
   craft\elements\Entry:
     -
@@ -268,7 +268,7 @@ meta:
     7fb63ae6-c6ee-4824-9213-420e2da4e008: Partners # Partners
     8a8aa24a-d558-4d4c-83a5-e5983ab32e77: Items # Items
     8aa79663-4f9b-4c0e-8f3c-6fd1ff521de6: 'Hero Primary' # Hero Primary
-    8c5e09a3-fcbe-484a-95c1-97e362a260e8: 'Services Page' # Services Page
+    8c5e09a3-fcbe-484a-95c1-97e362a260e8: 'Services Overview' # Services Overview
     8c9be2b5-73bf-4f32-8fd2-fc36a109dbab: 'Default Optimisations' # Default Optimisations
     8ce2faf2-a20a-4547-8145-4e3f9e75eb87: 'Blog Categories' # Blog Categories
     8f7046bb-5261-4213-9d49-b1244e5d458e: 'Grid Placeholder' # Grid Placeholder
@@ -279,7 +279,7 @@ meta:
     9ecea484-fe9d-4944-8519-dee7181de25c: Alignment # Alignment
     10a7e511-e02a-46ff-8524-7390d3e9be19: Client # Client
     11cffc84-a18e-49e3-9923-8229743b2a28: Branding # Branding
-    13d83534-d33c-4c02-8e9a-8214c5419071: 'Landings Page' # Landings Page
+    13d83534-d33c-4c02-8e9a-8214c5419071: 'Landing Page' # Landing Page
     014b68dd-cb2e-4a34-a2b4-91eba4de1e16: Code # Code
     020d5ff3-f24f-48ae-bd4c-ad2beb6b4d8b: Heading # Heading
     24fd51e7-3c4a-4991-89c1-290d5c79408c: 'Logo Position' # Logo Position
@@ -324,7 +324,7 @@ meta:
     151de730-f956-437c-a617-de5725e4c07a: Projects # Projects
     173ee72f-225f-4615-a999-193b8c9c051a: 'Section Header' # Section Header
     209a0bce-f412-4727-873b-681c4f93c4f7: Video # Video
-    210a0701-869d-41da-a862-26f5e894743c: 'Projects Page' # Projects Page
+    210a0701-869d-41da-a862-26f5e894743c: 'Projects Overview' # Projects Overview
     211c30fd-38d1-4538-a639-0fa6572f5273: Image # Image
     235f6bca-1696-4cae-b788-151de8ea53bf: Image # Image
     247bfb7d-d077-42ee-b2ba-84feb1b3fd19: Content # Content
@@ -343,11 +343,11 @@ meta:
     562bd8b6-c7c7-4de6-9a1b-910238a74390: Plugin # Plugin
     633b1b96-cdb8-4c97-a045-aa63d306b41c: Language # Language
     648e7555-63ed-4228-a6b7-7811c865a7af: 'Category Description' # Category Description
-    677c9cfd-68a9-4ee2-a78e-1835df918bb4: 'Team Page' # Team Page
+    677c9cfd-68a9-4ee2-a78e-1835df918bb4: 'Team Overview' # Team Overview
     712cce4e-490d-44b8-bf2c-5d00c2de4c40: Assets # Assets
     714aef78-b2cb-46ab-82b4-e1cbf362b65c: Target # Target
     720b0445-dc28-4b47-85df-59e4f03c666b: Button # Button
-    768b3119-7033-4796-be27-562fecd1e4c7: 'Vacancies Page' # Vacancies Page
+    768b3119-7033-4796-be27-562fecd1e4c7: 'Vacancies Overview' # Vacancies Page
     0827c9dd-2ea2-4e98-b743-3161e028a304: 'FAQ Category' # FAQ Category
     870c07d7-9341-4f1f-825b-25c76239bc0d: Caption # Caption
     914b27f9-4dac-42d5-bb42-0e41ba29f93a: 'Contact Page' # Contact Page
@@ -426,7 +426,7 @@ meta:
     a54705e1-c7e5-4ae2-b074-41c2bbfe0358: Clients # Clients
     ab91f872-7263-4250-b647-317386f8f679: 'Organisation Address' # Organisation Address
     ae2f2577-98ad-4416-afb0-0a136fd1680d: Location # Location
-    ae3a8d43-87b0-4ec3-a5f4-f0e081d700a1: 'Plugins page'
+    ae3a8d43-87b0-4ec3-a5f4-f0e081d700a1: 'Plugins Overview' # Plugins Overview
     ae57f7d7-6764-4fd4-84e9-3e526e23b520: Image # Image
     aee87c60-8ff1-4121-95d8-e29d940f8537: Limit # Limit
     afc7e63f-6b0d-4d17-8c23-b13f049166f3: Image # Image
@@ -451,7 +451,7 @@ meta:
     baad7fb6-18f2-4914-bc33-e1c48da96896: 'Card Image' # Card Image
     bae060ba-ddb9-4f66-8df8-9055de4e31e5: 'Show Logo' # Show Logo
     bbb59518-7cdc-4a7f-b07c-cd6b1fa8201d: Users # Users
-    bc2fcf7d-8195-4529-8758-a3004866f759: 'Blog Page' # Blog Page
+    bc2fcf7d-8195-4529-8758-a3004866f759: 'Blog Overview' # Blog Overview
     bcca818c-5cb3-4998-8165-95f5c9929f23: Standfirst # Standfirst
     beef2807-f960-414c-9ff2-690d9c30b6a8: Caption # Caption
     c0f07903-c672-4f33-b571-4bf55e084345: Copyright # Copyright
