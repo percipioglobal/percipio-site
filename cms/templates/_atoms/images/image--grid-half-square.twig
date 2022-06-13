@@ -22,9 +22,9 @@
 
     {%- minify -%}
 
-        <figure class="h-full" role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
+        <figure class="block h-full w-full" role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
 
-            <picture class="h-full">
+            <picture>
 
                 <source
                     data-srcset="{{- props.optimized.srcsetWebP() ??? props.placeholder.srcsetWebP() -}}"
