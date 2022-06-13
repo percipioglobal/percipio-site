@@ -34,64 +34,9 @@ fieldLayouts:
             uid: 79db6bad-165a-45ce-8608-f5ebc6c05986
             warning: null
             width: 50
-          -
-            fieldUid: 1b99a854-98db-4e61-b98d-3c4e357b1e85 # Containerise
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 89e0da54-1de7-406c-bd11-ae4eb687a461
-            warning: null
-            width: 100
-          -
-            fieldUid: 6ba3a39a-5d6c-488d-bcab-d047d0942b0e # Swatch
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 6e98f72d-2bd5-4b37-b370-9bf4823f81dd
-            warning: null
-            width: 100
-          -
-            fieldUid: ebc9bc3a-83e6-4cab-956d-f254a119f606 # Show Logo
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 2afcfee1-22a0-416b-a0ac-d8193153366a
-            warning: null
-            width: 100
-          -
-            fieldUid: 7127ef72-a077-470d-8d8d-96b29a40a27a # Logo Position
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 004b826c-3836-4a55-834c-ecab4846a2b1
-            warning: null
-            width: 100
         name: Content
         uid: 0db162a9-f78a-40d6-8165-56823b0ce30e
 fields:
-  1b99a854-98db-4e61-b98d-3c4e357b1e85: # Containerise
-    columnSuffix: null
-    contentColumnType: boolean
-    fieldGroup: null
-    handle: containerise
-    instructions: null
-    name: Containerise
-    searchable: false
-    settings:
-      default: true
-      offLabel: null
-      onLabel: null
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Lightswitch
   3ef3485e-6187-4dac-af6b-66d630852b61: # Quote
     columnSuffix: null
     contentColumnType: text
@@ -112,21 +57,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  6ba3a39a-5d6c-488d-bcab-d047d0942b0e: # Swatch
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: swatch
-    instructions: null
-    name: Swatch
-    searchable: false
-    settings:
-      default: null
-      palette: Percipio
-      useConfigFile: true
-    translationKeyFormat: null
-    translationMethod: none
-    type: percipiolondon\colourswatches\fields\ColourSwatches
   4133e37a-d625-476e-91aa-a600e0123064: # Quote Source
     columnSuffix: null
     contentColumnType: string
@@ -190,54 +120,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
-  7127ef72-a077-470d-8d8d-96b29a40a27a: # Logo Position
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: position
-    instructions: null
-    name: 'Logo Position'
-    searchable: false
-    settings:
-      default: left
-      options:
-        __assoc__:
-          -
-            - left
-            - '1'
-          -
-            - center
-            - ''
-          -
-            - right
-            - '1'
-          -
-            - full
-            - ''
-          -
-            - drop-left
-            - '1'
-          -
-            - drop-right
-            - '1'
-    translationKeyFormat: null
-    translationMethod: none
-    type: rias\positionfieldtype\fields\Position
-  ebc9bc3a-83e6-4cab-956d-f254a119f606: # Show Logo
-    columnSuffix: null
-    contentColumnType: boolean
-    fieldGroup: null
-    handle: showLogo
-    instructions: null
-    name: 'Show Logo'
-    searchable: false
-    settings:
-      default: false
-      offLabel: null
-      onLabel: null
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Lightswitch
   f7cf0694-24fa-4e41-943b-40abaddc797a: # Quote Author
     columnSuffix: null
     contentColumnType: text
