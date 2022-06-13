@@ -12,7 +12,7 @@
 {%- block text -%}
 
     {%- minify -%}
-        <span class="text-{{- props.color }} prose text-2xl md:text-3xl font-medium tracking-tightest {{ strong }} {{ props.alignment }} {{ props.utilities -}}">
+        <span class="inline-block w-full text-{{- props.color }} prose text-2xl md:text-3xl font-medium tracking-tightest {{ strong }} {{ props.alignment }} {{ props.utilities -}}">
             {{- props.content | striptags('<strong>') | typogrify(true) | raw -}}
         </span>
     {%- endminify -%}

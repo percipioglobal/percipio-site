@@ -27,6 +27,7 @@
 
                 <h2>
                     {{- render.atom('text', 'h3', {
+                        alignment: 'text-center md:text-left',
                         content: props.heading,
                         color: props.background.primary == 'white' ? 'gray-800' : 'white',
                     }) -}}
@@ -34,6 +35,7 @@
 
                 {%- if props.description -%}
                     {{- render.atom('text', 'description', {
+                        alignment: 'text-center md:text-left',
                         content: props.description,
                         color: props.background.primary == 'white' ? 'text-gray-600' : 'text-white',
                         utilities: 'mt-8'
