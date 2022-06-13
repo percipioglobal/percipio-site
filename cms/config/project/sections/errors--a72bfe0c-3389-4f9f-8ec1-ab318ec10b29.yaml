@@ -1,12 +1,5 @@
+defaultPlacement: end
 enableVersioning: false
-entryTypes:
-  faceb3ed-6771-453c-9c2a-aa330847f6db: # Errors
-    handle: errors
-    hasTitleField: true
-    name: Errors
-    sortOrder: 1
-    titleFormat: null
-    titleLabel: Title
 handle: errors
 name: Errors
 propagationMethod: all

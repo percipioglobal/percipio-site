@@ -26,6 +26,8 @@ fields:
     name: Slides
     searchable: false
     settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 132036446
       columns:
         __assoc__:
           -

@@ -5,35 +5,37 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 4d23d076-4a7c-4ad8-969e-ca980aef3815
+            fieldUid: 4d23d076-4a7c-4ad8-969e-ca980aef3815 # Social Media Type
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 2d7d736d-88e9-46d8-99de-e1031e7981ed
             warning: null
             width: 100
           -
-            fieldUid: 49fc2634-bf3b-4e3e-a1bc-9eeb199fac80
+            fieldUid: 49fc2634-bf3b-4e3e-a1bc-9eeb199fac80 # Social Media URL
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 26110b89-8341-4824-8f82-2c1bf1d80337
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 53a341f0-fec9-4f32-99d8-bf3c10b30a3a
 fields:
-  4d23d076-4a7c-4ad8-969e-ca980aef3815:
+  4d23d076-4a7c-4ad8-969e-ca980aef3815: # Social Media Type
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: socialMediaType
-    instructions: ''
+    instructions: null
     name: 'Social Media Type'
     searchable: false
     settings:
-      optgroups: true
       options:
         -
           __assoc__:
@@ -115,11 +117,12 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  49fc2634-bf3b-4e3e-a1bc-9eeb199fac80:
+  49fc2634-bf3b-4e3e-a1bc-9eeb199fac80: # Social Media URL
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: socialMediaUrl
-    instructions: ''
+    instructions: null
     name: 'Social Media URL'
     searchable: false
     settings:
@@ -135,133 +138,45 @@ fields:
       enableElementCache: false
       enableTitle: false
       typeSettings:
-        __assoc__:
-          -
-            - url
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - true
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - custom
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - email
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - tel
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - asset
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - category
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - entry
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - user
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowCustomQuery
-                  - false
-                -
-                  - allowCrossSiteLink
-                  - false
-                -
-                  - sources
-                  - '*'
-          -
-            - site
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - sites
-                  - '*'
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField

@@ -24,10 +24,11 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a1dd1e0a-71a8-4ca6-abd9-e9d1eb112f36
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 575e56c7-c903-40e8-9b4e-44e51a6502ca
 handle: legal
 hasTitleField: true
 name: 'Legal Group'

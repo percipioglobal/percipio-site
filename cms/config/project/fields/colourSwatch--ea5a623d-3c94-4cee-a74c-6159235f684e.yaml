@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: text
 fieldGroup: 11cffc84-a18e-49e3-9923-8229743b2a28 # Branding
 handle: colourSwatch
@@ -5,8 +6,9 @@ instructions: 'This colour pallet is used for the logo / navigation and styling 
 name: 'Colour Swatch'
 searchable: false
 settings:
+  default: null
   palette: Percipio
-  useConfigFile: '1'
+  useConfigFile: true
 translationKeyFormat: null
 translationMethod: none
 type: percipiolondon\colourswatches\fields\ColourSwatches

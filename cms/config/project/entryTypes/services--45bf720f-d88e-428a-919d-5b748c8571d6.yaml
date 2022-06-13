@@ -24,15 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            warning: null
-            width: 100
-          -
-            fieldUid: 7f94d38a-7e8c-477c-8cca-bff77ee32f0e
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
+            uid: 10020f35-5523-49b5-a959-89ad4578c701
             warning: null
             width: 100
           -
@@ -42,10 +34,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 227f9f67-49a4-4fdb-8d41-e25e416f3355
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 75e2fa2a-4fd2-43e0-89cb-0df8f8f1cdaa
       -
         elements:
           -
@@ -55,6 +48,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: bc59e0ac-7252-43c7-9a5f-7a29221e2f48
             warning: null
             width: 100
           -
@@ -64,10 +58,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 78e11f08-def2-4bd9-832e-a99c25f55b42
             warning: null
             width: 100
         name: Metadata
-        sortOrder: 2
+        uid: 6bc398a5-3609-4181-9fa6-6438cdccc022
       -
         elements:
           -
@@ -77,10 +72,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: f95c9194-f139-4eca-a83e-329c461afb51
             warning: null
             width: 100
         name: Options
-        sortOrder: 3
+        uid: 3aa4d18b-7483-4e33-ad12-25accce07dd7
 handle: services
 hasTitleField: true
 name: 'Our Services'

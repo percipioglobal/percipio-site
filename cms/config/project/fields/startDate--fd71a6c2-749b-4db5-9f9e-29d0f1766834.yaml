@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: datetime
 fieldGroup: 58eccc39-1c9e-45ac-bae8-465deff69786 # Team
 handle: startDate
@@ -7,9 +8,10 @@ searchable: false
 settings:
   max: null
   min: null
-  minuteIncrement: '30'
+  minuteIncrement: 30
   showDate: true
   showTime: false
+  showTimeZone: false
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Date

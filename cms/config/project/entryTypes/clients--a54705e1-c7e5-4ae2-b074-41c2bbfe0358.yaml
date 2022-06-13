@@ -24,10 +24,11 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 0b6f326f-ba01-489f-8330-5d8ef69f1a8c
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 01c5d670-d5a7-4dbc-8630-a1bbc3da55f4
 handle: clients
 hasTitleField: true
 name: Clients

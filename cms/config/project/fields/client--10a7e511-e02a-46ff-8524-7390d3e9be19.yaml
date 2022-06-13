@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: string
 fieldGroup: 151de730-f956-437c-a617-de5725e4c07a # Projects
 handle: client
@@ -6,8 +7,9 @@ name: Client
 searchable: false
 settings:
   allowSelfRelations: false
-  limit: '1'
   localizeRelations: false
+  maxRelations: 1
+  minRelations: null
   selectionLabel: 'Choose a client'
   showSiteMenu: true
   source: null

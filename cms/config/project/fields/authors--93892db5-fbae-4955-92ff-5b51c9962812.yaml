@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: string
 fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99 # Common
 handle: authors
@@ -6,8 +7,9 @@ name: Authors
 searchable: false
 settings:
   allowSelfRelations: false
-  limit: ''
   localizeRelations: false
+  maxRelations: null
+  minRelations: null
   selectionLabel: 'Add Author'
   showSiteMenu: true
   source: null

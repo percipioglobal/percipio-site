@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 37764a4b-6510-453a-b492-db3687150730
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 939a17e8-034e-48a8-8c20-0f397403e8de
             warning: null
             width: 100
           -
@@ -42,10 +44,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: e86d0de3-69ff-448c-9ff9-caa83195e72f
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 579a24a0-b936-40e6-b52f-5840ed3fc9dc
       -
         elements:
           -
@@ -55,10 +58,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 9706ac4e-f3dc-4893-8fe6-e24a0face637
             warning: null
             width: 100
         name: Options
-        sortOrder: 2
+        uid: b01e2610-2cc9-4d68-bce3-f8afa2fad1f8
       -
         elements:
           -
@@ -68,6 +72,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 56117684-d25e-472a-929b-8ebc4702d658
             warning: null
             width: 100
           -
@@ -77,10 +82,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: b5bd455d-89e5-49f3-a447-2c1202704732
             warning: null
             width: 100
         name: SEO
-        sortOrder: 3
+        uid: 16dda13f-a52f-4320-9ad0-8fb87b472900
 handle: contactPage
 hasTitleField: true
 name: 'Contact Page'

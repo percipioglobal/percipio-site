@@ -1,3 +1,4 @@
+defaultPlacement: end
 fieldLayouts:
   56a16cfc-38a8-4edc-afb4-cb971fc69095:
     tabs:
@@ -24,6 +25,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
+            uid: 4b6f0e0e-cc14-49be-a6a9-cd7016d98c48
             warning: null
             width: 100
           -
@@ -33,10 +35,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: e21bfe8f-326e-4a50-814d-fd202b9198d4
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 2571f463-5c8a-420b-ae8f-8ba86b6c8dc8
 handle: projectCategories
 name: 'Project Categories'
 siteSettings:

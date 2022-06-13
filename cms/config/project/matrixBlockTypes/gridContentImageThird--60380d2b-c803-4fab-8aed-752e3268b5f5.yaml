@@ -26,6 +26,8 @@ fields:
     name: 'Grid Items'
     searchable: false
     settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 776609486
       columns:
         __assoc__:
           -

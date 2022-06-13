@@ -1,13 +1,15 @@
+columnSuffix: null
 contentColumnType: string
 fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99 # Common
 handle: target
-instructions: ''
+instructions: null
 name: Link
 searchable: false
 settings:
   allowSelfRelations: false
-  limit: '1'
   localizeRelations: false
+  maxRelations: 1
+  minRelations: null
   selectionLabel: 'Add a link'
   showSiteMenu: true
   source: null

@@ -1,28 +1,31 @@
+columnSuffix: null
 contentColumnType: string
 fieldGroup: 1572f461-2a67-47a4-a36c-80839168bcb7 # Globals
 handle: partners
-instructions: ''
+instructions: null
 name: Partners
 searchable: false
 settings:
+  blockTypeFields: 0
+  changedFieldIndicator: null
   columns:
     __assoc__:
       -
-        - 2c70613c-0c00-4d9a-96bf-658a6db58d9c
+        - 2c70613c-0c00-4d9a-96bf-658a6db58d9c # Logo
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 60285741-d9e6-4e21-b26e-3330c2d02f47
+        - 60285741-d9e6-4e21-b26e-3330c2d02f47 # Name
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - faa39bae-b425-4b70-b3f6-c1584cdda9dc
+        - faa39bae-b425-4b70-b3f6-c1584cdda9dc # Website
         -
           __assoc__:
             -
@@ -30,12 +33,12 @@ settings:
               - ''
   contentTable: '{{%stc_partners}}'
   fieldLayout: table
-  maxRows: '6'
-  minRows: '0'
-  placeholderKey: null
+  maxRows: 6
+  minRows: 0
+  propagationKeyFormat: null
   propagationMethod: all
   selectionLabel: 'Add a partner'
-  staticField: ''
+  staticField: null
 translationKeyFormat: null
 translationMethod: site
 type: verbb\supertable\fields\SuperTableField

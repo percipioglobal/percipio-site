@@ -1,24 +1,24 @@
+columnSuffix: null
 contentColumnType: text
 fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99 # Common
 handle: article
-instructions: ''
+instructions: null
 name: Body
 searchable: false
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
-  cleanupHtml: true
   columnType: text
   configSelectionMode: choose
   defaultTransform: ''
   manualConfig: ''
-  purifierConfig: ''
-  purifyHtml: '1'
+  purifierConfig: null
+  purifyHtml: true
   redactorConfig: Simple.json
-  removeEmptyTags: '1'
-  removeInlineStyles: '1'
-  removeNbsp: '1'
-  showHtmlButtonForNonAdmins: ''
+  removeEmptyTags: true
+  removeInlineStyles: true
+  removeNbsp: true
+  showHtmlButtonForNonAdmins: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   uiMode: enlarged

@@ -38,6 +38,8 @@ class SiteModule extends Module
     public function __construct($id, $parent = null, array $config = [])
     {
         parent::__construct($id, $parent, $config);
+
+        Craft::setAlias('@modules', __DIR__);
     }
 
     /**

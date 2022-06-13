@@ -10,10 +10,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 340e61df-beb1-4939-bc0c-cd4169235145
             warning: null
             width: 100
         name: 'Social Media'
-        sortOrder: 1
+        uid: bf80b3a3-2ed5-46df-9196-96aa7808bd13
 handle: socialMedia
 name: 'Social Media'
 sortOrder: 6

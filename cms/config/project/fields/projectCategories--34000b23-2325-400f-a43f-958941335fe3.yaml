@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: string
 fieldGroup: 151de730-f956-437c-a617-de5725e4c07a # Projects
 handle: projectCategories
@@ -8,10 +9,11 @@ settings:
   allowLimit: false
   allowMultipleSources: false
   allowSelfRelations: false
-  branchLimit: ''
-  limit: null
+  branchLimit: null
   localizeRelations: false
-  selectionLabel: ''
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
   showSiteMenu: true
   source: 'group:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
   sources: '*'
