@@ -42,6 +42,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: db91cdbf-486a-4cbd-a24e-fac4e2327a50 # Plugin Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5f07576b-a5e6-444d-ab61-baa2cd84eca3
+            warning: null
+            width: 50
+          -
             fieldUid: ce437437-2354-47a4-ae70-98fdb69aa175 # Version
             instructions: null
             label: null
@@ -50,7 +60,7 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             uid: 4f23477f-9011-4152-a918-1f3ed0314e5b
             warning: null
-            width: 100
+            width: 50
           -
             fieldUid: b9bc50d8-56c8-4a22-bc8b-f581880783e4 # Active Installs
             instructions: null
@@ -60,7 +70,7 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             uid: 08a1d976-55db-4a71-acc0-1031a1ffeb26
             warning: null
-            width: 100
+            width: 50
           -
             fieldUid: 01c92414-d375-423e-8183-4682ff91cbe4 # Price
             instructions: null
@@ -70,7 +80,7 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             uid: 625bc395-dc13-4bb1-b6cb-afe08ffb18ea
             warning: null
-            width: 100
+            width: 50
         name: Meta
         uid: 29b5f39a-66e6-4290-b80e-8875f430ac48
 handle: plugin
