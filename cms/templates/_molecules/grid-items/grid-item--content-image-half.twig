@@ -22,12 +22,12 @@
                     sizes: ['(max-width:768px) 100vw', '(min-width:768px) 50vw'],
                     alt: content.title,
                     placeholders: placeholders,
-                    utilities: 'max-h-[440px]'
+                    utilities: 'shadow-xl shadow-zinc-300 rounded-xl'
                 })
             -}}
         </div>
 
-        <div class="relative flex flex-col justify-center px-6 sm:p-10">
+        <div class="relative flex flex-col justify-center {{- settings.position == 'right' ? 'sm:pl-10 lg:pl-20' : 'sm:pr-10 lg:pr-20' -}}">
             {%- if item.overline -%}
                 {{- render.atom('text', 'overline', {
                     content: item.overline
