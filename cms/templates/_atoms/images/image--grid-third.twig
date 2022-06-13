@@ -17,15 +17,14 @@
 {%- block image -%}
     {%- set props = props|merge({
         optimized: options.image.grid33Optimisations ??? null,
-        placeholder: options.placeholders.cardPlaceholder.first.optimizeDefault,
-        ratio: options.ratio ??? 'aspect-4/3',
+        placeholder: options.placeholders.gridPlaceholder.first.grid33Optimisations,
     }) -%}
 
     {%- minify -%}
 
         <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
 
-            <picture class="{{ props.ratio -}}">
+            <picture class="aspect-16/9 md:aspect-4/3 max-w-[440px]">
 
                 <source
                     data-srcset="{{- props.optimized.srcsetWebP() ??? props.placeholder.srcsetWebP() -}}"
@@ -43,7 +42,7 @@
                     data-src="{{- props.optimized.src() ??? props.placeholder.src() -}}"
                     data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
                     sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                    class="lazyload {{ props.utilities -}}"
+                    class="lazyload object-cover w-full h-full {{ props.utilities -}}"
                     loading="lazy"
                     alt="{{- props.alt -}}"
                 />
