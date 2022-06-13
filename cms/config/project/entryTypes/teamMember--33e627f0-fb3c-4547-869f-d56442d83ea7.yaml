@@ -42,13 +42,13 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3 # Teaser Image
+            fieldUid: baad7fb6-18f2-4914-bc33-e1c48da96896 # Card Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 96fad725-d5ea-4de2-819c-4abe81aa632a
+            uid: c75fcc51-b5a8-4c3b-a87c-99577803cea5
             warning: null
             width: 100
           -
