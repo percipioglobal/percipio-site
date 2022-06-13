@@ -15,14 +15,15 @@
 #}
 
 {%- block image -%}
+
     {%- set props = props|merge({
-        optimized: options.image.grid33Optimisations ??? null,
-        placeholder: options.placeholders.gridPlaceholder.first.grid33Optimisations,
+        optimized: options.image.optimizeGallerySquare ??? null,
+        placeholder: options.placeholders.galleryPlaceholder.first.optimizeGallerySquare,
     }) -%}
 
     {%- minify -%}
 
-        <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
+        <figure class="block" role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
 
             <picture>
 
@@ -42,7 +43,7 @@
                     data-src="{{- props.optimized.src() ??? props.placeholder.src() -}}"
                     data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
                     sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                    class="lazyload w-full {{ props.utilities -}}"
+                    class="lazyload"
                     loading="lazy"
                     alt="{{- props.alt -}}"
                 />
@@ -52,4 +53,5 @@
         </figure>
 
     {%- endminify -%}
+
 {%- endblock -%}

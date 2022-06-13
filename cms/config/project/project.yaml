@@ -1,4 +1,4 @@
-dateModified: 1655133284
+dateModified: 1655139624
 elementSources:
   craft\elements\Entry:
     -
@@ -120,6 +120,25 @@ fs:
       secret: $S3_SECRET
       storageClass: ''
       subfolder: ctas
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
+  gallery:
+    hasUrls: true
+    name: Gallery
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: gallery
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   grids:
@@ -307,22 +326,26 @@ meta:
     4697a491-b07d-46f9-87d8-c6cd9fb804a9: Target # Target
     5053ff27-8e1b-49ea-85c6-c2a1dece3b8e: 'Body Content' # Body Content
     5075f768-2e40-45a6-a82b-61721232c356: Heading # Heading
+    5527a397-226d-4a44-a929-1133169e498a: 'Square Gallery Optimisation' # Square Gallery Optimisation
     6325f925-feea-4e28-b6ec-7630d3e70cc8: Embed # Embed
     6962a9b1-b802-4295-82b1-398470a9f54c: Author # Author
     7094bca5-b1bf-4bdd-8699-baa53877dc85: Heading # Heading
     7127ef72-a077-470d-8d8d-96b29a40a27a: 'Logo Position' # Logo Position
     8242f176-ff64-4969-8ece-037c27beea0a: Standfirst # Standfirst
+    8411ab0f-47f3-4c38-ad3b-f449f6bfe1f5: 'Small Gallery Optimisation' # Small Gallery Optimisation
     8504d7aa-ffd4-42c5-932d-221e2c5e7b29: Buttons # Buttons
     9151f126-34cf-4f3a-960f-107acc9842ad: Heading # Heading
     9475b42a-7657-4e3f-9d5b-1e1b5a1732ca: Swatch # Swatch
     13653e63-9892-4752-b260-32518bc3bb3d: Cards # Cards
     15615c51-0340-4dc2-831f-12d4ee3fd845: 'Large Blog Card Optimisation' # Large Blog Card Optimisation
     25958ba0-5f4a-48fc-9dee-0064db99f702: 'Utility Icon' # Utility Icon
+    28688c0a-84eb-41d8-8c25-01ed4992bed8: 'Gallery Placeholder' # Gallery Placeholder
     33274ae4-f375-4070-b42c-f1cef4e48a81: Heading # Heading
     34000b23-2325-400f-a43f-958941335fe3: 'Project Categories' # Project Categories
     35981b2e-d04e-4366-939a-c0673263711a: Questions # Questions
     45539eda-7272-4a6b-b4a2-2b629a2742ec: Caption # Caption
     60380d2b-c803-4fab-8aed-752e3268b5f5: 'Grid Content Image - 33%' # Grid Content Image - 33%
+    62060b0e-9ae6-4b5a-a779-469967724b21: 'Large Gallery Optimisation' # Large Gallery Optimisation
     64547f99-7471-496a-8b02-5d48e09a72f9: 'Social Media' # Social Media
     73929e5d-0eaa-424c-8cd1-ce83b47fd733: 'Page Builder' # Page Builder
     085923fe-5934-4d01-a2fd-ec625094c005: Caption # Caption
@@ -444,6 +467,7 @@ meta:
     ec91bde6-778d-4030-89fe-45614d871e81: Target # Target
     ed4b0f49-8429-4d80-846f-3d441bd3e707: Image # Image
     ef841ba4-7bcd-4ef5-9c12-96377bf7fba2: Pages # Pages
+    f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46: Gallery # Gallery
     f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd: 'Our Work' # Our Work
     f4cbe95b-c71a-42f8-a9d8-464dcf3916a9: 'Primary Navigation' # Primary Navigation
     f4de4bd2-7a0e-4563-b290-a2a72c8d23df: Image # Image

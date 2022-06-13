@@ -5,6 +5,7 @@
         'contentBuilder.contentCta:image',
         'contentBuilder.highlightCards:cards',
         'contentBuilder.highlightCards:cards.cardImage',
+        'contentBuilder.galleryImages:images',
         'contentBuilder.gridContent:gridItems',
         'contentBuilder.gridContentAnimation:gridItems',
         'contentBuilder.gridContentAnimation:gridItems.image',
@@ -48,6 +49,12 @@
                     button: block.target ??? null,
                     background: background,
                     image: block.ctaImage ??? null
+                } -%}
+
+            {%- case 'galleryImages' -%}
+
+                {%- include '_organisms/grids/grid--images' ignore missing with {
+                    images: block.images
                 } -%}
 
             {%- case 'gridContent' -%}
