@@ -1,0 +1,39 @@
+fieldLayouts:
+  1fb4cb30-83fc-4d00-ad05-16393ddb88fe:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 95200c1b-f232-4a7c-b818-f98743f32411
+            warning: null
+            width: 100
+        name: Content
+        uid: 802f2165-59c7-425d-8630-531be8aef2d3
+handle: pluginsPage
+hasTitleField: true
+name: 'Plugins page'
+section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
+sortOrder: 10
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
