@@ -1,4 +1,4 @@
-dateModified: 1655122043
+dateModified: 1655122968
 elementSources:
   craft\elements\Entry:
     -
@@ -155,6 +155,7 @@ meta:
     1b99a854-98db-4e61-b98d-3c4e357b1e85: Containerise # Containerise
     1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3: 'Teaser Image' # Teaser Image
     1c70a707-ac77-4b59-b166-37219108f31b: Background # Background
+    01c92414-d375-423e-8183-4682ff91cbe4: Price # Price
     1caabc75-eb3c-43a5-bffd-5b3289015e5c: Heading # Heading
     1cc6350b-c0ba-4f7f-8034-dbcec8643016: Filename # Filename
     1cd525bc-8beb-4ba2-9452-2e02803421ef: 'Video Placeholder' # Video Placeholder
@@ -269,6 +270,7 @@ meta:
     502c51a1-5b82-4368-90e1-aa68b1d4e479: 'Cover Photo' # Cover Photo
     0536c060-0d97-421e-8c73-3ad5baec52d2: Skills # Skills
     557aea75-e34b-4fff-83c6-c67a95ce8bec: 'Large Cards Optimisation' # Large Cards Optimisation
+    562bd8b6-c7c7-4de6-9a1b-910238a74390: Plugin # Plugin
     633b1b96-cdb8-4c97-a045-aa63d306b41c: Language # Language
     648e7555-63ed-4228-a6b7-7811c865a7af: 'Category Description' # Category Description
     712cce4e-490d-44b8-bf2c-5d00c2de4c40: Assets # Assets
@@ -335,6 +337,7 @@ meta:
     a9ba876e-c0bf-4a8c-b77e-e926de382189: Items # Items
     a9df6c46-5d2c-4b29-96f7-4490417448b6: 'The Question' # The Question
     a23c9a51-65d8-446d-b01a-222c2403d805: Media # Media
+    a43f63a3-f09b-404a-8002-846873fd6fe6: Plugins # Plugins
     a57c1d51-171d-47c2-ac77-cbc30d2229f3: 'Content CTA' # Content CTA
     a72bfe0c-3389-4f9f-8ec1-ab318ec10b29: Errors # Errors
     a81ab3c0-c52b-4817-8820-c0e69e9a0d2d: Containerise # Containerise
@@ -349,11 +352,13 @@ meta:
     b4a06662-5fb9-4347-9b76-b1e291db3b88: Cards # Cards
     b5a93f0f-21d1-4d67-abc8-a3789543d457: Image # Image
     b8ba7115-3804-4c06-8a96-501963d1fc5c: 'Error Headline' # Error Headline
+    b9bc50d8-56c8-4a22-bc8b-f581880783e4: 'Active Installs' # Active Installs
     b37bf9ac-438e-4850-89da-517bdcc6a0b2: 'Grid Items' # Grid Items
     b51f4d5a-4d35-43f1-af05-72e206874892: 'Footer Navigation' # Footer Navigation
     b61c0f3e-aaeb-4c6d-aab8-39448c056b8e: CTAs # CTAs
     b74a2d1f-f160-4a53-9a84-05b89c63c277: Blog # Blog
     b176a5a8-9d76-4653-9f6c-9ecb212d6f1a: Heading # Heading
+    b692e225-204e-4347-bbca-cc383d5dee6a: Plugins # Plugins
     b884a1be-f354-4202-8335-78016b5d035a: 'Show link as button' # Show link as button
     b928e034-1b69-487e-a45b-b37d0f8a59a9: Containerise # Containerise
     b2330e68-6c4a-45ab-b5b1-8a510f75ce4f: General # General
@@ -382,6 +387,7 @@ meta:
     ccc50eb1-1bd2-4306-842a-0a31f567c135: Image # Image
     cd0c5467-595b-44e8-b0b0-aa3cd2e4f87e: Image # Image
     ce64c3ac-ec79-4405-98a9-aea16011e258: Width # Width
+    ce437437-2354-47a4-ae70-98fdb69aa175: Version # Version
     ceaca46d-720d-442d-b054-f8fb3704701a: 'Default Placeholder' # Default Placeholder
     d08a0d16-0e00-49e6-9cd4-465fa2d65d7d: Errors # Errors
     d09756bb-3dd5-4ad8-b6eb-6e3595705141: Description # Description
