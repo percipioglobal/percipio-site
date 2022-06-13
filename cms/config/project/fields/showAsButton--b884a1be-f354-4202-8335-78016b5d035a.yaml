@@ -6,7 +6,7 @@ instructions: null
 name: 'Show link as button'
 searchable: false
 settings:
-  default: true
+  default: false
   offLabel: null
   onLabel: null
 translationKeyFormat: null
