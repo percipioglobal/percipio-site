@@ -27,7 +27,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 75481674
+      changedFieldIndicator: 1453326384
       columns:
         __assoc__:
           -
@@ -71,4 +71,4 @@ fields:
     type: verbb\supertable\fields\SuperTableField
 handle: resourceList
 name: 'Resource List'
-sortOrder: 14
+sortOrder: 13

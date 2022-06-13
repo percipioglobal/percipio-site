@@ -1,0 +1,18 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- set image = image ??? null -%}
+{%- set utilities = utilities ??? '' -%}
+
+{%- minify -%}
+    {%- if image -%}
+        <section class="container max-w-[84ch] mx-auto pb-8 {{ utilities -}}">
+            {{- render.atom('image', 'article', {
+                    image: image.collect().first(),
+                    sizes: ['100vw'],
+                    alt: content.title,
+                    placeholders: placeholders,
+                })
+            -}}
+        </section>
+    {%- endif -%}
+{%- endminify -%}
