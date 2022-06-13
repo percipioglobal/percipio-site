@@ -21,8 +21,6 @@
 
     {%- for block in content.contentBuilder -%}
 
-        {{block.type}}
-
         {%- switch block.type -%}
 
             {%- case 'article' -%}
@@ -34,7 +32,7 @@
             {%- case 'blockQuote' -%}
 
                 {%- include '_molecules/quotes/quote--block' ignore missing with {
-                    content: block.article,
+                    quote: block,
                 } -%}
 
             {%- case 'code' -%}

@@ -1,3 +1,42 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- set quote = {
+    quote: quote.quote,
+    author: quote.quoteAuthor,
+    source: quote.quoteSource
+} -%}
+{%- set utilities = utilities ??? '' -%}
+
 {%- minify -%}
-    quote
+    <div class="container max-w-[80ch] mx-auto py-5 md:py-10 {{ utilities -}}">
+        <blockquote {{ quote.source ? 'cite="'~ quote.source ~ '"' : '' }} class="mx-auto w-full whitespace-normal font-mono max-w-screen-md py-16">
+
+                <p class="text-2xl md:text-3xl lg:text-4xl text-gray-900">
+                    {{- render.atom('text', 'content', {
+                        content: quote.quote
+                    }) -}}
+                </p>
+
+                {# TODO: add transitions on the URLs, let's get fancy #}
+
+                <footer class="font-primary mt-8">
+                    {%- if quote.source.getUrl() -%}
+                        <a
+                            href="{{- quote.source.getUrl() -}}"
+                            data-tag-category="quote-source"
+                            data-tag-action="click"
+                            data-tag-label="{{- quote.source.getUrl() -}}"
+                            class="text-blue-500 text-base hover:text-blue-800"
+                        >
+                            {{- quote.author }} &mdash; {{ quote.source.getText() -}}
+                        </a>
+                    {%- else -%}
+                        <span class="text-base">
+                            {{- quote.author -}}
+                        </span>
+                    {%- endif -%}
+                </footer>
+
+            </blockquote>
+    </div>
 {%- endminify -%}
