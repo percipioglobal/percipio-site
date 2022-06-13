@@ -6,26 +6,22 @@
 
     INHERITED FROM: `_organisms/grids/grid--props.twig`
 
-    EXTENDED
-    --------
-
-    ODD (READONLY): determines card size on the odd loop
-    EVEN (READONLY): determines card size on the even loop
+    ## EXTENDED
+    -----------
+    plugins (Collection): Collection of plugins
 
     ### COMPONENTS ###
     ------------------
 
     ## MOLECULES
 
-    card--primary-large: `_molecules/cards/card--primary-large`
-    card--primary-small: `_molecules/cards/card--primary-small`
+    card--plugin: `_molecules/card/card--plugin.twig`
 #}
 
 {%- block grid -%}
 
     {%- set props = props|merge({
-        ODD: props.startSize == 'large' ? 'small' : 'large',
-        EVEN: props.startSize == 'large' ? 'large' : 'small',
+        locations: locations ??? null,
     }) -%}
 
     {%- minify -%}

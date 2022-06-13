@@ -1,5 +1,17 @@
 {% extends '_boilerplate/_layouts/generic-page-layout.twig' %}
-{%- import '_macros/atoms' as render -%}
+
+{#
+    ### COMPONENTS ###
+    ------------------
+
+    ## ORGANISMS
+
+    view--overview-blog: `_organisms/views/view--overview-blog.twig`
+    view--overview-projects : `_organisms/views/view--overview-projects.twig`
+    view--overview-services : `_organisms/views/view--overview-services.twig`
+    view--overview-team : `_organisms/views/view--overview-team.twig`
+    view--overview-plugins : `_organisms/views/view--overview-plugins.twig`
+#}
 
 {% block headLinks %}
     {{ parent() }}
@@ -12,19 +24,19 @@
         {%- switch -%}
 
             {%- case 'blogOverview' -%}
-                {%- set component = '_organisms/entry-types/overview--blog' -%}
+                {%- set component = '_organisms/views/view--overview-blog' -%}
 
             {%- case 'projectsOverview' -%}
-                {%- set component = '_organisms/entry-types/overview--projects' -%}
+                {%- set component = '_organisms/views/view--overview-projects' -%}
 
             {%- case 'servicesOverview' -%}
-                {%- set component = '_organisms/entry-types/overview--services' -%}
+                {%- set component = '_organisms/views/view--overview-services' -%}
 
             {%- case 'teamOverview' -%}
-                {%- set component = '_organisms/entry-types/overview--team' -%}
+                {%- set component = '_organisms/views/view--overview-team' -%}
 
             {%- case 'pluginsOverview' -%}
-                {%- set component = '_organisms/entry-types/overview--plugins' -%}
+                {%- set component = '_organisms/views/view--overview-plugins' -%}
                 
 
         {%- endswitch -%}
