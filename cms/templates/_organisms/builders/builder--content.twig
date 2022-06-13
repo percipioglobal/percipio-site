@@ -68,6 +68,12 @@
                     items: block
                 } -%}
 
+            {%- case 'gridContentImageHalf' -%}
+
+                {%- include '_organisms/grids/grid--content-image-half' ignore missing with {
+                    items: block
+                } -%}
+
             {%- case 'gridContentImageThird' -%}
 
                 {%- include '_organisms/grids/grid--content-image-third' ignore missing with {
