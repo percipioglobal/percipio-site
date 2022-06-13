@@ -1,14 +1,10 @@
-{%- extends "_atoms/links/link--props" -%}
+{%- extends '_atoms/links/_link--props' -%}
 
 {#
-    ### PROPS ###
-    ---------------
+    ### PROPERTIES ###
+    ------------------
 
-    url: (STR) -- the url for the link
-    text: (STR) -- the text for the link
-    utlities: (STR) -- the link utility
-    target: (STR) -- add _blank if you want to open the link in a new window
-    ga: (OBJ) -- add a category / action / label for GTM tracking
+    INHERITED FROM: `_atoms/links/link--props.twig`
 #}
 
 {%- block link -%}
@@ -21,7 +17,8 @@
         'focus' : 'focus:outline focus:outline-4 focus:outline-blue-500/30',
         'font': 'font-primary text-base sm:text-3xl lg:text-base font-bold',
         'hover': 'hover:text-blue-500',
-        'padding': 'py-3 px-5'
+        'padding': 'py-3 px-5',
+        'cursor': 'cursor-pointer',
     }-%}
 
     {%- minify -%}
@@ -33,7 +30,7 @@
             {{ props.ga.label ??? nulll ? 'data-tag-label=' ~ props.ga.label : '' }}
             {{ props.target ? 'target=' ~ props.target : '' }}
             aria-label="{{- props.text -}}"
-            class="{{ classes._default }} {{ classes.animation }} {{ classes.border }} {{ classes.color }} {{ classes.focus }} {{ classes.font }} {{ classes.hover }} {{ classes.padding }} {{ props.utilities }}"
+            class="{{ classes._default }} {{ classes.animation }} {{ classes.border }} {{ classes.color }} {{ classes.focus }} {{ classes.font }} {{ classes.hover }} {{ classes.padding }} {{ classes.cursor }} {{ props.utilities }}"
         >
             <span class="sr-only">
                 {{- props.target == '_self' ? 'Go to: ' : 'Go to external page: ' -}}

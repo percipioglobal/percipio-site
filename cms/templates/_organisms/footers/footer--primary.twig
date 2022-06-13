@@ -1,0 +1,32 @@
+{% import '_macros/atoms' as render %}
+
+{#
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+
+    header--text: `_molecules/headers/header--text.twig`
+#}
+
+<footer class="pt-10 pb-20 bg-gray-800">
+    {%- include '_molecules/headers/header--text' ignore missing with {
+        heading: 'Where we are' ??? '',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor' ??? '',
+        background: {
+            primary: 'gray-800',
+            secondary: null,
+        },
+    } -%}
+
+    {%- include '_organisms/grids/grid--locations' ignore missing with {
+        locations: footerData.locations.collect().all() ??? null,
+    } -%}
+
+    {%- include '_molecules/metas/meta--footer' ignore missing with {
+        copyright: footerData.copyright ??? '',
+        legals: footerData.legalNavigation.collect().all() ??? null,
+    } -%}
+    
+</footer>

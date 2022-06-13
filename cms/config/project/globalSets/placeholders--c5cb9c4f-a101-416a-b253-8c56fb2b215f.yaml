@@ -1,0 +1,20 @@
+fieldLayouts:
+  de4e4c7b-fb8e-45c9-8a6d-51a6f8b3f033:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 1a84863b-861a-4293-b8ca-c88d90b87ae8 # Card Placeholder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dc933596-b952-4583-bd15-3a521badbc7b
+            warning: null
+            width: 100
+        name: Placeholders
+        uid: 03603629-c89b-4a8f-816a-9c301c922225
+handle: placeholders
+name: Placeholders
+sortOrder: 7

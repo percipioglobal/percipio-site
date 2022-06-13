@@ -1,57 +1,62 @@
-{%- extends '_atoms/images/image--props' -%}
+{%- extends '_atoms/images/_image--props' -%}
 
 {#
     ### PROPERTIES ###
     ------------------
 
-    image: (OBJ) -- Pass through the image object
-    sizes: (ARR) -- sizes array for responsive images
-    alt: (STR) -- The alt text
+    INHERITED FROM: `_atoms/images/image--props.twig`
+
+    EXTENDED
+    --------
+
     ratio: (STR) -- Give the aspect ratio in the correct format eg. aspect-4/3 / aspect-16/9 ( optional )
-    caption: (STR) -- The caption text ( optional )
-    author: (STR) -- The author of the image ( optional )
-    source: (STR) -- The image source ( optional )
-    utilities: (STR) -- The specific TW spacing utilities to add
     optimized: (OBJ) -- The image optimizations for the image
     placeholder: (OBJ) -- Add the placeholder image to the atom
-
 #}
 
-{%- set props = props|merge({
-    ratio: options.ratio ??? 'aspect-4/5',
-    optimized: options.image.optimizeCardBlogSmall ??? null,
-    placeholder: options.placeholders.cardPlaceholder[0].optimizeCardBlogSmall,
-}) -%}
+{%- block image -%}
+    {%- set props = props|merge({
+        ratio: options.ratio ??? 'aspect-4/5',
+        optimized: options.image.optimizeCardBlogSmall ??? null,
+        placeholder: options.placeholders.cardPlaceholder.first().optimizeCardBlogSmall,
+    }) -%}
 
-{%- minify -%}
+    {%- minify -%}
 
-    <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
+        {%- set props = props|merge({
+            ratio: options.ratio ??? 'aspect-4/5',
+            optimized: options.image.optimizeCardBlogSmall ??? null,
+            placeholder: options.placeholders.cardPlaceholder[0].optimizeCardBlogSmall,
+        }) -%}
 
-        <picture class="{{ props.ratio -}}">
+        <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
 
-            <source 
-                data-srcset="{{- props.optimized.srcsetWebP() ??? props.placeholder.srcsetWebP() -}}"
-                sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                type="image/webp"
-            />
+            <picture class="{{ props.ratio -}}">
 
-            <source 
-                data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
-                sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-            />
+                <source 
+                    data-srcset="{{- props.optimized.srcsetWebP() ??? props.placeholder.srcsetWebP() -}}"
+                    sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                    type="image/webp"
+                />
 
-            <img
-                src="{{- props.optimized.placeholderImage() ??? props.placeholder.placeholderImage() -}}"
-                data-src="{{- props.optimized.src() ??? props.placeholder.src() -}}"
-                data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
-                sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                class="lazyload"
-                loading="lazy"
-                alt="{{- props.alt -}}"
-            />
+                <source 
+                    data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
+                    sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                />
 
-        </picture>
+                <img
+                    src="{{- props.optimized.placeholderImage() ??? props.placeholder.placeholderImage() -}}"
+                    data-src="{{- props.optimized.src() ??? props.placeholder.src() -}}"
+                    data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
+                    sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                    class="lazyload"
+                    loading="lazy"
+                    alt="{{- props.alt -}}"
+                />
 
-    </figure>
+            </picture>
 
-{%- endminify -%}
+        </figure>
+
+    {%- endminify -%}
+{%- endblock -%}

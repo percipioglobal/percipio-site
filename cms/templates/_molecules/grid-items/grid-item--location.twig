@@ -1,0 +1,18 @@
+{% import '_macros/atoms' as render %}
+
+{%- set props = props|merge({
+    city: item.city ??? null,
+    country: item.country ??? null,
+}) -%}
+
+<div class="flex flex-col items-center w-full">
+    {{- render.atom('text', 'h3', {
+        content: props.city,
+        color: 'white',
+    }) -}}
+    {{- render.atom('text', 'location', {
+        content: props.country,
+        color: 'text-white',
+        utilities: 'mt-2',
+    }) -}}
+</div>

@@ -3,7 +3,7 @@
 {%- set navigation = navigation|default(null) -%}
 
 {%- minify -%}
-    <div class="fixed right-0 top-0 w-screen h-screen bg-gray-900 z-[-1]">
+    <div class="fixed right-0 top-0 w-screen h-screen bg-gray-900 -z-10 lg:hidden">
 
         <div aria-label="Mobile Site Navigation" aria-expanded="false" id="mobile-site-navigation" class="flex flex-col justify-center h-full">
             <ul role="menubar" aria-label="Mobile Site Navigation" class="flex flex-col items-end">
@@ -12,7 +12,7 @@
                     <li role="none">
                         {%- if item.showAsButton -%}
                             {{- render.atom('button', 'primary', {
-                                url: item.target[0].url ??? null,
+                                url: item.target.collect().first().url ??? null,
                                 text: item.title ??? null,
                                 target: '_self',
                                 ga: {
@@ -24,10 +24,10 @@
                             }) -}}
                         {%- else -%}
                             {{- render.atom('link', 'navigation', {
-                                url: item.target[0].url ??? null,
+                                url: item.target.collect().first().url ??? null,
                                 text: item.title ??? null,
                                 target: '_self',
-                                active: entry.id == item.target[0].id,
+                                active: entry.id == item.target.collect().first().id ??? null,
                                 ga: {
                                     category:'Navigation link',
                                     action:'click',

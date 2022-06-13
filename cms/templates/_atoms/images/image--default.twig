@@ -1,29 +1,26 @@
-{%- extends '_atoms/images/image--props' -%}
+{%- extends '_atoms/images/_image--props' -%}
 
 {#
     ### PROPERTIES ###
     ------------------
 
-    alt: (STR) -- The alt text
-    author: (STR) -- The author of the image ( optional )
-    caption: (STR) -- The caption text ( optional )
-    image: (OBJ) -- Pass through the image object
-    optimized: (STR) -- the specific optimized field on the image (required)
-    placeholder: (OBJ) -- The object that contains all placeholders ( required )
-    ratio: (STR) -- Give the aspect ratio in the correct format eg. is1by1 / is16by9 ( optional )
-    sizes: (ARR) -- sizes array for responsive images
-    source: (STR) -- The image source ( optional )
-    utilities: (STR) -- the specific TW spacing utilities to add
+    INHERITED FROM: `_atoms/images/image--props.twig`
 
+    EXTENDED
+    --------
+
+    ratio: (STR) -- Give the aspect ratio in the correct format eg. aspect-4/3 / aspect-16/9 ( optional )
+    optimized: (OBJ) -- The image optimizations for the image
+    placeholder: (OBJ) -- Add the placeholder image to the atom
 #}
 
-{%- set props = props|merge({
-    optimized: options.image.optimizeDefault ??? null,
-    placeholder: options.placeholders.cardPlaceholder.first.optimizeDefault,
-    ratio: options.ratio ??? 'aspect-4/5',
-}) -%}
-
 {%- block image -%}
+    {%- set props = props|merge({
+        optimized: options.image.optimizeDefault ??? null,
+        placeholder: options.placeholders.cardPlaceholder.first.optimizeDefault,
+        ratio: options.ratio ??? 'aspect-4/5',
+    }) -%}
+
     {%- minify -%}
 
         <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">

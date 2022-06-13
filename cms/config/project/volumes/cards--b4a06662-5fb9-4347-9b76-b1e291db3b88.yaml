@@ -42,6 +42,16 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            fieldUid: b2ec8a9f-db13-477e-ac15-28a3c7b4f3e4 # Small Blog Card Optimisation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dfdfe959-6588-4e5a-88ac-03b9403e3d95
+            warning: null
+            width: 50
+          -
             fieldUid: 557aea75-e34b-4fff-83c6-c67a95ce8bec # Large Cards Optimisation
             instructions: null
             label: null
@@ -51,6 +61,26 @@ fieldLayouts:
             uid: bfaaf188-92b1-445b-b0fe-35ade62f8c40
             warning: null
             width: 50
+          -
+            fieldUid: 15615c51-0340-4dc2-831f-12d4ee3fd845 # Large Blog Card Optimisation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 69f1f126-2997-47a2-90fa-dd756eb9ed5b
+            warning: null
+            width: 50
+          -
+            fieldUid: 8c9be2b5-73bf-4f32-8fd2-fc36a109dbab # Default Optimisations
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ee74000f-42ed-44d7-b297-758051c0f01e
+            warning: null
+            width: 100
         name: 'Image Optimisation'
         uid: 4528cf9d-5428-4496-a78d-854b488f7e1a
 fs: cards
