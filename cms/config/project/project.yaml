@@ -1,4 +1,4 @@
-dateModified: 1655150842
+dateModified: 1655152354
 elementSources:
   craft\elements\Entry:
     -
@@ -29,6 +29,15 @@ elementSources:
     -
       heading: Channels
       type: heading
+    -
+      disabled: false
+      key: 'section:a43f63a3-f09b-404a-8002-846873fd6fe6' # Plugins
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - author
+        - link
+      type: native
     -
       key: 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
       tableAttributes:
@@ -78,6 +87,9 @@ elementSources:
     -
       key: 'section:a72bfe0c-3389-4f9f-8ec1-ab318ec10b29' # Errors
       type: native
+    -
+      heading: ''
+      type: heading
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -347,7 +359,7 @@ meta:
     712cce4e-490d-44b8-bf2c-5d00c2de4c40: Assets # Assets
     714aef78-b2cb-46ab-82b4-e1cbf362b65c: Target # Target
     720b0445-dc28-4b47-85df-59e4f03c666b: Button # Button
-    768b3119-7033-4796-be27-562fecd1e4c7: 'Vacancies Overview' # Vacancies Page
+    768b3119-7033-4796-be27-562fecd1e4c7: 'Vacancies Overview' # Vacancies Overview
     0827c9dd-2ea2-4e98-b743-3161e028a304: 'FAQ Category' # FAQ Category
     870c07d7-9341-4f1f-825b-25c76239bc0d: Caption # Caption
     914b27f9-4dac-42d5-bb42-0e41ba29f93a: 'Contact Page' # Contact Page

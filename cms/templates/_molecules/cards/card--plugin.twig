@@ -12,30 +12,65 @@
 
     ## ATOMS
 
-    image--card-large: `_atoms/images/image--card-large`
+    svg--plugin-icon: `_atoms/svgs/svg--plugin-icon`
     text--card-subtitle: `_atoms/texts/text--card-subtitle`
     text--card-title: `_atoms/texts/text--card-title`
 #}
 
 {%- block card -%}
-    <article class="relative bg-white shadow-2xl rounded-4xl p-6 pb-9 overflow-hidden {{ props.utilities -}}">
+    <article class="relative flex bg-white mt-12 {{ props.utilities -}}">
 
-        <header class="space-y-4 mt-8">
-            <h3>
-                {{- render.atom('text', 'card-title', {
-                    content: content.title ??? ''
-                }) -}}
-            </h3>
+        {{- render.atom('svg', 'plugin-icon', {
+            icon: content.pluginIcon.collect().first(),
+            utilities: 'w-24 h-24'
+        }) -}}
 
-            {%- if content.subtitle ??? null -%}
-                <h4>
-                    {{- render.atom('text', 'card-subtitle', {
-                        content: content.subtitle
+        <div class="relative flex-auto overflow-hidden rounded-4xl p-6 pb-9 shadow-2xl">
+
+            <header class="space-y-4 mt-8">
+                <h3>
+                    {{- render.atom('text', 'card-title', {
+                        content: content.title ??? ''
                     }) -}}
-                </h4>
-            {%- endif -%}
-        </header>
+                </h3>
 
-        <div class="bg-gradient-to-r from-blue-500 to-pink-500 h-3 absolute bottom-0 left-0 w-full"></div>
+                {%- if content.description ??? null -%}
+                    <h4>
+                        {{- render.atom('text', 'card-subtitle', {
+                            content: content.description
+                        }) -}}
+                    </h4>
+                {%- endif -%}
+            </header>
+
+            <div class="flex flex-col space-y-3 mt-3">
+
+                {%- if content.version -%}
+                    {{- render.atom('text', 'meta-plugin', {
+                        color: 'text-black',
+                        content: 'Version',
+                        data: content.version
+                    }) -}}
+                {%- endif -%}
+
+                {%- if content.activeInstalls -%}
+                    {{- render.atom('text', 'meta-plugin', {
+                        color: 'text-black',
+                        content: 'Active installs',
+                        data: content.activeInstalls
+                    }) -}}
+                {%- endif -%}
+
+                {{- render.atom('text', 'meta-plugin', {
+                    color: 'text-black',
+                    content: 'Price',
+                    data: (content.price|money ??? 'FREE')
+                }) -}}
+
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-500 to-pink-500 h-3 absolute bottom-0 left-0 w-full"></div>
+
+        </div>
     </article>
 {%- endblock -%}

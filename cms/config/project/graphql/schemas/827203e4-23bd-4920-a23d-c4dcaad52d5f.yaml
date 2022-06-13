@@ -11,7 +11,7 @@ scope:
   - 'entrytypes.677c9cfd-68a9-4ee2-a78e-1835df918bb4:read' # Team Overview
   - 'entrytypes.8c5e09a3-fcbe-484a-95c1-97e362a260e8:read' # Services Overview
   - 'entrytypes.914b27f9-4dac-42d5-bb42-0e41ba29f93a:read' # Contact Page
-  - 'entrytypes.768b3119-7033-4796-be27-562fecd1e4c7:read' # Vacancies Page
+  - 'entrytypes.768b3119-7033-4796-be27-562fecd1e4c7:read' # Vacancies Overview
   - 'sections.1962717b-7da2-4f6f-be49-ee640b8ddfe2:read' # Vacancies
   - 'entrytypes.00498acf-c1c2-4c00-83f2-39a7255870f8:read' # Vacancies
   - 'globalsets.64547f99-7471-496a-8b02-5d48e09a72f9:read' # Social Media
