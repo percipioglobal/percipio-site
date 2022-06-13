@@ -1,4 +1,4 @@
-dateModified: 1655149710
+dateModified: 1655149773
 elementSources:
   craft\elements\Entry:
     -
@@ -84,6 +84,25 @@ email:
   replyToEmail: $REPLY_TO
   transportType: craft\mail\transportadapters\Sendmail
 fs:
+  articles:
+    hasUrls: true
+    name: Articles
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: articles
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
   cards:
     hasUrls: true
     name: Cards
@@ -257,7 +276,6 @@ meta:
     9bca25cb-2cf2-4427-baf8-44e347cc8a7a: Button # Button
     9c4ff5ca-6227-465d-a4a9-5a584eba02b4: 'Body Content' # Body Content
     9de367ab-77b8-47bb-bbc3-63e79a202c3e: Blog # Blog
-    9e682a2f-b0d4-478b-8b06-549c218b8357: 'FAQ List' # FAQ List
     9ecea484-fe9d-4944-8519-dee7181de25c: Alignment # Alignment
     10a7e511-e02a-46ff-8524-7390d3e9be19: Client # Client
     11cffc84-a18e-49e3-9923-8229743b2a28: Branding # Branding
@@ -291,6 +309,7 @@ meta:
     73ee03a9-c989-4d98-bd96-db9bc9cb2a5c: Caption # Caption
     74c703ba-fb2c-421f-9b09-2bd3762770de: 'Footer Navigation' # Footer Navigation
     74d5a128-4fbc-4ea8-a7d7-c828e87680ff: 'Organisation Address Region' # Organisation Address Region
+    74ec495a-3fc7-4175-8f94-3ee08302407a: Articles # Articles
     74f6b1ab-d7f2-4df1-89fe-1601cf0697a0: Navigation # Navigation
     75b2db97-9323-4a3f-9865-e3b6d2f3e785: 'Basic Slider' # Basic Slider
     75b9f683-7e77-4bae-8d79-335f32bcd3cf: Projects # Projects
@@ -346,6 +365,7 @@ meta:
     4697a491-b07d-46f9-87d8-c6cd9fb804a9: Target # Target
     5053ff27-8e1b-49ea-85c6-c2a1dece3b8e: 'Body Content' # Body Content
     5075f768-2e40-45a6-a82b-61721232c356: Heading # Heading
+    5162e4ea-9d64-443b-847d-ef657925e27a: 'Article Optimisations' # Article Optimisations
     5527a397-226d-4a44-a929-1133169e498a: 'Square Gallery Optimisation' # Square Gallery Optimisation
     6325f925-feea-4e28-b6ec-7630d3e70cc8: Embed # Embed
     6962a9b1-b802-4295-82b1-398470a9f54c: Author # Author
@@ -459,6 +479,7 @@ meta:
     d8cef538-a756-4496-b7f6-0e0bb61c14c2: 'Primary Navigation' # Primary Navigation
     d9bfce22-613d-44cc-bdac-b06404b4a8ea: Heading # Heading
     d613d12d-ac03-4153-942b-0cca809f451b: 'Body Content' # Body Content
+    d641ef2d-f0a1-4a0d-b648-642c98a7e5bb: 'Article Placeholder' # Article Placeholder
     d3594d38-4b2c-48a2-b77c-c0819aa700c7: Overline # Overline
     d476916c-8ec8-4d19-a3f8-ac4854f87275: Catchphrase # Catchphrase
     d7413814-0c30-451d-a383-d39d7cc3f78b: Position # Position

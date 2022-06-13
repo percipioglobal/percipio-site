@@ -14,229 +14,9 @@ fieldLayouts:
             uid: 05ada118-c676-46f6-b695-4874c1c93e7a
             warning: null
             width: 100
-          -
-            fieldUid: 302a5592-8085-472e-9356-ab6b1eaf1635 # Position
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 95969804-9118-4f02-8a7f-8c6af4331b58
-            warning: null
-            width: 100
-          -
-            fieldUid: 49d732ef-0bfc-46c0-ba09-004de008c0ba # Ratio
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 94f8e3d2-8194-41ad-84bb-358c3f303f90
-            warning: null
-            width: 100
-          -
-            fieldUid: 3fc84cf5-6e3d-46e8-bf13-9a1d4e198438 # Caption
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 2db1e81e-a51e-465e-924a-d8fb8f1cd419
-            warning: null
-            width: 100
-          -
-            fieldUid: b928e034-1b69-487e-a45b-b37d0f8a59a9 # Containerise
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 37f303c7-dd81-4b8e-a43e-9b6f9070814e
-            warning: null
-            width: 100
         name: Content
         uid: 77479288-6cfc-4be2-a68c-9fcdaae1a378
 fields:
-  3fc84cf5-6e3d-46e8-bf13-9a1d4e198438: # Caption
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: caption
-    instructions: 'Enter an optional caption for the image, if an image already contains a caption, this field will override the original one.'
-    name: Caption
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  49d732ef-0bfc-46c0-ba09-004de008c0ba: # Ratio
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: ratio
-    instructions: 'Select the Aspect Ratio where you want the image to be displayed in, use live preview to see how it looks.'
-    name: Ratio
-    searchable: false
-    settings:
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - None
-            -
-              - value
-              - ''
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - '1:1'
-            -
-              - value
-              - 'aspect-w-1 aspect-h-1'
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - '2:1'
-            -
-              - value
-              - 'aspect-w-2 aspect-h-1'
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - '4:3'
-            -
-              - value
-              - 'aspect-w-4 aspect-h-3'
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - '3:4'
-            -
-              - value
-              - 'aspect-w-3 aspect-h-4'
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - '7:5'
-            -
-              - value
-              - 'aspect-w-7 aspect-h-5'
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - '8:5'
-            -
-              - value
-              - 'aspect-w-8 aspect-h-5'
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - '16:9'
-            -
-              - value
-              - 'aspect-w-16 aspect-h-9'
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - '21:9'
-            -
-              - value
-              - 'aspect-w-21 aspect-h-9'
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
-  302a5592-8085-472e-9356-ab6b1eaf1635: # Position
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: position
-    instructions: 'Select a position where you want the image to be displayed, if you select the center icon, it will fit into the content container. When using the full icon, it will be wider than the container. If you want multiple images in the same row, please select image gallery.'
-    name: Position
-    searchable: false
-    settings:
-      default: center
-      options:
-        __assoc__:
-          -
-            - left
-            - ''
-          -
-            - center
-            - '1'
-          -
-            - right
-            - ''
-          -
-            - full
-            - '1'
-          -
-            - drop-left
-            - ''
-          -
-            - drop-right
-            - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: rias\positionfieldtype\fields\Position
-  b928e034-1b69-487e-a45b-b37d0f8a59a9: # Containerise
-    columnSuffix: null
-    contentColumnType: boolean
-    fieldGroup: null
-    handle: containerise
-    instructions: null
-    name: Containerise
-    searchable: false
-    settings:
-      default: true
-      offLabel: null
-      onLabel: null
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Lightswitch
   ed4b0f49-8429-4d80-846f-3d441bd3e707: # Image
     columnSuffix: null
     contentColumnType: string
@@ -251,16 +31,16 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      defaultUploadLocationSource: 'volume:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maxRelations: 1
       minRelations: null
       previewMode: full
       restrictFiles: true
-      restrictLocation: true
+      restrictLocation: false
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      restrictedLocationSource: 'volume:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
       restrictedLocationSubpath: null
       selectionCondition:
         __assoc__:

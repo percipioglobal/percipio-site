@@ -13,6 +13,7 @@
         'contentBuilder.gridContentImageHalfBackground:gridItems.image',
         'contentBuilder.gridContentImageThird:gridItems',
         'contentBuilder.gridContentImageThird:gridItems.image',
+        'contentBuilder.singleImage:.image',
     ])
 -%}
 
@@ -53,7 +54,7 @@
 
             {%- case 'galleryImages' -%}
 
-                {%- include '_organisms/grids/grid--images' ignore missing with {
+                {%- include '_organisms/grids/grid--gallery' ignore missing with {
                     images: block.images
                 } -%}
 
@@ -97,6 +98,12 @@
 
                 {%- include '_molecules/content/content--section-header' ignore missing with {
                     content: block,
+                } -%}
+
+            {%- case 'singleImage' -%}
+
+                {%- include '_molecules/images/image--article' ignore missing with {
+                    image: block.image,
                 } -%}
 
             {%- case 'standfirst' -%}
