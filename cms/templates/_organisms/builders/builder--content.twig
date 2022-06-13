@@ -21,11 +21,19 @@
 
     {%- for block in content.contentBuilder -%}
 
+        {{block.type}}
+
         {%- switch block.type -%}
 
             {%- case 'article' -%}
 
                 {%- include '_molecules/content/content--article' ignore missing with {
+                    content: block.article,
+                } -%}
+
+            {%- case 'blockQuote' -%}
+
+                {%- include '_molecules/quotes/quote--block' ignore missing with {
                     content: block.article,
                 } -%}
 
