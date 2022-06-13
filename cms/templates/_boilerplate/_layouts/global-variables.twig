@@ -24,13 +24,16 @@
     .handle('placeholders')
     .with([
         'cardPlaceholder',
+        'defaultPlaceholder',
+        'galleryPlaceholder',
+        'gridPlaceholder',
     ])
     .collect()
     .first()
 -%}
 
 {%- set footerData = craft.globalSets()
-    .handle('footer') 
+    .handle('footer')
     .with([
         'legalNavigation',
         'locations',

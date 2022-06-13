@@ -24,10 +24,11 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 8edaca8f-0b36-4f08-ab41-4426ec24312c
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 89d4f839-8ba9-4878-a230-562a2f113956
       -
         elements:
           -
@@ -37,10 +38,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 6c2b5a77-3a49-4660-8d7e-049333bd3558
             warning: null
             width: 100
         name: Metadata
-        sortOrder: 2
+        uid: 30df1183-2f20-47ab-be51-bae200c02870
 handle: errorPages
 hasTitleField: true
 name: Errors

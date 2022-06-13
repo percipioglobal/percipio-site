@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: string(1120)
 fieldGroup: b2330e68-6c4a-45ab-b5b1-8a510f75ce4f # General
 handle: description
@@ -7,11 +8,11 @@ searchable: true
 settings:
   byteLimit: null
   charLimit: 280
-  code: ''
+  code: false
   columnType: null
-  initialRows: '4'
-  multiline: ''
-  placeholder: ''
+  initialRows: 4
+  multiline: false
+  placeholder: null
   uiMode: normal
 translationKeyFormat: null
 translationMethod: none

@@ -8,6 +8,12 @@ module.exports = {
         'bg-gray-600',
         'bg-gray-800',
         'bg-gray-900',
+        'sm:col-span-1',
+        'sm:col-span-2',
+        'sm:col-span-3',
+        'sm:col-span-4',
+        'sm:col-span-5',
+        'sm:col-span-6',
         'from-blue-600',
         'to-pink-600',
         {
@@ -106,7 +112,7 @@ module.exports = {
                 'standfirst-md': ['1.25rem', '2rem'],
             },
 
-        
+
             letterSpacing: {
                 'tightest': '-.07em',
                 'tighter': '-.04em',

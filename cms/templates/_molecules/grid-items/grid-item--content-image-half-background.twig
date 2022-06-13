@@ -13,13 +13,13 @@
 
 {# custom #}
 {%- set style = {
-    box: "w-full md:w-[50vw] md:h-[50vw] lg:max-h-[100vh] flex-shrink-0 flex-grow-0"
+    box: "w-full md:w-[50vw] md:h-[50vw] lg:w-[50vw] lg:h-[45vw] lg:max-h-[100vh] flex-shrink-0 flex-grow-0"
 }-%}
 
 {%- minify -%}
     <article class="md:flex {{ settings.position == 'right' ? 'md:flex-row-reverse' : '' }} {{ utilities }}">
-        <div class="bg-{{- settings.background }} relative flex items-center {{ style.box -}}">
-            <h2 class="block py-12 px-6 md:p-16 lg:p-20 md:max-h-[50vw] md:overflow-auto">
+        <div class="bg-{{- settings.background }} aspect-16/9 md:aspect-auto relative flex items-center {{ style.box -}}">
+            <h2 class="block px-8 py-12 md:p-16 lg:p-20 md:max-h-[50vw] md:overflow-auto">
                 {{- render.atom('text', 'h3', {
                     content: item.body,
                     color: 'white',
@@ -28,8 +28,14 @@
 
             <div class="hidden md:block bg-gradient-to-b from-transparent via-{{- settings.background }} to-{{- settings.background }} absolute bottom-0 left-0 w-full h-5 md:h-16 lg:h-20">&nbsp;</div>
         </div>
-        <div class="{{- style.box -}}">
-            image
+        <div class="{{- style.box }} flex items-center overflow-hidden">
+            {{- render.atom('image', 'grid-half-square', {
+                    image: item.image.collect().first(),
+                    sizes: ['(max-width:768px) 100vw', '(min-width:768px) 50vw'],
+                    alt: content.title,
+                    placeholders: placeholders,
+                })
+            -}}
         </div>
     </article>
 {%- endminify -%}

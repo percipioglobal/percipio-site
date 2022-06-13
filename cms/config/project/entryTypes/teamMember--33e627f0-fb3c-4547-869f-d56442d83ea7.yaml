@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 399cd08f-b9e2-4ee9-a41c-6a00077fbc87
             warning: null
             width: 100
           -
@@ -33,10 +34,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 32ff9e6c-b0a8-4248-aaa3-d76ca901e917
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: f25cbe44-8467-474a-b914-b73c5bbe72e8
       -
         elements:
           -
@@ -46,6 +48,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 96fad725-d5ea-4de2-819c-4abe81aa632a
             warning: null
             width: 100
           -
@@ -55,6 +58,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 1c1b87b7-fdcd-45c8-9523-a12e761e19d6
             warning: null
             width: 100
           -
@@ -64,6 +68,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 5f315fc9-1e0b-411a-bb60-f66a1b2c8e79
             warning: null
             width: 50
           -
@@ -73,6 +78,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 01aebe67-f429-4c9d-a69e-9ccc43c6a0ec
             warning: null
             width: 50
           -
@@ -82,6 +88,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 805d9f62-b05a-4dae-98b3-f377a1dcd518
             warning: null
             width: 50
           -
@@ -91,10 +98,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c6e28c32-efad-417c-9a1b-984d804be85d
             warning: null
             width: 50
         name: Metadata
-        sortOrder: 2
+        uid: 094f35d5-df1d-49cc-bae0-0ec0100db43b
       -
         elements:
           -
@@ -104,6 +112,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 81269f64-a85d-40b7-b71f-e7981f310151
             warning: null
             width: 100
           -
@@ -113,10 +122,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 16a63a34-d934-4ee1-80e7-464f7b4b77b4
             warning: null
             width: 100
         name: Options
-        sortOrder: 3
+        uid: 67be2356-090e-414c-b44f-1cc616196e3c
 handle: teamMember
 hasTitleField: true
 name: 'Team Member'

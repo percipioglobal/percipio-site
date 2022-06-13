@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: string
 fieldGroup: 2473fef2-babd-4336-bb2e-550dc284282c # FAQ
 handle: faqCategory
@@ -8,10 +9,11 @@ settings:
   allowLimit: false
   allowMultipleSources: false
   allowSelfRelations: false
-  branchLimit: ''
-  limit: null
+  branchLimit: null
   localizeRelations: false
-  selectionLabel: ''
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
   showSiteMenu: true
   source: 'group:4e026396-d7ab-43ef-a817-226fb2dada30' # FAQ Categories
   sources: '*'

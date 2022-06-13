@@ -26,6 +26,8 @@ fields:
     name: 'Grid Items'
     searchable: false
     settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 1180429098
       columns:
         __assoc__:
           -
@@ -49,7 +51,7 @@ fields:
                 -
                   - width
                   - ''
-      contentTable: '{{%stc_69_griditems}}'
+      contentTable: '{{%stc_67_griditems}}'
       fieldLayout: matrix
       maxRows: null
       minRows: null

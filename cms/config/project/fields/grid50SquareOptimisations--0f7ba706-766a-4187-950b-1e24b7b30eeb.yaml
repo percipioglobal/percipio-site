@@ -1,9 +1,9 @@
 columnSuffix: uwhompjm
 contentColumnType: text
 fieldGroup: 1dd95078-7c8a-4ef7-8a16-e33a5341dadb # Image Optimisations 
-handle: grid50Optimisations
+handle: grid50SquareOptimisations
 instructions: null
-name: 'Grid 50% Optimisations'
+name: 'Grid 50% Square Optimisations'
 searchable: false
 settings:
   displayDominantColorPalette: true

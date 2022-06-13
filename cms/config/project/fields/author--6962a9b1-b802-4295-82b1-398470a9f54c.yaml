@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: text
 fieldGroup: 712cce4e-490d-44b8-bf2c-5d00c2de4c40 # Assets
 handle: author
@@ -7,10 +8,10 @@ searchable: false
 settings:
   byteLimit: null
   charLimit: null
-  code: ''
+  code: false
   columnType: null
-  initialRows: '4'
-  multiline: ''
+  initialRows: 4
+  multiline: false
   placeholder: 'John Doe'
   uiMode: normal
 translationKeyFormat: null

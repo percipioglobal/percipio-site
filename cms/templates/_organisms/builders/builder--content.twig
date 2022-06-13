@@ -5,6 +5,7 @@
         'contentBuilder.contentCta:image',
         'contentBuilder.highlightCards:cards',
         'contentBuilder.highlightCards:cards.cardImage',
+        'contentBuilder.galleryImages:images',
         'contentBuilder.gridContent:gridItems',
         'contentBuilder.gridContentAnimation:gridItems',
         'contentBuilder.gridContentAnimation:gridItems.image',
@@ -40,19 +41,20 @@
                 {%- set background = swatch(block.background) -%}
 
                 {# check which cta should be loaded #}
-                {%- set component = '_molecules/ctas/cta--text' -%}
+                {%- set component = block.ctaImage.count() == 0 ? '_organisms/ctas/cta--text' : '_organisms/ctas/cta--image' -%}
 
-                {%- if block.image|length -%}
-                    {%- set component = '_molecules/ctas/cta--image' -%}
-                {%- endif -%}
-
-                {# load component #}
                 {%- include component ignore missing with {
                     heading: block.heading ??? '',
                     content: block.body ??? '',
                     button: block.target ??? null,
                     background: background,
-                    image: block.image ??? null
+                    image: block.ctaImage ??? null
+                } -%}
+
+            {%- case 'galleryImages' -%}
+
+                {%- include '_organisms/grids/grid--images' ignore missing with {
+                    images: block.images
                 } -%}
 
             {%- case 'gridContent' -%}
@@ -70,6 +72,12 @@
             {%- case 'gridContentImageHalfBackground' -%}
 
                 {%- include '_organisms/grids/grid--content-image-half-background' ignore missing with {
+                    items: block
+                } -%}
+
+            {%- case 'gridContentImageHalf' -%}
+
+                {%- include '_organisms/grids/grid--content-image-half' ignore missing with {
                     items: block
                 } -%}
 

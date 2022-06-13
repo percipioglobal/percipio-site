@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6e71e6b6-ad47-4701-b853-a3a64995b1f7
             warning: null
             width: 100
           -
@@ -33,10 +34,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 73e2b36f-c048-498c-9d71-8e3fe2b02635
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 695d06dc-f361-4b98-8fda-b7ba73c593ff
       -
         elements:
           -
@@ -46,10 +48,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 96d32333-ecd1-4245-bae1-c31055c25aa2
             warning: null
             width: 100
         name: Options
-        sortOrder: 2
+        uid: d02f2801-40b7-4aa4-8685-be4c5dbfba88
       -
         elements:
           -
@@ -59,6 +62,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: f522812f-29b3-4125-a5e8-4a59296ffe8d
             warning: null
             width: 100
           -
@@ -68,10 +72,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: faa85eb2-d049-41e1-824e-49798441446c
             warning: null
             width: 100
         name: SEO
-        sortOrder: 3
+        uid: 3d5eb2f0-13ac-49d4-bebf-daec84b5de94
 handle: vacanciesPage
 hasTitleField: true
 name: 'Vacancies Page'

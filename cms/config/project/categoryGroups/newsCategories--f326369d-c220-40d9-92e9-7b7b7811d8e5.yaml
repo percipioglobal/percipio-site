@@ -1,19 +1,51 @@
+defaultPlacement: end
 fieldLayouts:
   df947a14-e514-4e9d-92c2-eaceb851818e:
     tabs:
       -
-        fields:
-          648e7555-63ed-4228-a6b7-7811c865a7af: # Category Description
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: a27740b4-d8b9-4a7f-a557-d80105bdf2ac
+            warning: null
+            width: 100
+          -
+            fieldUid: 648e7555-63ed-4228-a6b7-7811c865a7af # Category Description
+            instructions: null
+            label: null
             required: false
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a3c9b320-be30-4549-8113-e5bf98c7e7fb
+            warning: null
+            width: 100
         name: Content
-        sortOrder: 1
+        uid: 5f16e3e3-c395-4a6c-aa2e-78427db06e49
 handle: newsCategories
 name: 'News Categories'
 siteSettings:
   5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
     hasUrls: true
-    template: ''
+    template: null
     uriFormat: 'news-categories/{slug}'
 structure:
   maxLevels: null

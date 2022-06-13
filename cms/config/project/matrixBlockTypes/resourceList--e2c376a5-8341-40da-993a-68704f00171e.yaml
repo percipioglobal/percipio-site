@@ -26,6 +26,8 @@ fields:
     name: Resources
     searchable: false
     settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 75481674
       columns:
         __assoc__:
           -

@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: string
 fieldGroup: 12311739-6ceb-4fb4-a572-7f2ea0ad3b69 # Documents
 handle: coverPhoto
@@ -6,24 +7,27 @@ name: 'Cover Photo'
 searchable: false
 settings:
   allowSelfRelations: false
+  allowSubfolders: false
   allowUploads: true
   allowedKinds: null
   defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
-  defaultUploadLocationSubpath: ''
-  limit: '1'
+  defaultUploadLocationSubpath: null
   localizeRelations: false
+  maxRelations: 1
+  minRelations: null
   previewMode: full
-  restrictFiles: ''
-  selectionLabel: ''
+  restrictFiles: false
+  restrictLocation: true
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:918b50e1-632c-4e92-a8c5-55eeb7b8571e'
+  restrictedLocationSubpath: null
+  selectionLabel: null
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  singleUploadLocationSource: 'volume:918b50e1-632c-4e92-a8c5-55eeb7b8571e'
-  singleUploadLocationSubpath: ''
   source: null
   sources: '*'
   targetSiteId: null
-  useSingleFolder: true
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null

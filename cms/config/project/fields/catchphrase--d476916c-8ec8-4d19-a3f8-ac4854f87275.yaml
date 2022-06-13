@@ -1,17 +1,18 @@
+columnSuffix: null
 contentColumnType: text
 fieldGroup: 11cffc84-a18e-49e3-9923-8229743b2a28 # Branding
 handle: catchphrase
-instructions: ''
+instructions: null
 name: Catchphrase
 searchable: false
 settings:
   byteLimit: null
   charLimit: null
-  code: ''
+  code: false
   columnType: null
-  initialRows: '4'
-  multiline: ''
-  placeholder: ''
+  initialRows: 4
+  multiline: false
+  placeholder: null
   uiMode: normal
 translationKeyFormat: null
 translationMethod: none

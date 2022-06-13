@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: text
 fieldGroup: 1572f461-2a67-47a4-a36c-80839168bcb7 # Globals
 handle: organisationName
@@ -7,11 +8,11 @@ searchable: false
 settings:
   byteLimit: null
   charLimit: null
-  code: ''
+  code: false
   columnType: null
-  initialRows: '4'
-  multiline: ''
-  placeholder: ''
+  initialRows: 4
+  multiline: false
+  placeholder: null
   uiMode: normal
 translationKeyFormat: null
 translationMethod: none

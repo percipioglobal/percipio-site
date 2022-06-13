@@ -36,6 +36,8 @@ fields:
     name: Items
     searchable: false
     settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 1856598456
       columns:
         __assoc__:
           -

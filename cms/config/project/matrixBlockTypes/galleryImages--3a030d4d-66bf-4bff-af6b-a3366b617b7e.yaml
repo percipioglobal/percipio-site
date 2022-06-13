@@ -14,16 +14,6 @@ fieldLayouts:
             uid: 9654328d-2e75-4e3c-9ac9-a5b22f64c14b
             warning: null
             width: 100
-          -
-            fieldUid: beef2807-f960-414c-9ff2-690d9c30b6a8 # Caption
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d4477ef0-cb15-4631-9dad-e1936d897b44
-            warning: null
-            width: 100
         name: Content
         uid: f0ea4d42-992d-43d9-a7f9-e1ce6079f6d0
 fields:
@@ -44,13 +34,13 @@ fields:
       defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
       defaultUploadLocationSubpath: null
       localizeRelations: false
-      maxRelations: 8
+      maxRelations: null
       minRelations: null
       previewMode: full
       restrictFiles: true
       restrictLocation: true
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      restrictedLocationSource: 'volume:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
       restrictedLocationSubpath: null
       selectionCondition:
         __assoc__:
@@ -75,26 +65,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  beef2807-f960-414c-9ff2-690d9c30b6a8: # Caption
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: caption
-    instructions: 'Enter an original caption for the image gallery'
-    name: Caption
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
 handle: galleryImages
 name: 'Image Gallery'
 sortOrder: 11
