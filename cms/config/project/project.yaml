@@ -1,4 +1,4 @@
-dateModified: 1655117117
+dateModified: 1655122043
 elementSources:
   craft\elements\Entry:
     -
@@ -122,11 +122,31 @@ fs:
       subfolder: ctas
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
+  grids:
+    hasUrls: true
+    name: Grids
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: grid50
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
 meta:
   __names__:
     0c7a7b67-3926-4a9f-b449-8d1d1c451f2f: Width # Width
     0d208796-7b7c-4677-bab0-0c107ff1c99b: Button # Button
     0dd08fc1-c043-49cb-bdcf-80521b7bd98a: Settings # Settings
+    0f7ba706-766a-4187-950b-1e24b7b30eeb: 'Grid 50% Optimisations' # Grid 50% Optimisations
     0fb24d65-ce08-439c-b873-e060e2797035: 'Hero Secondary' # Hero Secondary
     1a84863b-861a-4293-b8ca-c88d90b87ae8: 'Card Placeholder' # Card Placeholder
     1aad5a2f-f77c-42d8-8c02-c97817b9cb18: 'The Answer' # The Answer
@@ -158,6 +178,7 @@ meta:
     3fc84cf5-6e3d-46e8-bf13-9a1d4e198438: Caption # Caption
     4a86f07d-200e-4dbc-a06a-223d9cc5c049: Images # Images
     4be4bd14-ce94-450b-a4f4-e10721ba5b22: Containerise # Containerise
+    4dfa8799-f095-4bd8-a821-1fb376db0278: Grids # Grids
     4e026396-d7ab-43ef-a817-226fb2dada30: 'FAQ Categories' # FAQ Categories
     4ee5d848-5fee-407d-a3aa-7475ef0fe6bc: Width # Width
     4f6c2efe-5cf4-46b5-82e5-79a8796af5c5: Content # Content
@@ -210,7 +231,6 @@ meta:
     47c98ad7-c9a9-402c-9171-9fd14eb7e8f4: 'Highlight Cards' # Highlight Cards
     48f153ba-ba26-42dd-b297-c5b428cc259b: Image # Image
     49d732ef-0bfc-46c0-ba09-004de008c0ba: Ratio # Ratio
-    51bc81b6-6bb0-416b-a878-c22aab48df6f: 'Grid Content Animation' # Grid Content Animation
     54daa4d7-b5cf-4458-9e19-67155be19343: 'Organisation Phone' # Organisation Phone
     54e60257-f31a-44aa-960e-bbd364197e28: Homepage # Homepage
     55ac783b-adeb-42fc-98f5-0adf13a8419d: Width # Width
@@ -318,6 +338,7 @@ meta:
     a57c1d51-171d-47c2-ac77-cbc30d2229f3: 'Content CTA' # Content CTA
     a72bfe0c-3389-4f9f-8ec1-ab318ec10b29: Errors # Errors
     a81ab3c0-c52b-4817-8820-c0e69e9a0d2d: Containerise # Containerise
+    a2754e8b-3bc4-46e8-a8e4-45f15fd7590a: 'Grid 33% Optimisations' # Grid 33% Optimisations
     ab91f872-7263-4250-b647-317386f8f679: 'Organisation Address' # Organisation Address
     ae2f2577-98ad-4416-afb0-0a136fd1680d: Location # Location
     ae57f7d7-6764-4fd4-84e9-3e526e23b520: Image # Image
