@@ -21,12 +21,12 @@
     } -%}
 
     {%- include '_organisms/grids/grid--locations' ignore missing with {
-        locations: footerData.locations.collect().all() ??? null,
+        locations: footerData.locations.collect() ??? null,
     } -%}
 
     {%- include '_molecules/metas/meta--footer' ignore missing with {
         copyright: footerData.copyright ??? '',
-        legals: footerData.legalNavigation.collect().all() ??? null,
+        legals: footerData.legalNavigation.collect() ??? null,
     } -%}
     
 </footer>

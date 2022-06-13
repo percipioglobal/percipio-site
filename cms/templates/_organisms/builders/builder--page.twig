@@ -25,7 +25,7 @@
 
 {%- minify -%}
 
-    {%- for block in content.pageBuilder.collect().all() -%}
+    {%- for block in content.pageBuilder.collect() -%}
 
         {%- switch block.type -%}
 
