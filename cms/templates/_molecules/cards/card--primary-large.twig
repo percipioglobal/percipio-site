@@ -47,5 +47,16 @@
         </header>
 
         <div class="bg-pink-500 h-3 absolute bottom-0 left-0 w-full"></div>
+
+        {{- render.atom('link', 'card', {
+                url: content.url,
+                text: content.title,
+                ga: {
+                    category: 'Primary Card Large',
+                    action: 'click',
+                    label: content.title ??? null,
+                },
+            })
+        -}}
     </article>
 {%- endblock -%}
