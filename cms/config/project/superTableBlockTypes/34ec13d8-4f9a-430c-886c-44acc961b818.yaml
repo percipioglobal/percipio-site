@@ -11,7 +11,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 97cb9251-1803-4c12-9ef5-6c1fb91830d5
+            uid: 5194674e-aa32-4cac-b442-dc6857f779fa
             warning: null
             width: 100
           -
@@ -21,7 +21,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0a2e1178-ea3a-492a-8145-362084b40b6b
+            uid: b76ae866-ff5f-474e-b28f-1f55aa9166c8
             warning: null
             width: 100
           -
@@ -31,7 +31,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9b66afb2-bca7-4b2a-bbc1-b169d96fdf0f
+            uid: c71b3f56-7d40-4f99-b211-8779ffc854d2
             warning: null
             width: 100
         name: Content
@@ -39,24 +39,52 @@ fieldLayouts:
 fields:
   211c30fd-38d1-4538-a639-0fa6572f5273: # Image
     columnSuffix: null
-    contentColumnType: text
+    contentColumnType: string
     fieldGroup: null
     handle: image
     instructions: null
     name: Image
     searchable: false
     settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:4dfa8799-f095-4bd8-a821-1fb376db0278' # Grids
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources:
+        - 'volume:4dfa8799-f095-4bd8-a821-1fb376db0278' # Grids
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
     translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
+    translationMethod: site
+    type: craft\fields\Assets
   0568325a-5e70-4dde-982d-1cad58a42365: # Background
     columnSuffix: null
     contentColumnType: text

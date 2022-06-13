@@ -97,4 +97,4 @@ fields:
     type: craft\fields\PlainText
 handle: galleryImages
 name: 'Image Gallery'
-sortOrder: 12
+sortOrder: 11

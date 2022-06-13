@@ -10,7 +10,7 @@
 
     <div class="container max-w-[84ch] mx-auto copy-to-clipboard {{ utilities -}}">
 
-        <div class="bg-gray-800 pb-5 pt-2 lg:pb-10 rounded-2xl px-5">
+        <div class="bg-gray-800 pb-5 pt-2 lg:pb-5 mb-10 lg:mb-20 rounded-2xl px-5">
             <div class="font-mono flex justify-between text-yellow-500 pb-2 mb-4 border-b border-yellow-500">
                 <span>{{ filename ??? language ??? 'code'}}</span>
                 <button class="btn-copy-to-clipboard">
@@ -24,7 +24,7 @@
             </div>
 
             <pre class="font-mono text-white overflow-auto">
-                <code class="{{- 'language-' ~ language }} code-copy-to-clipboard">
+                <code class="{{- 'language-' ~ language }} text-sm lg:text-base code-copy-to-clipboard">
                     {{- code -}}
                 </code>
             </pre>
