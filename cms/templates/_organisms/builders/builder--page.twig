@@ -57,7 +57,7 @@
                 {%- set background = swatch(block.background) -%}
 
                 {# check which header should be loaded #}
-                {%- set component = block.target.getUrl() ? '_molecules/headers/header--button' : '_molecules/headers/header--text' -%}
+                {%- set component = (block.target.getUrl() ??? null) ? '_molecules/headers/header--button' : '_molecules/headers/header--text' -%}
 
                 {%- include component ignore missing with {
                     heading: block.heading ??? '',

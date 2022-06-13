@@ -40,11 +40,11 @@
                             ratio: props.image.collect().first().ratio ??? null,
                             author: props.image.collect().first().author ?? '',
                             source: props.image.collect().first().source ?? '',
-                            utilities: 'w-full max-w-[665px] mb-4 md:mb-20 lg:mb-0',
+                            utilities: 'w-full max-w-[665px] mb-8 md:mb-20 lg:mb-0',
                         })
                     -}}
                 </div>
-                <div class="w-full lg:w-1/2 lg:pr-10">
+                <div class="w-full lg:w-1/2 lg:pr-10 text-center sm:text-left">
                     <h2>{{- render.atom('text', 'h2', {
                         content: props.heading,
                         color: props.background.primary == 'white' ? 'gray-800' : 'white',
@@ -54,6 +54,7 @@
                         {{- render.atom('text', 'description', {
                             content: props.content,
                             color: props.background.primary == 'white' ? 'text-gray-600' : 'text-white',
+                            alignment: 'text-center sm:text-left',
                             utilities: 'mt-8'
                         }) -}}
                     {%- endif -%}
