@@ -195,7 +195,7 @@ fields:
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: ctaImage
+    handle: image
     instructions: null
     name: Image
     searchable: false
