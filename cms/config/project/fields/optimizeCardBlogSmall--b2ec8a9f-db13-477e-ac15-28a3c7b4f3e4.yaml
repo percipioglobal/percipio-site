@@ -68,10 +68,10 @@ settings:
           - '1'
         -
           - aspectRatioX
-          - '4'
+          - '16'
         -
           - aspectRatioY
-          - '5'
+          - '9'
         -
           - retinaSizes
           -
