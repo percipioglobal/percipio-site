@@ -16,7 +16,7 @@
 {%- block text -%}
 
     {%- minify -%}
-        <span class="text-gray-600 text-xl tracking-tightest {{ props.utilities -}}">
+        <span class="text-gray-600 text-base md:text-xl tracking-tightest {{ props.utilities -}}">
             {{- props.content | typogrify(true) | raw -}}
         </span>
     {%- endminify -%}

@@ -19,7 +19,7 @@
 
 {%- block card -%}
     <article class="relative bg-white shadow-2xl rounded-4xl p-6 pb-9 overflow-hidden {{ props.utilities -}}">
-        <div class="relative rounded-[20px] overflow-hidden">
+        <div class="relative rounded-[20px] overflow-hidden -mt-4 -mx-4">
             {{- render.atom('image', 'card-small', {
                     image: content.cardImage.collect().first(),
                     sizes: ['(max-width:768px) 100vw', '(min-width:768px) 33.3vw'],
