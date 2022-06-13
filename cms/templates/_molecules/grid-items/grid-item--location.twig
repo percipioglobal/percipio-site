@@ -7,10 +7,12 @@
 
 <div class="flex flex-col items-center w-full">
     {{- render.atom('text', 'h3', {
+        alignment: 'text-center',
         content: props.city,
         color: 'white',
     }) -}}
     {{- render.atom('text', 'location', {
+        alignment: 'text-center',
         content: props.country,
         color: 'text-white',
         utilities: 'mt-2',
