@@ -1,6 +1,6 @@
 {%- extends '_atoms/buttons/_button--props' -%}
 {%- import '_macros/atoms' as render -%}
-{%- import '_macros/functions' as functions -%}
+{%- import '_macros/functions' as parse -%}
 {%- import '_macros/icons' as icon -%}
 
 {#
@@ -41,7 +41,7 @@
 
         <a
             {{ props.url ? 'href=' ~ props.url : '' }}
-            {{ functions.ga(props.ga) }}
+            {{ parse.ga(props.ga) }}
             {{ props.target ? 'target=' ~ props.target : '' }}
             aria-label="{{- props.text -}}"
             class="{{ classes._default }} {{ classes.animation }} {{ classes.color }} {{ classes.focus }} {{ classes.font }} {{ classes.hover }} {{ classes.padding }} {{ props.utilities }}"

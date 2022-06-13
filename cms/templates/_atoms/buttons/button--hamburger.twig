@@ -1,5 +1,5 @@
 {%- extends '_atoms/buttons/_button--props' -%}
-{%- import '_macros/functions' as functions -%}
+{%- import '_macros/functions' as parse -%}
 
 {#
     ### PROPERTIES ###
@@ -29,7 +29,7 @@
     {%- minify -%}
 
         <button
-            {{ functions.ga({
+            {{ parse.ga({
                 category: 'Hamburger button',
                 action: 'click',
                 label: 'Show the mobile site navigation'
