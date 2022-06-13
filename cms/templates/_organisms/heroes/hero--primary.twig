@@ -4,7 +4,7 @@
 
     {%- set backgroundImage = content.heroImage -%}
 
-    <header class="{{- backgroundImage|length ? 'bg-gray-800' : '' }} w-full min-h-[85vh] py-6 md:py-12 flex items-center justify-center">
+    <header class="{{- backgroundImage|length ? 'bg-gray-800' : '' }} w-full min-h-[85vh] pt-28 pb-6 md:pb-12 flex items-center justify-center">
         <div class="container max-w-screen-xl mx-auto flex flex-col items-center">
             {# overline #}
             {{- render.atom('text', 'overline', {
