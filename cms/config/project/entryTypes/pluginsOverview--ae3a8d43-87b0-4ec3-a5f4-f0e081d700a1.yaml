@@ -29,9 +29,9 @@ fieldLayouts:
             width: 100
         name: Content
         uid: 802f2165-59c7-425d-8630-531be8aef2d3
-handle: pluginsPage
+handle: pluginsOverview
 hasTitleField: true
-name: 'Plugins page'
+name: 'Plugins Overview'
 section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
 sortOrder: 10
 titleFormat: null

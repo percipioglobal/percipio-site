@@ -77,9 +77,9 @@ fieldLayouts:
             width: 100
         name: SEO
         uid: e0daa89e-67dc-4d4d-949b-5a4b07a556f7
-handle: servicesPage
+handle: servicesOverview
 hasTitleField: true
-name: 'Services Page'
+name: 'Services Overview'
 section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
 sortOrder: 6
 titleFormat: null

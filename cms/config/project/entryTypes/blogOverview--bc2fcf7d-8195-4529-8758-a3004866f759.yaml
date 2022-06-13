@@ -1,5 +1,5 @@
 fieldLayouts:
-  42eabe2c-60d8-43a8-83f8-051bc3027d78:
+  ecebb537-0462-4a94-8a09-eb3c92d6de22:
     tabs:
       -
         elements:
@@ -24,7 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 6e71e6b6-ad47-4701-b853-a3a64995b1f7
+            uid: db2a523f-05ad-4da2-9184-521796ec40c6
             warning: null
             width: 100
           -
@@ -34,11 +34,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 73e2b36f-c048-498c-9d71-8e3fe2b02635
+            uid: ca827453-a4f3-48ba-ad0c-127181559aac
             warning: null
             width: 100
         name: Content
-        uid: 695d06dc-f361-4b98-8fda-b7ba73c593ff
+        uid: 644ca913-5629-4361-b254-0c2432a262aa
       -
         elements:
           -
@@ -48,23 +48,13 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 96d32333-ecd1-4245-bae1-c31055c25aa2
+            uid: ea72af56-b9ff-4bb4-934e-9335d3d8c653
             warning: null
             width: 100
         name: Options
-        uid: d02f2801-40b7-4aa4-8685-be4c5dbfba88
+        uid: e8188365-a2ae-42f4-905b-ed1bd3efe680
       -
         elements:
-          -
-            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3 # Teaser Image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: f522812f-29b3-4125-a5e8-4a59296ffe8d
-            warning: null
-            width: 100
           -
             fieldUid: da9598dc-e9bb-4920-8adf-a712876cb578 # Meta Description
             instructions: null
@@ -72,16 +62,26 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: faa85eb2-d049-41e1-824e-49798441446c
+            uid: f1e2700a-983f-4714-b6d3-483fbd763e3b
+            warning: null
+            width: 100
+          -
+            fieldUid: cb2b1336-5ccd-48f4-a973-72fae9fd4069 # Meta Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0c68038e-79c6-45c8-bd06-c90a5cb71d2a
             warning: null
             width: 100
         name: SEO
-        uid: 3d5eb2f0-13ac-49d4-bebf-daec84b5de94
-handle: vacanciesPage
+        uid: c032e8f1-7ed7-4882-a88f-83cac8560877
+handle: blogOverview
 hasTitleField: true
-name: 'Vacancies Page'
+name: 'Blog Overview'
 section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
-sortOrder: 8
+sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

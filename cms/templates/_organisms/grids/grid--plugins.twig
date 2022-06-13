@@ -1,0 +1,50 @@
+{%- extends '_organisms/grids/_grid--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_organisms/grids/grid--props.twig`
+
+    ## EXTENDED
+    -----------
+    plugins (Collection): Collection of plugins
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## MOLECULES
+
+    card--plugin: `_molecules/card/card--plugin.twig`
+#}
+
+{%- block grid -%}
+
+    {%- set props = props|merge({
+        locations: locations ??? null,
+    }) -%}
+
+    {%- minify -%}
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-12 md:py-32 container max-w-screen-xl mx-auto">
+
+            {%- include '_molecules/cards/card--primary-' ~ props.startSize ignore missing with {
+                content: props.firstCard,
+            } -%}
+
+            {%- for cards in props.chunks -%}
+
+                {%- set size = loop.index is odd ? props.ODD : props.EVEN -%}
+
+                {%- for card in cards -%}
+
+                    {%- include '_molecules/cards/card--primary-' ~ size ignore missing with {
+                        content: card,
+                    } -%}
+
+                {%- endfor -%}
+
+            {%- endfor -%}
+            
+        </section>
+    {%- endminify -%}
+{%- endblock -%}
