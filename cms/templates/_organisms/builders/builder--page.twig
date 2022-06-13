@@ -34,14 +34,14 @@
                 {%- set background = swatch(block.background) -%}
 
                 {# check which cta should be loaded #}
-                {%- set component = block.ctaImage.count() == 0 ? '_organisms/ctas/cta--text' : '_organisms/ctas/cta--image' -%}
+                {%- set component = block.image.count() == 0 ? '_organisms/ctas/cta--text' : '_organisms/ctas/cta--image' -%}
 
                 {%- include component ignore missing with {
                     heading: block.heading ??? '',
                     content: block.body ??? '',
                     button: block.target ??? null,
                     background: background,
-                    image: block.ctaImage ??? null
+                    image: block.image ??? null
                 } -%}
 
             {%- case 'highlightCards' -%}
