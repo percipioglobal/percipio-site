@@ -16,8 +16,8 @@
 
 {%- block image -%}
     {%- set props = props|merge({
-        optimized: options.image.grid50SquareOptimisations ??? null,
-        placeholder: options.placeholders.gridPlaceholder.first.grid50SquareOptimisations,
+        optimized: options.image.optimizeGrid50Square ??? null,
+        placeholder: options.placeholders.gridPlaceholder.first.optimizeGrid50Square,
     }) -%}
 
     {%- minify -%}
