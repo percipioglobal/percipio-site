@@ -14,7 +14,7 @@ elementSources:
       key: 'section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
       tableAttributes:
         - type
-        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e'
+        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e' # Colour Swatch
         - revisionCreator
         - dateUpdated
         - link
@@ -43,7 +43,7 @@ elementSources:
       tableAttributes:
         - slug
         - 'field:8ce2faf2-a20a-4547-8145-4e3f9e75eb87' # Blog Categories
-        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e'
+        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e' # Colour Swatch
         - author
         - postDate
         - link
@@ -63,7 +63,7 @@ elementSources:
       key: 'section:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
       tableAttributes:
         - 'field:10a7e511-e02a-46ff-8524-7390d3e9be19' # Client
-        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e'
+        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e' # Colour Swatch
         - dateUpdated
         - revisionCreator
         - postDate
@@ -74,9 +74,9 @@ elementSources:
       tableAttributes:
         - slug
         - postDate
-        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e'
+        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e' # Colour Swatch
         - link
-        - 'field:cbbbac66-4ad4-4edc-b9fe-ef597989736f'
+        - 'field:cbbbac66-4ad4-4edc-b9fe-ef597989736f' # Sort order
       type: native
     -
       key: 'section:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
@@ -254,7 +254,7 @@ meta:
     2a8995d5-6e36-4d6b-8992-419951e154b0: Description # Description
     2b415d29-2051-4baf-988f-da71364afc60: Description # Description
     2b6794f2-86c4-486e-ad7e-a162752af5ef: 'Grid 50% Optimisations' # Grid 50% Optimisations
-    2bcee070-9832-4e9a-a3d1-51566028022e: 'OG Image' # OG Image
+    2bcee070-9832-4e9a-a3d1-51566028022e: 'OG Image'
     2c70613c-0c00-4d9a-96bf-658a6db58d9c: Logo # Logo
     2c244265-381c-45ad-b439-7845b814e5ee: Resources # Resources
     2cb6fb1e-761a-4096-ba9d-e151495efc98: Caption # Caption
@@ -289,7 +289,7 @@ meta:
     07a123c0-4e8e-4c19-a79e-61829f5d88c0: Builders # Builders
     7b7f1a25-dd1f-40c1-8c62-7af0091d883f: Width # Width
     7bc51fb0-9ad3-4518-bd25-e12e3d2d0acf: Button # Button
-    7c663d4b-8df0-42ba-af70-699dc9d51210: 'OG optimisations' # OG optimisations
+    7c663d4b-8df0-42ba-af70-699dc9d51210: 'OG optimisations'
     7d2faad5-6db7-456e-bf6d-53461216d40e: 'Content CTA' # Content CTA
     7e7008d5-deb5-4018-9fb7-52f6b2603f34: Cards # Cards
     8a8aa24a-d558-4d4c-83a5-e5983ab32e77: Items # Items
@@ -373,7 +373,7 @@ meta:
     870c07d7-9341-4f1f-825b-25c76239bc0d: Caption # Caption
     914b27f9-4dac-42d5-bb42-0e41ba29f93a: 'Contact Page' # Contact Page
     924c71a7-4d25-4b3b-9a46-2b1ea495cefe: 'Text Grid' # Text Grid
-    1161e40e-4abd-42f6-ab07-1f1254de17b4: OG # OG
+    1161e40e-4abd-42f6-ab07-1f1254de17b4: OG
     1572f461-2a67-47a4-a36c-80839168bcb7: Globals # Globals
     1750a33c-c911-45de-9392-80a3004cbe0d: Description # Description
     1755ebbe-91fc-4a2a-80cb-667cc2cf1795: Locations # Locations

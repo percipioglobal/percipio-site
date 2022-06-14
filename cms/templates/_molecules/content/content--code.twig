@@ -1,4 +1,4 @@
-{%- extends '_molecules/cards/_content--props' -%}
+{%- extends '_molecules/content/_content--props' -%}
 {%- import '_macros/atoms' as render -%}
 {%- import '_macros/icons' as icons -%}
 
@@ -24,9 +24,9 @@
     {%- minify -%}
 
         {%- set props = props|merge({
-            code: code ??? null,
-            filename: filename ??? null,
-            language: language ??? null,
+            code: props.content.code ??? null,
+            filename: props.content.filename ??? null,
+            language: props.content.language ??? null,
         }) -%}
 
         <div class="container max-w-[84ch] mx-auto copy-to-clipboard {{ props.utilities -}}">
@@ -54,5 +54,5 @@
         </div>
 
     {%- endminify -%}
-    
+
 {%- endblock -%}

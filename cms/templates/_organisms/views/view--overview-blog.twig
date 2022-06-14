@@ -1,4 +1,4 @@
-{%- set entries = 
+{%- set entries =
     craft.entries
     .section('blog')
     .with([
@@ -16,5 +16,6 @@
 
     {%- include '_organisms/grids/grid--blogs' ignore missing with {
         cards: entries,
+        utilities: 'md:mt-20'
     } -%}
 {%- endblock -%}

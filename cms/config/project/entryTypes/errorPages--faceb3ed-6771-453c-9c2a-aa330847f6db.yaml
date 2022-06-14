@@ -32,7 +32,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e
+            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e # Colour Swatch
             instructions: null
             label: null
             required: false
@@ -46,7 +46,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e
             instructions: null
             label: null
             required: false

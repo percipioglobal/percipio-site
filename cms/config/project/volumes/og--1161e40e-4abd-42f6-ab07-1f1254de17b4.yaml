@@ -32,7 +32,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 7c663d4b-8df0-42ba-af70-699dc9d51210 # OG optimisations
+            fieldUid: 7c663d4b-8df0-42ba-af70-699dc9d51210
             instructions: null
             label: null
             required: false

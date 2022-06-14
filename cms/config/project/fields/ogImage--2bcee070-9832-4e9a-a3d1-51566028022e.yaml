@@ -19,7 +19,7 @@ settings:
   restrictFiles: false
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:1161e40e-4abd-42f6-ab07-1f1254de17b4' # OG
+  restrictedLocationSource: 'volume:1161e40e-4abd-42f6-ab07-1f1254de17b4'
   restrictedLocationSubpath: null
   selectionCondition:
     __assoc__:
