@@ -4,7 +4,7 @@ export const init = () => {
     clipboards.forEach(clipboard => {
         const btn = clipboard.querySelectorAll('.btn-copy-to-clipboard')[0]
         const code = clipboard.querySelectorAll('.code-copy-to-clipboard')[0]
-        btn.addEventListener('click', (evt) => copy(code))
+        btn.addEventListener('click', () => copy(code))
     })
 }
 
