@@ -32,14 +32,12 @@
             <div class="lg:flex lg:flex-row-reverse items-center container max-w-screen-xl mx-auto">
                 <div class="w-full lg:w-1/2">
                     {{- render.atom('image', 'default', {
-                            image: props.image.collect().first() ??? null,
-                            optimized: props.image.collect().first().optimizeCta ??? null,
+                            image: props.ctaImage.collect().first() ??? null,
+                            optimized: props.ctaImage.collect().first().optimizeCta ??? null,
                             placeholders: placeholders,
                             sizes: ['(max-width:768px) 18rem', '(min-width:768px) and (max-width:1024px) 41.5625rem', '(min-width:1024px) 24.0625rem'],
-                            alt: props.image.collect().first().title ??? null,
-                            ratio: props.image.collect().first().ratio ??? null,
-                            author: props.image.collect().first().author ?? '',
-                            source: props.image.collect().first().source ?? '',
+                            alt: props.ctaImage.collect().first().title ??? null,
+                            ratio: props.ctaImage.collect().first().ratio ??? null,
                             utilities: 'w-full max-w-[665px] mb-8 md:mb-20 lg:mb-0',
                         })
                     -}}
