@@ -42,37 +42,23 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e # Colour Swatch
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f1ca326d-f39e-44b2-9f8b-53f31e2bdaa5
-            warning: null
-            width: 100
-        name: Options
-        uid: 9c5484dc-7b21-4930-adbf-2030eabf56cf
-      -
-        elements:
-          -
-            fieldUid: da9598dc-e9bb-4920-8adf-a712876cb578 # Meta Description
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 833a7238-f1d2-43a1-a6b3-21c38b8128d4
+            uid: 366d86f7-8214-440f-a590-577922da8118
             warning: null
             width: 100
           -
-            fieldUid: cb2b1336-5ccd-48f4-a973-72fae9fd4069 # Meta Image
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 64248042-b277-453b-b50b-13fd232b3081
+            uid: d85a5d7e-2048-41de-b822-b5a29527df7f
             warning: null
             width: 100
         name: SEO

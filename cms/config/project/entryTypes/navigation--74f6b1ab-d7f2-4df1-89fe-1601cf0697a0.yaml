@@ -28,7 +28,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6c55f6b0-899a-471f-ae96-b7b9f941abce # Link
+            fieldUid: 6c55f6b0-899a-471f-ae96-b7b9f941abce
             instructions: null
             label: null
             required: false
@@ -49,6 +49,20 @@ fieldLayouts:
             width: 100
         name: Content
         uid: b2e6a815-2306-4295-9c30-5211d5307d2d
+      -
+        elements:
+          -
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 505f07e1-fe65-458b-9963-1c48d33c58fe
+            warning: null
+            width: 100
+        name: SEO
+        uid: 238b135c-016a-4305-91c6-79fbb731f822
 handle: navigation
 hasTitleField: true
 name: Navigation

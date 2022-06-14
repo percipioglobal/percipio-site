@@ -96,7 +96,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e # Colour Swatch
+            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e
             instructions: null
             label: null
             required: true
@@ -107,6 +107,20 @@ fieldLayouts:
             width: 100
         name: Options
         uid: 2ef7ac91-9a46-430e-9353-68e63a2cfaff
+      -
+        elements:
+          -
+            fieldUid: 7c663d4b-8df0-42ba-af70-699dc9d51210 # OG optimisations
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ccf0392c-4ccc-42c2-a672-506b3d4ccd36
+            warning: null
+            width: 100
+        name: SEO
+        uid: 52595672-8092-4304-a719-e1b31665d5e6
 handle: blog
 hasTitleField: true
 name: Blog

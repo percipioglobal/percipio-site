@@ -1,6 +1,5 @@
-defaultPlacement: end
 fieldLayouts:
-  389fb0f7-f97f-40f4-a48a-7b674a5cf9ff:
+  83cff03f-309e-48f4-9061-6524dd62714f:
     tabs:
       -
         elements:
@@ -24,29 +23,31 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\TitleField
-            uid: d5d13c42-f8a9-47a9-89bf-1c618565c225
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: c7b88907-58b3-403d-9f24-81a11a320f12
             warning: null
             width: 100
+        name: Content
+        uid: 9647ee5d-163c-4374-8b2b-8a105b5671ae
+      -
+        elements:
           -
-            fieldUid: 648e7555-63ed-4228-a6b7-7811c865a7af
+            fieldUid: 7c663d4b-8df0-42ba-af70-699dc9d51210 # OG optimisations
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7cfab72a-2a1e-4aed-93b2-b5e6eff244bf
+            uid: 4b70a57f-e832-4708-9e93-e063dc8bc669
             warning: null
             width: 100
-        name: Content
-        uid: 685aa10c-3942-48cf-a5ad-a1e49866235f
-handle: faqCategories
-name: 'FAQ Categories'
-siteSettings:
-  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
-    hasUrls: true
-    template: null
-    uriFormat: 'faq-categories/{slug}'
-structure:
-  maxLevels: null
-  uid: 7befe233-fc23-43dd-beb1-5a2c4cb4b812
+        name: 'Image optimisations'
+        uid: 7319cedc-7e05-4f7b-b940-047003febf7f
+fs: og
+handle: og
+name: OG
+sortOrder: 20
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''
