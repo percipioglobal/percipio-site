@@ -4,16 +4,21 @@ export const init = () => {
     clipboards.forEach(clipboard => {
         const btn = clipboard.querySelectorAll('.btn-copy-to-clipboard')[0]
         const code = clipboard.querySelectorAll('.code-copy-to-clipboard')[0]
-        btn.addEventListener('click', (evt) => copy(code))
+        btn.addEventListener('click', () => copy(code))
     })
 }
 
-const copy = (code) => {
-    const range = document.createRange();
-    range.selectNode(code);
-    window.getSelection().removeAllRanges() // clear current selection
-    window.getSelection().addRange(range) // to select text
-    document.execCommand("copy")
-    window.getSelection().removeAllRanges()// to deselect
-    alert("Copy to Clipboard Successfully")
+const copy = (code: Node) => {
+    const range = document.createRange()
+    const w = window.getSelection()
+    range.selectNode(code)
+
+    if (w) {
+        w.removeAllRanges() // clear current selection
+        w.addRange(range) // to select text
+        document.execCommand('copy')
+        w.removeAllRanges() // to deselect
+    }
+    
+    alert('Copy to Clipboard Successfully')
 }
