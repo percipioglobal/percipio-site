@@ -31,24 +31,26 @@
 
         <div class="container max-w-[84ch] mx-auto copy-to-clipboard {{ props.utilities -}}">
 
-            <div class="bg-gray-800 pb-5 pt-2 lg:pb-5 mb-10 lg:mb-20 rounded-2xl px-5">
-                <div class="font-mono flex justify-between text-yellow-500 pb-2 mb-4 border-b border-yellow-500">
-                    <span>{{ props.filename ??? props.language ??? 'code'}}</span>
-                    <button class="btn-copy-to-clipboard">
-                        {{- render.atom('icon', 'fa', {
-                            icon:  icons.fa_icon_lut('clipboard'),
-                            size: 'md',
-                            parentcss: 'ml-2 inline-block',
-                            colour: 'text-white',
-                        }) -}}
-                    </button>
-                </div>
+            <div class="animate" data-animation="slideInRightToLeft">
+                <div class="bg-gray-800 pb-5 pt-2 lg:pb-5 mb-10 lg:mb-20 rounded-2xl px-5">
+                    <div class="font-mono flex justify-between text-yellow-500 pb-2 mb-4 border-b border-yellow-500">
+                        <span>{{ props.filename ??? props.language ??? 'code'}}</span>
+                        <button class="btn-copy-to-clipboard">
+                            {{- render.atom('icon', 'fa', {
+                                icon:  icons.fa_icon_lut('clipboard'),
+                                size: 'md',
+                                parentcss: 'ml-2 inline-block',
+                                colour: 'text-white',
+                            }) -}}
+                        </button>
+                    </div>
 
-                <pre class="font-mono text-white overflow-auto">
-                    <code class="{{- 'language-' ~ props.language }} text-sm lg:text-base code-copy-to-clipboard">
-                        {{- props.code -}}
-                    </code>
-                </pre>
+                    <pre class="font-mono text-white overflow-auto">
+                        <code class="{{- 'language-' ~ props.language }} text-sm lg:text-base code-copy-to-clipboard">
+                            {{- props.code -}}
+                        </code>
+                    </pre>
+                </div>
             </div>
 
         </div>

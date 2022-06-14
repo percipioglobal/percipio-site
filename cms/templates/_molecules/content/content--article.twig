@@ -19,9 +19,11 @@
     {%- minify -%}
 
         <div class="container max-w-[80ch] mx-auto py-5 md:py-10 {{ props.utilities -}}">
-            {%- include '_molecules/content/content--prose' ignore missing with {
-                content: props.content,
-            } -%}
+            <div class="animate" data-animation="slideInRightToLeft">
+                {%- include '_molecules/content/content--prose' ignore missing with {
+                    content: props.content,
+                } -%}
+            </div>
         </div>
 
     {%- endminify -%}

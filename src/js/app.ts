@@ -2,6 +2,7 @@
 // import { createApp } from 'vue'
 import './assets/icons'
 import { init as initNavigation } from './animations/navigation'
+import { init as initPageAnimation } from './animations/page'
 import { init as initCopy } from './utils/copy-to-clipboard'
 
 // Import our CSS
@@ -11,6 +12,7 @@ import '@/css/app.pcss';
 const main = async () => {
 
     initNavigation()
+    initPageAnimation()
     initCopy()
 
     // const app = createApp(App)

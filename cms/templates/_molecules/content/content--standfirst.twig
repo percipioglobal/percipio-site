@@ -24,12 +24,12 @@
         }) -%}
 
         <div class="container max-w-screen-lg mx-auto {{ props.utilities -}}">
-
-            {{- render.atom('text', 'standfirst', {
-                content: props.standfirst,
-                alignment: props.alignment == 'center' ? 'md:text-center' : ''
-            }) -}}
-
+            <div class="animate" data-animation="slideInRightToLeft">
+                {{- render.atom('text', 'standfirst', {
+                    content: props.standfirst,
+                    alignment: props.alignment == 'center' ? 'md:text-center' : ''
+                }) -}}
+            </div>
         </div>
     {%- endminify -%}
 {%- endblock -%}

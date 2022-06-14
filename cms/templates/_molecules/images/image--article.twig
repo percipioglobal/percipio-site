@@ -5,13 +5,15 @@
     {%- minify -%}
         {%- if props.image -%}
             <section class="container max-w-[84ch] mx-auto pb-8 {{ props.utilities -}}">
-                {{- render.atom('image', 'article', {
-                        image: props.image.collect().first(),
-                        sizes: ['100vw'],
-                        alt: props.image.title,
-                        placeholders: placeholders,
-                    })
-                -}}
+                <div class="animate" data-animation="fadeIn">
+                    {{- render.atom('image', 'article', {
+                            image: props.image.collect().first(),
+                            sizes: ['100vw'],
+                            alt: props.image.title,
+                            placeholders: placeholders,
+                        })
+                    -}}
+                </div>
             </section>
         {%- endif -%}
     {%- endminify -%}
