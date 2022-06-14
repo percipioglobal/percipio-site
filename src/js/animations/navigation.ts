@@ -20,7 +20,7 @@ const hamburger = () => {
     })
 }
 
-const slideOpen = (page, siteNavigation, btn, mobileSiteNavigation) => {
+const slideOpen = (page: HTMLElement, siteNavigation: HTMLElement, btn: HTMLElement, mobileSiteNavigation: HTMLElement) => {
     page.classList.remove('slide')
     siteNavigation.classList.remove('slide')
 
