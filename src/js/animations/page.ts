@@ -1,4 +1,14 @@
-const ANIMATIONS = {
+interface Animation {
+    initial: string[]
+    in: string[]
+    out: string[]
+}
+
+interface Animations {
+    [key: string]: Animation
+}
+
+const ANIMATIONS: Animations = {
     'fadeIn': {
         initial: ['transition-opacity', 'ease-out', 'duration-1000'],
         in: ['opacity-1'],
@@ -24,7 +34,7 @@ const ANIMATIONS = {
 //instanciate init
 export const init = () => {
     let ticking = false;
-    const animateElements = document.querySelectorAll('.animate')
+    const animateElements: NodeListOf<HTMLElement> = document.querySelectorAll('.animate')
 
     setInitialAnimations(animateElements)
 
