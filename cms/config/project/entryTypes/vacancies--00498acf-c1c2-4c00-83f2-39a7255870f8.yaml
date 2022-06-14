@@ -42,41 +42,27 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e7a001a5-05ef-4e97-a5c0-8404abc22703
+            warning: null
+            width: 100
+          -
             fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
             instructions: null
             label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a4eeab40-23b6-43da-8a2b-5e516ff0cbe5
-            warning: null
-            width: 100
-          -
-            fieldUid: cb2b1336-5ccd-48f4-a973-72fae9fd4069 # Meta Image
-            instructions: null
-            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 37e552dc-1376-4a02-bc4e-5f4e16986ffd
+            uid: b322758a-1e45-4ed8-b249-ad1d584dc32b
             warning: null
             width: 100
-        name: Metadata
-        uid: 87af67a3-8a37-41ce-b689-c0e99e81a3ef
-      -
-        elements:
-          -
-            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e # Colour Swatch
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 3c6a6e2e-e444-4a65-bccf-364fafc2b229
-            warning: null
-            width: 100
-        name: Options
-        uid: c997e8d4-f145-4d21-a810-0ec38365ac54
+        name: SEO
+        uid: db44d11f-25bd-498a-8e05-d76caae6af90
 handle: vacancies
 hasTitleField: true
 name: Vacancies

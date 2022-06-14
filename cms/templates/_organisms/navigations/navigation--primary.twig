@@ -38,6 +38,7 @@
                                 action:'click',
                                 label: item.title ??? null,
                             },
+                            active: (item.target.first().url ??? '') in craft.app.request.absoluteUrl,
                             utilities: 'mx-3 ' ~ (loop.last ? 'mr-0' : '')
                         }) -}}
 

@@ -42,6 +42,16 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e # Colour Swatch
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f95c9194-f139-4eca-a83e-329c461afb51
+            warning: null
+            width: 100
+          -
             fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
             instructions: null
             label: null
@@ -66,17 +76,17 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e # Colour Swatch
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f95c9194-f139-4eca-a83e-329c461afb51
+            uid: 4b0a21f5-c956-4a88-9e04-2a3cf5f150b6
             warning: null
             width: 100
-        name: Options
-        uid: 3aa4d18b-7483-4e33-ad12-25accce07dd7
+        name: SEO
+        uid: e3c8d5fa-a1aa-4d69-8223-eb94d56d71f9
 handle: services
 hasTitleField: true
 name: 'Our Services'

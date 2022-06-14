@@ -1,9 +1,7 @@
-{%- set entries =
+{%- set vacancies = 
     craft.entries
-    .section('blog')
+    .section('vacancies')
     .with([
-        'authors',
-        'blogCategories',
         'cardImage'
     ])
     .collect()
@@ -14,8 +12,7 @@
         content: entry,
     } -%}
 
-    {%- include '_organisms/grids/grid--blogs' ignore missing with {
+    {%- include '_organisms/grids/grid--vacancies' ignore missing with {
         cards: entries,
-        utilities: 'md:mt-20'
     } -%}
 {%- endblock -%}

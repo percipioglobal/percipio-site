@@ -65,64 +65,6 @@ fieldLayouts:
             width: 100
         name: 'Organisational Information'
         uid: 8ad34ae0-1b88-4f1a-8750-fe625ab08912
-      -
-        elements:
-          -
-            fieldUid: 6180741d-7a95-4c38-a6b8-13f0cd8dab1f # Logo Icon
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a17ce033-8941-4deb-96b4-aa02ed7ff071
-            warning: null
-            width: 50
-          -
-            fieldUid: 451cb28a-2133-4681-977d-41c5a1cbc887 # Full Logo
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 52f65399-cf9e-4c8a-97ce-157e616a944c
-            warning: null
-            width: 50
-          -
-            fieldUid: d476916c-8ec8-4d19-a3f8-ac4854f87275 # Catchphrase
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 97aab43f-cf56-4a38-b728-77427af4e633
-            warning: null
-            width: 100
-        name: Branding
-        uid: 8fc98876-4e6a-4c79-9d18-81987b4b0158
-      -
-        elements:
-          -
-            fieldUid: 6e609ef7-3af9-4b0e-a278-18e9ed97736e # Heading
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e3f203c5-b1b8-4b9d-b8aa-43dd47a11861
-            warning: null
-            width: 100
-          -
-            fieldUid: 7fb63ae6-c6ee-4824-9213-420e2da4e008 # Partners
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: b8c2e568-ee4e-4cde-adf0-9a26a54f4d22
-            warning: null
-            width: 100
-        name: Partners
-        uid: 2964453c-f5e7-4147-a108-c3a58784dc7b
 handle: organisationInfo
 name: 'Organisational Information'
 sortOrder: 4

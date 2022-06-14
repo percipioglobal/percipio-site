@@ -1,5 +1,5 @@
 fieldLayouts:
-  f8b23112-8dc4-4c27-a589-c7c1a5e102a1:
+  83cff03f-309e-48f4-9061-6524dd62714f:
     tabs:
       -
         elements:
@@ -23,31 +23,31 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 0b6f326f-ba01-489f-8330-5d8ef69f1a8c
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: c7b88907-58b3-403d-9f24-81a11a320f12
             warning: null
             width: 100
         name: Content
-        uid: 01c5d670-d5a7-4dbc-8630-a1bbc3da55f4
+        uid: 9647ee5d-163c-4374-8b2b-8a105b5671ae
       -
         elements:
           -
-            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e
+            fieldUid: 7c663d4b-8df0-42ba-af70-699dc9d51210
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f196006b-9e26-4a47-bf99-f307882f77be
+            uid: 4b70a57f-e832-4708-9e93-e063dc8bc669
             warning: null
             width: 100
-        name: SEO
-        uid: c5532c55-5ee4-492c-84df-7a689b7a948a
-handle: clients
-hasTitleField: true
-name: Clients
-section: dbc716a7-2122-4b92-b942-471970256a35 # Clients
-sortOrder: 1
-titleFormat: null
+        name: 'Image optimisations'
+        uid: 7319cedc-7e05-4f7b-b940-047003febf7f
+fs: og
+handle: og
+name: OG
+sortOrder: 20
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

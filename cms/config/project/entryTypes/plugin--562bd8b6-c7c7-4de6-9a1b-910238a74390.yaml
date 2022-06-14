@@ -83,6 +83,20 @@ fieldLayouts:
             width: 50
         name: Meta
         uid: 29b5f39a-66e6-4290-b80e-8875f430ac48
+      -
+        elements:
+          -
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7fe1a27-6a5d-4e23-a890-48d57b38ac91
+            warning: null
+            width: 100
+        name: SEO
+        uid: 34e4b803-df0a-400d-b852-0a805354b2dc
 handle: plugin
 hasTitleField: true
 name: Plugin

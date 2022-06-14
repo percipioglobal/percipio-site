@@ -43,6 +43,20 @@ fieldLayouts:
             width: 100
         name: Metadata
         uid: 30df1183-2f20-47ab-be51-bae200c02870
+      -
+        elements:
+          -
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 57268541-019a-4780-80a6-7e704365fcb2
+            warning: null
+            width: 100
+        name: SEO
+        uid: 56dfdaf6-a9be-45f2-9990-bd821f258cd8
 handle: errorPages
 hasTitleField: true
 name: Errors
