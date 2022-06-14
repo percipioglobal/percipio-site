@@ -1,4 +1,4 @@
-dateModified: 1655211903
+dateModified: 1655216990
 elementSources:
   craft\elements\Entry:
     -
@@ -210,6 +210,25 @@ fs:
       subfolder: icons
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
+  media:
+    hasUrls: true
+    name: Media
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: media
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
   og:
     hasUrls: true
     name: 'OG Images'
@@ -412,6 +431,7 @@ meta:
     985978cb-f5c1-4dc7-a9d3-4f278773ccff: Caption # Caption
     1962717b-7da2-4f6f-be49-ee640b8ddfe2: Vacancies # Vacancies
     2075123a-3328-41eb-a8ad-ce1987d26d66: Overline # Overline
+    6569339b-0b2b-4801-9b30-7599f28e1a5b: Media # Media
     6834194e-43c0-464b-9333-a15bd914d9d3: 'Project Categories' # Project Categories
     18802253-9492-45f9-94a3-1d4c9b68c027: Swatch # Swatch
     60285741-d9e6-4e21-b26e-3330c2d02f47: Name # Name

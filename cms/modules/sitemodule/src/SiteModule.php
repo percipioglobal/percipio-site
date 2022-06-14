@@ -13,6 +13,7 @@ namespace modules\sitemodule;
 use Craft;
 
 use modules\sitemodule\extensions\ColorTwigExtension;
+use modules\sitemodule\extensions\RatioTwigExtenssion;
 
 use yii\base\Module;
 
@@ -51,6 +52,9 @@ class SiteModule extends Module
         if (Craft::$app->request->getIsSiteRequest()) {
             $coloursTwigExtension = new ColorTwigExtension();
             Craft::$app->view->registerTwigExtension($coloursTwigExtension);
+
+            $ratioTwigExtension = new RatioTwigExtenssion();
+            Craft::$app->view->registerTwigExtension($ratioTwigExtension);
         }
 
         parent::init();

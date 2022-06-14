@@ -13,6 +13,8 @@
         'contentBuilder.gridContentImageHalfBackground:gridItems.image',
         'contentBuilder.gridContentImageThird:gridItems',
         'contentBuilder.gridContentImageThird:gridItems.image',
+        'contentBuilder.media',
+        'contentBuilder.media:embed',
         'contentBuilder.singleImage:.image',
     ])
 -%}
@@ -102,6 +104,12 @@
 
                 {%- include component ignore missing with {
                     cards: block.cards,
+                } -%}
+
+            {%- case "media" -%}
+
+                {%- include '_molecules/media/media--embed' ignore missing with {
+                    content: block,
                 } -%}
 
             {%- case 'sectionHeader' -%}

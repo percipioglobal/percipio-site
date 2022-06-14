@@ -40,7 +40,7 @@ fields:
       restrictFiles: true
       restrictLocation: true
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      restrictedLocationSource: 'volume:6569339b-0b2b-4801-9b30-7599f28e1a5b' # Media
       restrictedLocationSubpath: null
       selectionCondition:
         __assoc__:
