@@ -27,7 +27,7 @@ fields:
     searchable: true
     settings:
       availableTransforms: '*'
-      availableVolumes: '*'
+      availableVolumes: ''
       columnType: text
       configSelectionMode: choose
       defaultTransform: ''

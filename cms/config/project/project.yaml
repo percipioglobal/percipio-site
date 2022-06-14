@@ -1,4 +1,4 @@
-dateModified: 1655203708
+dateModified: 1655204813
 elementSources:
   craft\elements\Entry:
     -
@@ -14,7 +14,7 @@ elementSources:
       key: 'section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
       tableAttributes:
         - type
-        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e' # Colour Swatch
+        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e'
         - revisionCreator
         - dateUpdated
         - link
@@ -43,7 +43,7 @@ elementSources:
       tableAttributes:
         - slug
         - 'field:8ce2faf2-a20a-4547-8145-4e3f9e75eb87' # Blog Categories
-        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e' # Colour Swatch
+        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e'
         - author
         - postDate
         - link
@@ -63,7 +63,7 @@ elementSources:
       key: 'section:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
       tableAttributes:
         - 'field:10a7e511-e02a-46ff-8524-7390d3e9be19' # Client
-        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e' # Colour Swatch
+        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e'
         - dateUpdated
         - revisionCreator
         - postDate
@@ -74,9 +74,9 @@ elementSources:
       tableAttributes:
         - slug
         - postDate
-        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e' # Colour Swatch
+        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e'
         - link
-        - 'field:cbbbac66-4ad4-4edc-b9fe-ef597989736f' # Sort order
+        - 'field:cbbbac66-4ad4-4edc-b9fe-ef597989736f'
       type: native
     -
       key: 'section:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
@@ -254,7 +254,7 @@ meta:
     2a8995d5-6e36-4d6b-8992-419951e154b0: Description # Description
     2b415d29-2051-4baf-988f-da71364afc60: Description # Description
     2b6794f2-86c4-486e-ad7e-a162752af5ef: 'Grid 50% Optimisations' # Grid 50% Optimisations
-    2bcee070-9832-4e9a-a3d1-51566028022e: 'OG Image'
+    2bcee070-9832-4e9a-a3d1-51566028022e: 'OG Image' # OG Image
     2c70613c-0c00-4d9a-96bf-658a6db58d9c: Logo # Logo
     2c244265-381c-45ad-b439-7845b814e5ee: Resources # Resources
     2cb6fb1e-761a-4096-ba9d-e151495efc98: Caption # Caption
@@ -272,7 +272,6 @@ meta:
     4e026396-d7ab-43ef-a817-226fb2dada30: 'FAQ Categories' # FAQ Categories
     4ee5d848-5fee-407d-a3aa-7475ef0fe6bc: Width # Width
     4f6c2efe-5cf4-46b5-82e5-79a8796af5c5: Content # Content
-    5a7c4bf6-96b1-4791-a364-8268d570d317: Overline # Overline
     5a47b114-f61e-4fa9-abf3-015b22306186: 'Legal Group' # Legal Group
     5ba9dee9-1843-4b4f-b62c-6f3c7de2e04c: Quote # Quote
     5da841b1-ca0d-46ff-8bb1-04d6c889ac54: Percipio # Percipio
@@ -289,7 +288,7 @@ meta:
     07a123c0-4e8e-4c19-a79e-61829f5d88c0: Builders # Builders
     7b7f1a25-dd1f-40c1-8c62-7af0091d883f: Width # Width
     7bc51fb0-9ad3-4518-bd25-e12e3d2d0acf: Button # Button
-    7c663d4b-8df0-42ba-af70-699dc9d51210: 'OG optimisations'
+    7c663d4b-8df0-42ba-af70-699dc9d51210: 'OG optimisations' # OG optimisations
     7d2faad5-6db7-456e-bf6d-53461216d40e: 'Content CTA' # Content CTA
     7e7008d5-deb5-4018-9fb7-52f6b2603f34: Cards # Cards
     8a8aa24a-d558-4d4c-83a5-e5983ab32e77: Items # Items
@@ -336,7 +335,6 @@ meta:
     74d5a128-4fbc-4ea8-a7d7-c828e87680ff: 'Organisation Address Region' # Organisation Address Region
     74ec495a-3fc7-4175-8f94-3ee08302407a: Articles # Articles
     74f6b1ab-d7f2-4df1-89fe-1601cf0697a0: Navigation # Navigation
-    75b2db97-9323-4a3f-9865-e3b6d2f3e785: 'Basic Slider' # Basic Slider
     75b9f683-7e77-4bae-8d79-335f32bcd3cf: Projects # Projects
     082e47d2-643f-411e-a751-0d9f915db739: Swatch # Swatch
     83cafeab-7189-4e6a-8d08-62f9e35de063: Content # Content
@@ -370,10 +368,8 @@ meta:
     714aef78-b2cb-46ab-82b4-e1cbf362b65c: Target # Target
     720b0445-dc28-4b47-85df-59e4f03c666b: Button # Button
     768b3119-7033-4796-be27-562fecd1e4c7: 'Vacancies Overview' # Vacancies Overview
-    870c07d7-9341-4f1f-825b-25c76239bc0d: Caption # Caption
     914b27f9-4dac-42d5-bb42-0e41ba29f93a: 'Contact Page' # Contact Page
-    924c71a7-4d25-4b3b-9a46-2b1ea495cefe: 'Text Grid' # Text Grid
-    1161e40e-4abd-42f6-ab07-1f1254de17b4: OG
+    1161e40e-4abd-42f6-ab07-1f1254de17b4: OG # OG
     1572f461-2a67-47a4-a36c-80839168bcb7: Globals # Globals
     1750a33c-c911-45de-9392-80a3004cbe0d: Description # Description
     1755ebbe-91fc-4a2a-80cb-667cc2cf1795: Locations # Locations
@@ -388,7 +384,6 @@ meta:
     5162e4ea-9d64-443b-847d-ef657925e27a: 'Article Optimisations' # Article Optimisations
     5527a397-226d-4a44-a929-1133169e498a: 'Square Gallery Optimisation' # Square Gallery Optimisation
     6325f925-feea-4e28-b6ec-7630d3e70cc8: Embed # Embed
-    6962a9b1-b802-4295-82b1-398470a9f54c: Author # Author
     7094bca5-b1bf-4bdd-8699-baa53877dc85: Heading # Heading
     7127ef72-a077-470d-8d8d-96b29a40a27a: 'Logo Position' # Logo Position
     8242f176-ff64-4969-8ece-037c27beea0a: Standfirst # Standfirst
@@ -419,7 +414,6 @@ meta:
     2075123a-3328-41eb-a8ad-ce1987d26d66: Overline # Overline
     6834194e-43c0-464b-9333-a15bd914d9d3: 'Project Categories' # Project Categories
     18802253-9492-45f9-94a3-1d4c9b68c027: Swatch # Swatch
-    36002316-c250-47f4-8b9d-d92b08d33fa7: 'Spotlight Cards' # Spotlight Cards
     60285741-d9e6-4e21-b26e-3330c2d02f47: Name # Name
     61518518-d14c-4402-a480-c059af3b7087: Buttons # Buttons
     69564637-9091-434c-aa5c-50eef46f8c93: Swatch # Swatch
@@ -457,7 +451,6 @@ meta:
     b884a1be-f354-4202-8335-78016b5d035a: 'Show link as button' # Show link as button
     b928e034-1b69-487e-a45b-b37d0f8a59a9: Containerise # Containerise
     b2330e68-6c4a-45ab-b5b1-8a510f75ce4f: General # General
-    b8684f7c-8658-44df-abd4-882f0c55484b: Embed # Embed
     b43847a9-d877-4a56-ba8e-39f6c25c85cb: Code # Code
     b723924c-f0d9-4479-945f-b43f96e8e1e5: 'Text Size' # Text Size
     b1976587-c4c2-4712-b20f-35026b46a5a7: Target # Target
@@ -495,7 +488,6 @@ meta:
     db91cdbf-486a-4cbd-a24e-fac4e2327a50: 'Plugin Icon' # Plugin Icon
     dbc7a062-ef19-48ca-bd6f-acda62a18b78: 'Hero Builder' # Hero Builder
     dbc716a7-2122-4b92-b942-471970256a35: Clients # Clients
-    dcdd5839-4bb5-4669-8d82-d46ec4da660a: 'Image Source' # Image Source
     de0ad924-50fa-43fc-9790-e44bf330cdd2: Quotation # Quotation
     df8a0480-96ec-4e76-bc8f-16b5e4f2fa3b: Heading # Heading
     dffe2f47-18b7-4dcb-845d-2d88fa0378c3: 'Organisational Information' # Organisational Information
@@ -503,7 +495,6 @@ meta:
     e0ee7443-387e-4be3-a64f-3c5ae52be354: 'Organisation Email' # Organisation Email
     e0745046-9bad-4922-8da8-7f677ba84909: 'Legal Navigation' # Legal Navigation
     e0753f10-1084-4173-8a7e-4e414207205c: Buttons # Buttons
-    e2c376a5-8341-40da-993a-68704f00171e: 'Resource List' # Resource List
     e4fa92d0-02c7-4c27-9eb2-782fb6603654: Width # Width
     e6d658aa-c335-4f15-bbcd-59fe05d9e913: 'Error Text' # Error Text
     e7b63d80-91cc-438a-b670-59cbb778ca14: Heading # Heading

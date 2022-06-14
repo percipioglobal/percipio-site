@@ -14,7 +14,7 @@ scope:
   - 'entrytypes.768b3119-7033-4796-be27-562fecd1e4c7:read' # Vacancies Overview
   - 'sections.1962717b-7da2-4f6f-be49-ee640b8ddfe2:read' # Vacancies
   - 'entrytypes.00498acf-c1c2-4c00-83f2-39a7255870f8:read' # Vacancies
-  - 'globalsets.64547f99-7471-496a-8b02-5d48e09a72f9:read' # Social Media
+  - 'globalsets.64547f99-7471-496a-8b02-5d48e09a72f9:read'
   - 'navigationNavs.all:read'
   - 'navigationNavs.d8cef538-a756-4496-b7f6-0e0bb61c14c2:read' # Primary Navigation
   - 'navigationNavs.46faf86d-bfa5-4356-bef1-0af3b2a87332:read' # Secondary Navigation

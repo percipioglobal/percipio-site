@@ -14,52 +14,9 @@ fieldLayouts:
             uid: 9a364b70-e9be-4c39-a519-97c6c9b86de0
             warning: null
             width: 100
-          -
-            fieldUid: 40e441b8-aeac-4f02-878a-60457e5699a8 # Position
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 3792a03f-8b4a-4416-9851-b40dab34c737
-            warning: null
-            width: 100
         name: Content
         uid: f0a95661-f4fd-4a63-b2c2-edcf21f1cd58
 fields:
-  40e441b8-aeac-4f02-878a-60457e5699a8: # Position
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: position
-    instructions: 'Select the position where you want it to be in the content. Choose full for example if you have a 16:9 video, choose center if you have and instagram or 1:1 post.'
-    name: Position
-    searchable: false
-    settings:
-      default: center
-      options:
-        __assoc__:
-          -
-            - left
-            - ''
-          -
-            - center
-            - '1'
-          -
-            - right
-            - ''
-          -
-            - full
-            - '1'
-          -
-            - drop-left
-            - ''
-          -
-            - drop-right
-            - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: rias\positionfieldtype\fields\Position
   6325f925-feea-4e28-b6ec-7630d3e70cc8: # Embed
     columnSuffix: null
     contentColumnType: string
@@ -110,4 +67,4 @@ fields:
     type: craft\fields\Assets
 handle: media
 name: Media
-sortOrder: 15
+sortOrder: 13

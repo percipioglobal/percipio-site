@@ -98,7 +98,9 @@
 
             {%- case 'highlightCards' -%}
 
-                {%- include '_organisms/grids/grid--highlight-cards' ignore missing with {
+                {%- set component = block.cards.collect().first().section.handle == 'blog' ? '_organisms/grids/grid--blogs' : '_organisms/grids/grid--projects' -%}
+
+                {%- include component ignore missing with {
                     cards: block.cards,
                 } -%}
 

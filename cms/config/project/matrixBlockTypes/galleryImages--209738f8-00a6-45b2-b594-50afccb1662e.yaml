@@ -14,16 +14,6 @@ fieldLayouts:
             uid: 1e9c3ef5-247e-4079-a68d-0024c80fec92
             warning: null
             width: 100
-          -
-            fieldUid: 985978cb-f5c1-4dc7-a9d3-4f278773ccff # Caption
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: f6e288e6-9f65-4ad8-a05a-6ad922f52dc8
-            warning: null
-            width: 100
         name: Content
         uid: 49da9036-d742-4608-969e-3d58f5b274ce
 fields:
@@ -75,26 +65,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  985978cb-f5c1-4dc7-a9d3-4f278773ccff: # Caption
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: caption
-    instructions: 'Enter an original caption for the image gallery'
-    name: Caption
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
 handle: galleryImages
 name: 'Image Gallery'
 sortOrder: 2

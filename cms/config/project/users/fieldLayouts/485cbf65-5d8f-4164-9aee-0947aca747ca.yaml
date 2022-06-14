@@ -2,7 +2,7 @@ tabs:
   -
     elements:
       -
-        fieldUid: 815594b4-d88f-4430-bf0c-5db890e1051f # Profile Photo
+        fieldUid: 815594b4-d88f-4430-bf0c-5db890e1051f
         instructions: null
         label: null
         required: false

@@ -42,7 +42,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e # Colour Swatch
+            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e
             instructions: null
             label: null
             required: false
@@ -62,7 +62,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3 # Teaser Image
+            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
             instructions: null
             label: null
             required: false
@@ -76,7 +76,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
             instructions: null
             label: null
             required: false

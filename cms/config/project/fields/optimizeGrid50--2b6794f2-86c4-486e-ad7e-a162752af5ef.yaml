@@ -1,9 +1,9 @@
-columnSuffix: ebcuvvwv
+columnSuffix: ygdfhbgc
 contentColumnType: text
 fieldGroup: 1dd95078-7c8a-4ef7-8a16-e33a5341dadb # Image Optimisations 
-handle: grid33Optimisations
+handle: optimizeGrid50
 instructions: null
-name: 'Grid 33% Optimisations'
+name: 'Grid 50% Optimisations'
 searchable: false
 settings:
   displayDominantColorPalette: true
@@ -17,13 +17,13 @@ settings:
           - '1200'
         -
           - useAspectRatio
-          - '1'
+          - ''
         -
           - aspectRatioX
-          - '4'
+          - '16'
         -
           - aspectRatioY
-          - '3'
+          - '9'
         -
           - retinaSizes
           -
@@ -41,13 +41,13 @@ settings:
           - '992'
         -
           - useAspectRatio
-          - '1'
+          - ''
         -
           - aspectRatioX
-          - '4'
+          - '16'
         -
           - aspectRatioY
-          - '3'
+          - '9'
         -
           - retinaSizes
           -
@@ -65,7 +65,7 @@ settings:
           - '768'
         -
           - useAspectRatio
-          - '1'
+          - ''
         -
           - aspectRatioX
           - '16'
@@ -89,7 +89,7 @@ settings:
           - '576'
         -
           - useAspectRatio
-          - '1'
+          - ''
         -
           - aspectRatioX
           - '16'

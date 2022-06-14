@@ -29,7 +29,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 648e7555-63ed-4228-a6b7-7811c865a7af # Category Description
+            fieldUid: 648e7555-63ed-4228-a6b7-7811c865a7af
             instructions: null
             label: null
             required: false

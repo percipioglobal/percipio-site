@@ -1,7 +1,7 @@
 columnSuffix: uwhompjm
 contentColumnType: text
 fieldGroup: 1dd95078-7c8a-4ef7-8a16-e33a5341dadb # Image Optimisations 
-handle: grid50SquareOptimisations
+handle: optimizeGrid50Square
 instructions: null
 name: 'Grid 50% Square Optimisations'
 searchable: false

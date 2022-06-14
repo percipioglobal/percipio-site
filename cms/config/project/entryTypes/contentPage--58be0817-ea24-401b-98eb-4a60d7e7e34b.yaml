@@ -62,7 +62,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
             instructions: null
             label: null
             required: false
