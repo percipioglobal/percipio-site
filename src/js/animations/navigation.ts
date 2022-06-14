@@ -29,10 +29,9 @@ const slideOpen = (page: HTMLElement, siteNavigation: HTMLElement, btn: HTMLElem
     mobileSiteNavigation.setAttribute('aria-expanded', 'false')
 }
 
-const slideClose = (page, siteNavigation, btn, mobileSiteNavigation) => {
+const slideClose = (page: HTMLElement, siteNavigation: HTMLElement, btn: HTMLElement, mobileSiteNavigation: HTMLElement) => {
     page.classList.add('slide')
     siteNavigation.classList.add('slide')
-
     btn.querySelectorAll('.hamburger-parent')[0].classList.add('close')
     btn.querySelectorAll('.hamburger-sr')[0].textContent = 'Close'
     mobileSiteNavigation.setAttribute('aria-expanded', 'true')
