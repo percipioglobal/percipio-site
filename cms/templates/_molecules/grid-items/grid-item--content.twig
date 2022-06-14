@@ -22,14 +22,16 @@
 
         <div class="{{- settings.position == 'left' ? 'md:pr-10 lg:pr-32' : 'md:pl-10 lg:pl-32' }} {{ style.box -}}">
             <h2 class="mt-3.5 mb-6">
-                {{- render.atom('text', 'h2', {
-                    content: item.headingCallout,
-                }) -}}
+                <span class="animate" data-animation="fadeIn">
+                    {{- render.atom('text', 'h2', {
+                        content: item.headingCallout,
+                    }) -}}
+                </span>
             </h2>
         </div>
 
         <div class="{{ style.box -}}">
-            <div>
+            <div class="animate" data-animation="{{- settings.position == 'left' ? 'slideInRightToLeft' : 'slideLeftToRight' -}}">
                 <h3 class="mt-3.5 mb-6">
                     {{- render.atom('text', 'h4', {
                         content: item.heading,

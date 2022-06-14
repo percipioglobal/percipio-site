@@ -8,6 +8,7 @@ module.exports = {
         'bg-gray-600',
         'bg-gray-800',
         'bg-gray-900',
+        'duration-1000',
         'sm:col-span-1',
         'sm:col-span-2',
         'sm:col-span-3',
@@ -16,6 +17,9 @@ module.exports = {
         'sm:col-span-6',
         'from-blue-600',
         'to-pink-600',
+        '-translate-x-20',
+        'translate-x-20',
+        'translate-y-20',
         {
             pattern: /bg-(blue|green|orange|pink|purple|red|teal|yellow)-(500|700)/,
             variants: ['hover','focus','md','lg'],

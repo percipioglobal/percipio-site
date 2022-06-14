@@ -30,9 +30,11 @@
     {%- minify -%}
 
         <div class="container max-w-[80ch] mx-auto mt-5 md:mt-10 {{ props.utilities -}}">
-            <h2 class="{{- classes._default }} {{ classes.color}} {{ classes.print }}">
-                {{- render.atom('text', 'h2', { content: props.heading }) -}}
-            </h2>
+            <div class="animate" data-animation="slideInRightToLeft">
+                <h2 class="{{- classes._default }} {{ classes.color}} {{ classes.print }}">
+                    {{- render.atom('text', 'h2', { content: props.heading }) -}}
+                </h2>
+            </div>
         </div>
 
     {%- endminify -%}
