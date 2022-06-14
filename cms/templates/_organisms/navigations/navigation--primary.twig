@@ -26,32 +26,21 @@
                 {# Navigation items #}
                 {%- for item in navigation -%}
                     <li role="none" class="hidden lg:inline">
-                        {%- if item.showAsButton -%}
-                            {{- render.atom('button', 'primary', {
-                                url: item.target.collect().first().url ??? null,
-                                text: item.title ??? null,
-                                target: '_self',
-                                ga: {
-                                    category:'Navigation link',
-                                    action:'click',
-                                    label: item.title ??? null,
-                                },
-                                utilities: 'mx-3 ' ~ (loop.last ? 'mr-0' : '')
-                            }) -}}
-                        {%- else -%}
-                            {{- render.atom('link', 'navigation', {
-                                url: item.target.collect().first().url ??? null,
-                                text: item.title ??? null,
-                                target: '_self',
-                                active: entry.id == item.target.collect().first().id ??? null,
-                                ga: {
-                                    category:'Navigation link',
-                                    action:'click',
-                                    label: item.title ??? null,
-                                },
-                                utilities: loop.last ? 'pr-0' : ''
-                            }) -}}
-                        {%- endif -%}
+
+                        {%- set component = item.showAsButton ? {type: 'button', variant: 'primary'} : {type: 'link', variant: 'navigation'} -%}
+
+                        {{- render.atom(component.type, component.variant, {
+                            url: item.target.first().url ??? null,
+                            text: item.title ??? null,
+                            target: '_self',
+                            ga: {
+                                category:'Navigation link',
+                                action:'click',
+                                label: item.title ??? null,
+                            },
+                            utilities: 'mx-3 ' ~ (loop.last ? 'mr-0' : '')
+                        }) -}}
+
                     </li>
                 {%- endfor -%}
             </ul>

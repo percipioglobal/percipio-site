@@ -1,4 +1,4 @@
-{%- extends '_molecules/cards/_content--props' -%}
+{%- extends '_molecules/content/_content--props' -%}
 {%- import '_macros/atoms' as render -%}
 
 {#
@@ -26,10 +26,14 @@
     prose_list: 'prose-ul:pl-4 prose-ul:mb-10 prose-ol:pl-4 prose-ol:mb-10'
 } -%}
 
-{%- minify -%}
+{%- block copy -%}
 
-    <article class="{{- classes._default }} {{ classes.color}} {{ classes.print }} {{ classes.prose }} {{ classes.prose_link }} {{ classes.prose_h3 }} {{ classes.prose_h4 }} {{ classes.prose_list }}">
-        {{- render.atom('text', 'content', { content: props.content }) -}}
-    </article>
+    {%- minify -%}
 
-{%- endminify -%}
+        <article class="{{- classes._default }} {{ classes.color}} {{ classes.print }} {{ classes.prose }} {{ classes.prose_link }} {{ classes.prose_h3 }} {{ classes.prose_h4 }} {{ classes.prose_list }}">
+            {{- render.atom('text', 'content', { content: props.content }) -}}
+        </article>
+
+    {%- endminify -%}
+
+{%- endblock -%}

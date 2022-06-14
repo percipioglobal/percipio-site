@@ -32,15 +32,17 @@
             {%- case 'blockQuote' -%}
 
                 {%- include '_molecules/quotes/quote--block' ignore missing with {
-                    quote: block,
+                    content: block,
                 } -%}
 
             {%- case 'code' -%}
 
                 {%- include '_molecules/content/content--code' ignore missing with {
-                    code: block.code ??? '',
-                    language: block.codeLanguage ??? '',
-                    filename: block.filename ??? ''
+                    content: {
+                        code: block.code ??? '',
+                        language: block.codeLanguage ??? '',
+                        filename: block.filename ??? ''
+                    }
                 } -%}
 
             {%- case 'contentCta' -%}

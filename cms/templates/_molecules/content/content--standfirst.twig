@@ -1,4 +1,4 @@
-{%- extends '_molecules/cards/_content--props' -%}
+{%- extends '_molecules/content/_content--props' -%}
 {%- import '_macros/atoms' as render -%}
 
 {#
@@ -15,13 +15,21 @@
     text--standfirst: `_atoms/texts/text--standfirst.twig`
 #}
 
-{%- minify -%}
-    <div class="container max-w-screen-lg mx-auto {{ props.utilities -}}">
+{%- block copy -%}
+    {%- minify -%}
 
-        {{- render.atom('text', 'standfirst', {
-            content: props.content.standfirst,
-            alignment: props.content.alignment == 'center' ? 'md:text-center' : ''
-        }) -}}
+        {%- set props = props|merge({
+            standfirst: props.content.standfirst ??? '',
+            alignment: props.content.alignment ??? ''
+        }) -%}
 
-    </div>
-{%- endminify -%}
+        <div class="container max-w-screen-lg mx-auto {{ props.utilities -}}">
+
+            {{- render.atom('text', 'standfirst', {
+                content: props.standfirst,
+                alignment: props.alignment == 'center' ? 'md:text-center' : ''
+            }) -}}
+
+        </div>
+    {%- endminify -%}
+{%- endblock -%}

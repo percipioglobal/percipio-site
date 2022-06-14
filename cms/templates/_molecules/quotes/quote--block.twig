@@ -1,42 +1,63 @@
+{%- extends '_molecules/quotes/_quote--props' -%}
 {%- import '_macros/atoms' as render -%}
 
-{%- set quote = {
-    quote: quote.quote,
-    author: quote.quoteAuthor,
-    source: quote.quoteSource
-} -%}
-{%- set utilities = utilities ??? '' -%}
+{#
+    ### PROPERTIES ###
+    ------------------
 
-{%- minify -%}
-    <div class="container max-w-[80ch] mx-auto py-5 md:py-10 {{ utilities -}}">
-        <blockquote {{ quote.source ? 'cite="'~ quote.source ~ '"' : '' }} class="mx-auto w-full whitespace-normal font-mono max-w-screen-md py-16">
+    INHERITED FROM: `_molecules/content/_content--props.twig`
 
-                <p class="text-2xl md:text-3xl lg:text-4xl text-gray-900">
-                    {{- render.atom('text', 'content', {
-                        content: quote.quote
-                    }) -}}
-                </p>
+    ### LUTS ###
+    ------------
+    icon.fa_icon_lut: font-awesome class LUT
 
-                {# TODO: add transitions on the URLs, let's get fancy #}
+    ### COMPONENTS ###
+    ------------------
 
-                <footer class="font-primary mt-8">
-                    {%- if quote.source.getUrl() -%}
-                        <a
-                            href="{{- quote.source.getUrl() -}}"
-                            data-tag-category="quote-source"
-                            data-tag-action="click"
-                            data-tag-label="{{- quote.source.getUrl() -}}"
-                            class="text-blue-500 text-base hover:text-blue-800"
-                        >
-                            {{- quote.author }} &mdash; {{ quote.source.getText() -}}
-                        </a>
-                    {%- else -%}
-                        <span class="text-base">
-                            {{- quote.author -}}
-                        </span>
-                    {%- endif -%}
-                </footer>
+    ## ATOMS
+    icon--fa: `_atoms/icons/icon--fa.twig`
+#}
 
-            </blockquote>
-    </div>
-{%- endminify -%}
+{%- block quote -%}
+
+    {%- minify -%}
+
+        {%- set props = props|merge({
+            quote: props.content.quote ??? '',
+            author: props.content.quoteAuthor ??? '',
+            source: props.content.quoteSource ??? null
+        }) -%}
+
+        <div class="container max-w-[80ch] mx-auto py-5 md:py-10 {{ props.utilities -}}">
+            <blockquote {{ props.source ? 'cite="'~ props.source ~ '"' : '' }} class="mx-auto w-full whitespace-normal font-mono max-w-screen-md py-16">
+
+                    <p class="text-2xl md:text-3xl lg:text-4xl text-gray-900">
+                        {{- render.atom('text', 'content', {
+                            content: props.quote
+                        }) -}}
+                    </p>
+
+                    {# TODO: add transitions on the URLs, let's get fancy #}
+
+                    <footer class="font-primary mt-8">
+                        {%- if props.source.getUrl() ??? null -%}
+                            <a
+                                href="{{- props.source.getUrl() -}}"
+                                data-tag-category="quote-source"
+                                data-tag-action="click"
+                                data-tag-label="{{- props.source.getUrl() -}}"
+                                class="text-blue-500 text-base hover:text-blue-800"
+                            >
+                                {{- props.author }} &mdash; {{ props.source.getText() -}}
+                            </a>
+                        {%- else -%}
+                            <span class="text-base">
+                                {{- props.author -}}
+                            </span>
+                        {%- endif -%}
+                    </footer>
+
+                </blockquote>
+        </div>
+    {%- endminify -%}
+{%- endblock -%}
