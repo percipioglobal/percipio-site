@@ -11,7 +11,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6925479b-a679-4b4f-9f7b-d4bf7609da42
+            uid: 1c0d78ed-0e3a-4a7a-82ab-064ac4ded69a
             warning: null
             width: 100
           -
@@ -21,7 +21,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8b0cd9e1-3690-4cf5-b3d2-14bb94de6d41
+            uid: ec5f9b6f-1d14-4aed-b2b6-64b984783ca2
             warning: null
             width: 100
           -
@@ -31,7 +31,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: bba092aa-2715-4f50-a648-7c1d6301a1a0
+            uid: c2943ce8-ca76-4f73-85f2-35f62dc3bf70
             warning: null
             width: 100
         name: Content
@@ -109,22 +109,14 @@ fields:
     name: Content
     searchable: false
     settings:
-      availableTransforms: '*'
-      availableVolumes: '*'
-      columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
-      purifierConfig: null
-      purifyHtml: true
-      redactorConfig: Simple.json
-      removeEmptyTags: false
-      removeInlineStyles: false
-      removeNbsp: false
-      showHtmlButtonForNonAdmins: false
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      uiMode: enlarged
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
-    type: craft\redactor\Field
+    type: craft\fields\PlainText
