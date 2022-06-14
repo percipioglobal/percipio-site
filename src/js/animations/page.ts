@@ -41,7 +41,7 @@ export const init = () => {
     });
 }
 
-const setInitialAnimations = (animateElements) => {
+const setInitialAnimations = (animateElements: NodeListOf<HTMLElement>) => {
 
     console.log('initial', animateElements)
 
@@ -54,7 +54,7 @@ const setInitialAnimations = (animateElements) => {
     animateBlocks(animateElements);
 }
 
-const animateBlocks = (animateElements) => {
+const animateBlocks = (animateElements: NodeListOf<HTMLElement>) => {
 
     for (const block of animateElements) {
         const animationType = block.dataset.animation ?? 'fadeIn'
