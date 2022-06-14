@@ -28,13 +28,13 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6c55f6b0-899a-471f-ae96-b7b9f941abce # Link
+            fieldUid: b1976587-c4c2-4712-b20f-35026b46a5a7 # Target
             instructions: null
-            label: null
-            required: false
+            label: 'Navigation Item'
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ea2ffd08-3d1a-47c6-a153-73c025699f97
+            uid: 433713f7-e6fb-4d50-aef4-ff2603c6d0c9
             warning: null
             width: 100
           -

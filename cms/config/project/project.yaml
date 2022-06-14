@@ -1,4 +1,4 @@
-dateModified: 1655201717
+dateModified: 1655203708
 elementSources:
   craft\elements\Entry:
     -
@@ -460,6 +460,7 @@ meta:
     b8684f7c-8658-44df-abd4-882f0c55484b: Embed # Embed
     b43847a9-d877-4a56-ba8e-39f6c25c85cb: Code # Code
     b723924c-f0d9-4479-945f-b43f96e8e1e5: 'Text Size' # Text Size
+    b1976587-c4c2-4712-b20f-35026b46a5a7: Target # Target
     baad7fb6-18f2-4914-bc33-e1c48da96896: 'Card Image' # Card Image
     bae060ba-ddb9-4f66-8df8-9055de4e31e5: 'Show Logo' # Show Logo
     bc2fcf7d-8195-4529-8758-a3004866f759: 'Blog Overview' # Blog Overview
