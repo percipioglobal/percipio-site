@@ -1,0 +1,18 @@
+{%- set vacancies = 
+    craft.entries
+    .section('vacancies')
+    .with([
+        'cardImage'
+    ])
+    .collect()
+-%}
+
+{%- block content -%}
+    {%- include '_organisms/builders/builder--hero' ignore missing with {
+        content: entry,
+    } -%}
+
+    {%- include '_organisms/grids/grid--vacancies' ignore missing with {
+        cards: entries,
+    } -%}
+{%- endblock -%}
