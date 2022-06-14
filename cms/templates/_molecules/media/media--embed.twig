@@ -7,9 +7,11 @@
 <div class="w-full text-center">
 
 	<div class="container mx-auto max-w-screen-lg relative py-8">
-		<figure class="w-full mx-auto block shadow-xl shadow-zinc-300 rounded-4xl overflow-hidden">
-            {{- functions.embed(asset, asset.width and asset.height ? getRatioClass({width: asset.width, height: asset.height}) : 'aspect-video') -}}
-		</figure>
+        <div class="animate" data-animation="fadeIn">
+            <figure class="w-full mx-auto block shadow-xl shadow-zinc-300 rounded-4xl overflow-hidden">
+                {{- functions.embed(asset, asset.width and asset.height ? getRatioClass({width: asset.width, height: asset.height}) : 'aspect-video') -}}
+            </figure>
+        </div>
 	</div>
 </div>
 {%- endminify -%}
