@@ -1,14 +1,30 @@
+{%- extends '_molecules/cards/_content--props' -%}
 {%- import '_macros/atoms' as render -%}
 
-{%- set content = content|default('') -%}
-{%- set utilities = utilities|default('') -%}
+{#
+    ### PROPERTIES ###
+    ------------------
 
-{%- minify -%}
+    INHERITED FROM: `_molecules/content/_content--props.twig`
 
-    <div class="container max-w-[80ch] mx-auto py-5 md:py-10 {{ utilities -}}">
-        {%- include '_molecules/content/content--prose' ignore missing with {
-            content: content,
-        } -%}
-    </div>
+    ### COMPONENTS ###
+    ------------------
 
-{%- endminify -%}
+    ## MOLECULES
+
+    content--prose: `_atoms/buttons/content--prose.twig`
+#}
+
+{%- block copy -%}
+
+    {%- minify -%}
+
+        <div class="container max-w-[80ch] mx-auto py-5 md:py-10 {{ props.utilities -}}">
+            {%- include '_molecules/content/content--prose' ignore missing with {
+                content: props.content,
+            } -%}
+        </div>
+
+    {%- endminify -%}
+
+{%- endblock -%}

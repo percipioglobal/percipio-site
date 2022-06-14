@@ -1,8 +1,21 @@
+{%- extends '_molecules/cards/_content--props' -%}
 {%- import '_macros/atoms' as render -%}
 
-{%- set content = content|default('') -%}
+{#
+    ### PROPERTIES ###
+    ------------------
 
-{%- set style = {
+    INHERITED FROM: `_molecules/content/_content--props.twig`
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+
+    text--content: `_atoms/texts/text--content.twig`
+#}
+
+{%- set classes = {
     _default: 'font-primary',
     color: 'text-gray-600',
     print: 'print:table print:text-black print:text-sm print:leading-6',
@@ -15,8 +28,8 @@
 
 {%- minify -%}
 
-    <article class="{{- style._default }} {{ style.color}} {{ style.print }} {{ style.prose }} {{ style.prose_link }} {{ style.prose_h3 }} {{ style.prose_h4 }} {{ style.prose_list }}">
-        {{- render.atom('text', 'content', { content: content }) -}}
+    <article class="{{- classes._default }} {{ classes.color}} {{ classes.print }} {{ classes.prose }} {{ classes.prose_link }} {{ classes.prose_h3 }} {{ classes.prose_h4 }} {{ classes.prose_list }}">
+        {{- render.atom('text', 'content', { content: props.content }) -}}
     </article>
 
 {%- endminify -%}
