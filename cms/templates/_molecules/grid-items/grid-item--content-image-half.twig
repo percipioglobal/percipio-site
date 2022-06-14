@@ -35,7 +35,7 @@
             }
         }) -%}
 
-        <article class="sm:flex {{ props.settings.position == 'left' ? 'sm:flex-row-reverse' : '' }} {{ utilities }}">
+        <article class="sm:flex {{ props.settings.position == 'left' ? 'sm:flex-row-reverse' : '' }} {{ props.utilities -}}">
 
             <div class="w-full mb-4 sm:mb-0 px-6 sm:px-0 sm:w-1/2 flex-shrink-0 flex-grow-0 flex items-center">
                 <div class="animate" data-animation="fadeIn">

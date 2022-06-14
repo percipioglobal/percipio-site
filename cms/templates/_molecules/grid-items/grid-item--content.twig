@@ -19,7 +19,7 @@
 #}
 
 {# custom #}
-{%- set style = {
+{%- set classes = {
     box: "w-full md:w-1/2 flex items-center flex-shrink-0 flex-grow-0"
 }-%}
 
@@ -38,9 +38,9 @@
             }
         }) -%}
 
-        <article class="md:flex {{ props.settings.position == 'right' ? 'md:flex-row-reverse' : '' }} {{ props.utilities }}">
+        <article class="md:flex {{ props.settings.position == 'right' ? 'md:flex-row-reverse' : '' }} {{ props.utilities -}}">
 
-            <div class="{{- props.settings.position == 'left' ? 'md:pr-10 lg:pr-32' : 'md:pl-10 lg:pl-32' }} {{ style.box -}}">
+            <div class="{{- props.settings.position == 'left' ? 'md:pr-10 lg:pr-32' : 'md:pl-10 lg:pl-32' }} {{ classes.box -}}">
                 <h2 class="mt-3.5 mb-6">
                     <span class="animate" data-animation="fadeIn">
                         {{- render.atom('text', 'h2', {
@@ -50,7 +50,7 @@
                 </h2>
             </div>
 
-            <div class="{{ style.box -}}">
+            <div class="{{- classes.box -}}">
                 <div class="animate" data-animation="{{- props.settings.position == 'left' ? 'slideInRightToLeft' : 'slideLeftToRight' -}}">
                     <h3 class="mt-3.5 mb-6">
                         {{- render.atom('text', 'h4', {
