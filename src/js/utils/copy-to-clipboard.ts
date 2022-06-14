@@ -8,12 +8,12 @@ export const init = () => {
     })
 }
 
-const copy = (code) => {
+const copy = (code: Node) => {
     const range = document.createRange();
     range.selectNode(code);
     window.getSelection().removeAllRanges() // clear current selection
     window.getSelection().addRange(range) // to select text
-    document.execCommand("copy")
+    document.execCommand('copy')
     window.getSelection().removeAllRanges()// to deselect
-    alert("Copy to Clipboard Successfully")
+    alert('Copy to Clipboard Successfully')
 }
