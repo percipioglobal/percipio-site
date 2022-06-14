@@ -1,0 +1,15 @@
+{% import '_macros/atoms' as render %}
+{% import '_macros/functions' as functions %}
+
+{%- set asset = content.embed|length > 0 ? craft.embeddedAssets.get(content.embed[0]) : null -%}
+
+{%- minify -%}
+<div class="w-full text-center">
+
+	<div class="container mx-auto max-w-screen-lg relative py-8">
+		<figure class="w-full mx-auto block shadow-xl shadow-zinc-300 rounded-4xl overflow-hidden">
+            {{- functions.embed(asset, asset.width and asset.height ? getRatioClass({width: asset.width, height: asset.height}) : 'aspect-video') -}}
+		</figure>
+	</div>
+</div>
+{%- endminify -%}

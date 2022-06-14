@@ -1,0 +1,17 @@
+{%- extends '_atoms/videos/_video--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_atoms/video/_video--props.twig`
+#}
+
+{%- block media -%}
+    {%- minify -%}
+        <iframe class="object-cover w-full h-full {{ props.utilities -}}" aria-labelledby="{{- 'media-embed-' ~ props.title|kebab -}}" src="{{- props.url -}}">
+        </iframe>
+    {%- endminify -%}
+{%- endblock -%}
+
+

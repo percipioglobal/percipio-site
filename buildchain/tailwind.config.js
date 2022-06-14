@@ -5,6 +5,7 @@ module.exports = {
     ],
 
     safelist: [
+        'aspect-video',
         'bg-gray-600',
         'bg-gray-800',
         'bg-gray-900',

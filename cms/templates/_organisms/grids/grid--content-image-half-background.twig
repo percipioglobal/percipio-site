@@ -1,22 +1,48 @@
-{%- import '_macros/atoms' as render -%}
+{%- extends '_organisms/grids/_grid--props' -%}
 
-{%- set items = items|default(null) -%}
-{%- set utilities = utilities|default('') -%}
+{#
+    ### PROPERTIES ###
+    ------------------
 
-{%- minify -%}
-    <section class="py-8 md:py-16 {{ utilities -}}">
+    INHERITED FROM: `_organisms/grids/grid--props.twig`
 
-        {%- for item in items.gridItems.collect() ??? null -%}
+    ## EXTENDED
+    -----------
 
-            {%- include '_molecules/grid-items/grid-item--content-image-half-background' ignore missing with {
-                item: item,
-                settings: {
-                    position: loop.index0 is even ? 'left' : 'right',
-                    background: swatch(item.background).primary ??? null
-                }
-            } -%}
 
-        {%- endfor -%}
+    ### COMPONENTS ###
+    ------------------
 
-    </section>
-{%- endminify -%}
+    ## MOLECULES
+
+    card--blog-large: `_molecules/cards/card--blog-large`
+    card--blog-small: `_molecules/cards/card--blog-small`
+#}
+
+{%- block grid -%}
+
+    {%- set props = props|merge({
+        items: {
+            gridItems: props.cards.gridItems ??? '',
+        }
+    }) -%}
+
+    {%- minify -%}
+        <section class="py-8 md:py-16 {{ props.utilities -}}">
+
+            {%- for item in props.items.gridItems.collect() ??? null -%}
+
+                {%- include '_molecules/grid-items/grid-item--content-image-half-background' ignore missing with {
+                    item: item,
+                    settings: {
+                        position: loop.index0 is even ? 'left' : 'right',
+                        background: swatch(item.background).primary ??? null
+                    }
+                } -%}
+
+            {%- endfor -%}
+
+        </section>
+    {%- endminify -%}
+
+{%- endblock -%}

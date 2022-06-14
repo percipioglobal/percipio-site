@@ -65,7 +65,7 @@
 {% endmacro %}
 
 {# Add blocks for different embedded asset types #}
-{%- macro embed(asset) -%}
+{%- macro embed(asset, class) -%}
 	{% import '_macros/atoms' as render %}
 
 	{%- set lut = {
@@ -74,7 +74,8 @@
 			atom: 'embed',
 			options : {
 				url: asset.getVideoUrl([]),
-				title: asset.title
+				title: asset.title,
+                utilities: class
 			}
 		},
 		vimeo: {
@@ -82,7 +83,8 @@
 			atom: 'embed',
 			options : {
 				url: asset.getVideoUrl([]),
-				title: asset.title
+				title: asset.title,
+                utilities: class
 			}
 		},
 		default: asset ? asset.html,
