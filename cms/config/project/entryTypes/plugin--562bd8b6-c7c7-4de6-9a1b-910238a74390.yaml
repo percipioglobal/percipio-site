@@ -27,6 +27,16 @@ fieldLayouts:
             uid: b78da281-f5af-4178-954a-285d1afd42f1
             warning: null
             width: 100
+          -
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 39402ec8-4030-408a-8293-c0e775185f9c
+            warning: null
+            width: 100
         name: Content
         uid: 0a9253a4-51c8-4c38-bc4f-0160c1d9f305
       -

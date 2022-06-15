@@ -1,9 +1,4 @@
 {%- extends '_boilerplate/_layouts/generic-page-layout.twig' -%}
-{%- import '_macros/atoms' as render -%}
-
-{%- block headLinks -%}
-    {{ parent() }}
-{%- endblock headLinks -%}
 
 {%- block content -%}
     {%- include '_organisms/builders/builder--hero' ignore missing with {
@@ -15,8 +10,3 @@
     } -%}
 
 {%- endblock -%}
-
-{# -- Any JavaScript that should be included before </body> -- #}
-{%- block bodyJs -%}
-    {{ parent() }}
-{%- endblock bodyJs -%}

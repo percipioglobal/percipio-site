@@ -10,23 +10,23 @@ interface Animations {
 
 const ANIMATIONS: Animations = {
     'fadeIn': {
-        initial: ['transition-opacity', 'ease-out', 'duration-1000'],
-        in: ['opacity-1'],
+        initial: [],
+        in: ['transition-opacity', 'ease-out', 'duration-1000', 'opacity-1'],
         out: ['opacity-0']
     },
     'slideInRightToLeft': {
-        initial: ['transition-all', 'ease-out', 'duration-1000'],
-        in: ['opacity-1', 'transform', 'translate-x-0'],
+        initial: [],
+        in: ['transition-all', 'ease-out', 'duration-1000', 'opacity-1', 'transform', 'translate-x-0'],
         out: ['opacity-0', 'transform', 'translate-x-20']
     },
     'slideLeftToRight': {
-        initial: ['transition-all', 'ease-out', 'duration-1000'],
-        in: ['opacity-1', 'transform', 'translate-x-0'],
+        initial: [],
+        in: ['transition-all', 'ease-out', 'duration-1000', 'opacity-1', 'transform', 'translate-x-0'],
         out: ['opacity-0', 'transform', '-translate-x-20']
     },
     'slideBottomToTop': {
-        initial: ['ease-out', 'duration-1000', 'transform'],
-        in: ['opacity-1', 'translate-y-0'],
+        initial: [],
+        in: ['transition-all', 'ease-out', 'duration-1000', 'opacity-1', 'translate-y-0'],
         out: ['opacity-0', 'translate-y-20']
     }
 }

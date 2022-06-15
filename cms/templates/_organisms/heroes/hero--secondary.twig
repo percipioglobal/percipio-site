@@ -27,13 +27,15 @@
             {%- endif -%}
 
             {# buttons #}
-            {%- include '_molecules/buttons/button--group-primary' ignore missing with {
-                buttons: content.buttons,
-                ga: {
-                    category: 'Hero CTA',
-                    action: 'click'
-                }
-            } -%}
+            {%- if content.buttons ??? null -%}
+                {%- include '_molecules/buttons/button--group-primary' ignore missing with {
+                    buttons: content.buttons,
+                    ga: {
+                        category: 'Hero CTA',
+                        action: 'click'
+                    }
+                } -%}
+            {%- endif -%}
         </div>
     </header>
 {%- endminify -%}

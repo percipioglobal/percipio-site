@@ -38,13 +38,13 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 73929e5d-0eaa-424c-8cd1-ce83b47fd733 # Page Builder
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e86d0de3-69ff-448c-9ff9-caa83195e72f
+            uid: 4506bf93-6fdf-443e-b217-0f6f82749202
             warning: null
             width: 100
         name: Content
