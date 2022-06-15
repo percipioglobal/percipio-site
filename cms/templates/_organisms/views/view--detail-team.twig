@@ -1,0 +1,12 @@
+{%- extends '_boilerplate/_layouts/generic-page-layout.twig' -%}
+
+{%- block content -%}
+    {%- include '_organisms/heroes/hero--secondary' ignore missing with {
+        content: entry,
+    } -%}
+
+    {%- include '_organisms/builders/builder--content' with {
+        content: entry,
+    } -%}
+
+{%- endblock -%}

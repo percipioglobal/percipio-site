@@ -27,6 +27,8 @@
     {{ parent() }}
 {% endblock headLinks %}
 
+{%- set component = null -%}
+
 {% block content %}
 
     {%- if entry ??? null %}
@@ -63,7 +65,7 @@
             {%- case 'servicesOverview' -%}
                 {%- set component = '_organisms/views/view--overview-services' -%}
 
-            {%- case 'team' -%}
+            {%- case 'teamMember' -%}
                 {%- set component = '_organisms/views/view--detail-team' -%}
 
             {%- case 'teamOverview' -%}
@@ -77,12 +79,14 @@
 
             {%- case 'vacanciesOverview' -%}
                 {%- set component = '_organisms/views/view--overview-vacancies' -%}
-                
+
         {%- endswitch -%}
 
-        {%- include component ignore missing with {
-            content: entry,
-        } -%}
+        {%- if component -%}
+            {%- include component ignore missing with {
+                content: entry,
+            } -%}
+        {%- endif -%}
 
     {%- endif -%}
 
