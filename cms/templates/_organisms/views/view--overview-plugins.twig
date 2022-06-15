@@ -1,4 +1,4 @@
-{%- set plugins = 
+{%- set plugins =
     craft.entries
     .section('plugins')
     .with([
@@ -8,9 +8,9 @@
 -%}
 
 {%- block content -%}
-    {# {%- include '_organisms/builders/builder--hero' ignore missing with {
+    {%- include '_organisms/builders/builder--hero' ignore missing with {
         content: entry,
-    } -%} #}
+    } -%}
 
     {%- include '_organisms/grids/grid--plugins' with {
         plugins: plugins,

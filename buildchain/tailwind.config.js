@@ -22,7 +22,7 @@ module.exports = {
         'translate-x-20',
         'translate-y-20',
         {
-            pattern: /bg-(blue|green|orange|pink|purple|red|teal|yellow)-(500|700)/,
+            pattern: /bg-(blue|green|orange|pink|purple|red|teal|yellow)-(500|600|700)/,
             variants: ['hover','focus','md','lg'],
         },
     ],

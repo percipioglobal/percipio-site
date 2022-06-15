@@ -31,10 +31,11 @@
 
                 {%- include '_molecules/cards/card--plugin' ignore missing with {
                     content: plugin,
+                    utilities: ''
                 } -%}
 
             {%- endfor -%}
-            
+
         </section>
     {%- endminify -%}
 {%- endblock -%}

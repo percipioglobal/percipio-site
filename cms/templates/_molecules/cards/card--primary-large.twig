@@ -18,7 +18,7 @@
 #}
 
 {%- block card -%}
-    <article class="lg:col-span-2 relative bg-white shadow-2xl rounded-4xl p-6 pb-9 overflow-hidden {{ props.utilities -}}">
+    <article class="lg:col-span-2 relative bg-white shadow-2xl rounded-4xl p-6 pb-9 overflow-hidden transition-shadow ease-in-out hover:shadow-zinc-500 {{ props.utilities -}}">
 
         <div class="relative rounded-[20px] overflow-hidden -mt-4 -mx-4 md:m-0">
             {{- render.atom('image', 'card-large', {
@@ -46,7 +46,7 @@
             {%- endif -%}
         </header>
 
-        <div class="bg-pink-500 h-3 absolute bottom-0 left-0 w-full"></div>
+        <div class="bg-{{- props.color }} h-3 absolute bottom-0 left-0 w-full"></div>
 
         {{- render.atom('link', 'card', {
                 url: content.url,
