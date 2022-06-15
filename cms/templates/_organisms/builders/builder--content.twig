@@ -76,12 +76,6 @@
                     items: block
                 } -%}
 
-            {%- case 'gridContentAnimation' -%}
-
-                {%- include '_organisms/grids/grid--content-animation' ignore missing with {
-                    items: block
-                } -%}
-
             {%- case 'gridContentImageHalfBackground' -%}
 
                 {%- include '_organisms/grids/grid--content-image-half-background' ignore missing with {
@@ -98,6 +92,13 @@
 
                 {%- include '_organisms/grids/grid--content-image-third' ignore missing with {
                     items: block
+                } -%}
+
+            {%- case 'gridContentInfo' -%}
+
+                {%- include '_organisms/grids/grid--content-info' ignore missing with {
+                    items: block.gridItems,
+                    image: block.image
                 } -%}
 
             {%- case 'highlightCards' -%}

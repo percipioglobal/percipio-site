@@ -1,14 +1,34 @@
 {%- import '_macros/atoms' as render -%}
 
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    images: list of grid items
+    utilities: TW classes
+
+    ## EXTENDED
+    -----------
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## MOLECULES
+
+    grid-item--content-info: `_molecules/grid-items/grid-item--content-info`
+    image--grid-info: `_molecules/images/image--grid-info`
+#}
+
 {# props #}
 {%- set images = images ??? [] -%}
+{%- set utilities = utilities ??? ''-%}
 
 {# internal #}
 {%- set columns = 2 -%}
 
 {%- minify -%}
 
-    <section class="py-8 md:py-16 container mx-auto max-w-screen-lg">
+    <section class="py-8 md:py-16 container mx-auto max-w-screen-lg {{ utilities -}}">
 
         <div class="w-full">
             <div class="grid grid-cols-6 gap-4 w-full">

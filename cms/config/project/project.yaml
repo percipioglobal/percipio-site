@@ -1,4 +1,4 @@
-dateModified: 1655286187
+dateModified: 1655291209
 elementSources:
   craft\elements\Entry:
     -
@@ -405,6 +405,7 @@ meta:
     5162e4ea-9d64-443b-847d-ef657925e27a: 'Article Optimisations' # Article Optimisations
     5527a397-226d-4a44-a929-1133169e498a: 'Square Gallery Optimisation' # Square Gallery Optimisation
     6325f925-feea-4e28-b6ec-7630d3e70cc8: Embed # Embed
+    6398bf72-eab8-49ad-8949-2dfd557210c8: 'Grid Content Info' # Grid Content Info
     7094bca5-b1bf-4bdd-8699-baa53877dc85: Heading # Heading
     7127ef72-a077-470d-8d8d-96b29a40a27a: 'Logo Position' # Logo Position
     8242f176-ff64-4969-8ece-037c27beea0a: Standfirst # Standfirst
@@ -436,6 +437,7 @@ meta:
     6569339b-0b2b-4801-9b30-7599f28e1a5b: Media # Media
     6834194e-43c0-464b-9333-a15bd914d9d3: 'Project Categories' # Project Categories
     18802253-9492-45f9-94a3-1d4c9b68c027: Swatch # Swatch
+    26759232-9c46-43b6-9279-f62bb6e4cf85: Heading # Heading
     60285741-d9e6-4e21-b26e-3330c2d02f47: Name # Name
     61518518-d14c-4402-a480-c059af3b7087: Buttons # Buttons
     69564637-9091-434c-aa5c-50eef46f8c93: Swatch # Swatch
@@ -465,6 +467,7 @@ meta:
     b8ba7115-3804-4c06-8a96-501963d1fc5c: 'Error Headline' # Error Headline
     b9bc50d8-56c8-4a22-bc8b-f581880783e4: 'Active Installs' # Active Installs
     b37bf9ac-438e-4850-89da-517bdcc6a0b2: 'Grid Items' # Grid Items
+    b40e769e-e3a2-49a1-87b9-31237b6aa762: Content # Content
     b51f4d5a-4d35-43f1-af05-72e206874892: 'Footer Navigation' # Footer Navigation
     b61c0f3e-aaeb-4c6d-aab8-39448c056b8e: CTAs # CTAs
     b74a2d1f-f160-4a53-9a84-05b89c63c277: Blog # Blog
@@ -517,6 +520,7 @@ meta:
     e0ee7443-387e-4be3-a64f-3c5ae52be354: 'Organisation Email' # Organisation Email
     e0745046-9bad-4922-8da8-7f677ba84909: 'Legal Navigation' # Legal Navigation
     e0753f10-1084-4173-8a7e-4e414207205c: Buttons # Buttons
+    e4b2aca1-7f88-4186-92bb-f48a6f1c1c61: 'Grid Items' # Grid Items
     e4fa92d0-02c7-4c27-9eb2-782fb6603654: Width # Width
     e6d658aa-c335-4f15-bbcd-59fe05d9e913: 'Error Text' # Error Text
     e7b63d80-91cc-438a-b670-59cbb778ca14: Heading # Heading
@@ -528,6 +532,7 @@ meta:
     ebc9bc3a-83e6-4cab-956d-f254a119f606: 'Show Logo' # Show Logo
     ec91bde6-778d-4030-89fe-45614d871e81: Target # Target
     ed4b0f49-8429-4d80-846f-3d441bd3e707: Image # Image
+    ee0406c9-28bc-4941-889f-a5c46e62ec44: Image # Image
     ef841ba4-7bcd-4ef5-9c12-96377bf7fba2: Pages # Pages
     f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46: Gallery # Gallery
     f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd: 'Our Work' # Our Work

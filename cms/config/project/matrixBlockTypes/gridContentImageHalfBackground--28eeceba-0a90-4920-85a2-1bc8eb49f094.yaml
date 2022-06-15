@@ -27,7 +27,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 1379530655
+      changedFieldIndicator: 1007158118
       columns:
         __assoc__:
           -
@@ -64,4 +64,4 @@ fields:
     type: verbb\supertable\fields\SuperTableField
 handle: gridContentImageHalfBackground
 name: 'Grid Content Image - 50% background'
-sortOrder: 7
+sortOrder: 8

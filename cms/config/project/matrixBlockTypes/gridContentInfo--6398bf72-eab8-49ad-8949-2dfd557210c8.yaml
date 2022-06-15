@@ -1,48 +1,76 @@
-field: c77ea1bd-e263-4198-b915-5cd6ebf7f78d # Grid Items
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
 fieldLayouts:
-  bb69129c-611b-47dd-a848-83040d15e43f:
+  a6830866-50b2-4795-a88a-a7503bab1c02:
     tabs:
       -
         elements:
           -
-            fieldUid: fb9ce4c2-c0b0-4eb5-9543-61fce2682a0e # Content
+            fieldUid: e4b2aca1-7f88-4186-92bb-f48a6f1c1c61 # Grid Items
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ef947ddc-1bc2-4a06-8d5b-edc41cc973d5
+            uid: 7d0937f7-3bc8-408d-8d15-d1def911f12d
             warning: null
             width: 100
           -
-            fieldUid: 211c30fd-38d1-4538-a639-0fa6572f5273 # Image
+            fieldUid: ee0406c9-28bc-4941-889f-a5c46e62ec44 # Image
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 28dd62b1-332b-42fd-bf46-72e85e84f84e
-            warning: null
-            width: 100
-          -
-            fieldUid: 0568325a-5e70-4dde-982d-1cad58a42365 # Background
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 966a8e95-992d-4792-a284-bb8460d6d8ad
+            uid: 100b3f67-7f14-4419-b2fb-0fdef7c9007c
             warning: null
             width: 100
         name: Content
-        uid: 8d2984ad-d938-446c-9030-405c265ca042
+        uid: fb38e190-4df1-4334-9e55-b0064bddcfb3
 fields:
-  211c30fd-38d1-4538-a639-0fa6572f5273: # Image
+  e4b2aca1-7f88-4186-92bb-f48a6f1c1c61: # Grid Items
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: gridItems
+    instructions: 'Show grid items next to the image'
+    name: 'Grid Items'
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 857695330
+      columns:
+        __assoc__:
+          -
+            - 26759232-9c46-43b6-9279-f62bb6e4cf85 # Heading
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - b40e769e-e3a2-49a1-87b9-31237b6aa762 # Content
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_74_griditems}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  ee0406c9-28bc-4941-889f-a5c46e62ec44: # Image
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: image
-    instructions: null
+    instructions: 'Select or upload an image to use in the grid'
     name: Image
     searchable: false
     settings:
@@ -77,46 +105,13 @@ fields:
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       source: null
-      sources:
-        - 'volume:4dfa8799-f095-4bd8-a821-1fb376db0278' # Grids
+      sources: '*'
       targetSiteId: null
       validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  0568325a-5e70-4dde-982d-1cad58a42365: # Background
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: background
-    instructions: null
-    name: Background
-    searchable: false
-    settings:
-      default: null
-      palette: 'Grid Background'
-      useConfigFile: true
-    translationKeyFormat: null
-    translationMethod: none
-    type: percipiolondon\colourswatches\fields\ColourSwatches
-  fb9ce4c2-c0b0-4eb5-9543-61fce2682a0e: # Content
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: body
-    instructions: null
-    name: Content
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
+handle: gridContentInfo
+name: 'Grid Content Info'
+sortOrder: 5
