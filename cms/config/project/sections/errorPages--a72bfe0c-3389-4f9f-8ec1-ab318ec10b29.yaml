@@ -1,6 +1,6 @@
 defaultPlacement: end
 enableVersioning: false
-handle: errors
+handle: errorPages
 name: Errors
 propagationMethod: all
 siteSettings:
