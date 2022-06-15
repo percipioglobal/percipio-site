@@ -25,6 +25,8 @@
 
     {%- for block in content.contentBuilder -%}
 
+        {%- set prev = block.getPrev().type ??? '' -%}
+
         {%- switch block.type -%}
 
             {%- case 'article' -%}
@@ -46,7 +48,8 @@
                         code: block.code ??? '',
                         language: block.codeLanguage ??? '',
                         filename: block.filename ??? ''
-                    }
+                    },
+                    utilities: prev == 'code' ? 'mt-5 md:mt-10' : ''
                 } -%}
 
             {%- case 'contentCta' -%}
