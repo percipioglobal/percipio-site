@@ -1,3 +1,10 @@
+{%- do craft.eagerBeaver.eagerLoadElements(entry,
+    [
+        'buttons',
+        'buttons:target',
+    ])
+-%}
+
 {%- block content -%}
     {%- include '_organisms/heroes/hero--secondary' ignore missing with {
         content: entry,
