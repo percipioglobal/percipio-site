@@ -16,7 +16,7 @@
 } -%}
 
 {%- if props.icon and props.icon.extension == 'svg' -%}
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        {{- svg(props.icon, sanitize=false, namespace=false)|attr({ class: props.utilities }) -}}
+    <div class="{{- props.utilities -}}">
+        {{- svg(props.icon, sanitize=false, namespace=false) -}}
     </div>
 {%- endif -%}
