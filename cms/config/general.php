@@ -38,7 +38,7 @@ return [
         'subLeft' => true,
         'subRight' => true,
     ],
-    'defaultTokenDuration' => 'P2W',
+    'defaultTokenDuration' => 86400,
     'enableCsrfProtection' => true,
     'errorTemplatePrefix' => 'errors/',
     'generateTransformsBeforePageLoad' => true,
