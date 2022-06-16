@@ -1,4 +1,4 @@
-dateModified: 1655385332
+dateModified: 1655386295
 elementSources:
   craft\elements\Entry:
     -
@@ -673,6 +673,10 @@ plugins:
     enabled: true
     schemaVersion: 1.4.3
   eager-beaver:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  embeddedassets:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
