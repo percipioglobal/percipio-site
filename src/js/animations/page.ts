@@ -27,7 +27,7 @@ const ANIMATIONS: Animations = {
     'slideBottomToTop': {
         initial: [],
         in: ['transition-all', 'ease-out', 'duration-1000', 'opacity-1', 'translate-y-0'],
-        out: ['opacity-0', 'translate-y-5', 'md:translate-y-10']
+        out: ['opacity-0', 'translate-y-10', 'md:translate-y-20']
     }
 }
 

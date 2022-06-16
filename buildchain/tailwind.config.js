@@ -20,10 +20,10 @@ module.exports = {
         'to-pink-600',
         '-translate-x-5',
         'translate-x-5',
-        'translate-y-5',
+        'translate-y-10',
         'md:-translate-x-10',
         'md:translate-x-10',
-        'md:translate-y-10',
+        'md:translate-y-20',
         {
             pattern: /bg-(blue|green|orange|pink|purple|red|teal|yellow)-(500|600|700)/,
             variants: ['hover','focus','md','lg'],
