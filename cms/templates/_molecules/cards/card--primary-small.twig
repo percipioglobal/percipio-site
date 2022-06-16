@@ -18,6 +18,7 @@
 #}
 
 {%- block card -%}
+
     <article class="relative bg-white shadow-2xl rounded-4xl p-6 pb-9 overflow-hidden transition-shadow ease-in-out hover:shadow-zinc-500 {{ props.utilities -}}">
         <div class="relative rounded-[20px] overflow-hidden -mt-4 -mx-4 md:m-0">
             {{- render.atom('image', 'card-small', {
@@ -25,7 +26,8 @@
                     sizes: ['(max-width:768px) 100vw', '(min-width:768px) 33.3vw'],
                     alt: props.content.title,
                     placeholders: placeholders,
-                    ratio: 'aspect-16/9 lg:aspect-[auto]'
+                    ratio: 'aspect-16/9 lg:aspect-[auto]',
+                    utilities: props.imagePos
                 })
             -}}
         </div>
