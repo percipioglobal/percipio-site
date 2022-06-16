@@ -67,4 +67,4 @@ fields:
     type: craft\fields\Assets
 handle: galleryImages
 name: 'Image Gallery'
-sortOrder: 11
+sortOrder: 12

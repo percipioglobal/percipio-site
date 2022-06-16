@@ -19,6 +19,4 @@ const copy = (code: Node) => {
         document.execCommand('copy')
         w.removeAllRanges() // to deselect
     }
-    
-    alert('Copy to Clipboard Successfully')
 }

@@ -26,6 +26,7 @@
 
 {%- minify -%}
     <div class="mt-11 {{ props.utilities -}}">
+
         {%- for button in props.buttons -%}
 
             {%- set type = loop.first ? 'primary' : 'secondary' -%}

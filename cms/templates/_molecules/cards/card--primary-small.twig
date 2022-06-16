@@ -18,13 +18,16 @@
 #}
 
 {%- block card -%}
-    <article class="relative bg-white shadow-2xl rounded-4xl p-6 pb-9 overflow-hidden {{ props.utilities -}}">
+
+    <article class="relative bg-white shadow-2xl rounded-4xl p-6 pb-9 overflow-hidden transition-shadow ease-in-out hover:shadow-zinc-500 {{ props.utilities -}}">
         <div class="relative rounded-[20px] overflow-hidden -mt-4 -mx-4 md:m-0">
             {{- render.atom('image', 'card-small', {
-                    image: content.cardImage.collect().first(),
+                    image: props.content.cardImage.collect().first(),
                     sizes: ['(max-width:768px) 100vw', '(min-width:768px) 33.3vw'],
-                    alt: content.title,
+                    alt: props.content.title,
                     placeholders: placeholders,
+                    ratio: 'aspect-16/9 lg:aspect-[auto]',
+                    utilities: props.imagePos
                 })
             -}}
         </div>
@@ -32,28 +35,28 @@
         <header class="space-y-4 mt-8">
             <h3>
                 {{- render.atom('text', 'card-title', {
-                    content: content.title ??? ''
+                    content: props.content.title ??? ''
                 }) -}}
             </h3>
 
-            {%- if content.subtitle ??? null -%}
+            {%- if props.content.subtitle ??? null -%}
                 <h4>
                     {{- render.atom('text', 'card-subtitle', {
-                        content: content.subtitle
+                        content: props.content.subtitle
                     }) -}}
                 </h4>
             {%- endif -%}
         </header>
 
-        <div class="bg-pink-500 h-3 absolute bottom-0 left-0 w-full"></div>
+        <div class="bg-{{- props.color }} h-3 absolute bottom-0 left-0 w-full"></div>
 
         {{- render.atom('link', 'card', {
-                url: content.url,
-                text: content.title,
+                url: props.content.url,
+                text: props.content.title,
                 ga: {
                     category: 'Primary Card Small',
                     action: 'click',
-                    label: content.title ??? null,
+                    label: props.content.title ??? null,
                 },
             })
         -}}

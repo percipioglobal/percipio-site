@@ -27,12 +27,13 @@
     }) -%}
 
     {%- minify -%}
-        <section class="grid grid-cols-1 md:grid-cols-6 gap-6 pb-12 md:pb-32 container max-w-screen-xl mx-auto {{ props.utilities -}}">
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-6 pb-12 md:pb-32 container max-w-screen-xl mx-auto {{ props.utilities -}}">
 
             {%- for card in props.firstRow -%}
 
                 {%- include '_molecules/cards/card--blog-large' ignore missing with {
                     content: card,
+                    utilities: ''
                 } -%}
 
             {%- endfor -%}
@@ -41,6 +42,7 @@
 
                 {%- include '_molecules/cards/card--blog-small' ignore missing with {
                     content: card,
+                    utilities: ''
                 } -%}
 
             {%- endfor -%}

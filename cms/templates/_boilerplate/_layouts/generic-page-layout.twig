@@ -46,17 +46,17 @@
         } -%}
 
         {# -- Primary content block with bypass id -- #}
-        <div class="page-content w-full bg-white relative transition-transform duration-500 ease-slide" id="page">
+        <div class="page-content w-full bg-white relative transition-transform duration-500 ease-slide overflow-hidden z-[1]" id="page">
             {% block content %}
             {% endblock %}
+
+            {# -- Footer -- #}
+            {%- include '_organisms/footers/footer--primary' ignore missing -%}
         </div>
 
         {%- include '_organisms/navigations/navigation--mobile' ignore missing with {
             navigation: navigation
         } -%}
-
-        {# -- Footer -- #}
-        {%- include '_organisms/footers/footer--primary' ignore missing -%}
     </main>
     {# -- HTML Footer -- #}
     {% include '_boilerplate/_partials/global-footer.twig' %}

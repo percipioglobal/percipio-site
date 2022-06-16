@@ -1,4 +1,9 @@
-{%- extends '_boilerplate/_layouts/generic-page-layout.twig' -%}
+{%- do craft.eagerBeaver.eagerLoadElements(entry,
+    [
+        'buttons',
+        'buttons:target',
+    ])
+-%}
 
 {%- block content -%}
     {%- include '_organisms/heroes/hero--secondary' ignore missing with {

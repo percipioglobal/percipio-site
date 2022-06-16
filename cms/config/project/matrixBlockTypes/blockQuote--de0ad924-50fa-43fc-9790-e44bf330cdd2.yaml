@@ -142,4 +142,4 @@ fields:
     type: craft\fields\PlainText
 handle: blockQuote
 name: Quotation
-sortOrder: 9
+sortOrder: 10

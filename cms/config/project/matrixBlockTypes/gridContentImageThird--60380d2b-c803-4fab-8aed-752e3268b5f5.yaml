@@ -27,7 +27,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 2029623669
+      changedFieldIndicator: 1002018355
       columns:
         __assoc__:
           -
@@ -71,4 +71,4 @@ fields:
     type: verbb\supertable\fields\SuperTableField
 handle: gridContentImageThird
 name: 'Grid Content Image - 33%'
-sortOrder: 5
+sortOrder: 6

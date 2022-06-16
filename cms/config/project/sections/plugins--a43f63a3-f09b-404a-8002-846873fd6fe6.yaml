@@ -20,5 +20,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _organisms/page.twig
-    uriFormat: 'plugin/{slug}'
+    uriFormat: 'plugins/{slug}'
 type: channel

@@ -20,10 +20,10 @@ settings:
           - '1'
         -
           - aspectRatioX
-          - '4'
+          - '16'
         -
           - aspectRatioY
-          - '5'
+          - '9'
         -
           - retinaSizes
           -
@@ -33,7 +33,7 @@ settings:
           - '82'
         -
           - format
-          - jpg
+          - ''
     -
       __assoc__:
         -
@@ -44,10 +44,10 @@ settings:
           - '1'
         -
           - aspectRatioX
-          - '4'
+          - '16'
         -
           - aspectRatioY
-          - '5'
+          - '9'
         -
           - retinaSizes
           -
@@ -57,7 +57,7 @@ settings:
           - '82'
         -
           - format
-          - jpg
+          - ''
     -
       __assoc__:
         -
@@ -81,7 +81,7 @@ settings:
           - '60'
         -
           - format
-          - jpg
+          - ''
     -
       __assoc__:
         -
@@ -92,10 +92,10 @@ settings:
           - '1'
         -
           - aspectRatioX
-          - '4'
+          - '16'
         -
           - aspectRatioY
-          - '5'
+          - '9'
         -
           - retinaSizes
           -
@@ -105,7 +105,7 @@ settings:
           - '60'
         -
           - format
-          - jpg
+          - ''
 translationKeyFormat: null
 translationMethod: none
 type: nystudio107\imageoptimize\fields\OptimizedImages

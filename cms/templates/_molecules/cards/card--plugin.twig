@@ -18,14 +18,14 @@
 #}
 
 {%- block card -%}
-    <article class="relative flex bg-white mt-12 {{ props.utilities -}}">
+    <article class="relative flex bg-white mt-12 group {{ props.utilities -}}">
 
         {{- render.atom('svg', 'plugin-icon', {
             icon: content.pluginIcon.collect().first(),
-            utilities: 'w-24 h-24'
+            utilities: 'absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24'
         }) -}}
 
-        <div class="relative flex-auto overflow-hidden rounded-4xl p-6 pb-9 shadow-2xl">
+        <div class="relative flex-auto overflow-hidden rounded-4xl p-6 pb-9 shadow-2xl transition-shadow ease-in-out duration-700 group-hover:shadow-zinc-500">
 
             <header class="space-y-4 mt-8">
                 <h3>
@@ -70,7 +70,7 @@
             </div>
 
             <div class="bg-gradient-to-r from-blue-500 to-pink-500 h-3 absolute bottom-0 left-0 w-full"></div>
-            
+
             {{- render.atom('link', 'card', {
                 url: content.url,
                 text: content.title,

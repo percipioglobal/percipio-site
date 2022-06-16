@@ -67,4 +67,4 @@ fields:
     type: craft\fields\Assets
 handle: media
 name: Media
-sortOrder: 13
+sortOrder: 14
