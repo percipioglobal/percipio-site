@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue';
 import legacy from '@vitejs/plugin-legacy';
 import ViteRestart from 'vite-plugin-restart';
 import viteCompression from 'vite-plugin-compression';
-import manifestSRI from 'vite-plugin-manifest-sri';
+// import manifestSRI from 'vite-plugin-manifest-sri';
 import {visualizer} from 'rollup-plugin-visualizer';
 import eslintPlugin from 'vite-plugin-eslint';
 import {nodeResolve} from '@rollup/plugin-node-resolve';
@@ -59,7 +59,7 @@ export default defineConfig(({command}) => ({
         viteCompression({
             filter: /\.(js|mjs|json|css|map)$/i
         }),
-        manifestSRI(),
+        // manifestSRI(),
         visualizer({
             filename: '../src/web/dist/assets/stats.html',
             template: 'treemap',
