@@ -27,6 +27,7 @@ backup.sql
 /cms/web/assets/*
 /cms/web/cpresources/*
 /cms/web/dist/*
+/cms/web/cache/*
 /cms/web/favicon.*
 /cms/web/sw.*
 
