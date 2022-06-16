@@ -13,7 +13,7 @@
         <div class="flex order-1 md:order-2">
             {%- for legal in legals -%}
                 {{- render.atom('link', 'footer', {
-                    url: legal.target.collect().first().url ??? null,
+                    url: legal.url ??? null,
                     text: legal.title ??? null,
                     target: '_self',
                     active: entry.id == legal.target.collect().first().id ??? null,
