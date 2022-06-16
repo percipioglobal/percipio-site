@@ -86,13 +86,13 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 7c663d4b-8df0-42ba-af70-699dc9d51210 # OG optimisations
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ccf0392c-4ccc-42c2-a672-506b3d4ccd36
+            uid: 8431638b-7db5-4320-ba46-cbe023321b77
             warning: null
             width: 100
         name: SEO
