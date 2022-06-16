@@ -26,7 +26,7 @@
 
         <figure role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
 
-            <picture class="block lg:max-h-[320px] xl:max-h-[475px] {{ props.ratio -}}">
+            <picture class="block lg:h-[320px] xl:h-[475px] {{ props.ratio -}}">
 
                 <source
                     data-srcset="{{- props.optimized.srcsetWebP() ??? props.placeholder.srcsetWebP() -}}"
