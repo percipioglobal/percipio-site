@@ -5,23 +5,13 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: f665a550-cb91-431e-bfa3-1428815affad # Heading Callout
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c65f2cc0-2878-4c0c-a64d-28e3560de701
-            warning: null
-            width: 100
-          -
             fieldUid: 4103b2f0-dd71-494b-919a-621d2a5e959e # Heading
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: cc03be1c-c469-4459-8240-d3dd3c95f8a7
+            uid: e739c9cc-3590-4d86-a7e9-d58a67b28146
             warning: null
             width: 100
           -
@@ -31,7 +21,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 98c9b94a-caa5-49be-86c7-80669482dfde
+            uid: e3f4f977-f479-4ef5-818c-a22f26a21c95
             warning: null
             width: 100
         name: Content
@@ -75,34 +65,6 @@ fields:
       purifierConfig: null
       purifyHtml: true
       redactorConfig: Simple.json
-      removeEmptyTags: false
-      removeInlineStyles: false
-      removeNbsp: false
-      showHtmlButtonForNonAdmins: false
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      uiMode: enlarged
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\redactor\Field
-  f665a550-cb91-431e-bfa3-1428815affad: # Heading Callout
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: headingCallout
-    instructions: null
-    name: 'Heading Callout'
-    searchable: false
-    settings:
-      availableTransforms: '*'
-      availableVolumes: '*'
-      columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
-      purifierConfig: null
-      purifyHtml: true
-      redactorConfig: Title.json
       removeEmptyTags: false
       removeInlineStyles: false
       removeNbsp: false

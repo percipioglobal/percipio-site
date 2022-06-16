@@ -80,7 +80,8 @@
             {%- case 'gridContent' -%}
 
                 {%- include '_organisms/grids/grid--content' ignore missing with {
-                    items: block,
+                    items: block.gridItems ??? null,
+                    callout: block.callout ??? '',
                     utilities: next ? '' : 'mb-10 lg:mb-20'
                 } -%}
 

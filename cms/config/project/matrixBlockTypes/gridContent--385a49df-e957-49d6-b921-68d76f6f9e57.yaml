@@ -5,6 +5,16 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: eb808a1d-0eb6-4d72-8f1a-4eb2ccf1fb93
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 806a9ea4-71e0-42b4-b5ee-3fb767b6c5a0
+            warning: null
+            width: 100
+          -
             fieldUid: 46d6543c-b83e-4b73-be6e-edcfb691204e # Grid Items
             instructions: null
             label: null
@@ -27,16 +37,9 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 1035412720
+      changedFieldIndicator: 2049042061
       columns:
         __assoc__:
-          -
-            - f665a550-cb91-431e-bfa3-1428815affad # Heading Callout
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
           -
             - 4103b2f0-dd71-494b-919a-621d2a5e959e # Heading
             -
@@ -62,6 +65,34 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
+  eb808a1d-0eb6-4d72-8f1a-4eb2ccf1fb93:
+    columnSuffix: rkidrpur
+    contentColumnType: text
+    fieldGroup: null
+    handle: callout
+    instructions: null
+    name: Callout
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Title.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
 handle: gridContent
 name: 'Grid Content'
 sortOrder: 4
