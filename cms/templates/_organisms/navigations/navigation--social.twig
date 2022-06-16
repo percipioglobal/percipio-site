@@ -1,0 +1,23 @@
+{% import '_macros/icons' as icons -%}
+
+{%- set utilities = utilities ??? '' -%}
+
+<nav class="{{- utilities -}}" role="menu" aria-label="Social media pages of Percipio">
+    {%- for social in seomatic.site.sameAsLinks -%}
+        <a
+            href="{{- social.url -}}"
+            class="inline-block text-lg px-3 text-white"
+            title="{{- social.siteName -}}"
+            aria-label="{{- social.siteName -}}"
+            target="_blank"
+            rel="noopener"
+            role="menuitem"
+            data-tag-category="{{- 'social-navigation-' ~ social.handle -}}"
+            data-tag-action="click"
+            data-tag-label="{{- social.url -}}"
+        >
+            <span class="sr-only">{{- social.siteName -}}</span>
+            <i aria-hidden="true" class="{{- icons.fa_icon_lut(social.handle) -}}"></i>
+        </a>
+    {%- endfor -%}
+</nav>
