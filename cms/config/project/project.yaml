@@ -1,4 +1,4 @@
-dateModified: 1655419922
+dateModified: 1655420148
 elementSources:
   craft\elements\Entry:
     -
@@ -566,7 +566,7 @@ plugins:
     schemaVersion: '2.0'
   blitz:
     edition: standard
-    enabled: false
+    enabled: true
     licenseKey: 098AFX2F099TL01KIJ38HC5I
     schemaVersion: 4.1.2
     settings:

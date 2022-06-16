@@ -9,7 +9,6 @@ import eslintPlugin from 'vite-plugin-eslint';
 import {nodeResolve} from '@rollup/plugin-node-resolve';
 import critical from 'rollup-plugin-critical';
 import {ViteFaviconsPlugin} from 'vite-plugin-favicon2';
-import ViteCspPlugin from 'vite-plugin-csp';
 import * as path from 'path';
 
 // https://vitejs.dev/config/
@@ -56,7 +55,6 @@ export default defineConfig(({command}) => ({
                 './src/templates/**/*',
             ],
         }),
-        ViteCspPlugin(),
         vue(),
         viteCompression({
             filter: /\.(js|mjs|json|css|map)$/i
