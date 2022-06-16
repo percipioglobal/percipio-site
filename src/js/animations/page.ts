@@ -17,17 +17,17 @@ const ANIMATIONS: Animations = {
     'slideInRightToLeft': {
         initial: [],
         in: ['transition-all', 'ease-out', 'duration-1000', 'opacity-1', 'transform', 'translate-x-0'],
-        out: ['opacity-0', 'transform', 'translate-x-20']
+        out: ['opacity-0', 'transform', 'translate-x-5', 'md:translate-x-10']
     },
     'slideLeftToRight': {
         initial: [],
         in: ['transition-all', 'ease-out', 'duration-1000', 'opacity-1', 'transform', 'translate-x-0'],
-        out: ['opacity-0', 'transform', '-translate-x-20']
+        out: ['opacity-0', 'transform', '-translate-x-5', 'md:-translate-x-10']
     },
     'slideBottomToTop': {
         initial: [],
         in: ['transition-all', 'ease-out', 'duration-1000', 'opacity-1', 'translate-y-0'],
-        out: ['opacity-0', 'translate-y-20']
+        out: ['opacity-0', 'translate-y-5', 'md:translate-y-10']
     }
 }
 

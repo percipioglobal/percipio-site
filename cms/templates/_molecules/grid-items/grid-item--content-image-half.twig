@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="relative flex flex-col justify-center {{- props.settings.position == 'right' ? 'sm:pl-10 lg:pl-20' : 'sm:pr-10 lg:pr-20' -}}">
+            <div class="relative flex flex-col justify-center {{ props.settings.position == 'right' ? 'sm:pl-10 lg:pl-20' : 'sm:pr-10 lg:pr-20' -}}">
                 <div class="animate" data-animation="{{- props.settings.position == 'right' ? 'slideInRightToLeft' : 'slideLeftToRight' -}}">
                     {%- if props.item.overline -%}
                         {{- render.atom('text', 'overline', {
