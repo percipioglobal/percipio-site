@@ -12,7 +12,7 @@ import '@/css/app.pcss';
 const main = async () => {
 
     initNavigation()
-    initPageAnimation()
+    // initPageAnimation()
     initCopy()
 
     // const app = createApp(App)
