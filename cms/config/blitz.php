@@ -17,6 +17,8 @@
  * you do for 'general.php'
  */
 
+use craft\helpers\App;
+
 return [
     '*' => [
         // With this setting enabled, Blitz will log detailed messages to `storage/logs/blitz.log`.
@@ -26,7 +28,7 @@ return [
         //'hintsEnabled' => true,
 
         // With this setting enabled, Blitz will begin caching pages according to the included/excluded URI patterns. Disable this setting to prevent Blitz from caching any new pages.
-        //'cachingEnabled' => false,
+        'cachingEnabled' => (bool)App::env('ENABLE_TEMPLATE_CACHING'),,
 
         // Determines when and how the cache should be refreshed.
         // - `0`: Expire the cache, regenerate manually or organically
