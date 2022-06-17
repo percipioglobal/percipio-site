@@ -1,4 +1,4 @@
-dateModified: 1655459268
+dateModified: 1655465251
 elementSources:
   craft\elements\Entry:
     -
@@ -288,7 +288,6 @@ meta:
     4be4bd14-ce94-450b-a4f4-e10721ba5b22: Containerise # Containerise
     4d23d076-4a7c-4ad8-969e-ca980aef3815: 'Social Media Type' # Social Media Type
     4dfa8799-f095-4bd8-a821-1fb376db0278: Grids # Grids
-    4e026396-d7ab-43ef-a817-226fb2dada30: 'FAQ Categories' # FAQ Categories
     4ee5d848-5fee-407d-a3aa-7475ef0fe6bc: Width # Width
     4f6c2efe-5cf4-46b5-82e5-79a8796af5c5: Content # Content
     5a47b114-f61e-4fa9-abf3-015b22306186: 'Legal Group' # Legal Group
@@ -635,6 +634,22 @@ plugins:
             -
               - queryStringParam
               - fbclid
+      excludedUriPatterns:
+        -
+          __assoc__:
+            -
+              - uriPattern
+              - news-categories
+        -
+          __assoc__:
+            -
+              - uriPattern
+              - project-categories
+        -
+          __assoc__:
+            -
+              - uriPattern
+              - skills
       generatePagesWithQueryStringParams: true
       hintsEnabled: true
       includedQueryStringParams:
