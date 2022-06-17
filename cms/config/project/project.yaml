@@ -1,4 +1,4 @@
-dateModified: 1655490301
+dateModified: 1655490527
 elementSources:
   craft\elements\Entry:
     -
@@ -788,13 +788,13 @@ plugins:
         __assoc__:
           -
             - enabled
-            - '1'
+            - ''
           -
             - enforce
             - '1'
           -
             - header
-            - ''
+            - '1'
           -
             - directives
             -
