@@ -6,6 +6,15 @@ module.exports = {
 
     safelist: [
         'aspect-video',
+        'aspect-1/1',
+        'aspect-1/2',
+        'aspect-3/1',
+        'aspect-4/3',
+        'aspect-3/4',
+        'aspect-7/5',
+        'aspect-8/5',
+        'aspect-16/9',
+        'aspect-21/9',
         'bg-gray-600',
         'bg-gray-800',
         'bg-gray-900',
@@ -42,12 +51,19 @@ module.exports = {
 
         extend: {
             aspectRatio: {
+                '1/1': '1 / 1',
+                '1/2': '1 / 2',
+                '3/1': '3 / 1',
                 '3/2': '3 / 2',
+                '3/4': '3 / 4',
                 '4/3': '4 / 3',
                 '4/5': '4 / 5',
                 '4/5': '7 / 5',
+                '7/5': '7 / 5',
+                '8/5': '8 / 5',
                 '9/16': '9 / 16',
                 '16/9': '16 / 9',
+                '21/9': '21 / 9',
             },
 
             borderRadius: {
