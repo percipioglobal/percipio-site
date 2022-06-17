@@ -1064,16 +1064,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.225.5",
+            "version": "3.226.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "09b404c6b80b9c31be15fa245e647a2f9fb5e733"
+                "reference": "d76d4fe0fa603ddc3f5c54d9664438dc1a808859"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/09b404c6b80b9c31be15fa245e647a2f9fb5e733",
-                "reference": "09b404c6b80b9c31be15fa245e647a2f9fb5e733",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d76d4fe0fa603ddc3f5c54d9664438dc1a808859",
+                "reference": "d76d4fe0fa603ddc3f5c54d9664438dc1a808859",
                 "shasum": ""
             },
             "require": {
@@ -1149,9 +1149,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.225.5"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.226.0"
             },
-            "time": "2022-06-15T19:35:13+00:00"
+            "time": "2022-06-16T18:14:10+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -10242,16 +10242,16 @@
         },
         {
             "name": "verbb/super-table",
-            "version": "3.0.0-beta.5",
+            "version": "3.0.0-beta.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/verbb/super-table.git",
-                "reference": "f19bab5201a906c16512f22e83f047a95848a500"
+                "reference": "6f41edf3c626074287e5284cb8147e7c7223c5bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/super-table/zipball/f19bab5201a906c16512f22e83f047a95848a500",
-                "reference": "f19bab5201a906c16512f22e83f047a95848a500",
+                "url": "https://api.github.com/repos/verbb/super-table/zipball/6f41edf3c626074287e5284cb8147e7c7223c5bb",
+                "reference": "6f41edf3c626074287e5284cb8147e7c7223c5bb",
                 "shasum": ""
             },
             "require": {
@@ -10304,7 +10304,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-06-08T04:28:35+00:00"
+            "time": "2022-06-16T22:28:59+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
