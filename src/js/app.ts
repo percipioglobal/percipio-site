@@ -10,15 +10,9 @@ import '@/css/app.pcss';
 
 // App main
 const main = async () => {
-
     initNavigation()
     initPageAnimation()
     initCopy()
-
-    // const app = createApp(App)
-
-    // // Mount the app
-    // return app.mount('#page-container')
 }
 
 // Execute async function
