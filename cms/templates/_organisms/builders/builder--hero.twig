@@ -3,9 +3,9 @@
     'heroBuilder.heroPrimary:buttons',
     'heroBuilder.heroPrimary:buttons.target',
     'heroBuilder.heroPrimary:heroImage',
-    'heroBuilder.heroSecondary:image',
     'heroBuilder.heroSecondary:buttons',
     'heroBuilder.heroSecondary:buttons.target',
+    'heroBuilder.heroSecondary:cardImage',
     ])
 %}
 
@@ -20,7 +20,7 @@
                     content: block,
                 } -%}
 
-            {%- case "heroSecondary" -%}
+            {%- case 'heroSecondary' -%}
 
                 {%- include '_organisms/heroes/hero--secondary' ignore missing with {
                     content: block,
