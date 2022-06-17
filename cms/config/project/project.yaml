@@ -1,4 +1,4 @@
-dateModified: 1655477271
+dateModified: 1655481863
 elementSources:
   craft\elements\Entry:
     -
@@ -794,7 +794,7 @@ plugins:
             - ''
           -
             - header
-            - '1'
+            - ''
           -
             - directives
             -
@@ -804,20 +804,24 @@ plugins:
                 - '''self'''
               -
                 - '1'
-                - font-src
-                - '''self'' https://fonts.gstatic.com;'
-              -
-                - '1'
-                - img-src
-                - '''self'' data: https://dnuzs9ej922bx.cloudfront.net https://www.google-analytics.com;'
-              -
-                - '1'
                 - script-src
                 - '''self'' https://cdn.polyfill.io/v3/polyfill.min.js https://www.google-analytics.com/analytics.js https://www.googletagmanager.com/gtag/js'
               -
                 - '1'
                 - style-src
                 - '''self'' https://fonts.googleapis.com;'
+              -
+                - '1'
+                - font-src
+                - '''self'' https://fonts.gstatic.com'
+              -
+                - '1'
+                - frame-src
+                - '''self'' https://player.vimeo.com'
+              -
+                - ''
+                - img-src
+                - '''self'' data: https://dnuzs9ej922bx.cloudfront.net https://www.google-analytics.com'
       cooldownDuration:
         __assoc__:
           -
