@@ -1,4 +1,4 @@
-dateModified: 1655420148
+dateModified: 1655459268
 elementSources:
   craft\elements\Entry:
     -
@@ -621,7 +621,7 @@ plugins:
             - ''
       cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
       cachingEnabled: true
-      debug: false
+      debug: true
       deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
       driverJobPriority: 100
       excludedQueryStringParams:
@@ -663,8 +663,8 @@ plugins:
       refreshCacheWhenElementMovedInStructure: true
       refreshCacheWhenElementSavedNotLive: false
       refreshCacheWhenElementSavedUnchanged: false
-      refreshMode: 2
-      sendPoweredByHeader: true
+      refreshMode: 3
+      sendPoweredByHeader: false
   blitz-recommendations:
     edition: standard
     enabled: true
