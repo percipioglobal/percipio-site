@@ -1,4 +1,4 @@
-dateModified: 1655483757
+dateModified: 1655484758
 elementSources:
   craft\elements\Entry:
     -
@@ -788,7 +788,7 @@ plugins:
         __assoc__:
           -
             - enabled
-            - ''
+            - '1'
           -
             - enforce
             - '1'
@@ -805,11 +805,11 @@ plugins:
               -
                 - '1'
                 - script-src
-                - '''self'' https://cdn.polyfill.io/v3/polyfill.min.js https://www.google-analytics.com/analytics.js https://www.googletagmanager.com/gtag/js'
+                - '''self'' ''cc4fc0daa6b8402e96f0001df44f56a106803d3b8b06d0bc42700100835290f4'' ''7ee5423273d2a18cbdd8ef6f5a4fe85e405a158f84a6bf97447c3a475e0ff838'' ''7751507cbced412d6d21de0465faead1c50a86c735aad3b3a4013bd8a8730205'' https://cdn.polyfill.io/v3/polyfill.min.js https://www.google-analytics.com/analytics.js https://www.googletagmanager.com/gtag/js'
               -
                 - '1'
                 - style-src
-                - '''self'' https://fonts.googleapis.com;'
+                - '''self'' ''e0bf98fa8553be29a7dc731e2cd63624ba249b793cd3986f698f2c8de3f5bc23'' https://fonts.googleapis.com;'
               -
                 - '1'
                 - font-src
@@ -819,7 +819,7 @@ plugins:
                 - frame-src
                 - '''self'' https://player.vimeo.com'
               -
-                - ''
+                - '1'
                 - img-src
                 - '''self'' data: https://dnuzs9ej922bx.cloudfront.net https://www.google-analytics.com'
       cooldownDuration:
