@@ -9,9 +9,7 @@
 
 {%- block media -%}
     {%- minify -%}
-        <iframe class="object-cover w-full h-full {{ props.utilities -}}" aria-labelledby="{{- 'media-embed-' ~ props.title|kebab -}}" src="{{- props.url -}}">
+        <iframe class="absolute left-0 top-0 right-0 bottom-0 w-full h-full {{ props.utilities -}}" aria-labelledby="{{- 'media-embed-' ~ props.title|kebab -}}" src="{{- props.url -}}">
         </iframe>
     {%- endminify -%}
 {%- endblock -%}
-
-
