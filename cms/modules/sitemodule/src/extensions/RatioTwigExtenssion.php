@@ -7,7 +7,7 @@ use Craft;
 class RatioTwigExtenssion extends \Twig\Extension\AbstractExtension
 {
     private $ratios = [
-        100 => 'aspect-[1/1] aspect-[square] aspect-square',
+        100 => 'aspect-[1/1]',
         50 => 'aspect-[1/2]',
         33 => 'aspect-[3/1]',
         75 => 'aspect-[4/3]',
