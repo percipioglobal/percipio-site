@@ -38,6 +38,8 @@ return [
         'subLeft' => true,
         'subRight' => true,
     ],
+    'preventUserEnumeration' => true,
+    'sendPoweredByHeader' => false,
     'defaultTokenDuration' => 86400,
     'enableCsrfProtection' => true,
     'errorTemplatePrefix' => 'errors/',
