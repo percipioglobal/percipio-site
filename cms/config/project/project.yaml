@@ -1,4 +1,4 @@
-dateModified: 1655459268
+dateModified: 1655481863
 elementSources:
   craft\elements\Entry:
     -
@@ -288,7 +288,6 @@ meta:
     4be4bd14-ce94-450b-a4f4-e10721ba5b22: Containerise # Containerise
     4d23d076-4a7c-4ad8-969e-ca980aef3815: 'Social Media Type' # Social Media Type
     4dfa8799-f095-4bd8-a821-1fb376db0278: Grids # Grids
-    4e026396-d7ab-43ef-a817-226fb2dada30: 'FAQ Categories' # FAQ Categories
     4ee5d848-5fee-407d-a3aa-7475ef0fe6bc: Width # Width
     4f6c2efe-5cf4-46b5-82e5-79a8796af5c5: Content # Content
     5a47b114-f61e-4fa9-abf3-015b22306186: 'Legal Group' # Legal Group
@@ -540,6 +539,7 @@ meta:
     ed4b0f49-8429-4d80-846f-3d441bd3e707: Image # Image
     ee0406c9-28bc-4941-889f-a5c46e62ec44: Image # Image
     ef841ba4-7bcd-4ef5-9c12-96377bf7fba2: Pages # Pages
+    efb7b090-ee57-4c4f-a7e9-f8cbc9b9c7ae: Image # Image
     f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46: Gallery # Gallery
     f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd: 'Our Work' # Our Work
     f4cbe95b-c71a-42f8-a9d8-464dcf3916a9: 'Primary Navigation' # Primary Navigation
@@ -635,6 +635,22 @@ plugins:
             -
               - queryStringParam
               - fbclid
+      excludedUriPatterns:
+        -
+          __assoc__:
+            -
+              - uriPattern
+              - news-categories
+        -
+          __assoc__:
+            -
+              - uriPattern
+              - project-categories
+        -
+          __assoc__:
+            -
+              - uriPattern
+              - skills
       generatePagesWithQueryStringParams: true
       hintsEnabled: true
       includedQueryStringParams:
@@ -778,7 +794,7 @@ plugins:
             - ''
           -
             - header
-            - '1'
+            - ''
           -
             - directives
             -
@@ -786,6 +802,26 @@ plugins:
                 - '1'
                 - default-src
                 - '''self'''
+              -
+                - '1'
+                - script-src
+                - '''self'' https://cdn.polyfill.io/v3/polyfill.min.js https://www.google-analytics.com/analytics.js https://www.googletagmanager.com/gtag/js'
+              -
+                - '1'
+                - style-src
+                - '''self'' https://fonts.googleapis.com;'
+              -
+                - '1'
+                - font-src
+                - '''self'' https://fonts.gstatic.com'
+              -
+                - '1'
+                - frame-src
+                - '''self'' https://player.vimeo.com'
+              -
+                - ''
+                - img-src
+                - '''self'' data: https://dnuzs9ej922bx.cloudfront.net https://www.google-analytics.com'
       cooldownDuration:
         __assoc__:
           -
