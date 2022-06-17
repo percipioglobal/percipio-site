@@ -1,4 +1,4 @@
-dateModified: 1655474949
+dateModified: 1655475661
 elementSources:
   craft\elements\Entry:
     -
@@ -801,6 +801,22 @@ plugins:
               -
                 - '1'
                 - default-src
+                - '''self'''
+              -
+                - '1'
+                - font-src
+                - '''self'''
+              -
+                - '1'
+                - img-src
+                - '''self'''
+              -
+                - '1'
+                - script-src
+                - '''self'''
+              -
+                - '1'
+                - style-src
                 - '''self'''
       cooldownDuration:
         __assoc__:
