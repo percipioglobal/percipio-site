@@ -23,7 +23,7 @@
 {%- set utilities = utilities|default('') -%}
 
 {%- minify -%}
-    <section class="container max-w-screen-xl mx-auto py-8 md:py-16 {{ utilities -}}">
+    <section class="container max-w-screen-xl mx-auto py-8 md:py-16 overflow-x-hidden {{ utilities -}}">
 
         {%- for item in items.gridItems.collect() ??? null -%}
 
