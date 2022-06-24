@@ -6,6 +6,7 @@ You'll need [Docker desktop](https://www.docker.com/products/docker-desktop) for
 
 Ensure no other local development environments are running that might have port conflicts, then:
 
+* Rename the `example.env` file to `.env` in the `cms` directory
 * Start up the site by typing `make dev` in terminal in the project's root directory (the first build will be somewhat lengthy)
 * Navigate to `http://localhost:3500` to use the site; the `vite-dev-server` runs off of `http://localhost:3501`
 
