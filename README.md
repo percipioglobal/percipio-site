@@ -59,3 +59,5 @@ To make using it easier, we're using a Makefile and the built-in `make` utility 
 **Tip:** To reach the CMS of the percipio site we changed the handle to `cp` so use `http://localhost:3500/cp`
 
 **N.B.:** There are no images included in this repository, so if you go to `http:localhost:3500` you will see an error on the front-end because no images exist, if the backend works this means you have succesfully setup this project on your local machine!
+
+**N.B.:** If you get a "Gateway Time-out 502" Error after the first `make dev` just stop the container from Docker Desktop, go to your terminal and run `make dev` once more. If this error happens it means that the php server simply started fasted than the database was imported.
