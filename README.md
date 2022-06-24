@@ -6,11 +6,10 @@ You'll need [Docker desktop](https://www.docker.com/products/docker-desktop) for
 
 Ensure no other local development environments are running that might have port conflicts, then:
 
-* Rename the `example.env` file to `.env` in the `cms` directory
-* Start up the site by typing `make dev` in terminal in the project's root directory (the first build will be somewhat lengthy)
-* Navigate to `http://localhost:3500` to use the site; the `vite-dev-server` runs off of `http://localhost:3501`
-
-Wait until you see the following to indicate that the PHP container is ready:
+- Clone the `percipioglobal/percipio-site` repo and ensure you are on the `onboarding` branch of the repo.  - 
+- Rename the `example.env` file to `.env` in the `cms` directory
+- Start up the site by typing `make dev` in terminal in the project's root directory (the first build will be somewhat lengthy)
+- Wait until you see the following to indicate that the PHP container is ready:
 
 ```
 php_1         | Craft is installed.
@@ -19,7 +18,7 @@ php_1         | [01-Dec-2020 18:38:46] NOTICE: fpm is running, pid 22
 php_1         | [01-Dec-2020 18:38:46] NOTICE: ready to handle connections
 ```
 
-...and the following to indicate that the Vite container is ready:
+- and the following to indicate that the Vite container is ready:
 ```
 vite_1        |   vite v2.3.2 dev server running at:
 vite_1        |
@@ -28,6 +27,10 @@ vite_1        |   > Network:  http://172.22.0.5:3501/
 vite_1        |
 vite_1        |   ready in 1573ms.
 ```
+
+- Once complete, navigate to `http://localhost:3500` to use the site; the `vite-dev-server` runs off of `http://localhost:3501`
+
+## Login Credentials
 
 The CP login credentials are initially set as follows:
 
