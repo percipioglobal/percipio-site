@@ -1,14 +1,55 @@
-<div class="flex flex-wrap -mx-{{- spacing }} mt-16 mb-32">
+{%- import '_macros/atoms' as render -%}
 
-    {% for item in grid.items %}
+{#
+    ### PROPERTIES ###
+    ------------------
 
-        {%- include '_molecules/griditems/griditem--content' ignore missing with { 
-            content: item,
-            spacing: spacing,
-            prose: prose,
-        } -%}
+    items: list of grid items
+    utilities: TW classes
 
-    {% endfor %}
+    ## EXTENDED
+    -----------
 
-</div>
 
+    ### COMPONENTS ###
+    ------------------
+
+    ## MOLECULES
+
+    grid-item--content: `_molecules/grid-items/grid-item--content`
+#}
+
+{%- set items = items ??? null -%}
+{%- set callout = callout ??? '' -%}
+{%- set utilities = utilities ??? '' -%}
+
+{%- minify -%}
+    <section class="container max-w-screen-xl mx-auto py-8 md:py-16 {{ utilities -}}">
+
+        <div class="md:flex">
+            <div class="w-full md:w-1/2 mb-10 md:mb-0 relative md:pr-16">
+                <h2 class="sticky top-1/2">
+                    <span class="animate" data-animation="fadeIn">
+                        {{- render.atom('text', 'h2', {
+                            content: callout,
+                        }) -}}
+                    </span>
+                </h2>
+            </div>
+
+            <div class="w-full md:w-1/2 md:min-h-[80vh] pl-0 md:pl-20">
+                <div class="animate" data-animation="slideInRightToLeft">
+                    {%- for item in items.collect() ??? null -%}
+
+                        {%- include '_molecules/grid-items/grid-item--content' ignore missing with {
+                            item: item,
+                            utilities: not loop.last ? 'mb-10 md:mb-18 lg:mb-24' : ''
+                        } -%}
+
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+
+    </section>
+{%- endminify -%}

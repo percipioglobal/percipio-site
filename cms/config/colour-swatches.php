@@ -27,10 +27,82 @@ return [
 
     // Custom  palettes, fixed options [label, default (boolean), colour (array(colour, customOptions)) ]
     'palettes' => [
+        'Dark/Light'=> [
+            [
+                'label'   => 'light',
+                'default' => true,
+                'color'   =>  [
+                    [
+                        'color'     => '#FFFFFF',  // the colour shown in the fieldtype (required)
+                        'class'     => 'white', // custom attribute
+                    ],
+                ]
+            ],
+            [
+                'label'   => 'dark',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#273040',  // the colour shown in the fieldtype (required)
+                        'class'     => 'gray-800', // custom attribute
+                    ],
+                ]
+            ],
+            [
+                'label'   => 'redblue',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#1c64f2',  // the colour shown in the fieldtype (required)
+                        'class'     => 'blue-600', // custom attribute
+                    ],
+                    [
+                        'color'     => '#D61F69',  // the colour shown in the fieldtype (required)
+                        'class'     => 'pink-600', // custom attribute
+                    ],
+                ]
+            ],
+        ],
+        'Grid Background' => [
+            [
+                'label'   => 'blue',
+                'default' => true,
+                'color'   =>  [
+                    [
+                        'color'     => '#1E429F',  // the colour shown in the fieldtype (required)
+                        'class'     => 'blue-700', // custom attribute
+                    ],
+                ]
+            ],
+            [
+                'label'   => 'orange',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#FF5A1F',  // the colour shown in the fieldtype (required)
+                        'class'     => 'orange-500', // custom attribute
+                    ],
+                ]
+            ],
+        ],
         'Percipio' => [  // custom label
             [
-                'label'   => 'pink',
+                'label'   => 'redblue',
                 'default' => true,
+                'color'   =>  [
+                    [
+                        'color'     => '#1c64f2',  // the colour shown in the fieldtype (required)
+                        'class'     => 'blue-600', // custom attribute
+                    ],
+                    [
+                        'color'     => '#D61F69',  // the colour shown in the fieldtype (required)
+                        'class'     => 'pink-600', // custom attribute
+                    ],
+                ]
+            ],
+            [
+                'label'   => 'pink',
+                'default' => false,
                 'color'   =>  [
                     [
                         'color'     => '#D61F69',  // the colour shown in the fieldtype (required)
@@ -127,6 +199,20 @@ return [
                 ]
             ],
             [
+                'label'   => 'darkblue',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#1e429f',  // the colour shown in the fieldtype (required)
+                        'class'     => 'blue-800', // custom attribute
+                    ],
+                    [
+                        'color'     => '#1c64f2',  // the colour shown in the fieldtype (required)
+                        'class'     => 'blue-600', // custom attribute
+                    ],
+                ]
+            ],
+            [
                 'label'   => 'purple',
                 'default' => false,
                 'color'   =>  [
@@ -137,6 +223,42 @@ return [
                     [
                         'color'     => '#5521b5',  // the colour shown in the fieldtype (required)
                         'class'     => 'purple-800', // custom attribute
+                    ],
+                ]
+            ],
+            [
+                'label'   => 'white',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#FFFFFF',  // the colour shown in the fieldtype (required)
+                        'class'     => 'white-100', // custom attribute
+                    ],
+                    [
+                        'color'     => '#FFFFFF',  // the colour shown in the fieldtype (required)
+                        'class'     => 'white-100', // custom attribute
+                    ],
+                ]
+            ],
+        ],
+        'Content CTA' => [  // custom label
+            [
+                'label'   => 'blue',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#1c64f2',  // the colour shown in the fieldtype (required)
+                        'class'     => 'blue-600', // custom attribute
+                    ],
+                ]
+            ],
+            [
+                'label'   => 'pink',
+                'default' => false,
+                'color'   =>  [
+                    [
+                        'color'     => '#d61f69',  // the colour shown in the fieldtype (required)
+                        'class'     => 'pink-600', // custom attribute
                     ],
                 ]
             ],

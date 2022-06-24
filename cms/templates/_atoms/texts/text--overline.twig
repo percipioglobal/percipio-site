@@ -1,22 +1,24 @@
-{% extends "_atoms/texts/text--variables" %}
+{%- extends '_atoms/texts/_text--props' -%}
 
 {#
-    ### OPTIONS ###
-    ---------------
+    ### PROPERTIES ###
+    ------------------
 
-    content: (STR) -- the actual content as a string
+    INHERITED FROM: `_atoms/texts/text--props.twig`
 
+    OMITTED
+    ---------
+
+    alignment
+    color
 #}
 
-{% block text %}
-
-    {%- set values = values|merge({
-        utilities: options.utilities ??? 'text-white-100',
-    }) -%}
+{%- block text -%}
 
     {%- minify -%}
-        <span class="inline-block break-words font-mono mb-1 text-base {{ values.utilities -}}">
-            {{- values.content | typogrify(true) -}}
+        <span class="text-pink-500 font-mono text-xl md:text-2xl {{ props.utilities -}}">
+            {{- props.content | typogrify(true) | raw -}}
         </span>
     {%- endminify -%}
-{% endblock %}
+
+{%- endblock -%}

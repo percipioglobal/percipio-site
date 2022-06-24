@@ -1,3 +1,4 @@
+{# -- Basic meta tags -- #}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1">
 
@@ -12,7 +13,22 @@
     <link rel="dns-prefetch" href="{{ url }}">
     <link rel="preconnect" href="{{ url }}" crossorigin>
 {% endfor %}
+
+<link   rel="preconnect"
+        href="https://fonts.googleapis.com">
+<link   rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+<link   rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro&display=swap"
+        as="style"
+        onload="this.rel='stylesheet'">
+<link   rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro&display=swap"
+        media="print"
+        onload="this.media='all'">
+
 {% header headerLink %}
 
 {# -- Favicons, webapp manifests, etc. -- #}
-{{ craft.twigpack.includeFile("@webroot/dist/webapp.html") }}
+{{ craft.vite.inline("@webroot/dist/assets/favicons/webapp.html") }}

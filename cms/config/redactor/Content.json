@@ -3,18 +3,19 @@
     "formatting",
     "bold",
     "italic",
-    "unorderedlist",
-    "orderedlist",
-    "link"
+    "lists",
+    "sup",
+    "sub",
+    "link",
+    "html"
     ],
     "formatting": [
     "p",
     "h3",
-    "h4",
-    "h5",
-    "h6"
+    "h4"
     ],
+    "plugins": ["counter"],
     "toolbarFixed": true,
-    "pastePlainText": true,
+    "pastePlainText": false,
     "pasteImages": false
 }

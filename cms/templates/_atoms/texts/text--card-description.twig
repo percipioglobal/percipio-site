@@ -1,17 +1,16 @@
-{% extends "_atoms/texts/text--variables" %}
+{%- extends '_atoms/texts/_text--props' -%}
 
 {#
-    ### OPTIONS ###
-    ---------------
+    ### PROPERTIES ###
+    ------------------
 
-    content: (STR) -- the actual content as a string
-
+    INHERITED FROM: `_atoms/texts/text--props.twig`
 #}
 
-{% block text %}
+{%- block text -%}
     {%- minify -%}
-        <h5 class="break-words text-lg font-secondary leading-relaxed">
-            {{- values.content | typogrify(true) -}}
-        </h5>
+        <div class="font-primary md:text-base {{ props.color }} {{ props.alignment }} {{ props.utilities -}}">
+            {{- props.content | typogrify(true) -}}
+        </div>
     {%- endminify -%}
-{% endblock %}
+{%- endblock -%}

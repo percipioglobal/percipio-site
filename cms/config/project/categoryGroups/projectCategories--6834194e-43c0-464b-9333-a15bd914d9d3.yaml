@@ -1,3 +1,4 @@
+defaultPlacement: end
 fieldLayouts:
   56a16cfc-38a8-4edc-afb4-cb971fc69095:
     tabs:
@@ -24,26 +25,18 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
-            warning: null
-            width: 100
-          -
-            fieldUid: 648e7555-63ed-4228-a6b7-7811c865a7af
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
+            uid: 4b6f0e0e-cc14-49be-a6a9-cd7016d98c48
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 2571f463-5c8a-420b-ae8f-8ba86b6c8dc8
 handle: projectCategories
 name: 'Project Categories'
 siteSettings:
-  5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
-    hasUrls: true
-    template: _organisms/_page
-    uriFormat: 'project-categories/{slug}'
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
+    hasUrls: false
+    template: null
+    uriFormat: null
 structure:
   maxLevels: null
   uid: f3c16388-ee6a-4753-8ede-739a6625f5ec

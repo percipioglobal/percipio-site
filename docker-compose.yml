@@ -10,9 +10,9 @@ services:
       - ./cms/.env
     init: true
     ports:
-      - "8000:80"
+      - "3500:80"
     volumes:
-      - cpresources:/var/www/project/cms/web/cpresources
+      - cpresources:/var/www/project/cms/web/cpresources:delegated
       - ./cms/web:/var/www/project/cms/web:cached
   # php - run php-fpm
   php:
@@ -20,7 +20,7 @@ services:
       context: ./docker-config/php-prod-craft
       dockerfile: ./Dockerfile
     depends_on:
-      - "mariadb"
+      - "mysql"
       - "redis"
     env_file:
       *env
@@ -28,13 +28,16 @@ services:
       - "9000"
     init: true
     volumes: &php-volumes
-      - cpresources:/var/www/project/cms/web/cpresources
-      - storage:/var/www/project/cms/storage
+      - cpresources:/var/www/project/cms/web/cpresources:delegated
+      - storage:/var/www/project/cms/storage:delegated
       - ./cms:/var/www/project/cms:cached
-      - ./cms/vendor:/var/www/project/cms/vendor:delegated
+      # Specific directories that need to be bind-mounted
       - ./cms/storage/logs:/var/www/project/cms/storage/logs:delegated
+      - ./cms/storage/runtime/compiled_templates:/var/www/project/cms/storage/runtime/compiled_templates:delegated
+      - ./cms/storage/runtime/compiled_classes:/var/www/project/cms/storage/runtime/compiled_classes:delegated
+      - ./cms/vendor:/var/www/project/cms/vendor:delegated
   # php - run php-fpm with xdebug
-  php_xdebug: 
+  php_xdebug:
     build:
       context: ./docker-config/php-dev-craft
       dockerfile: ./Dockerfile
@@ -42,10 +45,9 @@ services:
       - "php"
     env_file:
       *env
-    expose: 
+    expose:
       - "9000"
     init: true
-    user: www-data
     volumes:
       *php-volumes
   # queue - runs queue jobs via php craft queue/listen
@@ -57,17 +59,16 @@ services:
       - "php"
     env_file:
       *env
-    expose:
-      - "9001"
     init: true
-    user: www-data
     volumes:
       *php-volumes
-  # mariadb - database
-  mariadb:
+  # mysql - database
+  mysql:
     build:
-      context: ./docker-config/mariadb
+      context: ./docker-config/mysql
       dockerfile: ./Dockerfile
+    cap_add:
+      - SYS_NICE  # CAP_SYS_NICE
     env_file:
       *env
     environment:
@@ -77,9 +78,9 @@ services:
       MYSQL_PASSWORD: project
     init: true
     ports:
-      - "4306:3306"
+      - "3502:3306"
     volumes:
-      - db-data:/var/lib/mysql
+      - percipio-data:/var/lib/mysql
       - ./db-seed/:/docker-entrypoint-initdb.d
   # redis - key/value database for caching & php sessions
   redis:
@@ -89,25 +90,24 @@ services:
     expose:
       - "6379"
     init: true
-  # webpack - frontend build system
-  webpack:
+  # vite - frontend build system
+  vite:
     build:
-      context: ./docker-config/node-dev-webpack
+      context: ./docker-config/node-dev-vite
       dockerfile: ./Dockerfile
     env_file:
       *env
     init: true
     ports:
-      - "8080:8080"
+      - "3501:3501"
     volumes:
-      - ./tsconfig.json:/var/www/project/tsconfig.json:cached
       - ./buildchain:/var/www/project/buildchain:cached
       - ./buildchain/node_modules:/var/www/project/buildchain/node_modules:delegated
-      - ./cms/web/dist:/var/www/project/cms/web/dist:delegated
+      - ./cms/web:/var/www/project/cms/web:delegated
       - ./src:/var/www/project/src:cached
       - ./cms/templates:/var/www/project/cms/templates:cached
 
 volumes:
-  db-data:
+  percipio-data:
   cpresources:
   storage:

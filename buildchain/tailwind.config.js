@@ -1,316 +1,189 @@
 module.exports = {
-    purge: {
-        content: [
-            '../cms/templates/**/*.{twig,html}',
-            '../src/vue/**/*.{vue,html}',
-        ],
-        layers: [
-            'base',
-            'components',
-            'utilities',
-        ],
-        mode: 'layers',
-        options: {
-            whitelist: [
-                '../src/css/components/**/*.{css}',
-            ],
-            whitelistPatterns: [
-                /pink-600$/,
-                /pink-800$/,
-                /red-600$/,
-                /red-800$/,
-                /orange-500$/,
-                /orange-700$/,
-                /yellow-400$/,
-                /yellow-500$/,
-                /green-400$/,
-                /green-600$/,
-                /teal-400$/,
-                /teal-600$/,
-                /blue-600$/,
-                /blue-800$/,
-                /purple-600$/,
-                /purple-800$/,
-            ],
-        }
-    },
+    content: [
+        '../cms/templates/**/*.{twig,html,svg}',
+        '../src/vue/**/*.{vue,html}',
+    ],
+
+    safelist: [
+        'aspect-video',
+        'aspect-1/1',
+        'aspect-1/2',
+        'aspect-3/1',
+        'aspect-4/3',
+        'aspect-3/4',
+        'aspect-7/5',
+        'aspect-8/5',
+        'aspect-16/9',
+        'aspect-21/9',
+        'bg-gray-600',
+        'bg-gray-800',
+        'bg-gray-900',
+        'duration-1000',
+        'sm:col-span-1',
+        'sm:col-span-2',
+        'sm:col-span-3',
+        'sm:col-span-4',
+        'sm:col-span-5',
+        'sm:col-span-6',
+        'from-blue-600',
+        'to-pink-600',
+        '-translate-x-5',
+        'translate-x-5',
+        'translate-y-10',
+        'md:-translate-x-10',
+        'md:translate-x-10',
+        'md:translate-y-20',
+        {
+            pattern: /bg-(blue|green|orange|pink|purple|red|teal|yellow)-(500|600|700)/,
+            variants: ['hover','focus','md','lg'],
+        },
+    ],
+
     theme: {
-        typography: (theme) => ({
-            default: {
-                css: {
-                    // maxWidth: '80ch',
-                    maxWidth: theme('maxWidth.screens.lg'),
-                    strong: {
-                        color: theme('colors.white.100'),
-                    },
-                },
-            },
-            '3xl': {
-                css: {
-                    fontSize: theme('fontSize.3xl'),
-                    fontWeight: theme('fontWeight.medium'),
-                }
-            }
-        }),
-        extend: {
 
-            screens: {
-                '2xl': '1536px',
-            },
-
-            colors: {
-
-                primary: {
-                    50: '#ebf5ff',
-                    100: '#e1effe',
-                    200: '#c3ddfd',
-                    300: '#a4cafe',
-                    400: '#76a9fa',
-                    500: '#3f83f8',
-                    600: '#1c64f2',
-                    700: '#1a56db',
-                    800: '#1e429f',
-                    900: '#233876',
-                },
-
-                gradients: {
-                    'dark-navy': 'rgba(0,6,51,1)',
-                    black: 'rgba(0,2,20,1)',
-                },
-
-                transparent: 'transparent',
-                current: 'currentColor',
-
-                black: {
-                    10: 'rgba(0,0,0,.1)',
-                    20: 'rgba(0,0,0,.2)',
-                    30: 'rgba(0,0,0,.3)',
-                    40: 'rgba(0,0,0,.4)',
-                    50: 'rgba(0,0,0,.5)',
-                    60: 'rgba(0,0,0,.6)',
-                    70: 'rgba(0,0,0,.7)',
-                    80: 'rgba(0,0,0,.8)',
-                    90: 'rgba(0,0,0,.9)',
-                    100: 'rgba(0,0,0,1)',
-                },
-                white: {
-                    10: 'rgba(255,255,255,.1)',
-                    20: 'rgba(255,255,255,.2)',
-                    30: 'rgba(255,255,255,.3)',
-                    40: 'rgba(255,255,255,.4)',
-                    50: 'rgba(255,255,255,.5)',
-                    60: 'rgba(255,255,255,.6)',
-                    70: 'rgba(255,255,255,.7)',
-                    80: 'rgba(255,255,255,.8)',
-                    90: 'rgba(255,255,255,.9)',
-                    100: 'rgba(255,255,255,1)',
-                },
-                gray: {
-                    50: '#f9fafb',
-                    100: '#f4f5f7',
-                    200: '#e5e7eb',
-                    300: '#d2d6dc',
-                    400: '#9fa6b2',
-                    500: '#6b7280',
-                    600: '#4b5563',
-                    700: '#374151',
-                    800: '#252f3f',
-                    900: '#161e2e',
-                },
-                'cool-gray': {
-                    50: '#fbfdfe',
-                    100: '#f1f5f9',
-                    200: '#e2e8f0',
-                    300: '#cfd8e3',
-                    400: '#97a6ba',
-                    500: '#64748b',
-                    600: '#475569',
-                    700: '#364152',
-                    800: '#27303f',
-                    900: '#1a202e',
-                },
-                red: {
-                    50: '#fdf2f2',
-                    100: '#fde8e8',
-                    200: '#fbd5d5',
-                    300: '#f8b4b4',
-                    400: '#f98080',
-                    500: '#f05252',
-                    600: '#e02424',
-                    700: '#c81e1e',
-                    800: '#9b1c1c',
-                    900: '#771d1d',
-                },
-                orange: {
-                    50: '#fff8f1',
-                    100: '#feecdc',
-                    200: '#fcd9bd',
-                    300: '#fdba8c',
-                    400: '#ff8a4c',
-                    500: '#ff5a1f',
-                    600: '#d03801',
-                    700: '#b43403',
-                    800: '#8a2c0d',
-                    900: '#771d1d',
-                },
-                yellow: {
-                    50: '#fdfdea',
-                    100: '#fdf6b2',
-                    200: '#fce96a',
-                    300: '#faca15',
-                    400: '#e3a008',
-                    500: '#c27803',
-                    600: '#9f580a',
-                    700: '#8e4b10',
-                    800: '#723b13',
-                    900: '#633112',
-                },
-                green: {
-                    50: '#f3faf7',
-                    100: '#def7ec',
-                    200: '#bcf0da',
-                    300: '#84e1bc',
-                    400: '#31c48d',
-                    500: '#0e9f6e',
-                    600: '#057a55',
-                    700: '#046c4e',
-                    800: '#03543f',
-                    900: '#014737',
-                },
-                teal: {
-                    50: '#edfafa',
-                    100: '#d5f5f6',
-                    200: '#afecef',
-                    300: '#7edce2',
-                    400: '#16bdca',
-                    500: '#0694a2',
-                    600: '#047481',
-                    700: '#036672',
-                    800: '#05505c',
-                    900: '#014451',
-                },
-                blue: {
-                    50: '#ebf5ff',
-                    100: '#e1effe',
-                    200: '#c3ddfd',
-                    300: '#a4cafe',
-                    400: '#76a9fa',
-                    500: '#3f83f8',
-                    600: '#1c64f2',
-                    700: '#1a56db',
-                    800: '#1e429f',
-                    900: '#233876',
-                },
-                indigo: {
-                    50: '#f0f5ff',
-                    100: '#e5edff',
-                    200: '#cddbfe',
-                    300: '#b4c6fc',
-                    400: '#8da2fb',
-                    500: '#6875f5',
-                    600: '#5850ec',
-                    700: '#5145cd',
-                    800: '#42389d',
-                    900: '#362f78',
-                },
-                purple: {
-                    50: '#f6f5ff',
-                    100: '#edebfe',
-                    200: '#dcd7fe',
-                    300: '#cabffd',
-                    400: '#ac94fa',
-                    500: '#9061f9',
-                    600: '#7e3af2',
-                    700: '#6c2bd9',
-                    800: '#5521b5',
-                    900: '#4a1d96',
-                },
-                pink: {
-                    50: '#fdf2f8',
-                    100: '#fce8f3',
-                    200: '#fad1e8',
-                    300: '#f8b4d9',
-                    400: '#f17eb8',
-                    500: '#e74694',
-                    600: '#d61f69',
-                    700: '#bf125d',
-                    800: '#99154b',
-                    900: '#751a3d',
-                },
-            },
-            borderWidth: {
-                DEFAULT: '1px',
-                '0': '0',
-                '2': '2px',
-                '3': '3px',
-                '4': '4px',
-                '6': '6px',
-                '8': '8px',
-            },
-
-            inset: (theme, { negative }) => ({
-                auto: 'auto',
-                ...theme('spacing'),
-                ...negative(theme('spacing')),
-                '1/2': '50%',
-                '1/3': '33.333333%',
-                '2/3': '66.666667%',
-                '1/4': '25%',
-                '2/4': '50%',
-                '3/4': '75%',
-                full: '100%',
-                '-1/2': '-50%',
-                '-1/3': '-33.333333%',
-                '-2/3': '-66.666667%',
-                '-1/4': '-25%',
-                '-2/4': '-50%',
-                '-3/4': '-75%',
-                '-full': '-100%',
-            }),
-
-            minWidth: {
-                '3/4': '75%'
-            },
-
-            minHeight: (theme) => ({
-                ...theme('spacing'),
-                '3/4': '75vh',
-            }),
-
-            opacity: {
-                20: '0.2',
-            },
-
-            translate: {
-                '-1/2': '-50%',
-            },
-
-            width: {
-                16: '4rem',
-                200: '200%',
-                300: '300%',
-                400: '400%',
-                500: '500%',
-                600: '600%',
-            },
-
-            zIndex: {
-                '-10': '-10',
-                '-20': '-20',
-                '1': '1',
-                '2': '2',
+        container: {
+            padding: {
+                DEFAULT: '1.5rem',
+                sm: '2rem',
+                '2xl': '0',
             },
         },
+
+        extend: {
+            aspectRatio: {
+                '1/1': '1 / 1',
+                '1/2': '1 / 2',
+                '3/1': '3 / 1',
+                '3/2': '3 / 2',
+                '3/4': '3 / 4',
+                '4/3': '4 / 3',
+                '4/5': '4 / 5',
+                '4/5': '7 / 5',
+                '7/5': '7 / 5',
+                '8/5': '8 / 5',
+                '9/16': '9 / 16',
+                '16/9': '16 / 9',
+                '21/9': '21 / 9',
+            },
+
+            borderRadius: {
+                '4xl': '30px',
+            },
+            colors: {
+                'blue': {
+                    500: '#1C64F2',
+                    700: '#1E429F',
+                },
+                'green': {
+                    500: '#057A55',
+                    700: '#03543F',
+                },
+                'gray': {
+                    600: '#64748B',
+                    800: '#27303F',
+                    900: '#161E2E',
+                },
+                'orange': {
+                    500: '#FF5A1F',
+                    700: '#B43403',
+                },
+                'pink': {
+                    500: '#D61F69',
+                    700: '#99154B',
+                },
+                'purple': {
+                    500: '#7E3AF2',
+                    700: '#5521B5',
+                },
+                'red': {
+                    500: '#E02424',
+                    700: '#9B1C1C',
+                },
+                'teal': {
+                    500: '#0694A2',
+                    700: '#036672',
+                },
+                'yellow': {
+                    500: '#FACA15',
+                    700: '#C27803',
+                },
+            },
+
+            fontFamily: {
+                primary: [
+                    'Open Sans',
+                    'sans-serif'
+                ],
+                mono: [
+                    'Source Code Pro',
+                    'monospace'
+                ],
+            },
+
+            fontSize: {
+                'sm': ['0.875rem', '1.5rem'],
+                'base-extra': ['1rem','1.875rem'],
+                'xl-extra': ['1.25rem', '2.25rem'],
+                '2xl': ['1.5rem', '2.25rem'],
+                '2xl-md': ['1.5rem', '2rem'],
+                '3xl-md': ['1.5rem', '1.75rem'],
+                '5xl-md': ['2.25rem', '2.875rem'],
+                '5xl': ['3rem', '3.5rem'],
+                '7xl-md': ['3.75rem', '4.5rem'],
+                '7xl': ['4.5rem', '5rem'],
+                'standfirst': ['1.875rem', '3rem'],
+                'standfirst-md': ['1.25rem', '2rem'],
+            },
+
+
+            letterSpacing: {
+                'tightest': '-.07em',
+                'tighter': '-.04em',
+            },
+
+            transitionTimingFunction: {
+                'slide': 'cubic-bezier(0.99, 0.3, 0.22, 0.85)'
+            },
+
+            typography: (theme) => ({
+                DEFAULT: {
+                    css: {
+                        color: theme('colors.gray.900'),
+                        fontFamily: theme('fontFamily.primary').map(font => `'${font}'`).join(', '),
+                        ul: {
+                            '& > li': {
+                                '&::marker': {
+                                    'color': theme('colors.gray.600')
+                                }
+                            }
+                        }
+                    }
+                },
+                'standfirst': {
+                    css: {
+                        color: theme('colors.gray.900'),
+                        fontFamily: theme('fontFamily.primary').map(font => `'${font}'`).join(', '),
+                        fontSize: theme('fontSize.standfirst')[0],
+                        letterSpacing: theme('letterSpacing.tighter'),
+                        lineHeight: theme('fontSize.standfirst')[1]
+                    }
+                },
+                'standfirst-md': {
+                    css: {
+                        color: theme('colors.gray.900'),
+                        fontFamily: theme('fontFamily.primary').map(font => `'${font}'`).join(', '),
+                        fontSize: theme('fontSize.standfirst-md')[0],
+                        letterSpacing: theme('letterSpacing.thighter'),
+                        lineHeight: theme('fontSize.standfirst-md')[1]
+                    }
+                }
+            }),
+        },
     },
-    variants: {
-        backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
-        borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
-        inset: ['responsive'],
-        scale: ['group-hover'],
-        textColor: ['responsive', 'hover', 'focus', 'group-hover'],
-        translate: ['responsive', 'hover', 'focus', 'group-hover'],
-        zIndex: ['responsive', 'hover', 'focus'],
-    },
-    corePlugins: {},
-    plugins: [require('@tailwindcss/typography')],
+
+    plugins: [
+        require('@tailwindcss/aspect-ratio'),
+        require('@tailwindcss/line-clamp'),
+        require('@tailwindcss/typography')
+    ],
 };

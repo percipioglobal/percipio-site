@@ -1,3 +1,4 @@
+defaultPlacement: end
 enableVersioning: true
 handle: blog
 name: Blog
@@ -8,16 +9,16 @@ previewTargets:
         - label
         - 'Primary entry page'
       -
-        - refresh
-        - '1'
-      -
         - urlFormat
         - '{url}'
+      -
+        - refresh
+        - '1'
 propagationMethod: all
 siteSettings:
-  5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
     enabledByDefault: true
     hasUrls: true
-    template: _organisms/_page.twig
+    template: _organisms/page.twig
     uriFormat: 'blog/{slug}'
 type: channel

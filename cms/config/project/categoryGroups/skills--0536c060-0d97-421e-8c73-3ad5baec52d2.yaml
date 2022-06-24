@@ -1,3 +1,4 @@
+defaultPlacement: end
 fieldLayouts:
   f6ca61c6-75eb-4ed0-a063-e2ab9f760b0c:
     tabs:
@@ -24,23 +25,25 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
+            uid: a4e8d385-aae6-4c33-a7fd-a4e2dd8f5be5
             warning: null
             width: 100
           -
-            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c2b27b26-5c9d-4115-a26b-ceed767672c4
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: f531f274-e4f1-42fc-a034-bd8bc66ac61c
 handle: skills
 name: Skills
 siteSettings:
-  5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
     hasUrls: false
     template: null
     uriFormat: null

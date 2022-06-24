@@ -1,31 +1,71 @@
-{% extends "_atoms/buttons/button--variables" %}
+{%- extends '_atoms/buttons/_button--props' -%}
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as parse -%}
+{%- import '_macros/icons' as icon -%}
 
 {#
-    ### OPTIONS ###
-    ---------------
+    ### PROPERTIES ###
+    ------------------
 
-    url: (STR) -- the url for the button
-    text: (STR) -- the text for the button
-    icon: (STR) -- the icon for the button ( optional )
-    utlities: (STR) -- the button utility from TW for the last button in the loop
-    swatch: (STR) -- add a colour swatch to button
-    size: (STR) -- define a button size
+    INHERITED FROM: `_atoms/buttons/button--props.twig`
 
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
+
+    ### LUTS ###
+    ------------
+    icon.fa_icon_lut: font-awesome class LUT
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+
+    render.icon: `_atoms/icons/icon--fa`
 #}
 
-{% block button %}
+{%- block button -%}
+
+    {%- set classes = {
+        '_default': 'inline-flex text-center rounded-full',
+        'animation': 'transition-colors duration-200 ease-in-out',
+        'color': 'text-white bg-blue-500',
+        'focus' : 'focus:outline focus:outline-4 focus:outline-blue-500/30',
+        'font': 'font-primary text-sm font-semibold',
+        'hover': 'hover:bg-blue-700',
+        'padding': 'py-3 px-7'
+    }-%}
 
     {%- minify -%}
 
-        {%- set sizes = {
-            'small': 'px-4 py-2',
-            'large': 'px-8 py-4',
-        } -%}
+        <a
+            {{ props.url ? 'href=' ~ props.url : '' }}
+            {{ parse.ga(props.ga) }}
+            {{ props.target ? 'target=' ~ props.target : '' }}
+            aria-label="{{- props.text -}}"
+            class="{{ classes._default }} {{ classes.animation }} {{ classes.color }} {{ classes.focus }} {{ classes.font }} {{ classes.hover }} {{ classes.padding }} {{ props.utilities }}"
+        >
+            <span class="sr-only">
+                {{- props.target == '_self' ? 'Go to: ' : 'Go to external page: ' -}}
+            </span>
 
-        <a {{ values.url ? 'href=' ~ values.url : '' }} class="inline-flex border-2 {{ sizes[values.size] is defined ? sizes[values.size] : sizes['large'] }} font-extrabold text-lg border-{{- values.swatch ? values.swatch.primary : '' }} text-{{- values.swatch ? values.swatch.primary : 'white-100' }} hover:text-{{- values.swatch ? values.swatch.primary : 'blue-600' }} hover:bg-white-100 {{ values.utilities ? values.utilities : '' -}}">
-            {{- values.text -}}
+            <span>
+                {{- props.text -}}
+            </span>
+
+            {%- if props.icon -%}
+
+                {{- render.atom('icon', 'fa', {
+                    icon: icon.fa_icon_lut(props.icon),
+                    size: "xs",
+                    parentcss: 'block mt-px ' ~ (props.iconPosition == 'right' ? 'ml-2' : 'mr-2')
+                }) -}}
+
+            {%- endif -%}
+
         </a>
 
     {%- endminify -%}
 
-{% endblock %}
+{%- endblock -%}

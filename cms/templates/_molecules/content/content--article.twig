@@ -1,14 +1,31 @@
-{% import '_macros/atoms' as render %}
+{%- extends '_molecules/content/_content--props' -%}
 
-{%- minify -%}
-    <div class="my-16">
+{#
+    ### PROPERTIES ###
+    ------------------
 
-        {# TODO set maxwidth breakpoints #}
-        <div class="container mx-auto max-w-screen-lg">
-            <div class="prose {{ prose ? prose : '' -}}">
-                {{- render.atom('text', 'content', { content: content.article }) -}}
+    INHERITED FROM: `_molecules/content/_content--props.twig`
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## MOLECULES
+
+    content--prose: `_atoms/content/content--prose.twig`
+#}
+
+{%- block copy -%}
+
+    {%- minify -%}
+
+        <div class="container max-w-[80ch] mx-auto my-5 md:my-10 {{ props.utilities -}}">
+            <div class="animate" data-animation="slideBottomToTop">
+                {%- include '_molecules/content/content--prose' ignore missing with {
+                    content: props.content,
+                } -%}
             </div>
         </div>
 
-    </div>
-{%- endminify -%}
+    {%- endminify -%}
+
+{%- endblock -%}

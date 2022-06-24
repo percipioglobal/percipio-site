@@ -1,5 +1,6 @@
+columnSuffix: null
 contentColumnType: string
-fieldGroup: 151de730-f956-437c-a617-de5725e4c07a
+fieldGroup: 151de730-f956-437c-a617-de5725e4c07a # Projects
 handle: projectCategories
 instructions: 'Please select or create a category this project belongs to.'
 name: 'Project Categories'
@@ -8,12 +9,13 @@ settings:
   allowLimit: false
   allowMultipleSources: false
   allowSelfRelations: false
-  branchLimit: ''
-  limit: null
+  branchLimit: null
   localizeRelations: false
-  selectionLabel: ''
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
   showSiteMenu: true
-  source: 'group:6834194e-43c0-464b-9333-a15bd914d9d3'
+  source: 'group:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false

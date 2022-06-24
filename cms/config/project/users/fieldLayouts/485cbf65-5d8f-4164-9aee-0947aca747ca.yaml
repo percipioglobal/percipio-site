@@ -8,7 +8,8 @@ tabs:
         required: false
         tip: null
         type: craft\fieldlayoutelements\CustomField
+        uid: de94dcc8-9a13-47cc-9960-acc8e0ef90e2
         warning: null
         width: 100
     name: 'Profile Photo'
-    sortOrder: 1
+    uid: 3794395d-e4b7-4701-8c28-c1bfd9ada805

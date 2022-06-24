@@ -10,9 +10,9 @@
     #}
 
 {% macro atom(type, atom, options, prefix = '') %}
-    {% spaceless %}
+    {% apply spaceless %}
         {% include '_atoms/' ~ type ~ 's/' ~ prefix ~ type ~ '--' ~ atom with {
             options: options,
         } %}
-    {% endspaceless %}
+    {% endapply %}
 {% endmacro %}

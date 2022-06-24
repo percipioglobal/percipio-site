@@ -1,22 +1,24 @@
-{% extends "_atoms/texts/text--variables" %}
+{%- extends '_atoms/texts/_text--props' -%}
 
 {#
-    ### OPTIONS ###
-    ---------------
+    ### PROPERTIES ###
+    ------------------
 
-    content: (STR) -- the actual content as a string
-    utilities: (STR) -- TW utility classes to be applied for the text container, overrides default settings
-    colour: (STR) -- a colour for the cards title
+    INHERITED FROM: `_atoms/texts/text--props.twig`
 
+    OMITTED
+    ---------
+
+    alignment
+    color
 #}
 
-
-{% block text %}
-    {%- set colour = values.colour ??? 'text-white-100' %}
+{%- block text -%}
 
     {%- minify -%}
-        <h4 class="break-words font-bold mb-3 text-4xl {{ colour }} {{ values.utilities }}">
-            {{- values.content | typogrify(true) -}}
-        </h4>
+        <span class="text-gray-800 text-2xl-md md:text-2xl lg:text-3xl tracking-tightest {{ props.utilities -}}">
+            {{- props.content | typogrify(true) | raw -}}
+        </span>
     {%- endminify -%}
-{% endblock %}
+
+{%- endblock -%}

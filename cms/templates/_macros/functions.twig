@@ -1,32 +1,118 @@
 
 {# Calculate total days from a given date #}
-
 {% macro total_days(date) %}
 
-    {% spaceless %}
+    {% apply spaceless %}
         {{- date ? date.diff(now).days : '<span class="text-red-700">no date given</span>' -}}
-    {% endspaceless %}
+    {% endapply %}
 
 {% endmacro %}
 
 {# Formats all dates accordingly #}
 {% macro format_date(date) %}
-    {% spaceless %}
+    {% apply spaceless %}
         {{- date | date('j F, Y') -}}
-    {% endspaceless %}
+    {% endapply %}
 {% endmacro %}
 
-{% macro authors(authors) %}
-    {% spaceless %}
+{# Parses authors metadata #}
+{% macro authors(authors, props) %}
+
+    {% set category = props.category.collect().first() ??? null %}
+
+    {% apply spaceless %}
         {% for author in authors %}
-            <span class="underline">{{author.title}}</span>{{not loop.last and loop.index != loop.length - 1 ? ', '}}{{loop.index == loop.length - 1 ? ' and ' : ''}}
+
+            <a class="text-blue-500"
+                href="{{- author.url -}}"
+                data-tag-category="author"
+                data-tag-action="click"
+                data-tag-label="{{- author.url -}}"
+                aria-label="{{- 'A ' ~ category ~ ' post by ' ~ author.title -}}"
+            >
+                {{- author.title -}}
+            </a>
+
+            {{- not loop.last and loop.index != loop.length - 1 ? ', ' -}}
+            {{- loop.index == loop.length - 1 ? ' and ' : '' -}}
+
         {% endfor %}
-    {% endspaceless %}
+    {% endapply %}
+{% endmacro %}
+
+{# Parses categories metadata #}
+{% macro categories(categories) %}
+    {% apply spaceless %}
+        {% for category in categories %}
+            <span class="text-blue-500">
+                {{- category.title -}}
+            </span>
+        {% endfor %}
+    {% endapply %}
 {% endmacro %}
 
 {# Enter a date to show time ago in human readable form #}
 {% macro time_ago(date) %}
-    {% spaceless %}
+    {% apply spaceless %}
         {{- craft.app.formatter.asRelativeTime(date) -}}
-    {% endspaceless %}
+    {% endapply %}
 {% endmacro %}
+
+{# Add blocks for different embedded asset types #}
+{%- macro embed(asset, class) -%}
+	{% import '_macros/atoms' as render %}
+
+	{%- set lut = {
+		youtube: {
+			type: 'video',
+			atom: 'embed',
+			options : {
+				url: asset.getVideoUrl([]),
+				title: asset.title,
+                utilities: class
+			}
+		},
+		vimeo: {
+			type: 'video',
+			atom: 'embed',
+			options : {
+				url: asset.getVideoUrl([]),
+				title: asset.title,
+                utilities: class
+			}
+		},
+		default: asset ? asset.html,
+	} -%}
+
+	{%- apply spaceless -%}
+
+		{%- set obj = lut[asset.providerName|lower] ??? null -%}
+
+		{{- obj ? render.atom(obj.type, obj.atom, obj.options) : lut['default'] -}}
+
+	{%- endapply -%}
+{%- endmacro -%}
+
+{# Add ga tags #}
+{%- macro ga(tags) -%}
+
+    {%- apply spaceless -%}
+
+        {{ tags.category ??? null ? 'data-tag-category=' ~ tags.category : '' }}
+        {{ tags.action ??? null ? 'data-tag-action=' ~ tags.action : '' }}
+        {{ tags.label ??? null ? 'data-tag-label=' ~ tags.label : '' }}
+
+    {%- endapply -%}
+
+{%- endmacro -%}
+
+{# Parse fa icon #}
+{%- macro icon(options) -%}
+
+    {%- apply spaceless -%}
+        <span class="inline-flex text-2xl {{ options.position == 'left' ? 'mr-4' : 'ml-4' }} {{ options.utilities -}}">
+            <i class="{{ options.type -}}"></i>
+        </span>
+    {%- endapply -%}
+
+{%- endmacro -%}
