@@ -1,4 +1,4 @@
-dateModified: 1655490527
+dateModified: 1656080957
 elementSources:
   craft\elements\Entry:
     -
@@ -100,154 +100,58 @@ fs:
     hasUrls: true
     name: Articles
     settings:
-      addSubfolderToRootUrl: true
-      autoFocalPoint: false
-      bucket: $S3_BUCKET
-      bucketSelectionMode: manual
-      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-      cfPrefix: ''
-      expires: '1 years'
-      keyId: $S3_KEY_ID
-      makeUploadsPublic: true
-      region: $S3_REGION
-      secret: $S3_SECRET
-      storageClass: ''
-      subfolder: articles
-    type: craft\awss3\Fs
-    url: $CLOUDFRONT_URL
+      path: $ASSETS_PATH
+    type: craft\fs\Local
+    url: $ASSETS_URL
   cards:
     hasUrls: true
     name: Cards
     settings:
-      addSubfolderToRootUrl: true
-      autoFocalPoint: false
-      bucket: $S3_BUCKET
-      bucketSelectionMode: manual
-      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-      cfPrefix: ''
-      expires: '1 years'
-      keyId: $S3_KEY_ID
-      makeUploadsPublic: false
-      region: $S3_REGION
-      secret: $S3_SECRET
-      storageClass: ''
-      subfolder: cards
-    type: craft\awss3\Fs
-    url: $CLOUDFRONT_URL
+      path: $ASSETS_PATH
+    type: craft\fs\Local
+    url: $ASSETS_URL
   ctas:
     hasUrls: true
     name: CTAs
     settings:
-      addSubfolderToRootUrl: true
-      autoFocalPoint: false
-      bucket: $S3_BUCKET
-      bucketSelectionMode: manual
-      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-      cfPrefix: ''
-      expires: '1 years'
-      keyId: $S3_KEY_ID
-      makeUploadsPublic: true
-      region: $S3_REGION
-      secret: $S3_SECRET
-      storageClass: ''
-      subfolder: ctas
-    type: craft\awss3\Fs
-    url: $CLOUDFRONT_URL
+      path: $ASSETS_PATH
+    type: craft\fs\Local
+    url: $ASSETS_URL
   gallery:
     hasUrls: true
     name: Gallery
     settings:
-      addSubfolderToRootUrl: true
-      autoFocalPoint: false
-      bucket: $S3_BUCKET
-      bucketSelectionMode: manual
-      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-      cfPrefix: ''
-      expires: '1 years'
-      keyId: $S3_KEY_ID
-      makeUploadsPublic: true
-      region: $S3_REGION
-      secret: $S3_SECRET
-      storageClass: ''
-      subfolder: gallery
-    type: craft\awss3\Fs
-    url: $CLOUDFRONT_URL
+      path: $ASSETS_PATH
+    type: craft\fs\Local
+    url: $ASSETS_URL
   grids:
     hasUrls: true
     name: Grids
     settings:
-      addSubfolderToRootUrl: true
-      autoFocalPoint: false
-      bucket: $S3_BUCKET
-      bucketSelectionMode: manual
-      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-      cfPrefix: ''
-      expires: '1 years'
-      keyId: $S3_KEY_ID
-      makeUploadsPublic: true
-      region: $S3_REGION
-      secret: $S3_SECRET
-      storageClass: ''
-      subfolder: grid50
-    type: craft\awss3\Fs
-    url: $CLOUDFRONT_URL
+      path: $ASSETS_PATH
+    type: craft\fs\Local
+    url: $ASSETS_URL
   icons:
     hasUrls: true
     name: Icons
     settings:
-      addSubfolderToRootUrl: true
-      autoFocalPoint: false
-      bucket: $S3_BUCKET
-      bucketSelectionMode: manual
-      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-      cfPrefix: ''
-      expires: '1 years'
-      keyId: $S3_KEY_ID
-      makeUploadsPublic: true
-      region: $S3_REGION
-      secret: $S3_SECRET
-      storageClass: ''
-      subfolder: icons
-    type: craft\awss3\Fs
-    url: $CLOUDFRONT_URL
+      path: $ASSETS_PATH
+    type: craft\fs\Local
+    url: $ASSETS_URL
   media:
     hasUrls: true
     name: Media
     settings:
-      addSubfolderToRootUrl: true
-      autoFocalPoint: false
-      bucket: $S3_BUCKET
-      bucketSelectionMode: manual
-      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-      cfPrefix: ''
-      expires: '1 years'
-      keyId: $S3_KEY_ID
-      makeUploadsPublic: true
-      region: $S3_REGION
-      secret: $S3_SECRET
-      storageClass: ''
-      subfolder: media
-    type: craft\awss3\Fs
-    url: $CLOUDFRONT_URL
+      path: $ASSETS_PATH
+    type: craft\fs\Local
+    url: $ASSETS_URL
   og:
     hasUrls: true
     name: 'OG Images'
     settings:
-      addSubfolderToRootUrl: true
-      autoFocalPoint: false
-      bucket: $S3_BUCKET
-      bucketSelectionMode: manual
-      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-      cfPrefix: ''
-      expires: '1 years'
-      keyId: $S3_KEY_ID
-      makeUploadsPublic: true
-      region: $S3_REGION
-      secret: $S3_SECRET
-      storageClass: ''
-      subfolder: og-images
-    type: craft\awss3\Fs
-    url: $CLOUDFRONT_URL
+      path: $ASSETS_PATH
+    type: craft\fs\Local
+    url: $ASSETS_URL
 meta:
   __names__:
     0c7a7b67-3926-4a9f-b449-8d1d1c451f2f: Width # Width
@@ -566,7 +470,7 @@ plugins:
     schemaVersion: '2.0'
   blitz:
     edition: standard
-    enabled: true
+    enabled: false
     licenseKey: 098AFX2F099TL01KIJ38HC5I
     schemaVersion: 4.1.2
     settings:
