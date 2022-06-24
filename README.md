@@ -34,8 +34,6 @@ The CP login credentials are initially set as follows:
 Login: `developer@percipio.london` \
 Password: `j4!ZqrxH2rKZ-vwfH@XRG!jezzrdahFUFtsX!bHo6VQWomfU4i@efUpqJ2*N.TEvM4YJ2@WVCyBHWHPvNjDyPRykD@Fct.ad92A*`
 
-Obviously change these to whatever you like as needed.
-
 **N.B.:** Without authorization & credentials (which are private), the `make pulldb` will not work (it just runs `scripts/docker_pull_db.sh`). It's provided here for instructional purposes.
 
 ## Makefile Project Commands
