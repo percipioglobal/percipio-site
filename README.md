@@ -56,8 +56,7 @@ To make using it easier, we're using a Makefile and the built-in `make` utility 
 - `make restoredb xxx` - runs the `scripts/docker_restore_db.sh` script to restore a local database dump into the database container; the `scripts/.env.sh` must be set up first
 - `make ssh` - opens up a Unix shell inside the PHP container for the project
 
-
-## Install notes
+## Install notes
 
 **Tip:** If you try `make craft project-config/apply --force` in your command line you will get an an error. This is because the shell thinks the `--force` flag should be applied to the `make` command. To side-step this, use the `--` (double-dash) to disable further option processing, like this: `make -- craft project-config/apply --force`
 
