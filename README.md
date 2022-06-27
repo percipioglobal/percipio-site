@@ -56,10 +56,13 @@ To make using it easier, we're using a Makefile and the built-in `make` utility 
 - `make restoredb xxx` - runs the `scripts/docker_restore_db.sh` script to restore a local database dump into the database container; the `scripts/.env.sh` must be set up first
 - `make ssh` - opens up a Unix shell inside the PHP container for the project
 
-**Tip:** If you try a command like `make craft project-config/apply --force` you’ll see an error, because the shell thinks the `--force` flag should be applied to the `make` command. To side-step this, use the `--` (double-dash) to disable further option processing, like this: `make -- craft project-config/apply --force`
 
-**Tip:** To reach the CMS of the percipio site we changed the handle to `cp` so use `http://localhost:3500/cp`
+## Install notes
 
-**N.B.:** As images are pulled from AWS, no site images are included in this repository. This means you will see an error on the front-end  `http:localhost:3500` because no images exist. If the backend (`http://localhost:3500/cp`) works, you have succesfully setup this project on your local machine. 
+**Tip:** If you try `make craft project-config/apply --force` in your command line you will get an an error. This is because the shell thinks the `--force` flag should be applied to the `make` command. To side-step this, use the `--` (double-dash) to disable further option processing, like this: `make -- craft project-config/apply --force`
 
-**N.B.:** If you get a "Gateway Time-out 502" Error after the first `make dev` just stop the container from Docker Desktop, go to your terminal and run `make dev` once more. If this error happens it means that the php server simply started faster than the database was imported.
+**Tip:** To reach the CMS of the percipio site use `cp` instead of `admin` eg; `http://localhost:3500/cp` 
+
+**N.B.:** If you receive a "Gateway Time-out 502" Error after the first `make dev` just stop the container from Docker Desktop, go to your terminal and run `make dev` once more. If this error happens it means that the php server simply started faster than the database was imported.
+
+**N.B.:** As images are pulled from AWS, no site images are included in this repository. This means you will see an error on the front-end  `http:localhost:3500` as no images exist. If the backend (`http://localhost:3500/cp`) works, you have succesfully setup this project on your local machine. You can upload / add some random images to `globals->placeholders` to add your own fallback imagery.
