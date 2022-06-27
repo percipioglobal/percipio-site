@@ -1,4 +1,4 @@
-dateModified: 1656080957
+dateModified: 1656331097
 elementSources:
   craft\elements\Entry:
     -
@@ -107,51 +107,135 @@ fs:
     hasUrls: true
     name: Cards
     settings:
-      path: $ASSETS_PATH
-    type: craft\fs\Local
-    url: $ASSETS_URL
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: cards/
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
   ctas:
     hasUrls: true
     name: CTAs
     settings:
-      path: $ASSETS_PATH
-    type: craft\fs\Local
-    url: $ASSETS_URL
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: ctas/
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
   gallery:
     hasUrls: true
     name: Gallery
     settings:
-      path: $ASSETS_PATH
-    type: craft\fs\Local
-    url: $ASSETS_URL
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: gallery/
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
   grids:
     hasUrls: true
     name: Grids
     settings:
-      path: $ASSETS_PATH
-    type: craft\fs\Local
-    url: $ASSETS_URL
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: grids/
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
   icons:
     hasUrls: true
     name: Icons
     settings:
-      path: $ASSETS_PATH
-    type: craft\fs\Local
-    url: $ASSETS_URL
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: icons/
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
   media:
     hasUrls: true
     name: Media
     settings:
-      path: $ASSETS_PATH
-    type: craft\fs\Local
-    url: $ASSETS_URL
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: media/
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
   og:
     hasUrls: true
     name: 'OG Images'
     settings:
-      path: $ASSETS_PATH
-    type: craft\fs\Local
-    url: $ASSETS_URL
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: og-images/
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
 meta:
   __names__:
     0c7a7b67-3926-4a9f-b449-8d1d1c451f2f: Width # Width
