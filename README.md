@@ -32,7 +32,7 @@ vite_1        |   ready in 1573ms.
 
 ## Login Credentials
 
-The CP login credentials are initially set as follows:
+The Control Panel login credentials are initially set as follows:
 
 Login: `developer@percipio.london` \
 Password: `j4!ZqrxH2rKZ-vwfH@XRG!jezzrdahFUFtsX!bHo6VQWomfU4i@efUpqJ2*N.TEvM4YJ2@WVCyBHWHPvNjDyPRykD@Fct.ad92A*`
