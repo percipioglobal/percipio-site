@@ -150,6 +150,7 @@ module.exports = {
                     css: {
                         color: theme('colors.gray.900'),
                         fontFamily: theme('fontFamily.primary').map(font => `'${font}'`).join(', '),
+                        maxWidth: '80ch',
                         ul: {
                             '& > li': {
                                 '&::marker': {
