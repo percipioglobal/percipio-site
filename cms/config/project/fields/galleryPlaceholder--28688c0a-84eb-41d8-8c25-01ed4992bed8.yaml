@@ -13,7 +13,7 @@ settings:
   defaultUploadLocationSource: 'volume:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
   defaultUploadLocationSubpath: null
   localizeRelations: false
-  maxRelations: null
+  maxRelations: 1
   minRelations: null
   previewMode: full
   restrictFiles: false

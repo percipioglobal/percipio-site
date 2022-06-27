@@ -13,7 +13,7 @@ settings:
   defaultUploadLocationSource: 'volume:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
   defaultUploadLocationSubpath: null
   localizeRelations: false
-  maxRelations: null
+  maxRelations: 1
   minRelations: null
   previewMode: full
   restrictFiles: false
@@ -33,7 +33,7 @@ settings:
         - class
         - craft\elements\conditions\assets\AssetCondition
   selectionLabel: null
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   source: null
