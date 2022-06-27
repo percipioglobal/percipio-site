@@ -6,11 +6,10 @@ You'll need [Docker desktop](https://www.docker.com/products/docker-desktop) for
 
 Ensure no other local development environments are running that might have port conflicts, then:
 
-* Rename the `example.env` file to `.env` in the `cms` directory
-* Start up the site by typing `make dev` in terminal in the project's root directory (the first build will be somewhat lengthy)
-* Navigate to `http://localhost:3500` to use the site; the `vite-dev-server` runs off of `http://localhost:3501`
-
-Wait until you see the following to indicate that the PHP container is ready:
+- Clone the `percipioglobal/percipio-site` repo and ensure you are on the `onboarding` branch of the repo.  - 
+- Rename the `example.env` file to `.env` in the `cms` directory
+- Start up the site by typing `make dev` in terminal in the project's root directory (the first build will be somewhat lengthy)
+- Wait until you see the following to indicate that the PHP container is ready:
 
 ```
 php_1         | Craft is installed.
@@ -19,7 +18,7 @@ php_1         | [01-Dec-2020 18:38:46] NOTICE: fpm is running, pid 22
 php_1         | [01-Dec-2020 18:38:46] NOTICE: ready to handle connections
 ```
 
-...and the following to indicate that the Vite container is ready:
+- and the following to indicate that the Vite container is ready:
 ```
 vite_1        |   vite v2.3.2 dev server running at:
 vite_1        |
@@ -28,6 +27,10 @@ vite_1        |   > Network:  http://172.22.0.5:3501/
 vite_1        |
 vite_1        |   ready in 1573ms.
 ```
+
+- Once complete, navigate to `http://localhost:3500` to use the site; the `vite-dev-server` runs off of `http://localhost:3501`
+
+## Login Credentials
 
 The CP login credentials are initially set as follows:
 
@@ -57,6 +60,6 @@ To make using it easier, we're using a Makefile and the built-in `make` utility 
 
 **Tip:** To reach the CMS of the percipio site we changed the handle to `cp` so use `http://localhost:3500/cp`
 
-**N.B.:** There are no images included in this repository, so if you go to `http:localhost:3500` you will see an error on the front-end because no images exist, if the backend works this means you have succesfully setup this project on your local machine!
+**N.B.:** As images are pulled from AWS, no site images are included in this repository. This means you will see an error on the front-end  `http:localhost:3500` because no images exist. If the backend (`http://localhost:3500/cp`) works, you have succesfully setup this project on your local machine. 
 
 **N.B.:** If you get a "Gateway Time-out 502" Error after the first `make dev` just stop the container from Docker Desktop, go to your terminal and run `make dev` once more. If this error happens it means that the php server simply started faster than the database was imported.
