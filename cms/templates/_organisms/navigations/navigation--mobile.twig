@@ -9,7 +9,7 @@
             <ul role="menubar" aria-label="Mobile Site Navigation" class="flex flex-col items-end">
 
                 {%- for item in navigation -%}
-                    <li role="none">
+                    <li role="menuitem">
                         {%- if item.showAsButton -%}
                             {{- render.atom('button', 'primary', {
                                 url: item.target.collect().first().url ??? null,

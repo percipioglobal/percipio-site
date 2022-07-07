@@ -44,15 +44,9 @@
 {% macro categories(categories) %}
     {% apply spaceless %}
         {% for category in categories %}
-            <a class="text-blue-500"
-                href="{{- category.url -}}"
-                data-tag-category="author"
-                data-tag-action="click"
-                data-tag-label="{{- category.url -}}"
-                aria-label="{{- 'A ' ~ category ~ ' post' -}}"
-            >
+            <span class="text-blue-500">
                 {{- category.title -}}
-            </a>
+            </span>
         {% endfor %}
     {% endapply %}
 {% endmacro %}
