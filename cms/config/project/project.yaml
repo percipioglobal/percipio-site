@@ -1,4 +1,4 @@
-dateModified: 1656335272
+dateModified: 1657564181
 elementSources:
   craft\elements\Entry:
     -
@@ -568,7 +568,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 098AFX2F099TL01KIJ38HC5I
-    schemaVersion: 4.1.2
+    schemaVersion: 4.2.0
     settings:
       apiKey: ''
       cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
@@ -667,6 +667,7 @@ plugins:
               - '.*'
       injectScriptEvent: DOMContentLoaded
       integrations:
+        - putyourlightson\blitz\drivers\integrations\CommerceIntegration
         - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
         - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
       maxRetryAttempts: 10
