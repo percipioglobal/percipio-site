@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "54e8f193aca9f1bac312c6426decdb48",
+    "content-hash": "8b782b64293ee7b3c455a8e0a6b036d5",
     "packages": [
         {
             "name": "amphp/amp",
@@ -2037,6 +2037,66 @@
                 "source": "https://github.com/craftcms/cms"
             },
             "time": "2022-07-07T17:05:03+00:00"
+        },
+        {
+            "name": "craftcms/fix-fks",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/fix-fks.git",
+                "reference": "c2fad53ac4d9cd92a813f1d9b7e338571f92daea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/fix-fks/zipball/c2fad53ac4d9cd92a813f1d9b7e338571f92daea",
+                "reference": "c2fad53ac4d9cd92a813f1d9b7e338571f92daea",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0-RC3"
+            },
+            "require-dev": {
+                "craftcms/ecs": "dev-main",
+                "craftcms/phpstan": "dev-main",
+                "craftcms/rector": "dev-main"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Fix FKs",
+                "handle": "fix-fks",
+                "documentationUrl": "https://github.com/craftcms/fix-fks/blob/main/README.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\fixfks\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Restore missing foreign key constraints in the database.",
+            "keywords": [
+                "cms",
+                "craftcms",
+                "database",
+                "db",
+                "yii2"
+            ],
+            "support": {
+                "docs": "https://github.com/craftcms/fix-fks/blob/main/README.md",
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/fix-fks/issues?state=open",
+                "rss": "https://github.com/craftcms/fix-fks/commits/v2.atom",
+                "source": "https://github.com/craftcms/fix-fks"
+            },
+            "time": "2022-05-04T02:56:26+00:00"
         },
         {
             "name": "craftcms/flysystem",
