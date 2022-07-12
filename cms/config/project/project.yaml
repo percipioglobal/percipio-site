@@ -1,4 +1,4 @@
-dateModified: 1657565061
+dateModified: 1657623040
 elementSources:
   craft\elements\Entry:
     -
@@ -112,7 +112,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: articles
+      subfolder: articles/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   cards:
@@ -131,7 +131,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: cards
+      subfolder: cards/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   ctas:
@@ -150,7 +150,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: ctas
+      subfolder: ctas/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   gallery:
@@ -169,7 +169,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: gallery
+      subfolder: gallery/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   grids:
@@ -188,7 +188,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: grid50
+      subfolder: grid50/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   icons:
@@ -207,7 +207,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: icons
+      subfolder: icons/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   media:
@@ -226,7 +226,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: media
+      subfolder: media/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   og:
@@ -245,7 +245,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: og-images
+      subfolder: og-images/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
 meta:
