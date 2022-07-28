@@ -219,7 +219,7 @@ module.exports = {
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
-                        color: theme('colors.gray.900'),
+                        color: theme('colors.gray.700'),
                         fontFamily: theme('fontFamily.primary').map(font => `'${font}'`).join(', '),
                         maxWidth: '80ch',
                         ul: {
@@ -233,7 +233,7 @@ module.exports = {
                 },
                 'standfirst': {
                     css: {
-                        color: theme('colors.gray.900'),
+                        color: theme('colors.gray.700'),
                         fontFamily: theme('fontFamily.primary').map(font => `'${font}'`).join(', '),
                         fontSize: theme('fontSize.standfirst')[0],
                         letterSpacing: theme('letterSpacing.tighter'),
@@ -242,7 +242,7 @@ module.exports = {
                 },
                 'standfirst-md': {
                     css: {
-                        color: theme('colors.gray.900'),
+                        color: theme('colors.gray.700'),
                         fontFamily: theme('fontFamily.primary').map(font => `'${font}'`).join(', '),
                         fontSize: theme('fontSize.standfirst-md')[0],
                         letterSpacing: theme('letterSpacing.thighter'),
