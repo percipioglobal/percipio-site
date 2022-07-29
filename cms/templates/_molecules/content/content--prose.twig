@@ -17,7 +17,7 @@
 
 {%- set classes = {
     _default: 'font-primary',
-    color: 'text-gray-600',
+    color: '',
     print: 'print:table print:text-black print:text-sm print:leading-6',
     prose: 'prose md:prose-lg lg:prose-xl prose:max-w-auto',
     prose_link: 'prose-a:text-blue-500 prose-a:no-underline',
@@ -30,7 +30,7 @@
 
     {%- minify -%}
 
-        <article class="{{- classes._default }} {{ classes.color}} {{ classes.print }} {{ classes.prose }} {{ classes.prose_link }} {{ classes.prose_h3 }} {{ classes.prose_h4 }} {{ classes.prose_list }}">
+        <article class="{{- classes._default }} {{ classes.print }} {{ classes.prose }} {{ classes.prose_link }} {{ classes.prose_h3 }} {{ classes.prose_h4 }} {{ classes.prose_list }} {{ classes.color }}">
             {{- render.atom('text', 'content', { content: props.content }) -}}
         </article>
 
