@@ -20,6 +20,7 @@
         "php": "^8.0.2",
         "craftcms/aws-s3": "^2.0.0",
         "craftcms/cms": "^4.0.0",
+        "craftcms/fix-fks": "^2.0",
         "craftcms/mailgun": "^3.0.0",
         "craftcms/redactor": "^3.0.0",
         "hybridinteractive/craft-position-fieldtype": "^4.0.0-beta.3",

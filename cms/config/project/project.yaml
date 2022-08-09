@@ -1,4 +1,4 @@
-dateModified: 1655490527
+dateModified: 1657623040
 elementSources:
   craft\elements\Entry:
     -
@@ -112,7 +112,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: articles
+      subfolder: articles/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   cards:
@@ -131,7 +131,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: cards
+      subfolder: cards/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   ctas:
@@ -150,7 +150,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: ctas
+      subfolder: ctas/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   gallery:
@@ -169,7 +169,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: gallery
+      subfolder: gallery/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   grids:
@@ -188,7 +188,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: grid50
+      subfolder: grid50/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   icons:
@@ -207,7 +207,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: icons
+      subfolder: icons/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   media:
@@ -226,7 +226,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: media
+      subfolder: media/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
   og:
@@ -245,7 +245,7 @@ fs:
       region: $S3_REGION
       secret: $S3_SECRET
       storageClass: ''
-      subfolder: og-images
+      subfolder: og-images/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
 meta:
@@ -568,7 +568,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 098AFX2F099TL01KIJ38HC5I
-    schemaVersion: 4.1.2
+    schemaVersion: 4.2.0
     settings:
       apiKey: ''
       cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
@@ -667,6 +667,7 @@ plugins:
               - '.*'
       injectScriptEvent: DOMContentLoaded
       integrations:
+        - putyourlightson\blitz\drivers\integrations\CommerceIntegration
         - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
         - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
       maxRetryAttempts: 10
@@ -693,6 +694,10 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
   embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  fix-fks:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
