@@ -3,8 +3,10 @@ fieldLayouts:
   49daed47-6cfd-4c95-bfc2-9bf1daa06085:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 1ecbeef5-820f-4123-a8db-30daae3cd4f7 # Images
             instructions: null
             label: null
@@ -12,10 +14,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 1e9c3ef5-247e-4079-a68d-0024c80fec92
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 49da9036-d742-4608-969e-3d58f5b274ce
+        userCondition: null
 fields:
   1ecbeef5-820f-4123-a8db-30daae3cd4f7: # Images
     columnSuffix: null
@@ -27,7 +31,7 @@ fields:
     searchable: false
     settings:
       allowSelfRelations: false
-      allowSubfolders: false
+      allowSubfolders: true
       allowUploads: true
       allowedKinds:
         - image

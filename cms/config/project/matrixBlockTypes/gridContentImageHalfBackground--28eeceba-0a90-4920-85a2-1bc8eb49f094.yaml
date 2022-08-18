@@ -3,8 +3,10 @@ fieldLayouts:
   ac8c2724-7a67-4cb7-acc4-8a4ea1dd3f09:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: c77ea1bd-e263-4198-b915-5cd6ebf7f78d # Grid Items
             instructions: null
             label: null
@@ -12,10 +14,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 8e3a950d-1c60-4d86-81e8-643a4b464b6a
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: be389ced-a2b3-4eb2-a818-ebccf1de39cd
+        userCondition: null
 fields:
   c77ea1bd-e263-4198-b915-5cd6ebf7f78d: # Grid Items
     columnSuffix: null
@@ -27,7 +31,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 1797776357
+      changedFieldIndicator: 862672890
       columns:
         __assoc__:
           -
@@ -64,4 +68,4 @@ fields:
     type: verbb\supertable\fields\SuperTableField
 handle: gridContentImageHalfBackground
 name: 'Grid Content Image - 50% background'
-sortOrder: 8
+sortOrder: 9

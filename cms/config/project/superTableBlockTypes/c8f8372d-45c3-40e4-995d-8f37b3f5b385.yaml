@@ -3,29 +3,35 @@ fieldLayouts:
   af8044a4-866e-4bfd-9dac-05ce4c085fe3:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 4103b2f0-dd71-494b-919a-621d2a5e959e # Heading
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: bcaa6fd4-f215-4a5c-9e69-9deab1467681
+            uid: 403daaef-94c6-4081-b238-1433dc2ec82e
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: a6d05f0a-f046-4a8d-bddd-dd368b675507 # Content
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 21be5029-1da4-4ef0-845f-763cd0707535
+            uid: 3d641884-4d14-4a62-af55-dd93daa7ccb9
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: d488e807-1725-452c-8872-825d537fa0b3
+        userCondition: null
 fields:
   4103b2f0-dd71-494b-919a-621d2a5e959e: # Heading
     columnSuffix: null

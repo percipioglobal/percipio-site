@@ -3,49 +3,59 @@ fieldLayouts:
   865c9e91-fe72-4841-886c-dc7ce1eb16e7:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: d3594d38-4b2c-48a2-b77c-c0819aa700c7 # Overline
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9a55e8cf-2fd0-4fe5-8bc1-dea28266cb69
+            uid: afcbf295-c3b1-4169-8e1a-276201b5c1b3
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 33274ae4-f375-4070-b42c-f1cef4e48a81 # Heading
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d20c8677-2237-471f-a16b-601385ff385c
+            uid: b0864ac6-4418-49a5-a1df-bda5222197ae
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 247bfb7d-d077-42ee-b2ba-84feb1b3fd19 # Content
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6e0454ac-99cd-44ab-b5ea-0c924437b16f
+            uid: 92647dc4-b50a-4095-89b2-d0f0304aca98
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 85f7ea92-40ac-44bf-b3fe-20f8075fe802 # Image
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0a21e234-82d2-4122-8cc5-3da4e768cb4a
+            uid: 9aa010ff-8ff8-44e3-8ea9-842da0715bef
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 55862012-5fe5-4182-91de-7dd142bb5a93
+        userCondition: null
 fields:
   85f7ea92-40ac-44bf-b3fe-20f8075fe802: # Image
     columnSuffix: null
