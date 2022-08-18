@@ -4,6 +4,12 @@
 ## 2.0.2 - 18-08-2022
 
 ### Changed
+- Updated Craft from 4.1.3 to 4.2.1.1
+- Updated associated plugins
+
+## 2.0.2 - 18-08-2022
+
+### Changed
 - allowed subfolder selection in galleryImages.images builders
 
 
