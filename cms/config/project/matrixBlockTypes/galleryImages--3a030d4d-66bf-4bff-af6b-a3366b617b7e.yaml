@@ -35,7 +35,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      defaultUploadLocationSource: 'volume:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maxRelations: 8
@@ -62,7 +62,8 @@ fields:
       showUnpermittedFiles: true
       showUnpermittedVolumes: false
       source: null
-      sources: '*'
+      sources:
+        - 'volume:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
       targetSiteId: null
       validateRelatedElements: false
       viewMode: list
