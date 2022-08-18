@@ -1,10 +1,16 @@
 # percipioglobal/craft Change Log
 
+
+## 2.0.2 - 18-08-2022
+
+### Changed
+- allowed subfolder selection in galleryImages.images builders
+
+
 ## 2.0.1 - 29-07-2022
 
 ### Added
 - Added the new full Percipio brand colour palette
-### Changed
 
 ### Fixed
 - Fixed color of content blocks
