@@ -3,8 +3,10 @@ fieldLayouts:
   db9a8613-5991-483e-b361-514f67a40890:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 4610a356-a212-46cd-a7a1-6286620e89ef # Grid Items
             instructions: null
             label: null
@@ -12,10 +14,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 14e3377b-3ddf-4d7c-b60a-fe41b79dc6d9
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 5fe5248f-0021-4ec0-8516-363d4389e227
+        userCondition: null
 fields:
   4610a356-a212-46cd-a7a1-6286620e89ef: # Grid Items
     columnSuffix: null
@@ -27,7 +31,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 1073292218
+      changedFieldIndicator: 81199254
       columns:
         __assoc__:
           -

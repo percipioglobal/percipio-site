@@ -3,8 +3,10 @@ fieldLayouts:
   13adee58-a452-4167-beb6-6a5bb81b25da:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 7094bca5-b1bf-4bdd-8699-baa53877dc85 # Heading
             instructions: null
             label: null
@@ -12,9 +14,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 8fdd3e09-8c54-4ff0-8012-490b075ceb62
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 4f6c2efe-5cf4-46b5-82e5-79a8796af5c5 # Content
             instructions: null
             label: null
@@ -22,9 +26,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ca4c1681-68a4-40c6-926b-e8cbcdc2dec2
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 0d208796-7b7c-4677-bab0-0c107ff1c99b # Button
             instructions: null
             label: null
@@ -32,9 +38,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 6f3901b1-afc4-45c2-9d5f-8bee40ee6a14
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: cd0c5467-595b-44e8-b0b0-aa3cd2e4f87e # Image
             instructions: null
             label: null
@@ -42,9 +50,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ea529030-bedd-406d-9dff-d7b69ea4882f
+            userCondition: null
             warning: null
             width: 50
           -
+            elementCondition: null
             fieldUid: 0345c44d-88e4-4280-842b-158ec0307b5a # Background
             instructions: null
             label: null
@@ -52,10 +62,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 82380bac-b507-421b-b64c-7bedacc2da07
+            userCondition: null
             warning: null
             width: 50
         name: Content
         uid: c6edba34-8976-4b4e-90e3-a748f6be5da3
+        userCondition: null
 fields:
   0d208796-7b7c-4677-bab0-0c107ff1c99b: # Button
     columnSuffix: null

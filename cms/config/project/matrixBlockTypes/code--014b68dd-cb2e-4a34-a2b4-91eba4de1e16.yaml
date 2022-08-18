@@ -3,8 +3,10 @@ fieldLayouts:
   fe906a3c-e79c-4f19-9559-705e392f27b8:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 633b1b96-cdb8-4c97-a045-aa63d306b41c # Language
             instructions: null
             label: null
@@ -12,9 +14,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: a343c7b5-5278-4a21-971f-e841b6fa038e
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: b43847a9-d877-4a56-ba8e-39f6c25c85cb # Code
             instructions: null
             label: null
@@ -22,9 +26,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 7750644f-7d9c-4518-ae88-72ee0e583ca6
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 1cc6350b-c0ba-4f7f-8034-dbcec8643016 # Filename
             instructions: null
             label: null
@@ -32,10 +38,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: fc1b2763-5b4c-4e9c-b239-2ce4bac317aa
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: e223bf44-5252-468d-9f0a-602c67369de1
+        userCondition: null
 fields:
   1cc6350b-c0ba-4f7f-8034-dbcec8643016: # Filename
     columnSuffix: eshbcqtk
