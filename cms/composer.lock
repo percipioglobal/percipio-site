@@ -6511,16 +6511,16 @@
         },
         {
             "name": "percipiolondon/craft-shortlink",
-            "version": "4.0.0-beta.8",
+            "version": "4.0.0-beta.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/percipioglobal/craft-shortlink.git",
-                "reference": "3758efcf851e842525977cb53d76acbde632835d"
+                "reference": "6bd7f165c6c2f3a46cc841df8c6621650c9a8b33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/percipioglobal/craft-shortlink/zipball/3758efcf851e842525977cb53d76acbde632835d",
-                "reference": "3758efcf851e842525977cb53d76acbde632835d",
+                "url": "https://api.github.com/repos/percipioglobal/craft-shortlink/zipball/6bd7f165c6c2f3a46cc841df8c6621650c9a8b33",
+                "reference": "6bd7f165c6c2f3a46cc841df8c6621650c9a8b33",
                 "shasum": ""
             },
             "require": {
@@ -6570,9 +6570,9 @@
             "support": {
                 "docs": "https://github.com/percipioglobal/craft-shortlink/blob/v4/README.md",
                 "issues": "https://github.com/percipioglobal/craft-shortlink/issues",
-                "source": "https://github.com/percipioglobal/craft-shortlink/tree/4.0.0-beta.8"
+                "source": "https://github.com/percipioglobal/craft-shortlink/tree/4.0.0-beta.9"
             },
-            "time": "2022-09-07T11:05:48+00:00"
+            "time": "2022-09-07T12:38:38+00:00"
         },
         {
             "name": "percipiolondon/craft-timeloop",
