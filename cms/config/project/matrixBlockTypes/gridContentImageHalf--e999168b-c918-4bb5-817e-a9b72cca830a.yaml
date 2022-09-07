@@ -3,8 +3,10 @@ fieldLayouts:
   b40c4c09-c50c-42c5-9bfb-684bad926055:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 9a6ec17a-0ce8-43a1-8526-80f2db164c2d # Grid Items
             instructions: null
             label: null
@@ -12,10 +14,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 7f6d9281-8348-4d84-ad3f-c0e77dbec856
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 2d4252d3-0831-469a-ab67-28c88bd46150
+        userCondition: null
 fields:
   9a6ec17a-0ce8-43a1-8526-80f2db164c2d: # Grid Items
     columnSuffix: swdoweno
@@ -27,7 +31,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 133364816
+      changedFieldIndicator: 136543700
       columns:
         __assoc__:
           -

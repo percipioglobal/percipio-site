@@ -29,7 +29,7 @@
                 <span class="sr-only">{{- seomatic.site.identity.genericName }} :</span>
                 {{- render.atom('text', 'title', {
                     content: content.heading ??? entry.title,
-                    color: 'text-gray-800'
+                    color: 'text-gray-700'
                 }) -}}
             </h1>
 
@@ -38,7 +38,7 @@
                 {%- if content.description -%}
                     {{- render.atom('text', 'description', {
                         content: content.description,
-                        color: 'text-gray-600',
+                        color: 'text-gray-500',
                         utilities: 'mt-8',
                         alignment: 'text-center'
                     }) -}}

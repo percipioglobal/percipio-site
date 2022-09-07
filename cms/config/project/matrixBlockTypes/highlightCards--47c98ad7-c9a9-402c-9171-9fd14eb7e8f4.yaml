@@ -3,8 +3,10 @@ fieldLayouts:
   088a9888-4f4a-4c24-9756-170fa037079f:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 6c47b7b0-71d0-4acb-92d5-6d8624f711fb # Cards
             instructions: null
             label: null
@@ -12,10 +14,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 004cf258-1f70-4a8c-9846-bf5ecdef6f23
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 6bfa57e9-a91d-4e2c-ac1f-5f65c5e4a7ba
+        userCondition: null
 fields:
   6c47b7b0-71d0-4acb-92d5-6d8624f711fb: # Cards
     columnSuffix: null
