@@ -3,6 +3,12 @@
 
 ## 2.0.2 - 18-08-2022
 
+### Added
+- Added shortlink capabilities
+
+### Changed
+- Updated Craft from 4.2.1.1 to 4.2.3
+
 ### Changed
 - Updated Craft from 4.1.3 to 4.2.1.1
 - Updated associated plugins
