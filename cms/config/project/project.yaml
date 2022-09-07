@@ -1,4 +1,4 @@
-dateModified: 1660832714
+dateModified: 1662547390
 elementSources:
   craft\elements\Entry:
     -
@@ -1099,6 +1099,26 @@ plugins:
           -
             - canFail
             - true
+  shortlink:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowCustom: true
+      alphaNumeric: alphaNumeric
+      casing: mixed
+      maxLength: 10
+      minLength: 6
+      pluginName: Shortlink
+      redirectBehavior: homepage
+      redirectQueryString: true
+      redirectType: '301'
+      shortlinkUrls:
+        -
+          __assoc__:
+            -
+              - shortlinkUrl
+              - 'https://perc.link'
   super-table:
     edition: standard
     enabled: true
