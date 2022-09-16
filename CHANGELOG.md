@@ -1,10 +1,28 @@
 # percipioglobal/craft Change Log
 
+
+## 2.0.4 - 16-09-2022
+
+### Changed
+- Updated Dependancies
+- Craft 4.2.4
+
+## 2.0.2 - 18-08-2022
+
+### Changed
+- Updated Craft from 4.1.3 to 4.2.1.1
+- Updated associated plugins
+
+## 2.0.2 - 18-08-2022
+
+### Changed
+- allowed subfolder selection in galleryImages.images builders
+
+
 ## 2.0.1 - 29-07-2022
 
 ### Added
 - Added the new full Percipio brand colour palette
-### Changed
 
 ### Fixed
 - Fixed color of content blocks
