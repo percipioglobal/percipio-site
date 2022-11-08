@@ -1,5 +1,14 @@
 # percipioglobal/craft Change Log
 
+## 2.0.5 - 08-11-2022
+
+### Fixed
+- Team page graphics on mobile should be visible #463 [https://github.com/percipioglobal/percipio-site/issues/463]
+
+### Changed
+- Tailwind config, Body copy / tracking too tight. #448 [https://github.com/percipioglobal/percipio-site/issues/448]
+- Content builder field min block reduced to 0. Required block in clients #452 [https://github.com/percipioglobal/percipio-site/issues/452]
+
 
 ## 2.0.4 - 16-09-2022
 
