@@ -33,7 +33,7 @@
             }
         }) -%}
 
-        <article class="flex w-full {{ props.utilities -}}">
+        <article class="flex items-center justify-center w-full h-screen {{ props.utilities -}}">
             <div>
                 <h3 class="mb-6">
                     {{- render.atom('text', 'h4', {
@@ -41,7 +41,6 @@
                         color: 'pink-500'
                     }) -}}
                 </h3>
-
                 {%- include '_molecules/content/content--prose' ignore missing with {
                     content: props.item.body,
                 } -%}
