@@ -12,6 +12,7 @@
       docker_image_tag: "16-alpine"
       execute_commands:
         - "cd buildchain"
+        - "rm -r node_modules"
         - "npm install"
         - "npm run build"
       volume_mappings:
