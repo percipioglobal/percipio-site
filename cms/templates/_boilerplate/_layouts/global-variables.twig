@@ -19,6 +19,8 @@
 {# -- General global variables -- #}
 {%- set baseUrl = alias('@web') ~ '/' -%}
 {%- set assetsUrl = alias('@assetsUrl') ~ '/' -%}
+{%- set gtmTrackingId = getenv('TM_TRACKING_ID') -%}
+
 
 {%- set placeholders = craft.globalSets()
     .handle('placeholders')
