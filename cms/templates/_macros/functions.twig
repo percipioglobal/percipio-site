@@ -23,6 +23,11 @@
     {% apply spaceless %}
         {% for author in authors %}
 
+        {%- if author.status == 'disabled' -%}
+            <span>
+                {{- author.title -}}
+            </span>
+        {%- else -%}
             <a class="text-blue-500"
                 href="{{- author.url -}}"
                 data-tag-category="author"
@@ -32,6 +37,7 @@
             >
                 {{- author.title -}}
             </a>
+        {%- endif -%}
 
             {{- not loop.last and loop.index != loop.length - 1 ? ', ' -}}
             {{- loop.index == loop.length - 1 ? ' and ' : '' -}}
