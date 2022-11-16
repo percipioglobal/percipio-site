@@ -44,7 +44,7 @@
                 }) -}}
             </h3>
             {%- include '_molecules/metas/meta--blog' ignore missing with {
-                authors: content.authors.status(null).collect(),
+                authors: content.authors.collect(),
                 categories: content.blogCategories.collect(),
                 postDate: content.postDate,
             } -%} 
