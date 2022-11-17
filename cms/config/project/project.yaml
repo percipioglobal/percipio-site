@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 dateModified: 1667824418
-=======
-dateModified: 1662547390
->>>>>>> origin/production
 elementSources:
   craft\elements\Entry:
     -
