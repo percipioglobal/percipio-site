@@ -9,7 +9,7 @@
                     {{- render.atom('image', 'article', {
                             image: props.image.collect().first(),
                             sizes: ['100vw'],
-                            alt: props.image.title,
+                            alt: props.image.title ??? null,
                             placeholders: placeholders,
                         })
                     -}}

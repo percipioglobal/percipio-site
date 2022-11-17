@@ -24,7 +24,7 @@
 
 {%- minify -%}
     <section class="container max-w-screen-xl mx-auto py-8 md:py-16 overflow-x-hidden {{ utilities -}}">
-
+    
         {%- for item in items.gridItems.collect() ??? null -%}
 
             {%- include '_molecules/grid-items/grid-item--content-image-half' ignore missing with {

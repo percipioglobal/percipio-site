@@ -208,7 +208,7 @@ module.exports = {
 
 
             letterSpacing: {
-                'tightest': '-.07em',
+                'tightest': '-.03em',
                 'tighter': '-.04em',
             },
 
@@ -256,6 +256,7 @@ module.exports = {
     plugins: [
         require('@tailwindcss/aspect-ratio'),
         require('@tailwindcss/line-clamp'),
-        require('@tailwindcss/typography')
+        require('@tailwindcss/typography'),
+        require('tailwind-scrollbar-hide')
     ],
 };
