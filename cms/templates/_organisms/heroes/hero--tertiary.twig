@@ -3,12 +3,12 @@
 {%- minify -%}
     <header class="w-full min-h-[65vh] pt-20 pb-10 md:pb-32 md:pt-44 flex items-center justify-center">
         <div class="flex flex-col items-center text-center max-w-3xl">
-            <div class="w-[10%] mb-4">
+            <div class="mb-4">
                 {# hero graphic #}
                 {%- if content.heroGraphic -%}
                     {{- render.atom('image', 'hero', {
                             image: content.heroGraphic.collect().first(),
-                            sizes: ['8rem'],
+                            sizes: ['144px'],
                             alt: content.title,
                             placeholders: placeholders,
                         })
