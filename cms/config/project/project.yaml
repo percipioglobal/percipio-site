@@ -1,4 +1,4 @@
-dateModified: 1667824418
+dateModified: 1669047606
 elementSources:
   craft\elements\Entry:
     -
@@ -11,13 +11,14 @@ elementSources:
       heading: Structures
       type: heading
     -
+      disabled: false
       key: 'section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
       tableAttributes:
         - type
-        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e'
         - revisionCreator
         - dateUpdated
         - link
+        - 'field:a938d5bd-b3b8-48ed-b083-099f57f60c16' # Hero Graphic
       type: native
     -
       disabled: false
@@ -87,9 +88,6 @@ elementSources:
     -
       key: 'section:a72bfe0c-3389-4f9f-8ec1-ab318ec10b29' # Errors
       type: native
-    -
-      heading: ''
-      type: heading
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -191,6 +189,25 @@ fs:
       subfolder: grid50/
     type: craft\awss3\Fs
     url: $CLOUDFRONT_URL
+  heroGraphics:
+    hasUrls: true
+    name: 'Hero Graphics'
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: $CLOUDFRONT_PATH_PREFIX
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: hero-graphics/
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
   icons:
     hasUrls: true
     name: Icons
@@ -254,6 +271,7 @@ meta:
     0d208796-7b7c-4677-bab0-0c107ff1c99b: Button # Button
     0f7ba706-766a-4187-950b-1e24b7b30eeb: 'Grid 50% Square Optimisations' # Grid 50% Square Optimisations
     0fb24d65-ce08-439c-b873-e060e2797035: 'Hero Secondary' # Hero Secondary
+    0ffda005-8eda-4a54-bafa-0b39cafbc863: Overline # Overline
     1a84863b-861a-4293-b8ca-c88d90b87ae8: 'Card Placeholder' # Card Placeholder
     1ae55366-a3a6-4ed1-bf34-12ead8ae6c21: 'Our Services' # Our Services
     01b78fde-8a32-4ecc-b1b0-abf0661898ce: Skills # Skills
@@ -320,6 +338,7 @@ meta:
     9bca25cb-2cf2-4427-baf8-44e347cc8a7a: Button # Button
     9c4ff5ca-6227-465d-a4a9-5a584eba02b4: 'Body Content' # Body Content
     9de367ab-77b8-47bb-bbc3-63e79a202c3e: Blog # Blog
+    9ea88c8c-ff9b-40b0-94d4-e7eb1b8227a6: 'Hero Optimisations' # Hero Optimisations
     9ecea484-fe9d-4944-8519-dee7181de25c: Alignment # Alignment
     10a7e511-e02a-46ff-8524-7390d3e9be19: Client # Client
     11cd00ae-7392-488f-b7d5-f0116379c7ed: Employees # Employees
@@ -362,6 +381,7 @@ meta:
     83cafeab-7189-4e6a-8d08-62f9e35de063: Content # Content
     85f7ea92-40ac-44bf-b3fe-20f8075fe802: Image # Image
     86f3d931-a648-4eb5-90b9-83a61fde3fdf: 'Site Admins' # Site Admins
+    88ae5a2e-a766-4eac-977b-3b321115f81b: 'Hero Image Placeholder' # Hero Image Placeholder
     88bcc4ff-c9d0-4c32-9891-2d01044026a6: FAQ # FAQ
     91df968c-fe4d-4f3b-b3db-0abde5d64dfb: Footer # Footer
     94b4d5ac-d7ea-4241-a6cb-92b39f482f99: Common # Common
@@ -394,6 +414,7 @@ meta:
     768b3119-7033-4796-be27-562fecd1e4c7: 'Vacancies Overview' # Vacancies Overview
     914b27f9-4dac-42d5-bb42-0e41ba29f93a: 'Contact Page' # Contact Page
     1161e40e-4abd-42f6-ab07-1f1254de17b4: OG # OG
+    1189b5a0-da94-4cec-b664-72101830b7c1: Heading # Heading
     1572f461-2a67-47a4-a36c-80839168bcb7: Globals # Globals
     1750a33c-c911-45de-9392-80a3004cbe0d: Description # Description
     1755ebbe-91fc-4a2a-80cb-667cc2cf1795: Locations # Locations
@@ -456,6 +477,8 @@ meta:
     a57c1d51-171d-47c2-ac77-cbc30d2229f3: 'Content CTA' # Content CTA
     a72bfe0c-3389-4f9f-8ec1-ab318ec10b29: Errors # Errors
     a81ab3c0-c52b-4817-8820-c0e69e9a0d2d: Containerise # Containerise
+    a938d5bd-b3b8-48ed-b083-099f57f60c16: 'Hero Graphic' # Hero Graphic
+    a1477b0f-3339-4cae-8768-625b7fe98d6a: 'Hero Graphic' # Hero Graphic
     a2754e8b-3bc4-46e8-a8e4-45f15fd7590a: 'Grid 33% Optimisations' # Grid 33% Optimisations
     a54705e1-c7e5-4ae2-b074-41c2bbfe0358: Clients # Clients
     ab91f872-7263-4250-b647-317386f8f679: 'Organisation Address' # Organisation Address
@@ -533,15 +556,18 @@ meta:
     e561deca-d709-4e55-89be-2b9254d635e4: Heading # Heading
     e691301b-7484-40be-a3d4-c3bc590de959: 'Content Builder' # Content Builder
     e999168b-c918-4bb5-817e-a9b72cca830a: 'Grid Content Image - 50%' # Grid Content Image - 50%
+    ea42e998-c240-479b-8821-4172a906f778: 'Hero Tertiary' # Hero Tertiary
     eb808a1d-0eb6-4d72-8f1a-4eb2ccf1fb93: Callout # Callout
     ebc9bc3a-83e6-4cab-956d-f254a119f606: 'Show Logo' # Show Logo
     ec91bde6-778d-4030-89fe-45614d871e81: Target # Target
+    ecf01b24-eb2f-4e61-bbc5-1785264be4e9: Description # Description
     ed4b0f49-8429-4d80-846f-3d441bd3e707: Image # Image
     ee0406c9-28bc-4941-889f-a5c46e62ec44: Image # Image
     ef841ba4-7bcd-4ef5-9c12-96377bf7fba2: Pages # Pages
     efb7b090-ee57-4c4f-a7e9-f8cbc9b9c7ae: Image # Image
     f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46: Gallery # Gallery
     f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd: 'Our Work' # Our Work
+    f4b93d3b-149a-4af7-81e8-314d7fe818eb: 'Hero Graphics' # Hero Graphics
     f4cbe95b-c71a-42f8-a9d8-464dcf3916a9: 'Primary Navigation' # Primary Navigation
     f4de4bd2-7a0e-4563-b290-a2a72c8d23df: Image # Image
     f7cf0694-24fa-4e41-943b-40abaddc797a: 'Quote Author' # Quote Author
