@@ -1,4 +1,4 @@
-dateModified: 1669047606
+dateModified: 1669138647
 elementSources:
   craft\elements\Entry:
     -
@@ -276,6 +276,7 @@ meta:
     1ae55366-a3a6-4ed1-bf34-12ead8ae6c21: 'Our Services' # Our Services
     01b78fde-8a32-4ecc-b1b0-abf0661898ce: Skills # Skills
     1b99a854-98db-4e61-b98d-3c4e357b1e85: Containerise # Containerise
+    1c7f6ff4-7a12-4365-a73f-8c3eb9ec7839: 'Hero Graphic' # Hero Graphic
     1c70a707-ac77-4b59-b166-37219108f31b: Background # Background
     01c92414-d375-423e-8183-4682ff91cbe4: Price # Price
     1caabc75-eb3c-43a5-bffd-5b3289015e5c: Heading # Heading
@@ -333,6 +334,7 @@ meta:
     8c5e09a3-fcbe-484a-95c1-97e362a260e8: 'Services Overview' # Services Overview
     8c9be2b5-73bf-4f32-8fd2-fc36a109dbab: 'Default Optimisations' # Default Optimisations
     8ce2faf2-a20a-4547-8145-4e3f9e75eb87: 'Blog Categories' # Blog Categories
+    8dadf0c6-9868-4783-ad0e-1625a2a2b7f6: Overline # Overline
     8f7046bb-5261-4213-9d49-b1244e5d458e: 'Grid Placeholder' # Grid Placeholder
     9a6ec17a-0ce8-43a1-8526-80f2db164c2d: 'Grid Items' # Grid Items
     9bca25cb-2cf2-4427-baf8-44e347cc8a7a: Button # Button
@@ -449,6 +451,7 @@ meta:
     62060b0e-9ae6-4b5a-a779-469967724b21: 'Large Gallery Optimisation' # Large Gallery Optimisation
     73929e5d-0eaa-424c-8cd1-ce83b47fd733: 'Page Builder' # Page Builder
     085923fe-5934-4d01-a2fd-ec625094c005: Caption # Caption
+    88044d14-ab1e-41ad-84ce-3b115981b410: Description # Description
     91602cc8-0f1b-49b4-b806-9b424f7b0206: Image # Image
     92164c9b-e1af-4a4e-b639-44a2b5d79bd3: Navigation # Navigation
     93892db5-fbae-4955-92ff-5b51c9962812: Authors # Authors
@@ -556,7 +559,7 @@ meta:
     e561deca-d709-4e55-89be-2b9254d635e4: Heading # Heading
     e691301b-7484-40be-a3d4-c3bc590de959: 'Content Builder' # Content Builder
     e999168b-c918-4bb5-817e-a9b72cca830a: 'Grid Content Image - 50%' # Grid Content Image - 50%
-    ea42e998-c240-479b-8821-4172a906f778: 'Hero Tertiary' # Hero Tertiary
+    eaf6ce45-a476-4f36-a271-e37b7c767e67: 'Rounded Graphic' # Rounded Graphic
     eb808a1d-0eb6-4d72-8f1a-4eb2ccf1fb93: Callout # Callout
     ebc9bc3a-83e6-4cab-956d-f254a119f606: 'Show Logo' # Show Logo
     ec91bde6-778d-4030-89fe-45614d871e81: Target # Target

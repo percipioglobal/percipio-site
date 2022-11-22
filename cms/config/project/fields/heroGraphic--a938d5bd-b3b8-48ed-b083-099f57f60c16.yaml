@@ -11,8 +11,8 @@ settings:
   allowUploads: true
   allowedKinds:
     - image
-  defaultUploadLocationSource: 'volume:f4b93d3b-149a-4af7-81e8-314d7fe818eb' # Hero Graphics
-  defaultUploadLocationSubpath: null
+  defaultUploadLocationSource: 'volume:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
+  defaultUploadLocationSubpath: hero
   localizeRelations: false
   maxRelations: 1
   minRelations: null
@@ -39,7 +39,7 @@ settings:
   showUnpermittedVolumes: false
   source: null
   sources:
-    - 'volume:f4b93d3b-149a-4af7-81e8-314d7fe818eb' # Hero Graphics
+    - 'volume:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

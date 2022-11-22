@@ -7,6 +7,42 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: 1c7f6ff4-7a12-4365-a73f-8c3eb9ec7839 # Hero Graphic
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 671d3ff5-063e-4103-8ab5-6b695db5f929
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: eaf6ce45-a476-4f36-a271-e37b7c767e67 # Rounded Graphic
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6cd47bf3-8407-48a6-9b28-ebc47ac58272
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 8dadf0c6-9868-4783-ad0e-1625a2a2b7f6 # Overline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 465d2ce9-fe0c-499a-9dec-6728647339b8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: d9bfce22-613d-44cc-bdac-b06404b4a8ea # Heading
             instructions: null
             label: null
@@ -14,6 +50,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: c2268c87-3e98-4362-9ad0-f049a4768f49
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 88044d14-ab1e-41ad-84ce-3b115981b410 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dca46847-514c-4833-9623-c535fd422137
             userCondition: null
             warning: null
             width: 100
@@ -29,22 +77,78 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            fieldUid: efb7b090-ee57-4c4f-a7e9-f8cbc9b9c7ae # Image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 2dca7f74-c454-417a-b2b6-28e415aa03fd
-            userCondition: null
-            warning: null
-            width: 100
         name: Content
         uid: 25e21097-6c82-4437-9970-cfefaf1a3b79
         userCondition: null
 fields:
+  1c7f6ff4-7a12-4365-a73f-8c3eb9ec7839: # Hero Graphic
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: heroGraphic
+    instructions: null
+    name: 'Hero Graphic'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
+      defaultUploadLocationSubpath: hero
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources:
+        - 'volume:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  8dadf0c6-9868-4783-ad0e-1625a2a2b7f6: # Overline
+    columnSuffix: vjbajdaq
+    contentColumnType: text
+    fieldGroup: null
+    handle: overline
+    instructions: null
+    name: Overline
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   80a6157c-e287-49ae-a937-228b86f1ffa2: # Buttons
     columnSuffix: null
     contentColumnType: string
@@ -55,7 +159,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 21227526
+      changedFieldIndicator: 1021466131
       columns:
         __assoc__:
           -
@@ -76,6 +180,26 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
+  88044d14-ab1e-41ad-84ce-3b115981b410: # Description
+    columnSuffix: hvxshbrv
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: null
+    name: Description
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   d9bfce22-613d-44cc-bdac-b06404b4a8ea: # Heading
     columnSuffix: mdgjldhh
     contentColumnType: text
@@ -104,53 +228,21 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  efb7b090-ee57-4c4f-a7e9-f8cbc9b9c7ae: # Image
-    columnSuffix: null
-    contentColumnType: string
+  eaf6ce45-a476-4f36-a271-e37b7c767e67: # Rounded Graphic
+    columnSuffix: kliglrex
+    contentColumnType: boolean
     fieldGroup: null
-    handle: cardImage
+    handle: roundedGraphic
     instructions: null
-    name: Image
+    name: 'Rounded Graphic'
     searchable: false
     settings:
-      allowSelfRelations: false
-      allowSubfolders: false
-      allowUploads: true
-      allowedKinds: null
-      defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
-      defaultUploadLocationSubpath: null
-      localizeRelations: false
-      maxRelations: 1
-      minRelations: null
-      previewMode: full
-      restrictFiles: false
-      restrictLocation: true
-      restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
-      restrictedLocationSubpath: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Asset
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\assets\AssetCondition
-      selectionLabel: 'Add an image'
-      showSiteMenu: true
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      source: null
-      sources: '*'
-      targetSiteId: null
-      validateRelatedElements: true
-      viewMode: list
+      default: false
+      offLabel: null
+      onLabel: null
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
+    translationMethod: none
+    type: craft\fields\Lightswitch
 handle: heroSecondary
 name: 'Hero Secondary'
 sortOrder: 2
