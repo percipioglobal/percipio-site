@@ -23,10 +23,12 @@
             </div>
 
             {# overline #}
-            {{- render.atom('text', 'overline', {
-                content: content.overline ??? entry.section.name ??? 'Percipio.London',
-                utilities: 'mb-8'
-            }) -}}
+            {%- if content.overline -%}
+                {{- render.atom('text', 'overline', {
+                    content: content.overline ??? entry.section.name ??? 'Percipio.London',
+                    utilities: 'mb-8'
+                }) -}}
+            {%- endif -%}
 
             {# heading #}
             <h1 class="text-center max-w-3xl">

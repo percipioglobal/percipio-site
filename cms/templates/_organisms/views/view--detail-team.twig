@@ -1,11 +1,11 @@
 {%- do craft.eagerBeaver.eagerLoadElements(entry,
     [
-        'cardImage',
+        'heroGraphic ',
     ])
 -%}
 
 {%- block content -%}
-    {%- include '_organisms/heroes/hero--secondary' ignore missing with {
+    {%- include '_organisms/builders/builder--hero' ignore missing with {
         content: entry,
     } -%}
 

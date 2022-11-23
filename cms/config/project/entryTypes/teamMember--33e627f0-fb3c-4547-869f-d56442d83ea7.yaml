@@ -32,6 +32,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78 # Hero Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ff34a7e0-c07a-40a1-92a6-3316ede7f1cd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
             instructions: null
             label: null
@@ -68,7 +80,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c75fcc51-b5a8-4c3b-a87c-99577803cea5
+            uid: 8efbf07a-c108-4a31-bb4b-6a4c17a66fea
             userCondition: null
             warning: null
             width: 100
