@@ -1,5 +1,6 @@
-// import App from '@/vue/App.vue'
-// import { createApp } from 'vue'
+
+import App from '@/vue/App.vue'
+import { createApp } from 'vue'
 import './assets/icons'
 import { init as initNavigation } from './animations/navigation'
 import { init as initPageAnimation } from './animations/page'
@@ -13,6 +14,8 @@ const main = async () => {
     initNavigation()
     initPageAnimation()
     initCopy()
+    const app = createApp(App)
+    return app.mount('#page-container')
 }
 
 // Execute async function

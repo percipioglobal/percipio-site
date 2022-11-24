@@ -1,4 +1,4 @@
-dateModified: 1669203863
+dateModified: 1669296831
 elementSources:
   craft\elements\Entry:
     -
@@ -94,6 +94,25 @@ email:
   replyToEmail: $REPLY_TO
   transportType: craft\mail\transportadapters\Sendmail
 fs:
+  animations:
+    hasUrls: false
+    name: Animations
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: animations/
+    type: craft\awss3\Fs
+    url: null
   articles:
     hasUrls: true
     name: Articles
@@ -371,6 +390,7 @@ meta:
     57f60bd3-c5a9-461b-ae37-5a637231ab58: Settings # Settings
     58be0817-ea24-401b-98eb-4a60d7e7e34b: 'Content Page' # Content Page
     58eccc39-1c9e-45ac-bae8-465deff69786: Team # Team
+    62fe645a-5cc5-49d3-8622-a3292c8590ff: Animations # Animations
     70d3e848-905a-4246-a20b-02c24af51402: 'Organisation Address Postal Code ' # Organisation Address Postal Code 
     73ee03a9-c989-4d98-bd96-db9bc9cb2a5c: Caption # Caption
     74c703ba-fb2c-421f-9b09-2bd3762770de: 'Footer Navigation' # Footer Navigation
@@ -396,6 +416,7 @@ meta:
     211c30fd-38d1-4538-a639-0fa6572f5273: Image # Image
     235f6bca-1696-4cae-b788-151de8ea53bf: Image # Image
     247bfb7d-d077-42ee-b2ba-84feb1b3fd19: Content # Content
+    277ee149-4961-454b-814c-fffcddc564d6: Animation
     284e17ab-cd25-417d-8951-fd69b7169e3d: 'Hero Image' # Hero Image
     302a5592-8085-472e-9356-ab6b1eaf1635: Position # Position
     0314e405-e731-462f-9381-2cfb6ac91134: Images # Images
@@ -501,6 +522,7 @@ meta:
     b51f4d5a-4d35-43f1-af05-72e206874892: 'Footer Navigation' # Footer Navigation
     b61c0f3e-aaeb-4c6d-aab8-39448c056b8e: CTAs # CTAs
     b74a2d1f-f160-4a53-9a84-05b89c63c277: Blog # Blog
+    b108c76e-dd8d-4e66-92f9-769cc4cba810: Animations # Animations
     b176a5a8-9d76-4653-9f6c-9ecb212d6f1a: Heading # Heading
     b692e225-204e-4347-bbca-cc383d5dee6a: Plugins # Plugins
     b884a1be-f354-4202-8335-78016b5d035a: 'Show link as button' # Show link as button
@@ -530,6 +552,7 @@ meta:
     ce64c3ac-ec79-4405-98a9-aea16011e258: Width # Width
     ce437437-2354-47a4-ae70-98fdb69aa175: Version # Version
     ceaca46d-720d-442d-b054-f8fb3704701a: 'Default Placeholder' # Default Placeholder
+    d02ca478-f0aa-464c-a032-deb130114e01: Animation # Animation
     d08a0d16-0e00-49e6-9cd4-465fa2d65d7d: Errors # Errors
     d09756bb-3dd5-4ad8-b6eb-6e3595705141: Description # Description
     d2e22319-599d-4193-b09f-3d48c90668e6: Heading # Heading
