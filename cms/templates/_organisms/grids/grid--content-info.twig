@@ -23,7 +23,7 @@
 
 {%- set items = items|default(null) -%}
 {%- set image = image ??? null -%}
-{%- set animation = animation ??? null -%}
+{%- set animation = animation.collect().first() ??? null -%}
 {%- set utilities = utilities|default('') -%}
 
 {%- minify -%}
@@ -33,12 +33,10 @@
 
         {% if animation %}
             <div class="md:block md:absolute md:right-0 md:top-0 md:w-[55vw] md:h-full">
-                <div class="animate w-full h-full" data-animation="fadeIn">
-                    <animations--animation-main animation="{{- animation.collect().first().getUrl() ??? null -}}"></animations--animation-main>
-                </div>
+                <animations--animation-main animation="{{- animation.url ??? null -}}"></animations--animation-main>
             </div>
 
-        {% else %}
+        {% else %} 
         
             {%- include '_molecules/images/image--grid-info' ignore missing with {
                 image: image
