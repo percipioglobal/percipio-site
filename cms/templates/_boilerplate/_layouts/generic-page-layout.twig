@@ -39,14 +39,14 @@
         .collect()
     -%}
 
-    <main id="page-container">
+    <main>
         {# -- Navigation --  #}
         {%- include '_organisms/navigations/navigation--primary' ignore missing with {
             navigation: navigation
         } -%}
 
         {# -- Primary content block with bypass id -- #}
-        <div class="page-content w-full bg-white relative transition-transform duration-500 ease-slide z-[1]" id="page">
+        <div id="page-container" class="page-content w-full bg-white relative transition-transform duration-500 ease-slide z-[1]" id="page">
             {% block content %}
             {% endblock %}
 

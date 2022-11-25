@@ -64,7 +64,7 @@
                 ga: {
                     category: 'Blog Card Small',
                     action: 'click',
-                    label: content.title ??? null,
+                    label: (content.title ??? null) | replace('&', 'and'),
                 },
             })
         -}}

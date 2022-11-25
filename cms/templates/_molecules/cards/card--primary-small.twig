@@ -56,7 +56,7 @@
                 ga: {
                     category: 'Primary Card Small',
                     action: 'click',
-                    label: props.content.title ??? null,
+                    label: (props.content.title ??? null) | replace('&', 'and'),
                 },
             })
         -}}
