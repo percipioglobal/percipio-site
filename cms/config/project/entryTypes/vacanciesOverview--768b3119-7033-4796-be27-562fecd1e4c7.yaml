@@ -2,6 +2,7 @@ fieldLayouts:
   42eabe2c-60d8-43a8-83f8-051bc3027d78:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,9 +27,11 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: 6e71e6b6-ad47-4701-b853-a3a64995b1f7
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78 # Hero Builder
             instructions: null
             label: null
@@ -35,13 +39,17 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 73e2b36f-c048-498c-9d71-8e3fe2b02635
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 695d06dc-f361-4b98-8fda-b7ba73c593ff
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
             instructions: null
             label: null
@@ -49,9 +57,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: da000e26-a42f-471a-894b-a69382e1d25e
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
             instructions: null
             label: null
@@ -59,10 +69,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 5af65de8-f809-4274-814a-f4be62b11977
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: 3d5eb2f0-13ac-49d4-bebf-daec84b5de94
+        userCondition: null
 handle: vacanciesOverview
 hasTitleField: true
 name: 'Vacancies Overview'
