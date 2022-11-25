@@ -29,7 +29,6 @@ onMounted(async () => {
 <template> 
     <div 
         :id="lottieId" 
-        class="animate w-full h-full" 
-        data-animation="fadeIn"
+        class=" w-full h-full" 
     />
 </template>
