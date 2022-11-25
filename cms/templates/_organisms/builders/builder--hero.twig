@@ -9,6 +9,7 @@
     ])
 %}
 
+
 {%- minify -%}
     {%- for block in content.heroBuilder -%}
 
@@ -26,8 +27,6 @@
                     content: block,
                 } -%}
 
-                <animations--animation-main></animations--animation-main>
-
             {%- default -%}
                 {%- include '_organisms/heroes/hero--primary' ignore missing with {
                     content: block,
@@ -36,4 +35,5 @@
         {%- endswitch -%}
 
     {%- endfor -%}
+
 {%- endminify -%}

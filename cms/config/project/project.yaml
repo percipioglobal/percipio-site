@@ -1,4 +1,4 @@
-dateModified: 1669296831
+dateModified: 1669373040
 elementSources:
   craft\elements\Entry:
     -
@@ -95,7 +95,7 @@ email:
   transportType: craft\mail\transportadapters\Sendmail
 fs:
   animations:
-    hasUrls: false
+    hasUrls: true
     name: Animations
     settings:
       addSubfolderToRootUrl: true
@@ -112,7 +112,7 @@ fs:
       storageClass: ''
       subfolder: animations/
     type: craft\awss3\Fs
-    url: null
+    url: $CLOUDFRONT_URL
   articles:
     hasUrls: true
     name: Articles
@@ -330,6 +330,7 @@ meta:
     4f6c2efe-5cf4-46b5-82e5-79a8796af5c5: Content # Content
     5a47b114-f61e-4fa9-abf3-015b22306186: 'Legal Group' # Legal Group
     5ba9dee9-1843-4b4f-b62c-6f3c7de2e04c: Quote # Quote
+    5d3bbefb-8ac1-460a-bdca-9a5d3aedbd64: Animation # Animation
     5da841b1-ca0d-46ff-8bb1-04d6c889ac54: Percipio # Percipio
     05e07097-2450-4ce9-9bf6-a198b2c1470a: Containerise # Containerise
     6a3feb81-50ce-467a-8aca-b5d4cc12aed0: Description # Description
@@ -384,6 +385,7 @@ meta:
     49fc2634-bf3b-4e3e-a1bc-9eeb199fac80: 'Social Media URL' # Social Media URL
     50e67c67-8b9c-48a2-9cb1-2c3e91f38d29: Buttons # Buttons
     54daa4d7-b5cf-4458-9e19-67155be19343: 'Organisation Phone' # Organisation Phone
+    54e8b29b-128e-4e68-a79a-181317cc51df: Animation # Animation
     54e60257-f31a-44aa-960e-bbd364197e28: Homepage # Homepage
     55ac783b-adeb-42fc-98f5-0adf13a8419d: Width # Width
     056eaad6-b9f8-4337-b984-8bfbbabccb62: Overline # Overline
@@ -416,7 +418,7 @@ meta:
     211c30fd-38d1-4538-a639-0fa6572f5273: Image # Image
     235f6bca-1696-4cae-b788-151de8ea53bf: Image # Image
     247bfb7d-d077-42ee-b2ba-84feb1b3fd19: Content # Content
-    277ee149-4961-454b-814c-fffcddc564d6: Animation
+    277ee149-4961-454b-814c-fffcddc564d6: Animation # Animation
     284e17ab-cd25-417d-8951-fd69b7169e3d: 'Hero Image' # Hero Image
     302a5592-8085-472e-9356-ab6b1eaf1635: Position # Position
     0314e405-e731-462f-9381-2cfb6ac91134: Images # Images

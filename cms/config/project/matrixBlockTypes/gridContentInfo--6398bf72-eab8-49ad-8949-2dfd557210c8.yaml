@@ -22,7 +22,7 @@ fieldLayouts:
             fieldUid: ee0406c9-28bc-4941-889f-a5c46e62ec44 # Image
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 100b3f67-7f14-4419-b2fb-0fdef7c9007c
@@ -31,13 +31,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 277ee149-4961-454b-814c-fffcddc564d6
+            fieldUid: 54e8b29b-128e-4e68-a79a-181317cc51df # Animation
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f56ae3af-b107-43e8-b7ba-cabdff3a6c9c
+            uid: 351de585-1f67-42ec-9cab-724c637d41f1
             userCondition: null
             warning: null
             width: 100
@@ -45,7 +45,7 @@ fieldLayouts:
         uid: fb38e190-4df1-4334-9e55-b0064bddcfb3
         userCondition: null
 fields:
-  277ee149-4961-454b-814c-fffcddc564d6:
+  54e8b29b-128e-4e68-a79a-181317cc51df: # Animation
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -82,7 +82,7 @@ fields:
             - class
             - craft\elements\conditions\assets\AssetCondition
       selectionLabel: null
-      showSiteMenu: false
+      showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       source: null
@@ -104,7 +104,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 1293933105
+      changedFieldIndicator: 876654455
       columns:
         __assoc__:
           -
