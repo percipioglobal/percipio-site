@@ -29,6 +29,6 @@ onMounted(async () => {
 <template> 
     <div 
         :id="lottieId" 
-        class=" w-full h-full" 
+        class="w-full h-full" 
     />
 </template>
