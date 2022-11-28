@@ -7,7 +7,6 @@ import manifestSRI from 'vite-plugin-manifest-sri'
 import {visualizer} from 'rollup-plugin-visualizer'
 import eslintPlugin from 'vite-plugin-eslint'
 import {nodeResolve} from '@rollup/plugin-node-resolve'
-import critical from 'rollup-plugin-critical'
 import {ViteFaviconsPlugin} from 'vite-plugin-favicon2'
 import * as path from 'path';
 
@@ -29,14 +28,6 @@ export default defineConfig(({command}) => ({
         }
     },
     plugins: [
-        critical({
-            criticalUrl: 'https://percipio.london',
-            criticalBase: '../cms/web/dist/criticalcss/',
-            criticalPages: [
-                {uri: '/', template: 'index'},
-            ],
-            criticalConfig: {}
-        }),
         legacy({
             targets: ['defaults', 'not IE 11']
         }),
