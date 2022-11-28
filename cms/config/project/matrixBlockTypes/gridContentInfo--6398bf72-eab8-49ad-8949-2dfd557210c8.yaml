@@ -19,18 +19,6 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: ee0406c9-28bc-4941-889f-a5c46e62ec44 # Image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 100b3f67-7f14-4419-b2fb-0fdef7c9007c
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: 54e8b29b-128e-4e68-a79a-181317cc51df # Animation
             instructions: null
             label: null
@@ -40,7 +28,19 @@ fieldLayouts:
             uid: 351de585-1f67-42ec-9cab-724c637d41f1
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: ee0406c9-28bc-4941-889f-a5c46e62ec44 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 100b3f67-7f14-4419-b2fb-0fdef7c9007c
+            userCondition: null
+            warning: null
+            width: 50
         name: Content
         uid: fb38e190-4df1-4334-9e55-b0064bddcfb3
         userCondition: null
@@ -50,7 +50,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: animation
-    instructions: null
+    instructions: 'Upload a lottie json file to show the animation, if this is present, we will ignore the image'
     name: Animation
     searchable: false
     settings:
@@ -104,7 +104,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 876654455
+      changedFieldIndicator: 1744015651
       columns:
         __assoc__:
           -
