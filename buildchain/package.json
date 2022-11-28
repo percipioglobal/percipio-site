@@ -12,8 +12,9 @@
     "dependencies": {
         "@tailwindcss/aspect-ratio": "latest",
         "@tailwindcss/line-clamp": "latest",
-        "@tailwindcss/typography": "latest",
+        "@tailwindcss/typography": "latest", 
         "lazysizes": "^5.3.0",
+        "lottie-web": "^5.9.6",
         "picturefill": "^3.0.2",
         "prismjs": "^1.25.0",
         "tailwind-scrollbar-hide": "^1.1.7",

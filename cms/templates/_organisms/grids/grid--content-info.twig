@@ -23,6 +23,7 @@
 
 {%- set items = items|default(null) -%}
 {%- set image = image ??? null -%}
+{%- set animation = animation.collect().first() ??? null -%}
 {%- set utilities = utilities|default('') -%}
 
 {%- minify -%}
@@ -30,9 +31,22 @@
 
         <div class="relative">
 
+        {% if animation %}
+
+            <div class="md:block md:absolute md:right-0 md:top-0 md:w-[55vw] md:h-full">
+                <div class="animate" data-animation="fadeIn">
+                    <animations--animation-main animation="{{- animation.url ??? null -}}"></animations--animation-main>
+                </div> 
+            </div>
+
+        {% else %} 
+        
             {%- include '_molecules/images/image--grid-info' ignore missing with {
                 image: image
             } -%}
+
+        {% endif %}
+
             {%- for item in items.collect() ??? null -%}
 
                 <div class="container max-w-screen-xl mx-auto animate" data-animation="slideLeftToRight">
@@ -43,11 +57,6 @@
                 </div>
 
             {%- endfor -%}
-
-            {# {%- include '_molecules/images/image--grid-info' ignore missing with {
-                image: image
-            } -%} #}
-
         </div>
 
     </section>

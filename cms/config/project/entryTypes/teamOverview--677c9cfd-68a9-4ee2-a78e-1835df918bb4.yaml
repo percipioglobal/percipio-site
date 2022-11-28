@@ -2,6 +2,7 @@ fieldLayouts:
   a88ce703-9ba5-42eb-b501-241be2a78b19:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,9 +27,11 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: 081258bd-1c0d-426d-9616-5b4a160a7cc2
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78 # Hero Builder
             instructions: null
             label: null
@@ -35,13 +39,17 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: beb231f3-8fc3-44bd-977d-833920165af9
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 66ecd0a9-31bc-4f74-b0f2-c8f9ac92541f
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
             instructions: null
             label: null
@@ -49,9 +57,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 366d86f7-8214-440f-a590-577922da8118
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
             instructions: null
             label: null
@@ -59,10 +69,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: d85a5d7e-2048-41de-b822-b5a29527df7f
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: df547494-704c-4757-b7eb-7c02209d8a76
+        userCondition: null
 handle: teamOverview
 hasTitleField: true
 name: 'Team Overview'

@@ -45,7 +45,7 @@
                     ga: {
                         category: 'Plugin Card',
                         action: 'click',
-                        label: props.content.title ??? null,
+                        label: (props.content.title ??? null) | replace('&', 'and'),
                     },
                 })
             -}}
