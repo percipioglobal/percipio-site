@@ -47,7 +47,7 @@
 
                     <pre class="font-mono text-white overflow-auto">
                         <code class="{{- 'language-' ~ props.language }} text-sm lg:text-base code-copy-to-clipboard">
-                            {{- props.code -}}
+                            <content--code :code="{{- props.code | json_encode -}}"></content--code>
                         </code>
                     </pre>
                 </div>
