@@ -7,6 +7,30 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: ade05ccf-0a91-40b3-849d-1e35e1c47ab7 # Quote Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 57120c0a-40e2-46f3-9d44-6fe31a035224
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 073dc9aa-d805-4ed7-8612-5a74781673b1
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 115abef0-636d-4cbb-bd1a-942d4069c209
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 3ef3485e-6187-4dac-af6b-66d630852b61 # Quote
             instructions: null
             label: null
@@ -60,6 +84,26 @@ fields:
       columnType: null
       initialRows: 4
       multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  073dc9aa-d805-4ed7-8612-5a74781673b1:
+    columnSuffix: jdibdqox
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -128,6 +172,52 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
+  ade05ccf-0a91-40b3-849d-1e35e1c47ab7: # Quote Type
+    columnSuffix: ggweugsv
+    contentColumnType: string
+    fieldGroup: null
+    handle: quoteType
+    instructions: null
+    name: 'Quote Type'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Quote Person'
+            -
+              - value
+              - quotePerson
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - 'Quote Pull'
+            -
+              - value
+              - quotePull
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Quote Block'
+            -
+              - value
+              - quoteBlock
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
   f7cf0694-24fa-4e41-943b-40abaddc797a: # Quote Author
     columnSuffix: null
     contentColumnType: text

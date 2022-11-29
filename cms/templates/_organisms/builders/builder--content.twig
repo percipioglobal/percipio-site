@@ -39,7 +39,28 @@
 
             {%- case 'blockQuote' -%}
 
-                {%- include '_molecules/quotes/quote--block' ignore missing with {
+                {%- switch block.quoteType  -%}
+                
+                    {%- case "quotePull" -%}
+                        {%- set component = '_molecules/quotes/quote--pull' -%}    
+                
+                    {%- case "quoteBlock" -%}
+                        {%- set component = '_molecules/quotes/quote--block' -%}   
+                
+                    {%- default -%}
+                        {%- set component = '_molecules/quotes/quote--person' -%}   
+                
+                {%- endswitch -%}
+            
+
+                {%- include component ignore missing with {
+                    content: block,
+                    utilities: next ? '' : 'mb-10 lg:mb-20'
+                } -%}
+
+            {%- case 'quoteContent' -%}
+
+                {%- include '_molecules/quotes/quote--content' ignore missing with {
                     content: block,
                     utilities: next ? '' : 'mb-10 lg:mb-20'
                 } -%}
