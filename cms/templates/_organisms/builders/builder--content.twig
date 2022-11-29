@@ -44,11 +44,11 @@
                     {%- case "quotePull" -%}
                         {%- set component = '_molecules/quotes/quote--pull' -%}    
                 
-                    {%- case "quoteBlock" -%}
-                        {%- set component = '_molecules/quotes/quote--block' -%}   
+                    {%- case "quoteInline" -%}
+                        {%- set component = '_molecules/quotes/quote--inline' -%}  
                 
                     {%- default -%}
-                        {%- set component = '_molecules/quotes/quote--person' -%}   
+                        {%- set component = '_molecules/quotes/quote--pull' -%}  
                 
                 {%- endswitch -%}
             

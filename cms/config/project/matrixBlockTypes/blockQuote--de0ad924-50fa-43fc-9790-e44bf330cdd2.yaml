@@ -19,7 +19,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 073dc9aa-d805-4ed7-8612-5a74781673b1
+            fieldUid: 073dc9aa-d805-4ed7-8612-5a74781673b1 # heading
             instructions: null
             label: null
             required: false
@@ -89,7 +89,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  073dc9aa-d805-4ed7-8612-5a74781673b1:
+  073dc9aa-d805-4ed7-8612-5a74781673b1: # heading
     columnSuffix: jdibdqox
     contentColumnType: text
     fieldGroup: null
@@ -186,10 +186,10 @@ fields:
           __assoc__:
             -
               - label
-              - 'Quote Person'
+              - 'Quote Pull'
             -
               - value
-              - quotePerson
+              - quotePull
             -
               - default
               - '1'
@@ -197,21 +197,10 @@ fields:
           __assoc__:
             -
               - label
-              - 'Quote Pull'
+              - 'Quote Inline'
             -
               - value
-              - quotePull
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - 'Quote Block'
-            -
-              - value
-              - quoteBlock
+              - quoteInline
             -
               - default
               - ''

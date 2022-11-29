@@ -30,17 +30,19 @@
         }) -%}
 
         <div class="container max-w-[80ch] mx-auto py-5 md:py-10 {{ props.utilities -}}">
-            <blockquote {{ props.source ? 'cite="'~ props.source ~ '"' : '' }} class="mx-auto w-full whitespace-normal font-mono max-w-screen-md py-16">
+            <blockquote {{ props.source ? 'cite="'~ props.source ~ '"' : '' }} class="mx-auto w-full whitespace-normal max-w-screen-md py-16">
 
                 <div class="animate" data-animation="slideBottomToTop">
 
-                    <p class="text-2xl md:text-3xl lg:text-4xl text-gray-900 font-bold">
+                    <p class="text-xl md:text-2xl lg:text-3xl text-gray-600 font-semibold font-sans pl-4 mb-4">
                         {{- render.atom('text', 'content', {
                             content: props.heading
                         }) -}}
                     </p>
 
-                    <p class="text-2xl md:text-3xl lg:text-4xl text-gray-900">
+                    <div class="relative">
+
+                    <p class="before:h-full before:w-1.5 before:block before:absolute before:bg-pink-500 before:-ml-4 pl-7 text-base md:text-1xl lg:text-2xl text-gray-400 font-mono">
                         {{- render.atom('text', 'content', {
                             content: props.quote
                         }) -}}
@@ -48,7 +50,7 @@
 
                     {# TODO: add transitions on the URLs, let's get fancy #}
 
-                    <footer class="font-primary mt-8">
+                    <footer class="font-primary mt-4">
                         {%- if props.source.getUrl() ??? null -%}
                             <a
                                 href="{{- props.source.getUrl() -}}"
@@ -60,11 +62,16 @@
                                 {{- props.author }} &mdash; {{ props.source.getText() -}}
                             </a>
                         {%- else -%}
-                            <span class="text-base">
+                            <span class="text-base pl-7 text-gray-400">
                                 {{- props.author -}}
                             </span>
                         {%- endif -%}
                     </footer>
+
+                    </div>
+
+
+                    
 
                 </div>
 
