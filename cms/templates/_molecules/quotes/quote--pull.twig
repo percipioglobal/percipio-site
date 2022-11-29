@@ -32,11 +32,11 @@
         <div class="container max-w-[80ch] mx-auto py-5 md:py-10 {{ props.utilities -}} relative">
             <blockquote {{ props.source ? 'cite="'~ props.source ~ '"' : '' }} class="mx-auto w-full whitespace-normal font-mono max-w-screen-md py-8">
 
-                <svg width="151" height="58" viewBox="0 0 151 58" fill="none" xmlns="http://www.w3.org/2000/svg" class="-ml-4 md:-ml-12 bottom-2">
+                <svg width="151" height="58" viewBox="0 0 151 58" fill="none" xmlns="http://www.w3.org/2000/svg" class="-ml-4 md:-ml-12 bottom-2 pb-4">
                     <path d="M127.412 21.3948C133.724 21.3948 138.487 22.537 141.7 24.8213C144.913 27.1057 147.252 30.8943 148.717 36.1873C150.239 41.4246 151 48.6955 151 58L131.892 58C131.78 52.4841 130.765 48.6955 128.849 46.634C126.932 44.5168 123.973 43.4582 119.971 43.4582L94.692 43.4582L93.762 43.4582C88.9147 43.4582 84.9974 41.8146 82.0101 38.5274C78.9664 35.2401 76.9655 30.3929 76.0073 23.9856L74.9927 23.9856C73.0763 36.633 66.8199 43.1239 56.2234 43.4582L30.944 43.4582C26.9985 43.4582 24.0676 44.4889 22.1512 46.5504C20.2348 48.6119 19.192 52.4284 19.023 58L0 58C-4.06713e-07 48.6955 0.760918 41.3967 2.28275 36.1037C3.74823 30.8108 6.11553 27.0499 9.38466 24.8213C12.5974 22.537 17.3038 21.3948 23.5039 21.3948L50.3897 21.3948L51.2352 21.3948C55.9698 21.3948 59.5207 19.6955 61.888 16.2968C64.2553 12.8424 65.439 7.41017 65.439 -1.43045e-05L85.6456 -1.51878e-05C85.6456 6.96444 86.801 12.2853 89.112 15.9625C91.4229 19.584 95.3121 21.3948 100.779 21.3948L127.412 21.3948Z" fill="#D61F69"/>
                 </svg>
 
-                <div class="animate" data-animation="slideBottomToTop">
+                <div class="animate px-6" data-animation="slideBottomToTop">
 
                     <p class="text-2xl md:text-3xl lg:text-4xl text-gray-900 font-bold">
                         {{- render.atom('text', 'content', {
