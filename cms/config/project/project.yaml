@@ -1,4 +1,4 @@
-dateModified: 1669396415
+dateModified: 1669739063
 elementSources:
   craft\elements\Entry:
     -
@@ -289,6 +289,7 @@ meta:
     0c7a7b67-3926-4a9f-b449-8d1d1c451f2f: Width # Width
     0d208796-7b7c-4677-bab0-0c107ff1c99b: Button # Button
     0f7ba706-766a-4187-950b-1e24b7b30eeb: 'Grid 50% Square Optimisations' # Grid 50% Square Optimisations
+    0f190264-3cec-4937-a868-923e009164cf: Header # Header
     0fb24d65-ce08-439c-b873-e060e2797035: 'Hero Secondary' # Hero Secondary
     0ffda005-8eda-4a54-bafa-0b39cafbc863: Overline # Overline
     1a84863b-861a-4293-b8ca-c88d90b87ae8: 'Card Placeholder' # Card Placeholder
@@ -333,6 +334,7 @@ meta:
     5d3bbefb-8ac1-460a-bdca-9a5d3aedbd64: Animation # Animation
     5da841b1-ca0d-46ff-8bb1-04d6c889ac54: Percipio # Percipio
     05e07097-2450-4ce9-9bf6-a198b2c1470a: Containerise # Containerise
+    5e7a98c8-6c2f-40e1-b5e3-daddf090d577: 'Quote Author' # Quote Author
     6a3feb81-50ce-467a-8aca-b5d4cc12aed0: Description # Description
     6aa0f4e6-667e-42b9-b9ad-1b3be7de0f68: Subtitle # Subtitle
     6ba3a39a-5d6c-488d-bcab-d047d0942b0e: Swatch # Swatch
@@ -356,6 +358,7 @@ meta:
     8ce2faf2-a20a-4547-8145-4e3f9e75eb87: 'Blog Categories' # Blog Categories
     8dadf0c6-9868-4783-ad0e-1625a2a2b7f6: Overline # Overline
     8f7046bb-5261-4213-9d49-b1244e5d458e: 'Grid Placeholder' # Grid Placeholder
+    8fd7bfc7-70cd-498d-9229-a507c11afc58: 'Inline Quote' # Inline Quote
     9a6ec17a-0ce8-43a1-8526-80f2db164c2d: 'Grid Items' # Grid Items
     9bca25cb-2cf2-4427-baf8-44e347cc8a7a: Button # Button
     9c4ff5ca-6227-465d-a4a9-5a584eba02b4: 'Body Content' # Body Content
@@ -394,6 +397,7 @@ meta:
     58eccc39-1c9e-45ac-bae8-465deff69786: Team # Team
     62fe645a-5cc5-49d3-8622-a3292c8590ff: Animations # Animations
     70d3e848-905a-4246-a20b-02c24af51402: 'Organisation Address Postal Code ' # Organisation Address Postal Code 
+    073dc9aa-d805-4ed7-8612-5a74781673b1: heading # heading
     73ee03a9-c989-4d98-bd96-db9bc9cb2a5c: Caption # Caption
     74c703ba-fb2c-421f-9b09-2bd3762770de: 'Footer Navigation' # Footer Navigation
     74d5a128-4fbc-4ea8-a7d7-c828e87680ff: 'Organisation Address Region' # Organisation Address Region
@@ -436,6 +440,7 @@ meta:
     712cce4e-490d-44b8-bf2c-5d00c2de4c40: Assets # Assets
     714aef78-b2cb-46ab-82b4-e1cbf362b65c: Target # Target
     720b0445-dc28-4b47-85df-59e4f03c666b: Button # Button
+    749e2008-af5d-44f1-aaa7-b6a982c0978f: Header # Header
     768b3119-7033-4796-be27-562fecd1e4c7: 'Vacancies Overview' # Vacancies Overview
     914b27f9-4dac-42d5-bb42-0e41ba29f93a: 'Contact Page' # Contact Page
     1161e40e-4abd-42f6-ab07-1f1254de17b4: OG # OG
@@ -508,6 +513,8 @@ meta:
     a2754e8b-3bc4-46e8-a8e4-45f15fd7590a: 'Grid 33% Optimisations' # Grid 33% Optimisations
     a54705e1-c7e5-4ae2-b074-41c2bbfe0358: Clients # Clients
     ab91f872-7263-4250-b647-317386f8f679: 'Organisation Address' # Organisation Address
+    abf6793d-9d08-43c6-8d4b-67b7aa893276: 'Quote Source' # Quote Source
+    ade05ccf-0a91-40b3-849d-1e35e1c47ab7: 'Quote Type' # Quote Type
     ae2f2577-98ad-4416-afb0-0a136fd1680d: Location # Location
     ae3a8d43-87b0-4ec3-a5f4-f0e081d700a1: 'Plugins Overview' # Plugins Overview
     ae57f7d7-6764-4fd4-84e9-3e526e23b520: Image # Image
@@ -547,6 +554,7 @@ meta:
     c2249c59-46a5-435d-ab41-42bb543e2875: City # City
     c5638e5a-a8f8-4f97-ab00-7247cd30b054: Width # Width
     c6379e33-9e45-4b32-a2a0-136084548853: Button # Button
+    c57945a1-e622-42d1-ab9a-093940235f29: Quote # Quote
     ca8bffb4-dfed-4ca4-b421-ffcc8cca47e2: Target # Target
     cc4d5589-5884-4fb2-ba84-ffb388a8806e: Slides # Slides
     ccc50eb1-1bd2-4306-842a-0a31f567c135: Image # Image
@@ -599,6 +607,7 @@ meta:
     f4cbe95b-c71a-42f8-a9d8-464dcf3916a9: 'Primary Navigation' # Primary Navigation
     f4de4bd2-7a0e-4563-b290-a2a72c8d23df: Image # Image
     f7cf0694-24fa-4e41-943b-40abaddc797a: 'Quote Author' # Quote Author
+    f33a3b23-d03d-46e3-8eef-f547b7f68421: 'Inline Quote' # Inline Quote
     f86e951a-5dea-4768-b733-ae5506291930: Containerise # Containerise
     f665a550-cb91-431e-bfa3-1428815affad: 'Heading Callout' # Heading Callout
     f3960fae-d20a-4473-9a73-315dfed31760: Image # Image
