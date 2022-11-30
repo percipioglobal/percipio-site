@@ -33,46 +33,39 @@
             <blockquote {{ props.source ? 'cite="'~ props.source ~ '"' : '' }} class="mx-auto w-full whitespace-normal max-w-screen-md py-16">
 
                 <div class="animate" data-animation="slideBottomToTop">
-
-                    <p class="text-xl md:text-2xl lg:text-3xl text-gray-600 font-semibold font-sans pl-4 mb-4">
+                    <p class="text-primary md:text-lg lg:text-xl text-gray-600 font-semibold font-sans pl-4 mb-4">
                         {{- render.atom('text', 'content', {
                             content: props.heading
                         }) -}}
                     </p>
 
                     <div class="relative">
+                        <p class="before:h-full before:w-1.5 before:block before:absolute before:bg-pink-500 before:-ml-4 pl-7 text-primary md:text-lg lg:text-xl text-gray-600 font-mono">
+                            {{- render.atom('text', 'content', {
+                                content: props.quote
+                            }) -}}
+                        </p>
 
-                    <p class="before:h-full before:w-1.5 before:block before:absolute before:bg-pink-500 before:-ml-4 pl-7 text-base md:text-1xl lg:text-2xl text-gray-400 font-mono">
-                        {{- render.atom('text', 'content', {
-                            content: props.quote
-                        }) -}}
-                    </p>
+                        {# TODO: add transitions on the URLs, let's get fancy #}
 
-                    {# TODO: add transitions on the URLs, let's get fancy #}
-
-                    <footer class="font-primary mt-4">
-                        {%- if props.source.getUrl() ??? null -%}
-                            <a
-                                href="{{- props.source.getUrl() -}}"
-                                data-tag-category="quote-source"
-                                data-tag-action="click"
-                                data-tag-label="{{- props.source.getUrl() -}}"
-                                class="text-blue-500 text-base hover:text-blue-800"
-                            >
-                                {{- props.author }} &mdash; {{ props.source.getText() -}}
-                            </a>
-                        {%- else -%}
-                            <span class="text-base pl-7 text-gray-400">
-                                {{- props.author -}}
-                            </span>
-                        {%- endif -%}
-                    </footer>
-
+                        <footer class="font-primary mt-4">
+                            {%- if props.source.getUrl() ??? null -%}
+                                <a
+                                    href="{{- props.source.getUrl() -}}"
+                                    data-tag-category="quote-source"
+                                    data-tag-action="click"
+                                    data-tag-label="{{- props.source.getUrl() -}}"
+                                    class="text-blue-500 text-base hover:text-blue-800"
+                                >
+                                    {{- props.author }} &mdash; {{ props.source.getText() -}}
+                                </a>
+                            {%- else -%}
+                                <span class="text-base pl-7 text-gray-600">
+                                    {{- props.author -}}
+                                </span>
+                            {%- endif -%}
+                        </footer>
                     </div>
-
-
-                    
-
                 </div>
 
             </blockquote>

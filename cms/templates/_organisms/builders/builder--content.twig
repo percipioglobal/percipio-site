@@ -127,14 +127,29 @@
                     utilities: next ? '' : 'mb-10 lg:mb-20'
                 } -%}
 
-            {%- case 'gridContentInfo' -%}
+            {%- case 'gridContentInfo' -%} 
 
-                {%- include '_organisms/grids/grid--content-info' ignore missing with {
-                    items: block.gridItems,
-                    image: block.image,
-                    animation: block.animation,
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
-                } -%}
+                {%- set animation = block.animation.collect().first() ??? null -%}
+
+                    {% if animation %}
+                
+
+                        {%- include '_organisms/grids/grid--content-info-animation' ignore missing with {
+                            items: block.gridItems,
+                            animation: block.animation,
+                            utilities: next ? '' : 'mb-10 lg:mb-20'
+                        } -%}
+
+                    {% else %}
+                    
+
+                        {%- include '_organisms/grids/grid--content-info' ignore missing with {
+                            items: block.gridItems,
+                            image: block.image,
+                            utilities: next ? '' : 'mb-10 lg:mb-20'
+                        } -%}
+
+                    {% endif %}
 
             {%- case 'highlightCards' -%}
 
