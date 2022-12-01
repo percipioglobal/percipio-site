@@ -29,7 +29,7 @@
             source: props.content.quoteSource ??? null
         }) -%}
 
-        <div class="container max-w-[80ch] mx-auto py-5 md:py-10 {{ props.utilities -}}">
+        <div class="container max-w-[80ch] mx-auto py-2 {{ props.utilities -}}">
             <blockquote {{ props.source ? 'cite="'~ props.source ~ '"' : '' }} class="mx-auto w-full whitespace-normal max-w-screen-md py-16">
 
                 <div class="animate" data-animation="slideBottomToTop">
