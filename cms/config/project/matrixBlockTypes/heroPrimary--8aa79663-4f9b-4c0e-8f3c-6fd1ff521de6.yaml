@@ -3,8 +3,10 @@ fieldLayouts:
   49b2df8f-cf45-4beb-afd2-207579b23d01:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 2075123a-3328-41eb-a8ad-ce1987d26d66 # Overline
             instructions: null
             label: null
@@ -12,9 +14,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: fd31995e-ab1f-4896-b250-f9f5cc28275b
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: df8a0480-96ec-4e76-bc8f-16b5e4f2fa3b # Heading
             instructions: null
             label: null
@@ -22,9 +26,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 74a1265f-0f33-4689-8662-0f0c232da679
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 670882de-3f12-4bfd-b44e-7f5132526ff9 # Description
             instructions: null
             label: null
@@ -32,10 +38,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 353e0594-7f1a-4074-88e9-05d9a39e461e
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: b54a377c-67b1-4122-97af-d6c7cd75fa5b
+        userCondition: null
 fields:
   670882de-3f12-4bfd-b44e-7f5132526ff9: # Description
     columnSuffix: idtsciuz

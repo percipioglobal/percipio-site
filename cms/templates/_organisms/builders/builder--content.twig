@@ -39,7 +39,28 @@
 
             {%- case 'blockQuote' -%}
 
-                {%- include '_molecules/quotes/quote--block' ignore missing with {
+                {%- switch block.quoteType  -%}
+                
+                    {%- case "quotePull" -%}
+                        {%- set component = '_molecules/quotes/quote--pull' -%}    
+                
+                    {%- case "quoteInline" -%}
+                        {%- set component = '_molecules/quotes/quote--inline' -%}  
+                
+                    {%- default -%}
+                        {%- set component = '_molecules/quotes/quote--pull' -%}  
+                
+                {%- endswitch -%}
+            
+
+                {%- include component ignore missing with {
+                    content: block,
+                    utilities: next ? '' : 'mb-10 lg:mb-20'
+                } -%}
+
+            {%- case 'quoteContent' -%}
+
+                {%- include '_molecules/quotes/quote--content' ignore missing with {
                     content: block,
                     utilities: next ? '' : 'mb-10 lg:mb-20'
                 } -%}
@@ -106,13 +127,29 @@
                     utilities: next ? '' : 'mb-10 lg:mb-20'
                 } -%}
 
-            {%- case 'gridContentInfo' -%}
+            {%- case 'gridContentInfo' -%} 
 
-                {%- include '_organisms/grids/grid--content-info' ignore missing with {
-                    items: block.gridItems,
-                    image: block.image,
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
-                } -%}
+                {%- set animation = block.animation.collect().first() ??? null -%}
+
+                    {% if animation %}
+                
+
+                        {%- include '_organisms/grids/grid--content-info-animation' ignore missing with {
+                            items: block.gridItems,
+                            animation: block.animation,
+                            utilities: next ? '' : 'mb-10 lg:mb-20'
+                        } -%}
+
+                    {% else %}
+                    
+
+                        {%- include '_organisms/grids/grid--content-info' ignore missing with {
+                            items: block.gridItems,
+                            image: block.image,
+                            utilities: next ? '' : 'mb-10 lg:mb-20'
+                        } -%}
+
+                    {% endif %}
 
             {%- case 'highlightCards' -%}
 

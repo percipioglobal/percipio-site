@@ -44,7 +44,7 @@
                     data-src="{{- props.optimized.src() ??? props.placeholder.src() -}}"
                     data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
                     sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                    class="lazyload object-cover w-full h-full object-center opacity-50"
+                    class="lazyload object-cover w-full h-full object-center"
                     loading="lazy"
                     alt="{{- props.alt -}}"
                 />

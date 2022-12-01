@@ -30,7 +30,9 @@
 
         <a
             {{ props.url ? 'href=' ~ props.url : '' }}
-            {{ parse.ga(props.ga) }}
+            data-tag-category="{{- props.ga.category ??? '' -}}"
+            data-tag-action="{{- props.ga.action ??? '' -}}"
+            data-tag-label="{{- props.ga.label ??? '' -}}"
             aria-label="{{- props.text -}}"
             class="{{ classes._default }} {{ classes.animation }} {{ classes.border }} {{ classes.color }} {{ classes.focus }} {{ classes.font }} {{ classes.hover }} {{ classes.padding }} {{ classes.cursor }} {{ props.utilities }}"
         >

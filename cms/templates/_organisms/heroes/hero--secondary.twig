@@ -1,31 +1,37 @@
 {%- import '_macros/atoms' as render -%}
 
+
 {%- minify -%}
     <header class="w-full min-h-[65vh] pt-20 pb-10 md:pb-32 md:pt-44 flex items-center justify-center">
-        <div class="flex flex-col items-center">
-
-            <div class="w-32 h-32 rounded-full overflow-hidden mb-8 relative">
+        <div class="container max-w-screen-xl mx-auto flex flex-col items-center">
+        
+            <div class="{{- (content.roundedGraphic ?? true) ? 'w-32 h-32 rounded-full overflow-hidden'  : 'w-[145px]' }} mb-8 relative">
                 {%- if content.pluginIcon -%}
-                    {{- render.atom('svg', 'plugin-icon', {
+                    {{- render.atom('svg', 'icon', {
                         icon: content.pluginIcon.collect().first(),
                         utilities: 'w-32 h-32'
                     }) -}}
                 {%- endif -%}
 
-                {%- if content.cardImage -%}
-                    {{- render.atom('image', 'card-small', {
-                            image: content.cardImage.collect().first(),
-                            sizes: ['8rem'],
-                            alt: content.title,
-                            placeholders: placeholders,
-                            ratio: 'aspect-square' 
+                {%- if content.heroGraphic -%}
+                    {{- render.atom('svg', 'icon', {
+                            icon: content.heroGraphic.collect().first(),
+                            utilities: 'w-full'
                         })
                     -}}
                 {%- endif -%}
             </div>
 
+            {# overline #}
+            {%- if content.overline -%}
+                {{- render.atom('text', 'overline', {
+                    content: content.overline ??? entry.section.name ??? 'Percipio.London',
+                    utilities: 'mb-8'
+                }) -}}
+            {%- endif -%}
+
             {# heading #}
-            <h1>
+            <h1 class="text-center max-w-3xl">
                 <span class="sr-only">{{- seomatic.site.identity.genericName }} :</span>
                 {{- render.atom('text', 'title', {
                     content: content.heading ??? entry.title,
@@ -34,13 +40,14 @@
             </h1>
 
             {# description #}
-            <div class="px-6">
+            <div class="max-w-3xl">
                 {%- if content.description -%}
                     {{- render.atom('text', 'description', {
                         content: content.description,
                         color: 'text-gray-500',
                         utilities: 'mt-8',
-                        alignment: 'text-center'
+                        alignment: 'text-center',
+                        utilities: 'mt-8 px-6 md:px-0'
                     }) -}}
                 {%- endif -%}
 

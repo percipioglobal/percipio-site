@@ -29,11 +29,9 @@
     {%- minify -%}
 
         <button
-            {{ parse.ga({
-                category: 'Hamburger button',
-                action: 'click',
-                label: 'Show the mobile site navigation'
-            }) }}
+            data-tag-category="Hamburger button"
+            data-tag-action="click"
+            data-tag-label="Show the mobile site navigation"
             aria-label="Hamburger menu"
             aria-owns="mobile-site-navigation"
             id="hamburger-mobile-navigation"

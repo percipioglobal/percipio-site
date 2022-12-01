@@ -31,7 +31,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 1261215362
+      changedFieldIndicator: 1519463659
       columns:
         __assoc__:
           -
@@ -50,6 +50,13 @@ fields:
                   - ''
           -
             - ae57f7d7-6764-4fd4-84e9-3e526e23b520 # Image
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 5d3bbefb-8ac1-460a-bdca-9a5d3aedbd64 # Animation
             -
               __assoc__:
                 -

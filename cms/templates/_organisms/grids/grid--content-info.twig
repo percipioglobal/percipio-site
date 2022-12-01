@@ -27,12 +27,12 @@
 
 {%- minify -%}
     <section class="py-8 md:py-16 {{ utilities -}}">
-
         <div class="relative">
 
             {%- include '_molecules/images/image--grid-info' ignore missing with {
                 image: image
             } -%}
+            
             {%- for item in items.collect() ??? null -%}
 
                 <div class="container max-w-screen-xl mx-auto animate" data-animation="slideLeftToRight">
@@ -43,12 +43,6 @@
                 </div>
 
             {%- endfor -%}
-
-            {# {%- include '_molecules/images/image--grid-info' ignore missing with {
-                image: image
-            } -%} #}
-
         </div>
-
     </section>
 {%- endminify -%}

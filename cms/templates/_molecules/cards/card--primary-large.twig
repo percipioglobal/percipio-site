@@ -55,7 +55,7 @@
                 ga: {
                     category: 'Primary Card Large',
                     action: 'click',
-                    label: content.title ??? null,
+                    label: (content.title ??? '') | replace('&', 'and'),
                 },
             })
         -}}
