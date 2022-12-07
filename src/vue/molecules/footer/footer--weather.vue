@@ -47,7 +47,7 @@ getWeather()
 </script>
 
 <template>
-    <div class="w-full flex flex-col">
+    <div class="w-full flex flex-col items-end">
         <span class="text-pink-500 after:content-['*'] ">{{ weather ? weather?.main?.temp : ''}}</span>
         <!-- <ZeroOneD v-if="weather?.weather[0]?.icon === '01d'"  /> -->
         <ZeroThreeD  />
