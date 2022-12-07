@@ -31,7 +31,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 3d10daf6-be5c-4949-b93d-78a24883ef55
+            fieldUid: 3d10daf6-be5c-4949-b93d-78a24883ef55 # Longitude
             instructions: null
             label: null
             required: false
@@ -43,7 +43,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 12994466-6e49-4c20-9577-9d8b8ff8146c
+            fieldUid: 12994466-6e49-4c20-9577-9d8b8ff8146c # Latitude
             instructions: null
             label: null
             required: false
@@ -57,19 +57,19 @@ fieldLayouts:
         uid: 2ff610e8-7674-4579-a502-37c960213b9b
         userCondition: null
 fields:
-  3d10daf6-be5c-4949-b93d-78a24883ef55:
+  3d10daf6-be5c-4949-b93d-78a24883ef55: # Longitude
     columnSuffix: mnceoamp
-    contentColumnType: integer(10)
+    contentColumnType: 'decimal(15,5)'
     fieldGroup: null
     handle: longitude
     instructions: 'Add the locations longitude for the local weather'
     name: Longitude
     searchable: false
     settings:
-      decimals: 0
+      decimals: 5
       defaultValue: null
       max: null
-      min: 0
+      min: null
       prefix: null
       previewCurrency: null
       previewFormat: decimal
@@ -78,16 +78,16 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Number
-  12994466-6e49-4c20-9577-9d8b8ff8146c:
+  12994466-6e49-4c20-9577-9d8b8ff8146c: # Latitude
     columnSuffix: yovmvqft
-    contentColumnType: integer(10)
+    contentColumnType: 'decimal(15,5)'
     fieldGroup: null
     handle: latitude
     instructions: 'Add the locations longitude for the local weather'
     name: Latitude
     searchable: false
     settings:
-      decimals: 0
+      decimals: 5
       defaultValue: null
       max: null
       min: 0

@@ -12,7 +12,8 @@
     "dependencies": {
         "@tailwindcss/aspect-ratio": "latest",
         "@tailwindcss/line-clamp": "latest",
-        "@tailwindcss/typography": "latest", 
+        "@tailwindcss/typography": "latest",
+        "axios": "^1.2.1",
         "lazysizes": "^5.3.0",
         "lottie-web": "^5.9.6",
         "picturefill": "^3.0.2",
