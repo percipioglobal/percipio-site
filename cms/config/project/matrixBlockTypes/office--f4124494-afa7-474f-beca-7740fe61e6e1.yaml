@@ -3,8 +3,10 @@ fieldLayouts:
   baf243cf-7afd-4ac6-beb6-80d94a45203c:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: c2249c59-46a5-435d-ab41-42bb543e2875 # City
             instructions: null
             label: null
@@ -12,9 +14,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 2976e338-4846-471c-9267-cd07723e7e76
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: d5dde356-9f59-4da4-ad17-e3d7825da610 # Country
             instructions: null
             label: null
@@ -22,11 +26,79 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 16c946af-1a49-47b6-8efd-a54248c339d8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3d10daf6-be5c-4949-b93d-78a24883ef55
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e00db133-c5b9-4e33-b9cf-92aee8a39f28
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 12994466-6e49-4c20-9577-9d8b8ff8146c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cf63a8f8-7043-4dd6-8497-5a76a78ff869
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 2ff610e8-7674-4579-a502-37c960213b9b
+        userCondition: null
 fields:
+  3d10daf6-be5c-4949-b93d-78a24883ef55:
+    columnSuffix: mnceoamp
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: longitude
+    instructions: 'Add the locations longitude for the local weather'
+    name: Longitude
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: null
+      min: 0
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+  12994466-6e49-4c20-9577-9d8b8ff8146c:
+    columnSuffix: yovmvqft
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: latitude
+    instructions: 'Add the locations longitude for the local weather'
+    name: Latitude
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: null
+      min: 0
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
   c2249c59-46a5-435d-ab41-42bb543e2875: # City
     columnSuffix: cstvrrly
     contentColumnType: text

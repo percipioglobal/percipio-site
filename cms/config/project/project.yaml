@@ -1,4 +1,4 @@
-dateModified: 1669739063
+dateModified: 1670409479
 elementSources:
   craft\elements\Entry:
     -
@@ -320,6 +320,7 @@ meta:
     2dd56883-3aaa-4d1b-85a9-a62fd192ff43: 'Highlight Cards' # Highlight Cards
     3a030d4d-66bf-4bff-af6b-a3366b617b7e: 'Image Gallery' # Image Gallery
     3a3a038a-b887-45f4-8850-96f3b78060f2: Width # Width
+    3d10daf6-be5c-4949-b93d-78a24883ef55: Longitude
     3ef3485e-6187-4dac-af6b-66d630852b61: Quote # Quote
     3f37c536-3682-4856-a6af-a9f582d4c782: Style # Style
     3fc84cf5-6e3d-46e8-bf13-9a1d4e198438: Caption # Caption
@@ -492,6 +493,7 @@ meta:
     2075123a-3328-41eb-a8ad-ce1987d26d66: Overline # Overline
     6569339b-0b2b-4801-9b30-7599f28e1a5b: Media # Media
     6834194e-43c0-464b-9333-a15bd914d9d3: 'Project Categories' # Project Categories
+    12994466-6e49-4c20-9577-9d8b8ff8146c: Latitude
     18802253-9492-45f9-94a3-1d4c9b68c027: Swatch # Swatch
     26759232-9c46-43b6-9279-f62bb6e4cf85: Heading # Heading
     60285741-d9e6-4e21-b26e-3330c2d02f47: Name # Name
