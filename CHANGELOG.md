@@ -1,5 +1,10 @@
 # percipioglobal/craft Change Log
 
+## 2.8.0
+
+## Added
+- local weather to footer office locations
+
 ## 2.0.7 01-12-2022
 ### Added
 - Inline and Pull Quote Styles
