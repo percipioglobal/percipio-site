@@ -4,8 +4,14 @@ import { ref, onMounted} from 'vue'
 import axios from 'axios'
 
 import ZeroOneD from '@/vue/atoms/svgs/svg--zero-one-d.vue';
+import ZeroTwoD from '@/vue/atoms/svgs/svg--zero-two-d.vue';
 import ZeroThreeD from '@/vue/atoms/svgs/svg--zero-three-d.vue';
-
+import ZeroFourD from '@/vue/atoms/svgs/svg--zero-four-d.vue';
+import ZeroNineD from '@/vue/atoms/svgs/svg--zero-nine-d.vue';
+import OneZeroD from '@/vue/atoms/svgs/svg--one-zero-d.vue';
+import OneOneD from '@/vue/atoms/svgs/svg--one-one-d.vue';
+import OneThreeD from '@/vue/atoms/svgs/svg--one-three-d.vue';
+import FiveZeroD from '@/vue/atoms/svgs/svg--five-zero-d.vue';
 
 interface Props {
     longitude: number,
@@ -29,27 +35,26 @@ const getWeather = async () => {
     }
 }
 
-getWeather()
+// getWeather()
 
-// onMounted(async () => {
-//     getWeather() 
-// })
+onMounted(async () => {
+    getWeather() 
+})
 
-//Todo: add long and lat to cms ✅
-//Todo: pass on long and lat props from twig ✅
-//Todo: set reponse (weatheer) as an empty array and then return reponse.value
-//Todo: make api call using axios on monunt
-//Todo: setup lut for svg icons (where will svgs be stored?)
-//Todo: if icon code === svg code, display svg else display nothinhg
-//Todo: wrap template in cache tag (3hr reshresh)
-//Todo: loading spinner whilst loading
-
+//! Typsense error: cannot read properties of undefined (reading '0')
 </script>
 
 <template>
     <div class="w-full flex flex-col items-end">
-        <span class="text-pink-500 after:content-['*'] ">{{ weather ? weather?.main?.temp : ''}}</span>
-        <!-- <ZeroOneD v-if="weather?.weather[0]?.icon === '01d'"  /> -->
-        <ZeroThreeD  />
+        <span class="text-white text-2xl font-mono after:content-['°']">{{ weather ? Math.floor(weather?.main?.temp) : ''}}</span>
+        <ZeroOneD v-if="weather ? weather?.weather[0]?.icon === '01d': ''" />
+        <ZeroTwoD v-if="weather ? weather?.weather[0]?.icon === '02d': ''"  />
+        <ZeroThreeD v-if="weather ? weather?.weather[0]?.icon === '03d': ''"   />
+        <ZeroFourD v-if="weather ? weather?.weather[0]?.icon === '04d': ''"  />
+        <ZeroNineD v-if="weather ? weather?.weather[0]?.icon === '09d': ''"  />
+        <OneZeroD v-if="weather ? weather?.weather[0]?.icon === '10d': ''"  />
+        <OneOneD v-if="weather ? weather?.weather[0]?.icon === '11d': ''"  />
+        <OneThreeD v-if="weather ? weather?.weather[0]?.icon === '13d': ''"  />
+        <FiveZeroD v-if="weather ? weather?.weather[0]?.icon === '50d': ''"  /> 
     </div>
 </template>
