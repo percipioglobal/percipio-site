@@ -1,17 +1,21 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
 
+interface Weather {
+    apiKey: string,
+    weather: any,
+    timestamp: number
+}
+
 export const useWeatherStore = defineStore('storeWeather', {
-    state() {
-        return {
-            apiKey: '2f90953a8384cc18f9ea51fce298caa3',
-            weather: {},
-            timestamp: Date.now()
-        }
-    },
+    state: (): Weather => ({
+        apiKey: '8ef4055db6a6c856c7ec9c2d165344ec',
+        weather: {},
+        timestamp: Date.now()
+    }),
     persist: true,
-    actions:{
-        async fetch(location, latitude, longitude) {
+    actions: {
+        async fetch(location:string, latitude:number, longitude:number) {
             const d = new Date()
             d.setHours(d.getHours() - 1)
             if (this.timestamp < d || (this.weather[location] ?? null) === null) {
