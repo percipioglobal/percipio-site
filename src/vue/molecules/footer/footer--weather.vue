@@ -1,5 +1,8 @@
 <script setup lang="ts">
 
+//? API Key required for Percipio
+//! Typsense error: cannot read properties of undefined (reading '0')
+
 import { ref, onMounted} from 'vue'
 import axios from 'axios'
 
@@ -28,33 +31,28 @@ const getWeather = async () => {
     try {
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${props.latitude}&lon=${props.longitude}&units=metric&appid=${apiKey}`);
         weather.value = response.data
-        console.log(weather.value)
         return weather.value
     } catch (error) {
         console.error(error);
     }
 }
 
-// getWeather()
-
 onMounted(async () => {
     getWeather() 
 })
-
-//! Typsense error: cannot read properties of undefined (reading '0')
 </script>
 
 <template>
     <div class="w-full flex flex-col items-end">
-        <span class="text-white text-2xl font-mono after:content-['°']">{{ weather ? Math.floor(weather?.main?.temp) : ''}}</span>
-        <ZeroOneD v-if="weather ? weather?.weather[0]?.icon === '01d': ''" />
-        <ZeroTwoD v-if="weather ? weather?.weather[0]?.icon === '02d': ''"  />
-        <ZeroThreeD v-if="weather ? weather?.weather[0]?.icon === '03d': ''"   />
-        <ZeroFourD v-if="weather ? weather?.weather[0]?.icon === '04d': ''"  />
-        <ZeroNineD v-if="weather ? weather?.weather[0]?.icon === '09d': ''"  />
-        <OneZeroD v-if="weather ? weather?.weather[0]?.icon === '10d': ''"  />
-        <OneOneD v-if="weather ? weather?.weather[0]?.icon === '11d': ''"  />
-        <OneThreeD v-if="weather ? weather?.weather[0]?.icon === '13d': ''"  />
-        <FiveZeroD v-if="weather ? weather?.weather[0]?.icon === '50d': ''"  /> 
+        <span class="text-white text-2xl font-mono after:content-['°']">{{ weather ? Math.floor(weather?.main?.temp) : '' }}</span>
+        <ZeroOneD v-if="weather?.weather ? weather?.weather[0]?.icon === '01d': ''" />
+        <ZeroTwoD v-if="weather?.weather ? weather?.weather[0]?.icon === '02d': ''" />
+        <ZeroThreeD v-if="weather?.weather ? weather?.weather[0]?.icon === '03d': ''" />
+        <ZeroFourD v-if="weather?.weather ? weather?.weather[0]?.icon === '04d': ''" />
+        <ZeroNineD v-if="weather?.weather ? weather?.weather[0]?.icon === '09d': ''" />
+        <OneZeroD v-if="weather?.weather ? weather?.weather[0]?.icon === '10d': ''" />
+        <OneOneD v-if="weather?.weather ? weather?.weather[0]?.icon === '11d': ''" />
+        <OneThreeD v-if="weather?.weather ? weather?.weather[0]?.icon === '13d': ''" />
+        <FiveZeroD v-if="weather?.weather ? weather?.weather[0]?.icon === '50d': ''" />
     </div>
 </template>
