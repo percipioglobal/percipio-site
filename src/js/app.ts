@@ -1,6 +1,8 @@
 
 import App from '@/vue/App.vue'
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import './assets/icons'
 
 // Import our CSS
@@ -8,8 +10,10 @@ import '@/css/app.pcss';
 
 // App main
 const main = async () => {
+    const pinia = createPinia()
+    pinia.use(piniaPluginPersistedstate)
     const app = createApp(App)
-    return app.mount('#page-container')
+    return app.use(pinia).mount('#page-container')
 }
 
 // Execute async function

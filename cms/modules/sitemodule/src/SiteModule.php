@@ -14,6 +14,8 @@ use Craft;
 
 use modules\sitemodule\extensions\ColorTwigExtension;
 use modules\sitemodule\extensions\RatioTwigExtenssion;
+use Cocur\Slugify\Bridge\Twig\SlugifyExtension;
+use Cocur\Slugify\Slugify;
 
 use yii\base\Module;
 
@@ -55,6 +57,9 @@ class SiteModule extends Module
 
             $ratioTwigExtension = new RatioTwigExtenssion();
             Craft::$app->view->registerTwigExtension($ratioTwigExtension);
+
+            $slugifyTwigExtension = new SlugifyExtension(Slugify::create());
+            Craft::$app->view->registerTwigExtension($slugifyTwigExtension);
         }
 
         parent::init();
