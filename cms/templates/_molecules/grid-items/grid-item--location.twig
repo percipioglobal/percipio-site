@@ -20,8 +20,8 @@
     {%- set props = props|merge({
         city: item.city ??? null,
         country: item.country ??? null,
-        latitude: item.latitude ??? null,
-        longitude: item.longitude ??? null
+        latitude: parseFloat(item.latitude) ??? null,
+        longitude: parseFloat(item.longitude) ??? null
     }) -%}
 
     {%- minify -%}
