@@ -1,39 +1,38 @@
 <script setup lang="ts">
 
-// import { onMounted} from 'vue'
-// import  { storeToRefs } from 'pinia'
-// import { useWeatherStore } from '@/js/pinia/weather'
+import { onMounted} from 'vue'
+import  { storeToRefs } from 'pinia'
+import { useWeatherStore } from '@/js/pinia/weather'
 
 
-// import ZeroOneD from '@/vue/atoms/svgs/svg--zero-one-d.vue';
-// import ZeroTwoD from '@/vue/atoms/svgs/svg--zero-two-d.vue';
-// import ZeroThreeD from '@/vue/atoms/svgs/svg--zero-three-d.vue';
-// import ZeroFourD from '@/vue/atoms/svgs/svg--zero-four-d.vue';
-// import ZeroNineD from '@/vue/atoms/svgs/svg--zero-nine-d.vue';
-// import OneZeroD from '@/vue/atoms/svgs/svg--one-zero-d.vue';
-// import OneOneD from '@/vue/atoms/svgs/svg--one-one-d.vue';
-// import OneThreeD from '@/vue/atoms/svgs/svg--one-three-d.vue';
-// import FiveZeroD from '@/vue/atoms/svgs/svg--five-zero-d.vue';
+import ZeroOneD from '@/vue/atoms/svgs/svg--zero-one-d.vue';
+import ZeroTwoD from '@/vue/atoms/svgs/svg--zero-two-d.vue';
+import ZeroThreeD from '@/vue/atoms/svgs/svg--zero-three-d.vue';
+import ZeroFourD from '@/vue/atoms/svgs/svg--zero-four-d.vue';
+import ZeroNineD from '@/vue/atoms/svgs/svg--zero-nine-d.vue';
+import OneZeroD from '@/vue/atoms/svgs/svg--one-zero-d.vue';
+import OneOneD from '@/vue/atoms/svgs/svg--one-one-d.vue';
+import OneThreeD from '@/vue/atoms/svgs/svg--one-three-d.vue';
+import FiveZeroD from '@/vue/atoms/svgs/svg--five-zero-d.vue';
 
-// interface Props {
-//     longitude: number,
-//     latitude: number,
-//     location: string
-// }
+interface Props {
+    longitude: number,
+    latitude: number,
+    location: string
+}
 
-// const props = defineProps<Props>()
-// const weatherStore = useWeatherStore()
-// const { weather } = storeToRefs(weatherStore)
+const props = defineProps<Props>()
+const weatherStore = useWeatherStore()
+const { weather } = storeToRefs(weatherStore)
 
 
-// onMounted(() => {
-//     weatherStore.fetch(props.location, props.latitude, props.longitude)
-// })
+onMounted(() => {
+    weatherStore.fetch(props.location, props.latitude, props.longitude)
+})
 </script>
 
 <template>
-    <span>TEST</span>
-    <!-- <div 
+    <div 
         v-if="(weather[location] ?? null) && (weather[location]?.weather[0] ?? null)"
         class="w-full flex flex-col items-end"
     >
@@ -47,5 +46,5 @@
         <OneOneD v-if="weather[location]?.weather[0]?.icon === '11d' || weather[location]?.weather[0]?.icon ==='11n'" />
         <OneThreeD v-if="weather[location]?.weather[0]?.icon === '13d' || weather[location]?.weather[0]?.icon ==='13n'" />
         <FiveZeroD v-if="weather[location]?.weather[0]?.icon === '50d' || weather[location]?.weather[0]?.icon === '50n'" />
-    </div> -->
+    </div>
 </template>
