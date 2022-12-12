@@ -32,12 +32,13 @@ onMounted(() => {
 </script>
 
 <template>
-    <div 
+    <div>TEST</div>
+    <!-- <div 
         v-if="(weather[location] ?? null) && (weather[location]?.weather[0] ?? null)"
         class="w-full flex flex-col items-end"
     >
         <span class="text-white text-2xl font-mono after:content-['°']">{{ Math.floor(weather[location]?.main?.temp) }}</span>
-        <!-- <ZeroOneD v-if="weather[location]?.weather[0]?.icon === '01d' || weather[location]?.weather[0]?.icon ==='01n'" />
+        <ZeroOneD v-if="weather[location]?.weather[0]?.icon === '01d' || weather[location]?.weather[0]?.icon ==='01n'" />
         <ZeroTwoD v-if="weather[location]?.weather[0]?.icon === '02d' || weather[location]?.weather[0]?.icon ==='02n'" />
         <ZeroThreeD v-if="weather[location]?.weather[0]?.icon === '03d' || weather[location]?.weather[0]?.icon ==='03n' " />
         <ZeroFourD v-if="weather[location]?.weather[0]?.icon === '04d' || weather[location]?.weather[0]?.icon ==='04n'" />
@@ -45,6 +46,6 @@ onMounted(() => {
         <OneZeroD v-if="weather[location]?.weather[0]?.icon === '10d' || weather[location]?.weather[0]?.icon ==='10n'" />
         <OneOneD v-if="weather[location]?.weather[0]?.icon === '11d' || weather[location]?.weather[0]?.icon ==='11n'" />
         <OneThreeD v-if="weather[location]?.weather[0]?.icon === '13d' || weather[location]?.weather[0]?.icon ==='13n'" />
-        <FiveZeroD v-if="weather[location]?.weather[0]?.icon === '50d' || weather[location]?.weather[0]?.icon === '50n'" /> -->
-    </div>
+        <FiveZeroD v-if="weather[location]?.weather[0]?.icon === '50d' || weather[location]?.weather[0]?.icon === '50n'" />
+    </div> -->
 </template>
