@@ -15,7 +15,7 @@ export const useWeatherStore = defineStore('storeWeather', {
     }),
     persist: true,
     actions: {
-        async fetch(location:string, latitude:number, longitude:number) {
+        async fetch(location:string, latitude:string, longitude:string) {
             const d = new Date()
             d.setHours(d.getHours() - 1)
             if (this.timestamp < d.valueOf() || (this.weather[location] ?? null) === null) {
