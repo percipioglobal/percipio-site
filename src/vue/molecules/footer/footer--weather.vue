@@ -26,14 +26,13 @@ const weatherStore = useWeatherStore()
 const { weather } = storeToRefs(weatherStore)
 
 
-// onMounted(() => {
-//     weatherStore.fetch(props.location, props.latitude, props.longitude)
-// })
+onMounted(() => {
+    weatherStore.fetch(props.location, props.latitude, props.longitude)
+})
 </script>
 
 <template>
-    <div>TEST</div>
-    <!-- <div 
+    <div 
         v-if="(weather[location] ?? null) && (weather[location]?.weather[0] ?? null)"
         class="w-full flex flex-col items-end"
     >
@@ -47,5 +46,5 @@ const { weather } = storeToRefs(weatherStore)
         <OneOneD v-if="weather[location]?.weather[0]?.icon === '11d' || weather[location]?.weather[0]?.icon ==='11n'" />
         <OneThreeD v-if="weather[location]?.weather[0]?.icon === '13d' || weather[location]?.weather[0]?.icon ==='13n'" />
         <FiveZeroD v-if="weather[location]?.weather[0]?.icon === '50d' || weather[location]?.weather[0]?.icon === '50n'" />
-    </div> -->
+    </div>
 </template>
