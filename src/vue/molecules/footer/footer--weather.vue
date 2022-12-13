@@ -17,8 +17,8 @@ import FiveZeroD from '@/vue/atoms/svgs/svg--five-zero-d.vue';
 
 interface Props {
     longitude: string,
-    latitude: string,
-    location: string
+    latitude: number,
+    location: number
 }
 
 const props = defineProps<Props>()
@@ -37,7 +37,7 @@ onMounted(() => {
         v-if="(weather[location] ?? null) && (weather[location]?.weather[0] ?? null)"
         class="w-full flex flex-col items-end"
     >
-        <span class="text-white text-2xl font-mono after:content-[°]">{{ Math.floor(weather[location]?.main?.temp) }}</span>
+        <span class="hidden text-white text-2xl font-mono after:content-[°]">{{ Math.floor(weather[location]?.main?.temp) }}</span>
         <ZeroOneD v-if="weather[location]?.weather[0]?.icon === '01d' || weather[location]?.weather[0]?.icon ==='01n'" />
         <ZeroTwoD v-if="weather[location]?.weather[0]?.icon === '02d' || weather[location]?.weather[0]?.icon ==='02n'" />
         <ZeroThreeD v-if="weather[location]?.weather[0]?.icon === '03d' || weather[location]?.weather[0]?.icon ==='03n' " />

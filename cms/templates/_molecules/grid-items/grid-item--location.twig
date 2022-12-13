@@ -27,7 +27,7 @@
     {%- minify -%}
 
         <div class="flex flex-col items-center w-full">
-            <footer--weather location="{{- props.city | slugify -}}" longitude="{{- props.longitude | json_encode -}}" latitude="{{- props.latitude | json_encode -}}"></footer--weather>
+            <footer--weather location="{{- props.city | slugify -}}" :longitude="{{- props.longitude -}}" :latitude="{{- props.latitude -}}"></footer--weather>
 
             {{- render.atom('text', 'h3', {
                 alignment: 'text-center',
