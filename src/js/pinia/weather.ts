@@ -15,7 +15,7 @@ export const useWeatherStore = defineStore('storeWeather', {
     }),
     persist: true,
     actions: {
-        async fetch(location:string, latitude:number, longitude:number) {
+        async fetch(location:string, latitude:string, longitude:string) {
             console.log('weather.ts:',latitude, longitude )
             const d = new Date()
             d.setHours(d.getHours() - 1)

@@ -16,8 +16,8 @@ import OneThreeD from '@/vue/atoms/svgs/svg--one-three-d.vue';
 import FiveZeroD from '@/vue/atoms/svgs/svg--five-zero-d.vue';
 
 interface Props {
-    longitude: number,
-    latitude: number,
+    longitude: string,
+    latitude: string,
     location: string
 }
 
