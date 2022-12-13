@@ -27,6 +27,7 @@ const { weather } = storeToRefs(weatherStore)
 
 
 onMounted(() => {
+    console.log('on fetch:', props.latitude, props.longitude)
     weatherStore.fetch(props.location, props.latitude, props.longitude)
 })
 </script>
