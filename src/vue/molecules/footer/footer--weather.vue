@@ -16,9 +16,9 @@ import OneThreeD from '@/vue/atoms/svgs/svg--one-three-d.vue';
 import FiveZeroD from '@/vue/atoms/svgs/svg--five-zero-d.vue';
 
 interface Props {
-    longitude: string,
+    longitude: number,
     latitude: number,
-    location: number
+    location: string,
 }
 
 const props = defineProps<Props>()
@@ -27,7 +27,6 @@ const { weather } = storeToRefs(weatherStore)
 
 
 onMounted(() => {
-    console.log('on fetch:', props.latitude, props.longitude)
     weatherStore.fetch(props.location, props.latitude, props.longitude)
 })
 </script>
@@ -37,7 +36,7 @@ onMounted(() => {
         v-if="(weather[location] ?? null) && (weather[location]?.weather[0] ?? null)"
         class="w-full flex flex-col items-end"
     >
-        <span class="hidden text-white text-2xl font-mono after:content-[°]">{{ Math.floor(weather[location]?.main?.temp) }}</span>
+        <span class="text-white text-2xl font-mono after:content-['°']">{{ Math.floor(weather[location]?.main?.temp) }}</span>
         <ZeroOneD v-if="weather[location]?.weather[0]?.icon === '01d' || weather[location]?.weather[0]?.icon ==='01n'" />
         <ZeroTwoD v-if="weather[location]?.weather[0]?.icon === '02d' || weather[location]?.weather[0]?.icon ==='02n'" />
         <ZeroThreeD v-if="weather[location]?.weather[0]?.icon === '03d' || weather[location]?.weather[0]?.icon ==='03n' " />
