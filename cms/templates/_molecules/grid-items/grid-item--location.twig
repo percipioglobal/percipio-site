@@ -27,7 +27,7 @@
 
     {%- minify -%}
 
-        <div class="flex flex-col items-center w-full last:col-span-2 last:w-1/2 last:mx-auto lg:last:col-span-1 lg:last:w-full lg:last:mx-0">
+        <div class="flex flex-col items-center w-full first:col-span-2 first:w-1/2 first:mx-auto lg:first:col-span-1 lg:first:w-full lg:first:mx-0">
             <footer--weather location="{{- props.citySlug | slugify -}}" city="{{- props.city -}}" country="{{- props.country -}}" :longitude="{{- props.longitude -}}" :latitude="{{- props.latitude -}}"></footer--weather>
         </div>
 

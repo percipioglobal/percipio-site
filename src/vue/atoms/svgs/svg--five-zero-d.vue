@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// mist icon
 </script>
 <template>    
     <svg
@@ -10,6 +11,7 @@
         viewBox="0 0 180 100"
         enable-background="new 0 0 180 100"
         xml:space="preserve"
+        class="w-32"
     >
         <g>		
             <line

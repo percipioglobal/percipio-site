@@ -36,9 +36,9 @@ onMounted(() => {
 <template>
     <div 
         v-if="(weather[location] ?? null) && (weather[location]?.weather[0] ?? null)"
-        class="w-full flex flex-col"
+        class="w-full flex flex-col items-center relative"
     >
-        <span class="hidden md:block text-white text-right text-2xl font-mono after:content-['°']">{{ Math.floor(weather[location]?.main?.temp) }}</span>
+        <span class="hidden absolute lg:-mt-6 ml-32 md:block text-white text-right md:text-base text-2xl font-mono after:content-['°']">{{ Math.floor(weather[location]?.main?.temp) }}</span>
         <ZeroOneD v-if="weather[location]?.weather[0]?.icon === '01d' || weather[location]?.weather[0]?.icon ==='01n'" />
         <ZeroTwoD v-if="weather[location]?.weather[0]?.icon === '02d' || weather[location]?.weather[0]?.icon ==='02n'" />
         <ZeroThreeD v-if="weather[location]?.weather[0]?.icon === '03d' || weather[location]?.weather[0]?.icon ==='03n' " />
