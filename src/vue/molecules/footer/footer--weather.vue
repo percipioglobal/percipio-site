@@ -19,6 +19,8 @@ interface Props {
     longitude: number,
     latitude: number,
     location: string,
+    city: string,
+    country: string
 }
 
 const props = defineProps<Props>()
@@ -34,9 +36,9 @@ onMounted(() => {
 <template>
     <div 
         v-if="(weather[location] ?? null) && (weather[location]?.weather[0] ?? null)"
-        class="w-full flex flex-col items-end"
+        class="w-full flex flex-col"
     >
-        <span class="text-white text-2xl font-mono after:content-['°']">{{ Math.floor(weather[location]?.main?.temp) }}</span>
+        <span class="hidden md:block text-white text-right text-2xl font-mono after:content-['°']">{{ Math.floor(weather[location]?.main?.temp) }}</span>
         <ZeroOneD v-if="weather[location]?.weather[0]?.icon === '01d' || weather[location]?.weather[0]?.icon ==='01n'" />
         <ZeroTwoD v-if="weather[location]?.weather[0]?.icon === '02d' || weather[location]?.weather[0]?.icon ==='02n'" />
         <ZeroThreeD v-if="weather[location]?.weather[0]?.icon === '03d' || weather[location]?.weather[0]?.icon ==='03n' " />
@@ -46,5 +48,10 @@ onMounted(() => {
         <OneOneD v-if="weather[location]?.weather[0]?.icon === '11d' || weather[location]?.weather[0]?.icon ==='11n'" />
         <OneThreeD v-if="weather[location]?.weather[0]?.icon === '13d' || weather[location]?.weather[0]?.icon ==='13n'" />
         <FiveZeroD v-if="weather[location]?.weather[0]?.icon === '50d' || weather[location]?.weather[0]?.icon === '50n'" />
+        <div class="flex  justify-center items-center">
+            <span class="inline-block text-white prose text-2xl md:text-3xl font-medium tracking-tightest prose-strong:text-pink-500 prose-strong:font-normal"> {{ city ? city : '' }} </span>
+            <span class="md:hidden ml-2 text-white text-sm font-mono after:content-['°']">{{ Math.floor(weather[location]?.main?.temp) }}</span>
+        </div>
+        <span class="font-primary text-sm md:text-base text-white text-center mt-2"> {{ city ? country : '' }} </span>
     </div>
 </template>

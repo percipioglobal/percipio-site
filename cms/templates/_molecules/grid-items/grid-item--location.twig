@@ -18,7 +18,8 @@
 {%- block grid -%}
 
     {%- set props = props|merge({
-        city: item.city ??? null,
+        citySlug: item.city ??? null,
+        city: item.city ?? null,
         country: item.country ??? null,
         latitude: item.latitude ??? null,
         longitude: item.longitude ??? null
@@ -26,21 +27,8 @@
 
     {%- minify -%}
 
-        <div class="flex flex-col items-center w-full">
-            <footer--weather location="{{- props.city | slugify -}}" :longitude="{{- props.longitude -}}" :latitude="{{- props.latitude -}}"></footer--weather>
-
-            {{- render.atom('text', 'h3', {
-                alignment: 'text-center',
-                content: props.city,
-                color: 'white',
-            }) -}}
-            {{- render.atom('text', 'location', {
-                alignment: 'text-center',
-                content: props.country,
-                color: 'text-white',
-                utilities: 'mt-2',
-            }) -}}
-
+        <div class="flex flex-col items-center w-full md:last:mx-48 lg:last:mx-0">
+            <footer--weather location="{{- props.citySlug | slugify -}}" city="{{- props.city -}}" country="{{- props.country -}}" :longitude="{{- props.longitude -}}" :latitude="{{- props.latitude -}}"></footer--weather>
         </div>
 
     {%- endminify -%}
