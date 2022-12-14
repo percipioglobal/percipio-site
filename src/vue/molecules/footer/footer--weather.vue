@@ -49,7 +49,7 @@ onMounted(() => {
         <OneThreeD v-if="weather[location]?.weather[0]?.icon === '13d' || weather[location]?.weather[0]?.icon ==='13n'" />
         <FiveZeroD v-if="weather[location]?.weather[0]?.icon === '50d' || weather[location]?.weather[0]?.icon === '50n'" />
         <div class="flex  justify-center items-center">
-            <span class="inline-block text-white prose text-2xl md:text-3xl font-medium tracking-tightest prose-strong:text-pink-500 prose-strong:font-normal"> {{ city ? city : '' }} </span>
+            <span class="inline-block text-white prose text-lg md:text-3xl font-medium tracking-tightest prose-strong:text-pink-500 prose-strong:font-normal"> {{ city ? city : '' }} </span>
             <span class="md:hidden ml-2 text-white text-sm font-mono after:content-['°']">{{ Math.floor(weather[location]?.main?.temp) }}</span>
         </div>
         <span class="font-primary text-sm md:text-base text-white text-center mt-2"> {{ city ? country : '' }} </span>
