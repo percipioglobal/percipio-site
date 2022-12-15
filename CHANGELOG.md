@@ -1,5 +1,10 @@
 # percipioglobal/craft Change Log
 
+### 2.0.8 15-12-2022
+
+### Added
+- Local Weather Icons to office locations from openWeather
+
 ## 2.0.7 01-12-2022
 ### Added
 - Inline and Pull Quote Styles
