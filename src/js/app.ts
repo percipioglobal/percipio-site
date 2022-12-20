@@ -3,6 +3,7 @@ import App from '@/vue/App.vue'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+import Vue3Lottie from 'vue3-lottie'
 import './assets/icons'
 
 // Import our CSS
@@ -13,7 +14,7 @@ const main = async () => {
     const pinia = createPinia()
     pinia.use(piniaPluginPersistedstate)
     const app = createApp(App)
-    return app.use(pinia).mount('#page-container')
+    return app.use(pinia).use(Vue3Lottie).mount('#page-container')
 }
 
 // Execute async function

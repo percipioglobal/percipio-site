@@ -24,7 +24,8 @@
         "tailwind-scrollbar-hide": "^1.1.7",
         "tailwindcss": "^3.0.0",
         "tiny-cookie": "^1.0.1",
-        "vue": "^3.2.21"
+        "vue": "^3.2.21",
+        "vue3-lottie": "^2.4.0"
     },
     "description": "Percipio.London brand website",
     "devDependencies": {

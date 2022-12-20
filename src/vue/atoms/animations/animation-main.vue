@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import { ref, onMounted } from 'vue'
-import lottie from 'lottie-web'
+import { Vue3Lottie } from 'vue3-lottie'
 
 interface Props {
     animation: string
@@ -9,24 +9,12 @@ interface Props {
 
 const props = defineProps<Props>()
 
-const lottieId = ref(`lottie-${ Math.random().toString(36).substr(2, 9) }`)
-
-onMounted(async () => {
-    document.getElementById(`${lottieId.value}`).innerHTML = ""
-
-    lottie.loadAnimation({
-        container: document.getElementById(`${lottieId.value}`), // the dom element that will contain the animation
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: props.animation // the path to the animation url
-    })
-})
 </script>
 
 <template> 
-    <div 
-        :id="lottieId" 
-        class="w-full h-full mb-8" 
+    <Vue3Lottie 
+        :animationLink="props.animation"
+        :height="full" 
+        :width="full"
     />
 </template>
