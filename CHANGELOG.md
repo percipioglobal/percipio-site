@@ -1,4 +1,11 @@
 # percipioglobal/craft Change Log
+### 2.0.9 20-12.2022
+
+### Added
+- Local Weather Lottie Animations to Footer
+
+### Removed
+- SVG weather Icons
 
 ### 2.0.8 15-12-2022
 

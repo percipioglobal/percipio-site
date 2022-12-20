@@ -20,7 +20,6 @@ onMounted(async () => {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        // delay: 20000,
         animationData: props.animationWeather
     })
 })
