@@ -22,15 +22,13 @@
         city: item.city ?? null,
         country: item.country ??? null,
         latitude: item.latitude ??? null,
-        longitude: item.longitude ??? null
+        longitude: item.longitude ??? null,
     }) -%}
 
     {%- minify -%}
-
         <div class="flex flex-col items-center w-full first:col-span-2 first:w-1/2 first:mx-auto lg:first:col-span-1 lg:first:w-full lg:first:mx-0">
             <footer--weather location="{{- props.citySlug | slugify -}}" city="{{- props.city -}}" country="{{- props.country -}}" :longitude="{{- props.longitude -}}" :latitude="{{- props.latitude -}}"></footer--weather>
         </div>
-
     {%- endminify -%}
 {%- endblock -%}
 

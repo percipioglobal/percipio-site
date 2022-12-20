@@ -3,8 +3,9 @@
 import { ref, onMounted } from 'vue'
 import lottie from 'lottie-web'
 
+
 interface Props {
-    animation: string
+    animationWeather: object
 }
 
 const props = defineProps<Props>()
@@ -19,7 +20,8 @@ onMounted(async () => {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: props.animation // the path to the animation url
+        // delay: 20000,
+        animationData: props.animationWeather
     })
 })
 </script>
