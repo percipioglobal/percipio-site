@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import { Vue3Lottie } from 'vue3-lottie'
 
 interface Props {
@@ -8,12 +8,19 @@ interface Props {
 }
 const props = defineProps<Props>()
 
+const lottieAnimation = ref(null)
+
+const onComplete = () => {
+    console.log('completed loop')
+}
+
 </script>
 
 <template> 
-    <Vue3Lottie 
-        :animationData="props.animationWeather" 
-        :height="full" 
-        :width="full"
+    <Vue3Lottie
+        ref="lottieAnimation"
+        :animation-data="props.animationWeather" 
+        :loop="true"
+        @onLoopComplete="onComplete"
     />
 </template>

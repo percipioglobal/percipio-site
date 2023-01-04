@@ -22,8 +22,7 @@ interface Props {
     latitude: number,
     location: string,
     city: string,
-    country: string,
-    animationWeather: object
+    country: string
 }
 
 const props = defineProps<Props>()

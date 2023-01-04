@@ -14,7 +14,5 @@ const props = defineProps<Props>()
 <template> 
     <Vue3Lottie 
         :animationLink="props.animation"
-        :height="full" 
-        :width="full"
     />
 </template>
