@@ -1,6 +1,5 @@
 <script setup lang="ts">
 
-import { ref, onMounted } from 'vue'
 import { Vue3Lottie } from 'vue3-lottie'
 
 interface Props {
@@ -13,6 +12,6 @@ const props = defineProps<Props>()
 
 <template> 
     <Vue3Lottie 
-        :animationLink="props.animation"
+        :animation-link="props.animation"
     />
 </template>
