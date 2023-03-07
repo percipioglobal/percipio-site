@@ -20,7 +20,7 @@
         "php": "^8.0.2",
         "cocur/slugify": "^4.3",
         "craftcms/aws-s3": "^2.0.0",
-        "craftcms/cms": "4.2.4",
+        "craftcms/cms": "4.3.7",
         "craftcms/fix-fks": "^2.0",
         "craftcms/mailgun": "^3.0.0",
         "craftcms/redactor": "^3.0.0",
