@@ -1,4 +1,4 @@
-dateModified: 1670507794
+dateModified: 1678436055
 elementSources:
   craft\elements\Entry:
     -
@@ -633,7 +633,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 098AFX2F099TL01KIJ38HC5I
-    schemaVersion: 4.2.0
+    schemaVersion: 4.4.0
     settings:
       apiKey: ''
       cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
@@ -833,7 +833,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 514KT3JMO8YM0A8ZTPI1PLW3
-    schemaVersion: 3.0.10
+    schemaVersion: 3.0.11
   seomatic:
     enabled: true
     licenseKey: 8LN4PPMQDNDW9TA7FLCL3WY5
@@ -1214,5 +1214,5 @@ system:
   live: true
   name: 'Percipio Global Ltd.'
   retryDuration: null
-  schemaVersion: 4.0.0.9
+  schemaVersion: 4.4.0.4
   timeZone: Europe/London

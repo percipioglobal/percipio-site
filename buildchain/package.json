@@ -28,6 +28,7 @@
     },
     "description": "Percipio.London brand website",
     "devDependencies": {
+        "@builder.io/partytown": "^0.3.6",
         "@fortawesome/fontawesome-svg-core": "^1.2.36",
         "@fortawesome/free-brands-svg-icons": "^5.15.4",
         "@fortawesome/pro-light-svg-icons": "^5.15.4",
