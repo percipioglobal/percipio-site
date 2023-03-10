@@ -12,7 +12,7 @@
 
     ## ATOMS
 
-    svg--plugin-icon: `_atoms/svgs/svg--plugin-icon`
+    svg--icon: `_atoms/svgs/svg--icon`
     text--card-subtitle: `_atoms/texts/text--card-subtitle`
     text--card-title: `_atoms/texts/text--card-title`
 #}
@@ -20,7 +20,7 @@
 {%- block card -%}
     <article class="relative flex bg-white mt-12 group {{ props.utilities -}}">
 
-        {{- render.atom('svg', 'plugin-icon', {
+        {{- render.atom('svg', 'icon', {
             icon: content.pluginIcon.collect().first(),
             utilities: 'absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24'
         }) -}}

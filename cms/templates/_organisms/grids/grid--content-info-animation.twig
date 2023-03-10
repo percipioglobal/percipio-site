@@ -1,0 +1,51 @@
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    items: list of grid items
+    image: image that shows on the right hand side of the items
+    utilities: TW classes
+
+    ## EXTENDED
+    -----------
+
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## MOLECULES
+
+    grid-item--content-info: `_molecules/grid-items/grid-item--content-info`
+    
+#}
+
+{%- set items = items|default(null) -%}
+{%- set image = image ??? null -%}
+{%- set animation = animation.collect().first() ??? null -%}
+{%- set utilities = utilities|default('') -%}
+
+{%- minify -%}
+    <section class="container max-w-screen-xl mx-auto mb-10 lg:mb-20 py-8 md:py-16 {{ utilities -}}">
+        <div class="flex flex-col-reverse md:grid grid-cols-2">
+            <div>
+                {%- for item in items.collect() ??? null -%}
+                    <div class="w-full">
+                        <div class="container max-w-screen-xl mx-auto animate" data-animation="slideLeftToRight">
+                            {%- include '_molecules/grid-items/grid-item--content-info' ignore missing with {
+                                item: item,
+                                utilities: (not loop.last ? 'mb-5 md:mb-9 lg:mb-12' : ' border-b-0') ~ ' pb-5 md:pb-9 lg:pb-12 w-full'
+                            } -%}
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </div>
+            <div> 
+                <div class="animate" data-animation="fadeIn">
+                    <animations--animation-main animation="{{- animation.url ??? null -}}"></animations--animation-main>
+                </div> 
+            </div>
+        <div>
+    </section>
+{%- endminify -%}
