@@ -6,20 +6,19 @@ instructions: 'Add the staff member their skills'
 name: Skills
 searchable: false
 settings:
-  allowLimit: false
-  allowMultipleSources: false
   allowSelfRelations: false
   branchLimit: null
   localizeRelations: false
+  maintainHierarchy: true
   maxRelations: null
   minRelations: null
   selectionLabel: 'Add a skill'
   showSiteMenu: true
-  source: 'group:0536c060-0d97-421e-8c73-3ad5baec52d2' # Skills
-  sources: '*'
+  sources:
+    - 'section:8e46ac55-077c-4dba-8315-4e658288f515' # Skills
   targetSiteId: null
   validateRelatedElements: true
   viewMode: null
 translationKeyFormat: null
 translationMethod: site
-type: craft\fields\Categories
+type: craft\fields\Entries

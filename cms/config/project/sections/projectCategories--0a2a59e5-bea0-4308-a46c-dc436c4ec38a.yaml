@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: projectCategories
+name: 'Project Categories'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: 04a62137-5f7b-4484-ace9-aee0bb48701e
+type: structure
