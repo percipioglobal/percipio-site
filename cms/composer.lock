@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b7d84ca11ddf1db763ae48d270913e5",
+    "content-hash": "4b72ce62642facd3182f276a68f143dc",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1071,16 +1071,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.261.8",
+            "version": "3.261.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "9c38c82b7d3fb2b15957e71cae3957450e131ed8"
+                "reference": "d91e6f89a6c41e8df859b0d313150386cfee6f6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9c38c82b7d3fb2b15957e71cae3957450e131ed8",
-                "reference": "9c38c82b7d3fb2b15957e71cae3957450e131ed8",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d91e6f89a6c41e8df859b0d313150386cfee6f6a",
+                "reference": "d91e6f89a6c41e8df859b0d313150386cfee6f6a",
                 "shasum": ""
             },
             "require": {
@@ -1159,9 +1159,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.261.8"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.261.9"
             },
-            "time": "2023-03-09T19:23:27+00:00"
+            "time": "2023-03-10T19:25:08+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -6587,70 +6587,6 @@
                 "source": "https://github.com/percipioglobal/craft-shortlink/tree/4.0.0-beta.19"
             },
             "time": "2022-12-07T11:02:32+00:00"
-        },
-        {
-            "name": "percipiolondon/craft-timeloop",
-            "version": "4.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/percipioglobal/craft-timeloop.git",
-                "reference": "1e76e73f48c72a28f6edda960c4da7ab13614cb6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/percipioglobal/craft-timeloop/zipball/1e76e73f48c72a28f6edda960c4da7ab13614cb6",
-                "reference": "1e76e73f48c72a28f6edda960c4da7ab13614cb6",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^4.0.0-beta.1",
-                "nystudio107/craft-plugin-vite": "^4.0.0-beta.1",
-                "php": "^8.0.2"
-            },
-            "require-dev": {
-                "codeception/codeception": "^4.1.29",
-                "craftcms/phpstan": "dev-main",
-                "vlucas/phpdotenv": "^3.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Timeloop",
-                "handle": "timeloop",
-                "developer": "percipiolondon",
-                "developerUrl": "https://percipio.london",
-                "documentationUrl": "https://github.com/percipioglobal/craft-timeloop/blob/v4/README.md",
-                "changelogUrl": "https://raw.githubusercontent.com/percipiolondon/craft-timeloop/v1/CHANGELOG.md",
-                "class": "percipiolondon\\timeloop\\Timeloop"
-            },
-            "autoload": {
-                "psr-4": {
-                    "percipiolondon\\timeloop\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Percipio.London",
-                    "homepage": "https://percipio.london"
-                }
-            ],
-            "description": "This Craft plugin will generate an array of dates between a start and end date based on frequency.",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craft-plugin",
-                "craftcms",
-                "timeloop"
-            ],
-            "support": {
-                "docs": "https://github.com/percipioglobal/craft-timeloop/blob/v4/README.md",
-                "issues": "https://github.com/percipioglobal/craft-timeloop/issues",
-                "source": "https://github.com/percipioglobal/craft-timeloop/tree/4.1.1"
-            },
-            "time": "2023-03-08T10:47:35+00:00"
         },
         {
             "name": "php-science/textrank",

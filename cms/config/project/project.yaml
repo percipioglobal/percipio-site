@@ -1,4 +1,4 @@
-dateModified: 1678438439
+dateModified: 1678716731
 elementSources:
   craft\elements\Entry:
     -
@@ -635,7 +635,7 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    licenseKey: 098AFX2F099TL01KIJ38HC5I
+    licenseKey: $PLUGIN_BLITZ
     schemaVersion: 4.4.0
     settings:
       apiKey: ''
@@ -772,7 +772,7 @@ plugins:
   image-optimize:
     edition: standard
     enabled: true
-    licenseKey: L5YE26W49XD3K4PP91RH06RM
+    licenseKey: $PLUGIN_IMAGE_OPTIMIZE
     schemaVersion: 1.0.0
     settings:
       allowUpScaledImageVariants: true
@@ -835,11 +835,11 @@ plugins:
   retour:
     edition: standard
     enabled: true
-    licenseKey: 514KT3JMO8YM0A8ZTPI1PLW3
+    licenseKey: $PLUGIN_RETOUR
     schemaVersion: 3.0.11
   seomatic:
     enabled: true
-    licenseKey: 8LN4PPMQDNDW9TA7FLCL3WY5
+    licenseKey: $PLUGIN_SEOMATIC
     schemaVersion: 3.0.11
   sherlock:
     edition: lite
