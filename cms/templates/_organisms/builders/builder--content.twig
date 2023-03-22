@@ -131,25 +131,23 @@
 
                 {%- set animation = block.animation.collect().first() ??? null -%}
 
-                    {% if animation %}
+                {% if animation %}
+
+                    {%- include '_organisms/grids/grid--content-info-animation' ignore missing with {
+                        items: block.gridItems,
+                        animation: block.animation,
+                        utilities: next ? '' : 'mb-10 lg:mb-20'
+                    } -%}
+
+                {% else %}
                 
+                    {%- include '_organisms/grids/grid--content-info' ignore missing with {
+                        items: block.gridItems,
+                        image: block.image,
+                        utilities: next ? '' : 'mb-10 lg:mb-20'
+                    } -%}
 
-                        {%- include '_organisms/grids/grid--content-info-animation' ignore missing with {
-                            items: block.gridItems,
-                            animation: block.animation,
-                            utilities: next ? '' : 'mb-10 lg:mb-20'
-                        } -%}
-
-                    {% else %}
-                    
-
-                        {%- include '_organisms/grids/grid--content-info' ignore missing with {
-                            items: block.gridItems,
-                            image: block.image,
-                            utilities: next ? '' : 'mb-10 lg:mb-20'
-                        } -%}
-
-                    {% endif %}
+                {% endif %}
 
             {%- case 'highlightCards' -%}
 

@@ -1,8 +1,8 @@
-defaultPlacement: end
 fieldLayouts:
-  df947a14-e514-4e9d-92c2-eaceb851818e:
+  60c44258-eb82-4e03-be72-bcffd387f7d9:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -10,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,18 +26,18 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
-            uid: a27740b4-d8b9-4a7f-a557-d80105bdf2ac
+            uid: e4cac0fa-3473-4b0a-b632-c4e90561906e
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 5f16e3e3-c395-4a6c-aa2e-78427db06e49
-handle: newsCategories
-name: 'News Categories'
-siteSettings:
-  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
-    hasUrls: false
-    template: null
-    uriFormat: null
-structure:
-  maxLevels: null
-  uid: de27943a-dea2-419d-90cd-fbdfcf88bc6a
+        uid: f7a6c04a-8edf-425c-b04b-d5406b881098
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 0a2a59e5-bea0-4308-a46c-dc436c4ec38a # Project Categories
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
