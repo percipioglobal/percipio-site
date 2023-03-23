@@ -6,42 +6,11 @@ instructions: null
 name: 'Footer Icons'
 searchable: false
 settings:
-  allowSelfRelations: false
-  allowSubfolders: false
-  allowUploads: true
-  allowedKinds: null
-  branchLimit: null
-  defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
-  defaultUploadLocationSubpath: null
-  localizeRelations: false
-  maintainHierarchy: false
-  maxRelations: null
-  minRelations: null
-  previewMode: full
-  restrictFiles: false
-  restrictLocation: false
-  restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
-  restrictedLocationSubpath: null
-  selectionCondition:
-    __assoc__:
-      -
-        - elementType
-        - craft\elements\Asset
-      -
-        - fieldContext
-        - global
-      -
-        - class
-        - craft\elements\conditions\assets\AssetCondition
-  selectionLabel: null
-  showSiteMenu: false
-  showUnpermittedFiles: false
-  showUnpermittedVolumes: false
-  sources: '*'
-  targetSiteId: null
-  validateRelatedElements: false
-  viewMode: list
+  contentTable: '{{%matrixcontent_footericons}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
 translationKeyFormat: null
 translationMethod: site
-type: craft\fields\Assets
+type: craft\fields\Matrix

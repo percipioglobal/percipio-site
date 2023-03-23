@@ -1,0 +1,181 @@
+field: 9bcfff77-a473-4d73-acbb-6b01fd20f657 # Footer Icons
+fieldLayouts:
+  7fa880d1-31d4-41fe-89b9-78d68f72028d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a668bc40-f62a-48c9-ad11-29b1858fced2 # Organisation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 45a3524e-5f42-425c-bcb6-103beef94d59
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a33d0bfa-be87-46fc-806c-3b1304daee2c # Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c2903f71-bcda-47ba-b206-2298f76f373f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2861cca9-5fbc-40e2-a4c1-593d026d744c # Url
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 58fbd7b1-6f7d-4661-b006-a5b7ab287750
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6705d13c-6aee-401b-aa7c-af7a4f2ab6f5
+        userCondition: null
+fields:
+  2861cca9-5fbc-40e2-a4c1-593d026d744c: # Url
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: target
+    instructions: null
+    name: Url
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: false
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: url
+      defaultText: ''
+      enableAllLinkTypes: true
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  a33d0bfa-be87-46fc-806c-3b1304daee2c: # Logo
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: logo
+    instructions: null
+    name: Logo
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+      defaultUploadLocationSubpath: footer-logos
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+      restrictedLocationSubpath: footer-icons
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'add a logo'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  a668bc40-f62a-48c9-ad11-29b1858fced2: # Organisation
+    columnSuffix: xozrtauo
+    contentColumnType: text
+    fieldGroup: null
+    handle: organisation
+    instructions: 'The name of the organisation'
+    name: Organisation
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: footerIcons
+name: 'Footer Icons'
+sortOrder: 1

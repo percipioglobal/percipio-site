@@ -1,4 +1,4 @@
-dateModified: 1679500317
+dateModified: 1679589855
 elementSources:
   craft\elements\Entry:
     -
@@ -384,6 +384,7 @@ meta:
     40e441b8-aeac-4f02-878a-60457e5699a8: Position # Position
     040f68f0-b32f-4544-8b97-56d71c7f3428: Ratio # Ratio
     45bf720f-d88e-428a-919d-5b748c8571d6: 'Our Services' # Our Services
+    045c1779-b05a-4a3a-ba01-0a506f8754e0: 'Footer Icons' # Footer Icons
     46d6543c-b83e-4b73-be6e-edcfb691204e: 'Grid Items' # Grid Items
     46faf86d-bfa5-4356-bef1-0af3b2a87332: 'Secondary Navigation' # Secondary Navigation
     47c98ad7-c9a9-402c-9171-9fd14eb7e8f4: 'Highlight Cards' # Highlight Cards
@@ -453,6 +454,7 @@ meta:
     1750a33c-c911-45de-9392-80a3004cbe0d: Description # Description
     1755ebbe-91fc-4a2a-80cb-667cc2cf1795: Locations # Locations
     1840d0e9-f862-4f32-b963-dd796b3b437e: 'Public Schema' # Public Schema
+    2861cca9-5fbc-40e2-a4c1-593d026d744c: Url # Url
     4103b2f0-dd71-494b-919a-621d2a5e959e: Heading # Heading
     4133e37a-d625-476e-91aa-a600e0123064: 'Quote Source' # Quote Source
     4610a356-a212-46cd-a7a1-6286620e89ef: 'Grid Items' # Grid Items
@@ -509,10 +511,12 @@ meta:
     a6d05f0a-f046-4a8d-bddd-dd368b675507: Content # Content
     a9ba876e-c0bf-4a8c-b77e-e926de382189: Items # Items
     a23c9a51-65d8-446d-b01a-222c2403d805: Media # Media
+    a33d0bfa-be87-46fc-806c-3b1304daee2c: Logo # Logo
     a43f63a3-f09b-404a-8002-846873fd6fe6: Plugins # Plugins
     a57c1d51-171d-47c2-ac77-cbc30d2229f3: 'Content CTA' # Content CTA
     a72bfe0c-3389-4f9f-8ec1-ab318ec10b29: Errors # Errors
     a81ab3c0-c52b-4817-8820-c0e69e9a0d2d: Containerise # Containerise
+    a668bc40-f62a-48c9-ad11-29b1858fced2: Organisation # Organisation
     a938d5bd-b3b8-48ed-b083-099f57f60c16: 'Hero Graphic' # Hero Graphic
     a1477b0f-3339-4cae-8768-625b7fe98d6a: 'Hero Graphic' # Hero Graphic
     a2754e8b-3bc4-46e8-a8e4-45f15fd7590a: 'Grid 33% Optimisations' # Grid 33% Optimisations
