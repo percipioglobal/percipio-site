@@ -1,5 +1,10 @@
 # percipioglobal/craft Change Log
 
+### 2.0.9 23-03-2023
+
+### Added
+- Organisation Logos to Footer
+
 ### 2.0.8 15-12-2022
 
 ### Added
