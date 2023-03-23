@@ -8,7 +8,7 @@
     header--text: `_molecules/headers/header--text.twig`
 #}
 
-<footer class="lg:mt-30 pt-10 pb-20 bg-gray-800">
+<footer class="lg:mt-30 pt-10 bg-gray-800">
     {%- include '_molecules/headers/header--text' ignore missing with {
         heading: 'We have five offices across Europe' ??? '',
         description: '',
@@ -22,13 +22,22 @@
         locations: footerData.locations.collect() ??? null,
     } -%}
 
-    {%- include '_molecules/metas/meta--footer' ignore missing with {
-        copyright: footerData.copyright ??? '',
-        legals: footerData.legalNavigation.collect() ??? null,
-    } -%}
+    <div class="w-full bg-white py-20">
+    {# make into a molecule include image and loop over logos once added to globals #}
+        <div class="flex justify-around max-w-screen-xl mx-auto mb-16">
+            <h1>Logo</h1>
+            <h1>Logo</h1>
+            <h1>Logo</h1>
+        </div>
 
-    {%- include '_organisms/navigations/navigation--social' ignore missing with {
-        utilities: 'py-3 flex items-center justify-center'
-    } -%}
+        {%- include '_molecules/metas/meta--footer' ignore missing with {
+            copyright: footerData.copyright ??? '',
+            legals: footerData.legalNavigation.collect() ??? null,
+        } -%}
 
+
+        {%- include '_organisms/navigations/navigation--social' ignore missing with {
+            utilities: 'py-3 flex items-center justify-center'
+        } -%}
+    </div>
 </footer>

@@ -4,7 +4,7 @@
     {%- if copyright -%}
         {{- render.atom('text', 'copyright', {
             alignment: 'text-center md:text-left',
-            color: 'text-white',
+            color: 'text-grey-800',
             content: copyright,
             utilities: 'py-3 order-2 md:order-1',
         }) -}}
@@ -22,7 +22,7 @@
                         action:'click',
                         label: legal.title ??? null,
                     },
-                    color: 'text-white',
+                    color: 'text-grey-800',
                     utilities: 'py-3'
                 }) -}}
             {%- endfor -%}

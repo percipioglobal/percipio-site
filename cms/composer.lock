@@ -1071,16 +1071,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.261.9",
+            "version": "3.261.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "d91e6f89a6c41e8df859b0d313150386cfee6f6a"
+                "reference": "a8d2d89d79e912aa87bd2d381d34f47fbd08be65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d91e6f89a6c41e8df859b0d313150386cfee6f6a",
-                "reference": "d91e6f89a6c41e8df859b0d313150386cfee6f6a",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a8d2d89d79e912aa87bd2d381d34f47fbd08be65",
+                "reference": "a8d2d89d79e912aa87bd2d381d34f47fbd08be65",
                 "shasum": ""
             },
             "require": {
@@ -1159,9 +1159,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.261.9"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.261.17"
             },
-            "time": "2023-03-10T19:25:08+00:00"
+            "time": "2023-03-22T18:22:29+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -1909,16 +1909,16 @@
         },
         {
             "name": "craftcms/aws-s3",
-            "version": "2.0.1",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/aws-s3.git",
-                "reference": "c2a2a11ccc2391a2a16bb1b217eadfb5ca46d068"
+                "reference": "a04ee659490d53da879e302e660ba3807532a926"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/c2a2a11ccc2391a2a16bb1b217eadfb5ca46d068",
-                "reference": "c2a2a11ccc2391a2a16bb1b217eadfb5ca46d068",
+                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/a04ee659490d53da879e302e660ba3807532a926",
+                "reference": "a04ee659490d53da879e302e660ba3807532a926",
                 "shasum": ""
             },
             "require": {
@@ -1969,20 +1969,20 @@
                 "rss": "https://github.com/craftcms/aws-s3/commits/master.atom",
                 "source": "https://github.com/craftcms/aws-s3"
             },
-            "time": "2022-05-18T19:20:59+00:00"
+            "time": "2023-03-16T22:49:16+00:00"
         },
         {
             "name": "craftcms/cms",
-            "version": "4.4.1",
+            "version": "4.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "0f27b7245610d64eb7312848ffa2cc26762c6c3e"
+                "reference": "4adcbee22dc3c8b4ea08678df724628bca4e8fc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/0f27b7245610d64eb7312848ffa2cc26762c6c3e",
-                "reference": "0f27b7245610d64eb7312848ffa2cc26762c6c3e",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/4adcbee22dc3c8b4ea08678df724628bca4e8fc1",
+                "reference": "4adcbee22dc3c8b4ea08678df724628bca4e8fc1",
                 "shasum": ""
             },
             "require": {
@@ -1993,7 +1993,7 @@
                 "craftcms/server-check": "~2.1.2",
                 "creocoder/yii2-nested-sets": "~0.9.0",
                 "elvanto/litemoji": "^4.3.0",
-                "enshrined/svg-sanitize": "~0.15.0",
+                "enshrined/svg-sanitize": "~0.16.0",
                 "ext-bcmath": "*",
                 "ext-curl": "*",
                 "ext-dom": "*",
@@ -2088,7 +2088,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2023-03-09T21:06:00+00:00"
+            "time": "2023-03-21T21:20:34+00:00"
         },
         {
             "name": "craftcms/fix-fks",
@@ -2426,16 +2426,16 @@
         },
         {
             "name": "craftcms/redactor",
-            "version": "3.0.3",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/redactor.git",
-                "reference": "19578a713a06aedd4e0efb5dd80cb3947a5849c4"
+                "reference": "3e71faf0f129025d8814207e496870ce6deeef01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/redactor/zipball/19578a713a06aedd4e0efb5dd80cb3947a5849c4",
-                "reference": "19578a713a06aedd4e0efb5dd80cb3947a5849c4",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/3e71faf0f129025d8814207e496870ce6deeef01",
+                "reference": "3e71faf0f129025d8814207e496870ce6deeef01",
                 "shasum": ""
             },
             "require": {
@@ -2484,7 +2484,7 @@
                 "rss": "https://github.com/craftcms/redactor/commits/v2.atom",
                 "source": "https://github.com/craftcms/redactor"
             },
-            "time": "2023-01-01T01:36:37+00:00"
+            "time": "2023-03-16T23:00:48+00:00"
         },
         {
             "name": "craftcms/server-check",
@@ -3176,25 +3176,26 @@
         },
         {
             "name": "enshrined/svg-sanitize",
-            "version": "0.15.4",
+            "version": "0.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/darylldoyle/svg-sanitizer.git",
-                "reference": "e50b83a2f1f296ca61394fe88fbfe3e896a84cf4"
+                "reference": "239e257605e2141265b429e40987b2ee51bba4b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/e50b83a2f1f296ca61394fe88fbfe3e896a84cf4",
-                "reference": "e50b83a2f1f296ca61394fe88fbfe3e896a84cf4",
+                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/239e257605e2141265b429e40987b2ee51bba4b4",
+                "reference": "239e257605e2141265b429e40987b2ee51bba4b4",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
-                "php": "^7.0 || ^8.0"
+                "ezyang/htmlpurifier": "^4.16",
+                "php": "^5.6 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.5 || ^8.5"
+                "phpunit/phpunit": "^5.7 || ^6.5 || ^8.5"
             },
             "type": "library",
             "autoload": {
@@ -3215,9 +3216,9 @@
             "description": "An SVG sanitizer for PHP",
             "support": {
                 "issues": "https://github.com/darylldoyle/svg-sanitizer/issues",
-                "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.15.4"
+                "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.16.0"
             },
-            "time": "2022-02-21T09:13:59+00:00"
+            "time": "2023-03-20T10:51:12+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -3675,16 +3676,16 @@
         },
         {
             "name": "hybridinteractive/craft-position-fieldtype",
-            "version": "4.0.0-beta.3",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hybridinteractive/craft-position-fieldtype.git",
-                "reference": "e0c05bbe55bd9df4ab2fdb89f2b196fe49c0e438"
+                "reference": "f9c0ef9b48b8021d51b302fd8333216b1e8ea73d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hybridinteractive/craft-position-fieldtype/zipball/e0c05bbe55bd9df4ab2fdb89f2b196fe49c0e438",
-                "reference": "e0c05bbe55bd9df4ab2fdb89f2b196fe49c0e438",
+                "url": "https://api.github.com/repos/hybridinteractive/craft-position-fieldtype/zipball/f9c0ef9b48b8021d51b302fd8333216b1e8ea73d",
+                "reference": "f9c0ef9b48b8021d51b302fd8333216b1e8ea73d",
                 "shasum": ""
             },
             "require": {
@@ -3726,22 +3727,22 @@
             "support": {
                 "docs": "https://github.com/hybridinteractive/craft-position-fieldtype/blob/master/README.md",
                 "issues": "https://github.com/hybridinteractive/craft-position-fieldtype/issues",
-                "source": "https://github.com/hybridinteractive/craft-position-fieldtype/tree/4.0.0-beta.3"
+                "source": "https://github.com/hybridinteractive/craft-position-fieldtype/tree/4.0.0"
             },
-            "time": "2022-05-03T18:46:45+00:00"
+            "time": "2023-03-13T21:46:19+00:00"
         },
         {
             "name": "hybridinteractive/craft-width-fieldtype",
-            "version": "4.0.0-beta.3",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hybridinteractive/craft-width-fieldtype.git",
-                "reference": "d2d2cb8841861a0097c4f2cbc3163fa276c8452d"
+                "reference": "51b2c46fce73e442858c16c46f4cdc968df68397"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hybridinteractive/craft-width-fieldtype/zipball/d2d2cb8841861a0097c4f2cbc3163fa276c8452d",
-                "reference": "d2d2cb8841861a0097c4f2cbc3163fa276c8452d",
+                "url": "https://api.github.com/repos/hybridinteractive/craft-width-fieldtype/zipball/51b2c46fce73e442858c16c46f4cdc968df68397",
+                "reference": "51b2c46fce73e442858c16c46f4cdc968df68397",
                 "shasum": ""
             },
             "require": {
@@ -3783,9 +3784,9 @@
             "support": {
                 "docs": "https://github.com/hybridinteractive/craft-width-fieldtype/blob/master/README.md",
                 "issues": "https://github.com/hybridinteractive/craft-width-fieldtype/issues",
-                "source": "https://github.com/hybridinteractive/craft-width-fieldtype/tree/4.0.0-beta.3"
+                "source": "https://github.com/hybridinteractive/craft-width-fieldtype/tree/4.0.0"
             },
-            "time": "2022-05-03T19:18:21+00:00"
+            "time": "2023-03-13T21:46:32+00:00"
         },
         {
             "name": "illuminate/collections",
@@ -6206,16 +6207,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.21",
+            "version": "4.0.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "2d25278c1f482e311addddb89a45178a895df5e2"
+                "reference": "0189053868fa8de5c6d69290ad562683f1de7caf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/2d25278c1f482e311addddb89a45178a895df5e2",
-                "reference": "2d25278c1f482e311addddb89a45178a895df5e2",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/0189053868fa8de5c6d69290ad562683f1de7caf",
+                "reference": "0189053868fa8de5c6d69290ad562683f1de7caf",
                 "shasum": ""
             },
             "require": {
@@ -6283,7 +6284,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-09T23:43:41+00:00"
+            "time": "2023-03-13T18:14:11+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
@@ -6812,24 +6813,27 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.6.2",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "48f445a408c131e38cab1c235aa6d2bb7a0bb20d"
+                "reference": "1534aea9bde19a5c85c5d1e1f834ab63f4c5dcf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/48f445a408c131e38cab1c235aa6d2bb7a0bb20d",
-                "reference": "48f445a408c131e38cab1c235aa6d2bb7a0bb20d",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/1534aea9bde19a5c85c5d1e1f834ab63f4c5dcf5",
+                "reference": "1534aea9bde19a5c85c5d1e1f834ab63f4c5dcf5",
                 "shasum": ""
             },
             "require": {
+                "doctrine/deprecations": "^1.0",
                 "php": "^7.4 || ^8.0",
-                "phpdocumentor/reflection-common": "^2.0"
+                "phpdocumentor/reflection-common": "^2.0",
+                "phpstan/phpdoc-parser": "^1.13"
             },
             "require-dev": {
                 "ext-tokenizer": "*",
+                "phpbench/phpbench": "^1.2",
                 "phpstan/extension-installer": "^1.1",
                 "phpstan/phpstan": "^1.8",
                 "phpstan/phpstan-phpunit": "^1.1",
@@ -6861,9 +6865,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.2"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.7.0"
             },
-            "time": "2022-10-14T12:47:21+00:00"
+            "time": "2023-03-12T10:13:29+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -6939,6 +6943,51 @@
                 }
             ],
             "time": "2023-02-25T19:38:58+00:00"
+        },
+        {
+            "name": "phpstan/phpdoc-parser",
+            "version": "1.16.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpdoc-parser.git",
+                "reference": "e27e92d939e2e3636f0a1f0afaba59692c0bf571"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/e27e92d939e2e3636f0a1f0afaba59692c0bf571",
+                "reference": "e27e92d939e2e3636f0a1f0afaba59692c0bf571",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^1.5",
+                "phpstan/phpstan-phpunit": "^1.1",
+                "phpstan/phpstan-strict-rules": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "symfony/process": "^5.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHPStan\\PhpDocParser\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPDoc parser with support for nullable, intersection and generic types",
+            "support": {
+                "issues": "https://github.com/phpstan/phpdoc-parser/issues",
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.16.1"
+            },
+            "time": "2023-02-07T18:11:17+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -7420,16 +7469,16 @@
         },
         {
             "name": "putyourlightson/craft-blitz",
-            "version": "4.4.2",
+            "version": "4.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-blitz.git",
-                "reference": "37342ebf468e851903e9d12e0347c760267f4b3f"
+                "reference": "b8d17f0b292b432fe6698513c037e01c03b9952d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/37342ebf468e851903e9d12e0347c760267f4b3f",
-                "reference": "37342ebf468e851903e9d12e0347c760267f4b3f",
+                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/b8d17f0b292b432fe6698513c037e01c03b9952d",
+                "reference": "b8d17f0b292b432fe6698513c037e01c03b9952d",
                 "shasum": ""
             },
             "require": {
@@ -7482,7 +7531,7 @@
                 "issues": "https://github.com/putyourlightson/craft-blitz/issues",
                 "source": "https://github.com/putyourlightson/craft-blitz"
             },
-            "time": "2023-03-09T14:00:41+00:00"
+            "time": "2023-03-14T14:38:57+00:00"
         },
         {
             "name": "putyourlightson/craft-blitz-hints",

@@ -1,4 +1,4 @@
-dateModified: 1678716731
+dateModified: 1679500317
 elementSources:
   craft\elements\Entry:
     -
@@ -364,6 +364,7 @@ meta:
     8fd7bfc7-70cd-498d-9229-a507c11afc58: 'Inline Quote' # Inline Quote
     9a6ec17a-0ce8-43a1-8526-80f2db164c2d: 'Grid Items' # Grid Items
     9bca25cb-2cf2-4427-baf8-44e347cc8a7a: Button # Button
+    9bcfff77-a473-4d73-acbb-6b01fd20f657: 'Footer Icons' # Footer Icons
     9c4ff5ca-6227-465d-a4a9-5a584eba02b4: 'Body Content' # Body Content
     9de367ab-77b8-47bb-bbc3-63e79a202c3e: Blog # Blog
     9ea88c8c-ff9b-40b0-94d4-e7eb1b8227a6: 'Hero Optimisations' # Hero Optimisations
