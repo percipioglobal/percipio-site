@@ -22,7 +22,11 @@
 
     {%- minify -%}
 
-        <figure role="figure" class="flex items-center justify-center" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
+        <figure 
+            role="figure" 
+            class="flex items-center justify-center" 
+            aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}"
+        >
             <picture>
 
                 <source

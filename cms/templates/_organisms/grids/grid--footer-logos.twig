@@ -14,7 +14,7 @@
             {%- for organisation in props.organisations -%}
 
                 {{- render.atom('image', 'logo', {
-                        image: organisation.logo.collect().one(),
+                        image: organisation.logo.collect().one() ??? null,
                         sizes: '',
                         alt: organisation.organisation,
                         placeholders: placeholders,
