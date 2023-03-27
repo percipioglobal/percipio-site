@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+handle: skills
+name: Skills
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: ded44335-3593-4c42-9ed1-db1657a6269c
+type: structure

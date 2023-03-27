@@ -36,10 +36,10 @@ permissions:
   - 'deleteassets:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
   - 'deleteassets:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
   - 'deleteassets:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
-  - 'deletecategories:0536c060-0d97-421e-8c73-3ad5baec52d2' # Skills
+  - 'deletecategories:0536c060-0d97-421e-8c73-3ad5baec52d2'
   - 'deletecategories:4e026396-d7ab-43ef-a817-226fb2dada30'
-  - 'deletecategories:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
-  - 'deletecategories:f326369d-c220-40d9-92e9-7b7b7811d8e5' # News Categories
+  - 'deletecategories:6834194e-43c0-464b-9333-a15bd914d9d3'
+  - 'deletecategories:f326369d-c220-40d9-92e9-7b7b7811d8e5'
   - 'deleteentries:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
   - 'deleteentries:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
   - 'deleteentries:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
@@ -58,10 +58,10 @@ permissions:
   - 'deletepeerassets:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
   - 'deletepeerassets:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
   - 'deletepeerassets:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
-  - 'deletepeercategorydrafts:0536c060-0d97-421e-8c73-3ad5baec52d2' # Skills
+  - 'deletepeercategorydrafts:0536c060-0d97-421e-8c73-3ad5baec52d2'
   - 'deletepeercategorydrafts:4e026396-d7ab-43ef-a817-226fb2dada30'
-  - 'deletepeercategorydrafts:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
-  - 'deletepeercategorydrafts:f326369d-c220-40d9-92e9-7b7b7811d8e5' # News Categories
+  - 'deletepeercategorydrafts:6834194e-43c0-464b-9333-a15bd914d9d3'
+  - 'deletepeercategorydrafts:f326369d-c220-40d9-92e9-7b7b7811d8e5'
   - 'deletepeerentries:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
   - 'deletepeerentries:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
   - 'deletepeerentries:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
@@ -135,10 +135,10 @@ permissions:
   - 'saveassets:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
   - 'saveassets:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
   - 'saveassets:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
-  - 'savecategories:0536c060-0d97-421e-8c73-3ad5baec52d2' # Skills
+  - 'savecategories:0536c060-0d97-421e-8c73-3ad5baec52d2'
   - 'savecategories:4e026396-d7ab-43ef-a817-226fb2dada30'
-  - 'savecategories:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
-  - 'savecategories:f326369d-c220-40d9-92e9-7b7b7811d8e5' # News Categories
+  - 'savecategories:6834194e-43c0-464b-9333-a15bd914d9d3'
+  - 'savecategories:f326369d-c220-40d9-92e9-7b7b7811d8e5'
   - 'saveentries:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
   - 'saveentries:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
   - 'saveentries:54e60257-f31a-44aa-960e-bbd364197e28' # Homepage
@@ -158,10 +158,10 @@ permissions:
   - 'savepeerassets:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
   - 'savepeerassets:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
   - 'savepeerassets:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
-  - 'savepeercategorydrafts:0536c060-0d97-421e-8c73-3ad5baec52d2' # Skills
+  - 'savepeercategorydrafts:0536c060-0d97-421e-8c73-3ad5baec52d2'
   - 'savepeercategorydrafts:4e026396-d7ab-43ef-a817-226fb2dada30'
-  - 'savepeercategorydrafts:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
-  - 'savepeercategorydrafts:f326369d-c220-40d9-92e9-7b7b7811d8e5' # News Categories
+  - 'savepeercategorydrafts:6834194e-43c0-464b-9333-a15bd914d9d3'
+  - 'savepeercategorydrafts:f326369d-c220-40d9-92e9-7b7b7811d8e5'
   - 'savepeerentries:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
   - 'savepeerentries:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
   - 'savepeerentries:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
@@ -234,10 +234,10 @@ permissions:
   - 'viewassets:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
   - 'viewassets:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
   - 'viewassets:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
-  - 'viewcategories:0536c060-0d97-421e-8c73-3ad5baec52d2' # Skills
+  - 'viewcategories:0536c060-0d97-421e-8c73-3ad5baec52d2'
   - 'viewcategories:4e026396-d7ab-43ef-a817-226fb2dada30'
-  - 'viewcategories:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
-  - 'viewcategories:f326369d-c220-40d9-92e9-7b7b7811d8e5' # News Categories
+  - 'viewcategories:6834194e-43c0-464b-9333-a15bd914d9d3'
+  - 'viewcategories:f326369d-c220-40d9-92e9-7b7b7811d8e5'
   - 'viewentries:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
   - 'viewentries:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
   - 'viewentries:54e60257-f31a-44aa-960e-bbd364197e28' # Homepage
@@ -257,10 +257,10 @@ permissions:
   - 'viewpeerassets:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
   - 'viewpeerassets:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
   - 'viewpeerassets:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
-  - 'viewpeercategorydrafts:0536c060-0d97-421e-8c73-3ad5baec52d2' # Skills
+  - 'viewpeercategorydrafts:0536c060-0d97-421e-8c73-3ad5baec52d2'
   - 'viewpeercategorydrafts:4e026396-d7ab-43ef-a817-226fb2dada30'
-  - 'viewpeercategorydrafts:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
-  - 'viewpeercategorydrafts:f326369d-c220-40d9-92e9-7b7b7811d8e5' # News Categories
+  - 'viewpeercategorydrafts:6834194e-43c0-464b-9333-a15bd914d9d3'
+  - 'viewpeercategorydrafts:f326369d-c220-40d9-92e9-7b7b7811d8e5'
   - 'viewpeerentries:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
   - 'viewpeerentries:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
   - 'viewpeerentries:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation

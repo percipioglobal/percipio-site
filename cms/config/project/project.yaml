@@ -1,4 +1,4 @@
-dateModified: 1670507794
+dateModified: 1679924940
 elementSources:
   craft\elements\Entry:
     -
@@ -286,6 +286,7 @@ fs:
     url: $CLOUDFRONT_URL
 meta:
   __names__:
+    0a2a59e5-bea0-4308-a46c-dc436c4ec38a: 'Project Categories' # Project Categories
     0c7a7b67-3926-4a9f-b449-8d1d1c451f2f: Width # Width
     0d208796-7b7c-4677-bab0-0c107ff1c99b: Button # Button
     0f7ba706-766a-4187-950b-1e24b7b30eeb: 'Grid 50% Square Optimisations' # Grid 50% Square Optimisations
@@ -358,10 +359,12 @@ meta:
     8c9be2b5-73bf-4f32-8fd2-fc36a109dbab: 'Default Optimisations' # Default Optimisations
     8ce2faf2-a20a-4547-8145-4e3f9e75eb87: 'Blog Categories' # Blog Categories
     8dadf0c6-9868-4783-ad0e-1625a2a2b7f6: Overline # Overline
+    8e46ac55-077c-4dba-8315-4e658288f515: Skills # Skills
     8f7046bb-5261-4213-9d49-b1244e5d458e: 'Grid Placeholder' # Grid Placeholder
     8fd7bfc7-70cd-498d-9229-a507c11afc58: 'Inline Quote' # Inline Quote
     9a6ec17a-0ce8-43a1-8526-80f2db164c2d: 'Grid Items' # Grid Items
     9bca25cb-2cf2-4427-baf8-44e347cc8a7a: Button # Button
+    9bcfff77-a473-4d73-acbb-6b01fd20f657: Partners # Partners
     9c4ff5ca-6227-465d-a4a9-5a584eba02b4: 'Body Content' # Body Content
     9de367ab-77b8-47bb-bbc3-63e79a202c3e: Blog # Blog
     9ea88c8c-ff9b-40b0-94d4-e7eb1b8227a6: 'Hero Optimisations' # Hero Optimisations
@@ -381,6 +384,7 @@ meta:
     40e441b8-aeac-4f02-878a-60457e5699a8: Position # Position
     040f68f0-b32f-4544-8b97-56d71c7f3428: Ratio # Ratio
     45bf720f-d88e-428a-919d-5b748c8571d6: 'Our Services' # Our Services
+    045c1779-b05a-4a3a-ba01-0a506f8754e0: Partner # Partner
     46d6543c-b83e-4b73-be6e-edcfb691204e: 'Grid Items' # Grid Items
     46faf86d-bfa5-4356-bef1-0af3b2a87332: 'Secondary Navigation' # Secondary Navigation
     47c98ad7-c9a9-402c-9171-9fd14eb7e8f4: 'Highlight Cards' # Highlight Cards
@@ -415,6 +419,7 @@ meta:
     91df968c-fe4d-4f3b-b3db-0abde5d64dfb: Footer # Footer
     94b4d5ac-d7ea-4241-a6cb-92b39f482f99: Common # Common
     96da5623-ecd5-4a22-9321-97d95dacdd26: 'Small Cards Optimisation' # Small Cards Optimisation
+    97cfde00-930a-420d-a54a-a3271ac35e9b: 'News Categories' # News Categories
     107c46d5-29f5-404d-95b7-0d92ca6eb688: Content # Content
     151de730-f956-437c-a617-de5725e4c07a: Projects # Projects
     173ee72f-225f-4615-a999-193b8c9c051a: 'Section Header' # Section Header
@@ -432,7 +437,6 @@ meta:
     346cce90-1d6e-4c2d-82c0-c91b571c741c: 'Section Header' # Section Header
     385a49df-e957-49d6-b921-68d76f6f9e57: 'Grid Content' # Grid Content
     00498acf-c1c2-4c00-83f2-39a7255870f8: Vacancies # Vacancies
-    0536c060-0d97-421e-8c73-3ad5baec52d2: Skills # Skills
     557aea75-e34b-4fff-83c6-c67a95ce8bec: 'Large Cards Optimisation' # Large Cards Optimisation
     562bd8b6-c7c7-4de6-9a1b-910238a74390: Plugin # Plugin
     633b1b96-cdb8-4c97-a045-aa63d306b41c: Language # Language
@@ -450,6 +454,7 @@ meta:
     1750a33c-c911-45de-9392-80a3004cbe0d: Description # Description
     1755ebbe-91fc-4a2a-80cb-667cc2cf1795: Locations # Locations
     1840d0e9-f862-4f32-b963-dd796b3b437e: 'Public Schema' # Public Schema
+    2861cca9-5fbc-40e2-a4c1-593d026d744c: Url # Url
     4103b2f0-dd71-494b-919a-621d2a5e959e: Heading # Heading
     4133e37a-d625-476e-91aa-a600e0123064: 'Quote Source' # Quote Source
     4610a356-a212-46cd-a7a1-6286620e89ef: 'Grid Items' # Grid Items
@@ -467,6 +472,7 @@ meta:
     8242f176-ff64-4969-8ece-037c27beea0a: Standfirst # Standfirst
     8411ab0f-47f3-4c38-ad3b-f449f6bfe1f5: 'Small Gallery Optimisation' # Small Gallery Optimisation
     9151f126-34cf-4f3a-960f-107acc9842ad: Heading # Heading
+    9334c314-f680-4580-a5ae-09c3299bd70d: Default # Default
     9475b42a-7657-4e3f-9d5b-1e1b5a1732ca: Swatch # Swatch
     13653e63-9892-4752-b260-32518bc3bb3d: Cards # Cards
     15615c51-0340-4dc2-831f-12d4ee3fd845: 'Large Blog Card Optimisation' # Large Blog Card Optimisation
@@ -492,7 +498,6 @@ meta:
     1962717b-7da2-4f6f-be49-ee640b8ddfe2: Vacancies # Vacancies
     2075123a-3328-41eb-a8ad-ce1987d26d66: Overline # Overline
     6569339b-0b2b-4801-9b30-7599f28e1a5b: Media # Media
-    6834194e-43c0-464b-9333-a15bd914d9d3: 'Project Categories' # Project Categories
     12994466-6e49-4c20-9577-9d8b8ff8146c: Latitude # Latitude
     18802253-9492-45f9-94a3-1d4c9b68c027: Swatch # Swatch
     26759232-9c46-43b6-9279-f62bb6e4cf85: Heading # Heading
@@ -506,10 +511,12 @@ meta:
     a6d05f0a-f046-4a8d-bddd-dd368b675507: Content # Content
     a9ba876e-c0bf-4a8c-b77e-e926de382189: Items # Items
     a23c9a51-65d8-446d-b01a-222c2403d805: Media # Media
+    a33d0bfa-be87-46fc-806c-3b1304daee2c: Logo # Logo
     a43f63a3-f09b-404a-8002-846873fd6fe6: Plugins # Plugins
     a57c1d51-171d-47c2-ac77-cbc30d2229f3: 'Content CTA' # Content CTA
     a72bfe0c-3389-4f9f-8ec1-ab318ec10b29: Errors # Errors
     a81ab3c0-c52b-4817-8820-c0e69e9a0d2d: Containerise # Containerise
+    a668bc40-f62a-48c9-ad11-29b1858fced2: Organisation # Organisation
     a938d5bd-b3b8-48ed-b083-099f57f60c16: 'Hero Graphic' # Hero Graphic
     a1477b0f-3339-4cae-8768-625b7fe98d6a: 'Hero Graphic' # Hero Graphic
     a2754e8b-3bc4-46e8-a8e4-45f15fd7590a: 'Grid 33% Optimisations' # Grid 33% Optimisations
@@ -558,6 +565,7 @@ meta:
     c6379e33-9e45-4b32-a2a0-136084548853: Button # Button
     c57945a1-e622-42d1-ab9a-093940235f29: Quote # Quote
     ca8bffb4-dfed-4ca4-b421-ffcc8cca47e2: Target # Target
+    cc1e79b9-e925-4524-903d-f9db1a03dd9f: Default # Default
     cc4d5589-5884-4fb2-ba84-ffb388a8806e: Slides # Slides
     ccc50eb1-1bd2-4306-842a-0a31f567c135: Image # Image
     cd0c5467-595b-44e8-b0b0-aa3cd2e4f87e: Image # Image
@@ -603,6 +611,7 @@ meta:
     ee0406c9-28bc-4941-889f-a5c46e62ec44: Image # Image
     ef841ba4-7bcd-4ef5-9c12-96377bf7fba2: Pages # Pages
     efb7b090-ee57-4c4f-a7e9-f8cbc9b9c7ae: Image # Image
+    f0eb2892-8397-4a59-b06c-5d10d3c23cdc: Default # Default
     f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46: Gallery # Gallery
     f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd: 'Our Work' # Our Work
     f4b93d3b-149a-4af7-81e8-314d7fe818eb: 'Hero Graphics' # Hero Graphics
@@ -615,7 +624,6 @@ meta:
     f3960fae-d20a-4473-9a73-315dfed31760: Image # Image
     f66247e5-1697-4e5a-976e-ff087ee0911e: Description # Description
     f89601e9-4ba9-4a48-9e99-350aa9914912: Default # Default
-    f326369d-c220-40d9-92e9-7b7b7811d8e5: 'News Categories' # News Categories
     f4124494-afa7-474f-beca-7740fe61e6e1: Office # Office
     faa39bae-b425-4b70-b3f6-c1584cdda9dc: Website # Website
     faceb3ed-6771-453c-9c2a-aa330847f6db: Errors # Errors
@@ -631,9 +639,9 @@ plugins:
     schemaVersion: '2.0'
   blitz:
     edition: standard
-    enabled: true
-    licenseKey: 098AFX2F099TL01KIJ38HC5I
-    schemaVersion: 4.2.0
+    enabled: false
+    licenseKey: $PLUGIN_BLITZ
+    schemaVersion: 4.4.0
     settings:
       apiKey: ''
       cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
@@ -769,7 +777,7 @@ plugins:
   image-optimize:
     edition: standard
     enabled: true
-    licenseKey: L5YE26W49XD3K4PP91RH06RM
+    licenseKey: $PLUGIN_IMAGE_OPTIMIZE
     schemaVersion: 1.0.0
     settings:
       allowUpScaledImageVariants: true
@@ -832,11 +840,11 @@ plugins:
   retour:
     edition: standard
     enabled: true
-    licenseKey: 514KT3JMO8YM0A8ZTPI1PLW3
-    schemaVersion: 3.0.10
+    licenseKey: $PLUGIN_RETOUR
+    schemaVersion: 3.0.11
   seomatic:
     enabled: true
-    licenseKey: 8LN4PPMQDNDW9TA7FLCL3WY5
+    licenseKey: $PLUGIN_SEOMATIC
     schemaVersion: 3.0.11
   sherlock:
     edition: lite
@@ -1214,5 +1222,5 @@ system:
   live: true
   name: 'Percipio Global Ltd.'
   retryDuration: null
-  schemaVersion: 4.0.0.9
+  schemaVersion: 4.4.0.4
   timeZone: Europe/London
