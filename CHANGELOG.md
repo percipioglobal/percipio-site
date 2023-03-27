@@ -11,7 +11,6 @@
 - Licensing issues
 
 ### 2.0.8 15-12-2022
-
 ### Added
 - Local Weather Icons to office locations from openWeather
 
@@ -25,12 +24,10 @@
 - Critical CSS
 
 ## 2.0.6 - 16-11-2022
-
 ### Changed
 - Fallback for members leaving the team → still show name / no more link to team member page#464 [https://github.com/percipioglobal/percipio-site/issues/464]
 
 ## 2.0.5 - 08-11-2022
-
 ### Fixed
 - Team page graphics on mobile should be visible #463 [https://github.com/percipioglobal/percipio-site/issues/463]
 
@@ -39,13 +36,11 @@
 - Content builder field min block reduced to 0. Required block in clients #452 [https://github.com/percipioglobal/percipio-site/issues/452]
 
 ## 2.0.4 - 16-09-2022
-
 ### Changed
 - Updated Dependancies
 - Craft 4.2.4
 
 ## 2.0.2 - 18-08-2022
-
 ### Added
 - Added shortlink capabilities
 
@@ -57,13 +52,11 @@
 - Updated associated plugins
 
 ## 2.0.2 - 18-08-2022
-
 ### Changed
 - allowed subfolder selection in galleryImages.images builders
 
 
 ## 2.0.1 - 29-07-2022
-
 ### Added
 - Added the new full Percipio brand colour palette
 
@@ -72,7 +65,6 @@
 - Fixed colour of the svg logo
 
 ## 2.0.0 - 17-06-2022
-
 ### Added
 - Initial Craft 4 release
 
