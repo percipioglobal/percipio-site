@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b72ce62642facd3182f276a68f143dc",
+    "content-hash": "8f01e017a148b12d344dda48e5fd871e",
     "packages": [
         {
             "name": "amphp/amp",
@@ -558,16 +558,16 @@
         },
         {
             "name": "amphp/parallel",
-            "version": "v1.4.2",
+            "version": "v1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/parallel.git",
-                "reference": "75853e1623efa5aa5e65e986ec9a97db573a5267"
+                "reference": "3aac213ba7858566fd83d38ccb85b91b2d652cb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/parallel/zipball/75853e1623efa5aa5e65e986ec9a97db573a5267",
-                "reference": "75853e1623efa5aa5e65e986ec9a97db573a5267",
+                "url": "https://api.github.com/repos/amphp/parallel/zipball/3aac213ba7858566fd83d38ccb85b91b2d652cb0",
+                "reference": "3aac213ba7858566fd83d38ccb85b91b2d652cb0",
                 "shasum": ""
             },
             "require": {
@@ -620,7 +620,7 @@
             ],
             "support": {
                 "issues": "https://github.com/amphp/parallel/issues",
-                "source": "https://github.com/amphp/parallel/tree/v1.4.2"
+                "source": "https://github.com/amphp/parallel/tree/v1.4.3"
             },
             "funding": [
                 {
@@ -628,7 +628,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-30T00:21:42+00:00"
+            "time": "2023-03-23T08:04:23+00:00"
         },
         {
             "name": "amphp/parser",
@@ -1021,23 +1021,27 @@
         },
         {
             "name": "aws/aws-crt-php",
-            "version": "v1.0.4",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/awslabs/aws-crt-php.git",
-                "reference": "f5c64ee7c5fce196e2519b3d9b7138649efe032d"
+                "reference": "1926277fc71d253dfa820271ac5987bdb193ccf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awslabs/aws-crt-php/zipball/f5c64ee7c5fce196e2519b3d9b7138649efe032d",
-                "reference": "f5c64ee7c5fce196e2519b3d9b7138649efe032d",
+                "url": "https://api.github.com/repos/awslabs/aws-crt-php/zipball/1926277fc71d253dfa820271ac5987bdb193ccf5",
+                "reference": "1926277fc71d253dfa820271ac5987bdb193ccf5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35|^5.6.3"
+                "phpunit/phpunit": "^4.8.35||^5.6.3||^9.5",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "suggest": {
+                "ext-awscrt": "Make sure you install awscrt native extension to use any of the functionality."
             },
             "type": "library",
             "autoload": {
@@ -1056,7 +1060,7 @@
                 }
             ],
             "description": "AWS Common Runtime for PHP",
-            "homepage": "http://aws.amazon.com/sdkforphp",
+            "homepage": "https://github.com/awslabs/aws-crt-php",
             "keywords": [
                 "amazon",
                 "aws",
@@ -1065,22 +1069,22 @@
             ],
             "support": {
                 "issues": "https://github.com/awslabs/aws-crt-php/issues",
-                "source": "https://github.com/awslabs/aws-crt-php/tree/v1.0.4"
+                "source": "https://github.com/awslabs/aws-crt-php/tree/v1.2.1"
             },
-            "time": "2023-01-31T23:08:25+00:00"
+            "time": "2023-03-24T20:22:19+00:00"
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.261.17",
+            "version": "3.262.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "a8d2d89d79e912aa87bd2d381d34f47fbd08be65"
+                "reference": "42ca7ade60a775fc5eb103d4631df3d366b48a29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a8d2d89d79e912aa87bd2d381d34f47fbd08be65",
-                "reference": "a8d2d89d79e912aa87bd2d381d34f47fbd08be65",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/42ca7ade60a775fc5eb103d4631df3d366b48a29",
+                "reference": "42ca7ade60a775fc5eb103d4631df3d366b48a29",
                 "shasum": ""
             },
             "require": {
@@ -1159,9 +1163,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.261.17"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.262.1"
             },
-            "time": "2023-03-22T18:22:29+00:00"
+            "time": "2023-03-24T18:20:43+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -8118,16 +8122,16 @@
         },
         {
             "name": "spicyweb/craft-embedded-assets",
-            "version": "3.1.1",
+            "version": "3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spicywebau/craft-embedded-assets.git",
-                "reference": "86cec79789f7c958bfd0de08b9e6388ed3797d6a"
+                "reference": "ba463f76ca3d3d345a0852c5a2d34a4ec11ab5bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/86cec79789f7c958bfd0de08b9e6388ed3797d6a",
-                "reference": "86cec79789f7c958bfd0de08b9e6388ed3797d6a",
+                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/ba463f76ca3d3d345a0852c5a2d34a4ec11ab5bd",
+                "reference": "ba463f76ca3d3d345a0852c5a2d34a4ec11ab5bd",
                 "shasum": ""
             },
             "require": {
@@ -8146,7 +8150,7 @@
                 "schemaVersion": "1.0.0",
                 "class": "spicyweb\\embeddedassets\\Plugin",
                 "changelogUrl": "https://github.com/spicywebau/craft-embedded-assets/blob/3.x/CHANGELOG.md",
-                "downloadUrl": "https://github.com/spicywebau/craft-embedded-assets/archive/3.1.1.zip"
+                "downloadUrl": "https://github.com/spicywebau/craft-embedded-assets/archive/3.1.3.zip"
             },
             "autoload": {
                 "psr-4": {
@@ -8176,12 +8180,12 @@
                 "youtube"
             ],
             "support": {
-                "docs": "https://github.com/spicywebau/craft-embedded-assets/blob/3.1.1/README.md",
+                "docs": "https://github.com/spicywebau/craft-embedded-assets/blob/3.1.3/README.md",
                 "issues": "https://github.com/spicywebau/craft-embedded-assets/issues",
                 "rss": "https://github.com/spicywebau/craft-embedded-assets/commits/3.x.atom",
                 "source": "https://github.com/spicywebau/craft-embedded-assets"
             },
-            "time": "2023-01-06T13:48:21+00:00"
+            "time": "2023-03-25T08:27:39+00:00"
         },
         {
             "name": "sunra/php-simple-html-dom-parser",
