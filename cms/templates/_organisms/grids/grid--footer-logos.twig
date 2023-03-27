@@ -8,22 +8,24 @@
     }) -%}
 
     {%- minify -%}
-        <section class="grid grid-cols-3 max-w-screen-lg mx-auto justify-center mb-16">
+        {%- if props.organisations and props.organisations | length > 0 -%}
+            <section class="grid grid-cols-3 max-w-screen-lg mx-auto justify-center mb-16">
 
-            {%- for organisation in props.organisations -%}
+                {%- for organisation in props.organisations -%}
 
-                {{- render.atom('image', 'logo', {
-                        image: organisation.logo.collect().one() ??? null,
-                        sizes: '',
-                        alt: organisation.organisation,
-                        placeholders: placeholders,
-                        utilities: 'max-h-12 md:max-h-20 px-4'
-                    })
-                -}}
+                    {{- render.atom('image', 'logo', {
+                            image: organisation.logo.collect().one() ??? null,
+                            sizes: '',
+                            alt: organisation.organisation,
+                            placeholders: placeholders,
+                            utilities: 'max-h-12 md:max-h-20 px-4'
+                        })
+                    -}}
 
-            {%- endfor -%}
+                {%- endfor -%}
 
-        </section>
+            </section>
+        {%- endif -%}
     {%- endminify -%}
 {%- endblock -%}
 
