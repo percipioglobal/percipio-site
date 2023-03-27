@@ -345,7 +345,7 @@
         - "./craft project-config/apply"
         - "./craft clear-caches/all"
         - "# Clear blitz hints"
-        - "./craft blitz/hints/clear"
+        # - "./craft blitz/hints/clear"
         - "# Refresh Bliz Cache"
         # - "./craft blitz/cache/refresh"
       trigger_condition: "ALWAYS"
