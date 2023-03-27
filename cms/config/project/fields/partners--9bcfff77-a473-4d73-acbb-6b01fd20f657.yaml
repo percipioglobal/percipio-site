@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 1572f461-2a67-47a4-a36c-80839168bcb7 # Globals
+handle: partners
+instructions: null
+name: Partners
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_partners}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
