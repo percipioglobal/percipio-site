@@ -1,9 +1,14 @@
 # percipioglobal/craft Change Log
 
 ### 2.0.9 27-03-2023
+### Changed
+- Updated to Craft 4.4
 
 ### Added
 - Organisation Logos to Footer
+
+### Fixed
+- Licensing issues
 
 ### 2.0.8 15-12-2022
 
