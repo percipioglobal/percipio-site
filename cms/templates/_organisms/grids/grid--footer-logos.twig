@@ -1,12 +1,11 @@
 {%- extends '_organisms/grids/_grid--props' -%}
 {%- import '_macros/atoms' as render -%}
 
-
 {%- block grid -%}
 
-{%- set props = props|merge({
-    organisations: organisations ??? null,
-}) -%}
+    {%- set props = props|merge({
+        organisations: organisations ??? null,
+    }) -%}
 
     {%- minify -%}
         <section class="grid grid-cols-3 max-w-screen-lg mx-auto justify-center mb-16">

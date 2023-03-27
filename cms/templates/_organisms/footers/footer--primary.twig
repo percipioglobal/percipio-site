@@ -24,7 +24,7 @@
 
     <div class="w-full bg-white py-20 max-w-sreen-xl">
         {%- include '_organisms/grids/grid--footer-logos' ignore missing with {
-            organisations: footerData.footerIcons.collect().all() ??? null,
+            organisations: footerData.partners.collect().all() ??? null,
         } -%}
 
         {%- include '_molecules/metas/meta--footer' ignore missing with {

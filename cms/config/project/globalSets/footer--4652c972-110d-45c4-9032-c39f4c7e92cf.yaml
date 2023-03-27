@@ -60,7 +60,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 9bcfff77-a473-4d73-acbb-6b01fd20f657 # Footer Icons
+            fieldUid: 9bcfff77-a473-4d73-acbb-6b01fd20f657 # Partners
             instructions: null
             label: null
             required: false
