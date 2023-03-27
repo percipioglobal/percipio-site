@@ -1,4 +1,4 @@
-dateModified: 1679930611
+dateModified: 1679932549
 elementSources:
   craft\elements\Entry:
     -
@@ -639,7 +639,7 @@ plugins:
     schemaVersion: '2.0'
   blitz:
     edition: standard
-    enabled: true
+    enabled: false
     licenseKey: $PLUGIN_BLITZ
     schemaVersion: 4.4.0
     settings:
