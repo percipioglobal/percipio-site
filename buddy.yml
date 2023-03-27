@@ -347,7 +347,7 @@
         - "# Clear blitz hints"
         - "./craft blitz/hints/clear"
         - "# Refresh Bliz Cache"
-        - "./craft blitz/cache/refresh"
+        # - "./craft blitz/cache/refresh"
       trigger_condition: "ALWAYS"
       run_as_script: true
       shell: "BASH"
