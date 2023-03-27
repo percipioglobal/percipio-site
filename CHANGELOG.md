@@ -9,6 +9,7 @@
 
 ### Fixed
 - Licensing issues
+- Disabled Blitz
 
 ### 2.0.8 15-12-2022
 ### Added
